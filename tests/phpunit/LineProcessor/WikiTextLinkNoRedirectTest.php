@@ -6,6 +6,11 @@ use MediaWikiTestCase;
 use BlueSpice\Bookshelf\LineProcessor\WikiTextLinkNoRedirect;
 use BlueSpice\Bookshelf\TreeNode;
 
+/**
+ * @group Database
+ * @group BlueSpice
+ * @group BlueSpiceBookshelf
+ */
 class WikiTextLinkNoRedirectTest extends MediaWikiTestCase {
 
 	protected function setUp() {

@@ -6,6 +6,11 @@ use PHPUnit\Framework\TestCase;
 use BlueSpice\Bookshelf\LineProcessor\PlainText;
 use BlueSpice\Bookshelf\TreeNode;
 
+/**
+ * @group Database
+ * @group BlueSpice
+ * @group BlueSpiceBookshelf
+ */
 class PlainTextTest extends TestCase {
 
 	/**

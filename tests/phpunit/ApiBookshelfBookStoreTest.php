@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * @group Broken
  * @group Database
  * @group BlueSpice
  * @group BlueSpiceBookmaker
