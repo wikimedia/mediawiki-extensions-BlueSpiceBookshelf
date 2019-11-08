@@ -169,7 +169,7 @@ class Bookshelf extends BsExtensionMW {
 			];
 
 			$sClassXpath = implode( "') or contains(@class, '", $sClassesToPrefix );
-			$sClassXpath = "contains(@class, '".$sClassXpath."')";
+			$sClassXpath = "contains(@class, '" . $sClassXpath . "')";
 
 			$oHeadlineElements = $oDOMXPath->query( "//*[$sClassXpath]" );
 			foreach ( $oHeadlineElements as $oHeadlineElement ) {
@@ -191,7 +191,7 @@ class Bookshelf extends BsExtensionMW {
 					continue;
 				}
 
-				$numNode = $aPage['dom']->createElement( 'span', $sNumber.$sSeperator );
+				$numNode = $aPage['dom']->createElement( 'span', $sNumber . $sSeperator );
 				$numNode->setAttribute( 'class', 'bs-chapter-number' );
 
 				$oHeadlineElement->insertBefore(
@@ -205,13 +205,13 @@ class Bookshelf extends BsExtensionMW {
 				$BookmarkElements = $aPage['bookmark-element']->getElementsByTagName( 'bookmark' );
 				foreach ( $BookmarkElements as $oBookmarkElement ) {
 					$sName = $oBookmarkElement->getAttribute( 'name' );
-					$oBookmarkElement->setAttribute( 'name', $sNumber.'.'.$sName );
+					$oBookmarkElement->setAttribute( 'name', $sNumber . '.' . $sName );
 				}
 			}
 
 			// Modify page title node
 			$aPage['bookmark-element']->setAttribute(
-				'name', $sNumber.' '.$aPage['bookmark-element']->getAttribute( 'name' )
+				'name', $sNumber . ' ' . $aPage['bookmark-element']->getAttribute( 'name' )
 			);
 
 			$aAncestors = $oPHP->getAncestorsFor( $sRequestedTitle );
@@ -221,7 +221,7 @@ class Bookshelf extends BsExtensionMW {
 			// No bookshelf tag? Well in this case we do not need to take any action...
 			wfDebugLog(
 				'BS::Bookshelf',
-				'onBSUEModulePDFgetPage: Error: '.$e->getMessage()
+				'onBSUEModulePDFgetPage: Error: ' . $e->getMessage()
 			);
 		}
 		return true;
@@ -318,11 +318,11 @@ class Bookshelf extends BsExtensionMW {
 			);
 			$oFileAnchorElement->setAttribute( 'data-fs-embed-file', 'true' );
 			// https://otrs.hallowelt.biz/otrs/index.pl?Action=AgentTicketZoom;TicketID=5036#30864
-			$oFileAnchorElement->setAttribute( 'href', 'attachments/'.$sHrefFilename );
+			$oFileAnchorElement->setAttribute( 'href', 'attachments/' . $sHrefFilename );
 			// Neccessary for org.xhtmlrenderer.pdf.ITextReplacedElementFactory.
 			// Otherwise not replaceable
 			$sStyle = $oFileAnchorElement->getAttribute( 'style' );
-			$oFileAnchorElement->setAttribute( 'style', 'display:inline-block;'.$sStyle );
+			$oFileAnchorElement->setAttribute( 'style', 'display:inline-block;' . $sStyle );
 			$aFiles['attachments'][$sHrefFilename] = $sAbsoluteFileSystemPath;
 		}
 
@@ -374,7 +374,7 @@ class Bookshelf extends BsExtensionMW {
 
 		$oErrorListView = new ViewTagErrorList( $this );
 		if ( !empty( $sTreePanelStyle ) ) {
-			$sTreePanelStyle = ' style="'.$sTreePanelStyle.'"';
+			$sTreePanelStyle = ' style="' . $sTreePanelStyle . '"';
 		} else {
 				if ( $sTreePanelFloat == 'right' || $sTreePanelFloat == 'left' ) {
 			$sMarginSide = ( $sTreePanelFloat == 'right' ) ? 'left' : 'right';
@@ -394,7 +394,7 @@ class Bookshelf extends BsExtensionMW {
 		if ( $oTreePanelWidthValidatorResponse->getErrorCode() ) {
 			$oErrorListView->addItem(
 				new ViewTagError( 'width: ' .
-					wfMessage( 'bs-bookshelf-' . $oTreePanelWidthValidatorResponse->getI18N() )
+					wfMessage( 'bs-bookshelf-positive-integer-validation-not-approved' )
 						->text()
 				)
 			);
@@ -406,7 +406,7 @@ class Bookshelf extends BsExtensionMW {
 		if ( $oTreePanelHeightValidatorResponse->getErrorCode() ) {
 			$oErrorListView->addItem(
 				new ViewTagError( 'height: '
-					. wfMessage( 'bs-bookshelf-' . $oTreePanelHeightValidatorResponse->getI18N() )
+					. wfMessage( 'bs-bookshelf-positive-integer-validation-not-approved' )
 						->text()
 				)
 			);
@@ -479,7 +479,7 @@ class Bookshelf extends BsExtensionMW {
 		if ( $this->getConfig()->get( 'BookshelfTitleDisplayText' ) ) {
 			$sTitleText = $sDisplayTitle;
 			if ( $sNumber ) {
-				$sTitleText = '<span class="bs-chapter-number">'.$sNumber.'. </span>'.$sTitleText;
+				$sTitleText = '<span class="bs-chapter-number">' . $sNumber . '. </span>' . $sTitleText;
 			}
 			if ( $sTitleText !== $sTitle ) {
 				$oParserOut->setTitleText( $sTitleText );
@@ -507,6 +507,7 @@ class Bookshelf extends BsExtensionMW {
 	}
 
 	private $iMetaTagCount = 0;
+
 	/**
 	 * @param string $sContent Content of $lt;bookmeta /&gt; from MediaWiki Framework
 	 * @param array $aAttributes Attributes of &lt;bookmeta /&gt; from MediaWiki Framework
@@ -598,7 +599,7 @@ class Bookshelf extends BsExtensionMW {
 		// TODO: allow PDF links to be injected
 		$sOut = '<ul>';
 		foreach ( $aBooks as $aBook ) {
-			$sOut .= '<li>'.$aBook['link'].'</li>';
+			$sOut .= '<li>' . $aBook['link'] . '</li>';
 		}
 		$sOut .= '</ul>';
 
@@ -697,7 +698,7 @@ class Bookshelf extends BsExtensionMW {
 			$oChapterAncestor = $aPage['dom']->createElement( 'div' );
 			$oChapterAncestor->setAttribute( 'class', 'bs-ancestor' );
 
-			$sNumberedAncestorTitle = $aAncestor['number'].'. '.$aAncestor['display-title'];
+			$sNumberedAncestorTitle = $aAncestor['number'] . '. ' . $aAncestor['display-title'];
 			$oAncestorElement = $aPage['dom']->createTextNode( $sNumberedAncestorTitle );
 
 			$oChapterAncestor->appendChild( $oAncestorElement );
@@ -730,7 +731,7 @@ class Bookshelf extends BsExtensionMW {
 		];
 
 		foreach ( $aAttributes as $sAttributeName => $sAttributeValue ) {
-			$aAttribs['data-bs-node-'.$sAttributeName] = $sAttributeValue;
+			$aAttribs['data-bs-node-' . $sAttributeName] = $sAttributeValue;
 		}
 
 		$sElement = 'span';

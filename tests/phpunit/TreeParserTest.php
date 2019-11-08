@@ -8,6 +8,7 @@ use MediaWiki\MediaWikiServices;
 use FormatJson;
 
 /**
+ * @group Database
  * @group BlueSpice
  * @group BlueSpiceBookmaker
  * @group BlueSpiceBookshelf
@@ -47,8 +48,8 @@ class TreeParserTest extends TestCase {
 	public function provideParseWikiTextListData() {
 		return [
 			[
-				file_get_contents( __DIR__ .'/data/Book_1.wiki' ),
-				FormatJson::decode( file_get_contents( __DIR__ .'/data/Book_1.json' ), true )
+				file_get_contents( __DIR__ . '/data/Book_1.wiki' ),
+				FormatJson::decode( file_get_contents( __DIR__ . '/data/Book_1.json' ), true )
 			],
 			/*[
 				file_get_contents( __DIR__ .'/data/Book_2.wiki' ),

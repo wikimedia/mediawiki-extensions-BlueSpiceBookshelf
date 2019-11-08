@@ -90,7 +90,7 @@
 				"bs-bookshelf-group-user",
 				"bs-bookshelf-add-to-book-added",
 				"bs-bookshelf-add-to-book-mod-bstag",
-				"bs-bookshelfui-empty-selection"
+				"bs-bookshelf-empty-selection"
 			]
 		},
 		"ext.bluespice.bookshelf.styles": {

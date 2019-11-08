@@ -42,7 +42,7 @@ Ext.define( 'BS.Bookshelf.dialog.AddToBook', {
 			bs.util.alert(
 				'bs-bui-addtobookdialog-alert-empty',
 				{
-					textMsg: 'bs-bookshelfui-empty-selection'
+					textMsg: 'bs-bookshelf-empty-selection'
 				}
 			);
 			return;
