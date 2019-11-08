@@ -1,0 +1,45 @@
+==Bookshelf.class==
+
+'BSUEModulePDFFindFiles':
+$oSender:
+$oFileAnchorElement:
+$sAbsoluteFileSystemPath:
+$sHrefFilename:
+'attachments'
+
+'BSBookshelfTagBeforeRender'
+&$sSourceArticleName:
+$oJSTreeJSON:
+&$sNumber:
+&$aAdditionalAttribs:
+
+==SpecialBookshelfBookManager.class==
+
+'BSBookshelfBookManager':
+$this:
+$wgOut:
+$oData:
+&$aPlugins
+
+'BSBookshelfManagerGetBookDataRow': deprecated
+$oBookTitle:
+$oBookRow:
+
+'BSBookshelfManagerGetBookDataComplete': deprecated
+$oResult:
+$iLimit:
+$iStart:
+$sDir:
+
+'BSBookshelfManagerGetBookDetailsComplete': deprecated
+$oBookTitle:
+&$aHtml:
+
+
+==SpecialBookshelfBookUI.class==
+
+'BSBookshelfBookUI':
+$this:
+$wgOut:
+$oData:
+&$aPlugins:

@@ -1,0 +1,136 @@
+{
+	"name": "BlueSpiceBookshelf",
+	"version": "3.1.1",
+	"license-name": "GPL-3.0-only",
+	"url": "https://en.wiki.bluespice.com/wiki/Reference:Bookshelf",
+	"author": [
+		"Robert Vogel",
+		"Sebastian Ulbricht"
+	],
+	"descriptionmsg": "bs-bookshelf-extension-description",
+	"type": "bluespice",
+	"attributes": {
+		"BlueSpiceFoundation": {
+			"Extensions": {
+				"BlueSpiceBookshelf": {
+					"className": "Bookshelf",
+					"extPath": "/BlueSpiceBookshelf",
+					"package": "BlueSpice Pro",
+					"status": "stable",
+					"configDefinitions": {
+						"BookshelfSupressBookNS": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\SupressBookNS::getInstance",
+						"BookshelfTitleDisplayText": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\TitleDisplayText::getInstance",
+						"BookshelfPrependPageTOCNumbers": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\PrependPageTOCNumbers::getInstance"
+					}
+				}
+			},
+			"SettingPathRegistry": {
+				"book": "bs-bookshelf-setting-path-feature"
+			}
+		},
+		"BlueSpiceBookshelf": {
+			"LineProcessors": {
+				"plain-text": "\\BlueSpice\\Bookshelf\\LineProcessor\\PlainText::factory",
+				"tag": "\\BlueSpice\\Bookshelf\\LineProcessor\\Tag::factory",
+				"wikitext-link": "\\BlueSpice\\Bookshelf\\LineProcessor\\WikiTextLink::factory"
+			}
+		}
+	},
+	"callback": "Bookshelf::onRegistration",
+	"APIModules": {
+		"bs-bookshelf-store": "ApiBookshelfStore",
+		"bs-bookshelf-bookstore": "ApiBookshelfBookStore"
+	},
+	"APIListModules": {
+		"bsbookshelf": "ApiQueryBookshelf"
+	},
+	"MessagesDirs": {
+		"BlueSpiceBookshelf": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"BookshelfNamespaces": "languages/Bookshelf.namespaces.php"
+	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\Bookshelf\\": "src/"
+	},
+	"AutoloadClasses": {
+		"Bookshelf": "Bookshelf.php",
+		"PageHierarchyProvider": "includes/PageHierarchyProvider.php",
+		"ApiQueryBookshelf": "includes/api/ApiQueryBookshelf.php",
+		"ApiBookshelfStore": "includes/api/ApiBookshelfStore.php",
+		"ApiBookshelfBookStore": "includes/api/ApiBookshelfBookStore.php"
+	},
+	"ResourceModules": {
+		"ext.bluespice.bookshelf": {
+			"scripts": [
+				"bluespice.bookshelf.js"
+			],
+			"messages": [
+				"bs-bookshelf-tag-next",
+				"bs-bookshelf-tag-prev",
+				"bs-bookshelf-tag-edit-book"
+			],
+			"dependencies": [
+				"user.options",
+				"ext.bluespice"
+			]
+		},
+		"ext.bluespice.bookshelf.addToBook": {
+			"scripts": [
+				"bluespice.bookshelf.addToBook.js"
+			],
+			"messages": [
+				"bs-bookshelf-add-to-book-label",
+				"bs-bookshelf-add-to-book-label-book",
+				"bs-bookshelf-add-to-book-label-alias",
+				"bs-bookshelf-add-to-book-label-mod-bstag",
+				"bs-bookshelf-group-namespace",
+				"bs-bookshelf-group-user",
+				"bs-bookshelf-add-to-book-added",
+				"bs-bookshelf-add-to-book-mod-bstag",
+				"bs-bookshelfui-empty-selection"
+			]
+		},
+		"ext.bluespice.bookshelf.styles": {
+			"styles": "bluespice.bookshelf.css"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "BlueSpiceBookshelf/resources"
+	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
+	"config_prefix": "bsg",
+	"config": {
+		"BookshelfSupressBookNS": {
+			"value": true,
+			"descriptionmsg": "bs-bookshelf-pref-SupressBookNS",
+			"public": true
+		},
+		"BookshelfTitleDisplayText": {
+			"value": true,
+			"descriptionmsg": "bs-bookshelf-pref-TitleDisplayText",
+			"public": true
+		},
+		"BookshelfPrependPageTOCNumbers": {
+			"value": true,
+			"descriptionmsg": "bs-bookshelf-pref-PrependPageTOCNumbers",
+			"public": true
+		}
+	},
+	"Hooks": {
+		"UnitTestsList": "Bookshelf::onUnitTestsList",
+		"BeforePageDisplay": "\\BlueSpice\\Bookshelf\\Hook\\BeforePageDisplay\\AddResources::callback",
+		"BSInsertMagicAjaxGetData": [
+			"\\BlueSpice\\Bookshelf\\Hook\\BSInsertMagicAjaxGetData\\AddBookshelfTag::callback",
+			"\\BlueSpice\\Bookshelf\\Hook\\BSInsertMagicAjaxGetData\\AddBookmetaTag::callback",
+			"\\BlueSpice\\Bookshelf\\Hook\\BSInsertMagicAjaxGetData\\AddBooklistTag::callback"
+		]
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 2
+}

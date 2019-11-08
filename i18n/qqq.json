@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robert Vogel <vogeli@hallowelt.biz>"
+		]
+	},
+	"bs-bookshelf-personal-books-page-prefix": "The wikipage name under which personal books reside. Parameter $1 is the user name",
+	"apihelp-bs-bookshelf-store-description": "{{doc-apihelp-description|bs-bookshelf-store}}",
+	"apihelp-bs-bookshelf-bookstore-description": "{{doc-apihelp-description|bs-bookshelf-bookstore-store}}",
+	"apihelp-bs-bookshelf-bookstore-param-node": "Describes the API parameter which speficies a node for which a subchapter list should be provided.",
+	"apihelp-bs-bookshelf-bookstore-param-book": "Describes the API parameter which specifies the book for which a chapter list should be provided."
+}

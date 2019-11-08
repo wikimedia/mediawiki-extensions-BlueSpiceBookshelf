@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Stephan Muggli <muggli@hallowelt.biz>"
+		]
+	},
+	"bs-bookshelf-tagerror-no-attribute-given": "Es wurde kein Attribut angegeben! Bitte verwenden Sie <strong>src</strong>, um das hierarchische Inhaltsverzeichnis zu konfigurieren.",
+	"bs-bookshelf-widget-bookui-link-title": "Über diese Spezialseite können Sie neue Bücher anlegen oder bestehende verändern. Auch der Export nach PDF ist hier möglich.",
+	"bs-bookshelf-error-return": "Bei der Antwort des Pdf Servers ist ein Fehler aufgetreten. Bitte informieren Sie Ihren Administrator.",
+	"bs-bookshelf-bookmanager-deletion-error-permission": "Sie haben keine Berechtigung um diese Aktion durchzuführen.",
+	"bs-bookshelf-bookmanager-deletion-error-unkown": "Ein unbekannter Fehler ist aufgetreten. Bitte kontaktieren Sie Ihren Administrator."
+}
