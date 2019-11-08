@@ -32,7 +32,7 @@ class PageHierarchyProvider {
 		if ( $this->oSourceArticleTitle == null ||
 			$this->oSourceArticleTitle->exists() == false ) {
 			throw new InvalidArgumentException(
-				'Provided SourceArticleTitle ('.$sSourceArticleTitle.') is not valid or Article '
+				'Provided SourceArticleTitle (' . $sSourceArticleTitle . ') is not valid or Article '
 				. 'does not exist!'
 			);
 		}
@@ -69,7 +69,7 @@ class PageHierarchyProvider {
 	public static function getInstanceFor( $sSourceArticleTitle, $aParams = [] ) {
 		$aParams = [ 'indent-char' => '*' ] + $aParams;
 		$sParamHash = md5( $aParams['indent-char'] );
-		$sInstanceKey = md5( $sSourceArticleTitle.$sParamHash );
+		$sInstanceKey = md5( $sSourceArticleTitle . $sParamHash );
 		if ( !isset( self::$prInstances[ $sInstanceKey ] )
 			|| self::$prInstances[ $sInstanceKey ] == null ) {
 
@@ -106,7 +106,7 @@ class PageHierarchyProvider {
 		if ( empty( $sHTOCTitle ) ) {
 			// nothing to do if no tag is found
 			throw new InvalidArgumentException(
-				'Provided Article ('.$sArticleTitle.') does not contain reference to sourcearticle!'
+				'Provided Article (' . $sArticleTitle . ') does not contain reference to sourcearticle!'
 			);
 		} else {
 			$oHTOC = self::getInstanceFor( $sHTOCTitle, $aParams );
@@ -225,18 +225,18 @@ class PageHierarchyProvider {
 				: $this->oSourceArticleTitle->getPrefixedText();
 
 			$sJson = '{';
-			$sJson .= '"text": '.FormatJson::encode( $sBookDisplayText ).','
-				.'"articleTitle": "'  .$this->oSourceArticleTitle->getPrefixedText().'",'
-				.'"articleDisplayTitle": '.FormatJson::encode( $sBookDisplayText ).','
-				.'"articleId": "'  .$this->oSourceArticleTitle->getArticleID().'",'
+			$sJson .= '"text": ' . FormatJson::encode( $sBookDisplayText ) . ','
+				. '"articleTitle": "' . $this->oSourceArticleTitle->getPrefixedText() . '",'
+				. '"articleDisplayTitle": ' . FormatJson::encode( $sBookDisplayText ) . ','
+				. '"articleId": "' . $this->oSourceArticleTitle->getArticleID() . '",'
 				// .'"id": "'  .md5( $this->oSourceArticleTitle->getFullText() ).'",'
-				.'"bookshelf": '. FormatJson::encode( [
+				. '"bookshelf": ' . FormatJson::encode( [
 					'type' => 'wikipage',
 					'page_id' => $this->oSourceArticleTitle->getArticleID(),
 					'page_namespace' => $this->oSourceArticleTitle->getNamespace(),
 					'page_title' => $this->oSourceArticleTitle->getText(),
-				] ).','
-				.'"children": [';
+				] ) . ','
+				. '"children": [';
 
 			$iPreviousLevel = 1;
 			$numLines = count( $aTOC ) - 1;
@@ -251,7 +251,7 @@ class PageHierarchyProvider {
 
 				$sText = $aRow['display-title'];
 				if ( !$aParams['suppress-number-in-text'] ) {
-					$sText = $aRow['number'].'. '.$sText;
+					$sText = $aRow['number'] . '. ' . $sText;
 				}
 
 				$sJson .= '{';
@@ -259,18 +259,18 @@ class PageHierarchyProvider {
 					// ExtJS NodeInterface properties
 					// TODO: Implement reasonabe node ids:
 					// <page_id>/<page_id>/Page_title_with_out_escaped_slashes/<page_id>
-					'"text": '.                 FormatJson::encode( $sText ).','
-					.'"id": "'.                  $aRow['number'].'",'
+					'"text": ' . FormatJson::encode( $sText ) . ','
+					. '"id": "' . $aRow['number'] . '",'
 
-					.'"articleNumber": "'.      $aRow['number'].'",'
-					.'"articleType": "'.         $aRow['type'].'",'
-					.'"articleTitle": '.         FormatJson::encode( $aRow['title'] ).','
-					.'"articleDisplayTitle": '.  FormatJson::encode( $aRow['display-title'] ).','
-					.'"articleId": '.            $aRow['article-id'].','
-					.'"articleIsRedirect": '.    FormatJson::encode( $aRow['is-redirect'] ).','
+					. '"articleNumber": "' . $aRow['number'] . '",'
+					. '"articleType": "' . $aRow['type'] . '",'
+					. '"articleTitle": ' . FormatJson::encode( $aRow['title'] ) . ','
+					. '"articleDisplayTitle": ' . FormatJson::encode( $aRow['display-title'] ) . ','
+					. '"articleId": ' . $aRow['article-id'] . ','
+					. '"articleIsRedirect": ' . FormatJson::encode( $aRow['is-redirect'] ) . ','
 
 					// New data container
-					.'"bookshelf": '. FormatJson::encode( $aRow['bookshelf'] ).',';
+					. '"bookshelf": ' . FormatJson::encode( $aRow['bookshelf'] ) . ',';
 
 				$sJson .= '"children": [';
 				// Has no children
@@ -481,7 +481,7 @@ class PageHierarchyProvider {
 		// the bookmeta info
 		$sBookMeta = "<bs:bookmeta \n";
 		foreach ( $arBookMeta as $key => $value ) {
-			$sBookMeta .= "\t$key="."\"".$value."\" \n";
+			$sBookMeta .= "\t$key=" . "\"" . $value . "\" \n";
 		}
 		$sBookMeta .= "/>\n";
 
@@ -515,7 +515,7 @@ class PageHierarchyProvider {
 				WikiPage::factory( $oArticleTitle )->doPurge();
 			}
 
-			$sLinkList .= $sStars.' '.$sLink."\n";
+			$sLinkList .= $sStars . ' ' . $sLink . "\n";
 		}
 
 		$oArticle = new Article( $this->oSourceArticleTitle );

@@ -13,7 +13,7 @@ interface ILineProcessor {
 
 	/**
 	 * Determine if the given line should be processed
-	 * 
+	 *
 	 * @param string $line
 	 * @return bool
 	 */

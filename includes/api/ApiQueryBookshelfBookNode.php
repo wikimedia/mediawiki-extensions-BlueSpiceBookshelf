@@ -18,13 +18,10 @@ class ApiQueryBookshelfBookNode extends ApiQueryBase {
 	public function execute() {
 		$aParams = $this->extractRequestParams( false );
 
-		throw new Exception( 'Not yet implemented' );
 		// TODO: Also allow query by wiki page title instead of 'book+path'?
 		// $pageSet = $this->getPageSet();
 		// $pageSet->getGoodTitles();
-
-		$oResult = $this->getResult();
-		$oResult->addValue( [ 'query', 'node' ], '70', $aParams );
+		throw new Exception( 'Not yet implemented' );
 	}
 
 	/**

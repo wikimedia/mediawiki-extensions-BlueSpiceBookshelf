@@ -53,11 +53,11 @@
 						"articleType": "wikilink-with-alias",
 						"articleTitle": "\u12e8\u12a8\u1348\u1270\u12cd\u1295",
 						"articleDisplayTitle": "Test",
-						"articleId": 214,
+						"articleId": 0,
 						"articleIsRedirect": false,
 						"bookshelf": {
 							"type": "wikipage",
-							"page_id": 214,
+							"page_id": 0,
 							"page_namespace": 0,
 							"page_title": "\u12e8\u12a8\u1348\u1270\u12cd\u1295"
 						},

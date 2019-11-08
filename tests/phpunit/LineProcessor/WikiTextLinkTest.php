@@ -7,6 +7,9 @@ use BlueSpice\Bookshelf\LineProcessor\WikiTextLink;
 use BlueSpice\Bookshelf\TreeNode;
 
 /**
+ * @group Database
+ * @group BlueSpice
+ * @group BlueSpiceBookshelf
  * @covers BlueSpice\Bookshelf\LineProcessor\WikiTextLink
  */
 class WikiTextLinkTest extends MediaWikiTestCase {

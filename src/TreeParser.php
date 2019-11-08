@@ -207,7 +207,7 @@ class TreeParser {
 
 			$text = $line['display-title'];
 			if ( !$this->params['suppress-number-in-text'] ) {
-					$text = $line['number'].'. '.$text;
+					$text = $line['number'] . '. ' . $text;
 			}
 
 			$this->jsonStringBuffer .= '{';
