@@ -521,7 +521,20 @@ class Bookshelf extends BsExtensionMW {
 			FormatJson::encode( $aAttributes )
 		);
 
-		return BsUniversalExportTagLibrary::onMetaTag( $sContent, $aAttributes, $oParser );
+		$oParser->getOutput()->setProperty( 'bs-tag-universalexport-meta', 1 );
+		$oParser->getOutput()->setProperty(
+			'bs-universalexport-meta',
+			json_encode( $aAttributes )
+		);
+
+		$aOut = [];
+		$aOut[] = '<div class="bs-universalexport-meta"';
+		foreach ( $aAttributes as $sKey => $sValue ) {
+			$aOut[] = ' ' . $sKey . '="' . $sValue . '"';
+		}
+		$aOut[] = '></div>';
+
+		return implode( '', $aOut );
 	}
 
 	/**
