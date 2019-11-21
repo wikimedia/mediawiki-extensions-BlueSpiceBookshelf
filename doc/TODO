@@ -1,4 +1,0 @@
-==Resolve dependencies==
-'Bookshelf::onBookshelfMetaTag' has a dependency to 'UniversalExport' by using 
-'BsUniversalExportTagLibrary::onMetaTag'. This could be resolved by own
-implemenation ''or'' by movin the tag to "UEModuleBookPDF".
