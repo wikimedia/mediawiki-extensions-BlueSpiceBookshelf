@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu",
+			"Mansil alfalb"
+		]
+	},
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Por favor, utilize <i>left</i> ou <i>right</i>.",
+	"bs-bookshelf-specialpage-title": "Livros",
+	"bs-bookshelf-specialpage-allpages-ns-book-text": "Biblioteca",
+	"bs-bookshelf-pref-TitleDisplayText": "Utilize o título de apresentação da fonte do livro no artigo",
+	"bs-bookshelf-tag-next": "Seguinte",
+	"bs-bookshelf-tag-prev": "Anterior",
+	"bs-bookshelf-tag-edit-book": "Editar livro",
+	"bs-bookshelf-add-to-book-label": "Adicionar a um livro",
+	"bs-bookshelf-add-to-book-label-book": "Livro",
+	"bs-bookshelf-group-namespace": "Livros gerais",
+	"bs-bookshelf-group-user": "Livros próprios",
+	"apihelp-bs-bookshelf-bookstore-description": "Lista todos os capítulos de um determinado livro. Permite a classificação, filtragem e paginação. Implementa os parâmetros de ExtJS Store.",
+	"bs-bookshelf-setting-path-feature": "Livro",
+	"bs-bookshelf-empty-selection": "Nada selecionado"
+}

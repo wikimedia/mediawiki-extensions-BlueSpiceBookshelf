@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Stephan Muggli <muggli@hallowelt.biz>"
+			"Stephan Muggli <muggli@hallowelt.biz>",
+			"Schmackes"
 		]
 	},
 	"bs-bookshelf-extension-description": "Ermöglicht das Zusammenstellen von hierarchisch gegliederten Artikelsammlungen.",
@@ -34,5 +35,9 @@
 	"apihelp-bs-bookshelf-bookstore-description": "Listet alle Kapitel für ein bestimmtes Buch auf. Ermöglicht das Sortieren, Filtern und Umblättern. Implementiert ExtJS Store Parameter.",
 	"apihelp-bs-bookshelf-bookstore-param-node": "Gibt einen Knoten an, für den eine Unterkapitelliste erstellt werden soll.",
 	"apihelp-bs-bookshelf-bookstore-param-book": "Gibt das Buch an, für das eine Kapitelliste erstellt werden soll.",
-	"bs-bookshelf-setting-path-feature": "Buch"
+	"bs-bookshelf-setting-path-feature": "Buch",
+	"bs-bookshelf-empty-selection": "Nichts ausgewählt",
+	"apihelp-bs-bookshelf-bookstore-summary": "Listet alle Kapitel für ein gegebenes Buch auf. Ermöglicht Sortieren, Filtern und Seitennummerierung. Implementiert „ExtJS Store“-Parameter.",
+	"apihelp-bs-bookshelf-store-summary": "Listet alle Bücher auf. Ermöglicht Sortieren, Filtern und Seitennummerierung. Implementiert „ExtJS Store“-Parameter.",
+	"apihelp-query+bsbookshelf-summary": "Ermöglicht Suchanfragen in allen Büchern."
 }
