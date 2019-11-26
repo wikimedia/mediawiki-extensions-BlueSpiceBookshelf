@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Hamilton Abreu",
-			"Mansil alfalb"
+			"Mansil alfalb",
+			"Fúlvio"
 		]
 	},
+	"bs-bookshelf-extension-description": "Permite que o BlueSpice administre e exporte coleções hierárquicas de artigos.",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Por favor, utilize <i>left</i> ou <i>right</i>.",
 	"bs-bookshelf-specialpage-title": "Livros",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Biblioteca",
@@ -12,10 +14,13 @@
 	"bs-bookshelf-tag-next": "Seguinte",
 	"bs-bookshelf-tag-prev": "Anterior",
 	"bs-bookshelf-tag-edit-book": "Editar livro",
+	"bs-bookshelf-personal-books-page-prefix": "$1/Livros/",
 	"bs-bookshelf-add-to-book-label": "Adicionar a um livro",
 	"bs-bookshelf-add-to-book-label-book": "Livro",
+	"bs-bookshelf-add-to-book-label-alias": "Pseudónimo",
 	"bs-bookshelf-group-namespace": "Livros gerais",
 	"bs-bookshelf-group-user": "Livros próprios",
+	"bs-bookshelf-add-to-book-added": "A página foi adicionada ao livro '$1'.",
 	"apihelp-bs-bookshelf-bookstore-description": "Lista todos os capítulos de um determinado livro. Permite a classificação, filtragem e paginação. Implementa os parâmetros de ExtJS Store.",
 	"bs-bookshelf-setting-path-feature": "Livro",
 	"bs-bookshelf-empty-selection": "Nada selecionado"

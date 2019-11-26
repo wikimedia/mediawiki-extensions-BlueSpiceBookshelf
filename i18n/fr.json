@@ -1,9 +1,31 @@
 {
 	"@metadata": {
 		"authors": [
-			"Daniel Mietchen"
+			"Daniel Mietchen",
+			"Eihel",
+			"Gomoko"
 		]
 	},
+	"bs-bookshelf-extension-description": "Permet à BlueSpice de gérer et exporter des collections hiérarchiques d’articles.",
+	"bs-bookshelf-tag-bookshelf-desc": "Insère une navigation par chapitre d’un livre dans une page du livre. Par cette balise, les articles mentionnés sont inclus dans le livre. La numérotation est automatiquement adaptée pour la table des matières.",
+	"bs-bookshelf-tag-bookmeta-desc": "Balise pour enregistrer les diverses méta-données sur les articles de livre. Ceux-ci sont inclus dans le livre. Les attributs de cette balise doivent être corrélés avec les métadonnées de l’article du livre.",
+	"bs-bookshelf-tag-booklist-desc": "Titre",
+	"bs-bookshelf-tagerror-article-title-not-valid": "L'article source fourni (&quot;$1&quot;) n'existe pas.",
+	"bs-bookshelf-tagerror-article-content-not-valid": "L'article source fourni (&quot;$1&quot;) contient des données non valides.",
+	"bs-bookshelf-positive-integer-validation-not-approved": "Seuls les entiers positifs sont autorisés.",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Veuillez utiliser <i>gauche</i> ou <i>droite</i>.",
+	"bs-bookshelf-specialpage-title": "Livres",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Bibliothèque",
-	"bs-bookshelf-add-to-book-label-alias": "Alias"
+	"bs-bookshelf-tag-next": "Suivant",
+	"bs-bookshelf-tag-prev": "Précédent",
+	"bs-bookshelf-tag-edit-book": "Modifier le livre",
+	"bs-bookshelf-personal-books-page-prefix": "$1/Livres/",
+	"bs-bookshelf-add-to-book-label": "Ajouter à un livre",
+	"bs-bookshelf-add-to-book-label-book": "Livre",
+	"bs-bookshelf-add-to-book-label-alias": "Alias",
+	"bs-bookshelf-group-namespace": "Livres généraux",
+	"bs-bookshelf-group-user": "Propres livres",
+	"apihelp-bs-bookshelf-bookstore-param-book": "Spécifie le livre pour lequel une liste de chapitres doit être fournie.",
+	"bs-bookshelf-setting-path-feature": "Livre",
+	"bs-bookshelf-empty-selection": "Rien de sélectionné"
 }
