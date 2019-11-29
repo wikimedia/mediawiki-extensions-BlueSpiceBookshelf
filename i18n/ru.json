@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Daniel Mietchen"
+			"Daniel Mietchen",
+			"Amikeco"
 		]
 	},
-	"bs-bookshelf-group-user": "Собственные книги"
+	"bs-bookshelf-specialpage-title": "Книги",
+	"bs-bookshelf-specialpage-allpages-ns-book-text": "Библиотека",
+	"bs-bookshelf-group-user": "Собственные книги",
+	"bs-bookshelf-setting-path-feature": "Книга"
 }

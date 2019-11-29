@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"bs-bookshelf-specialpage-title": "책",
+	"bs-bookshelf-specialpage-allpages-ns-book-text": "라이브러리",
+	"bs-bookshelf-tag-next": "다음",
+	"bs-bookshelf-tag-prev": "이전",
+	"bs-bookshelf-tag-edit-book": "책 편집",
+	"bs-bookshelf-add-to-book-label": "책에 추가",
+	"bs-bookshelf-add-to-book-label-book": "책",
+	"bs-bookshelf-add-to-book-label-alias": "다른 이름",
+	"bs-bookshelf-setting-path-feature": "책",
+	"bs-bookshelf-empty-selection": "선택된 항목 없음"
+}
