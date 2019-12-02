@@ -9,6 +9,7 @@
 	"bs-bookshelf-tag-next": "Næste",
 	"bs-bookshelf-tag-prev": "Forrige",
 	"bs-bookshelf-tag-edit-book": "Rediger bog",
+	"bs-bookshelf-personal-books-page-prefix": "$1/Bøger/",
 	"bs-bookshelf-add-to-book-label": "Tilføj til en bog",
 	"bs-bookshelf-add-to-book-label-book": "Bog",
 	"bs-bookshelf-group-user": "Egne bøger",

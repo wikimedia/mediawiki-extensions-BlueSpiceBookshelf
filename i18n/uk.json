@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ата"
+		]
+	},
+	"bs-bookshelf-extension-description": "Вмикає BlueSpice для керування й експорту ієрархічних колекцій статей.",
+	"bs-bookshelf-tag-bookshelf-desc": "Вставляє навігацію розділами книжки на сторінку книжки. Через цей тег згадані статті включаються в книжку. Нумерування автоматичного підлаштовується до змісту.",
+	"bs-bookshelf-specialpage-title": "Книжки",
+	"bs-bookshelf-specialpage-allpages-ns-book-text": "Бібліотека",
+	"bs-bookshelf-tag-next": "Далі",
+	"bs-bookshelf-tag-prev": "Назад",
+	"bs-bookshelf-tag-edit-book": "Редагувати книжку",
+	"bs-bookshelf-personal-books-page-prefix": "$1/Книжки/",
+	"bs-bookshelf-add-to-book-label": "Додати книжку",
+	"bs-bookshelf-add-to-book-label-book": "Книжка",
+	"bs-bookshelf-add-to-book-label-alias": "Псевдонім",
+	"bs-bookshelf-group-namespace": "Загальні книжки",
+	"bs-bookshelf-group-user": "Власні книжки",
+	"bs-bookshelf-setting-path-feature": "Книжка",
+	"bs-bookshelf-empty-selection": "Нічого не обрано"
+}
