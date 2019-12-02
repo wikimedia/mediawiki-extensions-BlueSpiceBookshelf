@@ -181,7 +181,8 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 		if ( isset( $aTOC[0] ) ) {
 			$aFirstTitle = $aTOC[0];
 			$oFirstTitle = Title::newFromText( $aFirstTitle['title'] );
-			$sFirstChapterPrefixedText = $oFirstTitle->getPrefixedText();
+			$sFirstChapterPrefixedText = $oFirstTitle instanceof Title ?
+				$oFirstTitle->getPrefixedText() : $aFirstTitle['title'];
 		}
 
 		$oBook = new stdClass();
