@@ -6,15 +6,19 @@
 		]
 	},
 	"bs-bookshelf-tagerror-article-title-not-valid": "No existe el artículo de origen proporcionado («$1»).",
+	"bs-bookshelf-positive-integer-validation-not-approved": "Se permiten solo enteros positivos.",
 	"bs-bookshelf-specialpage-title": "Libros",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Biblioteca",
 	"bs-bookshelf-tag-next": "Siguiente",
 	"bs-bookshelf-tag-prev": "Anterior",
 	"bs-bookshelf-tag-edit-book": "Editar libro",
 	"bs-bookshelf-personal-books-page-prefix": "$1/Libros/",
+	"bs-bookshelf-add-to-book-label": "Añadir a un libro",
 	"bs-bookshelf-add-to-book-label-book": "Libro",
+	"bs-bookshelf-add-to-book-label-alias": "Alias",
 	"bs-bookshelf-group-namespace": "Libros generales",
 	"bs-bookshelf-group-user": "Libros propios",
 	"bs-bookshelf-add-to-book-added": "Se añadió la página al libro «$1».",
-	"bs-bookshelf-setting-path-feature": "Libro"
+	"bs-bookshelf-setting-path-feature": "Libro",
+	"bs-bookshelf-empty-selection": "No se ha seleccionado nada"
 }
