@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Feu servir <i>left</i> o <i>right</i>.",
+	"bs-bookshelf-specialpage-title": "Llibres",
+	"bs-bookshelf-tag-edit-book": "Edita el llibre",
+	"bs-bookshelf-personal-books-page-prefix": "$1/Llibres/",
+	"bs-bookshelf-add-to-book-label-book": "Llibre",
+	"bs-bookshelf-add-to-book-label-alias": "Àlies",
+	"bs-bookshelf-group-namespace": "Llibres generals",
+	"bs-bookshelf-group-user": "Llibres propis",
+	"bs-bookshelf-setting-path-feature": "Llibre",
+	"bs-bookshelf-empty-selection": "No se n’ha seleccionat cap"
+}
