@@ -9,6 +9,7 @@
 	"bs-bookshelf-tag-next": "Volgende",
 	"bs-bookshelf-tag-prev": "Vorige",
 	"bs-bookshelf-tag-edit-book": "Boek bewerken",
+	"bs-bookshelf-personal-books-page-prefix": "$1/Boeken/",
 	"bs-bookshelf-add-to-book-label": "Aan een boek toevoegen",
 	"bs-bookshelf-add-to-book-label-book": "Boek",
 	"bs-bookshelf-group-namespace": "Algemene boeken",
