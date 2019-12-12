@@ -12,6 +12,7 @@
 	"bs-bookshelf-personal-books-page-prefix": "$1/Bøger/",
 	"bs-bookshelf-add-to-book-label": "Tilføj til en bog",
 	"bs-bookshelf-add-to-book-label-book": "Bog",
+	"bs-bookshelf-group-namespace": "Generelle bøger",
 	"bs-bookshelf-group-user": "Egne bøger",
 	"bs-bookshelf-setting-path-feature": "Bog",
 	"bs-bookshelf-empty-selection": "Intet valgt"
