@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Tizven",
-			"Dansita"
+			"Dansita",
+			"Beta16"
 		]
 	},
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Per favore, usa <i>sinistra</i> o <i>destra</i>.",
@@ -17,7 +18,7 @@
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
 	"bs-bookshelf-group-namespace": "Libri generali",
 	"bs-bookshelf-group-user": "Libri personali",
-	"bs-bookshelf-add-to-book-label-mod-bstag": "Modifica il tag 'scaffale' nella pagina (nuova revisione)",
+	"bs-bookshelf-add-to-book-label-mod-bstag": "Modifica il tag 'scaffale' nella pagina (nuova versione)",
 	"bs-bookshelf-add-to-book-added": "La pagina è stata aggiunta al libro '$1'.",
 	"bs-bookshelf-setting-path-feature": "Libro",
 	"bs-bookshelf-empty-selection": "Nessuna selezione"
