@@ -13,7 +13,7 @@ use BlueSpice\Bookshelf\TreeNode;
  */
 class WikiTextLinkNoRedirectTest extends MediaWikiTestCase {
 
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 
 		$this->insertPage( 'Redirect Origin', '#REDIRECT [[Redirect Destination]]' );
