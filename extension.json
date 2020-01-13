@@ -129,7 +129,6 @@
 		}
 	},
 	"Hooks": {
-		"UnitTestsList": "Bookshelf::onUnitTestsList",
 		"BeforePageDisplay": "\\BlueSpice\\Bookshelf\\Hook\\BeforePageDisplay\\AddResources::callback",
 		"BSInsertMagicAjaxGetData": [
 			"\\BlueSpice\\Bookshelf\\Hook\\BSInsertMagicAjaxGetData\\AddBookshelfTag::callback",

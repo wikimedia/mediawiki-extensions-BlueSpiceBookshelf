@@ -757,14 +757,4 @@ class Bookshelf extends BsExtensionMW {
 
 		return $sOutput;
 	}
-
-	/**
-	 * Register PHP Unit Tests with MediaWiki frameweork
-	 * @param array &$files
-	 * @return bool
-	 */
-	public static function onUnitTestsList( &$files ) {
-		$files = array_merge( $files, glob( __DIR__ . '/tests/phpunit/*Test.php' ) );
-		return true;
-	}
 }
