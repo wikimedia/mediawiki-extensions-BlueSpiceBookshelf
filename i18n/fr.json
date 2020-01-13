@@ -11,7 +11,7 @@
 	"bs-bookshelf-extension-description": "Permet à BlueSpice de gérer et exporter des collections hiérarchiques d’articles.",
 	"bs-bookshelf-tag-bookshelf-desc": "Insère une navigation par chapitre d’un livre dans une page du livre. Par cette balise, les articles mentionnés sont inclus dans le livre. La numérotation est automatiquement adaptée pour la table des matières.",
 	"bs-bookshelf-tag-bookmeta-desc": "Balise pour enregistrer les diverses métadonnées sur les articles de livre. Ceux-ci sont inclus dans le livre. Les attributs de cette balise doivent être corrélés avec les métadonnées de l’article du livre.",
-	"bs-bookshelf-tag-booklist-desc": "Titre",
+	"bs-bookshelf-tag-booklist-desc": "Génère des listes d'articles à partir de l'espace de noms « livre » et peut être filtré. L'indication du filtre est obligatoire.",
 	"bs-bookshelf-tagerror-no-attribute-given": "Aucun attribut fourni ! Utiliser <strong>src</strong> pour configurer la table des matières.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "L’article source fourni (« $1 ») n’existe pas.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "L’article source fourni (« $1 ») contient des données non valides.",
