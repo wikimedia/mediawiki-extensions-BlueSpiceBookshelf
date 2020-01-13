@@ -62,34 +62,6 @@ class Bookshelf extends BsExtensionMW {
 
 		$this->setHook( 'BSUEModulePDFcollectMetaData' );
 		$this->setHook( 'BSUEModulePDFAfterFindFiles' );
-
-		$this->setHook( 'SkinTemplateNavigation' );
-	}
-
-	/**
-	 * Adds the "Add to book" menu entry in view mode
-	 *
-	 * @param SkinTemplate $oSkinTemplate
-	 * @param array &$links
-	 *
-	 * @return bool Always true to keep hook running
-	 */
-	public function onSkinTemplateNavigation( $oSkinTemplate, &$links ) {
-		if ( $this->getTitle()->exists() === false ) {
-			return true;
-		}
-		if ( $this->getTitle()->userCan( 'edit' ) === false ) {
-			return true;
-		}
-
-		$links['actions']['bookshelf-add-to-book'] = [
-			'text' => wfMessage( 'bs-bookshelf-add-to-book-label' )->text(),
-			'href' => '#',
-			'class' => false,
-			'id' => 'ca-bookshelf-add-to-book'
-		];
-
-		return true;
 	}
 
 	/**
