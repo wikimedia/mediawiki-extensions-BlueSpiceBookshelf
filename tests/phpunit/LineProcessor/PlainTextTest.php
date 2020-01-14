@@ -2,9 +2,9 @@
 
 namespace BlueSpice\Bookshelf\Tests\LineProcessor;
 
-use PHPUnit\Framework\TestCase;
 use BlueSpice\Bookshelf\LineProcessor\PlainText;
 use BlueSpice\Bookshelf\TreeNode;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @group Database
@@ -22,7 +22,7 @@ class PlainTextTest extends TestCase {
 	public function testApplies( $line, $message ) {
 		$processor = new PlainText();
 
-		$this->assertEquals( true, $processor->applies( $line ), $message );
+		$this->assertTrue( $processor->applies( $line ), $message );
 	}
 
 	/**

@@ -2,9 +2,9 @@
 
 namespace BlueSpice\Bookshelf\Tests\LineProcessor;
 
-use MediaWikiTestCase;
 use BlueSpice\Bookshelf\LineProcessor\WikiTextLinkNoRedirect;
 use BlueSpice\Bookshelf\TreeNode;
+use MediaWikiTestCase;
 
 /**
  * @group Database

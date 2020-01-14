@@ -2,10 +2,10 @@
 
 namespace BlueSpice\Bookshelf\Tests;
 
-use PHPUnit\Framework\TestCase;
 use BlueSpice\Bookshelf\TreeParser;
 use BlueSpice\Services;
 use FormatJson;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @group Database

@@ -89,13 +89,13 @@ class ApiBookshelfStoreTest extends ApiTestCase {
 
 	/**
 	 * [
-			* {
-				* "type":"string",
-				* "comparison":"ct",
-				* "value":"some text ...",
-				* "field":"someField"
-			* }
-		* ]
+	 * 	{
+	 * 		"type":"string",
+	 * 		"comparison":"ct",
+	 * 		"value":"some text ...",
+	 * 		"field":"someField"
+	 * 	}
+	 * ]
 	 *
 	 * @param $type
 	 * @param $field

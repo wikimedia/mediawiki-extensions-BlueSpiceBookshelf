@@ -587,7 +587,7 @@ class PageHierarchyProvider {
 	}
 
 	private function ensureExtendedTOCArray() {
-		if ( is_null( $this->aExtendedTOC ) ) {
+		if ( $this->aExtendedTOC === null ) {
 			$this->createExtendedTOCArrayFromSimpleTOCArray();
 		}
 	}

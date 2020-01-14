@@ -91,8 +91,8 @@ class PageHierarchyProviderTest extends MediaWikiTestCase {
 
 		$this->assertEquals( 'Dolor sit', $aEntry['articleTitle'] );
 		$this->assertEquals( 'amet', $aEntry['articleDisplayTitle'] );
-		$this->assertEquals( false, $aEntry['articleIsRedirect'] );
-		$this->assertEquals( '2', $aEntry['articleNumber'] );
+		$this->assertFalse( $aEntry['articleIsRedirect'] );
+		$this->assertSame( '2', $aEntry['articleNumber'] );
 		$this->assertEquals( 'wikilink-with-alias', $aEntry['articleType'] );
 	}
 }
