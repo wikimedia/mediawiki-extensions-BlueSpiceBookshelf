@@ -42,18 +42,17 @@ class PageHierarchyProviderTest extends MediaWikiTestCase {
 	public function testGetExtendedTOCJSON() {
 		$oTree = $this->oPHP->getExtendedTOCJSON();
 
-		$this->assertAttributeEquals(
+		$this->assertSame(
 			$this->getTestBookTitle()->getPrefixedText(),
-			'articleTitle',
-			$oTree
+			$oTree->articleTitle
 		);
 
 		$this->assertObjectHasAttribute( 'children', $oTree );
-		$this->assertAttributeCount( 3, 'children', $oTree );
+		$this->assertCount( 3, $oTree->children );
 
 		$oChapterTwo = $oTree->children[1];
 		$this->assertObjectHasAttribute( 'children', $oChapterTwo );
-		$this->assertAttributeCount( 4, 'children', $oChapterTwo );
+		$this->assertCount( 4, $oChapterTwo->children );
 
 		$this->recursiveCheckTreeNode( $oTree );
 	}

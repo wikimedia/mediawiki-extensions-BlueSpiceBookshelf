@@ -60,10 +60,9 @@ HERE;
 		] );
 		$response = $results[0];
 
-		$this->assertAttributeEquals(
+		$this->assertSame(
 			$expectedTotal,
-			'total',
-			(object)$response,
+			$response['total'],
 			'Field "total" contains wrong value'
 		);
 	}

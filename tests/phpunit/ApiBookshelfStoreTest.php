@@ -120,10 +120,9 @@ class ApiBookshelfStoreTest extends ApiTestCase {
 
 		$response = $results[0];
 
-		$this->assertAttributeEquals(
+		$this->assertSame(
 			$expectedTotal,
-			'total',
-			(object)$response,
+			$response['total'],
 			'Field "total" contains wrong value'
 		);
 	}
@@ -148,10 +147,9 @@ class ApiBookshelfStoreTest extends ApiTestCase {
 
 		$response = $results[0];
 
-		$this->assertAttributeEquals(
+		$this->assertSame(
 			$expectedTotal,
-			'total',
-			(object)$response,
+			$reponse['total'],
 			'Field "total" contains wrong value'
 		);
 	}
