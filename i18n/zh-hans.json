@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"沈澄心",
-			"Wenyuan Liu"
+			"Wenyuan Liu",
+			"Dimension"
 		]
 	},
+	"bs-bookshelf-positive-integer-validation-not-approved": "只能输入正整数",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "请使用<i>left</i>或<i>right</i>。",
 	"bs-bookshelf-specialpage-title": "图书",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "图书馆",
