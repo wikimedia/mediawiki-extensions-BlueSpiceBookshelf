@@ -283,9 +283,6 @@ class Bookshelf extends BsExtensionMW {
 		$oParser->setHook( 'htoc',           [ $this, 'onBookshelfTag' ] );
 		$oParser->setHook( 'hierachicaltoc', [ $this, 'onBookshelfTag' ] );
 
-		$oParser->setHook( 'bs:bookmeta',  [ $this, 'onBookshelfMetaTag' ] );
-		$oParser->setHook( 'bookmeta',     [ $this, 'onBookshelfMetaTag' ] );
-
 		$oParser->setHook( 'bs:booklist',  [ $this, 'onBookshelfListTag' ] );
 		$oParser->setHook( 'booklist',     [ $this, 'onBookshelfListTag' ] );
 
@@ -447,37 +444,6 @@ class Bookshelf extends BsExtensionMW {
 		$aAttribs = array_merge( $aAttribs, $aAdditionalAttribs );
 
 		return Html::element( 'div', $aAttribs );
-	}
-
-	private $iMetaTagCount = 0;
-
-	/**
-	 * @param string $sContent Content of $lt;bookmeta /&gt; from MediaWiki Framework
-	 * @param array $aAttributes Attributes of &lt;bookmeta /&gt; from MediaWiki Framework
-	 * @param Parser $oParser Parser object from MediaWiki Framework
-	 * @return string
-	 */
-	public function onBookshelfMetaTag( $sContent, $aAttributes, $oParser ) {
-		// TODO: Potential security risk: are sAttributes properly preprocessed here?
-		$oParser->getOutput()->setProperty(
-			'bs-bookshelf-meta',
-			FormatJson::encode( $aAttributes )
-		);
-
-		$oParser->getOutput()->setProperty( 'bs-tag-universalexport-meta', 1 );
-		$oParser->getOutput()->setProperty(
-			'bs-universalexport-meta',
-			json_encode( $aAttributes )
-		);
-
-		$aOut = [];
-		$aOut[] = '<div class="bs-universalexport-meta"';
-		foreach ( $aAttributes as $sKey => $sValue ) {
-			$aOut[] = ' ' . $sKey . '="' . $sValue . '"';
-		}
-		$aOut[] = '></div>';
-
-		return implode( '', $aOut );
 	}
 
 	/**
