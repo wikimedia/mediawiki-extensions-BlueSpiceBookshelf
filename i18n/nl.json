@@ -12,5 +12,12 @@
 	"bs-bookshelf-add-to-book-label": "Aan een boek toevoegen",
 	"bs-bookshelf-add-to-book-label-book": "Boek",
 	"bs-bookshelf-group-namespace": "Algemene boeken",
-	"bs-bookshelf-setting-path-feature": "Boek"
+	"bs-bookshelf-setting-path-feature": "Boek",
+	"bs-bookshelf-positive-integer-validation-not-approved": "Alleen positieve gehele getallen zijn toegestaan.",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Gebruik <i>left</i> of <i>right</i>.",
+	"bs-bookshelf-pref-SupressBookNS": "Verberg het naamruimtevoorvoegsel van boekartikelen in de uitvoer",
+	"bs-bookshelf-personal-books-page-prefix": "$1/Boeken/",
+	"bs-bookshelf-group-user": "Eigen boeken",
+	"bs-bookshelf-add-to-book-added": "De pagina is aan het boek '$1' toegevoegd.",
+	"bs-bookshelf-empty-selection": "Niets geselecteerd"
 }

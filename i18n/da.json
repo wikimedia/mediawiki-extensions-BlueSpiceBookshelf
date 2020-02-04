@@ -14,5 +14,6 @@
 	"bs-bookshelf-add-to-book-label-book": "Bog",
 	"bs-bookshelf-group-user": "Egne bøger",
 	"bs-bookshelf-setting-path-feature": "Bog",
-	"bs-bookshelf-empty-selection": "Intet valgt"
+	"bs-bookshelf-empty-selection": "Intet valgt",
+	"bs-bookshelf-group-namespace": "Generelle bøger"
 }

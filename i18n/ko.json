@@ -13,5 +13,8 @@
 	"bs-bookshelf-add-to-book-label-book": "책",
 	"bs-bookshelf-add-to-book-label-alias": "다른 이름",
 	"bs-bookshelf-setting-path-feature": "책",
-	"bs-bookshelf-empty-selection": "선택된 항목 없음"
+	"bs-bookshelf-empty-selection": "선택된 항목 없음",
+	"bs-bookshelf-positive-integer-validation-not-approved": "양의 정수만 허용됩니다.",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "<i>left</i> 또는 <i>right</i>를 사용해 주십시오.",
+	"bs-bookshelf-add-to-book-added": "이 문서는 '$1' 책에 추가되었습니다."
 }
