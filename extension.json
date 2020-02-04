@@ -32,6 +32,9 @@
 			},
 			"SettingPathRegistry": {
 				"book": "bs-bookshelf-setting-path-feature"
+			},
+			"TagRegistry": {
+				"bookmeta": "\\BlueSpice\\Bookshelf\\Tag\\BookshelfMeta"
 			}
 		},
 		"BlueSpiceBookshelf": {
