@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"bs-bookshelf-specialpage-title": "Bicher",
+	"bs-bookshelf-specialpage-allpages-ns-book-text": "Bibliothéik",
+	"bs-bookshelf-tag-next": "Nächst",
+	"bs-bookshelf-tag-prev": "Vireg",
+	"bs-bookshelf-tag-edit-book": "Buch änneren",
+	"bs-bookshelf-personal-books-page-prefix": "$1/Bicher/",
+	"bs-bookshelf-add-to-book-label-book": "Buch",
+	"bs-bookshelf-add-to-book-label-alias": "Alias",
+	"bs-bookshelf-group-user": "Eege Bicher",
+	"bs-bookshelf-setting-path-feature": "Buch"
+}
