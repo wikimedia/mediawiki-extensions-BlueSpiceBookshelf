@@ -2,11 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Daniel Mietchen",
-			"Amikeco"
+			"Amikeco",
+			"Okras"
 		]
 	},
 	"bs-bookshelf-specialpage-title": "Книги",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Библиотека",
+	"bs-bookshelf-add-to-book-label-book": "Книга",
 	"bs-bookshelf-group-user": "Собственные книги",
-	"bs-bookshelf-setting-path-feature": "Книга"
+	"bs-bookshelf-setting-path-feature": "Книга",
+	"bs-bookshelf-empty-selection": "Ничего не выбрано"
 }
