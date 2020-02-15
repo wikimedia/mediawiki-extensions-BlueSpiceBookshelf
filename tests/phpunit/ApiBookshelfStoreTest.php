@@ -41,12 +41,6 @@ class ApiBookshelfStoreTest extends ApiTestCase {
 		}
 	}
 
-	protected function setUp() : void {
-		parent::setUp();
-
-		$this->doLogin();
-	}
-
 	public function addDBData() {
 		$this->createStoreDummyData();
 	}

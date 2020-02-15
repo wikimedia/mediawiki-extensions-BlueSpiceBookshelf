@@ -36,12 +36,6 @@ class ApiBookshelfBookStoreTest extends ApiTestCase {
 *** [[B/A/F|baf]]
 HERE;
 
-	protected function setUp() : void {
-		parent::setUp();
-
-		$this->doLogin();
-	}
-
 	public function addDBData() {
 		$this->insertPage( 'Book:Test', $this->dummyBookContent );
 	}
