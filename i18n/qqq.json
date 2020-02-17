@@ -39,5 +39,6 @@
 	"apihelp-bs-bookshelf-bookstore-param-book": "{{doc-apihelp-param|bs-bookshelf-bookstore|book}}\nDescribes the API parameter which specifies the book for which a chapter list should be provided.",
 	"apihelp-bs-bookshelf-bookstore-summary": "{{doc-apihelp-summary|bs-bookshelf-bookstore}}",
 	"apihelp-bs-bookshelf-store-summary": "{{doc-apihelp-summary|bs-bookshelf-store}}",
-	"apihelp-query+bsbookshelf-summary": "{{doc-apihelp-summary|query+bsbookshelf}}"
+	"apihelp-query+bsbookshelf-summary": "{{doc-apihelp-summary|query+bsbookshelf}}",
+	"bs-bookshelf-pref-titledisplaytext-help": "Description for config variable \"BookshelfTitleDisplayText\""
 }
