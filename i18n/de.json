@@ -39,5 +39,6 @@
 	"bs-bookshelf-empty-selection": "Nichts ausgewählt",
 	"apihelp-bs-bookshelf-bookstore-summary": "Listet alle Kapitel für ein gegebenes Buch auf. Ermöglicht Sortieren, Filtern und Seitennummerierung. Implementiert „ExtJS Store“-Parameter.",
 	"apihelp-bs-bookshelf-store-summary": "Listet alle Bücher auf. Ermöglicht Sortieren, Filtern und Seitennummerierung. Implementiert „ExtJS Store“-Parameter.",
-	"apihelp-query+bsbookshelf-summary": "Ermöglicht Suchanfragen in allen Büchern."
+	"apihelp-query+bsbookshelf-summary": "Ermöglicht Suchanfragen in allen Büchern.",
+	"bs-bookshelf-pref-titledisplaytext-help": "Zeigt anstelle des Seitennamens den Titel aus der Buchnavigation als Seitentitel an."
 }
