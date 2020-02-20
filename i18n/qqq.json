@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Robert Vogel <vogeli@hallowelt.biz>",
-			"Umherirrender"
+			"Umherirrender",
+			"BaRaN6161 TURK"
 		]
 	},
 	"bs-bookshelf-extension-description": "{{desc|name=BlueSpiceBookshelf}}",
@@ -36,7 +37,7 @@
 	"apihelp-bs-bookshelf-bookstore-param-node": "{{doc-apihelp-param|bs-bookshelf-bookstore|node}}\nDescribes the API parameter which speficies a node for which a subchapter list should be provided.",
 	"apihelp-bs-bookshelf-bookstore-param-book": "{{doc-apihelp-param|bs-bookshelf-bookstore|book}}\nDescribes the API parameter which specifies the book for which a chapter list should be provided.",
 	"bs-bookshelf-setting-path-feature": "Name for feature \"book\" used in BlueSpiceConfigManager.\n{{Identical|Book}}",
-	"bs-bookshelf-empty-selection": "Error message if no pages have been selected when trying to add pages to a book.\n{{Identical|Nothing selected}}",
+	"bs-bookshelf-empty-selection": "Error message if no pages have been selected when trying to add pages to a book.\n{{Identical|None selected}}",
 	"apihelp-bs-bookshelf-bookstore-summary": "{{doc-apihelp-summary|bs-bookshelf-bookstore}}",
 	"apihelp-bs-bookshelf-store-summary": "{{doc-apihelp-summary|bs-bookshelf-store}}",
 	"apihelp-query+bsbookshelf-summary": "{{doc-apihelp-summary|query+bsbookshelf}}"
