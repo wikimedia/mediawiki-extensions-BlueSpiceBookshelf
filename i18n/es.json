@@ -5,6 +5,7 @@
 			"Fitoschido"
 		]
 	},
+	"bs-bookshelf-tag-bookshelf-desc": "Inserta la navegación de capítulo de un libro en una página de este. Mediante esta etiqueta, los artículos mencionados se incluyen en el libro. La numeración se adapta automáticamente al sumario.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "No existe el artículo de origen proporcionado («$1»).",
 	"bs-bookshelf-positive-integer-validation-not-approved": "Se permiten solo enteros positivos.",
 	"bs-bookshelf-specialpage-title": "Libros",
