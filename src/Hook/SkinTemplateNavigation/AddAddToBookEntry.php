@@ -30,6 +30,7 @@ class AddAddToBookEntry extends SkinTemplateNavigation {
 			'class' => false,
 			'id' => 'ca-bookshelf-add-to-book'
 		];
+		$this->sktemplate->getOutput()->addModules( 'ext.bluespice.bookshelf.addToBook' );
 		return true;
 	}
 
