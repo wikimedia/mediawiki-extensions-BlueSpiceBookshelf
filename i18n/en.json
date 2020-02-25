@@ -38,5 +38,6 @@
 	"bs-bookshelf-empty-selection": "Nothing selected",
 	"apihelp-bs-bookshelf-bookstore-summary": "Lists all chapters for a given book. Allows sorting, filtering and pagination. Implements ExtJS Store parameters.",
 	"apihelp-bs-bookshelf-store-summary": "Lists all books. Allows sorting, filtering and pagination. Implements ExtJS Store parameters.",
-	"apihelp-query+bsbookshelf-summary": "Allows querying in all books."
+	"apihelp-query+bsbookshelf-summary": "Allows querying in all books.",
+	"bs-bookshelf-pref-titledisplaytext-help": "Shows the title from the book navigation as page title instead of the page name."
 }

@@ -40,5 +40,6 @@
 	"bs-bookshelf-empty-selection": "Error message if no pages have been selected when trying to add pages to a book.\n{{Identical|None selected}}",
 	"apihelp-bs-bookshelf-bookstore-summary": "{{doc-apihelp-summary|bs-bookshelf-bookstore}}",
 	"apihelp-bs-bookshelf-store-summary": "{{doc-apihelp-summary|bs-bookshelf-store}}",
-	"apihelp-query+bsbookshelf-summary": "{{doc-apihelp-summary|query+bsbookshelf}}"
+	"apihelp-query+bsbookshelf-summary": "{{doc-apihelp-summary|query+bsbookshelf}}",
+	"bs-bookshelf-pref-titledisplaytext-help": "Description for config variable \"BookshelfTitleDisplayText\""
 }

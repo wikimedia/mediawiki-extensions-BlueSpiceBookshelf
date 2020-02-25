@@ -25,4 +25,12 @@ class TitleDisplayText extends BooleanSetting implements \BlueSpice\Bookshelf\IS
 	public function getLabelMessageKey() {
 		return 'bs-bookshelf-pref-TitleDisplayText';
 	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	public function getHelpMessageKey() {
+		return 'bs-bookshelf-pref-titledisplaytext-help';
+	}
 }
