@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ата"
+			"Ата",
+			"Piramidion"
 		]
 	},
 	"bs-bookshelf-extension-description": "Вмикає BlueSpice для керування й експорту ієрархічних колекцій статей.",
@@ -18,5 +19,14 @@
 	"bs-bookshelf-group-namespace": "Загальні книжки",
 	"bs-bookshelf-group-user": "Власні книжки",
 	"bs-bookshelf-setting-path-feature": "Книжка",
-	"bs-bookshelf-empty-selection": "Нічого не обрано"
+	"bs-bookshelf-empty-selection": "Нічого не обрано",
+	"bs-bookshelf-tag-bookmeta-desc": "Тег для збереження різних метаданих у книжних статтях. Вони додаються до книги. Атрибути цього тегу повинні співвідноситись із метаданими книжної статті.",
+	"bs-bookshelf-tag-booklist-desc": "Генерує списки статей із простору назв «книга» і має можливість фільтрування. Зазначення фільтра є обов'язковим.",
+	"bs-bookshelf-tagerror-no-attribute-given": "Жодного атрибута не вказано! Використовуйте <strong>src</strong> для налаштування змісту.",
+	"bs-bookshelf-tagerror-article-title-not-valid": "Зазначена вихідна стаття (&quot;$1&quot;) не існує.",
+	"bs-bookshelf-tagerror-article-content-not-valid": "Зазначена вихідна стаття (&quot;$1&quot;) містить недійсні дані.",
+	"bs-bookshelf-positive-integer-validation-not-approved": "Дозволені лише позитивні цілі числа.",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Будь ласка, використовуйте <i>left</i> і <i>right</i>.",
+	"bs-bookshelf-pref-SupressBookNS": "Приховувати префікс простору назв книжних статей у результатах",
+	"bs-bookshelf-pref-titledisplaytext-help": "Показує заголовок з навігації книгою як заголовок сторінки замість назви сторінки."
 }

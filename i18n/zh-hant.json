@@ -38,5 +38,6 @@
 	"bs-bookshelf-empty-selection": "未選擇",
 	"apihelp-bs-bookshelf-bookstore-summary": "列出指定書籍的所有章節。允許排序、篩選，以及分頁。執行 ExtJS 所儲存的變數。",
 	"apihelp-bs-bookshelf-store-summary": "列出所有書籍。允許排序、篩選，以及分頁。執行 ExtJS 所儲存的變數。",
-	"apihelp-query+bsbookshelf-summary": "允許在所有書籍裡查詢。"
+	"apihelp-query+bsbookshelf-summary": "允許在所有書籍裡查詢。",
+	"bs-bookshelf-pref-titledisplaytext-help": "把來自書籍導航的標題顯示為頁面標題，而非頁面名稱。"
 }

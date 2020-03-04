@@ -20,5 +20,6 @@
 	"bs-bookshelf-group-user": "Libros propios",
 	"bs-bookshelf-add-to-book-added": "Se añadió la página al libro «$1».",
 	"bs-bookshelf-setting-path-feature": "Libro",
-	"bs-bookshelf-empty-selection": "No se ha seleccionado nada"
+	"bs-bookshelf-empty-selection": "No se ha seleccionado nada",
+	"bs-bookshelf-tag-bookshelf-desc": "Inserta la navegación de capítulo de un libro en una página de este. Mediante esta etiqueta, los artículos mencionados se incluyen en el libro. La numeración se adapta automáticamente al sumario."
 }

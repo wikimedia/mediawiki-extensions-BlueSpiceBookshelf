@@ -38,5 +38,6 @@
 	"bs-bookshelf-empty-selection": "Hiçbir şey seçilmedi",
 	"apihelp-bs-bookshelf-bookstore-summary": "Belirli bir kitabın tüm bölümlerini listeler. Sıralama, filtreleme ve sayfalandırmaya izin verir. ExtJS Store parametrelerini uygular.",
 	"apihelp-bs-bookshelf-store-summary": "Tüm kitapları listeler. Sıralama, filtreleme ve sayfalandırmaya izin verir. ExtJS Store parametrelerini uygular.",
-	"apihelp-query+bsbookshelf-summary": "Tüm kitaplarda sorgulamaya izin verir."
+	"apihelp-query+bsbookshelf-summary": "Tüm kitaplarda sorgulamaya izin verir.",
+	"bs-bookshelf-pref-titledisplaytext-help": "Kitap gezinme sayfasındaki başlığı sayfa adı yerine sayfa başlığı olarak gösterir."
 }
