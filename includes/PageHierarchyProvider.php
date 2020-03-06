@@ -487,7 +487,7 @@ class PageHierarchyProvider {
 
 		// $sLinkList = null;
 		$sLinkList = $sBookMeta;
-		$util = \BlueSpice\Services::getInstance()->getBSUtilityFactory();
+		$util = \BlueSpice\Services::getInstance()->getService( 'BSUtilityFactory' );
 
 		foreach ( $arHierarchyArray as $key => $value ) {
 			// making the number to stars 3.2.1 -> ***; 1.4 -> **
