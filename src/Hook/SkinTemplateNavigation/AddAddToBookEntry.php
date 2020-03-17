@@ -10,10 +10,14 @@ class AddAddToBookEntry extends SkinTemplateNavigation {
 	 * @return bool
 	 */
 	protected function skipProcessing() {
-		if ( !$this->sktemplate->getTitle()->exists() ) {
+		$title = $this->sktemplate->getTitle();
+		if ( !$title->exists() ) {
 			return true;
 		}
-		if ( !$this->sktemplate->getTitle()->userCan( 'edit' ) ) {
+		if ( !\MediaWiki\MediaWikiServices::getInstance()
+			->getPermissionManager()
+			->userCan( 'edit', $this->sktemplate->getUser(), $title )
+		) {
 			return true;
 		}
 		return false;

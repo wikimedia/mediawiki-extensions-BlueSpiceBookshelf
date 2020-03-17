@@ -17,8 +17,14 @@ class ApiQueryBookshelf extends ApiQueryBase {
 	 */
 	public function execute() {
 		$data = [];
+		$permManager = \MediaWiki\MediaWikiServices::getInstance()->getPermissionManager();
 
-		if ( Title::makeTitle( NS_BOOK, 'X' )->userCan( 'read' ) === false ) {
+		if ( $permManager->userCan(
+				'read',
+				$this->getUser(),
+				Title::makeTitle( NS_BOOK, 'X' )
+			) === false
+		) {
 			return;
 		}
 
@@ -43,7 +49,12 @@ class ApiQueryBookshelf extends ApiQueryBase {
 			$aFirstTitle = $aTOC[0];
 			$oFirstTitle = Title::newFromText( $aFirstTitle['title'] );
 
-			if ( $oFirstTitle->userCan( 'read' ) === false ) {
+			if ( $permManager->userCan(
+					'read',
+					$this->getUser(),
+					$oFirstTitle
+				) === false
+			) {
 				continue;
 			}
 

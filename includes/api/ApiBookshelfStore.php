@@ -92,7 +92,14 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	public function fetchBookNamespaceBooks() {
 		$aData = [];
 
-		if ( Title::makeTitle( NS_BOOK, 'X' )->userCan( 'read' ) === false ) {
+		if ( \MediaWiki\MediaWikiServices::getInstance()
+			->getPermissionManager()
+			->userCan(
+				'read',
+				$this->getUser(),
+				Title::makeTitle( NS_BOOK, 'X' )
+			) === false
+		) {
 			return $aData;
 		}
 
