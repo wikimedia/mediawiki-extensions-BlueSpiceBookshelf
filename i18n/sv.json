@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mjälten"
+			"Mjälten",
+			"Technic2"
 		]
 	},
+	"bs-bookshelf-positive-integer-validation-not-approved": "Enbart positiva heltal tillåts.",
 	"bs-bookshelf-specialpage-title": "Böcker",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Bibliotek",
 	"bs-bookshelf-tag-next": "Nästa",
