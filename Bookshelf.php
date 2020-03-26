@@ -281,6 +281,9 @@ class Bookshelf extends BsExtensionMW {
 				$oLocalFile = $oBackend->getLocalReference(
 					[ 'src' => $oFile->getPath() ]
 				);
+				if ( $oLocalFile === null ) {
+					continue;
+				}
 
 				// TODO: This should be part of BSF
 				$sHrefFilename = str_replace(
