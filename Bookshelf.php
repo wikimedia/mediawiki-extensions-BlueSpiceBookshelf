@@ -28,6 +28,8 @@
  * @filesource
  */
 
+use MediaWiki\MediaWikiServices;
+
 class Bookshelf extends BsExtensionMW {
 
 	/**
@@ -199,6 +201,7 @@ class Bookshelf extends BsExtensionMW {
 		$oFileAnchorElements = $oDOMXPath->query(
 			"//a[contains(@class,'internal') and not(contains(@class, 'image'))]"
 		);
+		$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
 		foreach ( $oFileAnchorElements as $oFileAnchorElement ) {
 			if ( $oFileAnchorElement instanceof DOMElement === false ) {
 				continue;
@@ -219,7 +222,7 @@ class Bookshelf extends BsExtensionMW {
 				$oTitle = Title::makeTitle( NS_FILE, $sFileTitle );
 			}
 			if ( $oTitle->exists() ) {
-				$oFile = RepoGroup::singleton()->findFile( $oTitle );
+				$oFile = $repoGroup->findFile( $oTitle );
 				$oBackend = $oFile->getRepo()->getBackend();
 				$oLocalFile = $oBackend->getLocalReference(
 					[ 'src' => $oFile->getPath() ]
