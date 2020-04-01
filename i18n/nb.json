@@ -38,5 +38,6 @@
 	"bs-bookshelf-empty-selection": "Ingenting valgt",
 	"apihelp-bs-bookshelf-bookstore-summary": "Lister opp alle kapitler i ei gitt bok. Tillater sortering, filtrering og sideinndeling. Implementerer ExtJS Store-parametre.",
 	"apihelp-bs-bookshelf-store-summary": "Lister opp alle bøker. Tillater sortering, filtrering og sideinndeling. Implementerer ExtJS Store-parametre.",
-	"apihelp-query+bsbookshelf-summary": "Gjør det mulig å spørre mot alle bøker."
+	"apihelp-query+bsbookshelf-summary": "Gjør det mulig å spørre mot alle bøker.",
+	"bs-bookshelf-pref-titledisplaytext-help": "Viser tittelen fra boknavigasjonen som sidetittel i stedet for sidenavnet."
 }

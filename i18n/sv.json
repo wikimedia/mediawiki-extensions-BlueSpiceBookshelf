@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mjälten"
+			"Mjälten",
+			"Technic2"
 		]
 	},
 	"bs-bookshelf-specialpage-title": "Böcker",
@@ -21,5 +22,6 @@
 	"apihelp-bs-bookshelf-store-description": "Listar alla interwikilänkar. Tillåter sortering, filtrering och sidnumrering. Implementerar ExtJS Store-parametrar.",
 	"bs-bookshelf-setting-path-feature": "Bok",
 	"bs-bookshelf-empty-selection": "Ingen fil markerad",
-	"apihelp-query+bsbookshelf-summary": "Gör det möjlig att fråga mot alla böcker."
+	"apihelp-query+bsbookshelf-summary": "Gör det möjlig att fråga mot alla böcker.",
+	"bs-bookshelf-positive-integer-validation-not-approved": "Enbart positiva heltal tillåts."
 }
