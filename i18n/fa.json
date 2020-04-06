@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"FarsiNevis"
+		]
+	},
+	"bs-bookshelf-positive-integer-validation-not-approved": "فقط اعداد صحیح مثبت، مجازند.",
+	"bs-bookshelf-specialpage-title": "کتاب‌ها",
+	"bs-bookshelf-specialpage-allpages-ns-book-text": "کتابخانه",
+	"bs-bookshelf-tag-next": "بعدی",
+	"bs-bookshelf-tag-prev": "قبلی",
+	"bs-bookshelf-tag-edit-book": "ویرایش کتاب",
+	"bs-bookshelf-personal-books-page-prefix": "$1/کتاب‌ها/",
+	"bs-bookshelf-add-to-book-label": "افزودن به یک کتاب",
+	"bs-bookshelf-add-to-book-label-book": "کتاب",
+	"bs-bookshelf-add-to-book-label-alias": "نام مستعار",
+	"bs-bookshelf-group-namespace": "کتاب‌های عمومی",
+	"bs-bookshelf-group-user": "کتاب‌های من",
+	"bs-bookshelf-add-to-book-added": "صفحه به کتاب $1 افزوده شد.",
+	"bs-bookshelf-setting-path-feature": "کتاب",
+	"bs-bookshelf-empty-selection": "چیزی انتخاب نشده است"
+}
