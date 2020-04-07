@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Fúlvio",
 			"Hamilton Abreu",
-			"Mansil alfalb",
-			"Fúlvio"
+			"Mansil alfalb"
 		]
 	},
 	"bs-bookshelf-extension-description": "Permite que o BlueSpice administre e exporte coleções hierárquicas de artigos.",

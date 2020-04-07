@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Stephan Muggli <muggli@hallowelt.biz>",
-			"Schmackes"
+			"Schmackes",
+			"Stephan Muggli <muggli@hallowelt.biz>"
 		]
 	},
 	"bs-bookshelf-extension-description": "Ermöglicht das Zusammenstellen von hierarchisch gegliederten Artikelsammlungen.",
