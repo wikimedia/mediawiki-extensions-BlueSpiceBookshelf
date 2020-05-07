@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"沈澄心",
-			"Wenyuan Liu",
+			"A Chinese Wikipedian",
 			"Dimension",
-			"A Chinese Wikipedian"
+			"Wenyuan Liu",
+			"沈澄心"
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "只能输入正整数",

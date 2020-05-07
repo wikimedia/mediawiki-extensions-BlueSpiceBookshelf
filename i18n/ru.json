@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Daniel Mietchen",
 			"Amikeco",
-			"Okras"
+			"Daniel Mietchen",
+			"Meerrahtar",
+			"Okras",
+			"Pacha Tchernof"
 		]
 	},
 	"bs-bookshelf-specialpage-title": "Книги",
@@ -11,5 +13,10 @@
 	"bs-bookshelf-group-user": "Собственные книги",
 	"bs-bookshelf-setting-path-feature": "Книга",
 	"bs-bookshelf-add-to-book-label-book": "Книга",
-	"bs-bookshelf-empty-selection": "Ничего не выбрано"
+	"bs-bookshelf-empty-selection": "Ничего не выбрано",
+	"bs-bookshelf-tag-next": "Следующая",
+	"bs-bookshelf-tag-prev": "Предыдущая",
+	"bs-bookshelf-tag-edit-book": "Редактировать книгу",
+	"bs-bookshelf-personal-books-page-prefix": "$1/Книги/",
+	"bs-bookshelf-add-to-book-label": "Добавить книгу"
 }
