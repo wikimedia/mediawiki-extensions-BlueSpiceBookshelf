@@ -4,6 +4,7 @@
 			"A Chinese Wikipedian",
 			"Dimension",
 			"Wenyuan Liu",
+			"列维劳德",
 			"沈澄心"
 		]
 	},
@@ -29,5 +30,7 @@
 	"apihelp-bs-bookshelf-store-description": "列举所有书籍。允许排序、过滤和分页。执行ExtJS存储的参数。",
 	"apihelp-bs-bookshelf-bookstore-description": "列举提供的书籍内所有的章节。允许排序、过滤和分页。执行ExtJS存储的参数。",
 	"bs-bookshelf-setting-path-feature": "图书",
-	"bs-bookshelf-empty-selection": "没有选定任何页面"
+	"bs-bookshelf-empty-selection": "没有选定任何页面",
+	"apihelp-bs-bookshelf-bookstore-summary": "列举提供的书籍内所有的章节。允许排序、过滤和分页。执行ExtJS存储的参数。",
+	"apihelp-bs-bookshelf-store-summary": "列举所有书籍。允许排序、过滤和分页。执行ExtJS存储的参数。"
 }
