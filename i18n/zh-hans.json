@@ -3,7 +3,9 @@
 		"authors": [
 			"A Chinese Wikipedian",
 			"Dimension",
+			"VulpesVulpes825",
 			"Wenyuan Liu",
+			"列维劳德",
 			"沈澄心"
 		]
 	},
@@ -29,5 +31,8 @@
 	"bs-bookshelf-empty-selection": "没有选定任何页面",
 	"bs-bookshelf-tag-bookshelf-desc": "在书籍页中插入书籍的章节导航。通过这个标签，上面提到的条目会包含在书中。编号会自动适应内容表。",
 	"bs-bookshelf-tag-bookmeta-desc": "用于在书籍文章上保存各种元数据的标记。这些都包含在书中。此标记的属性必须与书籍文章的元数据相关联。",
-	"bs-bookshelf-tag-booklist-desc": "从命名空间\"book\"生成文章列表，并可以进行筛选。过滤器的指示是强制性的。"
+	"bs-bookshelf-tag-booklist-desc": "从命名空间\"book\"生成文章列表，并可以进行筛选。过滤器的指示是强制性的。",
+	"apihelp-bs-bookshelf-bookstore-summary": "列举提供的书籍内所有的章节。允许排序、过滤和分页。执行ExtJS存储的参数。",
+	"apihelp-bs-bookshelf-store-summary": "列举所有书籍。允许排序、过滤和分页。执行ExtJS存储的参数。",
+	"apihelp-query+bsbookshelf-summary": "允许在所有书籍中进行查询。"
 }
