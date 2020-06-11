@@ -35,6 +35,7 @@
 	"apihelp-bs-bookshelf-store-description": "Lista todos os livros. Permite ordenar, filtrar e paginar. Implementa os parâmetros ExtJS Store.",
 	"apihelp-bs-bookshelf-bookstore-description": "Lista todos os capítulos de um determinado livro. Permite a classificação, filtragem e paginação. Implementa os parâmetros de ExtJS Store.",
 	"apihelp-bs-bookshelf-bookstore-param-node": "Especifica um nó para o qual deve ser fornecida uma lista de subcapítulos.",
+	"apihelp-bs-bookshelf-bookstore-param-book": "Especifica o livro para o qual uma lista de capítulos deverá ser fornecida.",
 	"bs-bookshelf-setting-path-feature": "Livro",
 	"bs-bookshelf-empty-selection": "Nada selecionado"
 }
