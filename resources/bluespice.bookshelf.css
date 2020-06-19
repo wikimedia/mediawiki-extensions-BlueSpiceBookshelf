@@ -9,6 +9,7 @@
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-color: #ddd;
+	display: none;
 }
 
 .bs-bookshelf-no-icon {
