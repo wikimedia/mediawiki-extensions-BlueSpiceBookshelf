@@ -3,7 +3,8 @@
 		"authors": [
 			"Fúlvio",
 			"Hamilton Abreu",
-			"Mansil alfalb"
+			"Mansil alfalb",
+			"Pedro Henrique"
 		]
 	},
 	"bs-bookshelf-extension-description": "Permite que o BlueSpice administre e exporte coleções hierárquicas de artigos.",
@@ -37,5 +38,6 @@
 	"bs-bookshelf-add-to-book-mod-bstag": "A etiqueta \"bookshelf\" da página foi alterada. A página será recarregada.",
 	"apihelp-bs-bookshelf-store-description": "Lista todos os livros. Permite ordenar, filtrar e paginar. Implementa os parâmetros ExtJS Store.",
 	"apihelp-bs-bookshelf-bookstore-param-node": "Especifica um nó para o qual deve ser fornecida uma lista de subcapítulos.",
-	"apihelp-bs-bookshelf-bookstore-param-book": "Especifica o livro para o qual uma lista de capítulos deverá ser fornecida."
+	"apihelp-bs-bookshelf-bookstore-param-book": "Especifica o livro para o qual uma lista de capítulos deverá ser fornecida.",
+	"bs-bookshelf-pref-titledisplaytext-help": "Mostra o título da navegação do livro como título da página, em vez do nome da página"
 }

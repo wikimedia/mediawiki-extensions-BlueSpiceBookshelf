@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Mjälten",
+			"Sabelöga",
 			"Technic2"
 		]
 	},
@@ -23,5 +24,6 @@
 	"bs-bookshelf-setting-path-feature": "Bok",
 	"bs-bookshelf-empty-selection": "Ingen fil markerad",
 	"apihelp-query+bsbookshelf-summary": "Gör det möjlig att fråga mot alla böcker.",
-	"bs-bookshelf-positive-integer-validation-not-approved": "Enbart positiva heltal tillåts."
+	"bs-bookshelf-positive-integer-validation-not-approved": "Enbart positiva heltal tillåts.",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Vänligen använd <i>left</i> eller <i>right</i>."
 }
