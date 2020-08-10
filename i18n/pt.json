@@ -39,5 +39,5 @@
 	"apihelp-bs-bookshelf-bookstore-param-book": "Especifica o livro para o qual uma lista de capítulos deverá ser fornecida.",
 	"bs-bookshelf-setting-path-feature": "Livro",
 	"bs-bookshelf-empty-selection": "Nada selecionado",
-	"bs-bookshelf-pref-titledisplaytext-help": "Mostra o título da navegação do livro como título da página, em vez do nome da página"
+	"bs-bookshelf-pref-titledisplaytext-help": "Mostra o título da navegação do livro como título da página, em vez do nome da página."
 }
