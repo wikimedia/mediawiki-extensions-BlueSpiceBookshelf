@@ -1,31 +1,33 @@
 <?php
 
+use BlueSpice\Bookshelf\ILineProcessor;
 use BlueSpice\ExtensionAttributeBasedRegistry;
-
 use MediaWiki\MediaWikiServices;
 
+/**
+ * Provide book hierarchy for a page
+ */
 class PageHierarchyProvider {
-
-	// Static fields
-	private static $prInstances = [];
-
-	// Instance fields
-	private $sSourceArticleTitle  = '';
-	private $sIndentChar          = '*';
-
-	private $aSimpleTOC   = null;
-	private $aExtendedTOC = null;
-
-	private $oSourceArticleTitle = null;
-	private $sSourceContent      = '';
+	/** @var string */
+	protected $sSourceArticleTitle = '';
+	/** @var mixed|string */
+	protected $sIndentChar = '*';
+	/** @var array|null */
+	protected $aSimpleTOC = null;
+	/** @var array|null */
+	protected $aExtendedTOC = null;
+	/** @var Title|null */
+	protected $oSourceArticleTitle = null;
+	/** @var false|mixed|string */
+	protected $sSourceContent = '';
+	/** @var BagOStuff|null */
+	protected $cache = null;
 
 	/**
-	 *
-	 * @var \BagOStuff
+	 * @param string $sSourceArticleTitle
+	 * @param array $aParams
 	 */
-	private $cache = null;
-
-	private function __construct( $sSourceArticleTitle, $aParams ) {
+	public function __construct( $sSourceArticleTitle, $aParams ) {
 		$this->sSourceArticleTitle  = $sSourceArticleTitle;
 		$this->sIndentChar          = $aParams['indent-char'];
 
@@ -69,16 +71,10 @@ class PageHierarchyProvider {
 	 * SourceArticle
 	 */
 	public static function getInstanceFor( $sSourceArticleTitle, $aParams = [] ) {
-		$aParams = [ 'indent-char' => '*' ] + $aParams;
-		$sParamHash = md5( $aParams['indent-char'] );
-		$sInstanceKey = md5( $sSourceArticleTitle . $sParamHash );
-		if ( !isset( self::$prInstances[ $sInstanceKey ] )
-			|| self::$prInstances[ $sInstanceKey ] == null ) {
-
-			 self::$prInstances[ $sInstanceKey ] =
-				new PageHierarchyProvider( $sSourceArticleTitle, $aParams );
-		}
-		return self::$prInstances[ $sInstanceKey ];
+		$phpf = MediaWikiServices::getInstance()->getService(
+			'BSBookshelfPageHierarchyProviderFactory'
+		);
+		return $phpf->getInstanceFor( $sSourceArticleTitle, $aParams );
 	}
 
 	/**
@@ -90,58 +86,10 @@ class PageHierarchyProvider {
 	 * null otherwise.
 	 */
 	public static function getInstanceForArticle( $sArticleTitle, $aParams = [] ) {
-		$aParams = [ 'indent-char' => '*' ] + $aParams;
-
-		// Checks, if article belongs to an own toc.
-		// If not, we have got to analyze the Articles content and look for the sourcearticle
-		$oPageContentProvider = new BsPageContentProvider();
-		$oTitle = Title::newFromText( $sArticleTitle );
-		$sContent = $oPageContentProvider->getWikiTextContentFor( $oTitle, $aParams );
-
-		// TODO: Make tag recognition more flexible.
-		// I. e. BsTagFinder for finding several tags <book />, etc.
-		$aBookshelfTags = BsTagFinder::find(
-			$sContent,
-			[ 'hierarchicaltoc', 'bookshelf', 'htoc', 'bs:bookshelf' ]
+		$phpf = MediaWikiServices::getInstance()->getService(
+			'BSBookshelfPageHierarchyProviderFactory'
 		);
-		$sHTOCTitle = self::findSuitableSourceArticleReference( $aBookshelfTags );
-		if ( empty( $sHTOCTitle ) ) {
-			// nothing to do if no tag is found
-			throw new InvalidArgumentException(
-				'Provided Article (' . $sArticleTitle . ') does not contain reference to sourcearticle!'
-			);
-		} else {
-			$oHTOC = self::getInstanceFor( $sHTOCTitle, $aParams );
-		}
-		return $oHTOC;
-	}
-
-/**
- *
- * @param array $aTags
- * @return string The prefixed text of the source title or an empty string if nothing suitable was
- * found
- */
-	private static function findSuitableSourceArticleReference( $aTags ) {
-		foreach ( $aTags as $aTag ) {
-			if ( empty( $aTag ) ) { continue;
-			}
-			$aAttributes = $aTag['attributes'];
-			$sSourceArticleTitle = '';
-			if ( isset( $aAttributes['sourcepagetitle'] ) ) {
-				$sSourceArticleTitle = $aAttributes['sourcepagetitle'];
-			}
-			if ( isset( $aAttributes['book'] ) ) {
-				$sSourceArticleTitle = $aAttributes['book'];
-			}
-			if ( isset( $aAttributes['src'] ) ) {
-				$sSourceArticleTitle = $aAttributes['src'];
-			}
-			if ( !empty( $sSourceArticleTitle ) ) {
-				return $sSourceArticleTitle;
-			}
-		}
-		return '';
+		return $phpf->getInstanceForArticle( $sArticleTitle, $aParams );
 	}
 
 	/**
@@ -149,10 +97,8 @@ class PageHierarchyProvider {
 	 * @return array
 	 */
 	public function getBookMeta() {
-		$oPCP = new BsPageContentProvider();
-		$sContent = $oPCP->getWikiTextContentFor( $this->oSourceArticleTitle );
-
-		$aBookMeta = BsTagFinder::find( $sContent, [ 'bookmeta', 'bs:bookmeta' ] );
+		$content = '' . $this->sSourceContent;
+		$aBookMeta = BsTagFinder::find( $content, [ 'bookmeta', 'bs:bookmeta' ] );
 
 		// We only use the first (!) occurence. There shouldn't be more.
 		if ( isset( $aBookMeta[0] ) && isset( $aBookMeta[0]['attributes'] ) ) {
@@ -219,85 +165,112 @@ class PageHierarchyProvider {
 
 			$this->ensureExtendedTOCArray();
 			$aTOC = $this->aExtendedTOC;
-			$config = MediaWikiServices::getInstance()->getConfigFactory()
-				->makeConfig( 'bsg' );
-			// TODO: inject from outside!
-			$sBookDisplayText = $config->get( 'BookshelfSupressBookNS' )
-				? $this->oSourceArticleTitle->getText()
-				: $this->oSourceArticleTitle->getPrefixedText();
 
-			$sJson = '{';
-			$sJson .= '"text": ' . FormatJson::encode( $sBookDisplayText ) . ','
-				. '"articleTitle": "' . $this->oSourceArticleTitle->getPrefixedText() . '",'
-				. '"articleDisplayTitle": ' . FormatJson::encode( $sBookDisplayText ) . ','
-				. '"articleId": "' . $this->oSourceArticleTitle->getArticleID() . '",'
-				// .'"id": "'  .md5( $this->oSourceArticleTitle->getFullText() ).'",'
-				. '"bookshelf": ' . FormatJson::encode( [
-					'type' => 'wikipage',
-					'page_id' => $this->oSourceArticleTitle->getArticleID(),
-					'page_namespace' => $this->oSourceArticleTitle->getNamespace(),
-					'page_title' => $this->oSourceArticleTitle->getText(),
-				] ) . ','
-				. '"children": [';
-
-			$iPreviousLevel = 1;
-			$numLines = count( $aTOC ) - 1;
-			for ( $l = 0; $l <= $numLines; $l++ ) {
-				$aRow = $aTOC[$l];
-				$iCurrentLevel = count( explode( '.', $aRow['number'] ) );
-				// avoid undefined index error
-				$iNextLevel = ( $l < count( $aTOC ) && isset( $aTOC[$l + 1] ) )
-					? count( explode( '.', $aTOC[$l + 1]['number'] ) )
-					: 0;
-				$iNextLevel = ( $iNextLevel == 0 ) ? 1 : $iNextLevel;
-
-				$sText = $aRow['display-title'];
-				if ( !$aParams['suppress-number-in-text'] ) {
-					$sText = $aRow['number'] . '. ' . $sText;
-				}
-
-				$sJson .= '{';
-				$sJson .=
-					// ExtJS NodeInterface properties
-					// TODO: Implement reasonabe node ids:
-					// <page_id>/<page_id>/Page_title_with_out_escaped_slashes/<page_id>
-					'"text": ' . FormatJson::encode( $sText ) . ','
-					. '"id": "' . $aRow['number'] . '",'
-
-					. '"articleNumber": "' . $aRow['number'] . '",'
-					. '"articleType": "' . $aRow['type'] . '",'
-					. '"articleTitle": ' . FormatJson::encode( $aRow['title'] ) . ','
-					. '"articleDisplayTitle": ' . FormatJson::encode( $aRow['display-title'] ) . ','
-					. '"articleId": ' . $aRow['article-id'] . ','
-					. '"articleIsRedirect": ' . FormatJson::encode( $aRow['is-redirect'] ) . ','
-
-					// New data container
-					. '"bookshelf": ' . FormatJson::encode( $aRow['bookshelf'] ) . ',';
-
-				$sJson .= '"children": [';
-				// Has no children
-				if ( $iCurrentLevel > $iNextLevel ) {
-					$sJson .= ']}';
-					$iLevelDifference = $iCurrentLevel - $iNextLevel;
-					for ( $n = 0; $n < $iLevelDifference; $n++ ) {
-						$sJson .= ']}';
-					}
-					$sJson .= ',';
-				} elseif ( $iCurrentLevel == $iNextLevel ) {
-					$sJson .= ']},';
-				}
-				$iPreviousLevel = $iCurrentLevel;
-			}
-			// Cut off tailing comma
-			$sJson = substr( $sJson, 0, -1 );
-			$sJson .= ']}';
-
-			$result = FormatJson::decode( $sJson );
-
+			$result = $this->getBookRootDataJSON();
+			$result['children'] = $this->getChildrenForJSON( $aTOC, $aParams );
+			// Objectify
+			$result = FormatJson::decode( FormatJson::encode( $result ) );
 			$this->cache->set( $cacheKey, $result );
 		}
 
 		return $result;
+	}
+
+	/**
+	 * @param array $toc
+	 * @param array $params
+	 * @return array
+	 */
+	protected function getChildrenForJSON( $toc, $params ) {
+		$sorted = [];
+		foreach ( array_reverse( $toc ) as $child ) {
+			if ( !isset( $child['number'] ) ) {
+				continue;
+			}
+			$sorted[$child['number']] = $child;
+		}
+
+		ksort( $sorted );
+
+		return $this->addChildrenRecursively( $sorted, 1, false, $params );
+	}
+
+	/**
+	 * @param array $source
+	 * @param int $level
+	 * @param false $parentNumber
+	 * @param array $params
+	 * @return array
+	 */
+	protected function addChildrenRecursively( $source, $level, $parentNumber = false, $params = [] ) {
+		$result = [];
+		foreach ( $source as $number => $child ) {
+			$number = (string)$number;
+			$numberBits = explode( '.', $number );
+			if ( count( $numberBits ) !== $level ) {
+				continue;
+			}
+			if ( $parentNumber && strpos( $number, $parentNumber ) !== 0 ) {
+				continue;
+			}
+			$subChildren = $this->addChildrenRecursively( $source, $level + 1, $number, $params );
+			if ( $subChildren ) {
+				$child['children'] = $subChildren;
+			}
+			$result[] = $this->formatChildForJSON( $child, $params );
+		}
+
+		return $result;
+	}
+
+	/**
+	 * @return array
+	 * @throws ConfigException
+	 */
+	protected function getBookRootDataJSON() {
+		$config = MediaWikiServices::getInstance()->getConfigFactory()
+			->makeConfig( 'bsg' );
+		// TODO: inject from outside!
+		$bookDisplayTitle = $config->get( 'BookshelfSupressBookNS' )
+			? $this->oSourceArticleTitle->getText()
+			: $this->oSourceArticleTitle->getPrefixedText();
+
+		return [
+			'text' => $bookDisplayTitle,
+			'articleTitle' => $this->oSourceArticleTitle->getPrefixedText(),
+			'articleDisplayTitle' => $bookDisplayTitle,
+			'articleId' => $this->oSourceArticleTitle->getArticleID(),
+			'bookshelf' => [
+				'type' => 'wikipage',
+				'page_id' => $this->oSourceArticleTitle->getArticleID(),
+				'page_namespace' => $this->oSourceArticleTitle->getNamespace(),
+				'page_title' => $this->oSourceArticleTitle->getText(),
+			]
+		];
+	}
+
+	/**
+	 * @param array $child
+	 * @param array $params
+	 * @return array
+	 */
+	protected function formatChildForJSON( $child, $params ) {
+		$text = $child['display-title'];
+		if ( !$params['suppress-number-in-text'] ) {
+			$text = $child['number'] . '. ' . $text;
+		}
+		return [
+			'text' => $text,
+			'id' => $child['number'],
+			'articleNumber' => $child['number'],
+			'articleType' => $child['type'],
+			'articleTitle' => $child['title'],
+			'articleDisplayTitle' => $child['display-title'],
+			'articleId' => $child['article-id'],
+			'articleIsRedirect' => $child['is-redirect'],
+			'bookshelf' => $child['bookshelf'],
+			'children' => isset( $child['children'] ) ? $child['children'] : []
+		];
 	}
 
 	/**
@@ -383,10 +356,14 @@ class PageHierarchyProvider {
 				$sContent,
 				[ 'hierarchicaltoc', 'bookshelf', 'htoc', 'bs:bookshelf' ]
 			);
-			$sHTOCTitle = self::findSuitableSourceArticleReference( $aBookshelfTags );
-			if ( empty( $sHTOCTitle ) ) { return '';
+			$phpf = MediaWikiServices::getInstance()->getService(
+				'BSBookshelfPageHierarchyProviderFactory'
+			);
+			$sHTOCTitle = $phpf->findSuitableSourceArticleReference( $aBookshelfTags );
+			if ( empty( $sHTOCTitle ) ) {
+				return '';
 			}
-			$oHTOC = self::getInstanceFor( $sHTOCTitle );
+			$oHTOC = $phpf->getInstanceFor( $sHTOCTitle );
 
 			$number = $oHTOC->getNumberFor( $sArticleTitle, 1 );
 			$this->cache->set( $cacheKey, $number );
@@ -426,11 +403,14 @@ class PageHierarchyProvider {
 			$sContent,
 			[ 'hierarchicaltoc', 'bookshelf', 'htoc' ]
 		);
-		$sHTOCTitle = self::findSuitableSourceArticleReference( $aBookshelfTags );
+		$phpf = MediaWikiServices::getInstance()->getService(
+			'BSBookshelfPageHierarchyProviderFactory'
+		);
+		$sHTOCTitle = $phpf->findSuitableSourceArticleReference( $aBookshelfTags );
 		if ( $sContent != $sHTOCTitle && $sHTOCTitle != $this->sSourceArticleTitle ) {
 			// getting a new toc array instance
 			$sTitle = $sHTOCTitle;
-			$oHTOC = self::getInstanceFor( $sHTOCTitle );
+			$oHTOC = $phpf->getInstanceFor( $sHTOCTitle );
 			$arTOC = $oHTOC->getExtendedTOCArray();
 		} else {
 			$sTitle = $this->sSourceArticleTitle;
@@ -526,7 +506,7 @@ class PageHierarchyProvider {
 		return $oStatus;
 	}
 
-	private function createSimpleTOCArrayFromContent() {
+	protected function createSimpleTOCArrayFromContent() {
 		$this->aSimpleTOC = [];
 
 		/* Thanks to Sebastian Ulbricht! */
@@ -536,7 +516,8 @@ class PageHierarchyProvider {
 
 		foreach ( $aLines as $sText ) {
 			// Is line empty or does not start with a valid indent character?
-			if ( empty( $sText ) || $sText[0] != $this->sIndentChar ) { continue;
+			if ( empty( $sText ) || $sText[0] != $this->sIndentChar ) {
+				continue;
 			}
 
 			$iDepth = 0;
@@ -577,7 +558,7 @@ class PageHierarchyProvider {
 		}
 	}
 
-	private function createExtendedTOCArrayFromSimpleTOCArray() {
+	protected function createExtendedTOCArrayFromSimpleTOCArray() {
 		$this->aExtendedTOC = [];
 		$this->initLineProcessors();
 
@@ -615,7 +596,7 @@ class PageHierarchyProvider {
 	 */
 	protected $lineProcessors = [];
 
-	private function initLineProcessors() {
+	protected function initLineProcessors() {
 		$lineParserRegistry = new ExtensionAttributeBasedRegistry(
 			'BlueSpiceBookshelfLineProcessors'
 		);
@@ -632,7 +613,7 @@ class PageHierarchyProvider {
 	 * @param string $line
 	 * @return array
 	 */
-	private function processLine( $line ) {
+	protected function processLine( $line ) {
 		foreach ( $this->lineProcessors as $lineProcessor ) {
 			if ( $lineProcessor->applies( $line ) ) {
 				$result = $lineProcessor->process( $line );
