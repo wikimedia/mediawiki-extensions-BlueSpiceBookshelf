@@ -16,8 +16,22 @@ Ext.define( 'BS.Bookshelf.dialog.AddToBook', {
 
 		this.chbModifyBookshelfTag = new Ext.form.field.Checkbox({
 			//fieldLabel: '&nbsp;',
-			boxLabel: mw.message( 'bs-bookshelf-add-to-book-label-mod-bstag' ).plain()
+			boxLabel: mw.message( 'bs-bookshelf-add-to-book-label-mod-bstag' ).plain(),
+			hidden: true
 		});
+
+		this.cbBooks.on( 'change', function( sender, value ) {
+			var record = sender.getStore().findRecord( 'book_prefixedtext', value );
+			if ( record ) {
+				var type = record.get( 'book_type' );
+				var location = bs.bookshelf.storageLocationRegistry.lookup( type );
+				if ( location && location.allowChangingPageTags() ) {
+					return this.chbModifyBookshelfTag.setVisible( true );
+				}
+			}
+			this.chbModifyBookshelfTag.setVisible( false );
+			this.chbModifyBookshelfTag.setValue( false );
+		}.bind( this ) );
 
 		this.items = [
 			this.cbBooks,
@@ -52,54 +66,34 @@ Ext.define( 'BS.Bookshelf.dialog.AddToBook', {
 
 	doAddToBook: function() {
 		this.setLoading( true );
-		var me = this;
-		var selectedBookPageId =  this.cbBooks.getValue();
-		var selectedBookDisplayText =  this.cbBooks.getRawValue();
-		var alias = this.tfAlias.getValue();
-		var modifyBookshelfTag = this.chbModifyBookshelfTag.getValue();
-		var currentPageName = this.currentData;
-		var messageTitle = mw.message( 'bs-bookshelf-add-to-book-label' ).plain();
+		var me = this,
+			selectedBookPrefixedText =  this.cbBooks.getValue(),
+			selectedBookDisplayText =  this.cbBooks.getRawValue(),
+			alias = this.tfAlias.getValue(),
+			modifyBookshelfTag = this.chbModifyBookshelfTag.getValue(),
+			messageTitle = mw.message( 'bs-bookshelf-add-to-book-label' ).plain(),
+			record = this.cbBooks.getStore().findRecord( 'book_prefixedtext', selectedBookPrefixedText ),
+			storage = bs.bookshelf.storageLocationRegistry.lookup( record.get( 'book_type' ) );
 
 		var wikiText = "\n* [[{0}|{1}]]".format(
 			this.currentData,
 			alias
 		);
 
-		var api = new mw.Api();
-		api.postWithToken( 'csrf', {
-			action: 'edit',
-			pageid: selectedBookPageId,
-			appendtext: wikiText
-		})
-		.done(function( response, xhr ){
+		storage.appendText( record, wikiText, modifyBookshelfTag ).done( function() {
 			mw.notify(
 				mw.message( 'bs-bookshelf-add-to-book-added', selectedBookDisplayText ).parse(),
 				{ title: messageTitle }
 			);
-			if( modifyBookshelfTag ) {
-				var copyAction = new BS.action.APICopyPage({
-					sourceTitle: currentPageName,
-					targetTitle: currentPageName //We just want to modify the content
-				});
-				copyAction.on( 'beforesaveedit', function( action, edit ) {
-					edit.content = edit.content.replace(/<(bs:)?bookshelf.*?(src|book)=\"(.*?)\".*?\/>/gi, function( fullmatch, group ) {
-						return '';
-					});
-					edit.content = '<bs:bookshelf src="' + response.edit.title + '" />' + "\n" + edit.content.trim();
-				});
-				copyAction.execute().done(function() {
-					mw.notify(
-						mw.message( 'bs-bookshelf-add-to-book-mod-bstag' ).plain(),
-						{ title: messageTitle }
-					);
-					me.afterApiCallSuccess();
-					window.location.reload();
-				});
+			me.afterApiCallSuccess();
+			if ( modifyBookshelfTag ) {
+				mw.notify(
+					mw.message( 'bs-bookshelf-add-to-book-mod-bstag' ).plain(),
+					{ title: messageTitle }
+				);
+				window.location.reload();
 			}
-			else {
-				me.afterApiCallSuccess();
-			}
-		});
+		} );
 	},
 
 	afterApiCallSuccess: function() {

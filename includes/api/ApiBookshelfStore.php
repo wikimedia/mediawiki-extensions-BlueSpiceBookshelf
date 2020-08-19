@@ -29,10 +29,11 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	 * @return stdClass[]
 	 */
 	protected function makeData( $sQuery = '' ) {
-		$aPersonalBooks = $this->fetchPersonalBooks();
-		$aBookNSBooks = $this->fetchBookNamespaceBooks();
-
-		$aAllBooks = array_merge( $aBookNSBooks, $aPersonalBooks );
+		$aAllBooks = array_merge(
+			$this->fetchPersonalBooks(),
+			$this->fetchBookNamespaceBooks(),
+			$this->fetchTempBooksFromParam()
+		);
 		$aFilteredBooks = [];
 		$sLcQuery = strtolower( $sQuery );
 		foreach ( $aAllBooks as $oDataSet ) {
@@ -72,6 +73,11 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	public function getAllowedParams() {
 		$aParams = parent::getAllowedParams();
 		// TODO: Add 'user' field to allow fechting for different users
+		$aParams['tempBooks'] = [
+			ApiBase::PARAM_TYPE => 'string',
+			ApiBase::PARAM_REQUIRED => false,
+			ApiBase::PARAM_DFLT => '{}',
+		];
 		return $aParams;
 	}
 
@@ -80,9 +86,8 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	 * @return array
 	 */
 	public function getParamDescription() {
-		$aDesc = parent::getParamDescription();
 		// TODO: Add 'user' field to allow fechting for different users
-		return $aDesc;
+		return parent::getParamDescription();
 	}
 
 	/**
@@ -203,5 +208,65 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 		\Hooks::run( 'BSBookshelfManagerGetBookDataRow', [ $oTitle, $oBook ] );
 
 		return $oBook;
+	}
+
+	private function fetchTempBooksFromParam() {
+		$value = $this->getParameter( 'tempBooks' );
+
+		if ( !$value ) {
+			return [];
+		}
+
+		$data = [];
+		$decoded = FormatJson::decode( $value, 1 );
+		foreach ( $decoded as $name => $content ) {
+			$checkTitle = Title::newFromText( $name );
+			if ( in_array( $checkTitle->getNamespace(), [ NS_BOOK, NS_USER ] ) ) {
+				// Actual book with title
+				continue;
+			}
+
+			$dataset = $this->makeDataSetForTemp( $name, $content );
+			if ( $dataset === null ) {
+				continue;
+			}
+			$dataset->book_type = 'local_storage';
+			$data[] = $dataset;
+		}
+
+		return $data;
+	}
+
+	private function makeDataSetForTemp( $name, $content ) {
+		$php = DynamicPageHierarchyProvider::getInstanceFor( $name, [ 'content' => $content ] );
+		$toc = $php->getExtendedTOCArray();
+
+		$sFirstChapterPrefixedText = null;
+
+		$book = new stdClass();
+		$book->page_id = -1;
+		$book->page_title = $name;
+		$book->page_namespace = -5;
+
+		if ( isset( $toc[0] ) ) {
+			$firstTitle = $toc[0];
+			$firstTitle = Title::newFromText( $firstTitle['title'] );
+			$book->book_first_chapter_prefixedtext = $firstTitle instanceof Title ?
+				$firstTitle->getPrefixedText() : $firstTitle['title'];
+			$book->book_first_chapter_link
+				= $this->linkRenderer->makeLink( $firstTitle, $name );
+		}
+
+		$book->book_prefixedtext = $name;
+		$book->book_displaytext = $name;
+		$book->book_meta = $php->getBookMeta();
+
+		// This hook is DEPRECATED! Use hooks from base class instead!
+		\Hooks::run( 'BSBookshelfManagerGetBookDataRow', [
+			new Title(),
+			$book
+		] );
+
+		return $book;
 	}
 }

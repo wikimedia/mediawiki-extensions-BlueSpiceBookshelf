@@ -1,11 +1,11 @@
 Ext.define('BS.Bookshelf.form.field.BookCombo', {
 	extend: 'MWExt.form.field.GridPicker',
-	requires: [ 'BS.store.BSApi' ],
+	requires: [ 'BS.Bookshelf.data.BookStore' ],
 
 	triggerAction: 'all',
 	typeAhead: true,
 	displayField: 'book_displaytext',
-	valueField: 'page_id',
+	valueField: 'book_prefixedtext',
 
 	gridConfig: {
 		border:true,
@@ -16,11 +16,12 @@ Ext.define('BS.Bookshelf.form.field.BookCombo', {
 				'{name:this.formatName}',
 				{
 					formatName: function(name) {
-						var label = mw.message( 'bs-bookshelf-group-namespace' ).plain();
-						if( name === 'user_book' ) {
-							label = mw.message( 'bs-bookshelf-group-user' ).plain();
+						var location = bs.bookshelf.storageLocationRegistry.lookup( name );
+						if ( location ) {
+							return location.getLabel();
 						}
-						return label;
+
+						return '';
 					}
 				}
 			],
@@ -33,20 +34,15 @@ Ext.define('BS.Bookshelf.form.field.BookCombo', {
 	},
 
 	initComponent: function(){
-		this.store = new BS.store.BSApi({
-			apiAction: 'bs-bookshelf-store',
+
+		this.store = new BS.Bookshelf.data.BookStore( {
 			proxy: {
 				extraParams: {
 					limit: 9999 //Bad hack to avoid paging
 				}
 			},
-			fields: [
-				{ name: 'page_id', type: 'number' },
-				'page_title', 'page_namespace',
-				'book_first_chapter_prefixedtext', 'book_prefixedtext',
-				'book_displaytext', 'book_meta', 'book_type' ],
 			groupField: 'book_type'
-		});
+		} );
 
 		this.callParent(arguments);
 	}
