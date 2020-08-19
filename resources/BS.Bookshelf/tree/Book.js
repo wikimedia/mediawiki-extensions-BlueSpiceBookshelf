@@ -35,16 +35,6 @@ Ext.define( 'BS.Bookshelf.tree.Book', {
 		this.callParent(arguments);
 	},
 
-	/*
-	onLoad: function( treepanel, node, records, successful, eOpts ) {
-		console.log(records);
-	},
-
-	onItemclick: function( node, rec ) {
-		rec.set('checked',!rec.get('checked'));
-	},
-	*/
-
 	dataLoaded: function( oSender ) {
 		var me = this;
 		this.oCurrentArticleNode = this.findChildRecursively(

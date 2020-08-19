@@ -45,13 +45,10 @@
 
 	function _prependNumbersToTOCandHeadings() {
 		//Prepend number
-		if ( mw.user.options.get( 'numberheadings' ) == 0 ) {
+		if ( mw.user.options.get( 'numberheadings' ) === 0 ) {
 			return;
 		}
 
-		if ( mw.config.get( 'bsBookshelfPrependPageTOCNumbers', false ) === false ) {
-			return;
-		}
 		var $firstBookshelfTag = $( '.bs-bookshelf-toc' ).first();
 		var hasChildren = $firstBookshelfTag.data( 'bs-has-children' );
 

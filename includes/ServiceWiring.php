@@ -12,4 +12,7 @@ return [
 			$lineParsers
 		);
 	},
+	'BSBookshelfPageHierarchyProviderFactory' => function ( MediaWikiServices $services ) {
+		return new \BlueSpice\Bookshelf\PageHierarchyProviderFactory();
+	},
 ];

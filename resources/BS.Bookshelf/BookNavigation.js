@@ -24,7 +24,9 @@ Ext.define( 'BS.Bookshelf.BookNavigation',{
 				cls: 'bs-bookshelf-edit-book-tool',
 				handler: function(event, toolEl, panel){
 					window.location.href = mw.util.getUrl(
-						'Special:BookshelfBookUI/' + this.bookSrc
+						this.bookSrc, {
+							action: 'edit'
+						}
 					);
 				},
 				scope: this
