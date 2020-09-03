@@ -1,7 +1,7 @@
 <?php
 
-use BlueSpice\Services;
 use MediaWiki\Linker\LinkRenderer;
+use MediaWiki\MediaWikiServices;
 
 class ApiBookshelfStore extends BSApiExtJSStoreBase {
 
@@ -20,7 +20,7 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	public function __construct( $mainModule, $moduleName, $modulePrefix = '' ) {
 		parent::__construct( $mainModule, $moduleName, $modulePrefix );
 
-		$this->linkRenderer = Services::getInstance()->getLinkRenderer();
+		$this->linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
 	}
 
 	/**
@@ -92,7 +92,7 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	public function fetchBookNamespaceBooks() {
 		$aData = [];
 
-		if ( \MediaWiki\MediaWikiServices::getInstance()
+		if ( MediaWikiServices::getInstance()
 			->getPermissionManager()
 			->userCan(
 				'read',
