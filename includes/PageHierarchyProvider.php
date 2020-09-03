@@ -2,6 +2,8 @@
 
 use BlueSpice\ExtensionAttributeBasedRegistry;
 
+use MediaWiki\MediaWikiServices;
+
 class PageHierarchyProvider {
 
 	// Static fields
@@ -217,7 +219,7 @@ class PageHierarchyProvider {
 
 			$this->ensureExtendedTOCArray();
 			$aTOC = $this->aExtendedTOC;
-			$config = \BlueSpice\Services::getInstance()->getConfigFactory()
+			$config = MediaWikiServices::getInstance()->getConfigFactory()
 				->makeConfig( 'bsg' );
 			// TODO: inject from outside!
 			$sBookDisplayText = $config->get( 'BookshelfSupressBookNS' )
@@ -487,7 +489,7 @@ class PageHierarchyProvider {
 
 		// $sLinkList = null;
 		$sLinkList = $sBookMeta;
-		$util = \BlueSpice\Services::getInstance()->getService( 'BSUtilityFactory' );
+		$util = MediaWikiServices::getInstance()->getService( 'BSUtilityFactory' );
 
 		foreach ( $arHierarchyArray as $key => $value ) {
 			// making the number to stars 3.2.1 -> ***; 1.4 -> **
