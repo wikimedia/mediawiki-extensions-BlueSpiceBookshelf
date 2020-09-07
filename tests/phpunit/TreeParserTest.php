@@ -3,8 +3,8 @@
 namespace BlueSpice\Bookshelf\Tests;
 
 use BlueSpice\Bookshelf\TreeParser;
-use BlueSpice\Services;
 use FormatJson;
+use MediaWiki\MediaWikiServices;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -36,7 +36,7 @@ class TreeParserTest extends TestCase {
 	 * @dataProvider provideParseWikiTextListData
 	 */
 	public function testParseWikiTextList( $wikiText, $expectedTree ) {
-		$parser = Services::getInstance()->getService( 'BSBookshelfTreeParser' );
+		$parser = MediaWikiServices::getInstance()->getService( 'BSBookshelfTreeParser' );
 		$tree = $parser->parseWikiTextList( $wikiText );
 		$this->assertEquals( $expectedTree, $tree, 'Tree structure should be identically' );
 	}
