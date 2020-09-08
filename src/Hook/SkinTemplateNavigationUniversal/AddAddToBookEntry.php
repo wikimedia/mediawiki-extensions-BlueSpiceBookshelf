@@ -1,10 +1,10 @@
 <?php
 
-namespace BlueSpice\Bookshelf\Hook\SkinTemplateNavigation;
+namespace BlueSpice\Bookshelf\Hook\SkinTemplateNavigationUniversal;
 
-use BlueSpice\Hook\SkinTemplateNavigation;
+use BlueSpice\Hook\SkinTemplateNavigationUniversal;
 
-class AddAddToBookEntry extends SkinTemplateNavigation {
+class AddAddToBookEntry extends SkinTemplateNavigationUniversal {
 	/**
 	 *
 	 * @return bool
@@ -14,7 +14,7 @@ class AddAddToBookEntry extends SkinTemplateNavigation {
 		if ( !$title->exists() ) {
 			return true;
 		}
-		if ( !\MediaWiki\MediaWikiServices::getInstance()
+		if ( !$this->getServices()
 			->getPermissionManager()
 			->userCan( 'edit', $this->sktemplate->getUser(), $title )
 		) {

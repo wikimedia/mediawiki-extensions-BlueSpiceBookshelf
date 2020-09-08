@@ -137,7 +137,7 @@
 			"\\BlueSpice\\Bookshelf\\Hook\\BSInsertMagicAjaxGetData\\AddBookmetaTag::callback",
 			"\\BlueSpice\\Bookshelf\\Hook\\BSInsertMagicAjaxGetData\\AddBooklistTag::callback"
 		],
-		"SkinTemplateNavigation": "\\BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigation\\AddAddToBookEntry::callback",
+		"SkinTemplateNavigation::Universal": "\\BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigationUniversal\\AddAddToBookEntry::callback",
 		"BSUEModulePDFcollectMetaData": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFcollectMetaData\\SupressBookNS::callback"
 	},
 	"load_composer_autoloader": true,
