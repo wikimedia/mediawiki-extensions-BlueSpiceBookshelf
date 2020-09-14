@@ -3,11 +3,14 @@
 		"authors": [
 			"Amikeco",
 			"Daniel Mietchen",
+			"Facenapalm",
 			"Meerrahtar",
 			"Okras",
 			"Pacha Tchernof"
 		]
 	},
+	"bs-bookshelf-positive-integer-validation-not-approved": "Разрешены только положительные целые значения.",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Пожалуйста, используйте <i>left</i> или <i>right</i>.",
 	"bs-bookshelf-specialpage-title": "Книги",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Библиотека",
 	"bs-bookshelf-tag-next": "Следующая",
