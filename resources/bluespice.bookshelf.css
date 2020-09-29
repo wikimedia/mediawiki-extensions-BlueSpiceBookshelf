@@ -19,3 +19,7 @@
 .bs-chapter-new {
 	color: #ba0000;
 }
+
+.ve-ce-focusableNode.bs-bookshelf-toc {
+	display: none;
+}
