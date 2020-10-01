@@ -17,5 +17,8 @@
 	"bs-bookshelf-positive-integer-validation-not-approved": "양의 정수만 허용됩니다.",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "<i>left</i> 또는 <i>right</i>를 사용해 주십시오.",
 	"bs-bookshelf-add-to-book-added": "이 문서는 '$1' 책에 추가되었습니다.",
-	"apihelp-bs-bookshelf-store-summary": "모든 책을 나열합니다. 정렬, 필터링, 페이지 매기기를 허용합니다. ExtJS 스토어 변수들을 구현합니다."
+	"apihelp-bs-bookshelf-store-summary": "모든 책을 나열합니다. 정렬, 필터링, 페이지 매기기를 허용합니다. ExtJS 스토어 변수들을 구현합니다.",
+	"bs-bookshelf-personal-books-page-prefix": "$1/책/",
+	"bs-bookshelf-group-namespace": "일반 책",
+	"bs-bookshelf-group-user": "나의 책"
 }

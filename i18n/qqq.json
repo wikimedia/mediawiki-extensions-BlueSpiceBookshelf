@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"MuratTheTurkish",
 			"Robert Vogel <vogeli@hallowelt.biz>",
 			"Umherirrender"
 		]
@@ -22,7 +23,7 @@
 	"bs-bookshelf-pref-PrependPageTOCNumbers": "Label for the checkbox in user preferences, when activated, article table of contents and headlines with book numberation are prepended.",
 	"bs-bookshelf-tag-next": "Short label for the button that shows the next page.\n{{Identical|Next}}",
 	"bs-bookshelf-tag-prev": "Short label for the button that shows the previous page.\n{{Identical|Previous}}",
-	"bs-bookshelf-tag-edit-book": "Short label for the button that allows editing the book.\n{{Identical|Edit book}}",
+	"bs-bookshelf-tag-edit-book": "Short label for the button that allows editing the book.",
 	"bs-bookshelf-personal-books-page-prefix": "The wikipage name under which personal books reside. Parameter $1 is the user name",
 	"bs-bookshelf-add-to-book-label": "Short label for the button, that adds an entry to a book.",
 	"bs-bookshelf-add-to-book-label-book": "Short label for the combobox that allows to select a book.\n{{Identical|Book}}",
