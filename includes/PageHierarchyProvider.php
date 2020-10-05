@@ -583,11 +583,21 @@ class PageHierarchyProvider {
 	 * @return string
 	 */
 	protected function getCacheKey( $title, $method, $aParams = [] ) {
+		$templates = $this->oSourceArticleTitle->getTemplateLinksFrom();
+
+		$templateRevisionIds = [];
+		foreach ( $templates as $template ) {
+			$templateRevisionIds[] = $template->getLatestRevID();
+		}
+
 		return $this->cache->makeKey(
 			$title->getPrefixedDBkey(),
 			$method,
 			md5( serialize( $aParams ) ),
-			$this->oSourceArticleTitle->getLatestRevID()
+			md5( serialize( [
+				$this->oSourceArticleTitle->getLatestRevID(),
+				$templateRevisionIds
+			] ) )
 		);
 	}
 
