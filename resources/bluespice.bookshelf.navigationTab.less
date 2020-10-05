@@ -103,7 +103,6 @@
 			padding-left: 1em;
 			height: auto;
 			max-width: 100%;
-			overflow: hidden;
 			&.bs-tree-level-0 {
 				padding-left: 0;
 			}
@@ -119,6 +118,7 @@
 				& > a, & > span {
 					display: block;
 					min-height: 32px;
+					height: auto;
 					width: calc(~"100% - 20px");
 					line-height: 32px;
 					padding-left: 5px;
@@ -138,8 +138,6 @@
 						vertical-align: top;
 						height: 100%;
 						min-height: inherit;
-						overflow: hidden;
-						text-overflow: ellipsis;
 						padding-bottom: 3px;
 						line-height: 29px;
 						max-width: 80%;
