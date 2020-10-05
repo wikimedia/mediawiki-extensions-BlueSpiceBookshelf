@@ -4,6 +4,7 @@
 			"Amikeco",
 			"Daniel Mietchen",
 			"Facenapalm",
+			"Kareyac",
 			"Meerrahtar",
 			"Okras",
 			"Pacha Tchernof"
@@ -19,7 +20,13 @@
 	"bs-bookshelf-personal-books-page-prefix": "$1/Книги/",
 	"bs-bookshelf-add-to-book-label": "Добавить книгу",
 	"bs-bookshelf-add-to-book-label-book": "Книга",
-	"bs-bookshelf-group-user": "Собственные книги",
 	"bs-bookshelf-setting-path-feature": "Книга",
-	"bs-bookshelf-empty-selection": "Ничего не выбрано"
+	"bs-bookshelf-empty-selection": "Ничего не выбрано",
+	"bs-bookshelf-grouping-template-type-user_book": "Собственные книги",
+	"bs-bookshelf-edit-title": "Редактирование $1",
+	"bs-bookshelf-book-grid-title": "Книги",
+	"bookshelf": "Книжная полка",
+	"bs-bookshelf-prof-defaultview": "Вид по умолчанию",
+	"bs-bookshelf-prof-defaultview-grid": "Сетка",
+	"bs-bookshelf-prof-defaultview-images": "Изображения"
 }

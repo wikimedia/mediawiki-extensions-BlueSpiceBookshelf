@@ -51,8 +51,6 @@
 	"bs-bookshelfui-override-tag-text": "Voulez-vous ajouter ou mettre à jour les associations du livre (<code>&lt;bs:bookshelf /&gt;</code>) dans les pages wiki ? Une nouvelle version de la page wiki sera créée.",
 	"bs-bookshelfui-nothingtoexport-text": "Votre choix est vide",
 	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Un livre|$1 livres}})",
-	"bs-bookshelfui-grouping-template-type-ns_book": "Livre généraux",
-	"bs-bookshelfui-grouping-template-type-user_book": "Propres livres",
 	"bs-bookshelfui-book-type": "Type du livre",
 	"bs-bookshelfui-empty-selection": "Aucune sélection",
 	"apihelp-bs-bookshelf-manage-summary": "Fournit les tâches pour la manipulation du livre.",

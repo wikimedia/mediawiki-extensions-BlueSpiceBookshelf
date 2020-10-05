@@ -46,8 +46,6 @@
 	"bs-bookshelfui-override-tag-text": "您要添加或更新帶有 wiki 頁面的書籍分配（<code>&lt;bs:bookshelf /&gt;</code>）嗎？這將會建立新的 wiki 頁面版本。",
 	"bs-bookshelfui-nothingtoexport-text": "您所挑選的為空",
 	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|一本書籍|$1 本書籍}})",
-	"bs-bookshelfui-grouping-template-type-ns_book": "一般書籍",
-	"bs-bookshelfui-grouping-template-type-user_book": "擁有書籍",
 	"bs-bookshelfui-book-type": "書籍類型",
 	"bs-bookshelfui-empty-selection": "未選擇",
 	"apihelp-bs-bookshelf-manage-summary": "提供用於書籍運用的事項。",

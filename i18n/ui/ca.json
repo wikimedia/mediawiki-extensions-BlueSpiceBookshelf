@@ -15,7 +15,6 @@
 	"bs-bookshelfui-dlg-copy-title": "Copia «$1»",
 	"bs-bookshelfui-dlg-copy-name-addition": " (còpia)",
 	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "Es copiaran totes les pàgines del llibre en aquest espai de noms. Se’n adaptaran els enllaços.",
-	"bs-bookshelfui-grouping-template-type-ns_book": "Llibres generals",
 	"bs-bookshelfui-dlg-choosecategory-label": "Categoria",
 	"bs-bookshelfui-type-category": "Totes les pàgines d’una categoria",
 	"bs-bookshelfui-dlg-choosepc-label": "Col·lecció de pàgines",

@@ -25,8 +25,6 @@
 	"bs-bookshelf-add-to-book-label": "Legg til i ei bok",
 	"bs-bookshelf-add-to-book-label-book": "Bok",
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
-	"bs-bookshelf-group-namespace": "Generelle bøker",
-	"bs-bookshelf-group-user": "Egne bøker",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "Endre «bookshelf»-taggen på siden (ny revisjon)",
 	"bs-bookshelf-add-to-book-added": "Siden har blitt lagt til boka «$1».",
 	"bs-bookshelf-add-to-book-mod-bstag": "«bookshelf»-taggen på siden har blitt endret. Siden vil lastes på nytt.",
@@ -39,5 +37,11 @@
 	"apihelp-bs-bookshelf-bookstore-summary": "Lister opp alle kapitler i ei gitt bok. Tillater sortering, filtrering og sideinndeling. Implementerer ExtJS Store-parametre.",
 	"apihelp-bs-bookshelf-store-summary": "Lister opp alle bøker. Tillater sortering, filtrering og sideinndeling. Implementerer ExtJS Store-parametre.",
 	"apihelp-query+bsbookshelf-summary": "Gjør det mulig å spørre mot alle bøker.",
-	"bs-bookshelf-pref-titledisplaytext-help": "Viser tittelen fra boknavigasjonen som sidetittel i stedet for sidenavnet."
+	"bs-bookshelf-pref-titledisplaytext-help": "Viser tittelen fra boknavigasjonen som sidetittel i stedet for sidenavnet.",
+	"bs-bookshelf-grouping-template-type-ns_book": "Generelle bøker",
+	"bs-bookshelf-grouping-template-type-user_book": "Egne bøker",
+	"bookshelf": "Bokhylle",
+	"bookshelf-summary": "Generelle bøker",
+	"right-bookshelf-viewspecialpage": "Få tilgang til spesialsiden [[Special:Bookshelf]]",
+	"action-bookshelf-viewspecialpage": "få tilgang til spesialsiden [[Special:Bookshelf]]"
 }

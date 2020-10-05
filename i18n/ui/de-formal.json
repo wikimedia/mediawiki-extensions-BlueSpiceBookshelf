@@ -5,12 +5,7 @@
 		]
 	},
 	"bs-bookshelfui-delete-book-text": "Möchten Sie dieses Buch wirklich löschen? \"bookshelf\" Elemente in verlinkten Seiten werden <em>nicht</em> automatisch entfernt!",
-	"bs-bookshelfui-bookui-saveFailureMsgText": "Beim Speichern des Buchs ist ein Fehler aufgetreten. Bitte informieren Sie Ihren Administrator.",
 	"bs-bookshelfui-bookui-savingprogress-text": "Bitte warten Sie, bis das Buch gespeichert ist",
-	"bs-bookshelfui-combinebooks-pnlDescriptionHTMLCombineBooks": "Wählen Sie zunächst aus der &quot;Titel&quot;-Liste ein gewünschtes Buch aus. Sobald es geladen ist können Sie durch &quot;Drag and Drop&quot; Kapitel in das neue Buch ziehen. Sie können beliebige Bücher kombinieren und das Ergebnis als neues Buch speichern und als PDF exportieren. Das Speichern und Exportieren großer Bücher kann einen Moment dauern. Laden Sie die Seite zwischenzeitlich nicht neu.",
-	"bs-bookshelfui-combinebooks-cbxNamespaceEmptyText": "Wählen Sie einen Namensraum",
-	"bs-bookshelfui-combinebooks-errorMsgBookTitleMissing": "Sie müssen einen Titel für das Buch eingeben",
-	"bs-bookshelfui-combinebooks-saveFailureMsgText": "Beim Speichern des Buchs ist ein Fehler aufgetreten. Bitte informieren Sie Ihren Administrator.",
 	"bs-bookshelfui-confirm-delete-text": "Möchten Sie das ausgewählte Kapitel wirklich aus dem Buch entfernen? Eventuell enthaltene Unterkaptitel werden ebenfalls entfernt.",
 	"bs-bookshelfui-override-tag-text": "Möchten Sie die Zuordnung zum Buch (<code>&lt;bs:bookshelf /&gt;</code>) innerhalb der Seite aktualisieren? Dabei wird eine neue Version der Seite erzeugt.",
 	"bs-bookshelfui-nothingtoexport-text": "Sie haben keine Auswahl getroffen",

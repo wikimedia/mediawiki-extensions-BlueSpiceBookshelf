@@ -26,8 +26,6 @@
 	"bs-bookshelf-add-to-book-label": "Додати книжку",
 	"bs-bookshelf-add-to-book-label-book": "Книжка",
 	"bs-bookshelf-add-to-book-label-alias": "Псевдонім",
-	"bs-bookshelf-group-namespace": "Загальні книжки",
-	"bs-bookshelf-group-user": "Власні книжки",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "Змінити тег 'bookshelf' на сторінці (у новій версії)",
 	"bs-bookshelf-add-to-book-added": "Сторінку було додано до книги «$1».",
 	"bs-bookshelf-add-to-book-mod-bstag": "Тег «bookshelf» цієї сторінки було змінено. Сторінку буде перезавантажено.",
@@ -40,5 +38,11 @@
 	"apihelp-bs-bookshelf-bookstore-summary": "Перелічує всі розділи вказаної книги. Дає можливість сортування, фільтрування та пагінації. Реалізовує параметри ExtJS Store.",
 	"apihelp-bs-bookshelf-store-summary": "Перелічує всі книги. Дає можливість сортування, фільтрування та пагінації. Реалізовує параметри ExtJS Store.",
 	"apihelp-query+bsbookshelf-summary": "Дозволяє надсилання запитів у всіх книгах.",
-	"bs-bookshelf-pref-titledisplaytext-help": "Показує заголовок з навігації книгою як заголовок сторінки замість назви сторінки."
+	"bs-bookshelf-pref-titledisplaytext-help": "Показує заголовок з навігації книгою як заголовок сторінки замість назви сторінки.",
+	"bs-bookshelf-grouping-template-type-ns_book": "Загальні книжки",
+	"bs-bookshelf-grouping-template-type-user_book": "Власні книжки",
+	"bookshelf": "Книжкова полиця",
+	"bookshelf-summary": "Загальні книжки",
+	"right-bookshelf-viewspecialpage": "Доступ до спеціальної сторінки [[Special:Bookshelf]]",
+	"action-bookshelf-viewspecialpage": "доступ до спеціальної сторінки [[Special:Bookshelf]]"
 }

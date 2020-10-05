@@ -7,7 +7,6 @@
 			"Suchichi02"
 		]
 	},
-	"bs-bookshelfui-dlg-choosecategory-label": "カテゴリ",
 	"bookshelfbookui": "書籍エディター",
 	"bookshelfbookmanager": "書籍マネージャー",
 	"bs-bookshelfui-editor-no-title-provided": "有効な書籍のタイトルが指定されていません",
@@ -39,10 +38,9 @@
 	"bs-bookshelfui-dlg-copy-target-name-label": "ターゲット名",
 	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "書籍のすべてのページがこの名前空間にコピーされます。リンクは適応されます。",
 	"bs-bookshelfui-confirm-delete-title": "章を削除",
-	"bs-bookshelfui-grouping-template-type-ns_book": "一般書籍",
-	"bs-bookshelfui-grouping-template-type-user_book": "自分の書籍",
 	"bs-bookshelfui-book-type": "書籍の種類",
 	"bs-bookshelfui-empty-selection": "何も選択されていません",
+	"bs-bookshelfui-dlg-choosecategory-label": "カテゴリ",
 	"bs-bookshelfui-dlg-type-label": "書籍源",
 	"bs-bookshelfui-extjs-tooltip-add-mass": "大量追加",
 	"bs-bookshelfui-dlg-addmass-title": "大量追加",
@@ -63,14 +61,14 @@
 	"bs-bookshelfui-bookmetatag-version": "バージョン",
 	"bs-bookshelfui-extjs-tooltip-copy": "コピー",
 	"right-bookshelfbookmanager-viewspecialpage": "特別ページ [[Special:BookshelfBookManager]] にアクセス",
+	"action-bookshelfbookmanager-viewspecialpage": "特別ページ [[Special:BookshelfBookManager]] へのアクセス",
+	"right-bookshelfbookui-viewspecialpage": "特別ページ [[Special:BookshelfBookUI]] にアクセス",
+	"action-bookshelfbookui-viewspecialpage": "特別ページ [[Special:BookshelfBookUI]] へのアクセス",
 	"bookshelf": "本棚",
 	"bookshelf-summary": "一般書籍",
 	"bs-bookshelfui-prof-defaultview": "既定の表示",
 	"bs-bookshelfui-prof-defaultview-grid": "グリッド",
 	"bs-bookshelfui-prof-defaultview-images": "画像",
-	"action-bookshelfbookmanager-viewspecialpage": "特別ページ [[Special:BookshelfBookManager]] へのアクセス",
-	"right-bookshelfbookui-viewspecialpage": "特別ページ [[Special:BookshelfBookUI]] にアクセス",
-	"action-bookshelfbookui-viewspecialpage": "特別ページ [[Special:BookshelfBookUI]] へのアクセス",
 	"right-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] にアクセス",
 	"action-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] へのアクセス"
 }

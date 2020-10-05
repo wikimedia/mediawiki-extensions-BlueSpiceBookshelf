@@ -18,9 +18,11 @@
 	"bs-bookshelf-add-to-book-label": "Añadir a un libro",
 	"bs-bookshelf-add-to-book-label-book": "Libro",
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
-	"bs-bookshelf-group-namespace": "Libros generales",
-	"bs-bookshelf-group-user": "Libros propios",
 	"bs-bookshelf-add-to-book-added": "Se añadió la página al libro «$1».",
 	"bs-bookshelf-setting-path-feature": "Libro",
-	"bs-bookshelf-empty-selection": "No se ha seleccionado nada"
+	"bs-bookshelf-empty-selection": "No se ha seleccionado nada",
+	"bs-bookshelf-grouping-template-type-ns_book": "Libros generales",
+	"bs-bookshelf-grouping-template-type-user_book": "Libros propios",
+	"bookshelf": "Estantería",
+	"bookshelf-summary": "Libros generales"
 }

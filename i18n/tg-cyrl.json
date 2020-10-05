@@ -10,7 +10,7 @@
 	"bs-bookshelf-tag-prev": "Пешина",
 	"bs-bookshelf-tag-edit-book": "Вироиши китоб",
 	"bs-bookshelf-add-to-book-label-book": "Китоб",
-	"bs-bookshelf-group-namespace": "Киотбҳои Генералӣ",
 	"bs-bookshelf-setting-path-feature": "Китоб",
-	"bs-bookshelf-empty-selection": "Ҳеҷ як интихоб нашуд"
+	"bs-bookshelf-empty-selection": "Ҳеҷ як интихоб нашуд",
+	"bs-bookshelf-grouping-template-type-ns_book": "Киотбҳои Генералӣ"
 }

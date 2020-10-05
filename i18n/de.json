@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mglaser",
 			"Schmackes",
 			"Stephan Muggli <muggli@hallowelt.biz>"
 		]
@@ -26,8 +27,6 @@
 	"bs-bookshelf-add-to-book-label": "Zu einem Buch hinzufügen",
 	"bs-bookshelf-add-to-book-label-book": "Buch",
 	"bs-bookshelf-add-to-book-label-alias": "Anzeigename",
-	"bs-bookshelf-group-namespace": "Allgemeine Bücher",
-	"bs-bookshelf-group-user": "Eigene Bücher",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "Das 'bookshelf' Element in der Seite verändern (neue Revision)",
 	"bs-bookshelf-add-to-book-added": "Die Seite wurde dem Buch '$1' hinzugefügt.",
 	"bs-bookshelf-add-to-book-mod-bstag": "Das 'bookshelf' Element der Seite wurde geändert. Die Seite wird nun neu geladen.",
@@ -40,5 +39,11 @@
 	"apihelp-bs-bookshelf-bookstore-summary": "Listet alle Kapitel für ein gegebenes Buch auf. Ermöglicht Sortieren, Filtern und Seitennummerierung. Implementiert „ExtJS Store“-Parameter.",
 	"apihelp-bs-bookshelf-store-summary": "Listet alle Bücher auf. Ermöglicht Sortieren, Filtern und Seitennummerierung. Implementiert „ExtJS Store“-Parameter.",
 	"apihelp-query+bsbookshelf-summary": "Ermöglicht Suchanfragen in allen Büchern.",
-	"bs-bookshelf-pref-titledisplaytext-help": "Zeigt anstelle des Seitennamens den Titel aus der Buchnavigation als Seitentitel an."
+	"bs-bookshelf-pref-titledisplaytext-help": "Zeigt anstelle des Seitennamens den Titel aus der Buchnavigation als Seitentitel an.",
+	"bs-bookshelf-grouping-template-type-ns_book": "Allgemeine Bücher",
+	"bs-bookshelf-grouping-template-type-user_book": "Eigene Bücher",
+	"bookshelf": "Bücherregal",
+	"bookshelf-summary": "Allgemeine Bücher",
+	"right-bookshelf-viewspecialpage": "Zugriff auf die Spezialseite [[Special:Bookshelf|Bücherregal]]",
+	"action-bookshelf-viewspecialpage": "die Spezialseite [[Special:Bookshelf|Bücherregal]] aufzurufen"
 }

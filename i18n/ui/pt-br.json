@@ -4,6 +4,7 @@
 			"Eduardo Addad de Oliveira"
 		]
 	},
+	"bs-bookshelfui-extension-description": "Permite que o BlueSpice administre coleções hierárquicas de páginas wiki.",
 	"bookshelfbookui": "Editor de Livros",
 	"bookshelfbookmanager": "Gerenciamento de Livros",
 	"bs-bookshelfui-editor-no-title-provided": "Não foi fornecido nenhum título de livro válido",
@@ -45,8 +46,6 @@
 	"bs-bookshelfui-override-tag-text": "Deseja adicionar ou atualizar as associações ao livro (<code>&lt;bs:bookshelf /&gt;</code>) nas páginas da wiki? Será criada uma nova versão de cada página wiki.",
 	"bs-bookshelfui-nothingtoexport-text": "A sua escolha está vazia",
 	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Um livro|$1 livros}})",
-	"bs-bookshelfui-grouping-template-type-ns_book": "Livros gerais",
-	"bs-bookshelfui-grouping-template-type-user_book": "Livros próprios",
 	"bs-bookshelfui-book-type": "Tipo do livro",
 	"bs-bookshelfui-empty-selection": "Nada selecionado",
 	"apihelp-bs-bookshelf-manage-summary": "Fornece tarefas para manipulação de livros.",
@@ -86,7 +85,6 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Número de resultados a retornar",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Valor raiz com base no qual retornar páginas",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo de fonte para adição em massa",
-	"bs-bookshelfui-extension-description": "Permite que o BlueSpice administre coleções hierárquicas de páginas wiki.",
 	"bookshelf": "Estante de livros",
 	"bookshelf-summary": "Livros gerais",
 	"prefs-bookshelfui": "Página especial da estante",

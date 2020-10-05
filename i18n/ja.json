@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aefgh39622"
+			"A2y4",
+			"Aefgh39622",
+			"Shirayuki"
 		]
 	},
 	"bs-bookshelf-specialpage-title": "書籍",
@@ -13,9 +15,15 @@
 	"bs-bookshelf-add-to-book-label": "書籍に追加する",
 	"bs-bookshelf-add-to-book-label-book": "書籍",
 	"bs-bookshelf-add-to-book-label-alias": "別名",
-	"bs-bookshelf-group-namespace": "一般書籍",
-	"bs-bookshelf-group-user": "自分の書籍",
 	"bs-bookshelf-add-to-book-added": "ページが書籍「$1」に追加されました。",
 	"bs-bookshelf-setting-path-feature": "書籍",
-	"bs-bookshelf-empty-selection": "何も選択されていません"
+	"bs-bookshelf-empty-selection": "何も選択されていません",
+	"bs-bookshelf-grouping-template-type-ns_book": "一般書籍",
+	"bs-bookshelf-grouping-template-type-user_book": "自分の書籍",
+	"bookshelf": "本棚",
+	"bookshelf-summary": "一般書籍",
+	"bs-bookshelf-prof-defaultview-grid": "グリッド",
+	"bs-bookshelf-prof-defaultview-images": "画像",
+	"right-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] にアクセス",
+	"action-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] へのアクセス"
 }

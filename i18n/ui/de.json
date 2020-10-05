@@ -48,8 +48,6 @@
 	"bs-bookshelfui-override-tag-text": "Möchtest du die Zuordnung zum Buch (<code>&lt;bs:bookshelf /&gt;</code>) innerhalb der Seite aktualisieren? Dabei wird eine neue Version der Seite erzeugt.",
 	"bs-bookshelfui-nothingtoexport-text": "Du hast keine Auswahl getroffen",
 	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Ein Buch|$1 Bücher}})",
-	"bs-bookshelfui-grouping-template-type-ns_book": "Allgemeine Bücher",
-	"bs-bookshelfui-grouping-template-type-user_book": "Eigene Bücher",
 	"bs-bookshelfui-book-type": "Art des Buches",
 	"bs-bookshelfui-empty-selection": "Es ist nichts ausgewählt",
 	"apihelp-bs-bookshelf-manage-summary": "Bietet Aufgaben für die Buchmanipulation.",

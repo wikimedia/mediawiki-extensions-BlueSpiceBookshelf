@@ -46,8 +46,6 @@
 	"bs-bookshelfui-override-tag-text": "Ønsker du virkelig å legge til eller oppdatere bokassosiasjonene (<code>&lt;bs:bookshelf /&gt;</code>) i wikisidene? En ny versjon av wikisiden blir opprettet.",
 	"bs-bookshelfui-nothingtoexport-text": "Valget ditt er tomt",
 	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Éi bok|$1 bøker}})",
-	"bs-bookshelfui-grouping-template-type-ns_book": "Generelle bøker",
-	"bs-bookshelfui-grouping-template-type-user_book": "Egne bøker",
 	"bs-bookshelfui-book-type": "Bokas type",
 	"bs-bookshelfui-empty-selection": "Ingenting valgt",
 	"apihelp-bs-bookshelf-manage-summary": "Gir oppgaver for bokmanipulering.",

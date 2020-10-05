@@ -25,8 +25,6 @@
 	"bs-bookshelf-add-to-book-label": "أضف إلى الكتاب",
 	"bs-bookshelf-add-to-book-label-book": "كتاب",
 	"bs-bookshelf-add-to-book-label-alias": "الاسم المستعار",
-	"bs-bookshelf-group-namespace": "الكتب العامة",
-	"bs-bookshelf-group-user": "الكتب الخاصة",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "تعديل وسم \"رف الكتب\" في الصفحة (مراجعة جديدة)",
 	"bs-bookshelf-add-to-book-added": "تمت إضافة الصفحة إلى كتاب '$1'.",
 	"bs-bookshelf-add-to-book-mod-bstag": "تم تغيير وسم \"رف الكتب\" للصفحة؛ ستتم إعادة تحميل الصفحة",
@@ -38,5 +36,11 @@
 	"bs-bookshelf-empty-selection": "لم يتم تحديد أي شيء",
 	"apihelp-bs-bookshelf-bookstore-summary": "يسرد جميع الفصول لكتاب معين، يسمح بالفرز والترشيح وترقيم الصفحات، تنفذ المعلمات مخزن ExtJS.",
 	"apihelp-bs-bookshelf-store-summary": "يسرد جميع الكتب، يسمح بالفرز والترشيح وترقيم الصفحات، تنفذ المعلمات مخزن ExtJS.",
-	"apihelp-query+bsbookshelf-summary": "يسمح بالاستعلام في جميع الكتب."
+	"apihelp-query+bsbookshelf-summary": "يسمح بالاستعلام في جميع الكتب.",
+	"bs-bookshelf-grouping-template-type-ns_book": "الكتب العامة",
+	"bs-bookshelf-grouping-template-type-user_book": "الكتب الخاصة",
+	"bookshelf": "رف الكتب",
+	"bookshelf-summary": "الكتب العامة",
+	"right-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]",
+	"action-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]"
 }
