@@ -22,6 +22,12 @@
 	"bs-bookshelf-empty-selection": "Nessuna selezione",
 	"bs-bookshelf-grouping-template-type-ns_book": "Libri generali",
 	"bs-bookshelf-grouping-template-type-user_book": "Libri personali",
+	"bs-bookshelf-action-export-book": "Esporta libro",
+	"bs-bookshelf-edit-title": "Modifica di $1",
+	"bs-bookshelf-book-grid-title": "Libri",
 	"bookshelf": "Scaffale",
-	"bookshelf-summary": "Libri generali"
+	"bookshelf-summary": "Libri generali",
+	"bs-bookshelf-prof-defaultview": "Vista predefinita",
+	"bs-bookshelf-prof-defaultview-grid": "Griglia",
+	"bs-bookshelf-prof-defaultview-images": "Immagini"
 }

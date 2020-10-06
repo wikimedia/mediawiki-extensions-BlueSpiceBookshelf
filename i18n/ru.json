@@ -7,7 +7,8 @@
 			"Kareyac",
 			"Meerrahtar",
 			"Okras",
-			"Pacha Tchernof"
+			"Pacha Tchernof",
+			"Арсен Асхат"
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "Разрешены только положительные целые значения.",
@@ -28,5 +29,6 @@
 	"bookshelf": "Книжная полка",
 	"bs-bookshelf-prof-defaultview": "Вид по умолчанию",
 	"bs-bookshelf-prof-defaultview-grid": "Сетка",
-	"bs-bookshelf-prof-defaultview-images": "Изображения"
+	"bs-bookshelf-prof-defaultview-images": "Изображения",
+	"bs-bookshelf-action-save-to-local-storage": "Сохранение в локальном хранилище"
 }
