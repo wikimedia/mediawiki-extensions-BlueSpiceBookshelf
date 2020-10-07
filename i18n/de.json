@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ameisenigel",
 			"Mglaser",
 			"Schmackes",
 			"Stephan Muggli <muggli@hallowelt.biz>"
@@ -42,8 +43,10 @@
 	"bs-bookshelf-pref-titledisplaytext-help": "Zeigt anstelle des Seitennamens den Titel aus der Buchnavigation als Seitentitel an.",
 	"bs-bookshelf-grouping-template-type-ns_book": "Allgemeine Bücher",
 	"bs-bookshelf-grouping-template-type-user_book": "Eigene Bücher",
+	"bs-bookshelf-book-grid-title": "Bücher",
 	"bookshelf": "Bücherregal",
 	"bookshelf-summary": "Allgemeine Bücher",
+	"bs-bookshelf-prof-defaultview-images": "Bilder",
 	"right-bookshelf-viewspecialpage": "Zugriff auf die Spezialseite [[Special:Bookshelf|Bücherregal]]",
 	"action-bookshelf-viewspecialpage": "die Spezialseite [[Special:Bookshelf|Bücherregal]] aufzurufen"
 }
