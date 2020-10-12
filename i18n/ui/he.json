@@ -55,5 +55,8 @@
 	"bs-bookshelfui-bookmetatag-version": "גרסה",
 	"bs-bookshelfui-extjs-tooltip-copy": "להעתיק",
 	"bookshelf": "מדף הספרים",
-	"bookshelf-summary": "ספרים כלליים"
+	"bookshelf-summary": "ספרים כלליים",
+	"bs-bookshelfui-prof-defaultview-images": "תמונות",
+	"bs-bookshelfui-chapterpager-previous": "הקודם",
+	"bs-bookshelfui-chapterpager-next": "הבא"
 }

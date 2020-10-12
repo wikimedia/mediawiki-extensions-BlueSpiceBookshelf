@@ -6,6 +6,7 @@
 			"Shirayuki"
 		]
 	},
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "<i>left</i> または <i>right</i> を使用してください。",
 	"bs-bookshelf-specialpage-title": "書籍",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "ライブラリ",
 	"bs-bookshelf-tag-next": "次へ",
