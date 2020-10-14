@@ -39,6 +39,8 @@
 	"bs-bookshelfui-bookmetatag-docummentidentifier": "Dokument-ID",
 	"bs-bookshelfui-bookmetatag-docummenttype": "Dokument type",
 	"bs-bookshelfui-bookmetatag-department": "Afdeling",
+	"bs-bookshelfui-bookmetatag-version": "Version",
+	"bs-bookshelfui-extjs-tooltip-copy": "Kopiér",
 	"bookshelf": "Boghylde",
 	"bookshelf-summary": "Generelle bøger",
 	"bs-bookshelfui-prof-defaultview": "Standardvisning",
