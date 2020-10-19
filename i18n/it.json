@@ -3,6 +3,7 @@
 		"authors": [
 			"Beta16",
 			"Dansita",
+			"Luca.favorido",
 			"Tizven"
 		]
 	},
@@ -22,8 +23,11 @@
 	"bs-bookshelf-empty-selection": "Nessuna selezione",
 	"bs-bookshelf-grouping-template-type-ns_book": "Libri generali",
 	"bs-bookshelf-grouping-template-type-user_book": "Libri personali",
+	"bs-bookshelf-action-editbooksource": "Modifica fonte del libro",
+	"bs-bookshelf-action-editbooksource-create": "Crea fonte libro",
 	"bs-bookshelf-action-export-book": "Esporta libro",
 	"bs-bookshelf-edit-title": "Modifica di $1",
+	"bs-bookshelf-editor-no-title-provided": "Nessun titolo valido fornito per il libro",
 	"bs-bookshelf-book-grid-title": "Libri",
 	"bookshelf": "Scaffale",
 	"bookshelf-summary": "Libri generali",

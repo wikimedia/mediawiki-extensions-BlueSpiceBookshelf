@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"A2y4",
 			"Aefgh39622",
 			"Omotecho",
 			"Shirayuki",
@@ -38,6 +39,8 @@
 	"bs-bookshelfui-dlg-copy-target-name-label": "ターゲット名",
 	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "書籍のすべてのページがこの名前空間にコピーされます。リンクは適応されます。",
 	"bs-bookshelfui-confirm-delete-title": "章を削除",
+	"bs-bookshelfui-nothingtoexport-text": "選択は空です",
+	"bs-bookshelfui-grouping-template-books": "$1冊",
 	"bs-bookshelfui-book-type": "書籍の種類",
 	"bs-bookshelfui-empty-selection": "何も選択されていません",
 	"bs-bookshelfui-dlg-choosecategory-label": "カテゴリ",
@@ -46,6 +49,9 @@
 	"bs-bookshelfui-dlg-addmass-title": "大量追加",
 	"bs-bookshelfui-type-category": "カテゴリのすべてのページ",
 	"bs-bookshelfui-type-subpages": "ページのすべての下位ページ",
+	"bs-bookshelfui-dlg-choosepc-label": "ページコレクション",
+	"bs-bookshelfui-type-pagecollection": "ページコレクション",
+	"bs-bookshelfui-nav-link-title-all-books": "一般書籍",
 	"bs-bookshelfui-flyout-title": "書籍の一覧",
 	"bs-bookshelfui-book-title-link-edit": "書籍を編集",
 	"bs-bookshelfui-book-title-link-edit-text": "書籍を編集",
@@ -70,5 +76,7 @@
 	"bs-bookshelfui-prof-defaultview-grid": "グリッド",
 	"bs-bookshelfui-prof-defaultview-images": "画像",
 	"right-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] にアクセス",
-	"action-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] へのアクセス"
+	"action-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] へのアクセス",
+	"bs-bookshelfui-chapterpager-previous": "前へ",
+	"bs-bookshelfui-chapterpager-next": "次へ"
 }

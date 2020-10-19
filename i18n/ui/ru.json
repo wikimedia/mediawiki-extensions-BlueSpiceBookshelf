@@ -6,6 +6,7 @@
 			"Facenapalm",
 			"Kareyac",
 			"Meerrahtar",
+			"Megakott",
 			"Okras",
 			"Pacha Tchernof"
 		]
@@ -36,9 +37,18 @@
 	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Одна книга|$1 книги|$1 книг}})",
 	"bs-bookshelfui-dlg-choosecategory-label": "Категория",
 	"bs-bookshelfui-dlg-type-label": "Источник",
+	"bs-bookshelfui-extjs-tooltip-add-mass": "Массовое добавление",
+	"bs-bookshelfui-dlg-addmass-title": "Массовое добавление",
+	"bs-bookshelfui-type-category": "Все страницы категории",
+	"bs-bookshelfui-type-subpages": "Все подстраницы страницы",
+	"bs-bookshelfui-dlg-choosepc-label": "Коллекция страниц",
+	"bs-bookshelfui-type-pagecollection": "Коллекция страниц",
+	"bs-bookshelfui-nav-link-title-all-books": "Основные книги",
 	"bs-bookshelfui-flyout-title": "Список книг",
+	"bs-bookshelfui-flyout-intro": "Здесь вы можете увидеть все доступные книги. Чтобы добавить новую книгу, перейдите в [[Special:Bookmanager|управление книгами]].",
 	"bs-bookshelfui-book-title-link-edit": "Редактировать книгу",
 	"bs-bookshelfui-book-title-link-edit-text": "Редактировать книгу",
+	"bs-bookshelfui-export-book-text": "Подождите, пока книга создаётся.",
 	"bs-bookshelfui-bookmetatag-title": "Заголовок",
 	"bs-bookshelfui-bookmetatag-subtitle": "Подзаголовок",
 	"bs-bookshelfui-bookmetatag-author1": "Автор 1",
@@ -47,5 +57,6 @@
 	"bs-bookshelfui-extjs-tooltip-copy": "Копировать",
 	"bookshelf": "Книжная полка",
 	"bs-bookshelfui-prof-defaultview-grid": "Сетка",
-	"bs-bookshelfui-prof-defaultview-images": "Изображения"
+	"bs-bookshelfui-prof-defaultview-images": "Изображения",
+	"bs-bookshelfui-chapterpager-next": "Следующая"
 }
