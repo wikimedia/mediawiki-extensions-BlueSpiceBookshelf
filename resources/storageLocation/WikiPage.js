@@ -53,7 +53,7 @@
 		api.postWithToken( 'csrf', {
 			action: 'bs-bookshelf-manage',
 			task: 'deleteBook',
-			taskData: Ext.encode( {
+			taskData: JSON.stringify( {
 				'book_page_id': pageId
 			} )
 		} )
