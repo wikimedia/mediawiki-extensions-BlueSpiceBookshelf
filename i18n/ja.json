@@ -21,6 +21,7 @@
 	"bs-bookshelf-empty-selection": "何も選択されていません",
 	"bs-bookshelf-grouping-template-type-ns_book": "一般書籍",
 	"bs-bookshelf-grouping-template-type-user_book": "自分の書籍",
+	"bs-bookshelf-edit-title": "「$1」を編集中",
 	"bs-bookshelf-book-grid-title": "本",
 	"bookshelf": "本棚",
 	"bookshelf-summary": "一般書籍",
