@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ameisenigel",
+			"Laurinm",
 			"Mglaser",
 			"Schmackes",
 			"Stephan Muggli <muggli@hallowelt.biz>"
@@ -46,7 +47,9 @@
 	"bs-bookshelf-book-grid-title": "Bücher",
 	"bookshelf": "Bücherregal",
 	"bookshelf-summary": "Allgemeine Bücher",
+	"bs-bookshelf-prof-defaultview": "Standardansicht",
 	"bs-bookshelf-prof-defaultview-images": "Bilder",
 	"right-bookshelf-viewspecialpage": "Zugriff auf die Spezialseite [[Special:Bookshelf|Bücherregal]]",
-	"action-bookshelf-viewspecialpage": "die Spezialseite [[Special:Bookshelf|Bücherregal]] aufzurufen"
+	"action-bookshelf-viewspecialpage": "die Spezialseite [[Special:Bookshelf|Bücherregal]] aufzurufen",
+	"bs-bookshelf-action-save-to-local-storage": "Lokal speichern"
 }

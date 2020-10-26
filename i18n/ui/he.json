@@ -11,6 +11,8 @@
 	"bs-bookshelfui-new-book-title": "ליצור ספר חדש",
 	"bs-bookshelfui-new-book-text": "כותרת הספר",
 	"bs-bookshelfui-delete-book-title": "למחוק ספר",
+	"bs-bookshelfui-bookui-savingprogress-title": "ספר נשמר",
+	"bs-bookshelfui-bookui-savingprogress-text": "נא להמתין עד לשמירת הספר לשרת",
 	"bs-bookshelfui-manager-title": "כותרת",
 	"bs-bookshelfui-manager-deletingprogress-text": "הספר הנבחר נמחק",
 	"bs-bookshelfui-manager-deletingprogress-title": "מתבצעת מחיקה…",
@@ -56,6 +58,7 @@
 	"bs-bookshelfui-extjs-tooltip-copy": "להעתיק",
 	"bookshelf": "מדף הספרים",
 	"bookshelf-summary": "ספרים כלליים",
+	"bs-bookshelfui-prof-defaultview": "תצוגת בררת מחדל",
 	"bs-bookshelfui-prof-defaultview-images": "תמונות",
 	"bs-bookshelfui-chapterpager-previous": "הקודם",
 	"bs-bookshelfui-chapterpager-next": "הבא"

@@ -14,6 +14,7 @@
 	"bs-bookshelf-add-to-book-label-alias": "כינוי",
 	"bs-bookshelf-setting-path-feature": "ספר",
 	"bs-bookshelf-empty-selection": "לא נבחר דבר",
+	"apihelp-query+bsbookshelf-summary": "מאפשר לתשאל מול כל הספרים.",
 	"bs-bookshelf-grouping-template-type-local_storage": "ספרים זמניים",
 	"bs-bookshelf-grouping-template-type-ns_book": "ספרים כללים",
 	"bs-bookshelf-grouping-template-type-user_book": "ספרים עצמיים",
@@ -25,5 +26,6 @@
 	"bookshelf-summary": "ספרים כלליים",
 	"bs-bookshelf-prof-defaultview": "תצוגת בררת מחדל",
 	"bs-bookshelf-prof-defaultview-grid": "רשת",
-	"bs-bookshelf-prof-defaultview-images": "תמונות"
+	"bs-bookshelf-prof-defaultview-images": "תמונות",
+	"bs-bookshelf-action-save-to-local-storage": "מתבצעת שמירה לאחסון המקומי"
 }

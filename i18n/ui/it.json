@@ -3,6 +3,7 @@
 		"authors": [
 			"Beta16",
 			"Dansita",
+			"Gianfranco",
 			"Tizven"
 		]
 	},
@@ -50,19 +51,27 @@
 	"bs-bookshelfui-dlg-type-label": "Fonte",
 	"bs-bookshelfui-extjs-tooltip-add-mass": "Inserimento massivo",
 	"bs-bookshelfui-dlg-addmass-title": "Inserimento massivo",
+	"bs-bookshelfui-type-category": "Tutte le pagine in una categoria",
 	"bs-bookshelfui-type-subpages": "Tutte le sottopagine di una pagina",
+	"bs-bookshelfui-dlg-choosepc-label": "Raccolta di pagine",
+	"bs-bookshelfui-type-pagecollection": "Raccolta di pagine",
+	"bs-bookshelfui-nav-link-title-all-books": "Libri generali",
 	"bs-bookshelfui-flyout-title": "Elenco di libri",
+	"bs-bookshelfui-flyout-intro": "Qui puoi vedere tutti i libri disponibili. Per aggiungere un nuovo libro, vai al [[Special:Bookmanager|gestore di libri]].",
 	"bs-bookshelfui-book-title-link-edit": "Modifica libro",
 	"bs-bookshelfui-book-title-link-edit-text": "Modifica libro",
 	"bs-bookshelfui-export-book-text": "Attendi per favore mentre il libro viene creato.",
 	"bs-bookshelfui-bookmanager-deletion-reason": "Eliminato da BookManager",
 	"bs-bookshelfui-bookmanager-deletion-error-pageid": "La voce indicata non è stata trovata.",
+	"bs-bookshelfui-bookmanager-deletion-error-permission": "Non disponi di permessi sufficienti per eseguire questa azione.",
+	"bs-bookshelfui-bookmanager-deletion-error-unkown": "Si è verificato un errore sconosciuto. Per favore contatta il tuo amministratore.",
 	"bs-bookshelfui-bookmetatag-title": "Titolo",
 	"bs-bookshelfui-bookmetatag-subtitle": "Sottotitolo",
 	"bs-bookshelfui-bookmetatag-author1": "Autore 1",
 	"bs-bookshelfui-bookmetatag-author2": "Autore 2",
 	"bs-bookshelfui-bookmetatag-docummentidentifier": "Identificativo documento",
 	"bs-bookshelfui-bookmetatag-docummenttype": "Tipo di documento",
+	"bs-bookshelfui-bookmetatag-department": "Dipartimento",
 	"bs-bookshelfui-bookmetatag-version": "Versione",
 	"bs-bookshelfui-extjs-tooltip-copy": "Copia",
 	"right-bookshelfbookmanager-viewspecialpage": "Accede alla pagina speciale [[Special:BookshelfBookManager]]",
@@ -72,5 +81,7 @@
 	"prefs-bookshelfui": "Pagina speciale scaffale",
 	"bs-bookshelfui-prof-defaultview": "Vista predefinita",
 	"bs-bookshelfui-prof-defaultview-grid": "Griglia",
-	"bs-bookshelfui-prof-defaultview-images": "Immagini"
+	"bs-bookshelfui-prof-defaultview-images": "Immagini",
+	"bs-bookshelfui-chapterpager-previous": "Precedente",
+	"bs-bookshelfui-chapterpager-next": "Successivo"
 }
