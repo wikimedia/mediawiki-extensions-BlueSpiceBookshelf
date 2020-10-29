@@ -10,5 +10,7 @@
 	"bs-bookshelf-add-to-book-label-book": "کتاب",
 	"bs-bookshelf-group-namespace": "عام کتاباں",
 	"bs-bookshelf-group-user": "آپݨیاں کتاباں",
-	"bs-bookshelf-setting-path-feature": "کتاب"
+	"bs-bookshelf-setting-path-feature": "کتاب",
+	"bs-bookshelf-grouping-template-type-ns_book": "عام کتاباں",
+	"bs-bookshelf-grouping-template-type-user_book": "آپݨیاں کتاباں"
 }

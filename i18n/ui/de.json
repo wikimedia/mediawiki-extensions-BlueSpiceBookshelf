@@ -3,7 +3,8 @@
 		"authors": [
 			"Hikemaniac",
 			"Mglaser",
-			"Robert Vogel <vogel@hallowelt.biz>"
+			"Robert Vogel <vogel@hallowelt.biz>",
+			"Umherirrender"
 		]
 	},
 	"bs-bookshelfui-extension-description": "Ermöglicht das Verwalten von hierarchisch gegliederten Seitensammlungen.",
@@ -24,7 +25,7 @@
 	"bs-bookshelfui-bookui-savingprogress-text": "Bitte warte, bis das Buch gespeichert ist",
 	"bs-bookshelfui-manager-title": "Titel",
 	"bs-bookshelfui-manager-deletingprogress-text": "Lösche ausgewähltes Buch",
-	"bs-bookshelfui-manager-deletingprogress-title": "Löschen...",
+	"bs-bookshelfui-manager-deletingprogress-title": "Löschen …",
 	"bs-bookshelfui-manager-deletionsuccess-title": "Löschen erfolgreich!",
 	"bs-bookshelfui-manager-deletionsuccess-text": "Das Buch wurde erfolgreich gelöscht.",
 	"bs-bookshelfui-manager-deletionfailure-title": "Fehler beim löschen!",

@@ -19,5 +19,10 @@
 	"bs-bookshelf-group-user": "Eigen boeken",
 	"bs-bookshelf-add-to-book-added": "De pagina is aan het boek '$1' toegevoegd.",
 	"bs-bookshelf-setting-path-feature": "Boek",
-	"bs-bookshelf-empty-selection": "Niets geselecteerd"
+	"bs-bookshelf-empty-selection": "Niets geselecteerd",
+	"bs-bookshelf-grouping-template-type-ns_book": "Algemene boeken",
+	"bs-bookshelf-grouping-template-type-user_book": "Eigen boeken",
+	"bookshelf": "Boekenplank",
+	"right-bookshelf-viewspecialpage": "De speciale pagina [[Special:Bookshelf]] bekijken",
+	"action-bookshelf-viewspecialpage": "de speciale pagina [[Special:Bookshelf]] te bekijken"
 }

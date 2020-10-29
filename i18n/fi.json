@@ -13,5 +13,7 @@
 	"bs-bookshelf-add-to-book-label": "Lisää kirja",
 	"bs-bookshelf-add-to-book-label-book": "Kirja",
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
-	"bs-bookshelf-group-user": "Omat kirjat"
+	"bs-bookshelf-group-user": "Omat kirjat",
+	"bs-bookshelf-grouping-template-type-user_book": "Omat kirjat",
+	"bookshelf": "Kirjahylly"
 }
