@@ -277,7 +277,7 @@ class TagProcessor {
 
 	/**
 	 * Renders a generic node tag that gets evaluated by ... future code or clientside extensions
-	 * @param String $sInput
+	 * @param string $sInput
 	 * @param array $aAttributes
 	 * @param Parser $oParser
 	 * @return string The HTML to be send to the client
