@@ -3,7 +3,10 @@
 		"authors": [
 			"Amikeco",
 			"Diman Russkov",
+			"Facenapalm",
+			"Kareyac",
 			"Meerrahtar",
+			"Megakott",
 			"Okras",
 			"Pacha Tchernof"
 		]
@@ -42,5 +45,18 @@
 	"bs-bookshelfui-manager-deletingprogress-text": "Удаление выбранной книги",
 	"bs-bookshelfui-dlg-copy-title": "Копировать \"$1\"",
 	"bs-bookshelfui-flyout-title": "Список книг",
-	"bookshelf": "Книжная полка"
+	"bookshelf": "Книжная полка",
+	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Одна книга|$1 книги|$1 книг}})",
+	"bs-bookshelfui-extjs-tooltip-add-mass": "Массовое добавление",
+	"bs-bookshelfui-dlg-addmass-title": "Массовое добавление",
+	"bs-bookshelfui-type-category": "Все страницы категории",
+	"bs-bookshelfui-type-subpages": "Все подстраницы страницы",
+	"bs-bookshelfui-dlg-choosepc-label": "Коллекция страниц",
+	"bs-bookshelfui-type-pagecollection": "Коллекция страниц",
+	"bs-bookshelfui-nav-link-title-all-books": "Основные книги",
+	"bs-bookshelfui-flyout-intro": "Здесь вы можете увидеть все доступные книги. Чтобы добавить новую книгу, перейдите в [[Special:Bookmanager|управление книгами]].",
+	"bs-bookshelfui-book-title-link-edit": "Редактировать книгу",
+	"bs-bookshelfui-book-title-link-edit-text": "Редактировать книгу",
+	"bs-bookshelfui-export-book-text": "Подождите, пока книга создаётся.",
+	"bs-bookshelfui-chapterpager-next": "Следующая"
 }

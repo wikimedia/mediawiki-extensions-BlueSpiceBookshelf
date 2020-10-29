@@ -58,5 +58,6 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Raster",
 	"bs-bookshelfui-prof-defaultview-images": "Afbeeldingen",
 	"right-bookshelf-viewspecialpage": "De speciale pagina [[Special:Bookshelf]] bekijken",
-	"action-bookshelf-viewspecialpage": "de speciale pagina [[Special:Bookshelf]] te bekijken"
+	"action-bookshelf-viewspecialpage": "de speciale pagina [[Special:Bookshelf]] te bekijken",
+	"bs-bookshelfui-export-selection": "Selectie exporteren"
 }

@@ -2,6 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"MuratTheTurkish",
+			"Raymond",
+			"Robby",
 			"Robert Vogel <vogeli@hallowelt.biz>",
 			"Umherirrender"
 		]
@@ -22,7 +25,7 @@
 	"bs-bookshelf-pref-PrependPageTOCNumbers": "Label for the checkbox in user preferences, when activated, article table of contents and headlines with book numberation are prepended.",
 	"bs-bookshelf-tag-next": "Short label for the button that shows the next page.\n{{Identical|Next}}",
 	"bs-bookshelf-tag-prev": "Short label for the button that shows the previous page.\n{{Identical|Previous}}",
-	"bs-bookshelf-tag-edit-book": "Short label for the button that allows editing the book.\n{{Identical|Edit book}}",
+	"bs-bookshelf-tag-edit-book": "Short label for the button that allows editing the book.",
 	"bs-bookshelf-personal-books-page-prefix": "The wikipage name under which personal books reside. Parameter $1 is the user name",
 	"bs-bookshelf-add-to-book-label": "Short label for the button, that adds an entry to a book.",
 	"bs-bookshelf-add-to-book-label-book": "Short label for the combobox that allows to select a book.\n{{Identical|Book}}",
@@ -48,15 +51,15 @@
 	"bs-bookshelf-editor-no-title-provided": "Error message when given given subpage as parameter on the [[Special:BookshelfBookUI]] specialpage is not a valid page",
 	"bs-bookshelf-action-export-book": "Label for book export link",
 	"bs-bookshelf-grouping-template-type-local_storage": "Label for book type \"local_storage\"",
-	"bs-bookshelf-grouping-template-type-user_book": "Label for book type \"user_book\"",
-	"bs-bookshelf-grouping-template-type-ns_book": "Label for book type \"ns_book\"",
-	"bs-bookshelf-book-grid-title": "Title for the grid showing available books",
+	"bs-bookshelf-grouping-template-type-user_book": "Short label for the option \"user\" in the group selection combobox.\n{{Identical|Own books}}",
+	"bs-bookshelf-grouping-template-type-ns_book": "Short label for the option \"namespace\" in the group selection combobox.\n{{Identical|General books}}",
+	"bs-bookshelf-book-grid-title": "Title for the grid showing available books\n{{identical|Book}}",
 	"bookshelf": "Special page name for [[Special:Bookshelf]] special page.\n{{Identical|Bookshelf}}",
 	"bookshelf-summary": "Bookshelf special page summary",
 	"prefs-bookshelf": "Bookshelf settings name",
 	"bs-bookshelf-prof-defaultview": "Bookshelf default view settings name",
 	"bs-bookshelf-prof-defaultview-grid": "Grid view settings name",
-	"bs-bookshelf-prof-defaultview-images": "Images view settings name",
+	"bs-bookshelf-prof-defaultview-images": "Images view settings name\n{{identical|Image}}",
 	"right-bookshelf-viewspecialpage": "{{doc-right|bookshelf-viewspecialpage}}",
 	"action-bookshelf-viewspecialpage": "{{doc-action|bookshelf-viewspecialpage}}",
 	"bs-bookshelf-action-save-to-local-storage": "Label for the action in batch dialog"

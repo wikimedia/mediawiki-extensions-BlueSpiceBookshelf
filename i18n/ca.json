@@ -13,5 +13,9 @@
 	"bs-bookshelf-group-namespace": "Llibres generals",
 	"bs-bookshelf-group-user": "Llibres propis",
 	"bs-bookshelf-setting-path-feature": "Llibre",
-	"bs-bookshelf-empty-selection": "No se n’ha seleccionat cap"
+	"bs-bookshelf-empty-selection": "No se n’ha seleccionat cap",
+	"bs-bookshelf-grouping-template-type-ns_book": "Llibres generals",
+	"bs-bookshelf-grouping-template-type-user_book": "Llibres propis",
+	"bookshelf": "Prestatgeria",
+	"bookshelf-summary": "Llibres generals"
 }

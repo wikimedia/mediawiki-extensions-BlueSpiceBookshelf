@@ -12,5 +12,7 @@
 	"bs-bookshelfui-dlg-choosecategory-label": "ونکی",
 	"bs-bookshelfui-dlg-type-label": "ماخذ",
 	"bs-bookshelfui-bookmetatag-title": "عنوان",
-	"bs-bookshelfui-extjs-tooltip-copy": "نقل کرو"
+	"bs-bookshelfui-extjs-tooltip-copy": "نقل کرو",
+	"bs-bookshelfui-chapterpager-previous": "پچھلا",
+	"bs-bookshelfui-chapterpager-next": "اڳلا"
 }
