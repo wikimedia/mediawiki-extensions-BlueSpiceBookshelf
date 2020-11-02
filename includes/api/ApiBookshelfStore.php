@@ -44,17 +44,6 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 			$aFilteredBooks[] = $oDataSet;
 		}
 
-		// This hook is DEPRECATED! Use hooks from base class instead!
-		\Hooks::run(
-			'BSBookshelfManagerGetBookDataComplete',
-			[
-				$aAllBooks,
-				$this->getParameter( 'limit' ),
-				$this->getParameter( 'start' ),
-				'ASC'
-			],
-			'2.27'
-		);
 		return $aFilteredBooks;
 	}
 
@@ -212,7 +201,14 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 		// $oBook->book_tree = $oPHP->getExtendedTOCJSON();
 
 		// This hook is DEPRECATED! Use hooks from base class instead!
-		\Hooks::run( 'BSBookshelfManagerGetBookDataRow', [ $oTitle, $oBook ] );
+		$this->getServices()->getHookContainer()->run(
+			'BSBookshelfManagerGetBookDataRow',
+			[
+				$oTitle,
+				$oBook
+			],
+			[ 'deprecatedVersion' => '3.1' ]
+		);
 
 		return $oBook;
 	}
@@ -269,10 +265,14 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 		$book->book_meta = $php->getBookMeta();
 
 		// This hook is DEPRECATED! Use hooks from base class instead!
-		\Hooks::run( 'BSBookshelfManagerGetBookDataRow', [
-			new Title(),
-			$book
-		] );
+		$this->getServices()->getHookContainer()->run(
+			'BSBookshelfManagerGetBookDataRow',
+			[
+				new Title(),
+				$book
+			],
+			[ 'deprecatedVersion' => '3.1' ]
+		);
 
 		return $book;
 	}
