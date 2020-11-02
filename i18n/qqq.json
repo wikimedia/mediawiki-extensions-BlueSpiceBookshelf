@@ -45,7 +45,7 @@
 	"bs-bookshelf-pref-titledisplaytext-help": "Description for config variable \"BookshelfTitleDisplayText\"",
 	"bs-bookshelf-grouping-template-type-local_storage": "Label for book type \"local_storage\"",
 	"bs-bookshelf-grouping-template-type-ns_book": "Short label for the option \"namespace\" in the group selection combobox.\n{{Identical|General books}}",
-	"bs-bookshelf-grouping-template-type-user_book": "Short label for the option \"user\" in the group selection combobox.\n{{Identical|Own books}}",
+	"bs-bookshelf-grouping-template-type-user_book": "Short label for the option \"user\" in the group selection combobox.",
 	"bs-bookshelf-action-editbooksource": "Action label: editbooksource",
 	"bs-bookshelf-action-editbooksource-create": "Action label when page does not exist: editbooksource",
 	"bs-bookshelf-action-export-book": "Label for book export link",

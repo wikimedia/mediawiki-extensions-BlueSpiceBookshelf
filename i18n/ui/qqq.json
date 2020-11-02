@@ -3,6 +3,7 @@
 		"authors": [
 			"Amire80",
 			"BaRaN6161 TURK",
+			"MuratTheTurkish",
 			"Patric Wirth"
 		]
 	},
@@ -25,8 +26,8 @@
 	"bs-bookshelfui-manager-title": "Header for the column that lists the titles of the books.\n{{Identical|Title}}",
 	"bs-bookshelfui-manager-deletingprogress-text": "Title of the progress promt that shows while the book is deleted.\n{{Identical|Deleting selected book}}",
 	"bs-bookshelfui-manager-deletingprogress-title": "Text of the progress promt that shows while the book is deleted.\n{{Identical|Deleting...}}",
-	"bs-bookshelfui-manager-deletionsuccess-title": "Title of the prompt that shows, that the book was successfully deleted.\n{{Identical|Successfully deleted}}",
-	"bs-bookshelfui-manager-deletionsuccess-text": "Text of the prompt that shows, that the book was successfully deleted.\n{{Identical|Successfully deleted}}",
+	"bs-bookshelfui-manager-deletionsuccess-title": "Title of the prompt that shows, that the book was successfully deleted.",
+	"bs-bookshelfui-manager-deletionsuccess-text": "Text of the prompt that shows, that the book was successfully deleted.",
 	"bs-bookshelfui-manager-deletionfailure-title": "Title of the prompt that shows, that there was an error while deleting the book",
 	"bs-bookshelfui-manager-deletionfailure-text": "Text of the prompt that shows, that there was an error while deleting the book.\n* $1 - Error that happend while deleting the book",
 	"bs-bookshelfui-dlg-choosewikipage-title": "Title of the dialog that allows selecting a page",
