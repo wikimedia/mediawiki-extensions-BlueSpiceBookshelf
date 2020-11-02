@@ -10,6 +10,7 @@ use Exception;
 use FormatJson;
 use Html;
 use Linker;
+use MediaWiki\MediaWikiServices;
 use PageHierarchyProvider;
 use Parser;
 use Title;
@@ -147,7 +148,7 @@ class TagProcessor {
 		}
 
 		$aAdditionalAttribs = [];
-		\Hooks::run(
+		MediaWikiServices::getInstance()->getHookContainer()->run(
 			'BSBookshelfTagBeforeRender',
 			[
 				&$sSourceArticleName,
@@ -300,7 +301,7 @@ class TagProcessor {
 		}
 
 		$sElement = 'span';
-		\Hooks::run(
+		MediaWikiServices::getInstance()->getHookContainer()->run(
 			'BSBookshelfNodeTag',
 			[ strtolower( $aAttributes['type'] ), &$sNodeText, &$aAttribs, &$sElement, $oParser ]
 		);

@@ -6,6 +6,7 @@ use BsPDFServlet;
 use DOMElement;
 use DOMXPath;
 use FatalError;
+use MediaWiki\MediaWikiServices;
 use MWException;
 use RepoGroup;
 use Title;
@@ -95,7 +96,7 @@ class AddAttachments {
 				$sAbsoluteFileSystemPath = $seder->getFileSystemPath( $sRelativeHref );
 			}
 
-			\Hooks::run(
+			MediaWikiServices::getInstance()->getHookContainer()->run(
 				'BSUEModulePDFFindFiles',
 				[
 					$sender,
