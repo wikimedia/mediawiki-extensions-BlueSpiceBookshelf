@@ -15,5 +15,15 @@
 	"bs-bookshelf-group-user": "Egne bøger",
 	"bs-bookshelf-setting-path-feature": "Bog",
 	"bs-bookshelf-empty-selection": "Intet valgt",
-	"bs-bookshelf-group-namespace": "Generelle bøger"
+	"bs-bookshelf-group-namespace": "Generelle bøger",
+	"bs-bookshelf-grouping-template-type-local_storage": "Midlertidige bøger",
+	"bs-bookshelf-grouping-template-type-ns_book": "Generelle bøger",
+	"bs-bookshelf-grouping-template-type-user_book": "Egne bøger",
+	"bs-bookshelf-action-export-book": "Eksporter bog",
+	"bs-bookshelf-edit-title": "Redigerer $1",
+	"bs-bookshelf-book-grid-title": "Bøger",
+	"bookshelf": "Boghylde",
+	"bookshelf-summary": "Generelle bøger",
+	"bs-bookshelf-prof-defaultview": "Standardvisning",
+	"bs-bookshelf-prof-defaultview-images": "Billeder"
 }

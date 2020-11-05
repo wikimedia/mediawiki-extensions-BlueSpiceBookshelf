@@ -5,6 +5,7 @@
 			"Dimension",
 			"VulpesVulpes825",
 			"Wenyuan Liu",
+			"XinuGod",
 			"列维劳德",
 			"沈澄心"
 		]
@@ -35,5 +36,11 @@
 	"apihelp-bs-bookshelf-bookstore-summary": "列举提供的书籍内所有的章节。允许排序、过滤和分页。执行ExtJS存储的参数。",
 	"apihelp-bs-bookshelf-store-summary": "列举所有书籍。允许排序、过滤和分页。执行ExtJS存储的参数。",
 	"apihelp-query+bsbookshelf-summary": "允许在所有书籍中进行查询。",
-	"bs-bookshelf-tagerror-article-title-not-valid": "提供的来源条目（&quot;$1&quot;）不存在。"
+	"bs-bookshelf-tagerror-article-title-not-valid": "提供的来源条目（&quot;$1&quot;）不存在。",
+	"bs-bookshelf-grouping-template-type-ns_book": "通用图书",
+	"bs-bookshelf-grouping-template-type-user_book": "个人图书",
+	"bookshelf": "书架",
+	"bookshelf-summary": "通用图书",
+	"right-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
+	"action-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]"
 }

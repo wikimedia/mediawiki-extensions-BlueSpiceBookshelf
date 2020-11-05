@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"MuratTheTurkish",
 			"ToprakM"
 		]
 	},
@@ -40,5 +41,25 @@
 	"apihelp-bs-bookshelf-bookstore-summary": "Belirli bir kitabın tüm bölümlerini listeler. Sıralama, filtreleme ve sayfalandırmaya izin verir. ExtJS Store parametrelerini uygular.",
 	"apihelp-bs-bookshelf-store-summary": "Tüm kitapları listeler. Sıralama, filtreleme ve sayfalandırmaya izin verir. ExtJS Store parametrelerini uygular.",
 	"apihelp-query+bsbookshelf-summary": "Tüm kitaplarda sorgulamaya izin verir.",
-	"bs-bookshelf-pref-titledisplaytext-help": "Kitap gezinme sayfasındaki başlığı sayfa adı yerine sayfa başlığı olarak gösterir."
+	"bs-bookshelf-pref-titledisplaytext-help": "Kitap gezinme sayfasındaki başlığı sayfa adı yerine sayfa başlığı olarak gösterir.",
+	"bs-bookshelf-grouping-template-type-local_storage": "Geçici kitaplar",
+	"bs-bookshelf-grouping-template-type-ns_book": "Genel kitaplar",
+	"bs-bookshelf-grouping-template-type-user_book": "Sahip kitaplar",
+	"bs-bookshelf-action-editbooksource": "Kitap kaynağı düzenle",
+	"bs-bookshelf-action-editbooksource-create": "Kitap kaynağı oluştur",
+	"bs-bookshelf-action-export-book": "Kitabı dışa aktar",
+	"bs-bookshelf-edit-title": "\"$1\" sayfasını değiştirmektesiniz",
+	"bs-bookshelf-error-invalid-type": "Belirtilen kitap türü geçersiz",
+	"bs-bookshelf-error-type-title-mismatch": "Sağlanan başlık, verilen kitap türüyle eşleşmiyor",
+	"bs-bookshelf-editor-no-title-provided": "Geçerli kitap başlığı sağlanmadı",
+	"bs-bookshelf-book-grid-title": "Kitaplar",
+	"bookshelf": "Kitaplık",
+	"bookshelf-summary": "Genel Kitaplar",
+	"prefs-bookshelf": "Kitaplık özel sayfası",
+	"bs-bookshelf-prof-defaultview": "Varsayılan görünüm",
+	"bs-bookshelf-prof-defaultview-grid": "Izgara",
+	"bs-bookshelf-prof-defaultview-images": "Resimler",
+	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] özel sayfaya erişin",
+	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] özel sayfaya erişin",
+	"bs-bookshelf-action-save-to-local-storage": "Yerel depolamaya kaydetme"
 }

@@ -3,6 +3,8 @@
 		"authors": [
 			"BaRaN6161 TURK",
 			"MuratTheTurkish",
+			"Raymond",
+			"Robby",
 			"Robert Vogel <vogeli@hallowelt.biz>",
 			"Umherirrender"
 		]
@@ -42,5 +44,25 @@
 	"apihelp-bs-bookshelf-bookstore-summary": "{{doc-apihelp-summary|bs-bookshelf-bookstore}}",
 	"apihelp-bs-bookshelf-store-summary": "{{doc-apihelp-summary|bs-bookshelf-store}}",
 	"apihelp-query+bsbookshelf-summary": "{{doc-apihelp-summary|query+bsbookshelf}}",
-	"bs-bookshelf-pref-titledisplaytext-help": "Description for config variable \"BookshelfTitleDisplayText\""
+	"bs-bookshelf-pref-titledisplaytext-help": "Description for config variable \"BookshelfTitleDisplayText\"",
+	"bs-bookshelf-grouping-template-type-local_storage": "Label for book type \"local_storage\"",
+	"bs-bookshelf-grouping-template-type-ns_book": "Short label for the option \"namespace\" in the group selection combobox.\n{{Identical|General books}}",
+	"bs-bookshelf-grouping-template-type-user_book": "Short label for the option \"user\" in the group selection combobox.",
+	"bs-bookshelf-action-editbooksource": "Action label: editbooksource",
+	"bs-bookshelf-action-editbooksource-create": "Action label when page does not exist: editbooksource",
+	"bs-bookshelf-action-export-book": "Label for book export link",
+	"bs-bookshelf-edit-title": "Page title when editing a book",
+	"bs-bookshelf-error-invalid-type": "Error message if given book type is invalid",
+	"bs-bookshelf-error-type-title-mismatch": "Error message if title given does not match the given book type",
+	"bs-bookshelf-editor-no-title-provided": "Error message when given given subpage as parameter on the [[Special:BookshelfBookUI]] specialpage is not a valid page",
+	"bs-bookshelf-book-grid-title": "Title for the grid showing available books\n{{identical|Book}}",
+	"bookshelf": "Special page name for [[Special:Bookshelf]] special page.\n{{Identical|Bookshelf}}",
+	"bookshelf-summary": "Bookshelf special page summary",
+	"prefs-bookshelf": "Bookshelf settings name",
+	"bs-bookshelf-prof-defaultview": "Bookshelf default view settings name",
+	"bs-bookshelf-prof-defaultview-grid": "Grid view settings name",
+	"bs-bookshelf-prof-defaultview-images": "Images view settings name\n{{identical|Image}}",
+	"right-bookshelf-viewspecialpage": "{{doc-right|bookshelf-viewspecialpage}}",
+	"action-bookshelf-viewspecialpage": "{{doc-action|bookshelf-viewspecialpage}}",
+	"bs-bookshelf-action-save-to-local-storage": "Label for the action in batch dialog"
 }

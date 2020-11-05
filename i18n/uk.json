@@ -40,5 +40,11 @@
 	"apihelp-bs-bookshelf-bookstore-param-book": "Зазначає книгу, для якої слід навести список розділів.",
 	"apihelp-bs-bookshelf-bookstore-summary": "Перелічує всі розділи вказаної книги. Дає можливість сортування, фільтрування та пагінації. Реалізовує параметри ExtJS Store.",
 	"apihelp-bs-bookshelf-store-summary": "Перелічує всі книги. Дає можливість сортування, фільтрування та пагінації. Реалізовує параметри ExtJS Store.",
-	"apihelp-query+bsbookshelf-summary": "Дозволяє надсилання запитів у всіх книгах."
+	"apihelp-query+bsbookshelf-summary": "Дозволяє надсилання запитів у всіх книгах.",
+	"bs-bookshelf-grouping-template-type-ns_book": "Загальні книжки",
+	"bs-bookshelf-grouping-template-type-user_book": "Власні книжки",
+	"bookshelf": "Книжкова полиця",
+	"bookshelf-summary": "Загальні книжки",
+	"right-bookshelf-viewspecialpage": "Доступ до спеціальної сторінки [[Special:Bookshelf]]",
+	"action-bookshelf-viewspecialpage": "доступ до спеціальної сторінки [[Special:Bookshelf]]"
 }

@@ -42,5 +42,11 @@
 	"bs-bookshelf-pref-titledisplaytext-help": "Mostra o título da navegação do livro como título da página, em vez do nome da página.",
 	"apihelp-bs-bookshelf-bookstore-summary": "Lista todos os capítulos de um determinado livro. Permite ordenar, filtrar e paginar. Implementa os parâmetros ExtJS Store.",
 	"apihelp-bs-bookshelf-store-summary": "Lista todos os livros. Permite ordenar, filtrar e paginar. Implementa os parâmetros ExtJS Store.",
-	"apihelp-query+bsbookshelf-summary": "Permite fazer consultas em todos os livros."
+	"apihelp-query+bsbookshelf-summary": "Permite fazer consultas em todos os livros.",
+	"bs-bookshelf-grouping-template-type-ns_book": "Livros gerais",
+	"bs-bookshelf-grouping-template-type-user_book": "Livros próprios",
+	"bookshelf": "Estante",
+	"bookshelf-summary": "Livros Gerais",
+	"right-bookshelf-viewspecialpage": "Aceder à página especial [[Special:Bookshelf|Especial:Estante]]",
+	"action-bookshelf-viewspecialpage": "aceder à pagina especial [[Special:Bookshelf|Especial:Estante]]"
 }
