@@ -41,7 +41,7 @@
 	"bs-bookshelfui-dlg-tagsettings-title": "Title of the dialog that allows editing the tag settings.",
 	"bs-bookshelfui-dlg-copy-title": "Title of the dialog that allows copying a book.\n* $1 - The name of the book, a copy will be created of",
 	"bs-bookshelfui-dlg-copy-name-addition": "Text that gets appended to the book title in the default value of the title text input in the copy dialog.\n{{Identical| (copy)}}",
-	"bs-bookshelfui-dlg-copy-target-name-label": "Label for the text input that sets the target book name in the copy dialog\n{{Identical|Target name}}",
+	"bs-bookshelfui-dlg-copy-target-name-label": "Label for the text input that sets the target book name in the copy dialog",
 	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "Tooltip text for the namespace selection in the copy dialog that states, tha all pages of the book will be copied to this namespace and that their links will be adapted.",
 	"bs-bookshelfui-confirm-delete-title": "Title of confirm prompt, that removes a champter from the selected book\n{{Identical|Remove chapter}}",
 	"bs-bookshelfui-confirm-delete-text": "Text of the confirm prompt that asks the user, if the user really wants to delete the selected champter from the book. It also warns that this action will remove all sub-chapters as well.",
