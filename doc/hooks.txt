@@ -25,16 +25,6 @@ $oData:
 $oBookTitle:
 $oBookRow:
 
-'BSBookshelfManagerGetBookDataComplete': deprecated
-$oResult:
-$iLimit:
-$iStart:
-$sDir:
-
-'BSBookshelfManagerGetBookDetailsComplete': deprecated
-$oBookTitle:
-&$aHtml:
-
 
 ==SpecialBookshelfBookUI.class==
 

@@ -3,7 +3,6 @@
 namespace BlueSpice\Bookshelf;
 
 use Exception;
-use Hooks;
 use MediaWiki\MediaWikiServices;
 use Message;
 use MWException;
@@ -180,7 +179,10 @@ class BookEditData {
 			$pm->userCan( 'edit', $user, $this->basedOnTitle ) : true;
 		$this->bookData->bookType = $this->bookType;
 
-		Hooks::run( 'BSBookshelfGetBookData', [ $this, &$this->bookData ] );
+		MediaWikiServices::getInstance()->getHookContainer()->run( 'BSBookshelfGetBookData', [
+			$this,
+			&$this->bookData
+		] );
 	}
 
 	/**
