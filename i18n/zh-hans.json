@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"A Chinese Wikipedian",
+			"AYZ04",
 			"Dimension",
 			"VulpesVulpes825",
 			"Wenyuan Liu",
@@ -42,5 +43,17 @@
 	"bookshelf": "书架",
 	"bookshelf-summary": "通用图书",
 	"right-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]"
+	"action-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
+	"bs-bookshelf-grouping-template-type-local_storage": "临时的书籍",
+	"bs-bookshelf-action-editbooksource": "编辑书籍的来源",
+	"bs-bookshelf-action-editbooksource-create": "建立书籍的来源",
+	"bs-bookshelf-action-export-book": "出口书籍",
+	"bs-bookshelf-edit-title": "正在编辑$1",
+	"bs-bookshelf-error-invalid-type": "指定的书籍类型无效",
+	"bs-bookshelf-editor-no-title-provided": "没有提供合理的书名",
+	"bs-bookshelf-book-grid-title": "书籍",
+	"prefs-bookshelf": "书架特殊页面",
+	"bs-bookshelf-prof-defaultview": "默认视图",
+	"bs-bookshelf-prof-defaultview-grid": "格子",
+	"bs-bookshelf-prof-defaultview-images": "图像"
 }

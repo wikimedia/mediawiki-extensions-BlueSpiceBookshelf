@@ -5,6 +5,7 @@
 			"Dansita",
 			"Gianfranco",
 			"Luca.favorido",
+			"TheRukk",
 			"Tizven"
 		]
 	},
@@ -38,5 +39,6 @@
 	"bookshelf-summary": "Libri generali",
 	"bs-bookshelf-prof-defaultview": "Vista predefinita",
 	"bs-bookshelf-prof-defaultview-grid": "Griglia",
-	"bs-bookshelf-prof-defaultview-images": "Immagini"
+	"bs-bookshelf-prof-defaultview-images": "Immagini",
+	"bs-bookshelf-positive-integer-validation-not-approved": "Sono consentiti solo interi positivi."
 }
