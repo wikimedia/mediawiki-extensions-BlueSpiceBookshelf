@@ -440,7 +440,7 @@
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
 	},
 	"DefaultUserOptions": {
-		"bs-bookshelfui-defaultview": "gridviewpanel"
+		"bs-bookshelf-defaultview": "gridviewpanel"
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 2
