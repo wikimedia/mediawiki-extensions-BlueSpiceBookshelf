@@ -7,6 +7,7 @@
 			"VulpesVulpes825",
 			"Wenyuan Liu",
 			"XinuGod",
+			"Yfdyh000",
 			"列维劳德",
 			"沈澄心"
 		]
@@ -53,5 +54,6 @@
 	"bs-bookshelf-prof-defaultview-grid": "格子",
 	"bs-bookshelf-prof-defaultview-images": "图像",
 	"right-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]"
+	"action-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
+	"bs-bookshelf-action-save-to-local-storage": "保存到本地存储"
 }
