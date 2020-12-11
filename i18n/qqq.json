@@ -58,5 +58,9 @@
 	"bs-bookshelf-prof-defaultview-images": "Images view settings name",
 	"right-bookshelf-viewspecialpage": "{{doc-right|bookshelf-viewspecialpage}}",
 	"action-bookshelf-viewspecialpage": "{{doc-action|bookshelf-viewspecialpage}}",
-	"bs-bookshelf-action-save-to-local-storage": "Label for the action in batch dialog"
+	"bs-bookshelf-action-save-to-local-storage": "Label for the action in batch dialog",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Label for config variable \"BookShelfShowChapterNavigationPagerBeforeContent\" at [[Special:BlueSpiceConfigManager]]",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Description for config variable \"BookShelfShowChapterNavigationPagerBeforeContent\"",
+	"bs-bookshelf-pref-chapterpageraftercontent": "Label for config variable \"BookShelfShowChapterNavigationPagerAfterContent\" at [[Special:BlueSpiceConfigManager]]",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Description for config variable \"BookShelfShowChapterNavigationPagerAfterContent\"."
 }
