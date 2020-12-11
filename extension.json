@@ -58,6 +58,15 @@
 	"ExtensionMessagesFiles": {
 		"BookshelfNamespaces": "languages/Bookshelf.namespaces.php"
 	},
+	"namespaces": [ {
+			"id": 1504,
+			"constant": "NS_BOOK",
+			"name": "Book"
+		}, {
+			"id": 1505,
+			"constant": "NS_BOOK_TALK",
+			"name": "Book_talk"
+	} ],
 	"AutoloadNamespaces": {
 		"BlueSpice\\Bookshelf\\": "src/"
 	},
