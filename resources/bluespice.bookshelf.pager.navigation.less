@@ -24,8 +24,7 @@
         justify-content: space-between;
         margin-top: 15px;
         margin-bottom: 5px;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
+        padding: 5px 15px;
 
         a,
         a:link,
@@ -33,6 +32,8 @@
             color: white;
             cursor: pointer;
             line-height: 32px;
+            border: 1px solid currentColor;
+            border-radius: 5px;
 
             &.disabled {
                 visibility: hidden;
@@ -57,6 +58,11 @@
             &.next-chapter::after {
                 content: "\e923";
                 font-family: "entypo";
+            }
+
+            &:hover {
+                text-decoration: none;
+                background-color: #98a7c4;
             }
         }
     }

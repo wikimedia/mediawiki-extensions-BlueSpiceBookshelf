@@ -1,6 +1,10 @@
 .bs-data-before-content {
     .bs-data-before-content-bookshelfui-chapterpager {
         padding: 15px 10px;
+        color: white;
+        background-color: #98a7c4;
+        border: 1px solid #3e5389;
+        border-radius: 5px;
 
         .bookshelfui-chapterpager-heading {
             text-align: center;
@@ -14,12 +18,16 @@
         .bookshelfui-chapterpager {
             display: flex;
             justify-content: space-between;
+            padding: 15px 15px 0 15px;
 
             a,
             a:link,
             a:visited {
                 cursor: pointer;
                 line-height: 32px;
+                color: currentColor;
+                border: 1px solid currentColor;
+                border-radius: 5px;
 
                 &.disabled {
                     visibility: hidden;
@@ -49,6 +57,10 @@
                 &.next-chapter::after {
                     content: "\e923";
                     font-family: "entypo";
+                }
+
+                &:hover {
+                    text-decoration: none;
                 }
             }
         }
