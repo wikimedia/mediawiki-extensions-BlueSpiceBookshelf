@@ -40,19 +40,11 @@ class Extension extends \BlueSpice\Extension {
 	 */
 	public static function onRegistration() {
 		//phpcs:disable
-		global $wgExtraNamespaces, $bsgSystemNamespaces;
+		global $bsgSystemNamespaces;
 		//phpcs:enable
-		if ( !defined( 'NS_BOOK' ) ) {
-			define( 'NS_BOOK', 1504 );
-			$wgExtraNamespaces[NS_BOOK] = 'Book';
-			$bsgSystemNamespaces[1504] = 'NS_BOOK';
-		}
 
-		if ( !defined( 'NS_BOOK_TALK' ) ) {
-			define( 'NS_BOOK_TALK', 1505 );
-			$wgExtraNamespaces[NS_BOOK_TALK] = 'Book_talk';
-			$bsgSystemNamespaces[1505] = 'NS_BOOK_TALK';
-		}
+		$bsgSystemNamespaces[1504] = 'NS_BOOK';
+		$bsgSystemNamespaces[1505] = 'NS_BOOK_TALK';
 
 		static::checkLegacy();
 	}
