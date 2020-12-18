@@ -4,5 +4,9 @@
 			"Joetaras"
 		]
 	},
-	"bs-bookshelfui-manager-title": "Titole"
+	"bs-bookshelfui-manager-title": "Titole",
+	"bs-bookshelfui-bookmetatag-title": "Titole",
+	"bs-bookshelfui-bookmetatag-subtitle": "Sotto titole",
+	"bs-bookshelfui-bookmetatag-author1": "Autore 1",
+	"bs-bookshelfui-bookmetatag-author2": "Autore 2"
 }

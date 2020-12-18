@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Pe piacere, ause <i>sinistre</i> o <i>destre</i>.",
+	"bs-bookshelf-specialpage-title": "Libbre",
+	"bs-bookshelf-specialpage-allpages-ns-book-text": "Libbrerie",
+	"bs-bookshelf-tag-next": "Prossime",
+	"bs-bookshelf-tag-prev": "Precedende",
+	"bs-bookshelf-tag-edit-book": "Cange 'u libbre",
+	"bs-bookshelf-personal-books-page-prefix": "$1/Libbre/",
+	"bs-bookshelf-add-to-book-label": "Aggiunge a 'nu libbre",
+	"bs-bookshelf-add-to-book-label-book": "Libbre",
+	"bs-bookshelf-add-to-book-label-alias": "Alias",
+	"apihelp-bs-bookshelf-store-description": "Elenghe tutte le libbre. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
+	"apihelp-bs-bookshelf-bookstore-description": "Elenghe tutte le capitole de 'nu certe libbre. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
+	"bs-bookshelf-setting-path-feature": "Libbre",
+	"bs-bookshelf-empty-selection": "Nisciuna selezione",
+	"apihelp-bs-bookshelf-bookstore-summary": "Elenghe tutte le capitole de 'nu certe libbre. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
+	"apihelp-bs-bookshelf-store-summary": "Elenghe tutte le libbre. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
+	"bs-bookshelf-grouping-template-type-local_storage": "Libbre temboranèe",
+	"bs-bookshelf-grouping-template-type-ns_book": "Libbre generale",
+	"bs-bookshelf-grouping-template-type-user_book": "Libbre personale"
+}
