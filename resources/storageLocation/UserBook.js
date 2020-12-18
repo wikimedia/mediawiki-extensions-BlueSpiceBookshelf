@@ -17,6 +17,9 @@
 
 	bs.bookshelf.storageLocation.UserBook.prototype.getEditUrlFromTitle = function( bookTitle, params ) {
 		params = params || {};
+		bookTitle = mw.message(
+			'bs-bookshelf-personal-books-page-prefix', mw.config.get( 'wgUserName' )
+		).text() + bookTitle;
 		var title = new mw.Title( bookTitle, bs.ns.NS_USER );
 
 		return title.getUrl( $.extend( {
