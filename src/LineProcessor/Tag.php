@@ -5,6 +5,7 @@ namespace BlueSpice\Bookshelf\LineProcessor;
 use BlueSpice\Bookshelf\ILineProcessor;
 use BlueSpice\Bookshelf\TreeNode;
 use DOMDocument;
+use DOMElement;
 
 class Tag extends LineProcessorBase implements ILineProcessor {
 
@@ -16,10 +17,20 @@ class Tag extends LineProcessorBase implements ILineProcessor {
 	 */
 	public function process( $line ) {
 		$result = new TreeNode();
+		$result['type'] = 'tag';
+		$result['title'] = $line;
+		$result['display-title'] = $line;
+		$result['bookshelf']['type'] = 'tag';
+		$result['bookshelf']['text'] = $line;
+		$result['bookshelf']['arguments'] = [];
+
 		$oDOM = new DOMDocument();
-		$oDOM->loadXML( $line );
+		$oDOM->loadXML( '<xml>' . $line . '</xml>' );
 		// This is generally dangerous. But in current context it should be okay
-		$oTag = $oDOM->firstChild;
+		$oTag = $this->getFirstElement( $oDOM->documentElement );
+		if ( $oTag === null ) {
+			return $result;
+		}
 		$aAttributes = [];
 		foreach ( $oTag->attributes as $sAttributName => $sAttributValue ) {
 			// Filter out standard parameters 'text'
@@ -28,14 +39,27 @@ class Tag extends LineProcessorBase implements ILineProcessor {
 			}
 			$aAttributes[$sAttributName] = $sAttributValue->value;
 		}
-		$result['type'] = 'tag';
 		$result['title'] = $oTag->getAttribute( 'text' );
 		$result['display-title'] = $oTag->getAttribute( 'text' );
-		$result['bookshelf']['type'] = 'tag';
 		$result['bookshelf']['text'] = $oTag->getAttribute( 'text' );
 		$result['bookshelf']['arguments'] = $aAttributes;
 
 		return $result;
+	}
+
+	/**
+	 *
+	 * @param DOMElement $el
+	 * @return DOMElement|null
+	 */
+	private function getFirstElement( $el ) {
+		foreach ( $el->childNodes as $childNode ) {
+			if ( $childNode instanceof DOMElement ) {
+				return $childNode;
+			}
+			return $this->getFirstElement( $childNode );
+		}
+		return null;
 	}
 
 	/**
