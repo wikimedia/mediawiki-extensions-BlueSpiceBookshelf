@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Bookshelf\Panel;
 
-use BlueSpice\Calumma\Panel\PanelContainer;
 use BlueSpice\Calumma\IActiveStateProvider;
+use BlueSpice\Calumma\Panel\PanelContainer;
 use Message;
 use SkinTemplate;
 
@@ -23,6 +23,7 @@ class BookNav extends PanelContainer implements IActiveStateProvider {
 	protected function makePanels() {
 		return [
 			'general-books' => new GeneralBooksFlyout( $this->skintemplate ),
+			'chapter-pager' => new ChapterNavigationPager( $this->skintemplate ),
 			'chapter-navigation' => new ChapterNavigation( $this->skintemplate )
 		];
 	}
