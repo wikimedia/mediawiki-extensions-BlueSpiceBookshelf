@@ -14,7 +14,7 @@ use Title;
 class AddAttachments {
 	/**
 	 * @param BsPDFServlet $sender
-	 * @param object $html
+	 * @param null $html Unused
 	 * @param array &$files
 	 * @param array $params
 	 * @param DOMXPath $DOMXPath

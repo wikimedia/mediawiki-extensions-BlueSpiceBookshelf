@@ -168,7 +168,7 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 
 	/**
 	 *
-	 * @param object $row
+	 * @param stdClass $row
 	 * @return stdClass|null
 	 */
 	public function makeDataSet( $row ) {

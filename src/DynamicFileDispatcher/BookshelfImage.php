@@ -13,7 +13,7 @@ class BookshelfImage extends ArticlePreviewImage {
 	 */
 	const MODULE_NAME = 'articlepreviewimage';
 
-	/*
+	/**
 	 * @var \PageHierarchyProvider
 	 */
 	protected $pageHierarchyProvider = null;
