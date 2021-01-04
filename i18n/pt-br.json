@@ -57,5 +57,9 @@
 	"bs-bookshelf-prof-defaultview-images": "Imagens",
 	"right-bookshelf-viewspecialpage": "acesse a página especial [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "acesse a página especial [[Special:Bookshelf]]",
-	"bs-bookshelf-action-save-to-local-storage": "Salvando no armazenamento local"
+	"bs-bookshelf-action-save-to-local-storage": "Salvando no armazenamento local",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Mostrar pager do capítulo do livro antes do conteúdo",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Adicione um pager de capítulo no topo da página.",
+	"bs-bookshelf-pref-chapterpageraftercontent": "Mostrar pager do capítulo do livro após o conteúdo",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Add a chapter pager at the bottom of the page."
 }

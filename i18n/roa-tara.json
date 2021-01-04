@@ -4,6 +4,7 @@
 			"Joetaras"
 		]
 	},
+	"bs-bookshelf-positive-integer-validation-not-approved": "Sò conzendite sulamende le indere positive.",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Pe piacere, ause <i>sinistre</i> o <i>destre</i>.",
 	"bs-bookshelf-specialpage-title": "Libbre",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Libbrerie",
@@ -14,6 +15,7 @@
 	"bs-bookshelf-add-to-book-label": "Aggiunge a 'nu libbre",
 	"bs-bookshelf-add-to-book-label-book": "Libbre",
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
+	"bs-bookshelf-add-to-book-added": "'A pàgene ha state aggiunde a 'u libbre '$1'.",
 	"apihelp-bs-bookshelf-store-description": "Elenghe tutte le libbre. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
 	"apihelp-bs-bookshelf-bookstore-description": "Elenghe tutte le capitole de 'nu certe libbre. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
 	"bs-bookshelf-setting-path-feature": "Libbre",
@@ -22,5 +24,11 @@
 	"apihelp-bs-bookshelf-store-summary": "Elenghe tutte le libbre. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
 	"bs-bookshelf-grouping-template-type-local_storage": "Libbre temboranèe",
 	"bs-bookshelf-grouping-template-type-ns_book": "Libbre generale",
-	"bs-bookshelf-grouping-template-type-user_book": "Libbre personale"
+	"bs-bookshelf-grouping-template-type-user_book": "Libbre personale",
+	"bs-bookshelf-edit-title": "Stoche a cange $1",
+	"bs-bookshelf-book-grid-title": "Libbre",
+	"bookshelf": "Scaffale",
+	"bs-bookshelf-prof-defaultview-grid": "Griglie",
+	"bs-bookshelf-prof-defaultview-images": "Immaggine",
+	"right-bookshelf-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:Bookshelf]]"
 }

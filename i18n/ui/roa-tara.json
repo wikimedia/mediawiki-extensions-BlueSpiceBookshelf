@@ -8,5 +8,7 @@
 	"bs-bookshelfui-bookmetatag-title": "Titole",
 	"bs-bookshelfui-bookmetatag-subtitle": "Sotto titole",
 	"bs-bookshelfui-bookmetatag-author1": "Autore 1",
-	"bs-bookshelfui-bookmetatag-author2": "Autore 2"
+	"bs-bookshelfui-bookmetatag-author2": "Autore 2",
+	"bookshelf": "Scaffale",
+	"right-bookshelf-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:Bookshelf]]"
 }
