@@ -57,11 +57,15 @@
 			"PermissionRegistry": {
 				"bookshelfbookmanager-viewspecialpage": {
 					"type": "global",
-					"roles": [ "reader" ]
+					"roles": [
+						"reader"
+					]
 				},
 				"bookshelf-viewspecialpage": {
 					"type": "global",
-					"roles": [ "reader" ]
+					"roles": [
+						"reader"
+					]
 				}
 			}
 
@@ -110,16 +114,19 @@
 		"BookshelfNamespaces": "languages/Bookshelf.namespaces.php",
 		"BookshelfSpecialAlias": "languages/Bookshelf.special.alias.php"
 	},
-	"namespaces": [ {
+	"namespaces": [
+		{
 			"id": 1504,
 			"constant": "NS_BOOK",
 			"name": "Book",
 			"defaultcontentmodel": "book"
-		}, {
+		},
+		{
 			"id": 1505,
 			"constant": "NS_BOOK_TALK",
 			"name": "Book_talk"
-	} ],
+		}
+	],
 	"AutoloadNamespaces": {
 		"BlueSpice\\Bookshelf\\": "src/"
 	},
