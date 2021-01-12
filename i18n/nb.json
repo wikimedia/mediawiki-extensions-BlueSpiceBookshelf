@@ -57,5 +57,9 @@
 	"bs-bookshelf-prof-defaultview-images": "Bilder",
 	"right-bookshelf-viewspecialpage": "Få tilgang til spesialsiden [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "få tilgang til spesialsiden [[Special:Bookshelf]]",
-	"bs-bookshelf-action-save-to-local-storage": "Lagrer til lokal lagringsplass"
+	"bs-bookshelf-action-save-to-local-storage": "Lagrer til lokal lagringsplass",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Vis kapittelnavigasjon før innholdet",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Legg til kapittelnavigasjon på toppen av siden.",
+	"bs-bookshelf-pref-chapterpageraftercontent": "Vis kapittelnavigasjon etter innholdet",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Legg til kapittelnavigasjon på bunnen av siden."
 }
