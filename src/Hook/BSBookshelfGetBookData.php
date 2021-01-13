@@ -42,7 +42,7 @@ abstract class BSBookshelfGetBookData extends Hook {
 
 	/**
 	 *
-	 * @var string
+	 * @var stdClass
 	 */
 	protected $bookData = null;
 
