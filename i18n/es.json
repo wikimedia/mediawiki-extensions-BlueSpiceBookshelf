@@ -3,6 +3,7 @@
 		"authors": [
 			"DannyS712",
 			"Fitoschido",
+			"MarleneR329",
 			"Rodney Araujo"
 		]
 	},
@@ -12,6 +13,7 @@
 	"bs-bookshelf-positive-integer-validation-not-approved": "Se permiten solo enteros positivos.",
 	"bs-bookshelf-specialpage-title": "Libros",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Biblioteca",
+	"bs-bookshelf-pref-TitleDisplayText": "Usar el titulo de visualización de la fuente del libro en el articulo",
 	"bs-bookshelf-tag-next": "Siguiente",
 	"bs-bookshelf-tag-prev": "Anterior",
 	"bs-bookshelf-tag-edit-book": "Editar libro",
