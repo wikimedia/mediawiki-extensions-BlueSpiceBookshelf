@@ -15,6 +15,7 @@
 	"bs-bookshelfui-new-book-text": "책 제목",
 	"bs-bookshelfui-delete-book-title": "책 삭제",
 	"bs-bookshelfui-export-selection": "선택된 항목 내보내기",
+	"bs-bookshelfui-save-and-modify": "책 내비게이션을 저장하고 각 위키페이지에 추가합니다",
 	"bs-bookshelfui-edit-source": "원본 위키페이지 편집",
 	"bs-bookshelfui-open-source": "원본 위키페이지 표시",
 	"bs-bookshelfui-bookui-savingprogress-title": "책 저장 중",
@@ -36,6 +37,7 @@
 	"bs-bookshelfui-dlg-metadata-title": "메타 데이터",
 	"bs-bookshelfui-dlg-tagsettings-title": "탭 설정",
 	"bs-bookshelfui-dlg-copy-title": "\"$1\" 복사",
+	"bs-bookshelfui-dlg-copy-name-addition": "(사본)",
 	"bs-bookshelfui-dlg-copy-target-name-label": "대상 이름",
 	"bs-bookshelfui-confirm-delete-title": "장 제거",
 	"bs-bookshelfui-confirm-delete-text": "선택된 장을 제거하시겠습니까? 하위에 속한 장들도 제거됩니다.",
@@ -74,6 +76,8 @@
 	"bs-bookshelfui-prof-defaultview": "기본 뷰",
 	"bs-bookshelfui-prof-defaultview-grid": "그리드",
 	"bs-bookshelfui-prof-defaultview-images": "이미지",
+	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
+	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
 	"bs-bookshelfui-chapterpager-previous": "이전",
 	"bs-bookshelfui-chapterpager-next": "다음"
 }
