@@ -46,9 +46,6 @@ class ApiBookshelfStoreTest extends ApiTestCase {
 	}
 
 	/**
-	 * @param $limit
-	 * @param $offset
-	 *
 	 * @dataProvider providePagingData
 	 */
 	public function testPaging( $limit, $offset ) {
@@ -91,12 +88,6 @@ class ApiBookshelfStoreTest extends ApiTestCase {
 	 * 	}
 	 * ]
 	 *
-	 * @param $type
-	 * @param $field
-	 * @param $value
-	 * @param $comparison
-	 * @param $expectedTotal
-	 *
 	 * @dataProvider provideSingleFilterData
 	 */
 	public function testSingleFilter( $type, $comparison, $field, $value, $expectedTotal ) {
@@ -128,9 +119,6 @@ class ApiBookshelfStoreTest extends ApiTestCase {
 	}
 
 	/**
-	 * @param $filters
-	 * @param $expectedTotal
-	 *
 	 * @dataProvider provideMultipleFilterData
 	 */
 	public function testMultipleFilter( $filters, $expectedTotal ) {

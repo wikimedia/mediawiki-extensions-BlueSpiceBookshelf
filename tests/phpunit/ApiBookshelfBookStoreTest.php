@@ -41,9 +41,6 @@ HERE;
 	}
 
 	/**
-	 * @param $path
-	 * @param $expectedTotal
-	 *
 	 * @dataProvider provideNodePathsData
 	 */
 	public function testNodePaths( $path, $expectedTotal ) {
