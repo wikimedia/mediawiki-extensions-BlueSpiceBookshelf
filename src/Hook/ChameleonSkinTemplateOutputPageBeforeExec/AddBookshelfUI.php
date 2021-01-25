@@ -3,7 +3,7 @@
 namespace BlueSpice\Bookshelf\Hook\ChameleonSkinTemplateOutputPageBeforeExec;
 
 use BlueSpice\Bookshelf\Panel\BookNav;
-use BlueSpice\Calumma\Hook\ChameleonSkinTemplateOutputPageBeforeExec;
+use BlueSpice\Hook\ChameleonSkinTemplateOutputPageBeforeExec;
 use BlueSpice\SkinData;
 
 class AddBookshelfUI extends ChameleonSkinTemplateOutputPageBeforeExec {

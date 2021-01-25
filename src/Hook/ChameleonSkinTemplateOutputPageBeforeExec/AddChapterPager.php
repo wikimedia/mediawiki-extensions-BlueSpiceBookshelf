@@ -3,7 +3,7 @@
 namespace BlueSpice\Bookshelf\Hook\ChameleonSkinTemplateOutputPageBeforeExec;
 
 use BlueSpice\Bookshelf\ChapterPager;
-use BlueSpice\Calumma\Hook\ChameleonSkinTemplateOutputPageBeforeExec;
+use BlueSpice\Hook\ChameleonSkinTemplateOutputPageBeforeExec;
 use BlueSpice\Services;
 use BlueSpice\SkinData;
 use PageHierarchyProvider;
