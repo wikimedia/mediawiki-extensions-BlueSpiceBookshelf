@@ -4,11 +4,15 @@
 			"Joetaras"
 		]
 	},
+	"bs-bookshelfui-new-book-title": "Ccreje 'nu libbre nuéve",
+	"bs-bookshelfui-new-book-text": "Titole d'u libbre",
+	"bs-bookshelfui-delete-book-title": "Scangille 'u libbre",
 	"bs-bookshelfui-manager-title": "Titole",
 	"bs-bookshelfui-bookmetatag-title": "Titole",
 	"bs-bookshelfui-bookmetatag-subtitle": "Sotto titole",
 	"bs-bookshelfui-bookmetatag-author1": "Autore 1",
 	"bs-bookshelfui-bookmetatag-author2": "Autore 2",
 	"bookshelf": "Scaffale",
-	"right-bookshelf-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:Bookshelf]]"
+	"right-bookshelf-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
+	"action-bookshelf-viewspecialpage": "tràse jndr'à pàgena speciale [[Special:Bookshelf]]"
 }
