@@ -31,6 +31,8 @@
 	"bs-bookshelf-edit-title": "Stoche a cange $1",
 	"bs-bookshelf-book-grid-title": "Libbre",
 	"bookshelf": "Scaffale",
+	"bookshelf-summary": "Libbre generale",
+	"prefs-bookshelf": "Pàgena speciale d'u scaffale",
 	"bs-bookshelf-prof-defaultview": "Viste de partenze",
 	"bs-bookshelf-prof-defaultview-grid": "Griglie",
 	"bs-bookshelf-prof-defaultview-images": "Immaggine",
