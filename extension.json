@@ -452,7 +452,8 @@
 			"\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFcollectMetaData\\AddBookMeta::callback"
 		],
 		"BSBookshelfGetBookData": "\\BlueSpice\\Bookshelf\\Hook\\BSBookshelfGetBookData\\RunLegacyHook::callback",
-		"GetPreferences": "\\BlueSpice\\Bookshelf\\Hook\\GetPreferences\\BookshelfDefaultView::callback"
+		"GetPreferences": "\\BlueSpice\\Bookshelf\\Hook\\GetPreferences\\BookshelfDefaultView::callback",
+		"SkinTemplateNavigation::Universal": "BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigationUniversal\\AddAddToBookEntry::callback"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
