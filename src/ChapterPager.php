@@ -81,7 +81,7 @@ class ChapterPager {
 	 *
 	 * @return string
 	 */
-	public function  getBookTitle() {
+	public function getBookTitle() {
 		return $this->bookTitle;
 	}
 
@@ -89,7 +89,7 @@ class ChapterPager {
 	 *
 	 * @return array
 	 */
-	public function  getNextPageData() {
+	public function getNextPageData() {
 		return $this->nextTitle;
 	}
 

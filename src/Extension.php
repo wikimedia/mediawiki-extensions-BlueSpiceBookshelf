@@ -84,8 +84,7 @@ class Extension extends \BlueSpice\Extension {
 		);
 		if ( !empty( $registy ) ) {
 			// Add legacy extension attribute values
-			$GLOBALS['bsgExtensionAttributeRegistryOverrides']
-			['BlueSpiceBookshelfMassAddHandlerRegistry'] = [
+			$GLOBALS['bsgExtensionAttributeRegistryOverrides']['BlueSpiceBookshelfMassAddHandlerRegistry'] = [
 				'merge' => $registy
 			];
 		}
