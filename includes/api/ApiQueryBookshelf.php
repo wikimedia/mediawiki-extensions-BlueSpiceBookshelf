@@ -11,10 +11,6 @@ class ApiQueryBookshelf extends ApiQueryBase {
 		parent::__construct( $query, $moduleName, 'bsbs' );
 	}
 
-	/**
-	 *
-	 * @return null
-	 */
 	public function execute() {
 		$data = [];
 		$permManager = \MediaWiki\MediaWikiServices::getInstance()->getPermissionManager();

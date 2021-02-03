@@ -126,7 +126,6 @@ class ModifyForExport extends BSUEModulePDFgetPage {
 	 * @param array $page
 	 * @param array $aAncestors
 	 * @param array $aBookMeta
-	 * @return null
 	 */
 	protected function createRunningHeader( $page, $aAncestors, $aBookMeta ) {
 		$oSourceTitle = Title::newFromText( $aAncestors['sourcearticletitle'] );
