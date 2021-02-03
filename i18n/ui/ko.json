@@ -69,5 +69,15 @@
 	"bs-bookshelfui-ctxmnu-open": "위키페이지를 새 창으로 열기",
 	"bs-bookshelfui-confirm-delete-text": "선택된 장을 제거하시겠습니까? 하위에 속한 장들도 제거됩니다.",
 	"bs-bookshelfui-chapterpager-previous": "이전",
-	"bs-bookshelfui-chapterpager-next": "다음"
+	"bs-bookshelfui-chapterpager-next": "다음",
+	"bs-bookshelfui-save-and-modify": "책 내비게이션을 저장하고 각 위키페이지에 추가합니다",
+	"bs-bookshelfui-edit-source": "원본 위키페이지 편집",
+	"bs-bookshelfui-open-source": "원본 위키페이지 표시",
+	"bs-bookshelfui-dlg-copy-name-addition": "(사본)",
+	"bs-bookshelfui-nav-link-title-all-books": "일반 책",
+	"bs-bookshelfui-bookmetatag-docummentidentifier": "문서 ID",
+	"bookshelf-summary": "일반 책",
+	"bs-bookshelfui-prof-defaultview": "기본 뷰",
+	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
+	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근"
 }

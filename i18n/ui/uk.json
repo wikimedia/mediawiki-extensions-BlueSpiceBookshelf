@@ -95,5 +95,7 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Сітка",
 	"bs-bookshelfui-prof-defaultview-images": "Зображення",
 	"right-bookshelf-viewspecialpage": "Доступ до спеціальної сторінки [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "доступ до спеціальної сторінки [[Special:Bookshelf]]"
+	"action-bookshelf-viewspecialpage": "доступ до спеціальної сторінки [[Special:Bookshelf]]",
+	"bs-bookshelfui-chapterpager-previous": "Назад",
+	"bs-bookshelfui-chapterpager-next": "Далі"
 }

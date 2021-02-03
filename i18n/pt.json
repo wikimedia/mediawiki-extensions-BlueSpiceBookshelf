@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Fúlvio",
 			"Hamilton Abreu",
 			"Mansil alfalb",
-			"Fúlvio"
+			"Pedro Henrique"
 		]
 	},
 	"bs-bookshelf-extension-description": "Permite que o BlueSpice administre e exporte coleções hierárquicas de artigos.",
-	"bs-bookshelf-tag-bookshelf-desc": "Insere uma navegação de capítulo de um livro na página de um livro. Através desta etiqueta, os artigos mencionados são incluídos no livro. A numeração é automaticamente adaptada ao índice.",
+	"bs-bookshelf-tag-bookshelf-desc": "Insere uma navegação dos capítulos de um livro numa página de um livro. Através desta etiqueta, os artigos mencionados são incluídos no livro. A numeração é automaticamente adaptada ao índice.",
 	"bs-bookshelf-tag-bookmeta-desc": "Etiqueta para guardar vários metadados em artigos de livros. Estes metadados são incluídos no livro. Os atributos desta etiqueta têm de estar correlacionados com os metadados do artigo de livro.",
 	"bs-bookshelf-tag-booklist-desc": "Gera listas de artigos do espaço nominal \"livro\" e pode ser filtrada. A indicação do filtro é obrigatória.",
 	"bs-bookshelf-tagerror-no-attribute-given": "Não foi fornecido nenhum atributo! Usar <strong>src</strong> para configurar o índice.",
@@ -33,8 +34,19 @@
 	"bs-bookshelf-add-to-book-added": "A página foi adicionada ao livro '$1'.",
 	"bs-bookshelf-add-to-book-mod-bstag": "A etiqueta \"bookshelf\" da página foi alterada. A página será recarregada.",
 	"apihelp-bs-bookshelf-store-description": "Lista todos os livros. Permite ordenar, filtrar e paginar. Implementa os parâmetros ExtJS Store.",
-	"apihelp-bs-bookshelf-bookstore-description": "Lista todos os capítulos de um determinado livro. Permite a classificação, filtragem e paginação. Implementa os parâmetros de ExtJS Store.",
+	"apihelp-bs-bookshelf-bookstore-description": "Lista todos os capítulos de um determinado livro. Permite ordenar, filtrar e paginar. Implementa os parâmetros ExtJS Store.",
 	"apihelp-bs-bookshelf-bookstore-param-node": "Especifica um nó para o qual deve ser fornecida uma lista de subcapítulos.",
 	"bs-bookshelf-setting-path-feature": "Livro",
-	"bs-bookshelf-empty-selection": "Nada selecionado"
+	"bs-bookshelf-empty-selection": "Nada selecionado",
+	"apihelp-bs-bookshelf-bookstore-param-book": "Especifica o livro para o qual uma lista de capítulos deverá ser fornecida.",
+	"apihelp-bs-bookshelf-bookstore-summary": "Lista todos os capítulos de um determinado livro. Permite ordenar, filtrar e paginar. Implementa os parâmetros ExtJS Store.",
+	"apihelp-bs-bookshelf-store-summary": "Lista todos os livros. Permite ordenar, filtrar e paginar. Implementa os parâmetros ExtJS Store.",
+	"apihelp-query+bsbookshelf-summary": "Permite fazer consultas em todos os livros.",
+	"bs-bookshelf-pref-titledisplaytext-help": "Mostra o título da navegação do livro como título da página, em vez do nome da página.",
+	"bs-bookshelf-grouping-template-type-ns_book": "Livros gerais",
+	"bs-bookshelf-grouping-template-type-user_book": "Livros próprios",
+	"bookshelf": "Estante",
+	"bookshelf-summary": "Livros Gerais",
+	"right-bookshelf-viewspecialpage": "Aceder à página especial [[Special:Bookshelf|Especial:Estante]]",
+	"action-bookshelf-viewspecialpage": "aceder à pagina especial [[Special:Bookshelf|Especial:Estante]]"
 }

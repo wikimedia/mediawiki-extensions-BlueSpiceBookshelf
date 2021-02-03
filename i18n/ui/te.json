@@ -15,5 +15,8 @@
 	"bs-bookshelfui-bookmetatag-title": "శీర్షిక",
 	"bs-bookshelfui-bookmetatag-department": "విభాగం",
 	"bs-bookshelfui-chapterpager-previous": "మునుపటి",
-	"bs-bookshelfui-chapterpager-next": "తదుపరి"
+	"bs-bookshelfui-chapterpager-next": "తదుపరి",
+	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|ఒక పుస్తకం|$1 పుస్తకాలు}})",
+	"bs-bookshelfui-book-type": "పుస్తకపు రకం",
+	"bs-bookshelfui-prof-defaultview-images": "బొమ్మలు"
 }
