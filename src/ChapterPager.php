@@ -43,7 +43,7 @@ class ChapterPager {
 
 		$flatArray = $this->flatArray( (array)$tree->children );
 		for ( $i = 0; $i < count( $flatArray ); $i++ ) {
-			if ( $title->getArticleID() === $flatArray[$i]['articleId'] ) {
+			if ( $title->getFullText() === $flatArray[$i]['articleTitle'] ) {
 				$this->currentTitle = $flatArray[$i];
 				if ( $i > 0 ) {
 					$this->previousTitle = $flatArray[$i - 1];
@@ -126,8 +126,11 @@ class ChapterPager {
 
 		$html .= Html::openElement( 'div', [ 'class' => 'bookshelfui-chapterpager' ] );
 
-		$previousTitle = Title::newFromId( $this->previousTitle['articleId'] );
-		if ( $previousTitle !== null ) {
+		$previousTitle = null;
+		if ( $this->previousTitle && isset( $this->previousTitle['articleTitle'] ) ) {
+			$previousTitle = Title::newFromText( $this->previousTitle['articleTitle'] );
+		}
+		if ( $previousTitle ) {
 			$class = '';
 			$href = $previousTitle->getFullURL();
 			$title = $this->previousTitle['text'];
@@ -152,8 +155,11 @@ class ChapterPager {
 			);
 		$html .= Html::closeElement( 'a' );
 
-		$nextTitle = Title::newFromId( $this->nextTitle['articleId'] );
-		if ( $this->nextTitle !== null ) {
+		$nextTitle = null;
+		if ( $this->nextTitle && isset( $this->nextTitle['articleTitle'] ) ) {
+			$nextTitle = Title::newFromText( $this->nextTitle['articleTitle'] );
+		}
+		if ( $nextTitle ) {
 			$class = '';
 			$href = $nextTitle->getFullURL();
 			$title = $this->nextTitle['text'];
