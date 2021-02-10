@@ -24,6 +24,7 @@
 	"bs-bookshelf-empty-selection": "Nisciuna selezione",
 	"apihelp-bs-bookshelf-bookstore-summary": "Elenghe tutte le capitole de 'nu certe libbre. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
 	"apihelp-bs-bookshelf-store-summary": "Elenghe tutte le libbre. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
+	"apihelp-query+bsbookshelf-summary": "Permette de 'nderrogà tutte le libbre.",
 	"bs-bookshelf-grouping-template-type-local_storage": "Libbre temboranèe",
 	"bs-bookshelf-grouping-template-type-ns_book": "Libbre generale",
 	"bs-bookshelf-grouping-template-type-user_book": "Libbre personale",
