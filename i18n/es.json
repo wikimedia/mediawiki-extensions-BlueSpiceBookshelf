@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alan Mena",
 			"DannyS712",
 			"Fitoschido",
 			"MarleneR329",
@@ -37,5 +38,6 @@
 	"bookshelf-summary": "Libros generales",
 	"bs-bookshelf-prof-defaultview": "Vista predeterminada",
 	"bs-bookshelf-prof-defaultview-grid": "Cuadrícula",
-	"bs-bookshelf-prof-defaultview-images": "Imágenes"
+	"bs-bookshelf-prof-defaultview-images": "Imágenes",
+	"bs-bookshelf-action-save-to-local-storage": "Guardando a la memoria local"
 }
