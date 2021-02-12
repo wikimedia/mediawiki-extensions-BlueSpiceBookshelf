@@ -5,6 +5,7 @@
 		]
 	},
 	"bs-bookshelf-extension-description": "Abbilite BlueSpice a gestì e esportà le collezziune gerarcheche de vôsce.",
+	"bs-bookshelf-tagerror-no-attribute-given": "Nisciune attrebbute date! Ause <strong>src</strong> pe configurà 'a tabbelle de le condenute.",
 	"bs-bookshelf-positive-integer-validation-not-approved": "Sò conzendite sulamende le indere positive.",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Pe piacere, ause <i>sinistre</i> o <i>destre</i>.",
 	"bs-bookshelf-specialpage-title": "Libbre",
