@@ -12,6 +12,12 @@
 				if ( !this.storageLocationRegistry.registry.hasOwnProperty( typeKey ) ) {
 					continue;
 				}
+				if (
+					!mw.config.get( 'wgUserId' ) &&
+					this.storageLocationRegistry.lookup( typeKey ).isTitleBased()
+				) {
+					continue;
+				}
 				aTypes.push({
 					name: this.storageLocationRegistry.lookup( typeKey ).getLabel(),
 					value: typeKey
