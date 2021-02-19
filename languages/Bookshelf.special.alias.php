@@ -12,5 +12,5 @@ $specialPageAliases['en'] = [
 $specialPageAliases['de'] = [
 	'BookshelfBookManager' => [ 'Bücherverwaltung' ],
 	'BookshelfBookEditor' => [ 'Bucheditor' ],
-	'Bookshelf' => [ 'Bookshelf' ]
+	'Bookshelf' => [ 'Bücherregal' ]
 ];
