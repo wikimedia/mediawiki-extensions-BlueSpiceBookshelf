@@ -210,7 +210,8 @@ class PageHierarchyProvider {
 			if ( count( $numberBits ) !== $level ) {
 				continue;
 			}
-			if ( $parentNumber && strpos( $number, $parentNumber ) !== 0 ) {
+			$lastBit = array_pop( $numberBits );
+			if ( $parentNumber && implode( '.', $numberBits ) !== $parentNumber ) {
 				continue;
 			}
 			$subChildren = $this->addChildrenRecursively( $source, $level + 1, $number, $params );
