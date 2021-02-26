@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\Hook\SkinTemplateOutputPageBeforeExec;
 
 use BlueSpice\Hook\SkinTemplateOutputPageBeforeExec;
+use BlueSpice\SkinData;
 
 class AddToBookTool extends SkinTemplateOutputPageBeforeExec {
 
@@ -16,12 +17,17 @@ class AddToBookTool extends SkinTemplateOutputPageBeforeExec {
 	}
 
 	protected function doProcess() {
-		$links['actions']['bookshelf-add-to-book'] = [
-			'text' => wfMessage( 'bs-bookshelf-add-to-book-label' )->text(),
-			'href' => '#',
-			'class' => false,
-			'id' => 'ca-bookshelf-add-to-book'
-		];
+		$this->mergeSkinDataArray(
+			SkinData::EDIT_MENU,
+			[
+				'bookshelf-add-to-book' => [
+					'text' => wfMessage( 'bs-bookshelf-add-to-book-label' )->text(),
+					'href' => '#',
+					'class' => false,
+					'id' => 'ca-bookshelf-add-to-book'
+				]
+			]
+		);
 
 		return true;
 	}
