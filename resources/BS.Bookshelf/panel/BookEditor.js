@@ -206,7 +206,11 @@ Ext.define('BS.Bookshelf.panel.BookEditor', {
 
 			//TODO: external serialization for types 'wikipage' and 'tag'
 			if( type === 'wikipage' ) {
-				var Title = mw.Title.newFromText( bookshelfData.page_title, bookshelfData.page_namespace );
+				var Title = mw.Title.makeTitle(
+					bookshelfData.page_namespace,
+					bookshelfData.page_title
+				);
+
 				serializedNode = '[[{0}|{1}]]'.format(
 					Title.getPrefixedText(),
 					node.get( 'articleDisplayTitle' )
