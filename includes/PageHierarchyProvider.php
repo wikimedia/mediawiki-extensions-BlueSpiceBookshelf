@@ -190,7 +190,7 @@ class PageHierarchyProvider {
 			$sorted[$child['number']] = $child;
 		}
 
-		ksort( $sorted );
+		ksort( $sorted, SORT_NATURAL );
 
 		return $this->addChildrenRecursively( $sorted, 1, false, $params );
 	}
