@@ -20,7 +20,9 @@
 	"bs-bookshelf-empty-selection": "Niets geselecteerd",
 	"bs-bookshelf-grouping-template-type-ns_book": "Algemene boeken",
 	"bs-bookshelf-grouping-template-type-user_book": "Eigen boeken",
+	"bs-bookshelf-book-grid-title": "Boeken",
 	"bookshelf": "Boekenplank",
+	"bs-bookshelf-prof-defaultview-images": "Afbeeldingen",
 	"right-bookshelf-viewspecialpage": "De speciale pagina [[Special:Bookshelf]] bekijken",
 	"action-bookshelf-viewspecialpage": "de speciale pagina [[Special:Bookshelf]] te bekijken"
 }
