@@ -34,6 +34,7 @@
 	"bs-bookshelf-add-to-book-added": "Text when the page was successfully added to the selected book.\n* $1 - Selected book, the page was added to.",
 	"bs-bookshelf-add-to-book-mod-bstag": "Text when the \"bookshelf\" tag of the page has been updated successfully and that the the page will be reloaded.",
 	"apihelp-bs-bookshelf-store-description": "{{doc-apihelp-description|bs-bookshelf-store}}",
+	"apihelp-bs-bookshelf-store-param-tempBooks": "{{doc-apihelp-param|bs-bookshelf-store|tempBooks}}\nDescribes the API parameter which provides temporary, clientside stored books to be reflected by the store",
 	"apihelp-bs-bookshelf-bookstore-description": "{{doc-apihelp-description|bs-bookshelf-bookstore}}",
 	"apihelp-bs-bookshelf-bookstore-param-node": "{{doc-apihelp-param|bs-bookshelf-bookstore|node}}\nDescribes the API parameter which speficies a node for which a subchapter list should be provided.",
 	"apihelp-bs-bookshelf-bookstore-param-book": "{{doc-apihelp-param|bs-bookshelf-bookstore|book}}\nDescribes the API parameter which specifies the book for which a chapter list should be provided.",
