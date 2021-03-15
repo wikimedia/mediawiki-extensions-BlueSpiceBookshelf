@@ -30,6 +30,7 @@
 	"bs-bookshelf-add-to-book-added": "A página foi adicionada ao livro '$1'.",
 	"bs-bookshelf-add-to-book-mod-bstag": "A etiqueta \"bookshelf\" da página foi alterada. A página será recarregada.",
 	"apihelp-bs-bookshelf-store-description": "Lista todos os livros. Permite classificação, filtragem e paginação. Implementa os parâmetros do ExtJS Store.",
+	"apihelp-bs-bookshelf-store-param-tempBooks": "Lista de livros na loja local do cliente que devem ser incluídos na resposta da loja",
 	"apihelp-bs-bookshelf-bookstore-description": "Lista todos os capítulos de um determinado livro. Permite classificação, filtragem e paginação. Implementa os parâmetros do ExtJS Store.",
 	"apihelp-bs-bookshelf-bookstore-param-node": "Especifica um nó para o qual uma lista de subcapítulos deve ser fornecida.",
 	"apihelp-bs-bookshelf-bookstore-param-book": "Especifica o livro para o qual uma lista de capítulos deve ser fornecida.",
