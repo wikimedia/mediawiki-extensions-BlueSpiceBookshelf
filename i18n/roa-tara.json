@@ -35,6 +35,7 @@
 	"bs-bookshelf-action-export-book": "Esporte 'u libbre",
 	"bs-bookshelf-edit-title": "Stoche a cange $1",
 	"bs-bookshelf-error-invalid-type": "'U tipe de libbre specificate non g'è valide",
+	"bs-bookshelf-editor-no-title-provided": "Nisciune titole valide date pu libbre",
 	"bs-bookshelf-book-grid-title": "Libbre",
 	"bookshelf": "Scaffale",
 	"bookshelf-summary": "Libbre generale",
@@ -43,5 +44,6 @@
 	"bs-bookshelf-prof-defaultview-grid": "Griglie",
 	"bs-bookshelf-prof-defaultview-images": "Immaggine",
 	"right-bookshelf-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "tràse jndr'à pàgena speciale [[Special:Bookshelf]]"
+	"action-bookshelf-viewspecialpage": "tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
+	"bs-bookshelf-action-save-to-local-storage": "Stoche a reggìstre sus a l'archivije locale"
 }
