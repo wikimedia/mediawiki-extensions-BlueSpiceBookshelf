@@ -29,6 +29,7 @@
 	"bs-bookshelf-add-to-book-added": "Siden har blitt lagt til boka «$1».",
 	"bs-bookshelf-add-to-book-mod-bstag": "«bookshelf»-taggen på siden har blitt endret. Siden vil lastes på nytt.",
 	"apihelp-bs-bookshelf-store-description": "Lister opp alle bøker. Tillater sortering, filtrering og sideinndeling. Implementerer ExtJS Store-parametre.",
+	"apihelp-bs-bookshelf-store-param-tempBooks": "Liste over bøker lagret lokalt hos klienten som bør inkluderes i lagringsresponsen",
 	"apihelp-bs-bookshelf-bookstore-description": "Lister opp alle kapitler for ei gitt bok. Tillater sortering, filtrering og sideinndeling. Implementerer ExtJS Store-parametre.",
 	"apihelp-bs-bookshelf-bookstore-param-node": "Angir en node som en underkapittelliste bør angis for.",
 	"apihelp-bs-bookshelf-bookstore-param-book": "Angir boka kapittellista skal angis for.",
