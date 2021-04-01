@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mediawikitranslator",
 			"Pyscowicz"
 		]
 	},
@@ -14,5 +15,7 @@
 	"bs-bookshelf-add-to-book-label-book": "Kirja",
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
 	"bs-bookshelf-grouping-template-type-user_book": "Omat kirjat",
-	"bookshelf": "Kirjahylly"
+	"bs-bookshelf-book-grid-title": "Kirjat",
+	"bookshelf": "Kirjahylly",
+	"bs-bookshelf-prof-defaultview-images": "Kuvat"
 }

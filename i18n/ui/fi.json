@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mediawikitranslator",
 			"Pyscowicz"
 		]
 	},
@@ -10,6 +11,8 @@
 	"bs-bookshelfui-new-book-text": "Kirjan otsikko",
 	"bs-bookshelfui-delete-book-title": "Poista kirja",
 	"bs-bookshelfui-bookui-savingprogress-title": "Tallennetaan kirjaa",
+	"bs-bookshelfui-manager-deletingprogress-title": "Poistetaan...",
+	"bs-bookshelfui-manager-deletionsuccess-title": "Onnistuneesti poistettu!",
 	"bs-bookshelfui-dlg-choosewikipage-title": "Wikisivu",
 	"bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel": "Wikisivu",
 	"bs-bookshelfui-ctxmnu-tag-edit": "Muokkaa asetuksia",
