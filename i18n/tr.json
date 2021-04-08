@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"Joseph",
 			"MuratTheTurkish",
 			"ToprakM"
 		]
@@ -65,5 +66,6 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent": "Kitap bölümü sayfasını içerikten önce göster",
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Sayfanın üst kısmına bir bölüm sayfalayıcı ekleyin.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "İçerikten sonra kitap bölümü sayfalayıcı göster",
-	"bs-bookshelf-pref-chapterpageraftercontent-help": "Sayfanın altına bir bölüm sayfalama cihazı ekleyin."
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Sayfanın altına bir bölüm sayfalama cihazı ekleyin.",
+	"apihelp-bs-bookshelf-store-param-tempBooks": "İstemcinin yerel deposunda bulunup depo cevabına eklenmesi gereken kitapları listele"
 }

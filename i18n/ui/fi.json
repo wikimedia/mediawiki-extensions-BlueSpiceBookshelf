@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mediawikitranslator",
 			"Pyscowicz"
 		]
 	},
@@ -35,5 +36,7 @@
 	"bs-bookshelfui-bookmetatag-author2": "Tekijä 2",
 	"bs-bookshelfui-bookmetatag-version": "Versio",
 	"bookshelf": "Kirjahylly",
-	"bs-bookshelfui-prof-defaultview-images": "Kuvat"
+	"bs-bookshelfui-prof-defaultview-images": "Kuvat",
+	"bs-bookshelfui-manager-deletingprogress-title": "Poistetaan...",
+	"bs-bookshelfui-manager-deletionsuccess-title": "Onnistuneesti poistettu!"
 }

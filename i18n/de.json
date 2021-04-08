@@ -63,5 +63,9 @@
 	"bs-bookshelf-prof-defaultview-images": "Bilder",
 	"right-bookshelf-viewspecialpage": "Zugriff auf die Spezialseite [[Special:Bookshelf|Bücherregal]]",
 	"action-bookshelf-viewspecialpage": "die Spezialseite [[Special:Bookshelf|Bücherregal]] aufzurufen",
-	"bs-bookshelf-action-save-to-local-storage": "Lokal speichern"
+	"bs-bookshelf-action-save-to-local-storage": "Lokal speichern",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Eine Blätterfunktion für Bücher vor dem Inhalt anzeigen",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Fügt eine Kapitel-Blätterfunktion am Anfang der Seite ein",
+	"bs-bookshelf-pref-chapterpageraftercontent": "Eine Blätterfunktion für Bücher nach dem Inhalt anzeigen",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Fügt eine Kapitel-Blätterfunktion am Ende der Seite ein"
 }

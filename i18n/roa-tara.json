@@ -40,5 +40,10 @@
 	"bs-bookshelf-prof-defaultview-grid": "Griglie",
 	"bs-bookshelf-prof-defaultview-images": "Immaggine",
 	"right-bookshelf-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "tràse jndr'à pàgena speciale [[Special:Bookshelf]]"
+	"action-bookshelf-viewspecialpage": "tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
+	"bs-bookshelf-tagerror-no-attribute-given": "Nisciune attrebbute date! Ause <strong>src</strong> pe configurà 'a tabbelle de le condenute.",
+	"bs-bookshelf-pref-TitleDisplayText": "Ause 'u titole mostrate da 'a fonde d'u libbre sus a vôsce",
+	"apihelp-query+bsbookshelf-summary": "Permette de 'nderrogà tutte le libbre.",
+	"bs-bookshelf-editor-no-title-provided": "Nisciune titole valide date pu libbre",
+	"bs-bookshelf-action-save-to-local-storage": "Stoche a reggìstre sus a l'archivije locale"
 }

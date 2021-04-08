@@ -23,5 +23,10 @@
 	"bookshelf": "Scaffale",
 	"bookshelf-summary": "Libbre generale",
 	"right-bookshelf-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "tràse jndr'à pàgena speciale [[Special:Bookshelf]]"
+	"action-bookshelf-viewspecialpage": "tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
+	"bs-bookshelfui-dlg-choosewikipage-title": "UicchiPàgene",
+	"bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel": "UicchiPàgene",
+	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "'Ndruche 'u titole",
+	"bs-bookshelfui-dlg-copy-title": "Copie \"$1\"",
+	"bs-bookshelfui-dlg-copy-name-addition": "(copie)"
 }

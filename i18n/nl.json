@@ -24,5 +24,7 @@
 	"bs-bookshelf-grouping-template-type-user_book": "Eigen boeken",
 	"bookshelf": "Boekenplank",
 	"right-bookshelf-viewspecialpage": "De speciale pagina [[Special:Bookshelf]] bekijken",
-	"action-bookshelf-viewspecialpage": "de speciale pagina [[Special:Bookshelf]] te bekijken"
+	"action-bookshelf-viewspecialpage": "de speciale pagina [[Special:Bookshelf]] te bekijken",
+	"bs-bookshelf-book-grid-title": "Boeken",
+	"bs-bookshelf-prof-defaultview-images": "Afbeeldingen"
 }

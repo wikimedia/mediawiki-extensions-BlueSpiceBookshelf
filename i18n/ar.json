@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"ديفيد"
+			"ديفيد",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"bs-bookshelf-extension-description": "يمكن BlueSpice لإدارة وتصدير مجموعات المقالات هرميا.",
@@ -44,5 +45,6 @@
 	"bookshelf": "رف الكتب",
 	"bookshelf-summary": "الكتب العامة",
 	"right-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]"
+	"action-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]",
+	"bs-bookshelf-prof-defaultview": "العرض الافتراضي"
 }
