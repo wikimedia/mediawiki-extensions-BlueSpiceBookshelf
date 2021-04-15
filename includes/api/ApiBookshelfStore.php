@@ -140,12 +140,11 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 
 		$dbr = $this->getDB();
 		$res = $dbr->select(
-			[ 'page', 'page_props' ],
+			[ 'page' ],
 			'*',
 			[
-				'pp_page = page_id',
 				'page_namespace' => NS_USER,
-				'pp_propname' => 'bs-bookshelf-meta',
+				'page_content_model' => 'book',
 				'page_title ' . $dbr->buildLike(
 					$sUserBooksPrefix,
 					$dbr->anyString()
