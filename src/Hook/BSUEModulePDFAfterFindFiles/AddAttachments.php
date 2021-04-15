@@ -90,9 +90,7 @@ class AddAttachments {
 				);
 				$sAbsoluteFileSystemPath = $oLocalFile->getPath();
 			} else {
-				$sRelativeHref = substr( $sHref, $vUploadPathIndex );
-				$sHrefFilename = basename( $sRelativeHref );
-				$sAbsoluteFileSystemPath = $seder->getFileSystemPath( $sRelativeHref );
+				continue;
 			}
 
 			\Hooks::run(
