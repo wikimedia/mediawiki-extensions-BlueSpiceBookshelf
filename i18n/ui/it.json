@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Beta16",
 			"Dansita",
 			"Gianfranco",
@@ -45,6 +46,7 @@
 	"bs-bookshelfui-confirm-delete-title": "Rimuovi capitolo",
 	"bs-bookshelfui-confirm-delete-text": "Vuoi davvero rimuovere il capitolo selezionato? Proseguendo verranno rimossi anche i sotto capitoli.",
 	"bs-bookshelfui-nothingtoexport-text": "La tua scelta è vuota",
+	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Un libro|$1 libri}})",
 	"bs-bookshelfui-book-type": "Tipologia di libro",
 	"bs-bookshelfui-empty-selection": "Nessuna selezione",
 	"bs-bookshelfui-dlg-choosecategory-label": "Categoria",

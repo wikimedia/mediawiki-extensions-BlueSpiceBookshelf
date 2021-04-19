@@ -40,6 +40,7 @@
 	"apihelp-query+bsbookshelf-summary": "يسمح بالاستعلام في جميع الكتب.",
 	"bs-bookshelf-grouping-template-type-ns_book": "الكتب العامة",
 	"bs-bookshelf-grouping-template-type-user_book": "الكتب الخاصة",
+	"bs-bookshelf-book-grid-title": "الكتب",
 	"bookshelf": "رف الكتب",
 	"bookshelf-summary": "الكتب العامة",
 	"bs-bookshelf-prof-defaultview": "العرض الافتراضي",
