@@ -1,23 +1,28 @@
 Ext.define( 'BS.Bookshelf.dialog.AddToBook', {
-	extend: 'BS.Window',
+	extend: 'MWExt.Dialog',
 	requires: [ 'BS.Bookshelf.form.field.BookCombo', 'BS.action.APICopyPage' ],
 	closeAction: 'destroy',
 	title: mw.message( 'bs-bookshelf-add-to-book-label' ).plain(),
+	height: 200,
 
 	afterInitComponent: function() {
 		this.cbBooks = new BS.Bookshelf.form.field.BookCombo({
 			fieldLabel: mw.message( 'bs-bookshelf-add-to-book-label-book' ).plain(),
-			forceSelection: true
+			forceSelection: true,
+			maxHeight: 24,
 		});
 
 		this.tfAlias = new Ext.form.field.Text({
-			fieldLabel: mw.message( 'bs-bookshelf-add-to-book-label-alias' ).plain()
+			fieldLabel: mw.message( 'bs-bookshelf-add-to-book-label-alias' ).plain(),
+			maxHeight: 24,
+			margin: '10 0'
 		});
 
 		this.chbModifyBookshelfTag = new Ext.form.field.Checkbox({
 			//fieldLabel: '&nbsp;',
 			boxLabel: mw.message( 'bs-bookshelf-add-to-book-label-mod-bstag' ).plain(),
-			hidden: true
+			hidden: true,
+			margin: '15 0'
 		});
 
 		this.cbBooks.on( 'change', function( sender, value ) {
@@ -42,12 +47,17 @@ Ext.define( 'BS.Bookshelf.dialog.AddToBook', {
 		this.callParent( arguments );
 	},
 
-	setData: function( currentPageName ) {
-		var alias = currentPageName;
+	getData: function () {
+		return {
+			'prefixedText': this.cbBooks.getValue(),
+			'displayText': this.cbBooks.getRawValue()
+		};
+	},
+
+	setData: function( obj ) {
+		var alias = obj.pagename;
 		alias = alias.split('/').reverse()[0]; //basename()
 		this.tfAlias.setValue( alias.replace( /_/g, ' ' ) );
-
-		this.callParent( arguments );
 	},
 
 	onBtnOKClick: function() {
@@ -67,22 +77,21 @@ Ext.define( 'BS.Bookshelf.dialog.AddToBook', {
 	doAddToBook: function() {
 		this.setLoading( true );
 		var me = this,
-			selectedBookPrefixedText =  this.cbBooks.getValue(),
-			selectedBookDisplayText =  this.cbBooks.getRawValue(),
+			selectedBook =  this.getData(),
 			alias = this.tfAlias.getValue(),
 			modifyBookshelfTag = this.chbModifyBookshelfTag.getValue(),
 			messageTitle = mw.message( 'bs-bookshelf-add-to-book-label' ).plain(),
-			record = this.cbBooks.getStore().findRecord( 'book_prefixedtext', selectedBookPrefixedText ),
+			record = this.cbBooks.getStore().findRecord( 'book_prefixedtext', selectedBook.prefixedText ),
 			storage = bs.bookshelf.storageLocationRegistry.lookup( record.get( 'book_type' ) );
 
 		var wikiText = "\n* [[{0}|{1}]]".format(
-			this.currentData,
+			selectedBook.prefixedText,
 			alias
 		);
 
 		storage.appendText( record, wikiText, modifyBookshelfTag ).done( function() {
 			mw.notify(
-				mw.message( 'bs-bookshelf-add-to-book-added', selectedBookDisplayText ).parse(),
+				mw.message( 'bs-bookshelf-add-to-book-added', selectedBook.displayText ).parse(),
 				{ title: messageTitle }
 			);
 			me.afterApiCallSuccess();
