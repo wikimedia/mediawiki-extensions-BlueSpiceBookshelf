@@ -12,6 +12,7 @@
 	"bs-bookshelf-tagerror-article-title-not-valid": "No existe el artículo de origen proporcionado («$1»).",
 	"bs-bookshelf-tagerror-article-content-not-valid": "El artículo de origen proporcionado («$1») contiene datos no válidos.",
 	"bs-bookshelf-positive-integer-validation-not-approved": "Se permiten solo enteros positivos.",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Por favor, utiliza <i>left</i> or <i>right</i>.",
 	"bs-bookshelf-specialpage-title": "Libros",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Biblioteca",
 	"bs-bookshelf-pref-TitleDisplayText": "Usar el titulo de visualización de la fuente del libro en el articulo",
