@@ -22,15 +22,15 @@
 					"className": "\\BlueSpice\\Bookshelf\\Extension",
 					"extPath": "/BlueSpiceBookshelf",
 					"package": "BlueSpice Pro",
-					"status": "stable",
-					"configDefinitions": {
-						"BookShelfShowChapterNavigationPagerAfterContent": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\ChapterPagerAfterContent::getInstance",
-						"BookShelfShowChapterNavigationPagerBeforeContent": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\ChapterPagerBeforeContent::getInstance",
-						"BookshelfSupressBookNS": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\SupressBookNS::getInstance",
-						"BookshelfTitleDisplayText": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\TitleDisplayText::getInstance",
-						"BookshelfPrependPageTOCNumbers": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\PrependPageTOCNumbers::getInstance"
-					}
+					"status": "stable"
 				}
+			},
+			"ConfigDefinitionRegistry": {
+				"BookShelfShowChapterNavigationPagerAfterContent": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\ChapterPagerAfterContent::getInstance",
+				"BookShelfShowChapterNavigationPagerBeforeContent": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\ChapterPagerBeforeContent::getInstance",
+				"BookshelfSupressBookNS": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\SupressBookNS::getInstance",
+				"BookshelfTitleDisplayText": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\TitleDisplayText::getInstance",
+				"BookshelfPrependPageTOCNumbers": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\PrependPageTOCNumbers::getInstance"
 			},
 			"SettingPathRegistry": {
 				"book": "bs-bookshelf-setting-path-feature"
