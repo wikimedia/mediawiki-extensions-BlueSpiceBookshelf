@@ -262,7 +262,7 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 
 		// This hook is DEPRECATED! Use hooks from base class instead!
 		\Hooks::run( 'BSBookshelfManagerGetBookDataRow', [
-			new Title(),
+			Title::newFromText( 'invalid', -1 ),
 			$book
 		] );
 
