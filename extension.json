@@ -136,10 +136,11 @@
 		"ApiQueryBookshelf": "includes/api/ApiQueryBookshelf.php",
 		"ApiBookshelfStore": "includes/api/ApiBookshelfStore.php",
 		"ApiBookshelfBookStore": "includes/api/ApiBookshelfBookStore.php",
-		"ConvertContentModel": "maintenance/convertContentModel.php",
+		"ConvertContentModel": "maintenance/ConvertContentModel.php",
 		"ApiBookshelfManage": "includes/api/ApiBookshelfManage.php",
 		"ApiBookshelfPageCollectionStore": "includes/api/ApiBookshelfPageCollectionStore.php",
-		"ApiBookshelfMassAddPageStore": "includes/api/ApiBookshelfMassAddPageStore.php"
+		"ApiBookshelfMassAddPageStore": "includes/api/ApiBookshelfMassAddPageStore.php",
+		"UserBookContentLanguage": "maintenance/UserBookContentLanguage.php"
 	},
 	"ContentHandlers": {
 		"book": "\\BlueSpice\\Bookshelf\\ContentHandler\\BookContentHandler"

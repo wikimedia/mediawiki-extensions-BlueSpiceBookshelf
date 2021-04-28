@@ -39,13 +39,10 @@ class Extension extends \BlueSpice\Extension {
 	 * extension.json callback
 	 */
 	public static function onRegistration() {
-		//phpcs:disable
-		global $bsgSystemNamespaces;
-		//phpcs:enable
-
-		$bsgSystemNamespaces[1504] = 'NS_BOOK';
-		$bsgSystemNamespaces[1505] = 'NS_BOOK_TALK';
-
+		$GLOBALS['bsgSystemNamespaces'][1504] = 'NS_BOOK';
+		$GLOBALS['bsgSystemNamespaces'][1505] = 'NS_BOOK_TALK';
+		// force enable user namespace subpages, cause we need to save books in these
+		$GLOBALS['wgNamespacesWithSubpages'][NS_USER] = true;
 		static::checkLegacy();
 	}
 

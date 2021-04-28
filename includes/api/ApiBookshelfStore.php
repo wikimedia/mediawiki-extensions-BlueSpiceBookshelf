@@ -267,7 +267,7 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 		$this->getServices()->getHookContainer()->run(
 			'BSBookshelfManagerGetBookDataRow',
 			[
-				new Title(),
+				Title::newFromText( 'invalid', -1 ),
 				$book
 			],
 			[ 'deprecatedVersion' => '3.1' ]

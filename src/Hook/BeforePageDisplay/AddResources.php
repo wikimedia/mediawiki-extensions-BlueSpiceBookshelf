@@ -2,8 +2,6 @@
 
 namespace BlueSpice\Bookshelf\Hook\BeforePageDisplay;
 
-use BlueSpice\Services;
-
 class AddResources extends \BlueSpice\Hook\BeforePageDisplay {
 
 	protected function doProcess() {
@@ -14,7 +12,17 @@ class AddResources extends \BlueSpice\Hook\BeforePageDisplay {
 		$this->out->addModules( 'ext.bluespice.bookshelf.navigationTab' );
 		$this->out->addModuleStyles( 'ext.bluespice.bookshelf.pager.navigation.styles' );
 
-		$config = Services::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
+		if ( !$this->skin->getUser()->isAnon() ) {
+			$location = $this->skin->msg(
+				'bs-bookshelf-personal-books-page-prefix',
+				$this->skin->getUser()->getName()
+			);
+			$this->out->addJsConfigVars(
+				'bsgBooskhelfUserBookLocation',
+				$location->inContentLanguage()->parse()
+			);
+		}
+		$config = $this->getConfig();
 		$pagerBeforeContent = $config->get( 'BookShelfShowChapterNavigationPagerBeforeContent' );
 		$pagerAfterContent = $config->get( 'BookShelfShowChapterNavigationPagerAfterContent' );
 
