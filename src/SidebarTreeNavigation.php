@@ -2,6 +2,8 @@
 
 namespace BlueSpice\Bookshelf;
 
+use HtmlArmor;
+use MediaWiki\MediaWikiServices;
 use SkinTemplate;
 use PageHierarchyProvider;
 use BSTreeNode;
@@ -222,7 +224,11 @@ class SidebarTreeNavigation extends \BSSkinTreeNavigation {
 			$attribs['class'] = 'active';
 		}
 
-		return \Linker::link( $target, $num . $title, $attribs );
+		return MediaWikiServices::getInstance()->getLinkRenderer()->makeLink(
+			$target,
+			new HtmlArmor( $num . $title ),
+			$attribs
+		);
 	}
 
 	/**
