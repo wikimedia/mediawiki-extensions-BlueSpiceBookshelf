@@ -9,7 +9,6 @@ use Config;
 use Exception;
 use FormatJson;
 use Html;
-use Linker;
 use MediaWiki\MediaWikiServices;
 use PageHierarchyProvider;
 use Parser;
@@ -259,8 +258,11 @@ class TagProcessor {
 				continue;
 			}
 
+			$link = MediaWikiServices::getInstance()->getLinkRenderer()->makeLink(
+				$oSourceTitle
+			);
 			$aBooks[] = [
-				'link' => Linker::link( $oSourceTitle ),
+				'link' => $link,
 				'meta' => $aMeta
 			];
 		}
