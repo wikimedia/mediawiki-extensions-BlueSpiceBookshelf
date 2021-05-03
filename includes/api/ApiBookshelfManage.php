@@ -69,7 +69,7 @@ class ApiBookshelfManage extends BSApiTasksBase {
 			$oResult->message =
 				wfMessage( 'bs-bookshelfui-bookmanager-deletion-error-unkown' )->text();
 			$oResult->errors['saving'] = $error;
-			$dbw = wfGetDB( DB_MASTER );
+			$dbw = wfGetDB( DB_PRIMARY );
 			wfDebugLog(
 				'BS::Bookshelf',
 				'SpecialBookshelfBookManager::ajaxDeleteBook: ' . $dbw->lastQuery()

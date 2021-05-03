@@ -49,7 +49,7 @@ class AddBookshelfUI extends ChameleonSkinTemplateOutputPageBeforeExec {
 			[
 				'bs-bookshelf' => [
 					'position' => 30,
-					'callback' => function ( $sktemplate ) {
+					'callback' => static function ( $sktemplate ) {
 						return new BookNav( $sktemplate );
 					}
 				]

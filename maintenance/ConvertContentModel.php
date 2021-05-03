@@ -112,7 +112,7 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 		);
 		$res = $this->convert(
 			$pages,
-			MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_MASTER )
+			MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY )
 		);
 		$this->output( "OK\n" );
 		return $res;
