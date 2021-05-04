@@ -38,6 +38,7 @@
 	"apihelp-bs-bookshelf-bookstore-summary": "يسرد جميع الفصول لكتاب معين، يسمح بالفرز والترشيح وترقيم الصفحات، تنفذ المعلمات مخزن ExtJS.",
 	"apihelp-bs-bookshelf-store-summary": "يسرد جميع الكتب، يسمح بالفرز والترشيح وترقيم الصفحات، تنفذ المعلمات مخزن ExtJS.",
 	"apihelp-query+bsbookshelf-summary": "يسمح بالاستعلام في جميع الكتب.",
+	"bs-bookshelf-grouping-template-type-local_storage": "كتب مؤقتة",
 	"bs-bookshelf-grouping-template-type-ns_book": "الكتب العامة",
 	"bs-bookshelf-grouping-template-type-user_book": "الكتب الخاصة",
 	"bs-bookshelf-book-grid-title": "الكتب",
