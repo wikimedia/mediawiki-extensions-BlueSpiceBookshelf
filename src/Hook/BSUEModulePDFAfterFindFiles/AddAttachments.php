@@ -8,7 +8,6 @@ use DOMXPath;
 use FatalError;
 use MediaWiki\MediaWikiServices;
 use MWException;
-use RepoGroup;
 use Title;
 
 class AddAttachments {
@@ -43,6 +42,9 @@ class AddAttachments {
 		$oFileAnchorElements = $DOMXPath->query(
 			"//a[contains(@class,'internal') and not(contains(@class, 'image'))]"
 		);
+
+		$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
+
 		foreach ( $oFileAnchorElements as $oFileAnchorElement ) {
 			if ( $oFileAnchorElement instanceof DOMElement === false ) {
 				continue;
@@ -63,7 +65,7 @@ class AddAttachments {
 				$oTitle = Title::makeTitle( NS_FILE, $sFileTitle );
 			}
 			if ( $oTitle->exists() ) {
-				$oFile = RepoGroup::singleton()->findFile( $oTitle );
+				$oFile = $repoGroup()->findFile( $oTitle );
 				$oBackend = $oFile->getRepo()->getBackend();
 				$oLocalFile = $oBackend->getLocalReference(
 					[ 'src' => $oFile->getPath() ]
