@@ -130,5 +130,5 @@ class UserBookContentLanguage extends LoggedUpdateMaintenance {
 
 }
 
-$maintClass = "UserBookContentLanguage";
+$maintClass = UserBookContentLanguage::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
