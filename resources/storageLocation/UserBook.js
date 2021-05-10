@@ -17,7 +17,19 @@
 
 	bs.bookshelf.storageLocation.UserBook.prototype.getEditUrlFromTitle = function( bookTitle, params ) {
 		params = params || {};
-		bookTitle = mw.config.get( 'bsgBooskhelfUserBookLocation', '' ) + bookTitle;
+		if ( !String.prototype.startsWith ) {
+			// Internet Explorer
+			Object.defineProperty( String.prototype, 'startsWith', {
+				value: function( search, rawPos ) {
+					var pos = rawPos > 0 ? rawPos|0 : 0;
+					return this.substring( pos, pos + search.length ) === search;
+				}
+			} );
+		}
+
+		if ( !bookTitle.startsWith( mw.config.get( 'bsgBooskhelfUserBookLocation', '' ) ) ) {
+			bookTitle = mw.config.get( 'bsgBooskhelfUserBookLocation', '' ) + bookTitle;
+		}
 		var title = new mw.Title( bookTitle, bs.ns.NS_USER );
 
 		return title.getUrl( $.extend( {

@@ -216,7 +216,7 @@ Ext.define( 'BS.Bookshelf.panel.BookManager', {
 				},
 				renderer: function( value, metaData, record, rowIndex, colIndex, store ) {
 					var storageLocation = bs.bookshelf.storageLocationRegistry.lookup( record.get( 'book_type' ) ),
-						url = storageLocation ? storageLocation.getEditUrlFromTitle( record.get( 'page_title' ), {
+						url = storageLocation ? storageLocation.getEditUrlFromTitle( record.get( 'book_prefixedtext' ), {
 							returnto: new mw.Title( 'BookshelfBookManager', bs.ns.NS_SPECIAL ).getPrefixedDb()
 						} ) : '#';
 
