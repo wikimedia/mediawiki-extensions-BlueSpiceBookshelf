@@ -19,7 +19,8 @@ class AddResources extends \BlueSpice\Hook\BeforePageDisplay {
 			);
 			$this->out->addJsConfigVars(
 				'bsgBooskhelfUserBookLocation',
-				$location->inContentLanguage()->parse()
+				$this->skin->getUser()->getUserPage()->getNsText()
+					. ':' . $location->inContentLanguage()->parse()
 			);
 		}
 		$config = $this->getConfig();
