@@ -27,8 +27,8 @@
 			} );
 		}
 
-		if ( !bookTitle.startsWith( mw.config.get( 'bsgBooskhelfUserBookLocation', '' ) ) ) {
-			bookTitle = mw.config.get( 'bsgBooskhelfUserBookLocation', '' ) + bookTitle;
+		if ( !bookTitle.startsWith( mw.config.get( 'bsgBookshelfUserBookLocation', '' ) ) ) {
+			bookTitle = mw.config.get( 'bsgBookshelfUserBookLocation', '' ) + bookTitle;
 		}
 		var title = new mw.Title( bookTitle, bs.ns.NS_USER );
 
