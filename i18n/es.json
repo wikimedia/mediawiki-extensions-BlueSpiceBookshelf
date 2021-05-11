@@ -41,5 +41,8 @@
 	"bs-bookshelf-prof-defaultview": "Vista predeterminada",
 	"bs-bookshelf-prof-defaultview-grid": "Cuadrícula",
 	"bs-bookshelf-prof-defaultview-images": "Imágenes",
-	"bs-bookshelf-action-save-to-local-storage": "Guardando a la memoria local"
+	"bs-bookshelf-action-save-to-local-storage": "Guardando a la memoria local",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Por favor, utiliza <i>left</i> or <i>right</i>.",
+	"bs-bookshelf-action-editbooksource": "Editar código del libro",
+	"bs-bookshelf-action-editbooksource-create": "Crear código del libro"
 }
