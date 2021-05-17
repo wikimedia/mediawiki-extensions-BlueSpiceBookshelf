@@ -7,7 +7,7 @@
 	},
 	"bs-bookshelfui-extension-description": "Enables BlueSpice to manage hierarchical collections of wikipages.",
 	"bookshelfbookui": "Book Editor",
-	"bookshelfbookmanager": "Book Manager",
+	"bookshelfbookmanager": "Book manager",
 	"bs-bookshelfui-editor-no-title-provided": "No valid book title provided",
 	"bs-bookshelfui-editor-title": "Book editor: $1",
 	"bs-bookshelfui-widget-editor-link-text": "Edit this book",
