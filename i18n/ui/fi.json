@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Joquliina",
 			"Mediawikitranslator",
 			"Pyscowicz"
 		]
@@ -36,6 +37,7 @@
 	"bs-bookshelfui-bookmetatag-author2": "Tekijä 2",
 	"bs-bookshelfui-bookmetatag-version": "Versio",
 	"bookshelf": "Kirjahylly",
+	"bs-bookshelfui-prof-defaultview-grid": "Ruudukko",
 	"bs-bookshelfui-prof-defaultview-images": "Kuvat",
 	"bs-bookshelfui-chapterpager-previous": "Edellinen",
 	"bs-bookshelfui-chapterpager-next": "Seuraava"
