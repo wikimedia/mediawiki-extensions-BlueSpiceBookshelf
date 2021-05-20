@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Joquliina",
 			"Mediawikitranslator",
 			"Pyscowicz"
 		]
@@ -14,8 +15,10 @@
 	"bs-bookshelf-add-to-book-label": "Lisää kirja",
 	"bs-bookshelf-add-to-book-label-book": "Kirja",
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
+	"bs-bookshelf-setting-path-feature": "Kirja",
 	"bs-bookshelf-grouping-template-type-user_book": "Omat kirjat",
 	"bs-bookshelf-book-grid-title": "Kirjat",
 	"bookshelf": "Kirjahylly",
+	"bs-bookshelf-prof-defaultview-grid": "Ruudukko",
 	"bs-bookshelf-prof-defaultview-images": "Kuvat"
 }
