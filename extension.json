@@ -140,7 +140,8 @@
 		"ApiBookshelfManage": "includes/api/ApiBookshelfManage.php",
 		"ApiBookshelfPageCollectionStore": "includes/api/ApiBookshelfPageCollectionStore.php",
 		"ApiBookshelfMassAddPageStore": "includes/api/ApiBookshelfMassAddPageStore.php",
-		"UserBookContentLanguage": "maintenance/UserBookContentLanguage.php"
+		"UserBookContentLanguage": "maintenance/UserBookContentLanguage.php",
+		"FixUserSubpageContentModel": "maintenance/FixUserSubpageContentModel.php"
 	},
 	"ContentHandlers": {
 		"book": "\\BlueSpice\\Bookshelf\\ContentHandler\\BookContentHandler"
