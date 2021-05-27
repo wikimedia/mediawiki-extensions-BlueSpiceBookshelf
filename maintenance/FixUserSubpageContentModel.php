@@ -4,7 +4,7 @@ use MediaWiki\MediaWikiServices;
 
 require_once dirname( dirname( dirname( __DIR__ ) ) ) . '/maintenance/Maintenance.php';
 
-class ConvertContentModel extends LoggedUpdateMaintenance {
+class FixUserSubpageContentModel extends LoggedUpdateMaintenance {
 
 	/**
 	 * @param IDatabase $db
@@ -13,25 +13,22 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 	private function getPages( $db ) {
 		$res = $db->select(
 			'page',
-			[ 'page_id', 'page_namespace', 'page_title', 'page_content_model' ],
-			[ 'page_namespace' => [ NS_BOOK, NS_USER ] ],
+			'*',
+			[
+				'page_namespace' => NS_USER,
+				'page_content_model' => 'book'
+			],
 			__METHOD__
 		);
 
 		$pages = [];
 		foreach ( $res as $row ) {
-			if ( $row->page_content_model === 'book' ) {
-				// Nothing to do
-				continue;
-			}
 			$title = Title::newFromRow( $row );
 			if ( !$title ) {
 				continue;
 			}
-			if ( $this->isBook( $title ) ) {
-				$pages[(int)$row->page_id] = $title;
-			}
-			if ( $this->isUserBook( $title ) ) {
+			if ( !$this->isUserBook( $title ) ) {
+				$this->output( "\n{$title->getPrefixedDBkey()}" );
 				$pages[(int)$row->page_id] = $title;
 			}
 		}
@@ -44,7 +41,7 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 	 * @param IDatabase $db
 	 * @return bool
 	 */
-	private function convert( $pages, IDatabase $db ) {
+	private function convert( $pages, $db ) {
 		if ( empty( $pages ) ) {
 			return true;
 		}
@@ -52,7 +49,7 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 		$res = $db->update(
 			'page',
 			[
-				'page_content_model' => 'book'
+				'page_content_model' => 'wikitext'
 			],
 			[
 				'page_id' => array_keys( $pages )
@@ -65,14 +62,6 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 			}
 		}
 		return $res;
-	}
-
-	/**
-	 * @param Title $title
-	 * @return bool
-	 */
-	private function isBook( $title ) {
-		return (int)$title->getNamespace() === NS_BOOK;
 	}
 
 	/**
@@ -107,14 +96,10 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 	 */
 	protected function doDBUpdates() {
 		$this->output( "...Update '" . $this->getUpdateKey() . "': " );
-		$pages = $this->getPages(
-			MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA )
-		);
-		$res = $this->convert(
-			$pages,
-			MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY )
-		);
-		$this->output( "OK\n" );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$pages = $this->getPages( $dbw );
+		$res = $this->convert( $pages, $dbw );
+		$this->output( "\nOK\n" );
 		return $res;
 	}
 
@@ -122,9 +107,9 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 	 * @return string
 	 */
 	protected function getUpdateKey() {
-		return 'bs_bookmaker_convert_content_model3';
+		return 'bs_bookmaker_fix_user_subpage_content_model';
 	}
 }
 
-$maintClass = ConvertContentModel::class;
+$maintClass = "FixUserSubpageContentModel";
 require_once RUN_MAINTENANCE_IF_MAIN;

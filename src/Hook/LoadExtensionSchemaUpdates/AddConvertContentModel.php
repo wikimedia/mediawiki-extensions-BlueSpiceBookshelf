@@ -11,6 +11,9 @@ class AddConvertContentModel extends LoadExtensionSchemaUpdates {
 		$this->updater->addPostDatabaseUpdateMaintenance(
 			'ConvertContentModel'
 		);
+		$this->updater->addPostDatabaseUpdateMaintenance(
+			'FixUserSubpageContentModel'
+		);
 		return true;
 	}
 
