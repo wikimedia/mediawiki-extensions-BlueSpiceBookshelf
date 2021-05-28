@@ -85,7 +85,7 @@ Ext.define( 'BS.Bookshelf.dialog.AddToBook', {
 			storage = bs.bookshelf.storageLocationRegistry.lookup( record.get( 'book_type' ) );
 
 		var wikiText = "\n* [[{0}|{1}]]".format(
-			selectedBook.prefixedText,
+			mw.config.get( 'wgPageName' ),
 			alias
 		);
 
