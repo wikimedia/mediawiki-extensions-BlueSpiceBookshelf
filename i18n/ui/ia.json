@@ -13,7 +13,7 @@
 	"bs-bookshelfui-new-book-title": "Crear un nove libro",
 	"bs-bookshelfui-new-book-text": "Titulo del libro",
 	"bs-bookshelfui-delete-book-title": "Deler libro",
-	"bs-bookshelfui-delete-book-text": "Es tu secur de voler deler iste libro? Le etiquettas \"bookshelf\" <em>non</en> essera removite automaticamente del paginas wiki ligate!",
+	"bs-bookshelfui-delete-book-text": "Es tu secur de voler deler iste libro? Le etiquettas \"bookshelf\" <em>non</em> essera removite automaticamente del paginas wiki ligate!",
 	"bs-bookshelfui-export-selection": "Exportar selection",
 	"bs-bookshelfui-save-and-modify": "Salveguardar e adder le navigation de libro a cata pagina wiki",
 	"bs-bookshelfui-edit-source": "Modificar le pagina wiki de origine",
