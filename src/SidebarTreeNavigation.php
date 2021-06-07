@@ -238,7 +238,7 @@ class SidebarTreeNavigation extends \BSSkinTreeNavigation {
 	 */
 	protected function makeExpandPath( $number ) {
 		$numberParts = explode( '.', $number );
-		$path = [ \Sanitizer::escapeId( $number ) ];
+		$path = [ \Sanitizer::escapeIdForAttribute( $number ) ];
 		$count = count( $numberParts );
 		for ( $i = 0; $i <= $count; $i++ ) {
 			array_pop( $numberParts );
@@ -246,9 +246,9 @@ class SidebarTreeNavigation extends \BSSkinTreeNavigation {
 			if ( empty( $id ) ) {
 				continue;
 			}
-			$path[] = \Sanitizer::escapeId( $id );
+			$path[] = \Sanitizer::escapeIdForAttribute( $id );
 		}
-		$path[] = \Sanitizer::escapeId( $this->rootNodeId );
+		$path[] = \Sanitizer::escapeIdForAttribute( $this->rootNodeId );
 		$path[] = '';
 
 		return implode( '/', array_reverse( $path ) );
