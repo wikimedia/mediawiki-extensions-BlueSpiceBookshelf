@@ -65,7 +65,7 @@ class AddAttachments {
 				$oTitle = Title::makeTitle( NS_FILE, $sFileTitle );
 			}
 			if ( $oTitle->exists() ) {
-				$oFile = $repoGroup()->findFile( $oTitle );
+				$oFile = $repoGroup->findFile( $oTitle );
 				$oBackend = $oFile->getRepo()->getBackend();
 				$oLocalFile = $oBackend->getLocalReference(
 					[ 'src' => $oFile->getPath() ]
