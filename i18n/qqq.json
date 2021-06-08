@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"McDutchie",
 			"MuratTheTurkish",
 			"Raymond",
 			"Robby",
@@ -30,7 +31,7 @@
 	"bs-bookshelf-add-to-book-label": "Short label for the button, that adds an entry to a book.",
 	"bs-bookshelf-add-to-book-label-book": "Short label for the combobox that allows to select a book.\n{{Identical|Book}}",
 	"bs-bookshelf-add-to-book-label-alias": "Short label for the text form input that allows to enter an alias.\n{{Identical|Alias}}",
-	"bs-bookshelf-add-to-book-label-mod-bstag": "Label for the checkbox that, if set, triggers the update of the \"bookshelf\" tag in the page and therefore creates a new revisaion doing so.",
+	"bs-bookshelf-add-to-book-label-mod-bstag": "Label for the checkbox that, if set, triggers the update of the \"bookshelf\" tag in the page and therefore creates a new revision doing so.",
 	"bs-bookshelf-add-to-book-added": "Text when the page was successfully added to the selected book.\n* $1 - Selected book, the page was added to.",
 	"bs-bookshelf-add-to-book-mod-bstag": "Text when the \"bookshelf\" tag of the page has been updated successfully and that the the page will be reloaded.",
 	"bs-bookshelf-setting-path-feature": "Name for feature \"book\" used in BlueSpiceConfigManager.\n{{Identical|Book}}",
