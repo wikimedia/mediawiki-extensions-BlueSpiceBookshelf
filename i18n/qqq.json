@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"McDutchie",
 			"MuratTheTurkish",
 			"Raymond",
 			"Robby",
@@ -30,7 +31,7 @@
 	"bs-bookshelf-add-to-book-label": "Short label for the button, that adds an entry to a book.",
 	"bs-bookshelf-add-to-book-label-book": "Short label for the combobox that allows to select a book.\n{{Identical|Book}}",
 	"bs-bookshelf-add-to-book-label-alias": "Short label for the text form input that allows to enter an alias.\n{{Identical|Alias}}",
-	"bs-bookshelf-add-to-book-label-mod-bstag": "Label for the checkbox that, if set, triggers the update of the \"bookshelf\" tag in the page and therefore creates a new revisaion doing so.",
+	"bs-bookshelf-add-to-book-label-mod-bstag": "Label for the checkbox that, if set, triggers the update of the \"bookshelf\" tag in the page and therefore creates a new revision doing so.",
 	"bs-bookshelf-add-to-book-added": "Text when the page was successfully added to the selected book.\n* $1 - Selected book, the page was added to.",
 	"bs-bookshelf-add-to-book-mod-bstag": "Text when the \"bookshelf\" tag of the page has been updated successfully and that the the page will be reloaded.",
 	"apihelp-bs-bookshelf-store-description": "{{doc-apihelp-description|bs-bookshelf-store}}",
@@ -52,7 +53,7 @@
 	"bs-bookshelf-editor-no-title-provided": "Error message when given given subpage as parameter on the [[Special:BookshelfBookUI]] specialpage is not a valid page",
 	"bs-bookshelf-action-export-book": "Label for book export link",
 	"bs-bookshelf-grouping-template-type-local_storage": "Label for book type \"local_storage\"",
-	"bs-bookshelf-grouping-template-type-user_book": "Short label for the option \"user\" in the group selection combobox.\n{{Identical|Own books}}",
+	"bs-bookshelf-grouping-template-type-user_book": "Short label for the option \"user\" in the group selection combobox.",
 	"bs-bookshelf-grouping-template-type-ns_book": "Short label for the option \"namespace\" in the group selection combobox.\n{{Identical|General books}}",
 	"bs-bookshelf-book-grid-title": "Title for the grid showing available books\n{{identical|Book}}",
 	"bookshelf": "Special page name for [[Special:Bookshelf]] special page.\n{{Identical|Bookshelf}}",

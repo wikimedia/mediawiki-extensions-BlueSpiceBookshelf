@@ -3,6 +3,7 @@
 		"authors": [
 			"500000000006城",
 			"A Chinese Wikipedian",
+			"AYZ04",
 			"Dimension",
 			"VulpesVulpes825",
 			"Wenyuan Liu",
@@ -90,5 +91,12 @@
 	"action-bookshelfbookui-viewspecialpage": "访问特殊页面 [[Special:BookshelfBookUI]]",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "返回的结果数",
 	"right-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]"
+	"action-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
+	"bs-bookshelfui-save-and-modify": "保存并添加图书导航到每个wiki页面",
+	"bs-bookshelfui-manager-deletionfailure-text": "尝试删除图书时发生以下错误：$1",
+	"bs-bookshelfui-confirm-delete-text": "您确定要删除所选的章节吗？子章节也将被删除。",
+	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|一本书|$1 本书}})",
+	"bs-bookshelfui-prof-defaultview-grid": "格子",
+	"bs-bookshelfui-chapterpager-previous": "上一个",
+	"bs-bookshelfui-chapterpager-next": "下一个"
 }

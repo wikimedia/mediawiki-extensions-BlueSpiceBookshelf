@@ -1,6 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
+			"Joquliina",
+			"Mediawikitranslator",
 			"Pyscowicz"
 		]
 	},
@@ -35,5 +37,14 @@
 	"bs-bookshelfui-bookmetatag-author2": "Tekijä 2",
 	"bs-bookshelfui-bookmetatag-version": "Versio",
 	"bookshelf": "Kirjahylly",
-	"bs-bookshelfui-prof-defaultview-images": "Kuvat"
+	"bs-bookshelfui-prof-defaultview-images": "Kuvat",
+	"bs-bookshelfui-manager-title": "Otsikko",
+	"bs-bookshelfui-manager-deletingprogress-title": "Poistetaan...",
+	"bs-bookshelfui-manager-deletionsuccess-title": "Onnistuneesti poistettu!",
+	"bs-bookshelfui-manager-deletionfailure-title": "Virhe poistamisessa!",
+	"bs-bookshelfui-nothingtoexport-text": "Valintasi on tyhjä",
+	"bs-bookshelfui-book-title-link-edit": "Muokkaa kirjaa",
+	"bs-bookshelfui-extjs-tooltip-copy": "Kopioi",
+	"bs-bookshelfui-prof-defaultview": "Oletusnäkymä",
+	"bs-bookshelfui-prof-defaultview-grid": "Ruudukko"
 }

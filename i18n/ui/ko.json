@@ -74,5 +74,10 @@
 	"bs-bookshelfui-open-source": "원본 위키페이지 표시",
 	"bs-bookshelfui-nav-link-title-all-books": "일반 책",
 	"bs-bookshelfui-bookmetatag-docummentidentifier": "문서 ID",
-	"bookshelf-summary": "일반 책"
+	"bookshelf-summary": "일반 책",
+	"bs-bookshelfui-save-and-modify": "책 내비게이션을 저장하고 각 위키페이지에 추가합니다",
+	"bs-bookshelfui-dlg-copy-name-addition": "(사본)",
+	"bs-bookshelfui-prof-defaultview": "기본 뷰",
+	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
+	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근"
 }

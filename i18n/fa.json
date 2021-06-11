@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"FarsiNevis"
+			"FarsiNevis",
+			"Jeeputer"
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "فقط اعداد صحیح مثبت، مجازند.",
@@ -25,5 +26,24 @@
 	"bookshelf": "قفسه",
 	"bookshelf-summary": "کتاب‌های عمومی",
 	"right-bookshelf-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[ویژه:قفسه کتاب]]",
-	"action-bookshelf-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[ویژه:قفسه کتاب]]"
+	"action-bookshelf-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[Special:Bookshelf]]",
+	"bs-bookshelf-tag-booklist-desc": "فهرستی از مقاله‌های موجود در فضای نام «کتاب» را ایجاد می‌کند و می‌توان آن را پالایش کرد. نشانه‌گذاری پالایه اختیاری است.",
+	"bs-bookshelf-tagerror-article-title-not-valid": "مقالهٔ مقصد ارائه‌شده (&quot;$1&quot;) وجود ندارد.",
+	"bs-bookshelf-tagerror-article-content-not-valid": "مقالهٔ مقصد ارائه‌شده (&quot;$1&quot;) شامل داده‌های نامعتبر است.",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "لطفاً از <i>left</i> یا <i>right</i> استفاده کنید.",
+	"bs-bookshelf-pref-SupressBookNS": "پنهان‌سازی پیشوند فضای نام مقاله‌های کتاب در خروجی",
+	"bs-bookshelf-pref-titledisplaytext-help": "به جای نام صفحه، عنوان کتاب از ناوبری را به‌عنوان عنوان صفحه نمایش می‌دهد.",
+	"bs-bookshelf-grouping-template-type-local_storage": "کتاب‌های موقت",
+	"bs-bookshelf-action-editbooksource": "ویرایش منبع کتاب",
+	"bs-bookshelf-action-editbooksource-create": "ایجاد منبع کتاب",
+	"bs-bookshelf-action-export-book": "برون‌سپاری کتاب",
+	"bs-bookshelf-edit-title": "در حال ویرایش $1",
+	"bs-bookshelf-error-invalid-type": "نوع مشخص‌شده برای کتاب نامعتبر است",
+	"bs-bookshelf-error-type-title-mismatch": "عنوان ارائه‌شده با نوع مشخص‌شده برای کتاب مطابق نیست",
+	"bs-bookshelf-editor-no-title-provided": "عنوان معتبری برای کتاب ارائه نشده",
+	"bs-bookshelf-book-grid-title": "کتاب‌ها",
+	"prefs-bookshelf": "صفحهٔ ویژهٔ قفسهٔ کتاب",
+	"bs-bookshelf-prof-defaultview": "نمای پیش‌فرض",
+	"bs-bookshelf-prof-defaultview-images": "تصویر",
+	"bs-bookshelf-action-save-to-local-storage": "در حال ذخیرهٔ مخزن محلی"
 }

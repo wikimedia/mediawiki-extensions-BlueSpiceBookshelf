@@ -58,5 +58,10 @@
 	"bs-bookshelfui-book-title-link-edit": "Редактировать книгу",
 	"bs-bookshelfui-book-title-link-edit-text": "Редактировать книгу",
 	"bs-bookshelfui-export-book-text": "Подождите, пока книга создаётся.",
-	"bs-bookshelfui-chapterpager-next": "Следующая"
+	"bs-bookshelfui-chapterpager-next": "Следующая",
+	"bs-bookshelfui-book-type": "Тип книги",
+	"bs-bookshelfui-empty-selection": "Ничего не выбрано",
+	"bs-bookshelfui-bookmetatag-docummentidentifier": "Идентификатор документа",
+	"bs-bookshelfui-bookmetatag-docummenttype": "Тип документа",
+	"bs-bookshelfui-prof-defaultview": "Вид по умолчанию"
 }

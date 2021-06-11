@@ -53,5 +53,20 @@
 	"bs-bookshelf-prof-defaultview-images": "Bilder",
 	"right-bookshelf-viewspecialpage": "Zugriff auf die Spezialseite [[Special:Bookshelf|Bücherregal]]",
 	"action-bookshelf-viewspecialpage": "die Spezialseite [[Special:Bookshelf|Bücherregal]] aufzurufen",
-	"bs-bookshelf-action-save-to-local-storage": "Lokal speichern"
+	"bs-bookshelf-action-save-to-local-storage": "Lokal speichern",
+	"apihelp-bs-bookshelf-store-param-tempBooks": "Liste von Büchern im lokalen Speicher des Clients die in die Antwort des Stores übernommen werden sollen.",
+	"bs-bookshelf-grouping-template-type-local_storage": "Temporäre Bücher",
+	"bs-bookshelf-action-editbooksource": "Buch-Quellseite bearbeiten",
+	"bs-bookshelf-action-editbooksource-create": "Buch-Quellseite erstellen",
+	"bs-bookshelf-action-export-book": "Buch exportieren",
+	"bs-bookshelf-edit-title": "Bearbeiten von $1",
+	"bs-bookshelf-error-invalid-type": "Der angegebene Buchtyp ist ungültig",
+	"bs-bookshelf-error-type-title-mismatch": "Der vergebene Titel passt nicht zum angegebenen Buchtypen",
+	"bs-bookshelf-editor-no-title-provided": "Es wurde kein gültiger Buchtitel angegeben",
+	"prefs-bookshelf": "Bücherregal Spezialseite",
+	"bs-bookshelf-prof-defaultview-grid": "Raster",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Eine Blätterfunktion für Bücher vor dem Inhalt anzeigen",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Fügt eine Kapitel-Blätterfunktion am Anfang der Seite ein",
+	"bs-bookshelf-pref-chapterpageraftercontent": "Eine Blätterfunktion für Bücher nach dem Inhalt anzeigen",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Fügt eine Kapitel-Blätterfunktion am Ende der Seite ein"
 }

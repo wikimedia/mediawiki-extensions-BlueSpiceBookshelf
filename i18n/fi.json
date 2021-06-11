@@ -1,6 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
+			"Joquliina",
+			"Mediawikitranslator",
 			"Pyscowicz"
 		]
 	},
@@ -15,5 +17,10 @@
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
 	"bs-bookshelf-group-user": "Omat kirjat",
 	"bs-bookshelf-grouping-template-type-user_book": "Omat kirjat",
-	"bookshelf": "Kirjahylly"
+	"bookshelf": "Kirjahylly",
+	"bs-bookshelf-positive-integer-validation-not-approved": "Vain positiiviset kokonaisluvut ovat sallittuja.",
+	"bs-bookshelf-setting-path-feature": "Kirja",
+	"bs-bookshelf-book-grid-title": "Kirjat",
+	"bs-bookshelf-prof-defaultview-grid": "Ruudukko",
+	"bs-bookshelf-prof-defaultview-images": "Kuvat"
 }

@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alan Mena",
 			"DannyS712",
-			"Fitoschido"
+			"Fitoschido",
+			"MarleneR329",
+			"Rodney Araujo"
 		]
 	},
 	"bs-bookshelf-tag-bookshelf-desc": "Inserta la navegación de capítulo de un libro en una página de este. Mediante esta etiqueta, los artículos mencionados se incluyen en el libro. La numeración se adapta automáticamente al sumario.",
@@ -34,5 +37,12 @@
 	"bookshelf-summary": "Libros generales",
 	"bs-bookshelf-prof-defaultview": "Vista predeterminada",
 	"bs-bookshelf-prof-defaultview-grid": "Cuadrícula",
-	"bs-bookshelf-prof-defaultview-images": "Imágenes"
+	"bs-bookshelf-prof-defaultview-images": "Imágenes",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Por favor, utiliza <i>left</i> or <i>right</i>.",
+	"bs-bookshelf-pref-TitleDisplayText": "Usar el titulo de visualización de la fuente del libro en el articulo",
+	"apihelp-query+bsbookshelf-summary": "Permite efectuar consultas en todos los libros.",
+	"bs-bookshelf-action-editbooksource": "Editar código del libro",
+	"bs-bookshelf-action-editbooksource-create": "Crear código del libro",
+	"bs-bookshelf-edit-title": "Edición de «$1»",
+	"bs-bookshelf-action-save-to-local-storage": "Guardando a la memoria local"
 }

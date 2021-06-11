@@ -2,10 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"A Chinese Wikipedian",
+			"AYZ04",
 			"Dimension",
 			"VulpesVulpes825",
 			"Wenyuan Liu",
 			"XinuGod",
+			"Yfdyh000",
+			"Yining Chen",
 			"列维劳德",
 			"沈澄心"
 		]
@@ -42,5 +45,24 @@
 	"bookshelf": "书架",
 	"bookshelf-summary": "通用图书",
 	"right-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]"
+	"action-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
+	"bs-bookshelf-extension-description": "使BlueSpice能够管理和导出层次化的文章集合。",
+	"bs-bookshelf-tagerror-no-attribute-given": "没有提供属性！请使用<strong>src</strong>来配置目录。",
+	"bs-bookshelf-tagerror-article-content-not-valid": "提供的来源条目（&quot;$1&quot;）包含无效数据。",
+	"bs-bookshelf-pref-SupressBookNS": "在输出中缩短书籍文章的命名空间前缀",
+	"bs-bookshelf-pref-TitleDisplayText": "在文章中使用来自书源的显示标题",
+	"bs-bookshelf-pref-PrependPageTOCNumbers": "在文章目录和标题前加上书号",
+	"bs-bookshelf-grouping-template-type-local_storage": "临时的书籍",
+	"bs-bookshelf-action-editbooksource": "编辑书籍的来源",
+	"bs-bookshelf-action-editbooksource-create": "建立书籍的来源",
+	"bs-bookshelf-action-export-book": "出口书籍",
+	"bs-bookshelf-edit-title": "正在编辑$1",
+	"bs-bookshelf-error-invalid-type": "指定的书籍类型无效",
+	"bs-bookshelf-editor-no-title-provided": "没有提供合理的书名",
+	"bs-bookshelf-book-grid-title": "书籍",
+	"prefs-bookshelf": "书架特殊页面",
+	"bs-bookshelf-prof-defaultview": "默认视图",
+	"bs-bookshelf-prof-defaultview-grid": "格子",
+	"bs-bookshelf-prof-defaultview-images": "图像",
+	"bs-bookshelf-action-save-to-local-storage": "保存到本地存储"
 }

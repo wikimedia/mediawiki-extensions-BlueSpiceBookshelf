@@ -30,5 +30,9 @@
 	"bookshelf": "책장",
 	"bookshelf-summary": "일반 책",
 	"bs-bookshelf-prof-defaultview": "기본 뷰",
-	"bs-bookshelf-prof-defaultview-images": "이미지"
+	"bs-bookshelf-prof-defaultview-images": "이미지",
+	"bs-bookshelf-prof-defaultview-grid": "그리드",
+	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
+	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
+	"bs-bookshelf-action-save-to-local-storage": "로컬 스토리지에 저장 중"
 }

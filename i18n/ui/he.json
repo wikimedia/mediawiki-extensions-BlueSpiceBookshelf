@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"YaronSh"
+			"YaronSh",
+			"ישראל קלר"
 		]
 	},
 	"bookshelfbookui": "עורך ספרים",
@@ -61,5 +62,7 @@
 	"bs-bookshelfui-prof-defaultview": "תצוגת בררת מחדל",
 	"bs-bookshelfui-prof-defaultview-images": "תמונות",
 	"bs-bookshelfui-chapterpager-previous": "הקודם",
-	"bs-bookshelfui-chapterpager-next": "הבא"
+	"bs-bookshelfui-chapterpager-next": "הבא",
+	"bs-bookshelfui-export-selection": "יצוא הבחירה",
+	"bs-bookshelfui-prof-defaultview-grid": "רשת"
 }

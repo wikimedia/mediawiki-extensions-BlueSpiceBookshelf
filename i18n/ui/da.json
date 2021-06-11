@@ -48,5 +48,6 @@
 	"bs-bookshelfui-chapterpager-previous": "Forrige",
 	"bs-bookshelfui-chapterpager-next": "Næste",
 	"bs-bookshelfui-bookmetatag-version": "Version",
-	"bs-bookshelfui-extjs-tooltip-copy": "Kopiér"
+	"bs-bookshelfui-extjs-tooltip-copy": "Kopiér",
+	"bs-bookshelfui-dlg-choosepc-label": "Sidesamling"
 }

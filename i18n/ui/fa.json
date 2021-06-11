@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Amir1arch",
-			"FarsiNevis"
+			"FarsiNevis",
+			"Jeeputer"
 		]
 	},
 	"bs-bookshelfui-extension-description": "چاشنی آبی را قادر به مدیریت مجموعه‌های سلسله‌مراتبیِ ویکی‌صفحه‌ها می‌سازد.",
@@ -87,5 +88,12 @@
 	"bs-bookshelfui-prof-defaultview": "نمای پیش‌فرض",
 	"bs-bookshelfui-prof-defaultview-images": "تصویرها",
 	"right-bookshelf-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[ویژه:قفسه کتاب]]",
-	"action-bookshelf-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[ویژه:قفسه کتاب]]"
+	"action-bookshelf-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[Special:Bookshelf]]",
+	"bs-bookshelfui-delete-book-text": "آیا از حذف این کتاب مطمئن هستید؟ برچسب‌های «bookshelf» به‌طور خودکار از ویکی‌صفحه‌های پیوند داده‌شده پاک <em>نخواهند شد</em>!",
+	"bs-bookshelfui-save-and-modify": "ذخیره و افزودن ناوبری کتاب به هر یک از ویکی‌صفحه‌ها",
+	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "تمام صفحه‌های کتاب به این فضای نام کپی خواهند شد. پیوندها سازگار خواهند شد.",
+	"right-bookshelfbookui-viewspecialpage": "دسترسی به ویژه‌صفحهٔ [[Special:BookshelfBookUI]]",
+	"action-bookshelfbookui-viewspecialpage": "دسترسی به ویژه‌صفحهٔ [[Special:BookshelfBookUI]]",
+	"bs-bookshelfui-chapterpager-previous": "قبلی",
+	"bs-bookshelfui-chapterpager-next": "بعدی"
 }

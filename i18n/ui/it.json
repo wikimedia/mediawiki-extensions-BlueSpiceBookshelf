@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Beta16",
 			"Dansita",
 			"Gianfranco",
@@ -85,5 +86,6 @@
 	"bs-bookshelfui-bookmanager-deletion-error-unkown": "Si è verificato un errore sconosciuto. Per favore contatta il tuo amministratore.",
 	"bs-bookshelfui-bookmetatag-department": "Dipartimento",
 	"bs-bookshelfui-chapterpager-previous": "Precedente",
-	"bs-bookshelfui-chapterpager-next": "Successivo"
+	"bs-bookshelfui-chapterpager-next": "Successivo",
+	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Un libro|$1 libri}})"
 }
