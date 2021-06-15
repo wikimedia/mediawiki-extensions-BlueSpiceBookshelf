@@ -96,7 +96,7 @@ class FixUserSubpageContentModel extends LoggedUpdateMaintenance {
 	 */
 	protected function doDBUpdates() {
 		$this->output( "...Update '" . $this->getUpdateKey() . "': " );
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_MASTER );
 		$pages = $this->getPages( $dbw );
 		$res = $this->convert( $pages, $dbw );
 		$this->output( "\nOK\n" );
