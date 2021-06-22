@@ -25,4 +25,12 @@ class SupressBookNS extends BooleanSetting implements \BlueSpice\Bookshelf\ISett
 	public function getLabelMessageKey() {
 		return 'bs-bookshelf-pref-SupressBookNS';
 	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	public function getHelpMessageKey() {
+		return 'bs-bookshelf-pref-supressbookns-help';
+	}
 }

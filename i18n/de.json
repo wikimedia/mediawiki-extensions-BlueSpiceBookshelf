@@ -68,5 +68,6 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Fügt eine Kapitel-Blätterfunktion am Anfang der Seite ein",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Eine Blätterfunktion für Bücher nach dem Inhalt anzeigen",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Fügt eine Kapitel-Blätterfunktion am Ende der Seite ein",
-	"apihelp-bs-bookshelf-store-param-tempBooks": "Liste von Büchern im lokalen Speicher des Clients die in die Antwort des Stores übernommen werden sollen."
+	"apihelp-bs-bookshelf-store-param-tempBooks": "Liste von Büchern im lokalen Speicher des Clients die in die Antwort des Stores übernommen werden sollen.",
+	"bs-bookshelf-pref-supressbookns-help": "Der Namensraum wird bei der Anzeige des Seitennamens im PDF unterdrückt."
 }
