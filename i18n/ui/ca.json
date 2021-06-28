@@ -2,12 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
-			"Mguix"
+			"Mguix",
+			"Vfc"
 		]
 	},
 	"bookshelfbookui": "Editor de llibres",
 	"bs-bookshelfui-editor-title": "Editor de llibres: $1",
 	"bs-bookshelfui-widget-editor-link-text": "Edita aquest llibre",
+	"bs-bookshelfui-new-book-title": "Crea un nou llibre",
 	"bs-bookshelfui-bookui-savingprogress-text": "Espereu mentre el llibre es desa al servidor",
 	"bs-bookshelfui-manager-title": "Títol",
 	"bs-bookshelfui-manager-deletionsuccess-text": "S’ha suprimit el llibre correctament.",
