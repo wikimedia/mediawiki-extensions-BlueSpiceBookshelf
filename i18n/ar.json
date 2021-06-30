@@ -41,6 +41,7 @@
 	"bs-bookshelf-grouping-template-type-local_storage": "كتب مؤقتة",
 	"bs-bookshelf-grouping-template-type-ns_book": "الكتب العامة",
 	"bs-bookshelf-grouping-template-type-user_book": "الكتب الخاصة",
+	"bs-bookshelf-edit-title": "تعديل $1",
 	"bs-bookshelf-book-grid-title": "الكتب",
 	"bookshelf": "رف الكتب",
 	"bookshelf-summary": "الكتب العامة",

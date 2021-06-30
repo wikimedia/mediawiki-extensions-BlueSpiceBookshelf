@@ -35,6 +35,7 @@
 	"bs-bookshelf-action-export-book": "Esporte 'u libbre",
 	"bs-bookshelf-edit-title": "Stoche a cange $1",
 	"bs-bookshelf-error-invalid-type": "'U tipe de libbre specificate non g'è valide",
+	"bs-bookshelf-error-type-title-mismatch": "'U titole mise non ge s'accocchie cu 'u tipe de libbre date",
 	"bs-bookshelf-editor-no-title-provided": "Nisciune titole valide date pu libbre",
 	"bs-bookshelf-book-grid-title": "Libbre",
 	"bookshelf": "Scaffale",
@@ -45,5 +46,9 @@
 	"bs-bookshelf-prof-defaultview-images": "Immaggine",
 	"right-bookshelf-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
-	"bs-bookshelf-action-save-to-local-storage": "Stoche a reggìstre sus a l'archivije locale"
+	"bs-bookshelf-action-save-to-local-storage": "Stoche a reggìstre sus a l'archivije locale",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "'Ndruche 'u paggenatore d'u capitole d'u libbre apprime d'u condenute",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Aggiunge 'nu paggenatore d'u capitole sus 'a pàgene.",
+	"bs-bookshelf-pref-chapterpageraftercontent": "'Ndruche 'u paggenatore d'u capitole d'u libbre apprisse 'u condenute",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Aggiunge 'nu paggenatore d'u capitole sotte 'a pàgene."
 }
