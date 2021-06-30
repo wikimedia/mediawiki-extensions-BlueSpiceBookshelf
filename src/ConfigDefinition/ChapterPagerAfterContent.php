@@ -2,9 +2,10 @@
 
 namespace BlueSpice\Bookshelf\ConfigDefinition;
 
+use BlueSpice\Bookshelf\ISettingPaths;
 use BlueSpice\ConfigDefinition\BooleanSetting;
 
-class ChapterPagerAfterContent extends BooleanSetting implements \BlueSpice\Bookshelf\ISettingPaths {
+class ChapterPagerAfterContent extends BooleanSetting implements ISettingPaths {
 
 	/**
 	 *

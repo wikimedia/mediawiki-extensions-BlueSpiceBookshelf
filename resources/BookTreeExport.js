@@ -41,9 +41,6 @@
 			return;
 		}
 
-		if ( this.options.hasOwnProperty( 'setLoadCallback' ) ) {
-			this.options.setLoadCallback( mw.message('bs-bookshelfui-export-book-text').plain() );
-		}
 		var me = this;
 		var targetUrl = mw.util.getUrl(
 			'Special:UniversalExport/' + this.tree.getRootNode().get( 'articleTitle' )
@@ -56,6 +53,22 @@
 
 		if ( this.options.hasOwnProperty( 'storageLocation') && !this.options.storageLocation.isTitleBased() ) {
 			params.content = '-';
+		}
+
+		var data = {
+			params: params,
+			menu: menu,
+			item: item,
+			caller: me,
+			abort: false
+		};
+		mw.hook( 'bs.bookshelf.booktreeexport.params' ).fire( data );
+		if ( data.abort ) {
+			return;
+		}
+
+		if ( this.options.hasOwnProperty( 'setLoadCallback' ) ) {
+			this.options.setLoadCallback( mw.message('bs-bookshelfui-export-book-text').plain() );
 		}
 
 		var encParams = $.param( params );
