@@ -13,7 +13,7 @@ class BookshelfBookEditor extends ManagerBase {
 	protected $bookEditData;
 
 	public function __construct() {
-		parent::__construct( 'BookshelfBookEditor' );
+		parent::__construct( 'BookshelfBookEditor', '', false );
 	}
 
 	/**
