@@ -20,6 +20,7 @@
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "Cange 'u tag 'bookshelf' jndr'à pàgene (versiona nove)",
 	"bs-bookshelf-add-to-book-added": "'A pàgene ha state aggiunde a 'u libbre '$1'.",
+	"bs-bookshelf-add-to-book-mod-bstag": "'U tag \"bookshelf\" d'a èàgene ha state cangiate. 'A pàgene adda essere carecate arrete.",
 	"apihelp-bs-bookshelf-store-description": "Elenghe tutte le libbre. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
 	"apihelp-bs-bookshelf-bookstore-description": "Elenghe tutte le capitole de 'nu certe libbre. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
 	"bs-bookshelf-setting-path-feature": "Libbre",
