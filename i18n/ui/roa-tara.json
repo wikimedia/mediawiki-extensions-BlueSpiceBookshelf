@@ -4,6 +4,7 @@
 			"Joetaras"
 		]
 	},
+	"bs-bookshelfui-extension-description": "Abbilite BlueSpice pe gestì le colleziune gerarcheche de le pàggene de uicchi.",
 	"bookshelfbookui": "Cangiatore de le libbre",
 	"bookshelfbookmanager": "Gestore de le libbre",
 	"bs-bookshelfui-editor-title": "Cangiatore d'u libbre: $1",
@@ -51,6 +52,7 @@
 	"bs-bookshelfui-extjs-tooltip-copy": "Copie",
 	"bookshelf": "Scaffale",
 	"bookshelf-summary": "Libbre generale",
+	"bs-bookshelfui-prof-defaultview": "Viste de partenze",
 	"bs-bookshelfui-prof-defaultview-grid": "Griglie",
 	"bs-bookshelfui-prof-defaultview-images": "Immaggine",
 	"right-bookshelf-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
