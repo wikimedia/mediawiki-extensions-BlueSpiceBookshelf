@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
-			"Mguix"
+			"Mguix",
+			"Vfc"
 		]
 	},
 	"bookshelfbookui": "Editor de llibres",
@@ -36,5 +37,6 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Graella",
 	"bs-bookshelfui-prof-defaultview-images": "Imatges",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
-	"bs-bookshelfui-chapterpager-next": "Següent"
+	"bs-bookshelfui-chapterpager-next": "Següent",
+	"bs-bookshelfui-new-book-title": "Crea un nou llibre"
 }

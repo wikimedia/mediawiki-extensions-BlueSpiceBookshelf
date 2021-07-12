@@ -45,5 +45,22 @@
 	"bs-bookshelf-pref-TitleDisplayText": "Ause 'u titole mostrate da 'a fonde d'u libbre sus a vôsce",
 	"apihelp-query+bsbookshelf-summary": "Permette de 'nderrogà tutte le libbre.",
 	"bs-bookshelf-editor-no-title-provided": "Nisciune titole valide date pu libbre",
-	"bs-bookshelf-action-save-to-local-storage": "Stoche a reggìstre sus a l'archivije locale"
+	"bs-bookshelf-action-save-to-local-storage": "Stoche a reggìstre sus a l'archivije locale",
+	"bs-bookshelf-tag-bookshelf-desc": "Sckaffe 'na navigazzione de le capitole de 'nu libbre jndr'à 'na pàgene d'u libbre. Ausanne stu tag le vôsce citate avènene sckaffate jndr'à 'u libbre. 'A numerazione avène adattate automatecamende a 'u sommarie.",
+	"bs-bookshelf-tag-bookmeta-desc": "Tag pa reggistrazzione de le diverse metadate sus a le vôsce d'u libbre. Chiste sò 'ngluse jndr'à 'u libbre. Le attrebbute de stu tag onna essere correlate a le metadate d'a vôsce d'u libbre.",
+	"bs-bookshelf-tag-booklist-desc": "Genere elenghe de vôsce da 'u namespace \"libbre\" e pò essere filtrate. L'indicazione d'u filtre jè obbligatorie.",
+	"bs-bookshelf-tagerror-article-title-not-valid": "'A vôsce de origgene date (&quot;$1&quot;) non g'esiste.",
+	"bs-bookshelf-tagerror-article-content-not-valid": "'A vôsce de origgene date (&quot;$1&quot;) tène date invalide.",
+	"bs-bookshelf-pref-SupressBookNS": "Live 'u prefisse d'u namespace de le vôsce d'u libbre jndr'à le resultate.",
+	"bs-bookshelf-pref-PrependPageTOCNumbers": "Mitte nnande 'u sommarie e le titole de le vôsce cu 'a numerazione d'u libbre",
+	"bs-bookshelf-add-to-book-mod-bstag": "'U tag \"bookshelf\" d'a èàgene ha state cangiate. 'A pàgene adda essere carecate arrete.",
+	"apihelp-bs-bookshelf-store-param-tempBooks": "Elenghe de le libbre sus a 'u majazzine locale d'u client ca avessa essere 'ngluse jndr'à resposte d'u majazzine",
+	"apihelp-bs-bookshelf-bookstore-param-node": "Specifeche 'nu node pu quale 'nu elenghe de sottecapitole avessa essere date.",
+	"apihelp-bs-bookshelf-bookstore-param-book": "Specifeche 'u libbre pu quale 'nu elenghe de capitole avessa essere date.",
+	"bs-bookshelf-pref-titledisplaytext-help": "'Ndruche le titole da 'a navigazzione d'u libbre cumme titole d'a pàgene invece d'u nome d'a pàgene.",
+	"bs-bookshelf-error-type-title-mismatch": "'U titole mise non ge s'accocchie cu 'u tipe de libbre date",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "'Ndruche 'u paggenatore d'u capitole d'u libbre apprime d'u condenute",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Aggiunge 'nu paggenatore d'u capitole sus 'a pàgene.",
+	"bs-bookshelf-pref-chapterpageraftercontent": "'Ndruche 'u paggenatore d'u capitole d'u libbre apprisse 'u condenute",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Aggiunge 'nu paggenatore d'u capitole sotte 'a pàgene."
 }
