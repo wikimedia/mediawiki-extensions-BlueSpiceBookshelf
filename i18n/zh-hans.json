@@ -4,6 +4,7 @@
 			"A Chinese Wikipedian",
 			"AYZ04",
 			"Dimension",
+			"Lakejason0",
 			"VulpesVulpes825",
 			"Wenyuan Liu",
 			"XinuGod",
@@ -52,6 +53,7 @@
 	"bs-bookshelf-action-export-book": "出口书籍",
 	"bs-bookshelf-edit-title": "正在编辑$1",
 	"bs-bookshelf-error-invalid-type": "指定的书籍类型无效",
+	"bs-bookshelf-error-type-title-mismatch": "所提供的标题不符合给定的书籍类型",
 	"bs-bookshelf-editor-no-title-provided": "没有提供合理的书名",
 	"bs-bookshelf-book-grid-title": "书籍",
 	"bookshelf": "书架",
@@ -62,5 +64,9 @@
 	"bs-bookshelf-prof-defaultview-images": "图像",
 	"right-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
-	"bs-bookshelf-action-save-to-local-storage": "保存到本地存储"
+	"bs-bookshelf-action-save-to-local-storage": "保存到本地存储",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "在内容前显示书籍章节分页器",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "在页面开头添加章节分页器。",
+	"bs-bookshelf-pref-chapterpageraftercontent": "在内容后显示书籍章节分页器",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "在页面底部添加章节分页器。"
 }
