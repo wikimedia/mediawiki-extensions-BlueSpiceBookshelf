@@ -47,7 +47,7 @@ Ext.define('BS.Bookshelf.TreeHelper', {
 			var arEntry = {
 				'number': bs.number,
 				'title': oNode.get('articleTitle'),
-				'display-title': oNode.get('text'),
+				'display-title': oNode.get( 'articleDisplayTitle' ),
 				'bookshelf': bs
 			};
 
