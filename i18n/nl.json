@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Romaine"
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "Alleen positieve gehele getallen zijn toegestaan.",
@@ -15,11 +16,18 @@
 	"bs-bookshelf-personal-books-page-prefix": "$1/Boeken/",
 	"bs-bookshelf-add-to-book-label": "Aan een boek toevoegen",
 	"bs-bookshelf-add-to-book-label-book": "Boek",
+	"bs-bookshelf-add-to-book-label-alias": "Alias",
 	"bs-bookshelf-add-to-book-added": "De pagina is aan het boek '$1' toegevoegd.",
 	"bs-bookshelf-setting-path-feature": "Boek",
 	"bs-bookshelf-empty-selection": "Niets geselecteerd",
+	"bs-bookshelf-grouping-template-type-local_storage": "Tijdelijke boeken",
 	"bs-bookshelf-grouping-template-type-ns_book": "Algemene boeken",
 	"bs-bookshelf-grouping-template-type-user_book": "Eigen boeken",
+	"bs-bookshelf-action-editbooksource": "Boekbron bewerken",
+	"bs-bookshelf-action-editbooksource-create": "Boekbron aanmaken",
+	"bs-bookshelf-action-export-book": "Boek exporteren",
+	"bs-bookshelf-edit-title": "Bewerken van $1",
+	"bs-bookshelf-error-invalid-type": "Het opgegeven boektype is ongeldig",
 	"bs-bookshelf-book-grid-title": "Boeken",
 	"bookshelf": "Boekenplank",
 	"bs-bookshelf-prof-defaultview-images": "Afbeeldingen",
