@@ -33,7 +33,7 @@
 	"bs-bookshelf-add-to-book-label-alias": "Short label for the text form input that allows to enter an alias.\n{{Identical|Alias}}",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "Label for the checkbox that, if set, triggers the update of the \"bookshelf\" tag in the page and therefore creates a new revision doing so.",
 	"bs-bookshelf-add-to-book-added": "Text when the page was successfully added to the selected book.\n* $1 - Selected book, the page was added to.",
-	"bs-bookshelf-add-to-book-mod-bstag": "Text when the \"bookshelf\" tag of the page has been updated successfully and that the the page will be reloaded.",
+	"bs-bookshelf-add-to-book-mod-bstag": "Text when the \"bookshelf\" tag of the page has been updated successfully and that the page will be reloaded.",
 	"apihelp-bs-bookshelf-store-description": "{{doc-apihelp-description|bs-bookshelf-store}}",
 	"apihelp-bs-bookshelf-store-param-tempBooks": "{{doc-apihelp-param|bs-bookshelf-store|tempBooks}}\nDescribes the API parameter which provides temporary, clientside stored books to be reflected by the store",
 	"apihelp-bs-bookshelf-bookstore-description": "{{doc-apihelp-description|bs-bookshelf-bookstore}}",

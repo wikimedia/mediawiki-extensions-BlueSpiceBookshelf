@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Romaine"
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "Alleen positieve gehele getallen zijn toegestaan.",
@@ -26,5 +27,12 @@
 	"right-bookshelf-viewspecialpage": "De speciale pagina [[Special:Bookshelf]] bekijken",
 	"action-bookshelf-viewspecialpage": "de speciale pagina [[Special:Bookshelf]] te bekijken",
 	"bs-bookshelf-book-grid-title": "Boeken",
-	"bs-bookshelf-prof-defaultview-images": "Afbeeldingen"
+	"bs-bookshelf-prof-defaultview-images": "Afbeeldingen",
+	"bs-bookshelf-add-to-book-label-alias": "Alias",
+	"bs-bookshelf-grouping-template-type-local_storage": "Tijdelijke boeken",
+	"bs-bookshelf-action-editbooksource": "Boekbron bewerken",
+	"bs-bookshelf-action-editbooksource-create": "Boekbron aanmaken",
+	"bs-bookshelf-action-export-book": "Boek exporteren",
+	"bs-bookshelf-edit-title": "Bewerken van $1",
+	"bs-bookshelf-error-invalid-type": "Het opgegeven boektype is ongeldig"
 }

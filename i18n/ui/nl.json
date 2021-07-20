@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
+			"Romaine",
 			"Rots61"
 		]
 	},
@@ -61,5 +62,17 @@
 	"action-bookshelf-viewspecialpage": "de speciale pagina [[Special:Bookshelf]] te bekijken",
 	"bs-bookshelfui-export-selection": "Selectie exporteren",
 	"bs-bookshelfui-chapterpager-previous": "Vorige",
-	"bs-bookshelfui-chapterpager-next": "Volgende"
+	"bs-bookshelfui-chapterpager-next": "Volgende",
+	"bs-bookshelfui-new-book-text": "Boektitel",
+	"bs-bookshelfui-edit-source": "Brontekst van wikipagina bewerken",
+	"bs-bookshelfui-bookui-savingprogress-title": "Boek opslaan",
+	"bs-bookshelfui-bookui-savingprogress-text": "Wacht tot het boek op de server is opgeslagen",
+	"bs-bookshelfui-manager-deletingprogress-text": "Geselecteerd boek verwijderen",
+	"bs-bookshelfui-manager-deletionsuccess-title": "Succesvol verwijderd!",
+	"bs-bookshelfui-manager-deletionsuccess-text": "Het boek is succesvol verwijderd.",
+	"bs-bookshelfui-manager-deletionfailure-title": "Fout bij verwijderen!",
+	"bs-bookshelfui-ctxmnu-delete": "Verwijderen uit boek",
+	"bs-bookshelfui-dlg-metadata-title": "Metadata",
+	"bs-bookshelfui-dlg-choosepc-label": "Paginaverzameling",
+	"bs-bookshelfui-type-pagecollection": "Paginaverzameling"
 }
