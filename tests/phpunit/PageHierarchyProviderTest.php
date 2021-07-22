@@ -31,7 +31,7 @@ class PageHierarchyProviderTest extends MediaWikiTestCase {
 		);
 	}
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->oPHP = PageHierarchyProvider::getInstanceFor(

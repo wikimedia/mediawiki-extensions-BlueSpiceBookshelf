@@ -13,7 +13,7 @@ use MediaWikiTestCase;
  */
 class WikiTextLinkNoRedirectTest extends MediaWikiTestCase {
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->insertPage( 'Redirect Origin', '#REDIRECT [[Redirect Destination]]' );
