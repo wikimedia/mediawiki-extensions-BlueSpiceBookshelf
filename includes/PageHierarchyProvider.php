@@ -41,7 +41,7 @@ class PageHierarchyProvider {
 			);
 		}
 
-		$this->cache = wfGetMainCache();
+		$this->cache = ObjectCache::getLocalClusterInstance();
 		$cacheKey = $this->getCacheKey(
 			$this->oSourceArticleTitle,
 			__METHOD__,
