@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"DDPAT",
 			"Piramidion",
 			"Ата"
 		]
@@ -64,7 +65,7 @@
 	"bs-bookshelfui-book-title-link-edit": "Редагувати книжку",
 	"bs-bookshelfui-book-title-link-edit-text": "Редагувати книжку",
 	"bs-bookshelfui-export-book-text": "Будь ласка, зачекайте, поки книжка створюється.",
-	"bs-bookshelfui-bookmanager-deletion-reason": "Вилучено Менеджером книжок",
+	"bs-bookshelfui-bookmanager-deletion-reason": "Вилучено менеджером книжок",
 	"bs-bookshelfui-bookmanager-deletion-error-pageid": "Вказану статтю не вдалося знайти.",
 	"bs-bookshelfui-bookmanager-deletion-error-permission": "У вас недостатньо прав на виконання цієї дії.",
 	"bs-bookshelfui-bookmanager-deletion-error-unkown": "Сталася невідома помилка. Будь ласка, зверніться до свого адміністратора.",
