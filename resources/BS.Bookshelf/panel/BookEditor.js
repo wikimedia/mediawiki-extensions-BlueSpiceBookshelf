@@ -363,8 +363,8 @@ Ext.define('BS.Bookshelf.panel.BookEditor', {
 			if( this.btnExportSelection ) {
 				this.btnExportSelection.disable();
 			}
-		}
-		else {
+		} else {
+			this.tpChapters.setClean();
 			this.tpChapters.removeCls('bs-bookeditor-dirty');
 			if( this.btnExportSelection ) {
 				this.btnExportSelection.enable();
