@@ -59,5 +59,9 @@
 	"bs-bookshelf-prof-defaultview-images": "圖片",
 	"right-bookshelf-viewspecialpage": "存取特殊頁面 [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "存取特殊頁面 [[Special:Bookshelf]]",
-	"bs-bookshelf-action-save-to-local-storage": "儲存到本地端貯藏"
+	"bs-bookshelf-action-save-to-local-storage": "儲存到本地端貯藏",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "在內容前方顯示書籍章節分頁器",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "在頁面頂端添加書籍章節分頁器。",
+	"bs-bookshelf-pref-chapterpageraftercontent": "在內容後方顯示書籍章節分頁器",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "在頁面底部添加書籍章節分頁器。"
 }
