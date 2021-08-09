@@ -4,6 +4,7 @@
 			"Alan Mena",
 			"DannyS712",
 			"Fitoschido",
+			"Igmc4",
 			"MarleneR329",
 			"Rodney Araujo"
 		]
@@ -39,8 +40,10 @@
 	"bs-bookshelf-book-grid-title": "Libros",
 	"bookshelf": "Estantería",
 	"bookshelf-summary": "Libros generales",
+	"prefs-bookshelf": "Página especial de la librería",
 	"bs-bookshelf-prof-defaultview": "Vista predeterminada",
 	"bs-bookshelf-prof-defaultview-grid": "Cuadrícula",
 	"bs-bookshelf-prof-defaultview-images": "Imágenes",
+	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]",
 	"bs-bookshelf-action-save-to-local-storage": "Guardando a la memoria local"
 }

@@ -5,6 +5,7 @@
 			"DannyS712",
 			"Fitoschido",
 			"Fortega",
+			"Igmc4",
 			"Ihojose",
 			"Joanmp17",
 			"Nancystodd"
@@ -78,6 +79,7 @@
 	"bs-bookshelfui-prof-defaultview": "Vista predeterminada",
 	"bs-bookshelfui-prof-defaultview-grid": "Cuadrícula",
 	"bs-bookshelfui-prof-defaultview-images": "Imágenes",
+	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
 	"bs-bookshelfui-chapterpager-next": "Siguiente"
 }
