@@ -5,6 +5,7 @@
 			"DannyS712",
 			"Fitoschido",
 			"Fortega",
+			"Igmc4",
 			"Ihojose",
 			"Joanmp17",
 			"Nancystodd"
@@ -81,5 +82,6 @@
 	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "Título visualizado",
 	"bs-bookshelfui-ctxmnu-open": "Abrir página de wiki en una ventana nueva",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
-	"bs-bookshelfui-chapterpager-next": "Siguiente"
+	"bs-bookshelfui-chapterpager-next": "Siguiente",
+	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]"
 }

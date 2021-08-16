@@ -4,6 +4,7 @@
 			"Alan Mena",
 			"DannyS712",
 			"Fitoschido",
+			"Igmc4",
 			"MarleneR329",
 			"Rodney Araujo"
 		]
@@ -44,5 +45,7 @@
 	"bs-bookshelf-action-save-to-local-storage": "Guardando a la memoria local",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Por favor, utiliza <i>left</i> or <i>right</i>.",
 	"bs-bookshelf-action-editbooksource": "Editar código del libro",
-	"bs-bookshelf-action-editbooksource-create": "Crear código del libro"
+	"bs-bookshelf-action-editbooksource-create": "Crear código del libro",
+	"prefs-bookshelf": "Página especial de la librería",
+	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]"
 }
