@@ -40,6 +40,8 @@
 	"bs-bookshelf-add-to-book-mod-bstag": "页面里面的“书架”标签已被更改。页面将会被重新加载。",
 	"apihelp-bs-bookshelf-store-description": "列举所有书籍。允许排序、过滤和分页。执行ExtJS存储的参数。",
 	"apihelp-bs-bookshelf-bookstore-description": "列举提供的书籍内所有的章节。允许排序、过滤和分页。执行ExtJS存储的参数。",
+	"apihelp-bs-bookshelf-bookstore-param-node": "指定一个需要为其提供子章节列表的节点。",
+	"apihelp-bs-bookshelf-bookstore-param-book": "指定一本需要为其提供章节列表的书籍。",
 	"bs-bookshelf-setting-path-feature": "图书",
 	"bs-bookshelf-empty-selection": "没有选定任何页面",
 	"apihelp-bs-bookshelf-bookstore-summary": "列举提供的书籍内所有的章节。允许排序、过滤和分页。执行ExtJS存储的参数。",

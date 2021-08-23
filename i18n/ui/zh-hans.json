@@ -90,6 +90,7 @@
 	"right-bookshelfbookui-viewspecialpage": "访问特殊页面 [[Special:BookshelfBookUI]]",
 	"action-bookshelfbookui-viewspecialpage": "访问特殊页面 [[Special:BookshelfBookUI]]",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "返回的结果数",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "返回页面所依据的根值",
 	"bookshelf": "书架",
 	"bookshelf-summary": "通用图书",
 	"prefs-bookshelfui": "书架特殊页面",
