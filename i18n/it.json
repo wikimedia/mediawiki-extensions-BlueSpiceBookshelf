@@ -5,6 +5,7 @@
 			"Dansita",
 			"Gianfranco",
 			"Luca.favorido",
+			"Stefano",
 			"TheRukk",
 			"Tizven"
 		]
@@ -22,6 +23,7 @@
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "Modifica il tag 'scaffale' nella pagina (nuova versione)",
 	"bs-bookshelf-add-to-book-added": "La pagina è stata aggiunta al libro '$1'.",
+	"apihelp-bs-bookshelf-bookstore-param-book": "Specifica il libro per il quale deve essere fornito un elenco di capitoli.",
 	"bs-bookshelf-setting-path-feature": "Libro",
 	"bs-bookshelf-empty-selection": "Nessuna selezione",
 	"bs-bookshelf-grouping-template-type-local_storage": "Libri temporanei",
@@ -38,5 +40,6 @@
 	"bookshelf-summary": "Libri generali",
 	"bs-bookshelf-prof-defaultview": "Vista predefinita",
 	"bs-bookshelf-prof-defaultview-grid": "Griglia",
-	"bs-bookshelf-prof-defaultview-images": "Immagini"
+	"bs-bookshelf-prof-defaultview-images": "Immagini",
+	"bs-bookshelf-action-save-to-local-storage": "Sto salvando su disco locale"
 }
