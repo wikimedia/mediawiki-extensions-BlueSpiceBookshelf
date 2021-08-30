@@ -11,7 +11,8 @@
 			"Yfdyh000",
 			"Yining Chen",
 			"列维劳德",
-			"沈澄心"
+			"沈澄心",
+			"落花有意12138"
 		]
 	},
 	"bs-bookshelf-extension-description": "使BlueSpice能够管理和导出层次化的文章集合。",
@@ -39,6 +40,7 @@
 	"bs-bookshelf-add-to-book-added": "该页面已经被添加到图书“$1”。",
 	"bs-bookshelf-add-to-book-mod-bstag": "页面里面的“书架”标签已被更改。页面将会被重新加载。",
 	"apihelp-bs-bookshelf-store-description": "列举所有书籍。允许排序、过滤和分页。执行ExtJS存储的参数。",
+	"apihelp-bs-bookshelf-store-param-tempBooks": "在客户端本地缓存上的书籍列表应当包含在缓存响应中。",
 	"apihelp-bs-bookshelf-bookstore-description": "列举提供的书籍内所有的章节。允许排序、过滤和分页。执行ExtJS存储的参数。",
 	"apihelp-bs-bookshelf-bookstore-param-node": "指定一个需要为其提供子章节列表的节点。",
 	"apihelp-bs-bookshelf-bookstore-param-book": "指定一本需要为其提供章节列表的书籍。",
@@ -47,6 +49,7 @@
 	"apihelp-bs-bookshelf-bookstore-summary": "列举提供的书籍内所有的章节。允许排序、过滤和分页。执行ExtJS存储的参数。",
 	"apihelp-bs-bookshelf-store-summary": "列举所有书籍。允许排序、过滤和分页。执行ExtJS存储的参数。",
 	"apihelp-query+bsbookshelf-summary": "允许在所有书籍中进行查询。",
+	"bs-bookshelf-pref-titledisplaytext-help": "将书籍导航中的标题显示为页面标题，而非页面名称。",
 	"bs-bookshelf-grouping-template-type-local_storage": "临时的书籍",
 	"bs-bookshelf-grouping-template-type-ns_book": "通用图书",
 	"bs-bookshelf-grouping-template-type-user_book": "个人图书",
