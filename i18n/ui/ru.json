@@ -13,6 +13,7 @@
 	},
 	"bookshelfbookui": "Редактор книг",
 	"bookshelfbookmanager": "Управление книгами",
+	"bs-bookshelfui-editor-title": "Редактор книги: $1",
 	"bs-bookshelfui-widget-editor-link-text": "Редактировать эту книгу",
 	"bs-bookshelfui-new-book-title": "Создать новую книгу",
 	"bs-bookshelfui-new-book-text": "Заголовок книги",
@@ -63,5 +64,6 @@
 	"bs-bookshelfui-prof-defaultview": "Вид по умолчанию",
 	"bs-bookshelfui-prof-defaultview-grid": "Сетка",
 	"bs-bookshelfui-prof-defaultview-images": "Изображения",
+	"bs-bookshelfui-chapterpager-previous": "Предыдущая",
 	"bs-bookshelfui-chapterpager-next": "Следующая"
 }
