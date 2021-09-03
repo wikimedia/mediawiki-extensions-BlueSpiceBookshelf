@@ -35,7 +35,7 @@ class SidebarBooklist {
 	public function getHtml() {
 		$this->fetchAllBooks();
 
-		$cache = wfGetMainCache();
+		$cache = ObjectCache::getLocalClusterInstance();
 		$cache->getWithSetCallback(
 			$cache->makeKey( __CLASS__, 'fetchBookHierarchies' ),
 			3600,
