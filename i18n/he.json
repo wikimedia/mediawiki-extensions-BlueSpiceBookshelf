@@ -9,6 +9,7 @@
 	"bs-bookshelf-tag-next": "הבא",
 	"bs-bookshelf-tag-prev": "הקודם",
 	"bs-bookshelf-tag-edit-book": "לערוך את הספר",
+	"bs-bookshelf-personal-books-page-prefix": "$1/ספרים/",
 	"bs-bookshelf-add-to-book-label": "להוסיף לספר",
 	"bs-bookshelf-add-to-book-label-book": "ספר",
 	"bs-bookshelf-add-to-book-label-alias": "כינוי",
