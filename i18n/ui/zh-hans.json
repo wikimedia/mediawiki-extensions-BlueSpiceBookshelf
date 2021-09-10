@@ -11,6 +11,7 @@
 			"XinuGod",
 			"列维劳德",
 			"沈澄心",
+			"落花有意12138",
 			"铁桶"
 		]
 	},
@@ -101,5 +102,8 @@
 	"bs-bookshelfui-chapterpager-previous": "上一个",
 	"bs-bookshelfui-chapterpager-next": "下一个",
 	"bs-bookshelfui-extension-description": "使BlueSpice能够管理层次化的wiki页面集合。",
-	"bs-bookshelfui-override-tag-title": "更改wiki页面关联"
+	"bs-bookshelfui-override-tag-title": "更改wiki页面关联",
+	"bs-bookshelfui-delete-book-text": "您真的想要删除此书籍吗？标签“书架”将<em>不会</em>从链入的维基页面被自动移除！",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "返回页面所依据的根值",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "输入要批量添加的源代码"
 }

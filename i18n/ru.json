@@ -33,5 +33,7 @@
 	"bs-bookshelf-prof-defaultview": "Вид по умолчанию",
 	"bs-bookshelf-prof-defaultview-grid": "Сетка",
 	"bs-bookshelf-prof-defaultview-images": "Изображения",
-	"bs-bookshelf-action-save-to-local-storage": "Сохранение в локальном хранилище"
+	"bs-bookshelf-action-save-to-local-storage": "Сохранение в локальном хранилище",
+	"bs-bookshelf-grouping-template-type-local_storage": "Временные книги",
+	"bs-bookshelf-action-export-book": "Экспортировать книгу"
 }

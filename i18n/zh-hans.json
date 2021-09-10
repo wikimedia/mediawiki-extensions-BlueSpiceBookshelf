@@ -11,7 +11,8 @@
 			"Yfdyh000",
 			"Yining Chen",
 			"列维劳德",
-			"沈澄心"
+			"沈澄心",
+			"落花有意12138"
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "只能输入正整数",
@@ -70,5 +71,9 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent": "在内容前显示书籍章节分页器",
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "在页面开头添加章节分页器。",
 	"bs-bookshelf-pref-chapterpageraftercontent": "在内容后显示书籍章节分页器",
-	"bs-bookshelf-pref-chapterpageraftercontent-help": "在页面底部添加章节分页器。"
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "在页面底部添加章节分页器。",
+	"apihelp-bs-bookshelf-store-param-tempBooks": "在客户端本地缓存上的书籍列表应当包含在缓存响应中。",
+	"apihelp-bs-bookshelf-bookstore-param-node": "指定一个需要为其提供子章节列表的节点。",
+	"apihelp-bs-bookshelf-bookstore-param-book": "指定一本需要为其提供章节列表的书籍。",
+	"bs-bookshelf-pref-titledisplaytext-help": "将书籍导航中的标题显示为页面标题，而非页面名称。"
 }

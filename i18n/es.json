@@ -6,7 +6,8 @@
 			"Fitoschido",
 			"Igmc4",
 			"MarleneR329",
-			"Rodney Araujo"
+			"Rodney Araujo",
+			"Warming Hearth"
 		]
 	},
 	"bs-bookshelf-tagerror-article-title-not-valid": "No existe el artículo de origen proporcionado («$1»).",
@@ -47,5 +48,7 @@
 	"bs-bookshelf-action-editbooksource": "Editar código del libro",
 	"bs-bookshelf-action-editbooksource-create": "Crear código del libro",
 	"prefs-bookshelf": "Página especial de la librería",
-	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]"
+	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]",
+	"bs-bookshelf-extension-description": "Habilita BlueSpice para controlar y exportar colecciones jerárquicas de artículos.",
+	"bs-bookshelf-tag-bookmeta-desc": "Etiqueta para guardar algunos metadatos en artículos de libros. Estos datos están incluidos en el libro. Los atributos de esta etiqueta deben corresponderse con los metadatos del artículo del libro."
 }

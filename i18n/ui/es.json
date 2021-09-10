@@ -83,5 +83,7 @@
 	"bs-bookshelfui-ctxmnu-open": "Abrir página de wiki en una ventana nueva",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
 	"bs-bookshelfui-chapterpager-next": "Siguiente",
-	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]"
+	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]",
+	"bs-bookshelfui-bookui-savingprogress-title": "Guardando libro",
+	"bs-bookshelfui-nothingtoexport-text": "Tu seleccion está vacía"
 }

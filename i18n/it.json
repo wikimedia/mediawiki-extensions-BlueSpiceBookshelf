@@ -5,6 +5,7 @@
 			"Dansita",
 			"Gianfranco",
 			"Luca.favorido",
+			"Stefano",
 			"TheRukk",
 			"Tizven"
 		]
@@ -40,5 +41,7 @@
 	"bookshelf-summary": "Libri generali",
 	"bs-bookshelf-prof-defaultview": "Vista predefinita",
 	"bs-bookshelf-prof-defaultview-grid": "Griglia",
-	"bs-bookshelf-prof-defaultview-images": "Immagini"
+	"bs-bookshelf-prof-defaultview-images": "Immagini",
+	"apihelp-bs-bookshelf-bookstore-param-book": "Specifica il libro per il quale deve essere fornito un elenco di capitoli.",
+	"bs-bookshelf-action-save-to-local-storage": "Sto salvando su disco locale"
 }

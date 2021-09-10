@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
+			"McDutchie",
 			"Romaine",
 			"Rots61"
 		]
@@ -74,5 +75,29 @@
 	"bs-bookshelfui-ctxmnu-delete": "Verwijderen uit boek",
 	"bs-bookshelfui-dlg-metadata-title": "Metadata",
 	"bs-bookshelfui-dlg-choosepc-label": "Paginaverzameling",
-	"bs-bookshelfui-type-pagecollection": "Paginaverzameling"
+	"bs-bookshelfui-type-pagecollection": "Paginaverzameling",
+	"bs-bookshelfui-extension-description": "Stelt BlueSpice in staat hiërarchische verzamelingen van wikipagina's te beheren.",
+	"bookshelfbookui": "Boekbewerker",
+	"bookshelfbookmanager": "Boekbeheerder",
+	"bs-bookshelfui-editor-no-title-provided": "Geen geldige boektitel opgegeven",
+	"bs-bookshelfui-editor-title": "Boekbewerker: $1",
+	"bs-bookshelfui-delete-book-text": "Wilt u dit boek echt verwijderen? De \"bookshelf\"-tags worden <em>niet</em> automatisch verwijderd uit de gekoppelde wikipagina's!",
+	"bs-bookshelfui-save-and-modify": "Opslaan en boeknavigatie toevoegen aan elke wikipagina",
+	"bs-bookshelfui-open-source": "Bronwikipagina tonen",
+	"bs-bookshelfui-dlg-tagsettings-title": "Tag-instellingen",
+	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "Alle pagina's van het boek worden naar deze naamruimte gekopieerd. Koppelingen worden aangepast.",
+	"bs-bookshelfui-confirm-delete-text": "Wilt u het geselecteerde hoofdstuk echt verwijderen? Subhoofdstukken worden ook verwijderd.",
+	"bs-bookshelfui-override-tag-title": "Wikipagina-associaties wijzigen",
+	"bs-bookshelfui-override-tag-text": "Wilt u de boekassociaties (<code>&lt;bs:bookshelf /&gt;</code>) binnen de wikipagina's toevoegen of bijwerken? Er wordt een nieuwe versie van de wikipagina gemaakt.",
+	"bs-bookshelfui-nothingtoexport-text": "Uw keuze is leeg",
+	"bs-bookshelfui-book-type": "Type boek",
+	"apihelp-bs-bookshelf-manage-summary": "Voorziet in taken voor boekbewerking.",
+	"bs-bookshelfui-flyout-intro": "Hier ziet u alle beschikbare boeken. Om een nieuw boek toe te voegen gaat u naar de pagina [[Special:Bookmanager|boekbeheer]].",
+	"bs-bookshelfui-export-book-text": "Even geduld, het boek wordt aangemaakt.",
+	"apihelp-bs-bookshelf-page-collection-store-summary": "Voorziet in een verzameling pagina's die gezamenlijk aan een boek kunnen worden toegevoegd.",
+	"apihelp-bs-bookshelf-mass-add-page-store-summary": "Voorziet in pagina's die gezamenlijk aan een boek kunnen worden toegevoegd.",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Basiswaarde voor teruggeven van pagina's",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Type bron voor gezamenlijk toevoegen",
+	"bookshelf-summary": "Algemene boeken",
+	"prefs-bookshelfui": "Speciale pagina Boekenplank"
 }

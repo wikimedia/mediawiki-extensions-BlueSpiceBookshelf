@@ -34,5 +34,7 @@
 	"bs-bookshelf-prof-defaultview-images": "이미지",
 	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
 	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
-	"bs-bookshelf-action-save-to-local-storage": "로컬 스토리지에 저장 중"
+	"bs-bookshelf-action-save-to-local-storage": "로컬 스토리지에 저장 중",
+	"bs-bookshelf-error-invalid-type": "지정된 책 유형이 유효하지 않습니다",
+	"bs-bookshelf-error-type-title-mismatch": "지정된 제목이 지정된 책 유형과 일치하지 않습니다"
 }
