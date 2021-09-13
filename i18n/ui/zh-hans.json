@@ -50,6 +50,7 @@
 	"bs-bookshelfui-dlg-copy-title": "复制“$1”",
 	"bs-bookshelfui-dlg-copy-name-addition": "（副本）",
 	"bs-bookshelfui-dlg-copy-target-name-label": "目标名称",
+	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "所有此书籍的页面将会被复制到此名字空间。链入将会被更改。",
 	"bs-bookshelfui-confirm-delete-title": "移除章节",
 	"bs-bookshelfui-confirm-delete-text": "您确定要删除所选的章节吗？子章节也将被删除。",
 	"bs-bookshelfui-override-tag-title": "更改wiki页面关联",
