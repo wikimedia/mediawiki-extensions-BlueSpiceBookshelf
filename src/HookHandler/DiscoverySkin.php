@@ -4,9 +4,24 @@ namespace BlueSpice\Bookshelf\HookHandler;
 
 use BlueSpice\Bookshelf\GlobalActionsTool;
 use BlueSpice\Bookshelf\MainLinkPanel;
+use BlueSpice\Discovery\Hook\BlueSpiceDiscoveryTemplateDataProviderAfterInit;
+use BlueSpice\Discovery\ITemplateDataProvider;
 use MWStake\MediaWiki\Component\CommonUserInterface\Hook\MWStakeCommonUIRegisterSkinSlotComponents;
 
-class DiscoverySkin implements MWStakeCommonUIRegisterSkinSlotComponents {
+class DiscoverySkin implements
+	BlueSpiceDiscoveryTemplateDataProviderAfterInit,
+	MWStakeCommonUIRegisterSkinSlotComponents
+{
+
+	/**
+	 *
+	 * @param ITemplateDataProvider $registry
+	 * @return void
+	 */
+	public function onBlueSpiceDiscoveryTemplateDataProviderAfterInit( $registry ): void {
+		$registry->unregister( 'toolbox', 'ca-bookshelf-add-to-book' );
+		$registry->register( 'actions_secondary', 'ca-bookshelf-add-to-book' );
+	}
 
 	/**
 	 * @inheritDoc

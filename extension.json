@@ -432,8 +432,8 @@
 		"Bookshelf": "\\BlueSpice\\Bookshelf\\Special\\Bookshelf"
 	},
 	"HookHandlers": {
-		"discovery-skin" : {
-			"class" : "\\BlueSpice\\Bookshelf\\HookHandler\\DiscoverySkin"
+		"discovery-skin": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\DiscoverySkin"
 		}
 	},
 	"Hooks": {
@@ -462,6 +462,7 @@
 		"GetPreferences": "\\BlueSpice\\Bookshelf\\Hook\\GetPreferences\\BookshelfDefaultView::callback",
 		"SkinTemplateNavigation::Universal": "BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigationUniversal\\AddAddToBookEntry::callback",
 		"BSUEModulePDFAfterFindFiles": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFAfterFindFiles\\AddAttachments::callback",
+		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "discovery-skin"
 	},
 	"Actions": {
