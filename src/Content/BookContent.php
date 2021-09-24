@@ -29,11 +29,16 @@ class BookContent extends TextContent {
 	protected function fillParserOutput(
 		Title $title, $revId, ParserOptions $options, $generateHtml, ParserOutput &$output
 	) {
-		$bookEditData = BookEditData::newFromTitleAndRequest(
-			$title, new \WebRequest()
-		);
-		$output->addJsConfigVars( 'bsBookshelfData', $bookEditData->getBookData() );
-		$output->addModules( 'ext.bluespice.bookshelf.view' );
-		$output->setText( \Html::element( 'div', [ 'id' => 'bs-bookshelf-view' ] ) );
+		try {
+			$bookEditData = BookEditData::newFromTitleAndRequest(
+				$title, new \WebRequest()
+			);
+			$output->addJsConfigVars( 'bsBookshelfData', $bookEditData->getBookData() );
+			$output->addModules( 'ext.bluespice.bookshelf.view' );
+			$output->setText( \Html::element( 'div', [ 'id' => 'bs-bookshelf-view' ] ) );
+		}
+		catch ( MWException $e ) {
+			$output->addWarning( $e->getText() );
+		}
 	}
 }
