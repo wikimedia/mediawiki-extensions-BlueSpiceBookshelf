@@ -431,6 +431,11 @@
 		"BookshelfBookEditor": "\\BlueSpice\\Bookshelf\\Special\\BookshelfBookEditor",
 		"Bookshelf": "\\BlueSpice\\Bookshelf\\Special\\Bookshelf"
 	},
+	"HookHandlers": {
+		"discovery-skin" : {
+			"class" : "\\BlueSpice\\Bookshelf\\HookHandler\\DiscoverySkin"
+		}
+	},
 	"Hooks": {
 		"BeforePageDisplay": "\\BlueSpice\\Bookshelf\\Hook\\BeforePageDisplay\\AddResources::callback",
 		"BSInsertMagicAjaxGetData": [
@@ -456,7 +461,8 @@
 		"BSBookshelfGetBookData": "\\BlueSpice\\Bookshelf\\Hook\\BSBookshelfGetBookData\\RunLegacyHook::callback",
 		"GetPreferences": "\\BlueSpice\\Bookshelf\\Hook\\GetPreferences\\BookshelfDefaultView::callback",
 		"SkinTemplateNavigation::Universal": "BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigationUniversal\\AddAddToBookEntry::callback",
-		"BSUEModulePDFAfterFindFiles": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFAfterFindFiles\\AddAttachments::callback"
+		"BSUEModulePDFAfterFindFiles": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFAfterFindFiles\\AddAttachments::callback",
+		"MWStakeCommonUIRegisterSkinSlotComponents": "discovery-skin"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
