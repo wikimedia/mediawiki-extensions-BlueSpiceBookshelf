@@ -31,5 +31,6 @@
 	"bs-bookshelf-prof-defaultview-grid": "רשת",
 	"bs-bookshelf-prof-defaultview-images": "תמונות",
 	"bs-bookshelf-action-save-to-local-storage": "מתבצעת שמירה לאחסון המקומי",
-	"bs-bookshelf-personal-books-page-prefix": "$1/ספרים/"
+	"bs-bookshelf-personal-books-page-prefix": "$1/ספרים/",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "נא להשתמש ב־<i>left</i> או ב־<i>right</i>."
 }

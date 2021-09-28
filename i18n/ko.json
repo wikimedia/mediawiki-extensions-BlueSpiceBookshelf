@@ -36,5 +36,8 @@
 	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
 	"bs-bookshelf-action-save-to-local-storage": "로컬 스토리지에 저장 중",
 	"bs-bookshelf-error-invalid-type": "지정된 책 유형이 유효하지 않습니다",
-	"bs-bookshelf-error-type-title-mismatch": "지정된 제목이 지정된 책 유형과 일치하지 않습니다"
+	"bs-bookshelf-error-type-title-mismatch": "지정된 제목이 지정된 책 유형과 일치하지 않습니다",
+	"bs-bookshelf-tagerror-article-title-not-valid": "지정된 원본 문서(&quot;$1&quot;)가 존재하지 않습니다.",
+	"bs-bookshelf-tagerror-article-content-not-valid": "지정된 원본 문서(&quot;$1&quot;)에 유효하지 않은 데이터가 포함되어 있습니다.",
+	"bs-bookshelf-pref-supressbookns-help": "문서 이름의 이름공간은 PDF 출력에서 숨겨집니다."
 }

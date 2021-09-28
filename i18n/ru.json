@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amikeco",
+			"DDPAT",
 			"Daniel Mietchen",
 			"Facenapalm",
 			"Kareyac",
@@ -35,5 +36,19 @@
 	"bs-bookshelf-prof-defaultview-images": "Изображения",
 	"bs-bookshelf-action-save-to-local-storage": "Сохранение в локальном хранилище",
 	"bs-bookshelf-grouping-template-type-local_storage": "Временные книги",
-	"bs-bookshelf-action-export-book": "Экспортировать книгу"
+	"bs-bookshelf-action-export-book": "Экспортировать книгу",
+	"bs-bookshelf-pref-TitleDisplayText": "Использовать отображаемый заголовок из источника книги в статье",
+	"bs-bookshelf-add-to-book-added": "Страница добавлена в книгу «$1».",
+	"apihelp-query+bsbookshelf-summary": "Позволяет делать запросы ко всем книгам.",
+	"bs-bookshelf-grouping-template-type-ns_book": "Основные книги",
+	"bs-bookshelf-action-editbooksource": "Изменить источник книги",
+	"bs-bookshelf-action-editbooksource-create": "Создать источник книги",
+	"bs-bookshelf-error-invalid-type": "Указан недопустимый тип книги",
+	"bs-bookshelf-error-type-title-mismatch": "Предоставленное название не соответствует данному типу книги",
+	"bs-bookshelf-editor-no-title-provided": "Не указано действительное название книги",
+	"bookshelf-summary": "Основные книги",
+	"prefs-bookshelf": "Специальная страница книжной полки",
+	"right-bookshelf-viewspecialpage": "Доступ к специальной странице [[Special:Bookshelf]]",
+	"action-bookshelf-viewspecialpage": "доступ к специальной странице [[Special:Bookshelf]]",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Показывать пейджер глав книги перед содержанием"
 }
