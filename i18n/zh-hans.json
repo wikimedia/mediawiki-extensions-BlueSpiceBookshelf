@@ -75,5 +75,5 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "在页面开头添加章节分页器。",
 	"bs-bookshelf-pref-chapterpageraftercontent": "在内容后显示书籍章节分页器",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "在页面底部添加章节分页器。",
-	"bs-bookshelf-pref-supressbookns-help": "在PDF输出中，页面的命名空间被隐藏。"
+	"bs-bookshelf-pref-supressbookns-help": "在 PDF 输出中，页面的命名空间是隐藏的。"
 }
