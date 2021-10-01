@@ -77,5 +77,5 @@
 	"apihelp-bs-bookshelf-bookstore-param-node": "指定一个需要为其提供子章节列表的节点。",
 	"apihelp-bs-bookshelf-bookstore-param-book": "指定一本需要为其提供章节列表的书籍。",
 	"bs-bookshelf-pref-titledisplaytext-help": "将书籍导航中的标题显示为页面标题，而非页面名称。",
-	"bs-bookshelf-pref-supressbookns-help": "在PDF输出中，页面的命名空间被隐藏。"
+	"bs-bookshelf-pref-supressbookns-help": "在 PDF 输出中，页面的命名空间是隐藏的。"
 }
