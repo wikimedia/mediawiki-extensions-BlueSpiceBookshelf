@@ -55,7 +55,7 @@
 	"bs-bookshelfui-confirm-delete-title": "移除章节",
 	"bs-bookshelfui-confirm-delete-text": "您确定要删除所选的章节吗？子章节也将被删除。",
 	"bs-bookshelfui-override-tag-title": "更改wiki页面关联",
-	"bs-bookshelfui-override-tag-text": "您要增加或更新此wikipage的书籍关联 (<code>&lt;bs:bookshelf /&gt;</code>) 吗? 这将创建此wikipage的一个新版本。",
+	"bs-bookshelfui-override-tag-text": "您要增加或更新 wiki 页面中关联的书籍 (<code>&lt;bs:bookshelf /&gt;</code>) 吗? 这将会创建此 wiki 页面的一个新版本。",
 	"bs-bookshelfui-nothingtoexport-text": "您的选择为空",
 	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|一本书|$1 本书}})",
 	"bs-bookshelfui-book-type": "书籍类别",
