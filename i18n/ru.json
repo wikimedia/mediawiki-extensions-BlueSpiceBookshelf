@@ -50,5 +50,9 @@
 	"prefs-bookshelf": "Специальная страница книжной полки",
 	"right-bookshelf-viewspecialpage": "Доступ к специальной странице [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "доступ к специальной странице [[Special:Bookshelf]]",
-	"bs-bookshelf-pref-chapterpagerbeforecontent": "Показывать пейджер глав книги перед содержанием"
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Показывать пейджер глав книги перед содержанием",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Добавьте пейджер глав вверху страницы.",
+	"bs-bookshelf-pref-chapterpageraftercontent": "Показывать пейджер глав книги после содержания",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Добавьте пейджер глав внизу страницы.",
+	"bs-bookshelf-pref-supressbookns-help": "Пространство имён страниц скрыто в выводе PDF."
 }

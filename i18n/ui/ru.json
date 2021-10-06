@@ -78,5 +78,7 @@
 	"bs-bookshelfui-bookmetatag-department": "Отдел",
 	"bookshelf-summary": "Основные книги",
 	"right-bookshelf-viewspecialpage": "Доступ к специальной странице [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "доступ к специальной странице [[Special:Bookshelf]]"
+	"action-bookshelf-viewspecialpage": "доступ к специальной странице [[Special:Bookshelf]]",
+	"bs-bookshelfui-save-and-modify": "Сохраните и добавьте навигацию по книгам на каждую вики-страницу",
+	"bs-bookshelfui-open-source": "Показать исходную вики-страницу"
 }
