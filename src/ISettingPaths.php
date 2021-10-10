@@ -3,5 +3,5 @@
 namespace BlueSpice\Bookshelf;
 
 interface ISettingPaths {
-	const FEATURE_BOOK = 'book';
+	public const FEATURE_BOOK = 'book';
 }
