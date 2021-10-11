@@ -8,7 +8,7 @@
  *
  * @covers PageHierarchyProvider
  */
-class PageHierarchyProviderTest extends MediaWikiTestCase {
+class PageHierarchyProviderTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 *
