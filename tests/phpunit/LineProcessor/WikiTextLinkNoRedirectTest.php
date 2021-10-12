@@ -4,14 +4,14 @@ namespace BlueSpice\Bookshelf\Tests\LineProcessor;
 
 use BlueSpice\Bookshelf\LineProcessor\WikiTextLinkNoRedirect;
 use BlueSpice\Bookshelf\TreeNode;
-use MediaWikiTestCase;
+use MediaWikiIntegrationTestCase;
 
 /**
  * @group Database
  * @group BlueSpice
  * @group BlueSpiceBookshelf
  */
-class WikiTextLinkNoRedirectTest extends MediaWikiTestCase {
+class WikiTextLinkNoRedirectTest extends MediaWikiIntegrationTestCase {
 
 	protected function setUp(): void {
 		parent::setUp();

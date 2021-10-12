@@ -4,7 +4,7 @@ namespace BlueSpice\Bookshelf\Tests\LineProcessor;
 
 use BlueSpice\Bookshelf\LineProcessor\WikiTextLink;
 use BlueSpice\Bookshelf\TreeNode;
-use MediaWikiTestCase;
+use MediaWikiIntegrationTestCase;
 
 /**
  * @group Database
@@ -12,7 +12,7 @@ use MediaWikiTestCase;
  * @group BlueSpiceBookshelf
  * @covers BlueSpice\Bookshelf\LineProcessor\WikiTextLink
  */
-class WikiTextLinkTest extends MediaWikiTestCase {
+class WikiTextLinkTest extends MediaWikiIntegrationTestCase {
 
 	protected function setUp(): void {
 		parent::setUp();
