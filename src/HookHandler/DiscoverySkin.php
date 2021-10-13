@@ -43,7 +43,8 @@ class DiscoverySkin implements
 				'bs-special-bookshelf' => [
 					'factory' => static function () {
 						return new MainLinkPanel();
-					}
+					},
+					'position' => 20
 				]
 			]
 		);
