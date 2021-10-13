@@ -2,19 +2,12 @@
 
 namespace BlueSpice\Bookshelf;
 
-use BsCore;
-use BsPARAMTYPE;
-use BsValidator;
 use Config;
-use Exception;
-use FormatJson;
 use Html;
 use MediaWiki\MediaWikiServices;
 use PageHierarchyProvider;
 use Parser;
 use Title;
-use ViewTagError;
-use ViewTagErrorList;
 
 /**
  * Temp class, until all tags are implemented using TagRegistry
@@ -36,161 +29,6 @@ class TagProcessor {
 	 */
 	protected function getConfig() {
 		return $this->config;
-	}
-
-	/**
-	 * @param string $sInput Content of $lt;bs:collectiontoc /&gt; from MediaWiki Framework
-	 * @param array $aAttributes Attributes of &lt;bs:collectiontoc /&gt; from MediaWiki Framework
-	 * @param Parser $oParser Parser object from MediaWiki Framework
-	 * @return string
-	 */
-	public function onBookshelfTag( $sInput, $aAttributes, $oParser ) {
-		$sSourceArticleName =
-			BsCore::sanitizeArrayEntry( $aAttributes, 'src', '', BsPARAMTYPE::STRING );
-		$sSourceArticleName =
-			BsCore::sanitizeArrayEntry( $aAttributes, 'book', $sSourceArticleName,
-				BsPARAMTYPE::STRING );
-		$iTreePanelWidth =
-			BsCore::sanitizeArrayEntry( $aAttributes, 'width', 300, BsPARAMTYPE::INT );
-		$iTreePanelHeight =
-			BsCore::sanitizeArrayEntry( $aAttributes, 'height', 400, BsPARAMTYPE::INT );
-		$sTreePanelFloat =
-			BsCore::sanitizeArrayEntry( $aAttributes, 'float', '', BsPARAMTYPE::STRING );
-		$sTreePanelStyle =
-			BsCore::sanitizeArrayEntry( $aAttributes, 'style', '', BsPARAMTYPE::STRING );
-
-		$oErrorListView = new ViewTagErrorList( $this );
-		if ( !empty( $sTreePanelStyle ) ) {
-			$sTreePanelStyle = ' style="' . $sTreePanelStyle . '"';
-		} else {
-			if ( $sTreePanelFloat == 'right' || $sTreePanelFloat == 'left' ) {
-				$sMarginSide = ( $sTreePanelFloat == 'right' ) ? 'left' : 'right';
-				$sTreePanelStyle = ' style="margin-' . $sMarginSide . ': 10px; float: '
-					. $sTreePanelFloat . '"';
-			} elseif ( !empty( $sTreePanelFloat ) ) {
-				$oErrorListView->addItem(
-					new ViewTagError( 'float: '
-						. wfMessage( 'bs-bookshelf-tagerror-attribute-float-not-valid' )->text()
-					)
-				);
-			}
-		}
-
-		$oTreePanelWidthValidatorResponse =
-			BsValidator::isValid( 'PositiveInteger', $iTreePanelWidth, [ 'fullResponse' => true ] );
-		if ( $oTreePanelWidthValidatorResponse->getErrorCode() ) {
-			$oErrorListView->addItem(
-				new ViewTagError( 'width: ' .
-					wfMessage( 'bs-bookshelf-positive-integer-validation-not-approved' )
-						->text()
-				)
-			);
-		}
-
-		$oTreePanelHeightValidatorResponse =
-			BsValidator::isValid( 'PositiveInteger', $iTreePanelHeight,
-				[ 'fullResponse' => true ] );
-		if ( $oTreePanelHeightValidatorResponse->getErrorCode() ) {
-			$oErrorListView->addItem(
-				new ViewTagError( 'height: '
-					. wfMessage( 'bs-bookshelf-positive-integer-validation-not-approved' )
-						->text()
-				)
-			);
-		}
-
-		if ( empty( $sSourceArticleName ) ) {
-			$oErrorListView->addItem(
-				new ViewTagError( wfMessage( 'bs-bookshelf-tagerror-no-attribute-given' )->text() )
-			);
-		}
-
-		if ( $oErrorListView->hasItems() ) {
-			return $oErrorListView->execute();
-		}
-
-		$oCurrentTitle = $oParser->getTitle();
-		$sTitle = $oCurrentTitle->getPrefixedText();
-		$sNumber = '';
-		$bHasChildren = false;
-		$sDisplayTitle = $sTitle;
-
-		try {
-			$oPHP = PageHierarchyProvider::getInstanceFor(
-				$sSourceArticleName,
-				[ 'follow-redirects' => true ]
-			);
-			$oJSTreeJSON = $oPHP->getExtendedTOCJSON();
-			$oEntry = $oPHP->getEntryFor( $sTitle );
-			if ( $oEntry !== null ) {
-				$sNumber = $oEntry->articleNumber;
-
-				if ( isset( $oEntry->articleDisplayTitle ) ) {
-					$sDisplayTitle = $oEntry->articleDisplayTitle;
-				}
-				// Fallback in case of no display title but subpage
-				if ( str_replace( '_', ' ', $sDisplayTitle ) === $sTitle && $oCurrentTitle->isSubpage() ) {
-					$sDisplayTitle = basename( $oCurrentTitle->getText() );
-				}
-				$bHasChildren = isset( $oEntry->children ) && !empty( $oEntry->children );
-			}
-		} catch ( Exception $e ) {
-			$oErrorListView->addItem(
-				new ViewTagError(
-					wfMessage(
-						'bs-bookshelf-tagerror-article-title-not-valid',
-						$sSourceArticleName
-					)->plain()
-				)
-			);
-			return $oErrorListView->execute();
-		}
-
-		$aAdditionalAttribs = [];
-		MediaWikiServices::getInstance()->getHookContainer()->run(
-			'BSBookshelfTagBeforeRender',
-			[
-				&$sSourceArticleName,
-				$oJSTreeJSON,
-				&$sNumber,
-				&$aAdditionalAttribs
-			]
-		);
-
-		$oParserOut = $oParser->getOutput();
-
-		$oParserOut->setProperty( 'bs-bookshelf-sourcearticle', $sSourceArticleName );
-		$oParserOut->setProperty( 'bs-bookshelf-number', $sNumber );
-		$oParserOut->setProperty( 'bs-bookshelf-display-title', $sDisplayTitle );
-
-		if ( $this->getConfig()->get( 'BookshelfTitleDisplayText' ) ) {
-			$sTitleText = $sDisplayTitle;
-			if ( $sNumber ) {
-				$sTitleText = '<span class="bs-chapter-number">' . $sNumber . '. </span>' . $sTitleText;
-			}
-			if ( $sTitleText !== $sTitle ) {
-				$oParserOut->setTitleText( $sTitleText );
-			}
-		}
-
-		// This seems to better place than "BeforePageDisplay" hook
-		$oParserOut->addModules( 'ext.bluespice.bookshelf' );
-		$oParserOut->addModuleStyles( 'ext.bluespice.bookshelf.styles' );
-
-		$aAttribs = [
-			'class' => 'bs-bookshelf-toc',
-			'data-bs-src' => $sSourceArticleName,
-			'data-bs-has-children' => $bHasChildren,
-			'data-bs-tree' => FormatJson::encode( $oJSTreeJSON )
-		];
-
-		if ( !empty( $sNumber ) ) {
-			$aAttribs['data-bs-number'] = $sNumber;
-		}
-
-		$aAttribs = array_merge( $aAttribs, $aAdditionalAttribs );
-
-		return Html::element( 'div', $aAttribs );
 	}
 
 	/**
