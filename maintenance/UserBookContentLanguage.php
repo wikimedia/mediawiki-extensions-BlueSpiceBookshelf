@@ -100,7 +100,7 @@ class UserBookContentLanguage extends LoggedUpdateMaintenance {
 	private function moveBook( Title $title, Title $moveTitle ) {
 		$status = Status::newGood();
 		try{
-			$move = new MovePage( $title, $moveTitle );
+			$move = MediaWikiServices::getInstance()->getMovePageFactory()->newMovePage( $title, $moveTitle );
 			$status = $move->move(
 				$this->getMaintenanceUser(),
 				"Bookshelf: Store user books in content language subpage",
