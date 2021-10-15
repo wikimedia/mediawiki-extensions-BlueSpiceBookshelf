@@ -10,37 +10,65 @@
 		} );
 	};
 
-	bs.bookshelf.storageLocation.WikiPage.prototype.appendText = function( record, content, modifyTag ) {
+	bs.bookshelf.storageLocation.WikiPage.prototype.appendText = function( record, content, modifyTag, pageId ) {
 		var api = new mw.Api(),
-			pageId = record.get( 'page_id' ),
 			dfd = $.Deferred();
+
+		pageId = pageId || record.get( 'page_id' );
 
 		api.postWithToken( 'csrf', {
 			action: 'edit',
 			pageid: pageId,
 			appendtext: content
-		} ).done( function( response, xhr ){
-				if( modifyTag ) {
-					var copyAction = new BS.action.APICopyPage({
-						sourceTitle: mw.config.get( 'wgPageName' ),
-						targetTitle: mw.config.get( 'wgPageName' ) //We just want to modify the content
-					});
-					copyAction.on( 'beforesaveedit', function( action, edit ) {
-						edit.content = edit.content.replace(/<(bs:)?bookshelf.*?(src|book)=\"(.*?)\".*?\/>/gi, function( fullmatch, group ) {
-							return '';
-						});
-						edit.content = '<bs:bookshelf src="' + response.edit.title + '" />' + "\n" + edit.content.trim();
-					});
-					copyAction.execute().done( function() {
-						dfd.resolve();
-					} );
-				}
-				else {
+		} ).done( function( response ){
+			this.updateBookshelfTag( mw.config.get( 'wgPageName' ), response.edit.title ).done(
+				function() {
 					dfd.resolve();
+				}
+			).fail( function() {
+				dfd.reject();
+			} );
+		}.bind( this ) ).fail( function() {
+			dfd.reject();
+		} );
+
+		return dfd.promise();
+	};
+
+	bs.bookshelf.storageLocation.WikiPage.prototype.updateBookshelfTag = function( page, bookTitle ) {
+		var api = new mw.Api(),
+			dfd = $.Deferred();
+
+		api.postWithToken( 'csrf', {
+			action: 'parse',
+			prop: 'wikitext',
+			page: page
+		} ).done( function( response ){
+			if ( !response.hasOwnProperty( 'parse' ) || !response.parse.hasOwnProperty( 'wikitext' ) ) {
+				dfd.reject();
+				return;
+			}
+			var content = response.parse.wikitext['*'];
+			content = content.replace( /<(bs:)?bookshelf.*?(src|book)=\"(.*?)\".*?\/>/gi, function( fullmatch, group ) {
+				return '';
+			} );
+			content = '<bs:bookshelf src="' + bookTitle + '" />' + "\n" + content.trim();
+			api.postWithToken( 'csrf', {
+				action: 'edit',
+				title: page,
+				text: content
+			} ).done( function( response ) {
+				if ( response.edit.result === 'Success' ) {
+					dfd.resolve();
+				} else {
+					dfd.fail();
 				}
 			} ).fail( function() {
 				dfd.reject();
 			} );
+		} ).fail( function() {
+			dfd.reject();
+		} );
 
 		return dfd.promise();
 	};

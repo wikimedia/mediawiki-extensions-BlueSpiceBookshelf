@@ -1,13 +1,14 @@
 $(document).on( 'click', '#ca-bookshelf-add-to-book', function( e ) {
-	mw.loader.using( 'ext.bluespice.extjs' ).done( function() {
-		Ext.require( 'BS.Bookshelf.dialog.AddToBook', function() {
-			var dlg = new BS.Bookshelf.dialog.AddToBook();
-			dlg.setData( {
-				'pagename': mw.config.get( 'wgPageName' )
-			} );
-			dlg.show();
-		});
-	});
 	e.preventDefault();
+
+	var dialog = new bs.bookshelf.dialog.AddToBook( {
+		pagename: mw.config.get( 'wgPageName' )
+	} );
+	dialog.show().closed.then( function( data ) {
+		if ( data.needsReload ) {
+			window.location.reload();
+		}
+	}.bind( this ) );
+
 	return false;
-});
+} );

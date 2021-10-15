@@ -1,113 +1,129 @@
-Ext.define( 'BS.Bookshelf.dialog.AddToBook', {
-	extend: 'MWExt.Dialog',
-	requires: [ 'BS.Bookshelf.form.field.BookCombo', 'BS.action.APICopyPage' ],
-	closeAction: 'destroy',
-	title: mw.message( 'bs-bookshelf-add-to-book-label' ).plain(),
-	height: 200,
+( function( mw, $, bs ) {
+	bs.util.registerNamespace( 'bs.bookshelf.dialog' );
 
-	afterInitComponent: function() {
-		this.cbBooks = new BS.Bookshelf.form.field.BookCombo({
-			fieldLabel: mw.message( 'bs-bookshelf-add-to-book-label-book' ).plain(),
-			forceSelection: true,
-			maxHeight: 24,
-		});
+	bs.bookshelf.dialog.AddToBook = function( config ) {
+		config.size = 'medium';
+		bs.bookshelf.dialog.AddToBook.parent.call( this, config );
 
-		this.tfAlias = new Ext.form.field.Text({
-			fieldLabel: mw.message( 'bs-bookshelf-add-to-book-label-alias' ).plain(),
-			maxHeight: 24,
-			margin: '10 0'
-		});
+		this.pageName = config.pagename;
+	};
 
-		this.chbModifyBookshelfTag = new Ext.form.field.Checkbox({
-			//fieldLabel: '&nbsp;',
-			boxLabel: mw.message( 'bs-bookshelf-add-to-book-label-mod-bstag' ).plain(),
-			hidden: true,
-			margin: '15 0'
-		});
+	OO.inheritClass( bs.bookshelf.dialog.AddToBook, OOJSPlus.ui.dialog.FormDialog );
 
-		this.cbBooks.on( 'change', function( sender, value ) {
-			var record = sender.getStore().findRecord( 'book_prefixedtext', value );
-			if ( record ) {
-				var type = record.get( 'book_type' );
-				var location = bs.bookshelf.storageLocationRegistry.lookup( type );
-				if ( location && location.allowChangingPageTags() ) {
-					return this.chbModifyBookshelfTag.setVisible( true );
-				}
-			}
-			this.chbModifyBookshelfTag.setVisible( false );
-			this.chbModifyBookshelfTag.setValue( false );
-		}.bind( this ) );
+	bs.bookshelf.dialog.AddToBook.prototype.getActions = function() {
+		return [ 'cancel', 'add' ];
+	};
 
-		this.items = [
-			this.cbBooks,
-			this.tfAlias,
-			this.chbModifyBookshelfTag
-		];
+	bs.bookshelf.dialog.AddToBook.prototype.getTitle = function() {
+		return mw.message( 'bs-bookshelf-add-to-book-label' ).plain();
+	};
 
-		this.callParent( arguments );
-	},
+	bs.bookshelf.dialog.AddToBook.prototype.initialize = function() {
+		bs.bookshelf.dialog.AddToBook.parent.prototype.initialize.call( this );
+		this.actions.setAbilities( { add: false } );
+	};
 
-	getData: function () {
-		return {
-			'prefixedText': this.cbBooks.getValue(),
-			'displayText': this.cbBooks.getRawValue()
-		};
-	},
-
-	setData: function( obj ) {
-		var alias = obj.pagename;
-		alias = alias.split('/').reverse()[0]; //basename()
-		this.tfAlias.setValue( alias.replace( /_/g, ' ' ) );
-	},
-
-	onBtnOKClick: function() {
-		var record = this.cbBooks.getValue();
-		if( !record || record === '' ) {
-			bs.util.alert(
-				'bs-bui-addtobookdialog-alert-empty',
-				{
-					textMsg: 'bs-bookshelf-empty-selection'
-				}
-			);
-			return;
-		}
-		this.doAddToBook();
-	},
-
-	doAddToBook: function() {
-		this.setLoading( true );
-		var me = this,
-			selectedBook =  this.getData(),
-			alias = this.tfAlias.getValue(),
-			modifyBookshelfTag = this.chbModifyBookshelfTag.getValue(),
-			messageTitle = mw.message( 'bs-bookshelf-add-to-book-label' ).plain(),
-			record = this.cbBooks.getStore().findRecord( 'book_prefixedtext', selectedBook.prefixedText ),
-			storage = bs.bookshelf.storageLocationRegistry.lookup( record.get( 'book_type' ) );
-
-		var wikiText = "\n* [[{0}|{1}]]".format(
-			mw.config.get( 'wgPageName' ),
-			alias
-		);
-
-		storage.appendText( record, wikiText, modifyBookshelfTag ).done( function() {
-			mw.notify(
-				mw.message( 'bs-bookshelf-add-to-book-added', selectedBook.displayText ).parse(),
-				{ title: messageTitle }
-			);
-			me.afterApiCallSuccess();
-			if ( modifyBookshelfTag ) {
-				mw.notify(
-					mw.message( 'bs-bookshelf-add-to-book-mod-bstag' ).plain(),
-					{ title: messageTitle }
-				);
-				window.location.reload();
+	bs.bookshelf.dialog.AddToBook.prototype.getFormItems = function() {
+		this.bookPicker = new OOJSPlus.ui.widget.StoreDataInputWidget( {
+			id: 'book-picker',
+			queryAction: 'bs-bookshelf-store',
+			labelField: 'book_displaytext',
+			groupBy: 'book_type',
+			groupLabelCallback: function( label, data ) {
+				var location = bs.bookshelf.storageLocationRegistry.lookup( label );
+				return location.getLabel();
 			}
 		} );
-	},
+		this.bookPicker.connect( this, {
+			change: function() {
+				var data = this.bookPicker.getSelectedItemData();
+				if ( typeof data === 'object' && data !== null ) {
+					var type = data.book_type;
+					var location = bs.bookshelf.storageLocationRegistry.lookup( type );
+					if ( location && location.allowChangingPageTags() ) {
+						this.overrideBookshelfTagLayout.$element.show();
+					} else {
+						this.overrideBookshelfTag.setSelected( false );
+						this.overrideBookshelfTagLayout.$element.hide();
+					}
+					this.updateSize();
+					this.actions.setAbilities( { add: true } );
+				} else {
+					this.actions.setAbilities( { add: false } );
+				}
+			}.bind( this )
+		} );
+		this.alias = new OO.ui.TextInputWidget( {
+			value: this.pageName,
+			id: 'page-alias'
+		} );
+		this.overrideBookshelfTag = new OO.ui.CheckboxInputWidget( {
+			id: 'override-bookshelf-tag'
+		} );
+		this.overrideBookshelfTagLayout = new OO.ui.FieldLayout( this.overrideBookshelfTag, {
+			label: mw.message( 'bs-bookshelf-add-to-book-label-mod-bstag' ).plain(),
+			align: 'right'
+		} );
+		this.overrideBookshelfTagLayout.$element.hide();
 
-	afterApiCallSuccess: function() {
-		if ( this.fireEvent( 'ok', this, this.getData() ) ) {
-			this.close();
+		return [
+			new OO.ui.FieldLayout( this.bookPicker, {
+				label: mw.message( 'bs-bookshelf-add-to-book-label-book' ).plain(),
+				align: 'top'
+			} ),
+			new OO.ui.FieldLayout( this.alias, {
+				label: mw.message( 'bs-bookshelf-add-to-book-label-alias' ).plain(),
+				align: 'top'
+			} ),
+			this.overrideBookshelfTagLayout
+		];
+	};
+
+	/**
+	 *
+	 * @param string action
+	 * @returns OO.ui.Process|null if not handling
+	 */
+	OOJSPlus.ui.dialog.FormDialog.prototype.onAction = function( action ) {
+		if ( action === 'add' ) {
+			var dfd = $.Deferred();
+			var selectedBook = this.bookPicker.getSelectedItemData();
+			if ( selectedBook === null ) {
+				// Sanity
+				dfd.reject( new OO.ui.Error() );
+			}
+			var alias = this.alias.getValue(),
+				modifyBookshelfTag = this.overrideBookshelfTag.isSelected(),
+				messageTitle = mw.message( 'bs-bookshelf-add-to-book-label' ).plain(),
+				storage = bs.bookshelf.storageLocationRegistry.lookup( selectedBook.book_type );
+
+			var wikiText = "\n* [[{0}|{1}]]".format(
+				this.pageName,
+				alias
+			);
+
+			storage.appendText( null, wikiText, modifyBookshelfTag, selectedBook.page_id ).done( function() {
+				mw.notify(
+					mw.message( 'bs-bookshelf-add-to-book-added', selectedBook.book_displaytext ).parse(),
+					{ title: messageTitle }
+				);
+				if ( modifyBookshelfTag ) {
+					mw.notify(
+						mw.message( 'bs-bookshelf-add-to-book-mod-bstag' ).plain(),
+						{ title: messageTitle }
+					);
+					this.close( { needsReload: true } );
+				}
+				this.close();
+				dfd.resolve();
+			}.bind( this ) ).fail( function() {
+				dfd.reject( new OO.ui.Error() );
+			} );
+
+			return dfd.promise();
 		}
-	}
-});
+
+		return OOJSPlus.ui.dialog.FormDialog.parent.prototype.onAction.call( this, action );
+	};
+
+} ) ( mediaWiki, jQuery, blueSpice );
