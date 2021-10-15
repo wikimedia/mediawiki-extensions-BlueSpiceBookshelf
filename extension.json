@@ -390,6 +390,11 @@
 			"dependencies": [
 				"ext.bluespice.extjs"
 			]
+		},
+		"ext.bookshelf.navigationpanel": {
+			"styles": [
+				"bluespice.bookshelf.navigation-panel.css"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {

@@ -4,9 +4,11 @@ namespace BlueSpice\Bookshelf\HookHandler;
 
 use BlueSpice\Bookshelf\GlobalActionsTool;
 use BlueSpice\Bookshelf\MainLinkPanel;
+use BlueSpice\Bookshelf\SidebarBookPanel;
 use BlueSpice\Discovery\Hook\BlueSpiceDiscoveryTemplateDataProviderAfterInit;
 use BlueSpice\Discovery\ITemplateDataProvider;
 use MWStake\MediaWiki\Component\CommonUserInterface\Hook\MWStakeCommonUIRegisterSkinSlotComponents;
+use RequestContext;
 
 class DiscoverySkin implements
 	BlueSpiceDiscoveryTemplateDataProviderAfterInit,
@@ -45,6 +47,19 @@ class DiscoverySkin implements
 						return new MainLinkPanel();
 					},
 					'position' => 20
+				]
+			]
+		);
+
+		$context = RequestContext::getMain();
+		$title = $context->getTitle();
+		$registry->register(
+			"SidebarPrimaryTabPanels",
+			[
+				'book' => [
+					'factory' => static function () use ( $title ) {
+						return new SidebarBookPanel( $title );
+					}
 				]
 			]
 		);

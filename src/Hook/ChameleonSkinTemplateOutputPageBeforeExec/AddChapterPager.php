@@ -31,13 +31,15 @@ class AddChapterPager extends ChameleonSkinTemplateOutputPageBeforeExec {
 		$pagerBeforeContent = $config->get( 'BookShelfShowChapterNavigationPagerBeforeContent' );
 		$pagerAfterContent = $config->get( 'BookShelfShowChapterNavigationPagerAfterContent' );
 
-		$chapterPager = new ChapterPager( $this->template );
+		$chapterPager = new ChapterPager();
+		$chapterPager->makePagerData( $this->template->getSkin()->getTitle() );
 
 		if ( ( $pagerBeforeContent === true ) || ( $pagerBeforeContent === 1 ) ) {
 			$this->mergeSkinDataArray(
 				SkinData::BEFORE_CONTENT,
 				[
-					'bookshelfui-chapterpager' => $chapterPager->getDefaultPagerHtml()
+					'bookshelfui-chapterpager' => $chapterPager->getDefaultPagerHtml(
+						$this->template->getSkin()->getTitle() )
 				]
 			);
 		}
@@ -46,7 +48,8 @@ class AddChapterPager extends ChameleonSkinTemplateOutputPageBeforeExec {
 			$this->mergeSkinDataArray(
 				SkinData::AFTER_CONTENT,
 				[
-					'bookshelfui-chapterpager' => $chapterPager->getDefaultPagerHtml()
+					'bookshelfui-chapterpager' => $chapterPager->getDefaultPagerHtml(
+						$this->template->getSkin()->getTitle() )
 				]
 			);
 		}

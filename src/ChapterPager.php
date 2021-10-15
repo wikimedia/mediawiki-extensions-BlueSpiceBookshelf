@@ -4,7 +4,6 @@ namespace BlueSpice\Bookshelf;
 
 use Html;
 use PageHierarchyProvider;
-use SkinTemplate;
 use Title;
 
 class ChapterPager {
@@ -15,17 +14,13 @@ class ChapterPager {
 
 	/**
 	 *
-	 * @param SkinTemplate $skinTemplate
+	 * @param Title $title
+	 * @return void
 	 */
-	public function __construct( $skinTemplate ) {
-		$this->skintemplate = $skinTemplate;
-		$this->makePagerData();
-	}
-
-	private function makePagerData() {
+	public function makePagerData( $title ) {
 		try {
 			$this->phProvider = PageHierarchyProvider::getInstanceForArticle(
-				$this->skintemplate->getSkin()->getTitle()->getPrefixedText()
+				$title->getPrefixedText()
 			);
 		} catch ( \Exception $ex ) {
 			return '';
@@ -38,8 +33,6 @@ class ChapterPager {
 		if ( isset( $bookMeta['title'] ) ) {
 			$this->bookTitle = $bookMeta['title'];
 		}
-
-		$title = $this->skintemplate->getSkin()->getTitle();
 
 		$flatArray = $this->flatArray( (array)$tree->children );
 		for ( $i = 0; $i < count( $flatArray ); $i++ ) {
@@ -64,7 +57,6 @@ class ChapterPager {
 		$items = [];
 		for ( $i = 0; $i < count( $data ); $i++ ) {
 			$item = (array)$data[$i];
-
 			if ( array_key_exists( 'children', $item ) ) {
 				$children = $this->flatArray( (array)$item['children'] );
 				unset( $item['children'] );
@@ -110,10 +102,10 @@ class ChapterPager {
 	}
 
 	/**
-	 *
+	 * @param Title $title
 	 * @return string
 	 */
-	public function getDefaultPagerHtml() {
+	public function getDefaultPagerHtml( $title ) {
 		$html = Html::openElement( 'div', [ 'class' => 'bookshelfui-chapterpager-heading' ] );
 		$html .= Html::element(
 			'h4',
