@@ -166,6 +166,7 @@
 		},
 		"ext.bluespice.bookshelf.addToBook": {
 			"scripts": [
+				"BS.Bookshelf/dialog/AddToBook.js",
 				"bluespice.bookshelf.addToBook.js"
 			],
 			"messages": [
@@ -178,7 +179,10 @@
 				"bs-bookshelf-empty-selection"
 			],
 			"dependencies": [
-				"ext.bluespice.bookshelf.storageLocation"
+				"ext.bluespice.bookshelf.storageLocation",
+				"ext.bluespice",
+				"ext.oOJSPlus.dialogs",
+				"ext.oOJSPlus.widgets"
 			]
 		},
 		"ext.bluespice.bookshelf.styles": {
