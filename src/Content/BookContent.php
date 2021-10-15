@@ -38,7 +38,7 @@ class BookContent extends TextContent {
 			$output->setText( \Html::element( 'div', [ 'id' => 'bs-bookshelf-view' ] ) );
 		}
 		catch ( MWException $e ) {
-			$output->addWarning( $e->getText() );
+			$output->addWarningMsg( "bs-bookshelf-warning", $e->getText() );
 		}
 	}
 }

@@ -63,5 +63,6 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Add a chapter pager at the top of the page.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Show book chapter pager after content",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Add a chapter pager at the bottom of the page.",
-	"bs-bookshelf-pref-supressbookns-help": "The namespace of page names is hidden in the PDF output."
+	"bs-bookshelf-pref-supressbookns-help": "The namespace of page names is hidden in the PDF output.",
+	"bs-bookshelf-warning": "PHP exception: $1"
 }
