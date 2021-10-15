@@ -57,8 +57,7 @@ class BookshelfImage extends ArticlePreviewImage {
 			return new ImageExternal(
 				$this,
 				$file->createThumb(
-					$this->params[static::WIDTH],
-					$this->params[static::HEIGHT]
+					$this->params[static::WIDTH]
 				),
 				$this->getContext()->getUser()
 			);
