@@ -35,9 +35,9 @@ class ChapterNavigationPager extends BasePanel implements IActiveStateProvider {
 	 * @return string
 	 */
 	public function getHtml() {
-		$chapterPager = new ChapterPager( $this->skintemplate );
-
-		return $chapterPager->getDefaultPagerHtml();
+		$chapterPager = new ChapterPager();
+		$chapterPager->makePagerData( $this->skintemplate->getSkin()->getTitle() );
+		return $chapterPager->getDefaultPagerHtml( $this->skintemplate->getSkin()->getTitle() );
 	}
 
 	/**

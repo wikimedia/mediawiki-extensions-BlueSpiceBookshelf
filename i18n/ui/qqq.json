@@ -97,5 +97,9 @@
 	"right-bookshelf-viewspecialpage": "{{doc-right|bookshelf-viewspecialpage}}",
 	"action-bookshelf-viewspecialpage": "{{doc-action|bookshelf-viewspecialpage}}",
 	"bs-bookshelfui-chapterpager-previous": "Label for chapterpager to poen previous book page",
-	"bs-bookshelfui-chapterpager-next": "Label for chapterpager to poen next book page"
+	"bs-bookshelfui-chapterpager-next": "Label for chapterpager to poen next book page",
+	"bs-bookshelfui-panel-navigation-text": "Label for navigation tab panel",
+	"bs-bookshelfui-panel-navigation-title": "Title for navigation tab panel",
+	"bs-bookshelfui-panel-navigation-aria-label": "Aria label for navigation tab panel",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Aria description of book navigation"
 }
