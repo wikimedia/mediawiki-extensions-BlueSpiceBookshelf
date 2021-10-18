@@ -438,6 +438,9 @@
 		"Bookshelf": "\\BlueSpice\\Bookshelf\\Special\\Bookshelf"
 	},
 	"HookHandlers": {
+		"common-user-interface": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\CommonUserInterface"
+		},
 		"discovery-skin": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\DiscoverySkin"
 		}
@@ -469,7 +472,7 @@
 		"SkinTemplateNavigation::Universal": "BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigationUniversal\\AddAddToBookEntry::callback",
 		"BSUEModulePDFAfterFindFiles": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFAfterFindFiles\\AddAttachments::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
-		"MWStakeCommonUIRegisterSkinSlotComponents": "discovery-skin"
+		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
