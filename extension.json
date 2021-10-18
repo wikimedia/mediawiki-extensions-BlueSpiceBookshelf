@@ -37,7 +37,8 @@
 			},
 			"TagRegistry": {
 				"bookmeta": "\\BlueSpice\\Bookshelf\\Tag\\BookshelfMeta",
-				"bookshelf": "\\BlueSpice\\Bookshelf\\Tag\\Bookshelf"
+				"bookshelf": "\\BlueSpice\\Bookshelf\\Tag\\Bookshelf",
+				"booklist": "\\BlueSpice\\Bookshelf\\Tag\\BookList"
 			},
 			"DynamicFileRegistry": {
 				"bookshelfimage": "\\BlueSpice\\Bookshelf\\DynamicFileDispatcher\\BookshelfImage"
@@ -460,7 +461,6 @@
 			"BlueSpice\\Bookshelf\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddBookshelfUI::callback",
 			"BlueSpice\\Bookshelf\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddToBookTool::callback"
 		],
-		"ParserFirstCallInit": "BlueSpice\\Bookshelf\\Hook\\ParserFirstCallInit\\SetParserHooks::callback",
 		"BSUEModulePDFbeforeGetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFbeforeGetPage\\AdaptPageTitle::callback",
 		"BSUEModulePDFgetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFgetPage\\ModifyForExport::callback",
 		"BSUEModulePDFcollectMetaData": [
