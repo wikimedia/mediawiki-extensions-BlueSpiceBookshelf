@@ -1,6 +1,6 @@
 <?php
 /**
- * Hook handler base class for BlueSpice hook BSBookshelfNodeTag
+ * Hook handler base class for BlueSpice hook BSBookshelfGetBookData
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
