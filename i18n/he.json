@@ -30,5 +30,7 @@
 	"bs-bookshelf-action-save-to-local-storage": "מתבצעת שמירה לאחסון המקומי",
 	"bs-bookshelf-add-to-book-added": "הדף נוסף לספר ‚$1’.",
 	"bs-bookshelf-error-invalid-type": "סוג הספר שצוין שגוי",
-	"bs-bookshelf-editor-no-title-provided": "לא סופקה כותרת תקנית לספר"
+	"bs-bookshelf-editor-no-title-provided": "לא סופקה כותרת תקנית לספר",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "נא להשתמש ב־<i>left</i> או ב־<i>right</i>.",
+	"bs-bookshelf-personal-books-page-prefix": "$1/ספרים/"
 }

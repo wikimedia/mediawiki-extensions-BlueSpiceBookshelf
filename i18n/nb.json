@@ -64,5 +64,6 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent": "Vis kapittelnavigasjon før innholdet",
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Legg til kapittelnavigasjon på toppen av siden.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Vis kapittelnavigasjon etter innholdet",
-	"bs-bookshelf-pref-chapterpageraftercontent-help": "Legg til kapittelnavigasjon på bunnen av siden."
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Legg til kapittelnavigasjon på bunnen av siden.",
+	"bs-bookshelf-pref-supressbookns-help": "Navnerommet til sidenavn skjules i den resulterende PDF-en."
 }

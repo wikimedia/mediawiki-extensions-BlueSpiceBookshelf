@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amikeco",
+			"DDPAT",
 			"Diman Russkov",
 			"Facenapalm",
 			"Kareyac",
@@ -63,5 +64,18 @@
 	"bs-bookshelfui-empty-selection": "Ничего не выбрано",
 	"bs-bookshelfui-bookmetatag-docummentidentifier": "Идентификатор документа",
 	"bs-bookshelfui-bookmetatag-docummenttype": "Тип документа",
-	"bs-bookshelfui-prof-defaultview": "Вид по умолчанию"
+	"bs-bookshelfui-prof-defaultview": "Вид по умолчанию",
+	"bs-bookshelfui-editor-no-title-provided": "Не указано действительное название книги",
+	"bs-bookshelfui-editor-title": "Редактор книги: $1",
+	"bs-bookshelfui-export-selection": "Выбор экспорта",
+	"bs-bookshelfui-save-and-modify": "Сохраните и добавьте навигацию по книгам на каждую вики-страницу",
+	"bs-bookshelfui-edit-source": "Редактировать исходную вики-страницу",
+	"bs-bookshelfui-open-source": "Показать исходную вики-страницу",
+	"bs-bookshelfui-dlg-tagsettings-title": "Параметры тега",
+	"bs-bookshelfui-dlg-copy-target-name-label": "Целевое название",
+	"bs-bookshelfui-confirm-delete-title": "Удалить главу",
+	"bs-bookshelfui-nothingtoexport-text": "Ваш выбор пуст",
+	"bs-bookshelfui-bookmanager-deletion-reason": "Удалено BookManager",
+	"bs-bookshelfui-bookmetatag-department": "Отдел",
+	"bs-bookshelfui-chapterpager-previous": "Предыдущая"
 }

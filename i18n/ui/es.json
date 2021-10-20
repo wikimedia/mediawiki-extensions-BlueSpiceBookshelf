@@ -5,9 +5,11 @@
 			"DannyS712",
 			"Fitoschido",
 			"Fortega",
+			"Igmc4",
 			"Ihojose",
 			"Joanmp17",
-			"Nancystodd"
+			"Nancystodd",
+			"Whovian Biologist"
 		]
 	},
 	"bookshelfbookui": "Editor de libros",
@@ -81,5 +83,8 @@
 	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "Título visualizado",
 	"bs-bookshelfui-ctxmnu-open": "Abrir página de wiki en una ventana nueva",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
-	"bs-bookshelfui-chapterpager-next": "Siguiente"
+	"bs-bookshelfui-chapterpager-next": "Siguiente",
+	"bs-bookshelfui-bookui-savingprogress-title": "Guardando libro",
+	"bs-bookshelfui-nothingtoexport-text": "Tu seleccion está vacía",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Número de resultados para devolver"
 }
