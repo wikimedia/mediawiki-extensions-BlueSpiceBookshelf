@@ -69,5 +69,6 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Description for config variable \"BookShelfShowChapterNavigationPagerBeforeContent\"",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Label for config variable \"BookShelfShowChapterNavigationPagerAfterContent\" at [[Special:BlueSpiceConfigManager]]",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Description for config variable \"BookShelfShowChapterNavigationPagerAfterContent\".",
-	"bs-bookshelf-pref-supressbookns-help": "Description for config variable \"BookshelfSupressBookNS\""
+	"bs-bookshelf-pref-supressbookns-help": "Description for config variable \"BookshelfSupressBookNS\"",
+	"bs-bookshelf-warning": "Description for a PHP error thrown in BookContent.php. Parameters:\n* $1 - warning message, not localized."
 }

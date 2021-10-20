@@ -8,7 +8,8 @@
 			"Igmc4",
 			"Ihojose",
 			"Joanmp17",
-			"Nancystodd"
+			"Nancystodd",
+			"Whovian Biologist"
 		]
 	},
 	"bookshelfbookui": "Editor de libros",
@@ -85,5 +86,6 @@
 	"bs-bookshelfui-chapterpager-next": "Siguiente",
 	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]",
 	"bs-bookshelfui-bookui-savingprogress-title": "Guardando libro",
-	"bs-bookshelfui-nothingtoexport-text": "Tu seleccion está vacía"
+	"bs-bookshelfui-nothingtoexport-text": "Tu seleccion está vacía",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Número de resultados para devolver"
 }

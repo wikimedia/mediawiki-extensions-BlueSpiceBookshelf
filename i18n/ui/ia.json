@@ -94,5 +94,9 @@
 	"right-bookshelf-viewspecialpage": "Accesso al pagina special [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "acceder al pagina special [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Precedente",
-	"bs-bookshelfui-chapterpager-next": "Sequente"
+	"bs-bookshelfui-chapterpager-next": "Sequente",
+	"bs-bookshelfui-panel-navigation-text": "Verso navigation in libro",
+	"bs-bookshelfui-panel-navigation-title": "Retornar al navigation in libro",
+	"bs-bookshelfui-panel-navigation-aria-label": "Verso navigation in libro",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navigation in libro como structura arborescente"
 }

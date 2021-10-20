@@ -10,6 +10,7 @@
 			"VulpesVulpes825",
 			"Wenyuan Liu",
 			"XinuGod",
+			"Xiplus",
 			"列维劳德",
 			"沈澄心",
 			"落花有意12138",
@@ -107,6 +108,6 @@
 	"bs-bookshelfui-delete-book-text": "您真的想要删除此书籍吗？标签“书架”将<em>不会</em>从链入的维基页面被自动移除！",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "返回页面所依据的根值",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "输入要批量添加的源代码",
-	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "所有此书籍的页面将会被复制到此名字空间。链入将会被更改。",
+	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "所有此书籍的页面将会被复制到此命名空间。链入将会被更改。",
 	"bs-bookshelfui-override-tag-text": "您要增加或更新 wiki 页面中关联的书籍 (<code>&lt;bs:bookshelf /&gt;</code>) 吗? 这将会创建此 wiki 页面的一个新版本。"
 }
