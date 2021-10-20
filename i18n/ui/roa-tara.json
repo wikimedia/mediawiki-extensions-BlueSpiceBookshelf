@@ -57,13 +57,9 @@
 	"bs-bookshelfui-bookmetatag-department": "Reparte",
 	"bs-bookshelfui-bookmetatag-version": "Versione",
 	"bs-bookshelfui-extjs-tooltip-copy": "Copie",
-	"bookshelf": "Scaffale",
-	"bookshelf-summary": "Libbre generale",
 	"bs-bookshelfui-prof-defaultview": "Viste de partenze",
 	"bs-bookshelfui-prof-defaultview-grid": "Griglie",
 	"bs-bookshelfui-prof-defaultview-images": "Immaggine",
-	"right-bookshelf-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "tràse jndr'à pàgena speciale [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Precedende",
 	"bs-bookshelfui-chapterpager-next": "Prossime"
 }

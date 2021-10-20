@@ -87,14 +87,14 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Кількість результатів, яку слід вивести",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Корінне значення, на основі якого слід вивести сторінки",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Тип джерела для масового додавання",
-	"bookshelf": "Книжкова полиця",
-	"bookshelf-summary": "Загальні книжки",
 	"prefs-bookshelfui": "Спеціальна сторінка «Книжкова полиця»",
 	"bs-bookshelfui-prof-defaultview": "Стандартний вигляд",
 	"bs-bookshelfui-prof-defaultview-grid": "Сітка",
 	"bs-bookshelfui-prof-defaultview-images": "Зображення",
-	"right-bookshelf-viewspecialpage": "Доступ до спеціальної сторінки [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "доступ до спеціальної сторінки [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Назад",
-	"bs-bookshelfui-chapterpager-next": "Далі"
+	"bs-bookshelfui-chapterpager-next": "Далі",
+	"bs-bookshelfui-panel-navigation-text": "Для навігації по книгах",
+	"bs-bookshelfui-panel-navigation-title": "Повернутися до навігації по книзі",
+	"bs-bookshelfui-panel-navigation-aria-label": "Для навігації по книгах",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Книжкова навігація як деревоподібна структура"
 }

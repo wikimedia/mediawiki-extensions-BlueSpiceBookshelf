@@ -8,7 +8,8 @@
 			"Igmc4",
 			"Ihojose",
 			"Joanmp17",
-			"Nancystodd"
+			"Nancystodd",
+			"Whovian Biologist"
 		]
 	},
 	"bookshelfbookui": "Editor de libros",
@@ -76,12 +77,10 @@
 	"apihelp-bs-bookshelf-page-collection-store-summary": "Proporciona una colección de páginas que puede ser añadida en bloque a un libro.",
 	"apihelp-bs-bookshelf-mass-add-page-store-summary": "Proporciona páginas que pueden ser añadidas en bloque a un libro.",
 	"right-bookshelfbookmanager-viewspecialpage": "Acceso a la página especial [[Special:BookshelfBookManager]]",
-	"bookshelf": "Estantería",
-	"bookshelf-summary": "Libros generales",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Número de resultados para devolver",
 	"bs-bookshelfui-prof-defaultview": "Vista predeterminada",
 	"bs-bookshelfui-prof-defaultview-grid": "Cuadrícula",
 	"bs-bookshelfui-prof-defaultview-images": "Imágenes",
-	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
 	"bs-bookshelfui-chapterpager-next": "Siguiente"
 }

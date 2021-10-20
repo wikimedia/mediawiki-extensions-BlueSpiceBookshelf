@@ -86,14 +86,10 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "عدد النتائج للعودة",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "قيمة الجذر بناءً على إرجاع الصفحات",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "نوع المصدر للإضافة الجماعية",
-	"bookshelf": "رف الكتب",
-	"bookshelf-summary": "الكتب العامة",
 	"prefs-bookshelfui": "الصفحة الخاصة رف الكتب",
 	"bs-bookshelfui-prof-defaultview": "عرض افتراضي",
 	"bs-bookshelfui-prof-defaultview-grid": "شبكة",
 	"bs-bookshelfui-prof-defaultview-images": "الصور",
-	"right-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "السابق",
 	"bs-bookshelfui-chapterpager-next": "التالي"
 }

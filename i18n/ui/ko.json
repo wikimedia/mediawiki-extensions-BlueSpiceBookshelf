@@ -71,13 +71,9 @@
 	"bs-bookshelfui-bookmetatag-version": "버전",
 	"bs-bookshelfui-extjs-tooltip-copy": "복사",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "반환할 결과 수",
-	"bookshelf": "책장",
-	"bookshelf-summary": "일반 책",
 	"bs-bookshelfui-prof-defaultview": "기본 뷰",
 	"bs-bookshelfui-prof-defaultview-grid": "그리드",
 	"bs-bookshelfui-prof-defaultview-images": "이미지",
-	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
-	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
 	"bs-bookshelfui-chapterpager-previous": "이전",
 	"bs-bookshelfui-chapterpager-next": "다음"
 }

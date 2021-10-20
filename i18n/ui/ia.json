@@ -85,14 +85,14 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Numero de resultatos a restituer",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Le valor radice a base del qual restituer paginas",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Typo de fonte pro addition in massa",
-	"bookshelf": "Planca de libros",
-	"bookshelf-summary": "Libros general",
 	"prefs-bookshelfui": "Pagina special de planca de libros",
 	"bs-bookshelfui-prof-defaultview": "Vista predefinite",
 	"bs-bookshelfui-prof-defaultview-grid": "Grillia",
 	"bs-bookshelfui-prof-defaultview-images": "Imagines",
-	"right-bookshelf-viewspecialpage": "Accesso al pagina special [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "acceder al pagina special [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Precedente",
-	"bs-bookshelfui-chapterpager-next": "Sequente"
+	"bs-bookshelfui-chapterpager-next": "Sequente",
+	"bs-bookshelfui-panel-navigation-text": "Verso navigation in libro",
+	"bs-bookshelfui-panel-navigation-title": "Retornar al navigation in libro",
+	"bs-bookshelfui-panel-navigation-aria-label": "Verso navigation in libro",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navigation in libro como structura arborescente"
 }

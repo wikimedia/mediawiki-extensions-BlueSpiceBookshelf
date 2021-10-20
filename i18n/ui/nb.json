@@ -85,14 +85,10 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Antall resultater som skal returneres",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Rotverdi basert på hvilke sider som skal returneres",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Type kilde for massetillegg",
-	"bookshelf": "Bokhylle",
-	"bookshelf-summary": "Generelle bøker",
 	"prefs-bookshelfui": "Spesialside for bokhylle",
 	"bs-bookshelfui-prof-defaultview": "Standardvisning",
 	"bs-bookshelfui-prof-defaultview-grid": "Rutenett",
 	"bs-bookshelfui-prof-defaultview-images": "Bilder",
-	"right-bookshelf-viewspecialpage": "Få tilgang til spesialsiden [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "få tilgang til spesialsiden [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Forrige",
 	"bs-bookshelfui-chapterpager-next": "Neste"
 }

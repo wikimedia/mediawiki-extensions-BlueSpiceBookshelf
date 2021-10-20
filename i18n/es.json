@@ -7,7 +7,8 @@
 			"Igmc4",
 			"MarleneR329",
 			"Rodney Araujo",
-			"Warming Hearth"
+			"Warming Hearth",
+			"Whovian Biologist"
 		]
 	},
 	"bs-bookshelf-extension-description": "Habilita BlueSpice para controlar y exportar colecciones jerárquicas de artículos.",
@@ -48,5 +49,7 @@
 	"bs-bookshelf-prof-defaultview-grid": "Cuadrícula",
 	"bs-bookshelf-prof-defaultview-images": "Imágenes",
 	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]",
-	"bs-bookshelf-action-save-to-local-storage": "Guardando a la memoria local"
+	"bs-bookshelf-action-save-to-local-storage": "Guardando a la memoria local",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Mostrar el localizador de capítulos del libro antes del contenido",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Agregue un localizador de capítulos en la parte superior de la página."
 }

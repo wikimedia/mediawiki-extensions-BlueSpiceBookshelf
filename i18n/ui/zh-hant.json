@@ -85,14 +85,10 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "回傳的結果數目。",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "基於回傳頁面的根植",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "大量添加的來源類型",
-	"bookshelf": "Bookshelf",
-	"bookshelf-summary": "一般書籍",
 	"prefs-bookshelfui": "Bookshelf 特殊頁面",
 	"bs-bookshelfui-prof-defaultview": "預設瀏覽",
 	"bs-bookshelfui-prof-defaultview-grid": "網格",
 	"bs-bookshelfui-prof-defaultview-images": "圖片",
-	"right-bookshelf-viewspecialpage": "存取特殊頁面 [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "存取特殊頁面 [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "上一頁",
 	"bs-bookshelfui-chapterpager-next": "下一頁"
 }

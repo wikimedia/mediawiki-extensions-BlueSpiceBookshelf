@@ -85,13 +85,9 @@
 	"action-bookshelfbookui-viewspecialpage": "دسترسی به ویژه‌صفحهٔ [[Special:BookshelfBookUI]]",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "تعداد نتایج برای نمایش",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "نوع مبدأ برای انبوه‌افزودن",
-	"bookshelf": "قفسه",
-	"bookshelf-summary": "کتاب‌های عمومی",
 	"prefs-bookshelfui": "ویژه‌صفحهٔ قفسه",
 	"bs-bookshelfui-prof-defaultview": "نمای پیش‌فرض",
 	"bs-bookshelfui-prof-defaultview-images": "تصویرها",
-	"right-bookshelf-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "قبلی",
 	"bs-bookshelfui-chapterpager-next": "بعدی"
 }

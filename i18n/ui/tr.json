@@ -86,14 +86,10 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Geri dönülecek sonuç sayısı",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Sayfaların döndürülmesine dayalı kök değeri",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Toplu ekleme için kaynak türü",
-	"bookshelf": "Kitaplık",
-	"bookshelf-summary": "Genel Kitaplar",
 	"prefs-bookshelfui": "Kitaplık özel sayfası",
 	"bs-bookshelfui-prof-defaultview": "Varsayılan görünüm",
 	"bs-bookshelfui-prof-defaultview-grid": "Izgara",
 	"bs-bookshelfui-prof-defaultview-images": "Resimler",
-	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] özel sayfaya erişin",
-	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] özel sayfaya erişin",
 	"bs-bookshelfui-chapterpager-previous": "Önceki",
 	"bs-bookshelfui-chapterpager-next": "Sonraki"
 }

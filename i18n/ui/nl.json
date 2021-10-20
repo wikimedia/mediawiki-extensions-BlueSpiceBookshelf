@@ -88,14 +88,10 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Aantal resultaten om te tonen",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Basiswaarde voor teruggeven van pagina's",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Type bron voor gezamenlijk toevoegen",
-	"bookshelf": "Boekenplank",
-	"bookshelf-summary": "Algemene boeken",
 	"prefs-bookshelfui": "Speciale pagina Boekenplank",
 	"bs-bookshelfui-prof-defaultview": "Standaardweergave",
 	"bs-bookshelfui-prof-defaultview-grid": "Raster",
 	"bs-bookshelfui-prof-defaultview-images": "Afbeeldingen",
-	"right-bookshelf-viewspecialpage": "De speciale pagina [[Special:Bookshelf]] bekijken",
-	"action-bookshelf-viewspecialpage": "de speciale pagina [[Special:Bookshelf]] te bekijken",
 	"bs-bookshelfui-chapterpager-previous": "Vorige",
 	"bs-bookshelfui-chapterpager-next": "Volgende"
 }

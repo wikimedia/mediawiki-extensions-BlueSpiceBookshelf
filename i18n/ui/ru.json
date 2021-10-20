@@ -72,13 +72,9 @@
 	"bs-bookshelfui-bookmetatag-department": "Отдел",
 	"bs-bookshelfui-bookmetatag-version": "Версия",
 	"bs-bookshelfui-extjs-tooltip-copy": "Копировать",
-	"bookshelf": "Книжная полка",
-	"bookshelf-summary": "Основные книги",
 	"bs-bookshelfui-prof-defaultview": "Вид по умолчанию",
 	"bs-bookshelfui-prof-defaultview-grid": "Сетка",
 	"bs-bookshelfui-prof-defaultview-images": "Изображения",
-	"right-bookshelf-viewspecialpage": "Доступ к специальной странице [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "доступ к специальной странице [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Предыдущая",
 	"bs-bookshelfui-chapterpager-next": "Следующая"
 }

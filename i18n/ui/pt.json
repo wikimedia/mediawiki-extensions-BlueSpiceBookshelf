@@ -88,14 +88,10 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Número de resultados a devolver",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Valor raiz, com base no qual devolver páginas",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo de fonte para adição em série",
-	"bookshelf": "Estante",
-	"bookshelf-summary": "Livros Gerais",
 	"prefs-bookshelfui": "Página especial Estante",
 	"bs-bookshelfui-prof-defaultview": "Vista padrão",
 	"bs-bookshelfui-prof-defaultview-grid": "Grelha",
 	"bs-bookshelfui-prof-defaultview-images": "Imagens",
-	"right-bookshelf-viewspecialpage": "Aceder à página especial [[Special:Bookshelf|Especial:Estante]]",
-	"action-bookshelf-viewspecialpage": "aceder à pagina especial [[Special:Bookshelf|Especial:Estante]]",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
 	"bs-bookshelfui-chapterpager-next": "Seguinte"
 }

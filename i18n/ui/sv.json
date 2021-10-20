@@ -71,12 +71,9 @@
 	"right-bookshelfbookmanager-viewspecialpage": "Besök specialsidan [[Special:BookshelfBookManager]]",
 	"action-bookshelfbookmanager-viewspecialpage": "besök specialsidan [[Special:BookshelfBookManager]]",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Antal resultat att returnera",
-	"bookshelf": "Bokhylla",
-	"bookshelf-summary": "Allmänna böcker",
 	"bs-bookshelfui-prof-defaultview": "Standardvy",
 	"bs-bookshelfui-prof-defaultview-grid": "Rutnät",
 	"bs-bookshelfui-prof-defaultview-images": "Bilder",
-	"right-bookshelf-viewspecialpage": "Kom åt specialsidan [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Föregående",
 	"bs-bookshelfui-chapterpager-next": "Nästa"
 }

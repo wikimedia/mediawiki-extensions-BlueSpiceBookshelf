@@ -98,14 +98,10 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "返回的结果数",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "返回页面所依据的根值",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "输入要批量添加的源代码",
-	"bookshelf": "书架",
-	"bookshelf-summary": "通用图书",
 	"prefs-bookshelfui": "书架特殊页面",
 	"bs-bookshelfui-prof-defaultview": "默认视图",
 	"bs-bookshelfui-prof-defaultview-grid": "格子",
 	"bs-bookshelfui-prof-defaultview-images": "图片",
-	"right-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "访问特殊页面 [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "上一个",
 	"bs-bookshelfui-chapterpager-next": "下一个"
 }

@@ -71,13 +71,9 @@
 	"action-bookshelfbookmanager-viewspecialpage": "特別ページ [[Special:BookshelfBookManager]] へのアクセス",
 	"right-bookshelfbookui-viewspecialpage": "特別ページ [[Special:BookshelfBookUI]] にアクセス",
 	"action-bookshelfbookui-viewspecialpage": "特別ページ [[Special:BookshelfBookUI]] へのアクセス",
-	"bookshelf": "本棚",
-	"bookshelf-summary": "一般書籍",
 	"bs-bookshelfui-prof-defaultview": "既定の表示",
 	"bs-bookshelfui-prof-defaultview-grid": "グリッド",
 	"bs-bookshelfui-prof-defaultview-images": "画像",
-	"right-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] にアクセス",
-	"action-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] へのアクセス",
 	"bs-bookshelfui-chapterpager-previous": "前へ",
 	"bs-bookshelfui-chapterpager-next": "次へ"
 }

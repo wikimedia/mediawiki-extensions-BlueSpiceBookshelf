@@ -90,14 +90,14 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Nombre de résultats à renvoyer",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Valeur racine basée sur combien renvoyer de pages",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Type de source pour l’ajout en masse",
-	"bookshelf": "Étagère",
-	"bookshelf-summary": "Livres généraux",
 	"prefs-bookshelfui": "Page spéciale Étagère",
 	"bs-bookshelfui-prof-defaultview": "Vue par défaut",
 	"bs-bookshelfui-prof-defaultview-grid": "Grille",
 	"bs-bookshelfui-prof-defaultview-images": "Images",
-	"right-bookshelf-viewspecialpage": "Accéder à la page spéciale [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "accéder à la page spéciale [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Précédent",
-	"bs-bookshelfui-chapterpager-next": "Suivant"
+	"bs-bookshelfui-chapterpager-next": "Suivant",
+	"bs-bookshelfui-panel-navigation-text": "Vers la navigation dans le livre",
+	"bs-bookshelfui-panel-navigation-title": "Retour à la navigation dans le livre",
+	"bs-bookshelfui-panel-navigation-aria-label": "Vers la navigation dans le livre",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navigation dans le livre comme une structure arborescente"
 }
