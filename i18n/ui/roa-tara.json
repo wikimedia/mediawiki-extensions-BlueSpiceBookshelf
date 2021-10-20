@@ -62,5 +62,8 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Griglie",
 	"bs-bookshelfui-prof-defaultview-images": "Immaggine",
 	"bs-bookshelfui-chapterpager-previous": "Precedende",
-	"bs-bookshelfui-chapterpager-next": "Prossime"
+	"bs-bookshelfui-chapterpager-next": "Prossime",
+	"bs-bookshelfui-manager-deletingprogress-text": "Stoche a scangelle 'u libbre scacchiate",
+	"bs-bookshelfui-manager-deletionsuccess-title": "Scangellazione sciute bbone!",
+	"bs-bookshelfui-manager-deletionsuccess-text": "'U libbre ha state scangellate."
 }

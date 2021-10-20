@@ -99,5 +99,9 @@
 	"right-bookshelf-viewspecialpage": "Zugriff auf die Spezialseite [[Special:Bookshelf|Bücherregal]]",
 	"action-bookshelf-viewspecialpage": "die Spezialseite [[Special:Bookshelf|Bücherregal]] aufzurufen",
 	"bs-bookshelfui-chapterpager-previous": "Zurück",
-	"bs-bookshelfui-chapterpager-next": "Weiter"
+	"bs-bookshelfui-chapterpager-next": "Weiter",
+	"bs-bookshelfui-panel-navigation-text": "Zur Buchnavigation",
+	"bs-bookshelfui-panel-navigation-title": "Zurück zur Buchnavigation",
+	"bs-bookshelfui-panel-navigation-aria-label": "Zur Buchnavigation",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Buchnavigation als Baumstruktur"
 }

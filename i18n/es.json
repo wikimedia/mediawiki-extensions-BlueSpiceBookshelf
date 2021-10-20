@@ -4,8 +4,11 @@
 			"Alan Mena",
 			"DannyS712",
 			"Fitoschido",
+			"Igmc4",
 			"MarleneR329",
-			"Rodney Araujo"
+			"Rodney Araujo",
+			"Warming Hearth",
+			"Whovian Biologist"
 		]
 	},
 	"bs-bookshelf-tag-bookshelf-desc": "Inserta la navegación de capítulo de un libro en una página de este. Mediante esta etiqueta, los artículos mencionados se incluyen en el libro. La numeración se adapta automáticamente al sumario.",
@@ -44,5 +47,11 @@
 	"bs-bookshelf-action-editbooksource": "Editar código del libro",
 	"bs-bookshelf-action-editbooksource-create": "Crear código del libro",
 	"bs-bookshelf-edit-title": "Edición de «$1»",
-	"bs-bookshelf-action-save-to-local-storage": "Guardando a la memoria local"
+	"bs-bookshelf-action-save-to-local-storage": "Guardando a la memoria local",
+	"bs-bookshelf-extension-description": "Habilita BlueSpice para controlar y exportar colecciones jerárquicas de artículos.",
+	"bs-bookshelf-tag-bookmeta-desc": "Etiqueta para guardar algunos metadatos en artículos de libros. Estos datos están incluidos en el libro. Los atributos de esta etiqueta deben corresponderse con los metadatos del artículo del libro.",
+	"prefs-bookshelf": "Página especial de la librería",
+	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Mostrar el localizador de capítulos del libro antes del contenido",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Agregue un localizador de capítulos en la parte superior de la página."
 }

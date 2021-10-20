@@ -5,5 +5,11 @@
 		]
 	},
 	"bs-bookshelfui-dlg-choosecategory-label": "Luokka",
-	"bs-bookshelfui-type-subpages": "Siijđo puoh vyelisiijđoh"
+	"bs-bookshelfui-type-subpages": "Siijđo puoh vyelisiijđoh",
+	"bs-bookshelfui-new-book-title": "Räähti uđđâ kirje",
+	"bs-bookshelfui-dlg-type-label": "Käldee",
+	"bs-bookshelfui-type-category": "Luoka puoh siijđoh",
+	"bs-bookshelfui-bookmetatag-version": "Versio",
+	"bs-bookshelfui-extjs-tooltip-copy": "Kopijist",
+	"bs-bookshelfui-prof-defaultview-images": "Koveh"
 }

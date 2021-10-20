@@ -5,6 +5,7 @@
 			"Dansita",
 			"Gianfranco",
 			"Luca.favorido",
+			"Stefano",
 			"TheRukk",
 			"Tizven"
 		]
@@ -40,5 +41,7 @@
 	"bs-bookshelf-prof-defaultview": "Vista predefinita",
 	"bs-bookshelf-prof-defaultview-grid": "Griglia",
 	"bs-bookshelf-prof-defaultview-images": "Immagini",
-	"bs-bookshelf-positive-integer-validation-not-approved": "Sono consentiti solo interi positivi."
+	"bs-bookshelf-positive-integer-validation-not-approved": "Sono consentiti solo interi positivi.",
+	"apihelp-bs-bookshelf-bookstore-param-book": "Specifica il libro per il quale deve essere fornito un elenco di capitoli.",
+	"bs-bookshelf-action-save-to-local-storage": "Sto salvando su disco locale"
 }
