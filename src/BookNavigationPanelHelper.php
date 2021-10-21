@@ -97,34 +97,13 @@ class BookNavigationPanelHelper {
 	 * @param PageHierarchyProvider $provider
 	 * @return string
 	 */
-	protected function getBookTitle( $provider ) {
-		$bookTitle = $this->tree->bookshelf->page_title;
-		$bookMeta = $provider->getBookMeta();
-		if ( isset( $bookMeta['title'] ) ) {
-			$bookTitle = $bookMeta['title'];
-		}
-		$headingHtml = \Html::element(
-			'h5',
-			[],
-			$bookTitle
-		);
-		return $headingHtml;
-	}
-
-	/**
-	 *
-	 * @param PageHierarchyProvider $provider
-	 * @return string
-	 */
 	protected function getNodes( $provider ) {
 		$this->tree = $provider->getExtendedTOCJSON();
-
 		$rootNode = new BSTreeNode( $this->tree->text, null, new \HashConfig( [
 			BSTreeNode::CONFIG_EXPANDED => true,
 			BSTreeNode::CONFIG_IS_LEAF => false,
-			BSTreeNode::CONFIG_TEXT => $this->tree->articleDisplayTitle,
+			BSTreeNode::CONFIG_TEXT => $this->tree->articleDisplayTitle
 		] ) );
-
 		$this->rootNodeId = $rootNode->getId();
 		$this->addChildsToNode( $rootNode, $this->tree->children );
 

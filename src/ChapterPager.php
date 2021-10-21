@@ -13,7 +13,6 @@ class ChapterPager {
 	protected $nextTitle = null;
 
 	/**
-	 *
 	 * @param Title $title
 	 * @return void
 	 */
