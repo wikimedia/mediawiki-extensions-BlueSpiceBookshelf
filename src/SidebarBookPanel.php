@@ -45,8 +45,8 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 *
 	 * @inheritDoc
 	 */
-	public function getRequiredRLModules(): array {
-		return [ 'ext.bookshelf.navigationpanel' ];
+	public function getRequiredRLStyles(): array {
+		return [ 'ext.bookshelf.navigationpanel.styles' ];
 	}
 
 	/**
