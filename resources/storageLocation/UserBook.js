@@ -33,7 +33,7 @@
 		var title = new mw.Title( bookTitle, bs.ns.NS_USER );
 
 		return title.getUrl( $.extend( {
-			action: 'edit'
+			action: 'bookedit'
 		}, params ) );
 	};
 

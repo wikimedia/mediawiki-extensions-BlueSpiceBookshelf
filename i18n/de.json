@@ -49,6 +49,8 @@
 	"bs-bookshelf-grouping-template-type-user_book": "Eigene Bücher",
 	"bs-bookshelf-action-editbooksource": "Buch-Quellseite bearbeiten",
 	"bs-bookshelf-action-editbooksource-create": "Buch-Quellseite erstellen",
+	"bs-bookshelf-action-editbook": "Quelltext bearbeiten",
+	"bs-bookshelf-action-editbook-create": "Quelltext erstellen",
 	"bs-bookshelf-action-export-book": "Buch exportieren",
 	"bs-bookshelf-edit-title": "Bearbeiten von $1",
 	"bs-bookshelf-error-invalid-type": "Der angegebene Buchtyp ist ungültig",

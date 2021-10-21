@@ -11,6 +11,10 @@ class BookEditAction extends EditAction {
 	/** @var string|bool */
 	protected $bookTitle = false;
 
+	public function getName() {
+		return 'editbook';
+	}
+
 	public function show() {
 		$this->useTransactionalTimeLimit();
 

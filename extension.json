@@ -456,10 +456,15 @@
 		],
 		"BSBookshelfGetBookData": "\\BlueSpice\\Bookshelf\\Hook\\BSBookshelfGetBookData\\RunLegacyHook::callback",
 		"GetPreferences": "\\BlueSpice\\Bookshelf\\Hook\\GetPreferences\\BookshelfDefaultView::callback",
-		"BSUEModulePDFAfterFindFiles": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFAfterFindFiles\\AddAttachments::callback"
+		"BSUEModulePDFAfterFindFiles": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFAfterFindFiles\\AddAttachments::callback",
+		"SkinTemplateNavigation": [
+			"\\BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigation\\AddAddToBookEntry::callback",
+			"\\BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigation\\AddEditBook::callback"
+		]
 	},
 	"Actions": {
-		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
+		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction",
+		"editbook": "\\BlueSpice\\Bookshelf\\Action\\BookEditAction"
 	},
 	"DefaultUserOptions": {
 		"bs-bookshelf-defaultview": "gridviewpanel"

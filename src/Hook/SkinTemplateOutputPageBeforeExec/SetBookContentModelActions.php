@@ -29,8 +29,8 @@ class SetBookContentModelActions extends SkinTemplateOutputPageBeforeExec {
 	private function getText() {
 		$exists = $this->skin->getTitle()->exists();
 		if ( $exists ) {
-			return Message::newFromKey( 'bs-bookshelf-action-editbooksource' )->plain();
+			return Message::newFromKey( 'bs-bookshelf-action-editbook' )->plain();
 		}
-		return Message::newFromKey( 'bs-bookshelf-action-editbooksource-create' )->plain();
+		return Message::newFromKey( 'bs-bookshelf-action-editbook-create' )->plain();
 	}
 }
