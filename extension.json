@@ -469,13 +469,17 @@
 		],
 		"BSBookshelfGetBookData": "\\BlueSpice\\Bookshelf\\Hook\\BSBookshelfGetBookData\\RunLegacyHook::callback",
 		"GetPreferences": "\\BlueSpice\\Bookshelf\\Hook\\GetPreferences\\BookshelfDefaultView::callback",
-		"SkinTemplateNavigation::Universal": "BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigationUniversal\\AddAddToBookEntry::callback",
+		"SkinTemplateNavigation::Universal": [
+			"BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigationUniversal\\AddAddToBookEntry::callback",
+			"BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigationUniversal\\AddEditBook::callback"
+		],
 		"BSUEModulePDFAfterFindFiles": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFAfterFindFiles\\AddAttachments::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface"
 	},
 	"Actions": {
-		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
+		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction",
+		"editbook": "\\BlueSpice\\Bookshelf\\Action\\BookEditAction"
 	},
 	"DefaultUserOptions": {
 		"bs-bookshelf-defaultview": "gridviewpanel"
