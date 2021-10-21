@@ -126,7 +126,8 @@ class BookshelfHandler extends Handler {
 		if ( $this->config->get( 'BookshelfTitleDisplayText' ) ) {
 			$titleTextText = $displayTitle;
 			if ( $number ) {
-				$titleTextText = "<span class=\"bs-chapter-number\">$number</span>$titleTextText";
+				$titleTextText = '<span class="bs-chapter-number">' . $number
+					. '. </span>' . $titleTextText;
 			}
 			if ( $titleTextText !== $titleText ) {
 				$this->parser->getOutput()->setTitleText( $titleTextText );
