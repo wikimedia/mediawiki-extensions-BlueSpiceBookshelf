@@ -15,9 +15,9 @@ li.bs-treenodeitem {
 	color: inherit;
 	padding: 0;
 	border: none;
-	width: 100%;
 	height: auto;
 	float: left;
+	width: 100%;
 }
 .bs-treenodeitem span {
 	height: 35px;
@@ -39,12 +39,15 @@ li.bs-treenodeitem.expandable:hover {
 	border-left: 5px solid var(--sidebar-primary-marker--hover);
 	cursor: pointer;
 }
-#book-tree a.active {
-	border-color: transparent;
+#n-book-panel #book-tree a {
+	width: 100%;
+}
+#n-book-panel #book-tree a.active {
+	border-left: 5px solid transparent;
 	background-color: transparent;
 }
-#book-tree a:hover {
-	border-color: transparent;
+#n-book-panel #book-tree a:hover {
+	border-left: 5px solid transparent;
 	background-color: transparent;
 }
 .bs-treenodeitem.expandable {
@@ -105,10 +108,14 @@ li.bs-treenodeitem.expandable:hover {
 #n-book-panel .bookshelfui-chapterpager a:hover {
 	background-color: var(--mws-secondary-bg--hover);
 	color: var(--mws-secondary-fg--hover);
+	border: 0.5px solid var(--mws-secondary-fg);
 }
 .prev-chapter.disabled {
 	visibility: hidden;
 }
 .next-chapter.disabled {
 	visibility: hidden;
+}
+.bs-articleNumber {
+	padding-right: 5px;
 }
