@@ -39,5 +39,6 @@
 	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
 	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
 	"bs-bookshelf-action-save-to-local-storage": "로컬 스토리지에 저장 중",
-	"bs-bookshelf-pref-supressbookns-help": "문서 이름의 이름공간은 PDF 출력에서 숨겨집니다."
+	"bs-bookshelf-pref-supressbookns-help": "문서 이름의 이름공간은 PDF 출력에서 숨겨집니다.",
+	"bs-bookshelf-warning": "PHP 예외: $1"
 }
