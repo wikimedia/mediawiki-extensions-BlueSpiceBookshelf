@@ -48,7 +48,7 @@ class PlainTextTest extends TestCase {
 		$node = $parser->process( $line );
 
 		$this->assertInstanceOf( TreeNode::class, $node );
-		$this->assertEquals( $node['type'], 'plain-text', "Should have proper `type` set" );
+		$this->assertEquals( 'plain-text', $node['type'], "Should have proper `type` set" );
 		$this->assertEquals( $node['title'], $line, "Should have proper `title` set" );
 	}
 
