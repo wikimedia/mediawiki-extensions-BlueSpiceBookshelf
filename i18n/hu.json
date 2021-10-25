@@ -5,8 +5,8 @@
 		]
 	},
 	"bs-bookshelf-grouping-template-type-local_storage": "Ideiglenes könyvek",
-	"bs-bookshelf-action-editbooksource": "Könyvforrás szerkesztése",
-	"bs-bookshelf-action-editbooksource-create": "Könyvforrás megadása",
+	"bs-bookshelf-action-editbook": "Könyvforrás szerkesztése",
+	"bs-bookshelf-action-editbook-create": "Könyvforrás megadása",
 	"bs-bookshelf-action-export-book": "Könyv exportálása",
 	"bs-bookshelf-edit-title": "$1 szerkesztése",
 	"bs-bookshelf-error-invalid-type": "Érvénytelen könyvtípus",

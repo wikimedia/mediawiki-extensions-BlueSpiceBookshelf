@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"Joseph",
 			"MuratTheTurkish"
 		]
 	},
@@ -91,5 +92,9 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Izgara",
 	"bs-bookshelfui-prof-defaultview-images": "Resimler",
 	"bs-bookshelfui-chapterpager-previous": "Önceki",
-	"bs-bookshelfui-chapterpager-next": "Sonraki"
+	"bs-bookshelfui-chapterpager-next": "Sonraki",
+	"bs-bookshelfui-panel-navigation-text": "Kitap dolaşımına git",
+	"bs-bookshelfui-panel-navigation-title": "Kitap dolaşımına geri git",
+	"bs-bookshelfui-panel-navigation-aria-label": "Kitap dolaşımına git",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Ağaç yapısıyla kitap dolaşımı"
 }

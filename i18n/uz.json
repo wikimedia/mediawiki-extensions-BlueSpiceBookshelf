@@ -5,8 +5,8 @@
 		]
 	},
 	"bs-bookshelf-grouping-template-type-local_storage": "Vaqtinchalik kitoblar",
-	"bs-bookshelf-action-editbooksource": "Kitob manbaini o‘zgartirmoq",
-	"bs-bookshelf-action-editbooksource-create": "Kitob manbaini tuzmoq",
+	"bs-bookshelf-action-editbook": "Kitob manbaini o‘zgartirmoq",
+	"bs-bookshelf-action-editbook-create": "Kitob manbaini tuzmoq",
 	"bs-bookshelf-action-export-book": "Kitobni eksport qilmoq",
 	"bs-bookshelf-edit-title": "$1’ni tahrirlash",
 	"bs-bookshelf-error-invalid-type": "Kitob turi shikastlangan",

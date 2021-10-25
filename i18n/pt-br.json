@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Eduardo Addad de Oliveira",
-			"Eduardoaddad"
+			"Eduardoaddad",
+			"Svjatysberega"
 		]
 	},
 	"bs-bookshelf-extension-description": "Permite que o BlueSpice gerencie e exporte coleções hierárquicas de artigos.",
@@ -43,8 +44,8 @@
 	"bs-bookshelf-grouping-template-type-local_storage": "Livros temporários",
 	"bs-bookshelf-grouping-template-type-ns_book": "Livros gerais",
 	"bs-bookshelf-grouping-template-type-user_book": "Livros próprios",
-	"bs-bookshelf-action-editbooksource": "Editar fonte do livro",
-	"bs-bookshelf-action-editbooksource-create": "Criar fonte do livro",
+	"bs-bookshelf-action-editbook": "Editar fonte do livro",
+	"bs-bookshelf-action-editbook-create": "Editar fonte do livro",
 	"bs-bookshelf-action-export-book": "Exportar livro",
 	"bs-bookshelf-edit-title": "Editando $1",
 	"bs-bookshelf-error-invalid-type": "O tipo de livro especificado é inválido",

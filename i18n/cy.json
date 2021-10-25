@@ -5,8 +5,8 @@
 		]
 	},
 	"bs-bookshelf-grouping-template-type-local_storage": "Llyfrau dros dro",
-	"bs-bookshelf-action-editbooksource": "Golygwch ffynhonnell y llyfr/au",
-	"bs-bookshelf-action-editbooksource-create": "Creewch ffynhonnell y llyfr",
+	"bs-bookshelf-action-editbook": "Golygwch ffynhonnell y llyfr/au",
+	"bs-bookshelf-action-editbook-create": "Creewch ffynhonnell y llyfr",
 	"bs-bookshelf-action-export-book": "Allforio'r llyfr",
 	"bs-bookshelf-edit-title": "Wrthi'n golygu $1",
 	"bs-bookshelf-error-invalid-type": "Mae'r math o lyfr yn annilys",
