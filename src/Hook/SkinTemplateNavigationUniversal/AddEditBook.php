@@ -14,6 +14,9 @@ class AddEditBook extends SkinTemplateNavigationUniversal {
 		if ( !$title->exists() ) {
 			return true;
 		}
+		if ( $title->getContentModel() !== 'book' ) {
+			return true;
+		}
 		$user = $this->sktemplate->getUser();
 		$permissionManager = $this->getServices()->getPermissionManager();
 		$userCan = $permissionManager->userCan( 'edit', $user, $title );
