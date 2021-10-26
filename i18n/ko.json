@@ -25,6 +25,8 @@
 	"bs-bookshelf-grouping-template-type-local_storage": "임시 책",
 	"bs-bookshelf-grouping-template-type-ns_book": "일반 책",
 	"bs-bookshelf-grouping-template-type-user_book": "나의 책",
+	"bs-bookshelf-action-editbook": "원본 편집",
+	"bs-bookshelf-action-editbook-create": "원본 편집",
 	"bs-bookshelf-action-export-book": "책 내보내기",
 	"bs-bookshelf-edit-title": "$1 편집하기",
 	"bs-bookshelf-error-invalid-type": "지정된 책 유형이 유효하지 않습니다",
