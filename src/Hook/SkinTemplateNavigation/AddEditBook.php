@@ -14,6 +14,9 @@ class AddEditBook extends SkinTemplateNavigation {
 		if ( !$title->exists() ) {
 			return true;
 		}
+		if ( $title->getContentModel() !== 'book' ) {
+			return true;
+		}
 		$userCan = $title->userCan( 'edit' );
 		if ( !$userCan ) {
 			return true;
