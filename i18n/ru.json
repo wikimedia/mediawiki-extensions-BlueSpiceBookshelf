@@ -32,8 +32,8 @@
 	"bs-bookshelf-grouping-template-type-local_storage": "Временные книги",
 	"bs-bookshelf-grouping-template-type-ns_book": "Основные книги",
 	"bs-bookshelf-grouping-template-type-user_book": "Собственные книги",
-	"bs-bookshelf-action-editbook": "Изменить источник книги",
-	"bs-bookshelf-action-editbook-create": "Создать источник книги",
+	"bs-bookshelf-action-editbook": "Править код",
+	"bs-bookshelf-action-editbook-create": "Править код",
 	"bs-bookshelf-action-export-book": "Экспортировать книгу",
 	"bs-bookshelf-edit-title": "Редактирование $1",
 	"bs-bookshelf-error-invalid-type": "Указан недопустимый тип книги",
@@ -53,5 +53,6 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Добавьте пейджер глав вверху страницы.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Показывать пейджер глав книги после содержания",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Добавьте пейджер глав внизу страницы.",
-	"bs-bookshelf-pref-supressbookns-help": "Пространство имён страниц скрыто в выводе PDF."
+	"bs-bookshelf-pref-supressbookns-help": "Пространство имён страниц скрыто в выводе PDF.",
+	"bs-bookshelf-warning": "Исключение PHP: $1"
 }
