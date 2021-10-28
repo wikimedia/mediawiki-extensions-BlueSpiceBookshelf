@@ -72,5 +72,7 @@
 	"bs-bookshelf-pref-chapterpageraftercontent": "Ajouter la navigation par chapitre du livre après le contenu",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Ajoute une navigation par chapitre en bas de page.",
 	"bs-bookshelf-pref-supressbookns-help": "L'espace de nom des noms de page est caché dans la sortie PDF.",
-	"bs-bookshelf-warning": "Exception PHP : $1"
+	"bs-bookshelf-warning": "Exception PHP : $1",
+	"bs-bookshelf-action-editbook": "Modifier la source",
+	"bs-bookshelf-action-editbook-create": "Modifier la source"
 }

@@ -44,5 +44,7 @@
 	"bs-bookshelf-prof-defaultview-grid": "Rutnät",
 	"bs-bookshelf-prof-defaultview-images": "Bilder",
 	"right-bookshelf-viewspecialpage": "Kom åt specialsidan [[Special:Bookshelf]]",
-	"bs-bookshelf-action-save-to-local-storage": "Sparar i lokalt lagringsutrymme"
+	"bs-bookshelf-action-save-to-local-storage": "Sparar i lokalt lagringsutrymme",
+	"bs-bookshelf-action-editbook": "Redigera bokkälla",
+	"bs-bookshelf-action-editbook-create": "Skapa bokkälla"
 }

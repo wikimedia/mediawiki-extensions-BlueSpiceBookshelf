@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Alan Mena",
+			"Avengium",
 			"DannyS712",
 			"Fitoschido",
 			"Igmc4",
+			"Jakeukalane",
 			"MarleneR329",
 			"Rodney Araujo",
 			"Warming Hearth",
@@ -53,5 +55,8 @@
 	"prefs-bookshelf": "Página especial de la librería",
 	"right-bookshelf-viewspecialpage": "Acceder a la página especial [[Special:Bookshelf]]",
 	"bs-bookshelf-pref-chapterpagerbeforecontent": "Mostrar el localizador de capítulos del libro antes del contenido",
-	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Agregue un localizador de capítulos en la parte superior de la página."
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Agregue un localizador de capítulos en la parte superior de la página.",
+	"bs-bookshelf-action-editbook": "Editar código",
+	"bs-bookshelf-action-editbook-create": "Editar código",
+	"bs-bookshelf-warning": "Excepción de PHP: $1"
 }

@@ -45,5 +45,7 @@
 	"prefs-bookshelf": "صفحهٔ ویژهٔ قفسهٔ کتاب",
 	"bs-bookshelf-prof-defaultview": "نمای پیش‌فرض",
 	"bs-bookshelf-prof-defaultview-images": "تصویر",
-	"bs-bookshelf-action-save-to-local-storage": "در حال ذخیرهٔ مخزن محلی"
+	"bs-bookshelf-action-save-to-local-storage": "در حال ذخیرهٔ مخزن محلی",
+	"bs-bookshelf-action-editbook": "ویرایش مبدأ",
+	"bs-bookshelf-action-editbook-create": "ویرایش مبدأ"
 }

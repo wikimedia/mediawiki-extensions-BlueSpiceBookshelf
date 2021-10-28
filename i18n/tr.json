@@ -67,5 +67,9 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent": "Kitap bölümü sayfasını içerikten önce göster",
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Sayfanın üst kısmına bir bölüm sayfalayıcı ekleyin.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "İçerikten sonra kitap bölümü sayfalayıcı göster",
-	"bs-bookshelf-pref-chapterpageraftercontent-help": "Sayfanın altına bir bölüm sayfalama cihazı ekleyin."
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Sayfanın altına bir bölüm sayfalama cihazı ekleyin.",
+	"bs-bookshelf-action-editbook": "Kaynağı düzenle",
+	"bs-bookshelf-action-editbook-create": "Kaynağı düzenle",
+	"bs-bookshelf-pref-supressbookns-help": "Sayfa adlarının ad alanı PDF çıktısında gizlenir.",
+	"bs-bookshelf-warning": "PHP istisnası: $1"
 }

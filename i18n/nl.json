@@ -66,5 +66,7 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent": "Hoofdstukbladeraar tonen vóór inhoud",
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Voegt een hoofdstukbladeraar toe bovenaan de pagina.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Hoofdstukbladeraar tonen na inhoud",
-	"bs-bookshelf-pref-chapterpageraftercontent-help": "Voegt een hoofdstukbladeraar toe onderaan de pagina."
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Voegt een hoofdstukbladeraar toe onderaan de pagina.",
+	"bs-bookshelf-action-editbook": "Bron bewerken",
+	"bs-bookshelf-action-editbook-create": "Bron bewerken"
 }

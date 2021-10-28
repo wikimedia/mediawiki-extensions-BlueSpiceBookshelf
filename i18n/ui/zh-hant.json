@@ -96,5 +96,9 @@
 	"right-bookshelf-viewspecialpage": "存取特殊頁面 [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "存取特殊頁面 [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "上一頁",
-	"bs-bookshelfui-chapterpager-next": "下一頁"
+	"bs-bookshelfui-chapterpager-next": "下一頁",
+	"bs-bookshelfui-panel-navigation-text": "至書籍導覽",
+	"bs-bookshelfui-panel-navigation-title": "返回書籍導覽",
+	"bs-bookshelfui-panel-navigation-aria-label": "至書籍導覽",
+	"bs-bookshelfui-panel-navigation-aria-desc": "樹狀架構書籍導覽"
 }

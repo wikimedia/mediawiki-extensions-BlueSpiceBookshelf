@@ -65,5 +65,7 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Legg til kapittelnavigasjon på toppen av siden.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Vis kapittelnavigasjon etter innholdet",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Legg til kapittelnavigasjon på bunnen av siden.",
-	"bs-bookshelf-pref-supressbookns-help": "Navnerommet til sidenavn skjules i den resulterende PDF-en."
+	"bs-bookshelf-pref-supressbookns-help": "Navnerommet til sidenavn skjules i den resulterende PDF-en.",
+	"bs-bookshelf-action-editbook": "Rediger bokkilde",
+	"bs-bookshelf-action-editbook-create": "Opprett bokkilde"
 }

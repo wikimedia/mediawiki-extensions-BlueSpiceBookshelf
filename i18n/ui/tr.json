@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"Joseph",
 			"MuratTheTurkish"
 		]
 	},
@@ -97,5 +98,9 @@
 	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] özel sayfaya erişin",
 	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] özel sayfaya erişin",
 	"bs-bookshelfui-chapterpager-previous": "Önceki",
-	"bs-bookshelfui-chapterpager-next": "Sonraki"
+	"bs-bookshelfui-chapterpager-next": "Sonraki",
+	"bs-bookshelfui-panel-navigation-text": "Kitap dolaşımına git",
+	"bs-bookshelfui-panel-navigation-title": "Kitap dolaşımına geri git",
+	"bs-bookshelfui-panel-navigation-aria-label": "Kitap dolaşımına git",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Ağaç yapısıyla kitap dolaşımı"
 }

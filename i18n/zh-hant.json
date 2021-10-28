@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"Weather Top Wizard"
 		]
 	},
 	"bs-bookshelf-extension-description": "啟動 BlueSpice 來管理與匯出條目的層級集合。",
@@ -65,5 +66,8 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "在頁面頂端添加書籍章節分頁器。",
 	"bs-bookshelf-pref-chapterpageraftercontent": "在內容後方顯示書籍章節分頁器",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "在頁面底部添加書籍章節分頁器。",
-	"bs-bookshelf-pref-supressbookns-help": "在 PDF 輸出中，頁面名稱的命名空間為隱藏。"
+	"bs-bookshelf-pref-supressbookns-help": "在 PDF 輸出中，頁面名稱的命名空間為隱藏。",
+	"bs-bookshelf-action-editbook": "編輯書籍來源",
+	"bs-bookshelf-action-editbook-create": "建立書籍來源",
+	"bs-bookshelf-warning": "PHP例外: $1"
 }

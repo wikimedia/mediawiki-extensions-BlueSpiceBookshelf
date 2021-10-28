@@ -25,5 +25,7 @@
 	"bookshelf": "Bretaro",
 	"bookshelf-summary": "Ĝeneralaj Libroj",
 	"bs-bookshelf-prof-defaultview": "Defaŭlta vido",
-	"bs-bookshelf-prof-defaultview-images": "Bildoj"
+	"bs-bookshelf-prof-defaultview-images": "Bildoj",
+	"bs-bookshelf-action-editbook": "Redakti libran fonton",
+	"bs-bookshelf-action-editbook-create": "Krei libran fonton"
 }

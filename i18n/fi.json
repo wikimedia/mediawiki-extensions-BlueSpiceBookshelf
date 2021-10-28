@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Joquliina",
+			"MITO",
 			"Mediawikitranslator",
 			"Pyscowicz"
 		]
@@ -22,5 +23,7 @@
 	"bs-bookshelf-setting-path-feature": "Kirja",
 	"bs-bookshelf-book-grid-title": "Kirjat",
 	"bs-bookshelf-prof-defaultview-grid": "Ruudukko",
-	"bs-bookshelf-prof-defaultview-images": "Kuvat"
+	"bs-bookshelf-prof-defaultview-images": "Kuvat",
+	"bs-bookshelf-action-editbook": "Muokkaa wikitekstiä",
+	"bs-bookshelf-action-editbook-create": "Muokkaa wikitekstiä"
 }

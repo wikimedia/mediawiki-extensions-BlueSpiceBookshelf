@@ -54,5 +54,8 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Добавьте пейджер глав вверху страницы.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Показывать пейджер глав книги после содержания",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Добавьте пейджер глав внизу страницы.",
-	"bs-bookshelf-pref-supressbookns-help": "Пространство имён страниц скрыто в выводе PDF."
+	"bs-bookshelf-pref-supressbookns-help": "Пространство имён страниц скрыто в выводе PDF.",
+	"bs-bookshelf-action-editbook": "Править код",
+	"bs-bookshelf-action-editbook-create": "Править код",
+	"bs-bookshelf-warning": "Исключение PHP: $1"
 }
