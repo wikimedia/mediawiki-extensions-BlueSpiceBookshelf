@@ -16,7 +16,7 @@
 	bs.bookshelf.storageLocation.BookNamespace.prototype.getEditUrlFromTitle = function( bookTitle, params ) {
 		params = params || {};
 		return new mw.Title( bookTitle, bs.ns.NS_BOOK ).getUrl( $.extend( {
-			action: 'bookedit'
+			action: 'editbook'
 		}, params ) );
 	};
 
