@@ -39,5 +39,8 @@
 	"bs-bookshelf-error-type-title-mismatch": "지정된 제목이 지정된 책 유형과 일치하지 않습니다",
 	"bs-bookshelf-tagerror-article-title-not-valid": "지정된 원본 문서(&quot;$1&quot;)가 존재하지 않습니다.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "지정된 원본 문서(&quot;$1&quot;)에 유효하지 않은 데이터가 포함되어 있습니다.",
-	"bs-bookshelf-pref-supressbookns-help": "문서 이름의 이름공간은 PDF 출력에서 숨겨집니다."
+	"bs-bookshelf-pref-supressbookns-help": "문서 이름의 이름공간은 PDF 출력에서 숨겨집니다.",
+	"bs-bookshelf-action-editbook": "원본 편집",
+	"bs-bookshelf-action-editbook-create": "원본 편집",
+	"bs-bookshelf-warning": "PHP 예외: $1"
 }

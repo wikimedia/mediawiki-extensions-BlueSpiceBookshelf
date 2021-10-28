@@ -7,7 +7,8 @@
 			"Luca.favorido",
 			"Stefano",
 			"TheRukk",
-			"Tizven"
+			"Tizven",
+			"Valepert"
 		]
 	},
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Per favore, usa <i>sinistra</i> o <i>destra</i>.",
@@ -43,5 +44,8 @@
 	"bs-bookshelf-prof-defaultview-grid": "Griglia",
 	"bs-bookshelf-prof-defaultview-images": "Immagini",
 	"apihelp-bs-bookshelf-bookstore-param-book": "Specifica il libro per il quale deve essere fornito un elenco di capitoli.",
-	"bs-bookshelf-action-save-to-local-storage": "Sto salvando su disco locale"
+	"bs-bookshelf-action-save-to-local-storage": "Sto salvando su disco locale",
+	"bs-bookshelf-action-editbook": "Modifica sorgente",
+	"bs-bookshelf-action-editbook-create": "Modifica sorgente",
+	"bs-bookshelf-warning": "Eccezione PHP: $1"
 }

@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"BaRaN6161 TURK",
 			"McDutchie",
 			"MuratTheTurkish",
@@ -45,8 +46,8 @@
 	"apihelp-bs-bookshelf-store-summary": "{{doc-apihelp-summary|bs-bookshelf-store}}",
 	"apihelp-query+bsbookshelf-summary": "{{doc-apihelp-summary|query+bsbookshelf}}",
 	"bs-bookshelf-pref-titledisplaytext-help": "Description for config variable \"BookshelfTitleDisplayText\"",
-	"bs-bookshelf-action-editbook": "Label for action edit book\n{{Identical|visualeditor-ca-editsource",
-	"bs-bookshelf-action-editbook-create": "Label for action edit book\n{{Identical|visualeditor-ca-editsource",
+	"bs-bookshelf-action-editbook": "Label for action edit book\n{{Identical|visualeditor-ca-editsource}}",
+	"bs-bookshelf-action-editbook-create": "Label for action edit book\n{{Identical|visualeditor-ca-editsource}}",
 	"bs-bookshelf-edit-title": "Page title when editing a book",
 	"bs-bookshelf-error-invalid-type": "Error message if given book type is invalid",
 	"bs-bookshelf-error-type-title-mismatch": "Error message if title given does not match the given book type",

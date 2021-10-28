@@ -43,5 +43,7 @@
 	"bs-bookshelf-prof-defaultview-images": "تصویر",
 	"right-bookshelf-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[Special:Bookshelf]]",
-	"bs-bookshelf-action-save-to-local-storage": "در حال ذخیرهٔ مخزن محلی"
+	"bs-bookshelf-action-save-to-local-storage": "در حال ذخیرهٔ مخزن محلی",
+	"bs-bookshelf-action-editbook": "ویرایش مبدأ",
+	"bs-bookshelf-action-editbook-create": "ویرایش مبدأ"
 }

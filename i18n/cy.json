@@ -17,5 +17,7 @@
 	"bs-bookshelf-prof-defaultview": "Y golwg diofyn",
 	"bs-bookshelf-prof-defaultview-grid": "Grid",
 	"bs-bookshelf-prof-defaultview-images": "Delweddau",
-	"bs-bookshelf-action-save-to-local-storage": "Wrthi'n cadw ar storfa leol"
+	"bs-bookshelf-action-save-to-local-storage": "Wrthi'n cadw ar storfa leol",
+	"bs-bookshelf-action-editbook": "Golygwch ffynhonnell y llyfr/au",
+	"bs-bookshelf-action-editbook-create": "Creewch ffynhonnell y llyfr"
 }

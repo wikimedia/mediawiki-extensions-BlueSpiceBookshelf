@@ -79,5 +79,8 @@
 	"bookshelf-summary": "일반 책",
 	"bs-bookshelfui-prof-defaultview": "기본 뷰",
 	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
-	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근"
+	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
+	"bs-bookshelfui-panel-navigation-text": "책 둘러보기로",
+	"bs-bookshelfui-panel-navigation-title": "책 둘러보기로 돌아가기",
+	"bs-bookshelfui-panel-navigation-aria-label": "책 둘러보기로"
 }

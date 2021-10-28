@@ -72,5 +72,7 @@
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Ajoute une navigation par chapitre en bas de page.",
 	"apihelp-bs-bookshelf-store-param-tempBooks": "Liste de livres sur le dépôt local des clients qui devraient être inclus dans la réponse du dépôt",
 	"bs-bookshelf-pref-supressbookns-help": "L'espace de nom des noms de page est caché dans la sortie PDF.",
-	"bs-bookshelf-warning": "Exception PHP : $1"
+	"bs-bookshelf-warning": "Exception PHP : $1",
+	"bs-bookshelf-action-editbook": "Modifier la source",
+	"bs-bookshelf-action-editbook-create": "Modifier la source"
 }

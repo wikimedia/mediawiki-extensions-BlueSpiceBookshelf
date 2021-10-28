@@ -65,5 +65,7 @@
 	"bs-bookshelf-pref-chapterpageraftercontent": "Vis kapittelnavigasjon etter innholdet",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Legg til kapittelnavigasjon på bunnen av siden.",
 	"apihelp-bs-bookshelf-store-param-tempBooks": "Liste over bøker lagret lokalt hos klienten som bør inkluderes i lagringsresponsen",
-	"bs-bookshelf-pref-supressbookns-help": "Navnerommet til sidenavn skjules i den resulterende PDF-en."
+	"bs-bookshelf-pref-supressbookns-help": "Navnerommet til sidenavn skjules i den resulterende PDF-en.",
+	"bs-bookshelf-action-editbook": "Rediger bokkilde",
+	"bs-bookshelf-action-editbook-create": "Opprett bokkilde"
 }

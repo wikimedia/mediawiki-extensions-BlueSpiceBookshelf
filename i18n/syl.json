@@ -17,5 +17,7 @@
 	"bs-bookshelf-prof-defaultview": "Default view",
 	"bs-bookshelf-prof-defaultview-grid": "Grid",
 	"bs-bookshelf-prof-defaultview-images": "ꠍꠛꠤ",
-	"bs-bookshelf-action-save-to-local-storage": "Local storage ꠅ ꠍꠦꠁꠜ ꠈꠞꠣ ꠅꠞ"
+	"bs-bookshelf-action-save-to-local-storage": "Local storage ꠅ ꠍꠦꠁꠜ ꠈꠞꠣ ꠅꠞ",
+	"bs-bookshelf-action-editbook": "ꠛꠁꠞ source edit ꠈꠞꠇ꠆ꠇꠣ",
+	"bs-bookshelf-action-editbook-create": "ꠛꠁꠞ source ꠛꠣꠘꠣꠇ꠆ꠇꠣ"
 }

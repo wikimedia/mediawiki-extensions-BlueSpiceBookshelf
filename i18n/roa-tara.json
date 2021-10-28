@@ -64,5 +64,7 @@
 	"bs-bookshelf-pref-chapterpageraftercontent": "'Ndruche 'u paggenatore d'u capitole d'u libbre apprisse 'u condenute",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Aggiunge 'nu paggenatore d'u capitole sotte 'a pàgene.",
 	"bs-bookshelf-pref-supressbookns-help": "'U nome d'u namespace d'a pàgene jè scunnute jndr'à 'u PDF.",
-	"bs-bookshelf-warning": "Eccezzione PHP: $1"
+	"bs-bookshelf-warning": "Eccezzione PHP: $1",
+	"bs-bookshelf-action-editbook": "Cange fonde d'u libbre",
+	"bs-bookshelf-action-editbook-create": "Ccreje fonte libbre"
 }
