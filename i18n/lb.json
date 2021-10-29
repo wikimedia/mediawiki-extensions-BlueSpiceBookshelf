@@ -15,6 +15,8 @@
 	"bs-bookshelf-setting-path-feature": "Buch",
 	"bs-bookshelf-grouping-template-type-local_storage": "Temporär Bicher",
 	"bs-bookshelf-grouping-template-type-user_book": "Eege Bicher",
+	"bs-bookshelf-action-editbook": "Quelltext änneren",
+	"bs-bookshelf-action-editbook-create": "Quelltext änneren",
 	"bs-bookshelf-action-export-book": "Buch exportéieren",
 	"bs-bookshelf-book-grid-title": "Bicher",
 	"bookshelf-summary": "Allgemeng Bicher",
