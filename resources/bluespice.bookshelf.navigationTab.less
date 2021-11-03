@@ -103,6 +103,9 @@
 			&.bs-tree-level-0 {
 				padding-left: 0;
 			}
+			> div {
+				border-left: none;
+			}
 			span.bs-icon {
 				display: block;
 				float: left;
@@ -144,26 +147,28 @@
 					}
 				}
 			}
-
-			&.expandable {
-				span.bs-icon::before {
-					content: "\e921";
+			& div > span.bs-icon::before {
+				visibility: hidden;
+			}
+			&[aria-haspopup="true"] > div > span.bs-icon::before {
+					content: "\e923";
 					font-family: "entypo";
 					font-style: normal;
-
+					visibility: visible;
 					&:hover {
 						border-radius: 1em;
 					}
 				}
 
-				&.collapsed span.bs-icon::before {
-					content: "\e923";
+			&[aria-expanded="true"] {
+				& div > span.bs-icon::before {
+					content: "\e921";
 					font-family: "entypo";
 					font-style: normal;
 				}
 
-				.leaf span.bs-icon::before {
-					visibility: hidden;
+				& > ul {
+					visibility: visible;
 				}
 			}
 		}

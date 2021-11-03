@@ -396,7 +396,7 @@
 				"ext.bluespice.extjs"
 			]
 		},
-		"ext.bookshelf.navigationpanel.styles": {
+		"ext.bookshelf.navigation-panel.styles": {
 			"styles": [
 				"bluespice.bookshelf.navigation-panel.css"
 			]
