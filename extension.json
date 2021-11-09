@@ -30,7 +30,8 @@
 				"BookShelfShowChapterNavigationPagerBeforeContent": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\ChapterPagerBeforeContent::getInstance",
 				"BookshelfSupressBookNS": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\SupressBookNS::getInstance",
 				"BookshelfTitleDisplayText": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\TitleDisplayText::getInstance",
-				"BookshelfPrependPageTOCNumbers": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\PrependPageTOCNumbers::getInstance"
+				"BookshelfPrependPageTOCNumbers": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\PrependPageTOCNumbers::getInstance",
+				"BookshelfMainLinksBookshelf": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\MainLinksBookshelf::getInstance"
 			},
 			"SettingPathRegistry": {
 				"book": "bs-bookshelf-setting-path-feature"
@@ -435,6 +436,11 @@
 		},
 		"BookShelfShowChapterNavigationPagerAfterContent": {
 			"value": false
+		},
+		"BookshelfMainLinksBookshelf": {
+			"value": true,
+			"public": true,
+			"descriptionmsg": "bs-bookshelf-config-mainlinks-bookshelf-label"
 		}
 	},
 	"SpecialPages": {
@@ -444,7 +450,8 @@
 	},
 	"HookHandlers": {
 		"common-user-interface": {
-			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\CommonUserInterface"
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\CommonUserInterface",
+			"services": [ "ConfigFactory" ]
 		},
 		"discovery-skin": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\DiscoverySkin"
