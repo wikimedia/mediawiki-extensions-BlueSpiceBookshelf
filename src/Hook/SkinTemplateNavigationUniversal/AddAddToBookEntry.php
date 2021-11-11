@@ -29,7 +29,7 @@ class AddAddToBookEntry extends SkinTemplateNavigationUniversal {
 	 */
 	protected function doProcess() {
 		$this->links['actions']['bookshelf-add-to-book'] = [
-			'text' => $this->msg( 'bs-bookshelf-add-to-book-label' )->text(),
+			'text' => $this->msg( 'bs-bookshelf-actionmenuentry-addtobook' )->text(),
 			'href' => '#',
 			'class' => false,
 			'id' => 'ca-bookshelf-add-to-book',
