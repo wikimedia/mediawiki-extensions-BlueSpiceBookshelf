@@ -71,5 +71,6 @@
 	"bs-bookshelf-pref-chapterpageraftercontent": "Label for config variable \"BookShelfShowChapterNavigationPagerAfterContent\" at [[Special:BlueSpiceConfigManager]]",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Description for config variable \"BookShelfShowChapterNavigationPagerAfterContent\".",
 	"bs-bookshelf-pref-supressbookns-help": "Description for config variable \"BookshelfSupressBookNS\"",
-	"bs-bookshelf-warning": "Description for a PHP error thrown in BookContent.php. Parameters:\n* $1 - warning message, not localized."
+	"bs-bookshelf-warning": "Description for a PHP error thrown in BookContent.php. Parameters:\n* $1 - warning message, not localized.",
+	"bs-bookshelf-actionmenuentry-addtobook": "Label for action menu entry that allows adding the current page to a book\n{{Identical|Add to book}}"
 }
