@@ -50,5 +50,6 @@
 	"bs-bookshelf-grouping-template-type-local_storage": "كتب مؤقتة",
 	"bs-bookshelf-book-grid-title": "الكتب",
 	"bs-bookshelf-prof-defaultview-images": "الصور",
-	"bs-bookshelf-edit-title": "تعديل $1"
+	"bs-bookshelf-edit-title": "تعديل $1",
+	"bs-bookshelf-action-editbook": "عدل المصدر"
 }

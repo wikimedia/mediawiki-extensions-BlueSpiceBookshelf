@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Adam N.",
 			"Fraxinus.cs"
 		]
 	},
-	"bs-bookshelf-action-editbook-create": "Upravit zdroj"
+	"bs-bookshelf-action-editbook-create": "Upravit zdroj",
+	"bs-bookshelf-action-editbook": "Editovat zdroj"
 }
