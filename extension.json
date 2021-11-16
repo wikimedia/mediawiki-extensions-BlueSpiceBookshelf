@@ -400,6 +400,11 @@
 			"styles": [
 				"bluespice.bookshelf.navigation-panel.css"
 			]
+		},
+		"ext.bookshelf.special-bookshelf.styles": {
+			"styles": [
+				"bluespice.bookshelf.special-bookshelf.css"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {

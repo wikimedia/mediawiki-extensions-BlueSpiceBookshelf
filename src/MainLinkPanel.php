@@ -63,4 +63,12 @@ class MainLinkPanel extends RestrictedTextLink {
 		return Message::newFromKey( 'bookshelf' );
 	}
 
+	/**
+	 *
+	 * @inheritDoc
+	 */
+	public function getRequiredRLStyles() : array {
+		return [ 'ext.bookshelf.special-bookshelf.styles' ];
+	}
+
 }
