@@ -34,7 +34,7 @@ class BookshelfBookEditor extends ManagerBase {
 		if ( $this->bookEditData->getTitle() instanceof Title ) {
 			$this->getOutput()->redirect(
 				$this->bookEditData->getTitle()->getLocalURL( [
-					'action' => 'edit',
+					'action' => 'editbook',
 					'returnto' => SpecialPage::getTitleFor( 'BookshelfBookManager' )->getPrefixedDBkey()
 				] )
 			);
