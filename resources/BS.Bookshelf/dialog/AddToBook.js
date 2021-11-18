@@ -62,7 +62,7 @@
 		} );
 		this.overrideBookshelfTagLayout = new OO.ui.FieldLayout( this.overrideBookshelfTag, {
 			label: mw.message( 'bs-bookshelf-add-to-book-label-mod-bstag' ).plain(),
-			align: 'right'
+			align: 'inline'
 		} );
 		this.overrideBookshelfTagLayout.$element.hide();
 
