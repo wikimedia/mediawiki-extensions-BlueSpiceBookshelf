@@ -3,9 +3,11 @@
 		"authors": [
 			"A2y4",
 			"Aefgh39622",
+			"RYOUMA1117",
 			"Shirayuki"
 		]
 	},
+	"bs-bookshelf-positive-integer-validation-not-approved": "整数のみ許可されます。",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "<i>left</i> または <i>right</i> を使用してください。",
 	"bs-bookshelf-specialpage-title": "書籍",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "ライブラリ",
@@ -21,12 +23,18 @@
 	"bs-bookshelf-empty-selection": "何も選択されていません",
 	"bs-bookshelf-grouping-template-type-ns_book": "一般書籍",
 	"bs-bookshelf-grouping-template-type-user_book": "自分の書籍",
+	"bs-bookshelf-action-editbook": "ソースを編集",
+	"bs-bookshelf-action-editbook-create": "ソースを編集",
+	"bs-bookshelf-action-export-book": "書籍のエクスポート",
 	"bs-bookshelf-edit-title": "「$1」を編集中",
 	"bs-bookshelf-book-grid-title": "本",
 	"bookshelf": "本棚",
 	"bookshelf-summary": "一般書籍",
+	"bs-bookshelf-prof-defaultview": "既定の表示",
 	"bs-bookshelf-prof-defaultview-grid": "グリッド",
 	"bs-bookshelf-prof-defaultview-images": "画像",
 	"right-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] にアクセス",
-	"action-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] へのアクセス"
+	"action-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] へのアクセス",
+	"bs-bookshelf-action-save-to-local-storage": "ローカルストレージに保存",
+	"bs-bookshelf-warning": "PHPの例外： $1"
 }
