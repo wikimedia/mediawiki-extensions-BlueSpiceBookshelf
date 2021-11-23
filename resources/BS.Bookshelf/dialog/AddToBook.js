@@ -5,7 +5,7 @@
 		config.size = 'medium';
 		bs.bookshelf.dialog.AddToBook.parent.call( this, config );
 
-		this.pageName = config.pagename;
+		this.pageName = config.pagename.replace( '_', ' ' );
 	};
 
 	OO.inheritClass( bs.bookshelf.dialog.AddToBook, OOJSPlus.ui.dialog.FormDialog );
