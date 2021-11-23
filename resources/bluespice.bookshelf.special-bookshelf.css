@@ -60,6 +60,6 @@ div.caption .meta {
 #bs-bookshelf-container .bs-flyout-tabbed-data-view .x-tab-inner {
 	text-indent: 0px;
 	width: auto;
-	max-width: fit-content;
+	max-width: inherit;
 	padding: 0 5px;
 }
