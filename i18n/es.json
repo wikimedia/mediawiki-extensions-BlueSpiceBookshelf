@@ -3,6 +3,7 @@
 		"authors": [
 			"Alan Mena",
 			"Avengium",
+			"Danniel07",
 			"DannyS712",
 			"Fitoschido",
 			"Igmc4",
@@ -58,5 +59,8 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Agregue un localizador de capítulos en la parte superior de la página.",
 	"bs-bookshelf-action-editbook": "Editar código",
 	"bs-bookshelf-action-editbook-create": "Editar código",
-	"bs-bookshelf-warning": "Excepción de PHP: $1"
+	"bs-bookshelf-warning": "Excepción de PHP: $1",
+	"bs-bookshelf-tagerror-no-attribute-given": "Enginn eiginleiki gefinn upp! Notaðu <strong>src</strong> til að stilla efnisyfirlitið.",
+	"bs-bookshelf-pref-SupressBookNS": "Bældu nafnrými forskeyti bókagreina í úttakinu",
+	"bs-bookshelf-add-to-book-label-mod-bstag": "Breyta 'bókahillu' merkinu á síðunni (ný útgáfa)"
 }

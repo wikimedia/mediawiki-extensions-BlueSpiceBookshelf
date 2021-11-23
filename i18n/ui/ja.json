@@ -5,6 +5,7 @@
 			"Aefgh39622",
 			"LaMagiaaa",
 			"Omotecho",
+			"RYOUMA1117",
 			"Shirayuki",
 			"Suchichi02"
 		]
@@ -81,5 +82,8 @@
 	"bs-bookshelfui-type-pagecollection": "ページコレクション",
 	"bs-bookshelfui-nav-link-title-all-books": "一般書籍",
 	"bs-bookshelfui-chapterpager-previous": "前へ",
-	"bs-bookshelfui-chapterpager-next": "次へ"
+	"bs-bookshelfui-chapterpager-next": "次へ",
+	"bs-bookshelfui-bookui-savingprogress-title": "本を保存する",
+	"bs-bookshelfui-bookmetatag-department": "部門",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "返す結果の数"
 }

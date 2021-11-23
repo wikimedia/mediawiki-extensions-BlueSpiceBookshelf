@@ -19,5 +19,7 @@
 	"bs-bookshelf-action-export-book": "Buch exportéieren",
 	"bs-bookshelf-book-grid-title": "Bicher",
 	"bookshelf-summary": "Allgemeng Bicher",
-	"bs-bookshelf-prof-defaultview-images": "Biller"
+	"bs-bookshelf-prof-defaultview-images": "Biller",
+	"bs-bookshelf-action-editbook": "Quelltext änneren",
+	"bs-bookshelf-action-editbook-create": "Quelltext änneren"
 }

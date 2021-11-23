@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Agusbou2015",
+			"Bruno44101",
 			"DannyS712",
 			"Fitoschido",
 			"Fortega",
@@ -86,5 +87,7 @@
 	"bs-bookshelfui-chapterpager-next": "Siguiente",
 	"bs-bookshelfui-bookui-savingprogress-title": "Guardando libro",
 	"bs-bookshelfui-nothingtoexport-text": "Tu seleccion está vacía",
-	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Número de resultados para devolver"
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Número de resultados para devolver",
+	"bs-bookshelfui-bookmanager-deletion-reason": "Eliminado por BookManager",
+	"bs-bookshelfui-panel-navigation-text": "Para reservar la navegación"
 }

@@ -9,5 +9,6 @@
 	"bs-bookshelf-tag-prev": "পূর্ববর্তী",
 	"bs-bookshelf-personal-books-page-prefix": "$1/বই/",
 	"bs-bookshelf-edit-title": "সম্পাদনা করছেন $1",
-	"bs-bookshelf-prof-defaultview": "পূর্বনির্ধারিত প্রদর্শন"
+	"bs-bookshelf-prof-defaultview": "পূর্বনির্ধারিত প্রদর্শন",
+	"bs-bookshelf-action-editbook-create": "উৎস সম্পাদনা"
 }
