@@ -1,3 +1,6 @@
+.preview .x-panel-body.x-panel-body-default {
+	overflow: auto;
+}
 .preview .thumbnail {
 	padding: 16px;
 	display: inline-block;
