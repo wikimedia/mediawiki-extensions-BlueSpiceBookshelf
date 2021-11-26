@@ -4,8 +4,13 @@
 			"Yupik"
 		]
 	},
+	"bs-bookshelfui-widget-editor-link-text": "Muuʹtt tän ǩeeʹrj",
+	"bs-bookshelfui-new-book-title": "Raaj ođđ ǩeeʹrj",
+	"bs-bookshelfui-delete-book-title": "Jaukkâd ǩeeʹrj",
 	"bs-bookshelfui-ctxmnu-tag-edit": "Muuʹtt asetõõzzid",
 	"bs-bookshelfui-dlg-choosecategory-label": "Kategoria",
 	"bs-bookshelfui-type-category": "Kategoria puk seeid",
+	"bs-bookshelfui-book-title-link-edit": "Muuʹtt ǩeeʹrj",
+	"bs-bookshelfui-book-title-link-edit-text": "Muuʹtt ǩeeʹrj",
 	"bs-bookshelfui-bookmetatag-version": "Versio"
 }
