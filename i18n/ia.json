@@ -64,5 +64,6 @@
 	"bs-bookshelf-pref-chapterpageraftercontent": "Monstrar le navigation per capitulo del libro post le contento",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Inserer un navigation per capitulo al fin del pagina.",
 	"bs-bookshelf-pref-supressbookns-help": "Non monstrar le spatio de nomines quando se indica nomines de paginas in files PDF generate.",
-	"bs-bookshelf-warning": "Exception PHP: $1"
+	"bs-bookshelf-warning": "Exception PHP: $1",
+	"bs-bookshelf-actionmenuentry-addtobook": "Adder al libro"
 }
