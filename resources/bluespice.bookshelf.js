@@ -45,7 +45,10 @@
 
 	function _prependNumbersToTOCandHeadings() {
 		//Prepend number
-		if ( mw.user.options.get( 'numberheadings' ) === 0 ) {
+		if (  mw.config.get( 'bsgBookshelfPrependPageTOCNumbers' ) === false ) {
+			return;
+		}
+		if ( mw.config.get( 'PrependPageTOCNumbers' ) === 0 ) {
 			return;
 		}
 
@@ -72,7 +75,7 @@
 			return;
 		}
 		$( '.mw-headline' ).each( function () {
-			$( this ).prepend($numNode.clone() );
+			$( this ).prepend( $numNode.clone() );
 		});
 	}
 

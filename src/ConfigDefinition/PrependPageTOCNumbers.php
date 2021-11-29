@@ -25,4 +25,11 @@ class PrependPageTOCNumbers extends BooleanSetting implements \BlueSpice\Bookshe
 	public function getLabelMessageKey() {
 		return 'bs-bookshelf-pref-PrependPageTOCNumbers';
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function isRLConfigVar() {
+		return true;
+	}
 }
