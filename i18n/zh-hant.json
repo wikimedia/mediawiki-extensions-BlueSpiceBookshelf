@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kly",
-			"Weather Top Wizard"
+			"Weather Top Wizard",
+			"Winston Sung"
 		]
 	},
 	"bs-bookshelf-extension-description": "啟動 BlueSpice 來管理與匯出條目的層級集合。",
@@ -69,5 +70,8 @@
 	"bs-bookshelf-pref-supressbookns-help": "在 PDF 輸出中，頁面名稱的命名空間為隱藏。",
 	"bs-bookshelf-action-editbook": "編輯書籍來源",
 	"bs-bookshelf-action-editbook-create": "建立書籍來源",
-	"bs-bookshelf-warning": "PHP例外: $1"
+	"bs-bookshelf-warning": "PHP例外: $1",
+	"bs-bookshelf-actionmenuentry-addtobook": "加入書籍",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "顯示「書櫃」入口",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "在左側導覽列顯示「書櫃」入口連結"
 }
