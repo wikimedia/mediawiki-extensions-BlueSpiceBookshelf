@@ -74,5 +74,8 @@
 	"bs-bookshelf-pref-supressbookns-help": "L'espace de nom des noms de page est caché dans la sortie PDF.",
 	"bs-bookshelf-warning": "Exception PHP : $1",
 	"bs-bookshelf-action-editbook": "Modifier la source",
-	"bs-bookshelf-action-editbook-create": "Modifier la source"
+	"bs-bookshelf-action-editbook-create": "Modifier la source",
+	"bs-bookshelf-actionmenuentry-addtobook": "Ajouter au livre",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Afficher le point d’entrée « Étagère »",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Afficher le lien du point d’entrée « Étagère » dans la navigation à gauche"
 }

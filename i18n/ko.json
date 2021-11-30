@@ -42,5 +42,6 @@
 	"bs-bookshelf-pref-supressbookns-help": "문서 이름의 이름공간은 PDF 출력에서 숨겨집니다.",
 	"bs-bookshelf-action-editbook": "원본 편집",
 	"bs-bookshelf-action-editbook-create": "원본 편집",
-	"bs-bookshelf-warning": "PHP 예외: $1"
+	"bs-bookshelf-warning": "PHP 예외: $1",
+	"bs-bookshelf-actionmenuentry-addtobook": "책에 추가"
 }

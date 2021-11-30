@@ -66,5 +66,6 @@
 	"bs-bookshelf-pref-supressbookns-help": "Non monstrar le spatio de nomines quando se indica nomines de paginas in files PDF generate.",
 	"bs-bookshelf-warning": "Exception PHP: $1",
 	"bs-bookshelf-action-editbook": "Modificar fonte",
-	"bs-bookshelf-action-editbook-create": "Modificar fonte"
+	"bs-bookshelf-action-editbook-create": "Modificar fonte",
+	"bs-bookshelf-actionmenuentry-addtobook": "Adder al libro"
 }

@@ -3,6 +3,7 @@
 		"authors": [
 			"A2y4",
 			"Aefgh39622",
+			"RYOUMA1117",
 			"Shirayuki"
 		]
 	},
@@ -28,5 +29,12 @@
 	"bs-bookshelf-prof-defaultview-grid": "グリッド",
 	"bs-bookshelf-prof-defaultview-images": "画像",
 	"right-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] にアクセス",
-	"action-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] へのアクセス"
+	"action-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] へのアクセス",
+	"bs-bookshelf-positive-integer-validation-not-approved": "整数のみ許可されます。",
+	"bs-bookshelf-action-editbook": "ソースを編集",
+	"bs-bookshelf-action-editbook-create": "ソースを編集",
+	"bs-bookshelf-action-export-book": "書籍のエクスポート",
+	"bs-bookshelf-prof-defaultview": "既定の表示",
+	"bs-bookshelf-action-save-to-local-storage": "ローカルストレージに保存",
+	"bs-bookshelf-warning": "PHPの例外： $1"
 }

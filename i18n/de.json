@@ -71,5 +71,9 @@
 	"bs-bookshelf-pref-chapterpageraftercontent": "Eine Blätterfunktion für Bücher nach dem Inhalt anzeigen",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Fügt eine Kapitel-Blätterfunktion am Ende der Seite ein",
 	"apihelp-bs-bookshelf-store-param-tempBooks": "Liste von Büchern im lokalen Speicher des Clients die in die Antwort des Stores übernommen werden sollen.",
-	"bs-bookshelf-pref-supressbookns-help": "Der Namensraum wird bei der Anzeige des Seitennamens im PDF unterdrückt."
+	"bs-bookshelf-pref-supressbookns-help": "Der Namensraum wird bei der Anzeige des Seitennamens im PDF unterdrückt.",
+	"bs-bookshelf-warning": "PHP Exception: $1",
+	"bs-bookshelf-actionmenuentry-addtobook": "Zu einem Buch hinzufügen",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Einstiegspunkt \"Bookshelf\" anzeigen",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Einstiegspunkt \"Bookshelf\" in der linken Navigation anzeigen"
 }

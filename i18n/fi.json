@@ -24,5 +24,6 @@
 	"bs-bookshelf-setting-path-feature": "Kirja",
 	"bs-bookshelf-prof-defaultview-grid": "Ruudukko",
 	"bs-bookshelf-action-editbook": "Muokkaa wikitekstiä",
-	"bs-bookshelf-action-editbook-create": "Muokkaa wikitekstiä"
+	"bs-bookshelf-action-editbook-create": "Muokkaa wikitekstiä",
+	"bs-bookshelf-actionmenuentry-addtobook": "Lisää kirjaan"
 }
