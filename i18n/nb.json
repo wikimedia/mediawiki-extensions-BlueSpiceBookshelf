@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Abuluntu",
 			"Jon Harald Søby"
 		]
 	},
@@ -42,8 +43,8 @@
 	"bs-bookshelf-grouping-template-type-local_storage": "Midlertidige bøker",
 	"bs-bookshelf-grouping-template-type-ns_book": "Generelle bøker",
 	"bs-bookshelf-grouping-template-type-user_book": "Egne bøker",
-	"bs-bookshelf-action-editbook": "Rediger bokkilde",
-	"bs-bookshelf-action-editbook-create": "Opprett bokkilde",
+	"bs-bookshelf-action-editbook": "Rediger kilde",
+	"bs-bookshelf-action-editbook-create": "Rediger kilde",
 	"bs-bookshelf-action-export-book": "Eksporter bok",
 	"bs-bookshelf-edit-title": "Redigerer $1",
 	"bs-bookshelf-error-invalid-type": "Den angitte boktypen er ugyldig",
@@ -63,5 +64,6 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Legg til kapittelnavigasjon på toppen av siden.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Vis kapittelnavigasjon etter innholdet",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Legg til kapittelnavigasjon på bunnen av siden.",
-	"bs-bookshelf-pref-supressbookns-help": "Navnerommet til sidenavn skjules i den resulterende PDF-en."
+	"bs-bookshelf-pref-supressbookns-help": "Navnerommet til sidenavn skjules i den resulterende PDF-en.",
+	"bs-bookshelf-actionmenuentry-addtobook": "Legg til bok"
 }
