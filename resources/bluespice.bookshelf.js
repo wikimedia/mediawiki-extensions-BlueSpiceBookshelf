@@ -45,10 +45,7 @@
 
 	function _prependNumbersToTOCandHeadings() {
 		//Prepend number
-		if (  mw.config.get( 'bsgBookshelfPrependPageTOCNumbers' ) === false ) {
-			return;
-		}
-		if ( mw.config.get( 'PrependPageTOCNumbers' ) === 0 ) {
+		if ( mw.config.get( 'bsgBookshelfPrependPageTOCNumbers' ) === false ) {
 			return;
 		}
 
@@ -70,6 +67,9 @@
 			$( this ).prepend( $numNode.clone() );
 		});
 
+		if ( mw.user.options.get( 'numberheadings' ) === 0 ) {
+			return;
+		}
 		//This is MediaWiki behavior. Numbers only if more than one heading.
 		if ( $( '.mw-headline' ).length < 2 ) {
 			return;
