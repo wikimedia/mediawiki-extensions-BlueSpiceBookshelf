@@ -46,6 +46,7 @@
 	"bs-bookshelf-grouping-template-type-local_storage": "Temporäre Bücher",
 	"bs-bookshelf-grouping-template-type-ns_book": "Allgemeine Bücher",
 	"bs-bookshelf-grouping-template-type-user_book": "Eigene Bücher",
+	"bs-bookshelf-ga-manager-label": "Bücher",
 	"bs-bookshelf-action-editbook": "Quelltext bearbeiten",
 	"bs-bookshelf-action-editbook-create": "Quelltext erstellen",
 	"bs-bookshelf-action-export-book": "Buch exportieren",

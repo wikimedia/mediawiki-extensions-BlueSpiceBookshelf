@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Bookshelf\HookHandler;
 
-use BlueSpice\Bookshelf\GlobalActionsTool;
+use BlueSpice\Bookshelf\GlobalActionsManager;
 use BlueSpice\Bookshelf\MainLinkPanel;
 use BlueSpice\Bookshelf\SidebarBookPanel;
 use ConfigFactory;
@@ -28,11 +28,11 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 	 */
 	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ): void {
 		$registry->register(
-			'GlobalActionsTools',
+			'GlobalActionsManager',
 			[
 				'bs-special-bookshelf' => [
 					'factory' => static function () {
-						return new GlobalActionsTool();
+						return new GlobalActionsManager();
 					}
 				]
 			]
