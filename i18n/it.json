@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Beta16",
 			"Dansita",
 			"Gianfranco",
@@ -47,5 +48,6 @@
 	"bs-bookshelf-action-save-to-local-storage": "Sto salvando su disco locale",
 	"bs-bookshelf-action-editbook": "Modifica sorgente",
 	"bs-bookshelf-action-editbook-create": "Modifica sorgente",
-	"bs-bookshelf-warning": "Eccezione PHP: $1"
+	"bs-bookshelf-warning": "Eccezione PHP: $1",
+	"bs-bookshelf-ga-manager-label": "Libri"
 }
