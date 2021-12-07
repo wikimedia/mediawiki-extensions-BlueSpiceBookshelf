@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Beta16",
 			"Dansita",
 			"Gianfranco",
@@ -39,6 +40,7 @@
 	"bs-bookshelf-book-grid-title": "Libri",
 	"bookshelf": "Scaffale",
 	"bookshelf-summary": "Libri generali",
+	"bs-bookshelf-ga-manager-label": "Libri",
 	"bs-bookshelf-prof-defaultview": "Vista predefinita",
 	"bs-bookshelf-prof-defaultview-grid": "Griglia",
 	"bs-bookshelf-prof-defaultview-images": "Immagini",

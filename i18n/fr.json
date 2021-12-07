@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Daniel Mietchen",
 			"DreZhsh",
 			"Eihel",
@@ -59,6 +60,7 @@
 	"bookshelf": "Étagère",
 	"bookshelf-summary": "Livres généraux",
 	"prefs-bookshelf": "Page spéciale étagère",
+	"bs-bookshelf-ga-manager-label": "Livres",
 	"bs-bookshelf-prof-defaultview": "Affichage par défaut",
 	"bs-bookshelf-prof-defaultview-grid": "Grille",
 	"bs-bookshelf-prof-defaultview-images": "Images",

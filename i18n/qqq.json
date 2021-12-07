@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Amire80",
 			"BaRaN6161 TURK",
 			"McDutchie",
@@ -59,8 +60,8 @@
 	"bs-bookshelf-book-grid-title": "Title for the grid showing available books\n{{identical|Book}}",
 	"bookshelf": "Special page name for [[Special:Bookshelf]] special page.\n{{Identical|Bookshelf}}",
 	"bookshelf-summary": "Bookshelf special page summary",
-	"bs-bookshelf-ga-manager-label": "Label for global actions menu entry",
 	"prefs-bookshelf": "Bookshelf settings name",
+	"bs-bookshelf-ga-manager-label": "Label for global actions menu entry\n\n{{Identical|Book}}",
 	"bs-bookshelf-prof-defaultview": "Bookshelf default view settings name",
 	"bs-bookshelf-prof-defaultview-grid": "Grid view settings name",
 	"bs-bookshelf-prof-defaultview-images": "Images view settings name\n{{identical|Image}}",
