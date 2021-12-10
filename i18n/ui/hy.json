@@ -11,6 +11,8 @@
 	"bs-bookshelfui-dlg-copy-name-addition": "(պատճեն)",
 	"bs-bookshelfui-dlg-choosecategory-label": "Կատեգորիա",
 	"bs-bookshelfui-dlg-type-label": "Աղբյուր",
+	"bs-bookshelfui-book-title-link-edit": "Խմբագրել գիրք",
+	"bs-bookshelfui-book-title-link-edit-text": "Խմբագրել գիրք",
 	"bs-bookshelfui-bookmetatag-title": "Վերնագիր",
 	"bs-bookshelfui-bookmetatag-subtitle": "Ենթավերնագիր.",
 	"bs-bookshelfui-bookmetatag-author1": "Հեղինակ 1",
