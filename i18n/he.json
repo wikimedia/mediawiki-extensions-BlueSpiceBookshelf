@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
-			"YaronSh"
+			"YaronSh",
+			"ערן"
 		]
 	},
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "נא להשתמש ב־<i>left</i> או ב־<i>right</i>.",
@@ -30,6 +31,7 @@
 	"bs-bookshelf-book-grid-title": "ספרים",
 	"bookshelf": "מדף הספרים",
 	"bookshelf-summary": "ספרים כלליים",
+	"bs-bookshelf-ga-manager-label": "ספרים",
 	"bs-bookshelf-prof-defaultview": "תצוגת בררת מחדל",
 	"bs-bookshelf-prof-defaultview-grid": "רשת",
 	"bs-bookshelf-prof-defaultview-images": "תמונות",

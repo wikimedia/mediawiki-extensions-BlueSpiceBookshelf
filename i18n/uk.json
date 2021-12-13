@@ -67,5 +67,6 @@
 	"bs-bookshelf-pref-chapterpageraftercontent": "Показувати зміст за розділами після вмісту",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Додати зміст за розділами унизу сторінки.",
 	"bs-bookshelf-pref-supressbookns-help": "Простір назв імен сторінок прихований у PDF-файлі.",
-	"bs-bookshelf-warning": "Виняток PHP: $1"
+	"bs-bookshelf-warning": "Виняток PHP: $1",
+	"bs-bookshelf-actionmenuentry-addtobook": "Додати книжку"
 }
