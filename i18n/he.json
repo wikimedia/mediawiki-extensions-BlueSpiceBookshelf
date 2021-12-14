@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
-			"YaronSh"
+			"YaronSh",
+			"ערן"
 		]
 	},
 	"bs-bookshelf-specialpage-title": "ספרים",
@@ -35,5 +36,6 @@
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "נא להשתמש ב־<i>left</i> או ב־<i>right</i>.",
 	"bs-bookshelf-personal-books-page-prefix": "$1/ספרים/",
 	"bs-bookshelf-action-editbook": "לערוך מקור",
-	"bs-bookshelf-action-editbook-create": "לערוך מקור"
+	"bs-bookshelf-action-editbook-create": "לערוך מקור",
+	"bs-bookshelf-ga-manager-label": "ספרים"
 }
