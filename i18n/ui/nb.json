@@ -90,5 +90,9 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Rutenett",
 	"bs-bookshelfui-prof-defaultview-images": "Bilder",
 	"bs-bookshelfui-chapterpager-previous": "Forrige",
-	"bs-bookshelfui-chapterpager-next": "Neste"
+	"bs-bookshelfui-chapterpager-next": "Neste",
+	"bs-bookshelfui-panel-navigation-text": "Til boknavigasjon",
+	"bs-bookshelfui-panel-navigation-title": "Tilbake til boknavigasjon",
+	"bs-bookshelfui-panel-navigation-aria-label": "Til boknavigasjon",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Boknavigasjon som trestruktur"
 }
