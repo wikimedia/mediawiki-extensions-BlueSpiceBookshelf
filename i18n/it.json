@@ -13,7 +13,7 @@
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "Sono consentiti solo interi positivi.",
-	"bs-bookshelf-tagerror-attribute-float-not-valid": "Per favore, usa <i>sinistra</i> o <i>destra</i>.",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Per favore, usa <i>left</i> o <i>right</i>.",
 	"bs-bookshelf-specialpage-title": "Libri",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Libreria",
 	"bs-bookshelf-tag-next": "Successivo",
