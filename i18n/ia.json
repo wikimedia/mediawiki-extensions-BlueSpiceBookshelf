@@ -42,8 +42,8 @@
 	"bs-bookshelf-grouping-template-type-local_storage": "Libros temporari",
 	"bs-bookshelf-grouping-template-type-ns_book": "Libros general",
 	"bs-bookshelf-grouping-template-type-user_book": "Proprie libros",
-	"bs-bookshelf-action-editbooksource": "Modificar fonte del libro",
-	"bs-bookshelf-action-editbooksource-create": "Crear fonte de libro",
+	"bs-bookshelf-action-editbook": "Modificar fonte",
+	"bs-bookshelf-action-editbook-create": "Modificar fonte",
 	"bs-bookshelf-action-export-book": "Exportar libro",
 	"bs-bookshelf-edit-title": "Modification de $1",
 	"bs-bookshelf-error-invalid-type": "Le typo de libro specificate non es valide",
@@ -53,6 +53,7 @@
 	"bookshelf": "Planca de libros",
 	"bookshelf-summary": "Libros general",
 	"prefs-bookshelf": "Pagina special de planca de libros",
+	"bs-bookshelf-ga-manager-label": "Libros",
 	"bs-bookshelf-prof-defaultview": "Vista predefinite",
 	"bs-bookshelf-prof-defaultview-grid": "Grillia",
 	"bs-bookshelf-prof-defaultview-images": "Imagines",
@@ -65,7 +66,7 @@
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Inserer un navigation per capitulo al fin del pagina.",
 	"bs-bookshelf-pref-supressbookns-help": "Non monstrar le spatio de nomines quando se indica nomines de paginas in files PDF generate.",
 	"bs-bookshelf-warning": "Exception PHP: $1",
-	"bs-bookshelf-action-editbook": "Modificar fonte",
-	"bs-bookshelf-action-editbook-create": "Modificar fonte",
-	"bs-bookshelf-actionmenuentry-addtobook": "Adder al libro"
+	"bs-bookshelf-actionmenuentry-addtobook": "Adder al libro",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Monstrar le puncto de entrata \"Planca de libros\"",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Monstrar le ligamine del puncto de entrata \"Planca de libros\" in le navigation al sinistra"
 }
