@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Agusbou2015",
 			"Alan Mena",
 			"Avengium",
 			"Danniel07",
@@ -17,6 +18,7 @@
 	"bs-bookshelf-extension-description": "Habilita BlueSpice para controlar y exportar colecciones jerárquicas de artículos.",
 	"bs-bookshelf-tag-bookshelf-desc": "Inserta la navegación de capítulo de un libro en una página de este. Mediante esta etiqueta, los artículos mencionados se incluyen en el libro. La numeración se adapta automáticamente al sumario.",
 	"bs-bookshelf-tag-bookmeta-desc": "Etiqueta para guardar algunos metadatos en artículos de libros. Estos datos están incluidos en el libro. Los atributos de esta etiqueta deben corresponderse con los metadatos del artículo del libro.",
+	"bs-bookshelf-tag-booklist-desc": "Genera listas de artículos del espacio de nombres \"libro\" y puede ser filtrado. La indicación del filtro es obligatoria.",
 	"bs-bookshelf-tagerror-no-attribute-given": "Enginn eiginleiki gefinn upp! Notaðu <strong>src</strong> til að stilla efnisyfirlitið.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "No existe el artículo de origen proporcionado («$1»).",
 	"bs-bookshelf-tagerror-article-content-not-valid": "El artículo de origen proporcionado («$1») contiene datos no válidos.",
