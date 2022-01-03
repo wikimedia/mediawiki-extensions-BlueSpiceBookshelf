@@ -4,6 +4,7 @@
 			"A Chinese Wikipedian",
 			"AYZ04",
 			"Dimension",
+			"Hydra",
 			"Lakejason0",
 			"Shimamura Sakura",
 			"VulpesVulpes825",
@@ -65,6 +66,7 @@
 	"bookshelf": "书架",
 	"bookshelf-summary": "通用图书",
 	"prefs-bookshelf": "书架特殊页面",
+	"bs-bookshelf-ga-manager-label": "图书",
 	"bs-bookshelf-prof-defaultview": "默认视图",
 	"bs-bookshelf-prof-defaultview-grid": "格子",
 	"bs-bookshelf-prof-defaultview-images": "图像",
@@ -77,5 +79,6 @@
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "在页面底部添加章节分页器。",
 	"bs-bookshelf-pref-supressbookns-help": "在 PDF 输出中，页面的命名空间是隐藏的。",
 	"bs-bookshelf-warning": "PHP错误：$1",
-	"bs-bookshelf-actionmenuentry-addtobook": "添加到书籍"
+	"bs-bookshelf-actionmenuentry-addtobook": "添加到书籍",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "显示「书柜」入口"
 }

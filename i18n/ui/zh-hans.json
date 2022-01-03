@@ -5,6 +5,7 @@
 			"A Chinese Wikipedian",
 			"AYZ04",
 			"Dimension",
+			"Hydra",
 			"Lakejason0",
 			"Shimamura Sakura",
 			"VulpesVulpes825",
@@ -103,5 +104,8 @@
 	"bs-bookshelfui-prof-defaultview-grid": "格子",
 	"bs-bookshelfui-prof-defaultview-images": "图片",
 	"bs-bookshelfui-chapterpager-previous": "上一个",
-	"bs-bookshelfui-chapterpager-next": "下一个"
+	"bs-bookshelfui-chapterpager-next": "下一个",
+	"bs-bookshelfui-panel-navigation-text": "至书籍导览",
+	"bs-bookshelfui-panel-navigation-title": "返回书籍导览",
+	"bs-bookshelfui-panel-navigation-aria-label": "至书籍导览"
 }
