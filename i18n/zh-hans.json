@@ -13,6 +13,7 @@
 			"Yfdyh000",
 			"Yining Chen",
 			"列维劳德",
+			"孟天皓",
 			"沈澄心",
 			"落花有意12138"
 		]
@@ -80,5 +81,6 @@
 	"bs-bookshelf-pref-supressbookns-help": "在 PDF 输出中，页面的命名空间是隐藏的。",
 	"bs-bookshelf-warning": "PHP错误：$1",
 	"bs-bookshelf-actionmenuentry-addtobook": "添加到书籍",
-	"bs-bookshelf-config-mainlinks-bookshelf-label": "显示「书柜」入口"
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "显示「书柜」入口",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "在左侧导航中显示入口点“书架”链接"
 }
