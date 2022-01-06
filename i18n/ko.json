@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Gongsoonyee",
-			"Ykhwong"
+			"Ykhwong",
+			"Yunbj"
 		]
 	},
 	"bs-bookshelf-tagerror-article-title-not-valid": "지정된 원본 문서(&quot;$1&quot;)가 존재하지 않습니다.",
@@ -43,6 +44,8 @@
 	"right-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
 	"action-bookshelf-viewspecialpage": "[[Special:Bookshelf]] 특수 문서로 접근",
 	"bs-bookshelf-action-save-to-local-storage": "로컬 스토리지에 저장 중",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "페이지 맨 위에 챕터 나누기를 추가합니다.",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "페이지 맨 아래에 챕터 나누기를 추가합니다.",
 	"bs-bookshelf-pref-supressbookns-help": "문서 이름의 이름공간은 PDF 출력에서 숨겨집니다.",
 	"bs-bookshelf-warning": "PHP 예외: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "책에 추가"
