@@ -65,6 +65,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "Alle Bücher",
 	"bs-bookshelfui-flyout-title": "Liste der Bücher",
 	"bs-bookshelfui-flyout-intro": "Hier findest du alle verfügbaren Bücher. Um Bücher hinzuzufügen, gehe zur [[Special:Bookmanager|Bücherverwaltung]].",
+	"bs-bookshelfui-intro": "Hier findest du alle verfügbaren Bücher. Um Bücher hinzuzufügen, gehe zur [[Special:Bookmanager|Bücherverwaltung]].",
 	"bs-bookshelfui-book-title-link-edit": "Buch bearbeiten",
 	"bs-bookshelfui-book-title-link-edit-text": "Buch bearbeiten",
 	"bs-bookshelfui-export-book-text": "Bitte warte, bis das Buch erstellt wurde.",

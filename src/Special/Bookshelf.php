@@ -20,7 +20,9 @@ class Bookshelf extends SpecialPage {
 	 * @return void
 	 */
 	public function execute( $subPage ) {
-		parent::execute( $subPage );
+		$this->setHeaders();
+		$this->checkPermissions();
+		$this->getOutput()->addWikiMsg( 'bs-bookshelfui-intro' );
 
 		$this->getOutput()->addHTML(
 			Html::element( 'div', [
