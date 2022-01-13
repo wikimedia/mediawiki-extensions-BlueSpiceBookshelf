@@ -27,7 +27,7 @@ class BookContentHandler extends TextContentHandler {
 	 */
 	public function getActionOverrides() {
 		return [
-			'editbook' => BookEditAction::class,
+			'edit' => BookEditAction::class,
 			'editbooksource' => BookEditSourceAction::class,
 		];
 	}

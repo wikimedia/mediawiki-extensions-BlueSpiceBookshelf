@@ -494,8 +494,7 @@
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface"
 	},
 	"Actions": {
-		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction",
-		"editbook": "\\BlueSpice\\Bookshelf\\Action\\BookEditAction"
+		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
 	},
 	"DefaultUserOptions": {
 		"bs-bookshelf-defaultview": "gridviewpanel"
