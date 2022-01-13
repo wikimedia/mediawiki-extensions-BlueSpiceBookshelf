@@ -117,7 +117,7 @@ class SidebarTreeNavigation extends \BSSkinTreeNavigation {
 			'a',
 			[
 				'class' => 'bs-link-edit-bookshelfui-book',
-				'href' => $bookEditorTitle->getFullURL( [ 'action' => 'editbook' ] ),
+				'href' => $bookEditorTitle->getLocalURL( [ 'action' => 'edit' ] ),
 				'title' => wfMessage( 'bs-bookshelfui-book-title-link-edit' )->plain()
 			]
 		);

@@ -81,7 +81,7 @@ class BookNavigationPanelHelper {
 			[
 				'id' => 'edit-book',
 				'class' => 'bs-link-edit-bookshelfui-book',
-				'href' => $bookEditorTitle->getFullURL( [ 'action' => 'editbook' ] ),
+				'href' => $bookEditorTitle->getFullURL( [ 'action' => 'edit' ] ),
 				'title' => wfMessage( 'bs-bookshelfui-book-title-link-edit' )->plain()
 			]
 		);

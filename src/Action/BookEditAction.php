@@ -15,7 +15,7 @@ class BookEditAction extends EditAction {
 	 * @return string
 	 */
 	public function getName() {
-		return 'editbook';
+		return 'edit';
 	}
 
 	/**

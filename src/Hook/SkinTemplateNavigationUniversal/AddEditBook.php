@@ -31,14 +31,23 @@ class AddEditBook extends SkinTemplateNavigationUniversal {
 	 * @return bool
 	 */
 	protected function doProcess() {
-		$this->links['edit']['edit'] = [
+		$this->links['views']['edit'] = [
 			'text' => $this->msg( 'edit' )->text(),
+			'title' => $this->msg( 'edit' )->text(),
 			'href' => $this->sktemplate->getTitle()->getLocalURL( [
-				'action' => 'editbook',
+				'action' => 'edit',
 			] ),
-			'class' => false,
 			'id' => 'edit-book'
 		];
+
+		$this->links['views']['editbooksource'] = $this->links['views']['edit'];
+		$this->links['views']['editbooksource']['id']
+		= 'editbooksource';
+		$this->links['views']['editbooksource']['text']
+			= $this->msg( 'bs-bookshelf-action-editbook' )->plain();
+		$this->links['views']['editbooksource']['href'] = $this->sktemplate->getTitle()->getLinkURL( [
+			'action' => 'editbooksource'
+		] );
 
 		return true;
 	}
