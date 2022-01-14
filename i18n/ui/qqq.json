@@ -64,6 +64,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "Link text that opens a flyout that lists all books of the type \"ns_book\".\n{{Identical|General Books}}",
 	"bs-bookshelfui-flyout-title": "Flyout header text that lists all books of the type \"ns_book\".\n{{Identical|List of books}}",
 	"bs-bookshelfui-flyout-intro": "Flyout description text that explains that all available books are listed and if the user wants to add a book, the user can do so on the [[Special:Bookmanager|book manager]] special page.",
+	"bs-bookshelfui-intro": "Description text that explains that all available books are listed and if the user wants to add a book, the user can do so on the [[Special:Bookmanager|book manager]] special page.",
 	"bs-bookshelfui-book-title-link-edit": "Title for the link that allows editing the book.\n{{Identical|Edit book}}",
 	"bs-bookshelfui-book-title-link-edit-text": "Text for the link that allows editing the book.\n{{Identical|Edit book}}",
 	"bs-bookshelfui-export-book-text": "Info text while the book is beeing exported.\n{{Identical|Please wait while book is being created.}}",

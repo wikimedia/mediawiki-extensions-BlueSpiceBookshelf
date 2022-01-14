@@ -20,7 +20,7 @@ class Bookshelf extends SpecialPage {
 	 * @return void
 	 */
 	public function execute( $subPage ) {
-		parent::execute( $subPage );
+		$this->getOutput()->addWikiMsg( 'bs-bookshelfui-intro' );
 
 		$this->getOutput()->addHTML(
 			Html::element( 'div', [
@@ -30,5 +30,6 @@ class Bookshelf extends SpecialPage {
 			] )
 		);
 		$this->getOutput()->addModules( "ext.bluespice.bookshelf.special" );
+		$this->setHeaders();
 	}
 }
