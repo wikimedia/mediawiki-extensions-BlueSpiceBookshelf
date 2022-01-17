@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Agusbou2015",
 			"Alan Mena",
 			"Avengium",
 			"Danniel07",
@@ -11,8 +12,7 @@
 			"MarleneR329",
 			"Rodney Araujo",
 			"Warming Hearth",
-			"Whovian Biologist",
-			"Agusbou2015"
+			"Whovian Biologist"
 		]
 	},
 	"bs-bookshelf-extension-description": "Habilita BlueSpice para controlar y exportar colecciones jerárquicas de artículos.",

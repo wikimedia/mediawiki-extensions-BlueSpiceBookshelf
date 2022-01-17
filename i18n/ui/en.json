@@ -61,7 +61,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "General Books",
 	"bs-bookshelfui-flyout-title": "List of books",
 	"bs-bookshelfui-flyout-intro": "Here you can see all available books. To add a new book, go to [[Special:Bookmanager|book manager]].",
-	"bs-bookshelfui-intro": "Here you can see all available books. To add a new book, go to the [[Special:Bookmanager|book manager]].",
+	"bs-bookshelfui-intro": "Here you can see all available books. To add a new book, go to [[Special:Bookmanager|book manager]].",
 	"bs-bookshelfui-book-title-link-edit": "Edit book",
 	"bs-bookshelfui-book-title-link-edit-text": "Edit book",
 	"bs-bookshelfui-export-book-text": "Please wait while book is being created.",
