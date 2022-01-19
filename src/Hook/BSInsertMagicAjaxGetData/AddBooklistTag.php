@@ -17,6 +17,7 @@ class AddBooklistTag extends BSInsertMagicAjaxGetData {
 			'name' => 'booklist',
 			'desc' => \Message::newFromKey( 'bs-bookshelf-tag-booklist-desc' )->text(),
 			'code' => '<bs:booklist filter="someMeta:Val"/>',
+			'mwvecommand' => 'booklistCommand',
 			'examples' => [
 				[ 'code' => $this->getExampleCode() ]
 			],

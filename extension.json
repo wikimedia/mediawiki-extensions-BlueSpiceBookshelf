@@ -84,6 +84,13 @@
 				"category": "BlueSpice\\Bookshelf\\MassAdd\\Handler\\Category::factory",
 				"pagecollection": "BlueSpice\\Bookshelf\\MassAdd\\Handler\\PageCollection::factory"
 			}
+		},
+		"BlueSpiceVisualEditorConnector": {
+			"TagDefinitions": [
+				"ext.bluespice.booklist.visualEditorTagDefinition",
+				"ext.bluespice.bookmeta.visualEditorTagDefinition",
+				"ext.bluespice.bookshelf.visualEditorTagDefinition"
+			]
 		}
 	},
 	"GroupPermissions": {
@@ -405,6 +412,45 @@
 		"ext.bookshelf.special-bookshelf.styles": {
 			"styles": [
 				"bluespice.bookshelf.special-bookshelf.css"
+			]
+		},
+		"ext.bluespice.booklist.visualEditorTagDefinition": {
+			"scripts": [
+				"bs.bookshelf/util/tag/BooklistDefinition.js"
+			],
+			"messages": [
+				"bs-bookshelf-tag-booklist-description",
+				"bs-bookshelf-ve-booklistinspector-title",
+				"bs-bookshelf-ve-booklist-attr-filter-label",
+				"bs-bookshelf-ve-booklist-attr-filter-help"
+			]
+		},
+		"ext.bluespice.bookmeta.visualEditorTagDefinition": {
+			"scripts": [
+				"bs.bookshelf/util/tag/BookmetaDefinition.js"
+			],
+			"messages": [
+				"bs-bookshelf-tag-bookmeta-description",
+				"bs-bookshelf-ve-bookmetainspector-title",
+				"bs-bookshelf-ve-bookmeta-attr-title-label",
+				"bs-bookshelf-ve-bookmeta-attr-title-help",
+				"bs-bookshelf-ve-bookmeta-attr-subtitle-label",
+				"bs-bookshelf-ve-bookmeta-attr-subtitle-help",
+				"bs-bookshelf-ve-bookmeta-attr-author-label",
+				"bs-bookshelf-ve-bookmeta-attr-author-help",
+				"bs-bookshelf-ve-bookmeta-attr-version-label",
+				"bs-bookshelf-ve-bookmeta-attr-version-help"
+			]
+		},
+		"ext.bluespice.bookshelf.visualEditorTagDefinition": {
+			"scripts": [
+				"bs.bookshelf/util/tag/BookshelfDefinition.js"
+			],
+			"messages": [
+				"bs-bookshelf-tag-bookshelf-box-desc",
+				"bs-bookshelf-ve-bookshelfinspector-title",
+				"bs-bookshelf-ve-bookshelf-attr-book-label",
+				"bs-bookshelf-ve-bookshelf-attr-book-help"
 			]
 		}
 	},
