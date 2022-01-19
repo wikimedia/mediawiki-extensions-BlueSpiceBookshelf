@@ -17,6 +17,7 @@ class AddBookshelfTag extends BSInsertMagicAjaxGetData {
 			'name' => 'bookshelf',
 			'desc' => \Message::newFromKey( 'bs-bookshelf-tag-bookshelf-desc' )->text(),
 			'code' => '<bs:bookshelf src="ARTICLE" />',
+			'mwvecommand' => 'bookshelfCommand',
 			'examples' => [
 				[ 'code' => $this->getExampleCode() ]
 			],
