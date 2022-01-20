@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"Can",
 			"Joseph",
 			"MuratTheTurkish",
 			"ToprakM"
@@ -56,6 +57,7 @@
 	"bookshelf": "Kitaplık",
 	"bookshelf-summary": "Genel Kitaplar",
 	"prefs-bookshelf": "Kitaplık özel sayfası",
+	"bs-bookshelf-ga-manager-label": "Kitaplar",
 	"bs-bookshelf-prof-defaultview": "Varsayılan görünüm",
 	"bs-bookshelf-prof-defaultview-grid": "Izgara",
 	"bs-bookshelf-prof-defaultview-images": "Resimler",
@@ -67,5 +69,6 @@
 	"bs-bookshelf-pref-chapterpageraftercontent": "İçerikten sonra kitap bölümü sayfalayıcı göster",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Sayfanın altına bir bölüm sayfalama cihazı ekleyin.",
 	"bs-bookshelf-pref-supressbookns-help": "Sayfa adlarının ad alanı PDF çıktısında gizlenir.",
-	"bs-bookshelf-warning": "PHP istisnası: $1"
+	"bs-bookshelf-warning": "PHP istisnası: $1",
+	"bs-bookshelf-actionmenuentry-addtobook": "Kitaba ekle"
 }
