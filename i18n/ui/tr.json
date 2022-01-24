@@ -2,12 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"Can",
 			"Joseph",
-			"MuratTheTurkish"
+			"MuratTheTurkish",
+			"SaldırganSincap"
 		]
 	},
 	"bs-bookshelfui-extension-description": "BlueSpice'in viki sayfaları hiyerarşik koleksiyonlarını yönetmesini sağlar.",
-	"bookshelfbookui": "Kitap Editörü",
+	"bookshelfbookui": "Kitap Düzenleyicisi",
 	"bookshelfbookmanager": "Kitap Yöneticisi",
 	"bs-bookshelfui-editor-no-title-provided": "Geçerli kitap başlığı sağlanmadı",
 	"bs-bookshelfui-editor-title": "Kitap editörü: $1",
@@ -62,6 +64,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "Genel Kitaplar",
 	"bs-bookshelfui-flyout-title": "Kitap listesi",
 	"bs-bookshelfui-flyout-intro": "Burada mevcut tüm kitapları görebilirsiniz. Yeni bir kitap eklemek için [[Special:Bookmanager|kitap yöneticisine]] gidin.",
+	"bs-bookshelfui-intro": "Burada mevcut tüm kitapları görebilirsiniz. Yeni bir kitap eklemek için [[Special:Bookmanager|kitap yöneticisine]] gidin.",
 	"bs-bookshelfui-book-title-link-edit": "Kitabı düzenle",
 	"bs-bookshelfui-book-title-link-edit-text": "Kitabı düzenle",
 	"bs-bookshelfui-export-book-text": "Lütfen kitap oluşturulurken bekleyin.",
