@@ -107,9 +107,16 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 * @return bool
 	 */
 	public function shouldRender( IContextSource $context ): bool {
+		$title = $context->getTitle();
+		if ( $title->isRedirect() ) {
+			$webRequestValues = $context->getRequest()->getValues();
+			if ( !isset( $webRequestValues['redirect'] ) || $webRequestValues['redirect'] !== 'no' ) {
+				$title = $context->getWikiPage()->getRedirectTarget();
+			}
+		}
 		try {
 			$provider = PageHierarchyProvider::getInstanceForArticle(
-				$context->getTitle()->getPrefixedText()
+				$title->getPrefixedText()
 			);
 		} catch ( InvalidArgumentException $ex ) {
 			return false;
@@ -123,14 +130,7 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 * @return bool
 	 */
 	public function isActive( $context ): bool {
-		try {
-			$provider = PageHierarchyProvider::getInstanceForArticle(
-				$context->getTitle()->getPrefixedText()
-			);
-		} catch ( InvalidArgumentException $ex ) {
-			return false;
-		}
-		return true;
+		return $this->shouldRender( $context );
 	}
 
 }
