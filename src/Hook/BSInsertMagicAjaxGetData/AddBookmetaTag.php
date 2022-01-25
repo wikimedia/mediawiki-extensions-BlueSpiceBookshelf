@@ -17,6 +17,7 @@ class AddBookmetaTag extends BSInsertMagicAjaxGetData {
 			'name' => 'bookmeta',
 			'desc' => \Message::newFromKey( 'bs-bookshelf-tag-bookmeta-desc' )->text(),
 			'code' => '<bs:bookmeta/>',
+			'mwvecommand' => 'bookmetaCommand',
 			'examples' => [
 				[ 'code' => $this->getExampleCode() ]
 			],
@@ -44,7 +45,7 @@ class AddBookmetaTag extends BSInsertMagicAjaxGetData {
 <bs:bookmeta
 	title="Installation manual"
 	subtitle="BlueSpice pro"
-	author1="Hallo Welt!"
+	author="Hallo Welt!"
 	version="1.0"
 />
 EOF;
