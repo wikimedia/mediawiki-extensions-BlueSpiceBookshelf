@@ -452,6 +452,11 @@
 				"bs-bookshelf-ve-bookshelf-attr-book-label",
 				"bs-bookshelf-ve-bookshelf-attr-book-help"
 			]
+		},
+		"ext.bookshelf.pager.content.styles": {
+			"styles": [
+				"bluespice.bookshelf.pager.content.css"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
