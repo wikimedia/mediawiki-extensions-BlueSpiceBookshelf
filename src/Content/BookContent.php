@@ -34,7 +34,7 @@ class BookContent extends TextContent {
 				$title, new \WebRequest()
 			);
 			$output->addJsConfigVars( 'bsBookshelfData', $bookEditData->getBookData() );
-			$output->addModules( 'ext.bluespice.bookshelf.view' );
+			$output->addModules( [ 'ext.bluespice.bookshelf.view' ] );
 			$output->setText( \Html::element( 'div', [ 'id' => 'bs-bookshelf-view' ] ) );
 		}
 		catch ( MWException $e ) {
