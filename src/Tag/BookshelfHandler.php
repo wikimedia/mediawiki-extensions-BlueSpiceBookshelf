@@ -135,8 +135,8 @@ class BookshelfHandler extends Handler {
 		}
 
 		// This seems to better place than "BeforePageDisplay" hook
-		$this->parser->getOutput()->addModules( 'ext.bluespice.bookshelf' );
-		$this->parser->getOutput()->addModuleStyles( 'ext.bluespice.bookshelf.styles' );
+		$this->parser->getOutput()->addModules( [ 'ext.bluespice.bookshelf' ] );
+		$this->parser->getOutput()->addModuleStyles( [ 'ext.bluespice.bookshelf.styles' ] );
 
 		$attribs = array_merge( [
 			'class' => 'bs-bookshelf-toc',
