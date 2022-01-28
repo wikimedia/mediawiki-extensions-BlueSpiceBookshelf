@@ -86,5 +86,6 @@
 	"bs-bookshelf-tag-bookshelf-box-desc": "Inserts the chapter navigation of a book in a page that is not part of a book. Numbering is automatically created according to the table of contents",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Bookshelf",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Book",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "Defines which book the pages belongs to"
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Defines which book the pages belongs to",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Add chapter numbers of the book to table of contents and all headlines in the page"
 }

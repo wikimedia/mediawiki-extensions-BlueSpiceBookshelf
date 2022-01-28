@@ -76,5 +76,6 @@
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "Einstiegspunkt \"Bookshelf\" anzeigen",
 	"bs-bookshelf-config-mainlinks-bookshelf-help": "Einstiegspunkt \"Bookshelf\" in der linken Navigation anzeigen",
 	"bs-bookshelf-warning": "PHP Exception: $1",
-	"bs-bookshelf-actionmenuentry-addtobook": "Zu einem Buch hinzufügen"
+	"bs-bookshelf-actionmenuentry-addtobook": "Zu einem Buch hinzufügen",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Fügt dem Inhaltsverzeichnis und allen Überschriften einer Seite die Kapitelnummerierung des Buches hinzu"
 }

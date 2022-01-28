@@ -32,4 +32,12 @@ class PrependPageTOCNumbers extends BooleanSetting implements \BlueSpice\Bookshe
 	public function isRLConfigVar() {
 		return true;
 	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	public function getHelpMessageKey() {
+		return 'bs-bookshelf-pref-prepend-tocnumber-help';
+	}
 }
