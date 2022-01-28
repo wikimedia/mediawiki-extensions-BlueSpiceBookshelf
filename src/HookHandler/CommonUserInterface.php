@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Bookshelf\HookHandler;
 
+use BlueSpice\Bookshelf\ChapterPagerPanel;
 use BlueSpice\Bookshelf\GlobalActionsManager;
 use BlueSpice\Bookshelf\MainLinkPanel;
 use BlueSpice\Bookshelf\SidebarBookPanel;
@@ -64,5 +65,28 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 				]
 			]
 		);
+		if ( $config->get( 'BookShelfShowChapterNavigationPagerBeforeContent' ) ) {
+			$registry->register(
+				'DataBeforeContent', [
+					'chapter-pager' => [
+						'factory' => static function () use ( $title ) {
+							return new ChapterPagerPanel( $title );
+						}
+					]
+				]
+			);
+		}
+		if ( $config->get( 'BookShelfShowChapterNavigationPagerAfterContent' ) ) {
+			$registry->register(
+				'DataAfterContent', [
+					'chapter-pager' => [
+						'factory' => static function () use ( $title ) {
+							return new ChapterPagerPanel( $title );
+						},
+						'position' => 1
+					]
+				]
+			);
+		}
 	}
 }
