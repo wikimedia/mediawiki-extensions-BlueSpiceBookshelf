@@ -23,5 +23,13 @@
 	"bs-bookshelf-ga-manager-label": "Libbri",
 	"bs-bookshelf-prof-defaultview-grid": "Grigghia",
 	"bs-bookshelf-prof-defaultview-images": "Mmàggini",
-	"bs-bookshelf-actionmenuentry-addtobook": "Agghiunci ô libbru"
+	"bs-bookshelf-actionmenuentry-addtobook": "Agghiunci ô libbru",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Tìtulu",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Suttatìtulu",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Mposta lu suttatìtulu dû libbru",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Auturi",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Mposta l'auturi dû libbru",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Virsioni",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Mposta la virsioni dû libbru",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libbru"
 }

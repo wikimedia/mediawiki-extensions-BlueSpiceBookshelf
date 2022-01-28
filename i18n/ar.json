@@ -42,6 +42,7 @@
 	"bs-bookshelf-grouping-template-type-ns_book": "الكتب العامة",
 	"bs-bookshelf-grouping-template-type-user_book": "الكتب الخاصة",
 	"bs-bookshelf-action-editbook": "عدل المصدر",
+	"bs-bookshelf-action-editbook-create": "عدل المصدر",
 	"bs-bookshelf-edit-title": "تعديل $1",
 	"bs-bookshelf-book-grid-title": "الكتب",
 	"bookshelf": "رف الكتب",
@@ -49,5 +50,7 @@
 	"bs-bookshelf-prof-defaultview": "العرض الافتراضي",
 	"bs-bookshelf-prof-defaultview-images": "الصور",
 	"right-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]"
+	"action-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]",
+	"bs-bookshelf-actionmenuentry-addtobook": "أضف إلى الكتاب",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "كتاب"
 }
