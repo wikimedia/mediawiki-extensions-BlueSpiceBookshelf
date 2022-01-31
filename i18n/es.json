@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Adam N.",
 			"Agusbou2015",
 			"Alan Mena",
 			"Avengium",
@@ -77,5 +78,15 @@
 	"bs-bookshelf-warning": "Excepción de PHP: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Añadir al libro",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "Mostrar punto de entrada \"Estantería\"",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "Mostrar el enlace punto de entrada \"Estantería\" en la navegación de la izquierda"
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Mostrar el enlace punto de entrada \"Estantería\" en la navegación de la izquierda",
+	"bs-bookshelf-tag-booklist-description": "Genera listas de páginas del namespace \"libro\" y puede ser filtrado. La indicación del filtro ist obligatorio",
+	"bs-bookshelf-ve-booklist-attr-filter-help": "Filtro por metadata en la llave de formato:valor, p. ej. título:manual",
+	"bs-bookshelf-tag-bookmeta-description": "Etiqueta para salvar varios meta dato encima páginas de libro. Estos están incluidos en el libro. Los atributos de esta etiqueta tienen que correlate con el meta dato de la página de libro",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Subtitle",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Conjuntos el autor del libro",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versión",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Conjuntos la versión del libro",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Bookshelf",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Añade números de capítulo del libro para someter de contenidos y todos los  titulares en la página"
 }

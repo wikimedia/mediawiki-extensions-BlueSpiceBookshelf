@@ -29,5 +29,9 @@
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "Den Auteur vum Buch gëtt festgeluecht",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versioun",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Etagère",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buch"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buch",
+	"bs-bookshelf-ve-booklistinspector-title": "Buchlëscht",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Leet den Titel vum Buch fest",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Den Ënnertitel vum Buch gëtt festgeluecht",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "D'Versio9un vum Buch gëtt festgeluecht"
 }

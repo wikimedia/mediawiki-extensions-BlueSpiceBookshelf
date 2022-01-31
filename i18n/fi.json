@@ -26,5 +26,14 @@
 	"bs-bookshelf-ga-manager-label": "Kirjat",
 	"bs-bookshelf-prof-defaultview-grid": "Ruudukko",
 	"bs-bookshelf-prof-defaultview-images": "Kuvat",
-	"bs-bookshelf-actionmenuentry-addtobook": "Lisää kirjaan"
+	"bs-bookshelf-actionmenuentry-addtobook": "Lisää kirjaan",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Otsikko",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Asettaa kirjan otsikon",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Alaotsikko",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Asettaa kirjan alaotsikon",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Tekijä",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Asettaa kirjan tekijän",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versio",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Asettaa kirjan version",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kirja"
 }

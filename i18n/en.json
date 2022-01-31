@@ -69,7 +69,7 @@
 	"bs-bookshelf-actionmenuentry-addtobook": "Add to book",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "Show entrypoint \"Bookshelf\"",
 	"bs-bookshelf-config-mainlinks-bookshelf-help": "Show entrypoint \"Bookshelf\" link in the left navigation",
-	"bs-bookshelf-tag-booklist-description": "Generates lists of pages from the namespace \"book\" and can be filtered. The indication of the filter ist mandatory",
+	"bs-bookshelf-tag-booklist-description": "Generates lists of pages from the namespace \"book\" and can be filtered. The indication of the filter is mandatory",
 	"bs-bookshelf-ve-booklistinspector-title": "Booklist",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
 	"bs-bookshelf-ve-booklist-attr-filter-help": "Filter by metadata in the format key:value, e.g. title:handbook",

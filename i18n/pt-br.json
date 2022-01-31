@@ -3,7 +3,8 @@
 		"authors": [
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
-			"Svjatysberega"
+			"Svjatysberega",
+			"Wiiformii"
 		]
 	},
 	"bs-bookshelf-extension-description": "Permite que o BlueSpice gerencie e exporte coleções hierárquicas de artigos.",
@@ -68,5 +69,12 @@
 	"bs-bookshelf-pref-chapterpageraftercontent": "Mostrar pager do capítulo do livro após o conteúdo",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Add a chapter pager at the bottom of the page.",
 	"bs-bookshelf-action-editbook": "Editar fonte do livro",
-	"bs-bookshelf-action-editbook-create": "Editar fonte do livro"
+	"bs-bookshelf-action-editbook-create": "Editar fonte do livro",
+	"bs-bookshelf-ve-booklistinspector-title": "Lista de livro",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtro",
+	"bs-bookshelf-ve-bookmetainspector-title": "Meta de livro",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Título",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Põe o título do livro",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autor",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definir qual livro com páginas pertencem a"
 }
