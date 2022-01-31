@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Jakub Fabijan",
+			"Robin van der Vliet",
 			"Zarisi"
 		]
 	},
@@ -25,5 +26,12 @@
 	"bookshelf": "Bretaro",
 	"bookshelf-summary": "Ĝeneralaj Libroj",
 	"bs-bookshelf-prof-defaultview": "Defaŭlta vido",
-	"bs-bookshelf-prof-defaultview-images": "Bildoj"
+	"bs-bookshelf-prof-defaultview-images": "Bildoj",
+	"bs-bookshelf-ve-booklistinspector-title": "Librolisto",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titolo",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Subtitolo",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Aŭtoro",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versio",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Bretaro",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro"
 }

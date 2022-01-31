@@ -3,6 +3,7 @@
 		"authors": [
 			"A2y4",
 			"Aefgh39622",
+			"MathXplore",
 			"RYOUMA1117",
 			"Shirayuki"
 		]
@@ -36,5 +37,12 @@
 	"right-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] にアクセス",
 	"action-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] へのアクセス",
 	"bs-bookshelf-action-save-to-local-storage": "ローカルストレージに保存",
-	"bs-bookshelf-warning": "PHPの例外： $1"
+	"bs-bookshelf-warning": "PHPの例外： $1",
+	"bs-bookshelf-ve-booklistinspector-title": "本の一覧",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "フィルター",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "タイトル",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "作者",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "バージョン",
+	"bs-bookshelf-ve-bookshelfinspector-title": "本棚",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "書籍"
 }

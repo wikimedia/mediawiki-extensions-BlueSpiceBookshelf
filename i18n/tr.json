@@ -5,6 +5,7 @@
 			"Can",
 			"Joseph",
 			"MuratTheTurkish",
+			"Sqances",
 			"ToprakM"
 		]
 	},
@@ -71,5 +72,14 @@
 	"bs-bookshelf-pref-supressbookns-help": "Sayfa adlarının ad alanı PDF çıktısında gizlenir.",
 	"bs-bookshelf-warning": "PHP istisnası: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Kitaba ekle",
-	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Alt yazı"
+	"bs-bookshelf-ve-booklistinspector-title": "Kitap listesi",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtre",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Başlık",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Alt yazı",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Yazar",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Kitabın yazarını belirler",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Sürüm",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Kitabın sürümünü belirler",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Kitaplık",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kitap"
 }

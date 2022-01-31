@@ -93,5 +93,6 @@
 	"bs-bookshelf-tag-bookshelf-box-desc": "Insère la navigation des chapitres d’un livre dans une page qui ne fait pas partie du livre. La numérotation est créée automatiquement conformément à la table des matières.",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Étagère",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Livre",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "Définit à quel livre appartiennent les pages"
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Définit à quel livre appartiennent les pages",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Ajouter les numéros de chapitre du livre à la table des matières et à tous les titres dans la page"
 }

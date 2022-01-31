@@ -70,5 +70,16 @@
 	"bs-bookshelf-warning": "Виняток PHP: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Додати книжку",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "Показувати вхід «Книжкова полиця»",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "Показувати посилання на вхід «Книжкова полиця» у навігації ліворуч"
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Показувати посилання на вхід «Книжкова полиця» у навігації ліворуч",
+	"bs-bookshelf-tag-booklist-description": "Генерує списки сторінок із простору назв «книга» і має можливість фільтрування. Зазначення фільтра є обов'язковим",
+	"bs-bookshelf-ve-booklistinspector-title": "Список книг",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Фільтр",
+	"bs-bookshelf-ve-booklist-attr-filter-help": "Відфільтруйте за метаданими у форматі key:value, напр. title:handbook",
+	"bs-bookshelf-tag-bookmeta-description": "Тег для збереження різних метаданих на сторінках книги. Вони включені до книги. Атрибути цього тегу мають співвідноситися з метаданими сторінки книги",
+	"bs-bookshelf-ve-bookmetainspector-title": "Букмета",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Заголовок",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Підзаголовок",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Автор",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Версія",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга"
 }
