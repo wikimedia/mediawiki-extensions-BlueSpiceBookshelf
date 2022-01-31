@@ -2,9 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"AC Krah",
-			"Robertjamal12"
+			"Robertjamal12",
+			"Afia360"
 		]
 	},
 	"bs-bookshelf-action-editbook": "Edit source",
-	"bs-bookshelf-actionmenuentry-addtobook": "Fakɔ nwuma mu."
+	"bs-bookshelf-actionmenuentry-addtobook": "Fakɔ nwuma mu.",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Atifi asɛm",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Kyere onipa a ɔtwereɛ nwoma no",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Nwoma"
 }

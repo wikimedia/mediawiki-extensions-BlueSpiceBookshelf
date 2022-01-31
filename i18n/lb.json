@@ -21,5 +21,13 @@
 	"bs-bookshelf-book-grid-title": "Bicher",
 	"bookshelf-summary": "Allgemeng Bicher",
 	"bs-bookshelf-ga-manager-label": "Bicher",
-	"bs-bookshelf-prof-defaultview-images": "Biller"
+	"bs-bookshelf-prof-defaultview-images": "Biller",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titel",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Ënnertitel",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Auteur",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Den Auteur vum Buch gëtt festgeluecht",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versioun",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Etagère",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buch"
 }

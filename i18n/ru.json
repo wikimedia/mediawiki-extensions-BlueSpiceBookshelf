@@ -56,5 +56,8 @@
 	"bs-bookshelf-pref-chapterpageraftercontent": "Показывать пейджер глав книги после содержания",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Добавьте пейджер глав внизу страницы.",
 	"bs-bookshelf-pref-supressbookns-help": "Пространство имён страниц скрыто в выводе PDF.",
-	"bs-bookshelf-warning": "Исключение PHP: $1"
+	"bs-bookshelf-warning": "Исключение PHP: $1",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Подзаголовок",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Книжная полка",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга"
 }
