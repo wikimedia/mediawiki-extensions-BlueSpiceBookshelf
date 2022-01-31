@@ -60,6 +60,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "一般書籍",
 	"bs-bookshelfui-flyout-title": "書籍清單",
 	"bs-bookshelfui-flyout-intro": "在此您可以查所有可用的書籍。要添加新的書籍，請前往[[Special:Bookmanager|書籍管理]]。",
+	"bs-bookshelfui-intro": "在此您可以查所有可用的書籍。要添加新的書籍，請前往[[Special:Bookmanager|書籍管理]]。",
 	"bs-bookshelfui-book-title-link-edit": "編輯書籍",
 	"bs-bookshelfui-book-title-link-edit-text": "編輯書籍",
 	"bs-bookshelfui-export-book-text": "當書籍正建立中時請等待。",
