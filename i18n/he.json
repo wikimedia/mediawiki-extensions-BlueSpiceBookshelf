@@ -43,13 +43,13 @@
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "כותרת",
 	"bs-bookshelf-ve-bookmeta-attr-title-help": "הגדרת הכותרת של הספר",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "כותרת־משנה",
-	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "הגדרת כותרת המשנה של הספר",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "הגדרת כותרת־המשנה של הספר",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "מחבר",
-	"bs-bookshelf-ve-bookmeta-attr-author-help": "הגדרת הסופר של הספר",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "הגדרת המחבר של הספר",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "גרסה",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "הגדרת הגרסה של הספר",
 	"bs-bookshelf-ve-bookshelfinspector-title": "מדף הספרים",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "ספר",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "הגדרת הספר אליו הדפים שייכים",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "הגדרת הספר שהדפים שייכים אליו",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "הוספת מספרי הפרקים של הספר לתוכן העניינים ולכל הכותרות בעמוד"
 }
