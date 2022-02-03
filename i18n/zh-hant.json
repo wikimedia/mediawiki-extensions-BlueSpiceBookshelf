@@ -47,7 +47,7 @@
 	"bs-bookshelf-action-editbook": "編輯書籍來源",
 	"bs-bookshelf-action-editbook-create": "建立書籍來源",
 	"bs-bookshelf-action-export-book": "匯出書籍",
-	"bs-bookshelf-edit-title": "正在編輯$1",
+	"bs-bookshelf-edit-title": "正在編輯「$1」",
 	"bs-bookshelf-error-invalid-type": "指定的書籍類型無效",
 	"bs-bookshelf-error-type-title-mismatch": "所提供標題不符合指定的書籍類型",
 	"bs-bookshelf-editor-no-title-provided": "未提供有效的書籍標題",

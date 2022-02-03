@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ameisenigel",
+			"Brettchenweber",
 			"Laurinm",
 			"Mglaser",
 			"Mschlindwein",
@@ -78,7 +79,7 @@
 	"bs-bookshelf-ve-booklistinspector-title": "Bücherliste",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
 	"bs-bookshelf-ve-booklist-attr-filter-help": "Filter nach Metadaten im Format Schlüssel:Wert, z.B. Titel:Handbuch",
-	"bs-bookshelf-tag-bookmeta-description": "Tag um beliebige Metadaten zu einem Buchartikel zu speichern. Diese werden in das Buch mit aufgenommen. Die Attribute dieses Tags müssen den Metadaten des Buchartikels entsprechen",
+	"bs-bookshelf-tag-bookmeta-description": "Tag, um beliebige Metadaten zu einem Buchartikel zu speichern. Diese werden in das Buch mit aufgenommen. Die Attribute dieses Tags müssen den Metadaten des Buchartikels entsprechen",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titel",
 	"bs-bookshelf-ve-bookmeta-attr-title-help": "Legt den Titel eines Buches fest",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Untertitel",
@@ -87,9 +88,9 @@
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "Legt den Autor eines Buches fest",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Version",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Legt die Version eines Buches fest",
-	"bs-bookshelf-tag-bookshelf-box-desc": "Fügt die Kapitelnavigation eines Buches in eine Seite ein, die nicht Teil eines Buches ist. Die Nummerierung wird automatisch anhand des Inhaltsverzeichnis erstellt",
+	"bs-bookshelf-tag-bookshelf-box-desc": "Fügt die Kapitelnavigation eines Buches in eine Seite ein, die nicht Teil eines Buches ist. Die Nummerierung wird automatisch anhand des Inhaltsverzeichnisses erstellt",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Bücherregal",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buch",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definiert welchem Buch die Seiten angehören",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definiert, welchem Buch die Seiten angehören",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Fügt dem Inhaltsverzeichnis und allen Überschriften einer Seite die Kapitelnummerierung des Buches hinzu"
 }
