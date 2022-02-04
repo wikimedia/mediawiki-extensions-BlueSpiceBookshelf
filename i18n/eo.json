@@ -3,6 +3,7 @@
 		"authors": [
 			"Jakub Fabijan",
 			"Robin van der Vliet",
+			"Spenĉjo",
 			"Zarisi"
 		]
 	},
@@ -28,6 +29,7 @@
 	"bs-bookshelf-prof-defaultview": "Defaŭlta vido",
 	"bs-bookshelf-prof-defaultview-images": "Bildoj",
 	"bs-bookshelf-ve-booklistinspector-title": "Librolisto",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtrilo",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titolo",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Subtitolo",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Aŭtoro",
