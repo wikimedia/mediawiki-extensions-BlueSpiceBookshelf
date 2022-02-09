@@ -67,5 +67,20 @@
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Legg til kapittelnavigasjon på bunnen av siden.",
 	"bs-bookshelf-pref-supressbookns-help": "Navnerommet til sidenavn skjules i den resulterende PDF-en.",
 	"bs-bookshelf-warning": "PHP-unntak: $1",
-	"bs-bookshelf-actionmenuentry-addtobook": "Legg til bok"
+	"bs-bookshelf-actionmenuentry-addtobook": "Legg til bok",
+	"bs-bookshelf-ve-booklistinspector-title": "Bokliste",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
+	"bs-bookshelf-ve-booklist-attr-filter-help": "Filtrer etter metadata i formatet nøkkel:verdi, f.eks. title:handbook",
+	"bs-bookshelf-ve-bookmetainspector-title": "Bokmeta",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Tittel",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Setter tittelen på boka",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Undertittel",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Setter undertittelen på boka",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Forfatter",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Setter forfatteren av boka",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versjon",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Setter versjonen av boka",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Bokhylle",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Bok",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definer hvilken bok sidene hører til"
 }
