@@ -6,10 +6,10 @@ use BlueSpice\Bookshelf\BookEditData;
 use MWException;
 use ParserOptions;
 use ParserOutput;
-use TextContent;
 use Title;
+use WikitextContent;
 
-class BookContent extends TextContent {
+class BookContent extends WikitextContent {
 	/**
 	 * @param string $text
 	 * @param string $model_id
