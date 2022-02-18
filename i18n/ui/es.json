@@ -95,6 +95,7 @@
 	"right-bookshelfbookui-viewspecialpage": "Acceder a la página especial [[Special:BookshelfBookUI]]",
 	"action-bookshelfbookui-viewspecialpage": "acceder a la página especial [[Special:BookshelfBookUI]]",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Número de resultados para devolver",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo de fuente para la adición de masa",
 	"prefs-bookshelfui": "Página especial de la librería",
 	"bs-bookshelfui-prof-defaultview": "Vista predeterminada",
 	"bs-bookshelfui-prof-defaultview-grid": "Cuadrícula",
