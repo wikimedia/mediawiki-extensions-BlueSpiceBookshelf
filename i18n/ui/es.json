@@ -11,7 +11,8 @@
 			"Ihojose",
 			"Joanmp17",
 			"Nancystodd",
-			"Whovian Biologist"
+			"Whovian Biologist",
+			"TehFrog"
 		]
 	},
 	"bs-bookshelfui-extension-description": "Habilita BlueSpice para administrar colecciones jerárquicas de páginas wiki.",
@@ -53,6 +54,7 @@
 	"bs-bookshelfui-confirm-delete-title": "Quitar capítulo",
 	"bs-bookshelfui-confirm-delete-text": "¿Realmente quieres eliminar el capítulo seleccionado? Los subcapítulos también serán eliminados.",
 	"bs-bookshelfui-override-tag-title": "Cambiar asociaciones de la página wiki",
+	"bs-bookshelfui-override-tag-text": "¿Quieres añadir o actualizar las asociaciones de libro (&#60;bs:bookshelf /&#62;) dentro de las wikipáginas? Una nueva versión de la wikipágina será creada.",
 	"bs-bookshelfui-nothingtoexport-text": "Tu seleccion está vacía",
 	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|1 libro|$1 libros}})",
 	"bs-bookshelfui-book-type": "Tipo del libro",
@@ -69,6 +71,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "Libros generales",
 	"bs-bookshelfui-flyout-title": "Lista de libros",
 	"bs-bookshelfui-flyout-intro": "Aquí puedes ver todos los libros disponibles. Para añadir un libro nuevo, ve a [[Special:Bookmanager|book manager]].",
+	"bs-bookshelfui-intro": "Aquí puedes ver todos los libros disponibles. Para añadir un libro nuevo, ve al [[Special:Bookmanager|administrador de libros]].",
 	"bs-bookshelfui-book-title-link-edit": "Editar libro",
 	"bs-bookshelfui-book-title-link-edit-text": "Editar libro",
 	"bs-bookshelfui-export-book-text": "Aguarda mientras se crea el libro.",
@@ -88,11 +91,19 @@
 	"apihelp-bs-bookshelf-page-collection-store-summary": "Proporciona una colección de páginas que puede ser añadida en bloque a un libro.",
 	"apihelp-bs-bookshelf-mass-add-page-store-summary": "Proporciona páginas que pueden ser añadidas en bloque a un libro.",
 	"right-bookshelfbookmanager-viewspecialpage": "Acceso a la página especial [[Special:BookshelfBookManager]]",
+	"action-bookshelfbookmanager-viewspecialpage": "acceder a la página especial [[Special:BookshelfBookManager]]",
+	"right-bookshelfbookui-viewspecialpage": "Acceder a la página especial [[Special:BookshelfBookUI]]",
+	"action-bookshelfbookui-viewspecialpage": "acceder a la página especial [[Special:BookshelfBookUI]]",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Número de resultados para devolver",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo de fuente para la adición de masa",
+	"prefs-bookshelfui": "Página especial de la librería",
 	"bs-bookshelfui-prof-defaultview": "Vista predeterminada",
 	"bs-bookshelfui-prof-defaultview-grid": "Cuadrícula",
 	"bs-bookshelfui-prof-defaultview-images": "Imágenes",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
 	"bs-bookshelfui-chapterpager-next": "Siguiente",
-	"bs-bookshelfui-panel-navigation-text": "Para reservar la navegación"
+	"bs-bookshelfui-panel-navigation-text": "Para reservar la navegación",
+	"bs-bookshelfui-panel-navigation-title": "Volver a la navegación de libros",
+	"bs-bookshelfui-panel-navigation-aria-label": "A la navegación de libros",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navegación de libros como estructura de árbol"
 }
