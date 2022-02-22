@@ -3,6 +3,7 @@
 		"authors": [
 			"DDPAT",
 			"Piramidion",
+			"Samflint",
 			"Ата"
 		]
 	},
@@ -62,6 +63,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "Загальні книжки",
 	"bs-bookshelfui-flyout-title": "Список книжок",
 	"bs-bookshelfui-flyout-intro": "Тут ви можете переглянути усі доступні книжки. Щоб додати нову книжку, перейдіть у [[Special:Bookmanager|менеджер книжок]].",
+	"bs-bookshelfui-intro": "Тут ви можете переглянути усі доступні книги. Щоб додати нову книгу, перейдіть у [[Special:Bookmanager|менеджер книг]].",
 	"bs-bookshelfui-book-title-link-edit": "Редагувати книжку",
 	"bs-bookshelfui-book-title-link-edit-text": "Редагувати книжку",
 	"bs-bookshelfui-export-book-text": "Будь ласка, зачекайте, поки книжка створюється.",
