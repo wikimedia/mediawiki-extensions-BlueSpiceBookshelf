@@ -93,5 +93,9 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Raster",
 	"bs-bookshelfui-prof-defaultview-images": "Afbeeldingen",
 	"bs-bookshelfui-chapterpager-previous": "Vorige",
-	"bs-bookshelfui-chapterpager-next": "Volgende"
+	"bs-bookshelfui-chapterpager-next": "Volgende",
+	"bs-bookshelfui-panel-navigation-text": "Naar boeknavigatie",
+	"bs-bookshelfui-panel-navigation-title": "Terug naar boeknavigatie",
+	"bs-bookshelfui-panel-navigation-aria-label": "Naar boeknavigatie",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Boeknavigatie als boomstructuur"
 }
