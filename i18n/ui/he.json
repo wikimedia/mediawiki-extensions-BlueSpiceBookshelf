@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"YaronSh",
-			"ישראל קלר"
+			"ישראל קלר",
+			"שוקו מוקה"
 		]
 	},
 	"bookshelfbookui": "עורך ספרים",
@@ -53,6 +54,8 @@
 	"bs-bookshelfui-bookmanager-deletion-error-unkown": "אירעה שגיאה בלתי ידועה. נא ליצור קשר עם ההנהלה.",
 	"bs-bookshelfui-bookmetatag-title": "כותרת",
 	"bs-bookshelfui-bookmetatag-subtitle": "כותרת משנה",
+	"bs-bookshelfui-bookmetatag-author1": "כותב 1",
+	"bs-bookshelfui-bookmetatag-author2": "כותב 2",
 	"bs-bookshelfui-bookmetatag-docummentidentifier": "מזהה מסמך",
 	"bs-bookshelfui-bookmetatag-docummenttype": "סוג מסמך",
 	"bs-bookshelfui-bookmetatag-department": "מחלקה",
