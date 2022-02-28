@@ -67,13 +67,22 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Voegt een hoofdstukbladeraar toe bovenaan de pagina.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Hoofdstukbladeraar tonen na inhoud",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Voegt een hoofdstukbladeraar toe onderaan de pagina.",
+	"bs-bookshelf-pref-supressbookns-help": "De naamruimte van paginanamen is verborgen in de PDF-uitvoer.",
+	"bs-bookshelf-warning": "PHP-uitzondering: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Aan boek toevoegen",
 	"bs-bookshelf-ve-booklistinspector-title": "Boekenlijst",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titel",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Stelt de titel van het boek in",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Ondertitel",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Stelt de ondertitel van het boek in",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Auteur",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Stelt de auteur van het boek in",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versie",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Stelt de versie van het boek in",
+	"bs-bookshelf-tag-bookshelf-box-desc": "Voegt de hoofdstuknavigatie van een boek in op een pagina die geen deel uitmaakt van een boek. Nummering wordt automatisch gemaakt volgens de inhoudsopgave",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Boekenplank",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Boek"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Boek",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definieert tot welk boek de pagina's behoren",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Voeg hoofdstuknummers van het boek toe aan de inhoudsopgave en alle koppen op de pagina"
 }

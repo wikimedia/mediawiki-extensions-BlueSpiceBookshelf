@@ -60,6 +60,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "Generelle bøker",
 	"bs-bookshelfui-flyout-title": "Liste over bøker",
 	"bs-bookshelfui-flyout-intro": "Her kan du se alle tilgjengelige bøker. Gå til [[Special:Bookmanager|bokbehandleren]] for å legge til ei ny bok.",
+	"bs-bookshelfui-intro": "Her kan du se alle tilgjengelige bøker. Gå til [[Special:Bookmanager|bokbehandleren]] for å legge til ei ny bok.",
 	"bs-bookshelfui-book-title-link-edit": "Rediger bok",
 	"bs-bookshelfui-book-title-link-edit-text": "Rediger bok",
 	"bs-bookshelfui-export-book-text": "Vent mens boka opprettes.",

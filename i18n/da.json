@@ -12,8 +12,6 @@
 	"bs-bookshelf-personal-books-page-prefix": "$1/Bøger/",
 	"bs-bookshelf-add-to-book-label": "Tilføj til en bog",
 	"bs-bookshelf-add-to-book-label-book": "Bog",
-	"bs-bookshelf-group-namespace": "Generelle bøger",
-	"bs-bookshelf-group-user": "Egne bøger",
 	"bs-bookshelf-setting-path-feature": "Bog",
 	"bs-bookshelf-empty-selection": "Intet valgt",
 	"bs-bookshelf-grouping-template-type-local_storage": "Midlertidige bøger",
@@ -24,6 +22,12 @@
 	"bs-bookshelf-book-grid-title": "Bøger",
 	"bookshelf": "Boghylde",
 	"bookshelf-summary": "Generelle bøger",
+	"bs-bookshelf-ga-manager-label": "Bøger",
 	"bs-bookshelf-prof-defaultview": "Standardvisning",
-	"bs-bookshelf-prof-defaultview-images": "Billeder"
+	"bs-bookshelf-prof-defaultview-images": "Billeder",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titel",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Undertitel",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Version",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Boghylde",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Bog"
 }
