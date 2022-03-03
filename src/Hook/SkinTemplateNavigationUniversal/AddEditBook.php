@@ -11,9 +11,7 @@ class AddEditBook extends SkinTemplateNavigationUniversal {
 	 */
 	protected function skipProcessing() {
 		$title = $this->sktemplate->getTitle();
-		if ( !$title->exists() ) {
-			return true;
-		}
+
 		if ( $title->getContentModel() !== 'book' ) {
 			return true;
 		}
