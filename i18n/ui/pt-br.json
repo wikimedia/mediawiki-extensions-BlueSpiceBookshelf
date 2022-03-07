@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Eduardo Addad de Oliveira",
-			"Eduardoaddad"
+			"Eduardoaddad",
+			"Juan90264"
 		]
 	},
+	"bs-bookshelfui-extension-description": "Permite que o BlueSpice administre coleções hierárquicas de páginas wiki.",
 	"bookshelfbookui": "Editor de Livros",
 	"bookshelfbookmanager": "Gerenciamento de Livros",
 	"bs-bookshelfui-editor-no-title-provided": "Não foi fornecido nenhum título de livro válido",
@@ -46,8 +48,6 @@
 	"bs-bookshelfui-override-tag-text": "Deseja adicionar ou atualizar as associações ao livro (<code>&lt;bs:bookshelf /&gt;</code>) nas páginas da wiki? Será criada uma nova versão de cada página wiki.",
 	"bs-bookshelfui-nothingtoexport-text": "A sua escolha está vazia",
 	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Um livro|$1 livros}})",
-	"bs-bookshelfui-grouping-template-type-ns_book": "Livros gerais",
-	"bs-bookshelfui-grouping-template-type-user_book": "Livros próprios",
 	"bs-bookshelfui-book-type": "Tipo do livro",
 	"bs-bookshelfui-empty-selection": "Nada selecionado",
 	"apihelp-bs-bookshelf-manage-summary": "Fornece tarefas para manipulação de livros.",
@@ -62,6 +62,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "Livros gerais",
 	"bs-bookshelfui-flyout-title": "Lista de livros",
 	"bs-bookshelfui-flyout-intro": "Aqui pode ver todos os livros disponíveis. Para adicionar um livro novo, vá ao [[Special:Bookmanager|gestor de livros]].",
+	"bs-bookshelfui-intro": "Aqui você pode ver todos os livros disponíveis. Para adicionar um novo livro, vá para o [[Special:Bookmanager|gerenciador de livros]].",
 	"bs-bookshelfui-book-title-link-edit": "Editar livro",
 	"bs-bookshelfui-book-title-link-edit-text": "Editar livro",
 	"bs-bookshelfui-export-book-text": "Aguarde enquanto o livro está a ser criado.",
@@ -87,16 +88,14 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Número de resultados a retornar",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Valor raiz com base no qual retornar páginas",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo de fonte para adição em massa",
-	"bs-bookshelfui-extension-description": "Permite que o BlueSpice administre coleções hierárquicas de páginas wiki.",
-	"bookshelf": "Estante de livros",
-	"bookshelf-summary": "Livros gerais",
 	"prefs-bookshelfui": "Página especial da estante",
 	"bs-bookshelfui-prof-defaultview": "Exibição padrão",
 	"bs-bookshelfui-prof-defaultview-grid": "Grade",
 	"bs-bookshelfui-prof-defaultview-images": "Imagens",
-	"right-bookshelf-viewspecialpage": "acesse a página especial [[Special:Bookshelf]]",
-	"action-bookshelf-viewspecialpage": "acesse a página especial [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
 	"bs-bookshelfui-chapterpager-next": "Próximo",
-	"bs-bookshelfui-panel-navigation-text": "Para reservar a navegação"
+	"bs-bookshelfui-panel-navigation-text": "Para reservar a navegação",
+	"bs-bookshelfui-panel-navigation-title": "Voltar à navegação do livro",
+	"bs-bookshelfui-panel-navigation-aria-label": "Para reservar a navegação",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navegação do livro como estrutura em árvore"
 }

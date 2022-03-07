@@ -4,9 +4,11 @@
 			"Amire80",
 			"YaronSh",
 			"מקף",
-			"ערן"
+			"ערן",
+			"שוקו מוקה"
 		]
 	},
+	"bs-bookshelf-positive-integer-validation-not-approved": "ניתן להשתמש רק במספרים שלמים חיוביים.",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "נא להשתמש ב־<i>left</i> או ב־<i>right</i>.",
 	"bs-bookshelf-specialpage-title": "ספרים",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "ספרייה",
@@ -37,6 +39,7 @@
 	"bs-bookshelf-prof-defaultview-grid": "רשת",
 	"bs-bookshelf-prof-defaultview-images": "תמונות",
 	"bs-bookshelf-action-save-to-local-storage": "מתבצעת שמירה לאחסון המקומי",
+	"bs-bookshelf-actionmenuentry-addtobook": "להוסיף לספר",
 	"bs-bookshelf-ve-booklistinspector-title": "רשימת הספרים",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "מסנן",
 	"bs-bookshelf-ve-bookmetainspector-title": "נתוני הספר",

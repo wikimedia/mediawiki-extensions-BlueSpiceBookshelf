@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"YaronSh",
-			"ישראל קלר"
+			"ישראל קלר",
+			"שוקו מוקה"
 		]
 	},
 	"bookshelfbookui": "עורך ספרים",
@@ -12,6 +13,7 @@
 	"bs-bookshelfui-new-book-title": "ליצור ספר חדש",
 	"bs-bookshelfui-new-book-text": "כותרת הספר",
 	"bs-bookshelfui-delete-book-title": "למחוק ספר",
+	"bs-bookshelfui-export-selection": "יצוא הבחירה",
 	"bs-bookshelfui-bookui-savingprogress-title": "ספר נשמר",
 	"bs-bookshelfui-bookui-savingprogress-text": "נא להמתין עד לשמירת הספר לשרת",
 	"bs-bookshelfui-manager-title": "כותרת",
@@ -52,17 +54,16 @@
 	"bs-bookshelfui-bookmanager-deletion-error-unkown": "אירעה שגיאה בלתי ידועה. נא ליצור קשר עם ההנהלה.",
 	"bs-bookshelfui-bookmetatag-title": "כותרת",
 	"bs-bookshelfui-bookmetatag-subtitle": "כותרת משנה",
+	"bs-bookshelfui-bookmetatag-author1": "כותב 1",
+	"bs-bookshelfui-bookmetatag-author2": "כותב 2",
 	"bs-bookshelfui-bookmetatag-docummentidentifier": "מזהה מסמך",
 	"bs-bookshelfui-bookmetatag-docummenttype": "סוג מסמך",
 	"bs-bookshelfui-bookmetatag-department": "מחלקה",
 	"bs-bookshelfui-bookmetatag-version": "גרסה",
 	"bs-bookshelfui-extjs-tooltip-copy": "להעתיק",
-	"bookshelf": "מדף הספרים",
-	"bookshelf-summary": "ספרים כלליים",
 	"bs-bookshelfui-prof-defaultview": "תצוגת בררת מחדל",
+	"bs-bookshelfui-prof-defaultview-grid": "רשת",
 	"bs-bookshelfui-prof-defaultview-images": "תמונות",
 	"bs-bookshelfui-chapterpager-previous": "הקודם",
-	"bs-bookshelfui-chapterpager-next": "הבא",
-	"bs-bookshelfui-export-selection": "יצוא הבחירה",
-	"bs-bookshelfui-prof-defaultview-grid": "רשת"
+	"bs-bookshelfui-chapterpager-next": "הבא"
 }
