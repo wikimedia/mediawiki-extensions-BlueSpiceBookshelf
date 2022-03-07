@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"FiberAhmed",
 			"ديفيد",
 			"محمد أحمد عبد الفتاح"
 		]
@@ -47,10 +48,16 @@
 	"bs-bookshelf-book-grid-title": "الكتب",
 	"bookshelf": "رف الكتب",
 	"bookshelf-summary": "الكتب العامة",
+	"bs-bookshelf-ga-manager-label": "كتب",
 	"bs-bookshelf-prof-defaultview": "العرض الافتراضي",
 	"bs-bookshelf-prof-defaultview-images": "الصور",
 	"right-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:Bookshelf]]",
 	"bs-bookshelf-actionmenuentry-addtobook": "أضف إلى الكتاب",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "مرشح",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "العنوان",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "العنوان الفرعي",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "المؤلف",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "الإصدار",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "كتاب"
 }
