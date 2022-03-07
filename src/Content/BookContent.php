@@ -16,7 +16,8 @@ class BookContent extends WikitextContent {
 	 * @throws MWException
 	 */
 	public function __construct( $text, $model_id = 'book' ) {
-		parent::__construct( $text, $model_id );
+		parent::__construct( $text );
+		$this->model_id = $model_id;
 	}
 
 	/**
