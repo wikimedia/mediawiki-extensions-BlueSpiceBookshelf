@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"DDPAT",
+			"Ice bulldog",
 			"Piramidion",
+			"Samflint",
 			"Ата"
 		]
 	},
@@ -81,5 +83,13 @@
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Підзаголовок",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Автор",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Версія",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Встановлює назву книги",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Встановлює підзаголовок книги",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Встановлює автора книги",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Встановлює версію книги",
+	"bs-bookshelf-tag-bookshelf-box-desc": "Вставляє навігацію розділів книги на сторінці, що не є частиною книги. Нумерація створюється автоматично, відповідно до змісту",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Книжкова полиця",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Визначає до якої книги відносяться сторінки",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Додати номери розділів книги до змісту і всіх заголовків на сторінці"
 }

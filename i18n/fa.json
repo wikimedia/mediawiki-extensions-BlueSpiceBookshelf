@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"FarsiNevis",
-			"Jeeputer"
+			"Jeeputer",
+			"LordProfo"
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "فقط اعداد صحیح مثبت، مجازند.",
@@ -47,5 +48,17 @@
 	"bs-bookshelf-prof-defaultview-images": "تصویر",
 	"bs-bookshelf-action-save-to-local-storage": "در حال ذخیرهٔ مخزن محلی",
 	"bs-bookshelf-action-editbook": "ویرایش مبدأ",
-	"bs-bookshelf-action-editbook-create": "ویرایش مبدأ"
+	"bs-bookshelf-action-editbook-create": "ویرایش مبدأ",
+	"bs-bookshelf-ga-manager-label": "کتاب‌ها",
+	"bs-bookshelf-actionmenuentry-addtobook": "افزودن به کتاب",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "پالایه",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "عنوان",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "زیرنویس",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "زیرنویس کتاب را تنظیم می‌کند",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "نویسنده",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "نویسندهٔ کتاب را تنظیم می‌کند",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "نسخه",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "نسخهٔ کتاب را تنظیم می‌کند",
+	"bs-bookshelf-ve-bookshelfinspector-title": "قفسه",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "کتاب"
 }

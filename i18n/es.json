@@ -12,6 +12,7 @@
 			"Jakeukalane",
 			"MarleneR329",
 			"Rodney Araujo",
+			"TehFrog",
 			"Warming Hearth",
 			"Whovian Biologist"
 		]
@@ -88,5 +89,16 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Conjuntos la versión del libro",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Bookshelf",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Añade números de capítulo del libro para someter de contenidos y todos los  titulares en la página"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Añade números de capítulo del libro para someter de contenidos y todos los  titulares en la página",
+	"apihelp-bs-bookshelf-bookstore-summary": "Enlista todos los capítulos de un libro. Permite ordenar, filtrar y paginar. Implementa parámetros de ExtJS Store.",
+	"apihelp-bs-bookshelf-store-summary": "Enlista todos los libros. Permite ordenar, filtrar y paginar. Implementa parámetros de ExtJS Store.",
+	"bs-bookshelf-ve-booklistinspector-title": "Lista de libros",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtro",
+	"bs-bookshelf-ve-bookmetainspector-title": "Bookmeta",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Título",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Establece el título del libro",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Establece el subtítulo del libro",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autor",
+	"bs-bookshelf-tag-bookshelf-box-desc": "Inserta la navegación de capítulos de un libro en una página que no forma parte de un libro. La numeración es automáticamente creada según la tabla de contenidos",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Define a qué libro pertenecen las páginas"
 }

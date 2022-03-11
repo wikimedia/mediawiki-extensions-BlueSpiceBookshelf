@@ -2,12 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Ameisenigel",
+			"Brettchenweber",
 			"Laurinm",
 			"Mglaser",
+			"Mschlindwein",
 			"Schmackes",
-			"Stephan Muggli <muggli@hallowelt.biz>",
-			"Brettchenweber",
-			"Mschlindwein"
+			"Stephan Muggli <muggli@hallowelt.biz>"
 		]
 	},
 	"bs-bookshelf-extension-description": "Ermöglicht das Zusammenstellen von hierarchisch gegliederten Artikelsammlungen.",
@@ -92,5 +92,6 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Bücherregal",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buch",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definiert, welchem Buch die Seiten angehören",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Fügt dem Inhaltsverzeichnis und allen Überschriften einer Seite die Kapitelnummerierung des Buches hinzu"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Fügt dem Inhaltsverzeichnis und allen Überschriften einer Seite die Kapitelnummerierung des Buches hinzu",
+	"bs-bookshelf-ve-bookmetainspector-title": "Buchmeta"
 }

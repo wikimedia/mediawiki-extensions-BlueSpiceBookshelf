@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Eduardo Addad de Oliveira",
-			"Eduardoaddad"
+			"Eduardoaddad",
+			"Juan90264"
 		]
 	},
 	"bookshelfbookui": "Editor de Livros",
@@ -98,5 +99,9 @@
 	"action-bookshelf-viewspecialpage": "acesse a página especial [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
 	"bs-bookshelfui-chapterpager-next": "Próximo",
-	"bs-bookshelfui-panel-navigation-text": "Para reservar a navegação"
+	"bs-bookshelfui-panel-navigation-text": "Para reservar a navegação",
+	"bs-bookshelfui-intro": "Aqui você pode ver todos os livros disponíveis. Para adicionar um novo livro, vá para o [[Special:Bookmanager|gerenciador de livros]].",
+	"bs-bookshelfui-panel-navigation-title": "Voltar à navegação do livro",
+	"bs-bookshelfui-panel-navigation-aria-label": "Para reservar a navegação",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navegação do livro como estrutura em árvore"
 }

@@ -94,5 +94,6 @@
 	"bs-bookshelfui-panel-navigation-text": "Til boknavigasjon",
 	"bs-bookshelfui-panel-navigation-title": "Tilbake til boknavigasjon",
 	"bs-bookshelfui-panel-navigation-aria-label": "Til boknavigasjon",
-	"bs-bookshelfui-panel-navigation-aria-desc": "Boknavigasjon som trestruktur"
+	"bs-bookshelfui-panel-navigation-aria-desc": "Boknavigasjon som trestruktur",
+	"bs-bookshelfui-intro": "Her kan du se alle tilgjengelige bøker. Gå til [[Special:Bookmanager|bokbehandleren]] for å legge til ei ny bok."
 }

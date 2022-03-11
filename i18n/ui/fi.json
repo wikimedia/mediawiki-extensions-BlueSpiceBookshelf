@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Joquliina",
+			"Markus Mikkonen",
 			"Mediawikitranslator",
 			"Pyscowicz"
 		]
@@ -46,5 +47,7 @@
 	"bs-bookshelfui-book-title-link-edit": "Muokkaa kirjaa",
 	"bs-bookshelfui-extjs-tooltip-copy": "Kopioi",
 	"bs-bookshelfui-prof-defaultview": "Oletusnäkymä",
-	"bs-bookshelfui-prof-defaultview-grid": "Ruudukko"
+	"bs-bookshelfui-prof-defaultview-grid": "Ruudukko",
+	"bs-bookshelfui-manager-deletingprogress-text": "Poistetaan valittua kirjaa",
+	"bs-bookshelfui-dlg-copy-title": "Kopioi \"$1\""
 }

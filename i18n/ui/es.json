@@ -11,6 +11,7 @@
 			"Ihojose",
 			"Joanmp17",
 			"Nancystodd",
+			"TehFrog",
 			"Whovian Biologist"
 		]
 	},
@@ -94,5 +95,16 @@
 	"bs-bookshelfui-prof-defaultview-images": "Imágenes",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
 	"bs-bookshelfui-chapterpager-next": "Siguiente",
-	"bs-bookshelfui-panel-navigation-text": "Para reservar la navegación"
+	"bs-bookshelfui-panel-navigation-text": "Para reservar la navegación",
+	"bs-bookshelfui-override-tag-text": "¿Quieres añadir o actualizar las asociaciones de libro (&#60;bs:bookshelf /&#62;) dentro de las wikipáginas? Una nueva versión de la wikipágina será creada.",
+	"bs-bookshelfui-intro": "Aquí puedes ver todos los libros disponibles. Para añadir un libro nuevo, ve al [[Special:Bookmanager|administrador de libros]].",
+	"action-bookshelfbookmanager-viewspecialpage": "acceder a la página especial [[Special:BookshelfBookManager]]",
+	"right-bookshelfbookui-viewspecialpage": "Acceder a la página especial [[Special:BookshelfBookUI]]",
+	"action-bookshelfbookui-viewspecialpage": "acceder a la página especial [[Special:BookshelfBookUI]]",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Valor raíz basado en el cual devolver páginas",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo de fuente para la adición de masa",
+	"prefs-bookshelfui": "Página especial de la librería",
+	"bs-bookshelfui-panel-navigation-title": "Volver a la navegación de libros",
+	"bs-bookshelfui-panel-navigation-aria-label": "A la navegación de libros",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navegación de libros como estructura de árbol"
 }

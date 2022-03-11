@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"500000000006城",
 			"A Chinese Wikipedian",
 			"AYZ04",
 			"Dimension",
@@ -9,6 +10,7 @@
 			"Shimamura Sakura",
 			"VulpesVulpes825",
 			"Wenyuan Liu",
+			"Wzl19371",
 			"XinuGod",
 			"Yfdyh000",
 			"Yining Chen",
@@ -82,5 +84,13 @@
 	"bs-bookshelf-warning": "PHP错误：$1",
 	"bs-bookshelf-actionmenuentry-addtobook": "添加到书籍",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "显示「书柜」入口",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "在左侧导航中显示入口点“书架”链接"
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "在左侧导航中显示入口点“书架”链接",
+	"bs-bookshelf-ve-booklistinspector-title": "书单",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "过滤器",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "标题",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "副标题",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "作者",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "版本",
+	"bs-bookshelf-ve-bookshelfinspector-title": "书架",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "图书"
 }
