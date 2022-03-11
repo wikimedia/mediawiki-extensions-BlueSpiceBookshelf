@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Gongsoonyee",
-			"Ykhwong"
+			"Ykhwong",
+			"Yunbj"
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "양의 정수만 허용됩니다.",
@@ -43,5 +44,21 @@
 	"bs-bookshelf-action-editbook": "원본 편집",
 	"bs-bookshelf-action-editbook-create": "원본 편집",
 	"bs-bookshelf-warning": "PHP 예외: $1",
-	"bs-bookshelf-actionmenuentry-addtobook": "책에 추가"
+	"bs-bookshelf-actionmenuentry-addtobook": "책에 추가",
+	"apihelp-query+bsbookshelf-summary": "모든 책의 조회를 허용합니다.",
+	"bs-bookshelf-ga-manager-label": "책",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "페이지 맨 위에 챕터 나누기를 추가합니다.",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "페이지 맨 아래에 챕터 나누기를 추가합니다.",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "필터",
+	"bs-bookshelf-ve-bookmetainspector-title": "북메타",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "제목",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "책의 제목을 설정합니다",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "부제",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "책의 부제를 설정합니다",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "저자",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "책의 저자를 설정합니다",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "판",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "책의 판을 설정합니다",
+	"bs-bookshelf-ve-bookshelfinspector-title": "책장",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "책"
 }

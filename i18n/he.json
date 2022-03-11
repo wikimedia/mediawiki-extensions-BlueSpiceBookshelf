@@ -2,7 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
-			"YaronSh"
+			"YaronSh",
+			"מקף",
+			"ערן",
+			"שוקו מוקה"
 		]
 	},
 	"bs-bookshelf-specialpage-title": "ספרים",
@@ -35,5 +38,23 @@
 	"bs-bookshelf-personal-books-page-prefix": "$1/ספרים/",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "נא להשתמש ב־<i>left</i> או ב־<i>right</i>.",
 	"bs-bookshelf-action-editbook": "לערוך מקור",
-	"bs-bookshelf-action-editbook-create": "לערוך מקור"
+	"bs-bookshelf-action-editbook-create": "לערוך מקור",
+	"bs-bookshelf-positive-integer-validation-not-approved": "ניתן להשתמש רק במספרים שלמים חיוביים.",
+	"bs-bookshelf-ga-manager-label": "ספרים",
+	"bs-bookshelf-actionmenuentry-addtobook": "להוסיף לספר",
+	"bs-bookshelf-ve-booklistinspector-title": "רשימת הספרים",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "מסנן",
+	"bs-bookshelf-ve-bookmetainspector-title": "נתוני הספר",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "כותרת",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "הגדרת הכותרת של הספר",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "כותרת־משנה",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "הגדרת כותרת־המשנה של הספר",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "מחבר",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "הגדרת המחבר של הספר",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "גרסה",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "הגדרת הגרסה של הספר",
+	"bs-bookshelf-ve-bookshelfinspector-title": "מדף הספרים",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "ספר",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "הגדרת הספר שהדפים שייכים אליו",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "הוספת מספרי הפרקים של הספר לתוכן העניינים ולכל הכותרות בעמוד"
 }

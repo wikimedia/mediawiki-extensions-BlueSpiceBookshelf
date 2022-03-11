@@ -99,5 +99,9 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Basiswaarde voor teruggeven van pagina's",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Type bron voor gezamenlijk toevoegen",
 	"bookshelf-summary": "Algemene boeken",
-	"prefs-bookshelfui": "Speciale pagina Boekenplank"
+	"prefs-bookshelfui": "Speciale pagina Boekenplank",
+	"bs-bookshelfui-panel-navigation-text": "Naar boeknavigatie",
+	"bs-bookshelfui-panel-navigation-title": "Terug naar boeknavigatie",
+	"bs-bookshelfui-panel-navigation-aria-label": "Naar boeknavigatie",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Boeknavigatie als boomstructuur"
 }

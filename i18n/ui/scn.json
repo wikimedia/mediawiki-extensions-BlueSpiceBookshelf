@@ -26,5 +26,9 @@
 	"bs-bookshelfui-bookmetatag-author2": "Auturi 2",
 	"bs-bookshelfui-bookmetatag-docummenttype": "Tipu di ducumentu",
 	"bs-bookshelfui-bookmetatag-version": "Virsioni",
-	"bs-bookshelfui-prof-defaultview-images": "Mmàggini"
+	"bs-bookshelfui-prof-defaultview-images": "Mmàggini",
+	"bs-bookshelfui-new-book-title": "Crea nu libbru novu",
+	"bs-bookshelfui-dlg-tagsettings-title": "Mpustazzioni di l'etichetta",
+	"bs-bookshelfui-flyout-title": "Elencu di libbri",
+	"bs-bookshelfui-prof-defaultview-grid": "Grigghia"
 }

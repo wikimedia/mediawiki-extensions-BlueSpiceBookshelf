@@ -3,6 +3,7 @@
 		"authors": [
 			"Agusbou2015",
 			"Bruno44101",
+			"Danniel07",
 			"DannyS712",
 			"Fitoschido",
 			"Fortega",
@@ -10,6 +11,7 @@
 			"Ihojose",
 			"Joanmp17",
 			"Nancystodd",
+			"TehFrog",
 			"Whovian Biologist"
 		]
 	},
@@ -90,5 +92,24 @@
 	"bs-bookshelfui-nothingtoexport-text": "Tu seleccion está vacía",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Número de resultados para devolver",
 	"bs-bookshelfui-bookmanager-deletion-reason": "Eliminado por BookManager",
-	"bs-bookshelfui-panel-navigation-text": "Para reservar la navegación"
+	"bs-bookshelfui-panel-navigation-text": "Para reservar la navegación",
+	"bs-bookshelfui-extension-description": "Habilita BlueSpice para administrar colecciones jerárquicas de páginas wiki.",
+	"bs-bookshelfui-delete-book-text": "¿Realmente quieres eliminar este libro? ¡Etiquetas de \"estantería\" <em>no</em> serán removida automáticamente de las páginas wiki enlazadas!",
+	"bs-bookshelfui-save-and-modify": "Guarda y añade la navegación del libro a cada página wiki",
+	"bs-bookshelfui-edit-source": "Editar código de la página wiki",
+	"bs-bookshelfui-open-source": "Mostrar el código de la página wiki",
+	"bs-bookshelfui-confirm-delete-text": "¿Realmente quieres eliminar el capítulo seleccionado? Los subcapítulos también serán eliminados.",
+	"bs-bookshelfui-override-tag-title": "Cambiar asociaciones de la página wiki",
+	"bs-bookshelfui-override-tag-text": "¿Quieres añadir o actualizar las asociaciones de libro (&#60;bs:bookshelf /&#62;) dentro de las wikipáginas? Una nueva versión de la wikipágina será creada.",
+	"bs-bookshelfui-dlg-addmass-title": "Adición masiva",
+	"bs-bookshelfui-intro": "Aquí puedes ver todos los libros disponibles. Para añadir un libro nuevo, ve al [[Special:Bookmanager|administrador de libros]].",
+	"action-bookshelfbookmanager-viewspecialpage": "acceder a la página especial [[Special:BookshelfBookManager]]",
+	"right-bookshelfbookui-viewspecialpage": "Acceder a la página especial [[Special:BookshelfBookUI]]",
+	"action-bookshelfbookui-viewspecialpage": "acceder a la página especial [[Special:BookshelfBookUI]]",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Valor raíz basado en el cual devolver páginas",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo de fuente para la adición de masa",
+	"prefs-bookshelfui": "Página especial de la librería",
+	"bs-bookshelfui-panel-navigation-title": "Volver a la navegación de libros",
+	"bs-bookshelfui-panel-navigation-aria-label": "A la navegación de libros",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navegación de libros como estructura de árbol"
 }

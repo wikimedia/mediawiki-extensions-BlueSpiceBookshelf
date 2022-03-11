@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Amire80",
 			"BaRaN6161 TURK",
 			"McDutchie",
@@ -74,5 +75,25 @@
 	"bs-bookshelf-warning": "Description for a PHP error thrown in BookContent.php. Parameters:\n* $1 - warning message, not localized.",
 	"bs-bookshelf-actionmenuentry-addtobook": "Label for action menu entry that allows adding the current page to a book\n{{Identical|Add to book}}",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "Label for checkbox in config, that shows entrypoint \"Bookshelf\" in the left navigation",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "Help message for checkbox in config, that shows entrypoint \"Bookshelf\" in the left navigation"
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Help message for checkbox in config, that shows entrypoint \"Bookshelf\" in the left navigation",
+	"bs-bookshelf-ga-manager-label": "Label for global actions menu entry\n\n{{Identical|Book}}",
+	"bs-bookshelf-tag-booklist-description": "Description of tag <nowiki><bs:booklist /></nowiki>",
+	"bs-bookshelf-ve-booklistinspector-title": "Title for booklist in VisualEditor",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Label for the parameter \"filter\"\n{{identical|Filter}}",
+	"bs-bookshelf-ve-booklist-attr-filter-help": "Help message for the parameter \"filter\"",
+	"bs-bookshelf-tag-bookmeta-description": "Description of tag <nowiki><bs:bookmeta /></nowiki>",
+	"bs-bookshelf-ve-bookmetainspector-title": "Title for bookmeta in VisualEditor",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Label for the parameter \"title\"\n{{identical|Title}}",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Help message for the parameter \"title\"",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Label for the parameter \"subtitle\"\n\n{{Identical|Subtitle}}",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Help message for the parameter \"subtitle\"",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Label for the parameter \"author\"\n\n{{Identical|Author}}",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Help message for the parameter \"author\"",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Label for the parameter \"version\"\n{{identical|Version}}",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Help message for the parameter \"version\"",
+	"bs-bookshelf-tag-bookshelf-box-desc": "Description of tag <nowiki><bs:bookshelf /></nowiki>",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Title for bookshelf in VisualEditor",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Label for the parameter \"book\"\n{{identical|Book}}",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Help message for the parameter \"book\"",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Help message for checkbox in config, when activated, article table of contents and headlines with book numberation are prepended"
 }

@@ -96,5 +96,10 @@
 	"right-bookshelf-viewspecialpage": "Få tilgang til spesialsiden [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "få tilgang til spesialsiden [[Special:Bookshelf]]",
 	"bs-bookshelfui-chapterpager-previous": "Forrige",
-	"bs-bookshelfui-chapterpager-next": "Neste"
+	"bs-bookshelfui-chapterpager-next": "Neste",
+	"bs-bookshelfui-intro": "Her kan du se alle tilgjengelige bøker. Gå til [[Special:Bookmanager|bokbehandleren]] for å legge til ei ny bok.",
+	"bs-bookshelfui-panel-navigation-text": "Til boknavigasjon",
+	"bs-bookshelfui-panel-navigation-title": "Tilbake til boknavigasjon",
+	"bs-bookshelfui-panel-navigation-aria-label": "Til boknavigasjon",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Boknavigasjon som trestruktur"
 }

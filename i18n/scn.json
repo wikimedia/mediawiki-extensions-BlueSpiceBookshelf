@@ -9,7 +9,7 @@
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Libbrarìa",
 	"bs-bookshelf-tag-edit-book": "Cancia libbru",
 	"bs-bookshelf-personal-books-page-prefix": "$1/Libbra/",
-	"bs-bookshelf-add-to-book-label": "Agghiunci a nu libbru",
+	"bs-bookshelf-add-to-book-label": "Agghiunci ôn libbru",
 	"bs-bookshelf-add-to-book-label-book": "Libbru",
 	"bs-bookshelf-add-to-book-added": "La pàggina fu agghiunciuta ô libbru '$1'.",
 	"bs-bookshelf-setting-path-feature": "Libbru",
@@ -19,5 +19,17 @@
 	"bs-bookshelf-edit-title": "Canciamentu di $1",
 	"bs-bookshelf-book-grid-title": "Libbra",
 	"bookshelf-summary": "Libbra ginirali",
-	"bs-bookshelf-actionmenuentry-addtobook": "Agghiunci ô libbru"
+	"bs-bookshelf-actionmenuentry-addtobook": "Agghiunci ô libbru",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Pi favuri, usa <i>left</i> o <i>right</i>.",
+	"bs-bookshelf-grouping-template-type-user_book": "Libbri pirsunali",
+	"bs-bookshelf-ga-manager-label": "Libbri",
+	"bs-bookshelf-prof-defaultview-grid": "Grigghia",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Tìtulu",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Suttatìtulu",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Mposta lu suttatìtulu dû libbru",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Auturi",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Mposta l'auturi dû libbru",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Virsioni",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Mposta la virsioni dû libbru",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libbru"
 }

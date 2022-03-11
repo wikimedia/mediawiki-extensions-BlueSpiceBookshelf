@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Daniel Mietchen",
 			"DreZhsh",
 			"Eihel",
@@ -71,11 +72,31 @@
 	"bs-bookshelf-pref-chapterpageraftercontent": "Ajouter la navigation par chapitre du livre après le contenu",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Ajoute une navigation par chapitre en bas de page.",
 	"apihelp-bs-bookshelf-store-param-tempBooks": "Liste de livres sur le dépôt local des clients qui devraient être inclus dans la réponse du dépôt",
-	"bs-bookshelf-pref-supressbookns-help": "L'espace de nom des noms de page est caché dans la sortie PDF.",
-	"bs-bookshelf-warning": "Exception PHP : $1",
+	"bs-bookshelf-pref-supressbookns-help": "L’espace de noms pour les noms de pages est caché dans la sortie PDF.",
+	"bs-bookshelf-warning": "Exception PHP : $1",
 	"bs-bookshelf-action-editbook": "Modifier la source",
 	"bs-bookshelf-action-editbook-create": "Modifier la source",
 	"bs-bookshelf-actionmenuentry-addtobook": "Ajouter au livre",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "Afficher le point d’entrée « Étagère »",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "Afficher le lien du point d’entrée « Étagère » dans la navigation à gauche"
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Afficher le lien du point d’entrée « Étagère » dans le panneau de navigation à gauche",
+	"bs-bookshelf-ga-manager-label": "Livres",
+	"bs-bookshelf-tag-booklist-description": "Génère des listes de pages à partir de l’espace de noms « livre » et peut être filtré. L’indication du filtre est obligatoire.",
+	"bs-bookshelf-ve-booklistinspector-title": "Liste de livres",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtre",
+	"bs-bookshelf-ve-booklist-attr-filter-help": "Filtre par métadonnée dans le format « ''clé'':''valeur'' », par ex. « title:manuel ».",
+	"bs-bookshelf-tag-bookmeta-description": "Balise pour enregistrer les diverses métadonnées sur les pages de livre. Celles-ci sont incluses dans le livre. Les attributs de cette balise doivent être corrélés avec les métadonnées de la page du livre.",
+	"bs-bookshelf-ve-bookmetainspector-title": "Métalivre",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titre",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Définit le titre du livre",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Sous-titre",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Définit le sous-titre du livre",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Auteur",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Définit l’auteur du livre",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Version",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Définit la version du livre",
+	"bs-bookshelf-tag-bookshelf-box-desc": "Insère la navigation des chapitres d’un livre dans une page qui ne fait pas partie du livre. La numérotation est créée automatiquement conformément à la table des matières.",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Étagère",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Livre",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Définit à quel livre appartiennent les pages",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Ajouter les numéros de chapitre du livre à la table des matières et à tous les titres dans la page"
 }

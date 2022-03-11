@@ -13,5 +13,9 @@
 	"bs-bookshelfui-bookmetatag-title": "Sername",
 	"bs-bookshelfui-bookmetatag-docummenttype": "Tewrê dokumani",
 	"bs-bookshelfui-extjs-tooltip-copy": "Kopya ke",
-	"bs-bookshelfui-bookmetatag-version": "Versiyon"
+	"bs-bookshelfui-bookmetatag-version": "Versiyon",
+	"bs-bookshelfui-dlg-choosewikipage-title": "Wikipele",
+	"bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel": "Wikipele",
+	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "Sernuşteyi bımocne",
+	"bs-bookshelfui-chapterpager-previous": "Verên"
 }

@@ -21,5 +21,19 @@
 	"bookshelf-summary": "Allgemeng Bicher",
 	"bs-bookshelf-prof-defaultview-images": "Biller",
 	"bs-bookshelf-action-editbook": "Quelltext änneren",
-	"bs-bookshelf-action-editbook-create": "Quelltext änneren"
+	"bs-bookshelf-action-editbook-create": "Quelltext änneren",
+	"bs-bookshelf-ga-manager-label": "Bicher",
+	"bs-bookshelf-ve-booklistinspector-title": "Buchlëscht",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
+	"bs-bookshelf-ve-bookmetainspector-title": "Bookmeta",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titel",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Leet den Titel vum Buch fest",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Ënnertitel",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Den Ënnertitel vum Buch gëtt festgeluecht",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Auteur",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Den Auteur vum Buch gëtt festgeluecht",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versioun",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "D'Versio9un vum Buch gëtt festgeluecht",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Etagère",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buch"
 }

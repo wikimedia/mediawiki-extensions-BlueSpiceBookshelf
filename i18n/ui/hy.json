@@ -19,5 +19,8 @@
 	"bs-bookshelfui-dlg-copy-name-addition": "(պատճեն)",
 	"bs-bookshelfui-extjs-tooltip-copy": "Պատճենել",
 	"bs-bookshelfui-chapterpager-previous": "Նախորդ",
-	"bs-bookshelfui-chapterpager-next": "Հաջորդ"
+	"bs-bookshelfui-chapterpager-next": "Հաջորդ",
+	"bs-bookshelfui-book-title-link-edit": "Խմբագրել գիրք",
+	"bs-bookshelfui-book-title-link-edit-text": "Խմբագրել գիրք",
+	"bs-bookshelfui-bookmetatag-docummenttype": "Փաստաթղթի տեսակը"
 }

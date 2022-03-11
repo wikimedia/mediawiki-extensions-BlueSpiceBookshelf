@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Beta16",
 			"Dansita",
 			"Gianfranco",
@@ -11,7 +12,7 @@
 			"Valepert"
 		]
 	},
-	"bs-bookshelf-tagerror-attribute-float-not-valid": "Per favore, usa <i>sinistra</i> o <i>destra</i>.",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Per favore, usa <i>left</i> o <i>right</i>.",
 	"bs-bookshelf-specialpage-title": "Libri",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Libreria",
 	"bs-bookshelf-tag-next": "Successivo",
@@ -47,5 +48,17 @@
 	"bs-bookshelf-action-save-to-local-storage": "Sto salvando su disco locale",
 	"bs-bookshelf-action-editbook": "Modifica sorgente",
 	"bs-bookshelf-action-editbook-create": "Modifica sorgente",
-	"bs-bookshelf-warning": "Eccezione PHP: $1"
+	"bs-bookshelf-warning": "Eccezione PHP: $1",
+	"bs-bookshelf-ga-manager-label": "Libri",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtro",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titolo",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Imposta il titolo del libro",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Sottotitolo",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Imposta il sottotitolo del libro",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autore",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Imposta l'autore del libro",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versione",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Imposta la versione del libro",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Scaffale",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro"
 }

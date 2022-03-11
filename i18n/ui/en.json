@@ -95,5 +95,6 @@
 	"bs-bookshelfui-panel-navigation-text": "To book navigation",
 	"bs-bookshelfui-panel-navigation-title": "Back to book navigation",
 	"bs-bookshelfui-panel-navigation-aria-label": "To book navigation",
-	"bs-bookshelfui-panel-navigation-aria-desc": "Book navigation as tree structure"
+	"bs-bookshelfui-panel-navigation-aria-desc": "Book navigation as tree structure",
+	"bs-bookshelfui-intro": "Here you can see all available books. To add a new book, go to [[Special:Bookmanager|book manager]]."
 }

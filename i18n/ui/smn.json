@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Seipinne",
 			"Yupik"
 		]
 	},
@@ -11,5 +12,6 @@
 	"bs-bookshelfui-type-category": "Luoka puoh siijđoh",
 	"bs-bookshelfui-bookmetatag-version": "Versio",
 	"bs-bookshelfui-extjs-tooltip-copy": "Kopijist",
-	"bs-bookshelfui-prof-defaultview-images": "Koveh"
+	"bs-bookshelfui-prof-defaultview-images": "Koveh",
+	"bs-bookshelfui-chapterpager-next": "Čuávuvâš"
 }

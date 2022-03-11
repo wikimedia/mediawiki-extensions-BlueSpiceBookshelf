@@ -3,6 +3,7 @@
 		"authors": [
 			"Joquliina",
 			"MITO",
+			"Markus Mikkonen",
 			"Mediawikitranslator",
 			"Pyscowicz"
 		]
@@ -25,5 +26,18 @@
 	"bs-bookshelf-prof-defaultview-grid": "Ruudukko",
 	"bs-bookshelf-action-editbook": "Muokkaa wikitekstiä",
 	"bs-bookshelf-action-editbook-create": "Muokkaa wikitekstiä",
-	"bs-bookshelf-actionmenuentry-addtobook": "Lisää kirjaan"
+	"bs-bookshelf-actionmenuentry-addtobook": "Lisää kirjaan",
+	"bs-bookshelf-action-export-book": "Vie kirja",
+	"bs-bookshelf-edit-title": "Muokataan kirjaa $1",
+	"bs-bookshelf-ga-manager-label": "Kirjat",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Otsikko",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "Asettaa kirjan otsikon",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Alaotsikko",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Asettaa kirjan alaotsikon",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Tekijä",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Asettaa kirjan tekijän",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versio",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Asettaa kirjan version",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Kirjahylly",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kirja"
 }

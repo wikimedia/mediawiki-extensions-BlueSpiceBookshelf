@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"YaronSh",
-			"ישראל קלר"
+			"ישראל קלר",
+			"שוקו מוקה"
 		]
 	},
 	"bookshelfbookui": "עורך ספרים",
@@ -64,5 +65,7 @@
 	"bs-bookshelfui-prof-defaultview-grid": "רשת",
 	"bs-bookshelfui-prof-defaultview-images": "תמונות",
 	"bs-bookshelfui-chapterpager-previous": "הקודם",
-	"bs-bookshelfui-chapterpager-next": "הבא"
+	"bs-bookshelfui-chapterpager-next": "הבא",
+	"bs-bookshelfui-bookmetatag-author1": "כותב 1",
+	"bs-bookshelfui-bookmetatag-author2": "כותב 2"
 }
