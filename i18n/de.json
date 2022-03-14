@@ -80,6 +80,7 @@
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
 	"bs-bookshelf-ve-booklist-attr-filter-help": "Filter nach Metadaten im Format Schlüssel:Wert, z.B. Titel:Handbuch",
 	"bs-bookshelf-tag-bookmeta-description": "Tag, um beliebige Metadaten zu einem Buchartikel zu speichern. Diese werden in das Buch mit aufgenommen. Die Attribute dieses Tags müssen den Metadaten des Buchartikels entsprechen",
+	"bs-bookshelf-ve-bookmetainspector-title": "Buchmeta",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titel",
 	"bs-bookshelf-ve-bookmeta-attr-title-help": "Legt den Titel eines Buches fest",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Untertitel",
