@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amir1arch",
+			"Beginneruser",
 			"FarsiNevis",
 			"Jeeputer"
 		]
@@ -12,7 +13,7 @@
 	"bs-bookshelfui-editor-no-title-provided": "عنوان کتاب، معتبر نیست",
 	"bs-bookshelfui-editor-title": "ویرایشگر کتاب: $1",
 	"bs-bookshelfui-widget-editor-link-text": "این کتاب را ویرایش کنید",
-	"bs-bookshelfui-new-book-title": "ایجاد کتابی جدید",
+	"bs-bookshelfui-new-book-title": "ایجاد یک کتاب جدید",
 	"bs-bookshelfui-new-book-text": "عنوان کتاب",
 	"bs-bookshelfui-delete-book-title": "حذف کتاب",
 	"bs-bookshelfui-delete-book-text": "آیا از حذف این کتاب مطمئن هستید؟ برچسب‌های «bookshelf» به‌طور خودکار از ویکی‌صفحه‌های پیوند داده‌شده پاک <em>نخواهند شد</em>!",
@@ -79,13 +80,13 @@
 	"bs-bookshelfui-extjs-tooltip-copy": "رونوشت",
 	"apihelp-bs-bookshelf-page-collection-store-summary": "مجموعهٔ صفحه‌هایی برای انبوه‌افزودن به یک کتاب، فراهم می‌آورد.",
 	"apihelp-bs-bookshelf-mass-add-page-store-summary": "صفحه‌هایی برای انبوه‌افزودن به یک کتاب، فراهم می‌آورد.",
-	"right-bookshelfbookmanager-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[Special:BookshelfBookManager]]",
-	"action-bookshelfbookmanager-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[Special:BookshelfBookManager]]",
-	"right-bookshelfbookui-viewspecialpage": "دسترسی به ویژه‌صفحهٔ [[Special:BookshelfBookUI]]",
-	"action-bookshelfbookui-viewspecialpage": "دسترسی به ویژه‌صفحهٔ [[Special:BookshelfBookUI]]",
+	"right-bookshelfbookmanager-viewspecialpage": "دسترسی به صفحهٔ ویژه [[Special:BookshelfBookManager]]",
+	"action-bookshelfbookmanager-viewspecialpage": "دسترسی به صفحهٔ ویژه [[Special:BookshelfBookManager]]",
+	"right-bookshelfbookui-viewspecialpage": "دسترسی به صفحهٔ ویژه [[Special:BookshelfBookUI]]",
+	"action-bookshelfbookui-viewspecialpage": "دسترسی به صفحهٔ ویژه [[Special:BookshelfBookUI]]",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "تعداد نتایج برای نمایش",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "نوع مبدأ برای انبوه‌افزودن",
-	"prefs-bookshelfui": "ویژه‌صفحهٔ قفسه",
+	"prefs-bookshelfui": "صفحهٔ ویژه قفسه",
 	"bs-bookshelfui-prof-defaultview": "نمای پیش‌فرض",
 	"bs-bookshelfui-prof-defaultview-images": "تصویرها",
 	"bs-bookshelfui-chapterpager-previous": "قبلی",
