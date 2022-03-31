@@ -74,6 +74,7 @@
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtro",
 	"bs-bookshelf-ve-booklist-attr-filter-help": "Filtrar per metadatos in le formato clave:valor, p.ex. titulo:manual",
 	"bs-bookshelf-tag-bookmeta-description": "Etiquetta pro salveguardar varie metadatos sur paginas de libro. Istes es includite in le libro. Le attributos de iste etiquetta debe esser correlate con le metadatos del articulo de libro.",
+	"bs-bookshelf-ve-bookmetainspector-title": "Bookmeta",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titulo",
 	"bs-bookshelf-ve-bookmeta-attr-title-help": "Defini le titulo del libro",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Subtitulo",
