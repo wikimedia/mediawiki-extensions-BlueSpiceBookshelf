@@ -14,7 +14,8 @@
 			"Rodney Araujo",
 			"Warming Hearth",
 			"Whovian Biologist",
-			"TehFrog"
+			"TehFrog",
+			"DiegoAmbrocio"
 		]
 	},
 	"bs-bookshelf-extension-description": "Habilita BlueSpice para controlar y exportar colecciones jerárquicas de artículos.",
@@ -82,23 +83,23 @@
 	"bs-bookshelf-actionmenuentry-addtobook": "Añadir al libro",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "Mostrar punto de entrada \"Estantería\"",
 	"bs-bookshelf-config-mainlinks-bookshelf-help": "Mostrar el enlace punto de entrada \"Estantería\" en la navegación de la izquierda",
-	"bs-bookshelf-tag-booklist-description": "Genera listas de páginas del namespace \"libro\" y puede ser filtrado. La indicación del filtro ist obligatorio",
+	"bs-bookshelf-tag-booklist-description": "Genera listas de páginas del espacio de nombres \"libro\" y puede ser filtrado. La indicación del filtro es obligatoria",
 	"bs-bookshelf-ve-booklistinspector-title": "Lista de libros",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtro",
-	"bs-bookshelf-ve-booklist-attr-filter-help": "Filtro por metadata en la llave de formato:valor, p. ej. título:manual",
-	"bs-bookshelf-tag-bookmeta-description": "Etiqueta para salvar varios meta dato encima páginas de libro. Estos están incluidos en el libro. Los atributos de esta etiqueta tienen que correlate con el meta dato de la página de libro",
+	"bs-bookshelf-ve-booklist-attr-filter-help": "Filtrar por metadatos en el formato clave:valor, por ejemplo, título:manual",
+	"bs-bookshelf-tag-bookmeta-description": "Etiqueta para guardar varios metadatos en las páginas del libro. Estos se incluyen en el libro. Los atributos de esta etiqueta tienen que correlacionarse con los metadatos de la página del libro",
 	"bs-bookshelf-ve-bookmetainspector-title": "Bookmeta",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Título",
 	"bs-bookshelf-ve-bookmeta-attr-title-help": "Establece el título del libro",
-	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Subtitle",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Subtítulo",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Establece el subtítulo del libro",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autor",
-	"bs-bookshelf-ve-bookmeta-attr-author-help": "Conjuntos el autor del libro",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Establece el autor del libro",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versión",
-	"bs-bookshelf-ve-bookmeta-attr-version-help": "Conjuntos la versión del libro",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Establece la versión del libro",
 	"bs-bookshelf-tag-bookshelf-box-desc": "Inserta la navegación de capítulos de un libro en una página que no forma parte de un libro. La numeración es automáticamente creada según la tabla de contenidos",
-	"bs-bookshelf-ve-bookshelfinspector-title": "Bookshelf",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Estantería",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Define a qué libro pertenecen las páginas",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Añade números de capítulo del libro para someter de contenidos y todos los  titulares en la página"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Añade los números de los capítulos del libro al índice y a todos los titulares de la página"
 }
