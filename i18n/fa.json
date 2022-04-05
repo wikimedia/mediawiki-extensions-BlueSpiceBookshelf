@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Beginneruser",
 			"FarsiNevis",
 			"Jeeputer",
 			"LordProfo"
@@ -31,7 +32,7 @@
 	"bs-bookshelf-grouping-template-type-user_book": "کتاب‌های من",
 	"bs-bookshelf-action-editbook": "ویرایش مبدأ",
 	"bs-bookshelf-action-editbook-create": "ویرایش مبدأ",
-	"bs-bookshelf-action-export-book": "برون‌سپاری کتاب",
+	"bs-bookshelf-action-export-book": "برون‌بری کتاب",
 	"bs-bookshelf-edit-title": "در حال ویرایش $1",
 	"bs-bookshelf-error-invalid-type": "نوع مشخص‌شده برای کتاب نامعتبر است",
 	"bs-bookshelf-error-type-title-mismatch": "عنوان ارائه‌شده با نوع مشخص‌شده برای کتاب مطابق نیست",
