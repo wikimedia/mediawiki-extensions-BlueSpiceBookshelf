@@ -7,17 +7,16 @@ use MWException;
 use ParserOptions;
 use ParserOutput;
 use Title;
-use WikitextContent;
+use TextContent;
 
-class BookContent extends WikitextContent {
+class BookContent extends TextContent {
 	/**
 	 * @param string $text
 	 * @param string $model_id
 	 * @throws MWException
 	 */
 	public function __construct( $text, $model_id = 'book' ) {
-		parent::__construct( $text );
-		$this->model_id = $model_id;
+		parent::__construct( $text, $model_id );
 	}
 
 	/**
@@ -30,6 +29,10 @@ class BookContent extends WikitextContent {
 	protected function fillParserOutput(
 		Title $title, $revId, ParserOptions $options, $generateHtml, ParserOutput &$output
 	) {
+		// parse just to get links etc into the database.
+		global $wgParser;
+		$output = $wgParser->parse( $this->getNativeData(), $title, $options, true, true, $revId );
+
 		try {
 			$bookEditData = BookEditData::newFromTitleAndRequest(
 				$title, new \WebRequest()

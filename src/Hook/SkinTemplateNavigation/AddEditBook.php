@@ -30,10 +30,10 @@ class AddEditBook extends SkinTemplateNavigation {
 	 */
 	protected function doProcess() {
 		$this->links['edit']['edit'] = [
-			'text' =>  $this->msg( 'edit' )->text(),
+			'text' => $this->msg( 'edit' )->text(),
 			'href' => $this->sktemplate->getTitle()->getLocalURL( [
 				'action' => 'editbook',
-			]),
+			] ),
 			'class' => false,
 			'id' => 'edit-book'
 		];
