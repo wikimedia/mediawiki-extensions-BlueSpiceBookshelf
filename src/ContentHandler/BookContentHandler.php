@@ -5,14 +5,14 @@ namespace BlueSpice\Bookshelf\ContentHandler;
 use BlueSpice\Bookshelf\Action\BookEditAction;
 use BlueSpice\Bookshelf\Action\BookEditSourceAction;
 use BlueSpice\Bookshelf\Content\BookContent;
-use WikitextContentHandler;
+use TextContentHandler;
 
-class BookContentHandler extends WikitextContentHandler {
+class BookContentHandler extends TextContentHandler {
 	/**
 	 * @param string $modelId
 	 */
 	public function __construct( $modelId = 'book' ) {
-		parent::__construct( $modelId );
+		parent::__construct( $modelId, [ CONTENT_FORMAT_TEXT ] );
 	}
 
 	/**
