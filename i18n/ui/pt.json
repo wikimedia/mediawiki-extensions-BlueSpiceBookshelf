@@ -63,6 +63,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "Livros Gerais",
 	"bs-bookshelfui-flyout-title": "Lista de livros",
 	"bs-bookshelfui-flyout-intro": "Aqui pode ver todos os livros disponíveis. Para adicionar um livro novo, vá ao [[Special:Bookmanager|gestor de livros]].",
+	"bs-bookshelfui-intro": "Aqui pode ver todos os livros disponíveis. Para adicionar um livro novo, vá ao [[Special:Bookmanager|gestor de livros]].",
 	"bs-bookshelfui-book-title-link-edit": "Editar livro",
 	"bs-bookshelfui-book-title-link-edit-text": "Editar livro",
 	"bs-bookshelfui-export-book-text": "Aguarde enquanto o livro está a ser criado.",
@@ -93,5 +94,9 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Grelha",
 	"bs-bookshelfui-prof-defaultview-images": "Imagens",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
-	"bs-bookshelfui-chapterpager-next": "Seguinte"
+	"bs-bookshelfui-chapterpager-next": "Seguinte",
+	"bs-bookshelfui-panel-navigation-text": "Para navegação do livro",
+	"bs-bookshelfui-panel-navigation-title": "Voltar à navegação do livro",
+	"bs-bookshelfui-panel-navigation-aria-label": "Para navegação do livro",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navegação do livro em estrutura de árvore"
 }
