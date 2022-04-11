@@ -17,7 +17,8 @@
 			"沈澄心",
 			"落花有意12138",
 			"Wzl19371",
-			"500000000006城"
+			"500000000006城",
+			"StarrySky"
 		]
 	},
 	"bs-bookshelf-extension-description": "使BlueSpice能够管理和导出层次化的文章集合。",
@@ -85,6 +86,7 @@
 	"bs-bookshelf-actionmenuentry-addtobook": "添加到书籍",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "显示「书柜」入口",
 	"bs-bookshelf-config-mainlinks-bookshelf-help": "在左侧导航中显示入口点“书架”链接",
+	"bs-bookshelf-tag-booklist-description": "从命名空间\"book\"生成文章列表，并可以进行筛选。过滤器的指示是强制性的。",
 	"bs-bookshelf-ve-booklistinspector-title": "书单",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "过滤器",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "标题",
