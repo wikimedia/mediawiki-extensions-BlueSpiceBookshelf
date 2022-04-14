@@ -46,7 +46,7 @@
 	"bs-bookshelfui-confirm-delete-title": "حذف فصل",
 	"bs-bookshelfui-confirm-delete-text": "آیا واقعاً می‌خواهید فصل انتخاب‌شده را حذف کنید؟ همهٔ بخش‌های آن هم حذف خواهند شد.",
 	"bs-bookshelfui-override-tag-title": "تغییر پیوندهای ویکی‌صفحه",
-	"bs-bookshelfui-override-tag-text": "آیا می‌خواهید به پیوندهای درون ویکی‌صفحه (<code>&lt;bs:bookshelf /&gt;</code>) بیفزایید یا آن را روزآمد کنید؟ نسخه‌ای جدید از ویکی‌صفحه ایجاد خواهد شد.",
+	"bs-bookshelfui-override-tag-text": "آیا می‌خواهید به پیوندهای درون ویکی‌صفحه (<code>&lt;bs:bookshelf /&gt;</code>) بیفزایید یا آن را به‌روزرسانی کنید؟ نسخه‌ای جدید از ویکی‌صفحه ایجاد خواهد شد.",
 	"bs-bookshelfui-nothingtoexport-text": "انتخاب‌تان تهی است",
 	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|یک کتاب|$1 کتاب}})",
 	"bs-bookshelfui-book-type": "نوع کتاب",
