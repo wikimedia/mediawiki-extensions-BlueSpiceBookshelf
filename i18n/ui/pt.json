@@ -99,5 +99,10 @@
 	"right-bookshelf-viewspecialpage": "Aceder à página especial [[Special:Bookshelf|Especial:Estante]]",
 	"action-bookshelf-viewspecialpage": "aceder à pagina especial [[Special:Bookshelf|Especial:Estante]]",
 	"bs-bookshelfui-chapterpager-previous": "Anterior",
-	"bs-bookshelfui-chapterpager-next": "Seguinte"
+	"bs-bookshelfui-chapterpager-next": "Seguinte",
+	"bs-bookshelfui-intro": "Aqui pode ver todos os livros disponíveis. Para adicionar um livro novo, vá ao [[Special:Bookmanager|gestor de livros]].",
+	"bs-bookshelfui-panel-navigation-text": "Para navegação do livro",
+	"bs-bookshelfui-panel-navigation-title": "Voltar à navegação do livro",
+	"bs-bookshelfui-panel-navigation-aria-label": "Para navegação do livro",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navegação do livro em estrutura de árvore"
 }
