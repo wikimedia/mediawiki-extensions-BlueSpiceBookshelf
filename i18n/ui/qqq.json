@@ -68,7 +68,7 @@
 	"bs-bookshelfui-book-title-link-edit": "Title for the link that allows editing the book.\n{{Identical|Edit book}}",
 	"bs-bookshelfui-book-title-link-edit-text": "Text for the link that allows editing the book.\n{{Identical|Edit book}}",
 	"bs-bookshelfui-export-book-text": "Info text while the book is beeing exported.\n{{Identical|Please wait while book is being created.}}",
-	"bs-bookshelfui-bookmanager-deletion-reason": "Edit summary for the deletion of a page triggerd on the [[Special:BookshelfBookUI]] special page.\n{{Identical|Deleted by BookManager}}",
+	"bs-bookshelfui-bookmanager-deletion-reason": "Edit summary for the deletion of a page triggered on the [[Special:BookshelfBookUI]] special page.\n{{Identical|Deleted by BookManager}}",
 	"bs-bookshelfui-bookmanager-deletion-error-pageid": "Error text when the page, that was going to be deleted is not valid",
 	"bs-bookshelfui-bookmanager-deletion-error-permission": "Error text when the user, that was going to delete the page does not have sufficient permissions to perform this action.",
 	"bs-bookshelfui-bookmanager-deletion-error-unkown": "Generic error text, when an unknown error has occured while deleting the page",
