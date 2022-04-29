@@ -109,7 +109,7 @@ class AddAttachments {
 			$oFileAnchorElement->setAttribute( 'data-fs-embed-file', 'true' );
 			// https://otrs.hallowelt.biz/otrs/index.pl?Action=AgentTicketZoom;TicketID=5036#30864
 			$oFileAnchorElement->setAttribute( 'href', 'attachments/' . $sHrefFilename );
-			// Neccessary for org.xhtmlrenderer.pdf.ITextReplacedElementFactory.
+			// Necessary for org.xhtmlrenderer.pdf.ITextReplacedElementFactory.
 			// Otherwise not replaceable
 			$sStyle = $oFileAnchorElement->getAttribute( 'style' );
 			$oFileAnchorElement->setAttribute( 'style', 'display:inline-block;' . $sStyle );
