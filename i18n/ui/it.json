@@ -5,6 +5,7 @@
 			"Beta16",
 			"Dansita",
 			"Gianfranco",
+			"GpieroMW",
 			"Tizven"
 		]
 	},
@@ -60,6 +61,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "Libri generali",
 	"bs-bookshelfui-flyout-title": "Elenco di libri",
 	"bs-bookshelfui-flyout-intro": "Qui puoi vedere tutti i libri disponibili. Per aggiungere un nuovo libro, vai al [[Special:Bookmanager|gestore di libri]].",
+	"bs-bookshelfui-intro": "Qui puoi vedere tutti i libri disponibili. Per aggiungere un nuovo libro, vai al [[Special:Bookmanager|gestore di libri]].",
 	"bs-bookshelfui-book-title-link-edit": "Modifica libro",
 	"bs-bookshelfui-book-title-link-edit-text": "Modifica libro",
 	"bs-bookshelfui-export-book-text": "Attendi per favore mentre il libro viene creato.",
@@ -76,6 +78,8 @@
 	"bs-bookshelfui-bookmetatag-department": "Dipartimento",
 	"bs-bookshelfui-bookmetatag-version": "Versione",
 	"bs-bookshelfui-extjs-tooltip-copy": "Copia",
+	"apihelp-bs-bookshelf-page-collection-store-summary": "Fornisce una collezione di pagine che può essere aggiunta in blocco a un libro.",
+	"apihelp-bs-bookshelf-mass-add-page-store-summary": "Fornisce pagine che possono essere aggiunte in blocco a un libro.",
 	"right-bookshelfbookmanager-viewspecialpage": "Accede alla pagina speciale [[Special:BookshelfBookManager]]",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Numero di risultati da restituire",
 	"prefs-bookshelfui": "Pagina speciale scaffale",
