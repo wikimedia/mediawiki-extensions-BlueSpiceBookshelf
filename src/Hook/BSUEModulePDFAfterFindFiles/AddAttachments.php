@@ -87,7 +87,7 @@ class AddAttachments {
 				 * resource. But xhtmlrenderes user agent needs URI
 				 * encoded spaces (%20) to get the data. But thos would
 				 * also show up in the file name. A better solution would
-				 * be to have a seperate data-fs-embed-file-name attribute
+				 * be to have a separate data-fs-embed-file-name attribute
 				 * for unencoded filename
 				 */
 				);

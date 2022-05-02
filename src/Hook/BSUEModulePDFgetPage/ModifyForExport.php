@@ -70,22 +70,22 @@ class ModifyForExport extends BSUEModulePDFgetPage {
 				if ( $oHeadlineElement->firstChild === null ) { continue;
 				}
 
-				$sSeperator = '.';
+				$sSeparator = '.';
 				$sCssClass = $oHeadlineElement->getAttribute( 'class' );
 				if ( in_array( $sCssClass, [ 'bs-ue-document-title', 'firstHeading' ] ) ) {
-					$sSeperator = ' ';
+					$sSeparator = ' ';
 				}
-				if ( $sSeperator === '.' && $bUserNumberHeadings === false ) {
+				if ( $sSeparator === '.' && $bUserNumberHeadings === false ) {
 					// No numberation for internal headings
 					continue;
 				}
 
-				if ( $sSeperator === '.' && $bHasChildren === true ) {
+				if ( $sSeparator === '.' && $bHasChildren === true ) {
 					// Avoid number collision with child node articles
 					continue;
 				}
 
-				$numNode = $this->page['dom']->createElement( 'span', $sNumber . $sSeperator );
+				$numNode = $this->page['dom']->createElement( 'span', $sNumber . $sSeparator );
 				$numNode->setAttribute( 'class', 'bs-chapter-number' );
 
 				$oHeadlineElement->insertBefore(
