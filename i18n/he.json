@@ -29,6 +29,7 @@
 	"bs-bookshelf-action-editbook": "לערוך מקור",
 	"bs-bookshelf-action-editbook-create": "לערוך מקור",
 	"bs-bookshelf-action-export-book": "לייצא ספר",
+	"bs-bookshelf-edit-title": "עריכת \"$1\"",
 	"bs-bookshelf-error-invalid-type": "סוג הספר שצוין שגוי",
 	"bs-bookshelf-editor-no-title-provided": "לא סופקה כותרת תקנית לספר",
 	"bs-bookshelf-book-grid-title": "ספרים",
