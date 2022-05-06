@@ -14,8 +14,8 @@
 		]
 	},
 	"bs-bookshelf-tagerror-no-attribute-given": "Non sono stati forniti attribuiti! Utilizzare <strong>src</strong> per configurare l'indice.",
-	"bs-bookshelf-tagerror-article-title-not-valid": "La voce di origine fornita (&quot;$1&quot;) non esiste.",
-	"bs-bookshelf-tagerror-article-content-not-valid": "La voce di origine fornita («$1») contiene dati non validi.",
+	"bs-bookshelf-tagerror-article-title-not-valid": "L'articolo di origine fornito (&quot;$1&quot;) non esiste.",
+	"bs-bookshelf-tagerror-article-content-not-valid": "L'articolo di origine fornito («$1») contiene dati non validi.",
 	"bs-bookshelf-positive-integer-validation-not-approved": "Sono consentiti solo interi positivi.",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Per favore, usa <i>left</i> o <i>right</i>.",
 	"bs-bookshelf-specialpage-title": "Libri",
