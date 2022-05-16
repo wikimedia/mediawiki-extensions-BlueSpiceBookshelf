@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"YaronSh",
 			"ישראל קלר",
 			"שוקו מוקה"
@@ -14,6 +15,7 @@
 	"bs-bookshelfui-new-book-text": "כותרת הספר",
 	"bs-bookshelfui-delete-book-title": "למחוק ספר",
 	"bs-bookshelfui-export-selection": "יצוא הבחירה",
+	"bs-bookshelfui-edit-source": "עריכת דף הוויקי המקורי",
 	"bs-bookshelfui-bookui-savingprogress-title": "ספר נשמר",
 	"bs-bookshelfui-bookui-savingprogress-text": "נא להמתין עד לשמירת הספר לשרת",
 	"bs-bookshelfui-manager-title": "כותרת",
@@ -22,6 +24,7 @@
 	"bs-bookshelfui-manager-deletionsuccess-title": "המחיקה הצליחה!",
 	"bs-bookshelfui-manager-deletionsuccess-text": "הספר נמחק.",
 	"bs-bookshelfui-manager-deletionfailure-title": "שגיאה במחיקה.",
+	"bs-bookshelfui-ctxmnu-edit": "עריכת כותרת תצוגה",
 	"bs-bookshelfui-ctxmnu-delete": "למחוק מהספר",
 	"bs-bookshelfui-ctxmnu-tag-edit": "לערוך הגדרות",
 	"bs-bookshelfui-dlg-metadata-title": "נתוני על",
