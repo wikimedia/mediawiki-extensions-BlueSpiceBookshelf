@@ -66,7 +66,7 @@ class PageHierarchyProviderTest extends MediaWikiIntegrationTestCase {
 		$this->assertObjectHasAttribute( 'articleDisplayTitle', $oTreeNode );
 
 		$this->assertObjectHasAttribute( 'children', $oTreeNode );
-		$this->assertTrue( is_array( $oTreeNode->children ) );
+		$this->assertIsArray( $oTreeNode->children );
 
 		foreach ( $oTreeNode->children as $oChildNode ) {
 			$this->recursiveCheckTreeNode( $oChildNode );
