@@ -11,7 +11,8 @@
 			"Megakott",
 			"Merrahtar",
 			"Okras",
-			"Pacha Tchernof"
+			"Pacha Tchernof",
+			"WindEwriX"
 		]
 	},
 	"bookshelfbookui": "Редактор книг",
@@ -74,6 +75,7 @@
 	"bs-bookshelfui-bookmetatag-department": "Отдел",
 	"bs-bookshelfui-bookmetatag-version": "Версия",
 	"bs-bookshelfui-extjs-tooltip-copy": "Копировать",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Количество возвращаемых результатов",
 	"bs-bookshelfui-prof-defaultview": "Вид по умолчанию",
 	"bs-bookshelfui-prof-defaultview-grid": "Сетка",
 	"bs-bookshelfui-prof-defaultview-images": "Изображения",

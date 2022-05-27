@@ -13,9 +13,12 @@
 			"Okras",
 			"Pacha Tchernof",
 			"Tanzun",
+			"WindEwriX",
 			"Арсен Асхат"
 		]
 	},
+	"bs-bookshelf-tagerror-article-title-not-valid": "Указанная исходная статья («$1») не существует.",
+	"bs-bookshelf-tagerror-article-content-not-valid": "Указанная исходная статья («$1») содержит некорректные данные.",
 	"bs-bookshelf-positive-integer-validation-not-approved": "Разрешены только положительные целые значения.",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Пожалуйста, используйте <i>left</i> или <i>right</i>.",
 	"bs-bookshelf-specialpage-title": "Книги",
@@ -59,6 +62,7 @@
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Добавьте пейджер глав внизу страницы.",
 	"bs-bookshelf-pref-supressbookns-help": "Пространство имён страниц скрыто в выводе PDF.",
 	"bs-bookshelf-warning": "Исключение PHP: $1",
+	"bs-bookshelf-actionmenuentry-addtobook": "Добавить в книгу",
 	"bs-bookshelf-tag-booklist-description": "Создаёт списки страниц из пространства имён «книга» и может быть отфильтрован. Индикация фильтра обязательна",
 	"bs-bookshelf-ve-booklistinspector-title": "Буклист",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Фильтр",
