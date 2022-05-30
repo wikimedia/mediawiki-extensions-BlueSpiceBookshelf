@@ -12,9 +12,13 @@
 			"Okras",
 			"Pacha Tchernof",
 			"Tanzun",
-			"Арсен Асхат"
+			"Арсен Асхат",
+			"Ice bulldog",
+			"WindEwriX"
 		]
 	},
+	"bs-bookshelf-tagerror-article-title-not-valid": "Указанная исходная статья («$1») не существует.",
+	"bs-bookshelf-tagerror-article-content-not-valid": "Указанная исходная статья («$1») содержит некорректные данные.",
 	"bs-bookshelf-positive-integer-validation-not-approved": "Разрешены только положительные целые значения.",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Пожалуйста, используйте <i>left</i> или <i>right</i>.",
 	"bs-bookshelf-specialpage-title": "Книги",
@@ -58,9 +62,7 @@
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Добавьте пейджер глав внизу страницы.",
 	"bs-bookshelf-pref-supressbookns-help": "Пространство имён страниц скрыто в выводе PDF.",
 	"bs-bookshelf-warning": "Исключение PHP: $1",
-	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Подзаголовок",
-	"bs-bookshelf-ve-bookshelfinspector-title": "Книжная полка",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга",
+	"bs-bookshelf-actionmenuentry-addtobook": "Добавить в книгу",
 	"bs-bookshelf-tag-booklist-description": "Создаёт списки страниц из пространства имён «книга» и может быть отфильтрован. Индикация фильтра обязательна",
 	"bs-bookshelf-ve-booklistinspector-title": "Буклист",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Фильтр",
@@ -68,11 +70,14 @@
 	"bs-bookshelf-tag-bookmeta-description": "Тег для сохранения различных метаданных на страницах книги. Они включены в книгу. Атрибуты этого тега должны коррелировать с метаданными страницы книги.",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Название",
 	"bs-bookshelf-ve-bookmeta-attr-title-help": "Определяет название книги",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Подзаголовок",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Определяет подзаголовок книги",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Автор",
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "Определяет автора книги",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Версия",
 	"bs-bookshelf-tag-bookshelf-box-desc": "Размещает навигацию по главам книги на странице, которая не является частью книги. Нумерация создается автоматически в соответствии с оглавлением",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Книжная полка",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Определяет, какая книга включает страницы",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Пронумеруйте оглавление книги и все заголовки на странице"
 }
