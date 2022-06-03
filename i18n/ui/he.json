@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"YaronSh",
 			"ישראל קלר",
 			"שוקו מוקה"
@@ -67,5 +68,7 @@
 	"bs-bookshelfui-export-selection": "יצוא הבחירה",
 	"bs-bookshelfui-prof-defaultview-grid": "רשת",
 	"bs-bookshelfui-bookmetatag-author1": "כותב 1",
-	"bs-bookshelfui-bookmetatag-author2": "כותב 2"
+	"bs-bookshelfui-bookmetatag-author2": "כותב 2",
+	"bs-bookshelfui-edit-source": "עריכת דף הוויקי המקורי",
+	"bs-bookshelfui-ctxmnu-edit": "עריכת כותרת תצוגה"
 }

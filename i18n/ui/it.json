@@ -5,6 +5,7 @@
 			"Beta16",
 			"Dansita",
 			"Gianfranco",
+			"GpieroMW",
 			"Tizven"
 		]
 	},
@@ -87,5 +88,9 @@
 	"bs-bookshelfui-bookmetatag-department": "Dipartimento",
 	"bs-bookshelfui-chapterpager-previous": "Precedente",
 	"bs-bookshelfui-chapterpager-next": "Successivo",
-	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Un libro|$1 libri}})"
+	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Un libro|$1 libri}})",
+	"bs-bookshelfui-extension-description": "Abilita BlueSpice a gestire raccolte gerarchiche di pagine wiki.",
+	"bs-bookshelfui-intro": "Qui puoi vedere tutti i libri disponibili. Per aggiungere un nuovo libro, vai al [[Special:Bookmanager|gestore di libri]].",
+	"apihelp-bs-bookshelf-page-collection-store-summary": "Fornisce una collezione di pagine che può essere aggiunta in blocco a un libro.",
+	"apihelp-bs-bookshelf-mass-add-page-store-summary": "Fornisce pagine che possono essere aggiunte in blocco a un libro."
 }

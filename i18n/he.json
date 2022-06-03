@@ -54,5 +54,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "הגדרת הספר שהדפים שייכים אליו",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "הוספת מספרי הפרקים של הספר לתוכן העניינים ולכל הכותרות בעמוד",
 	"bs-bookshelf-positive-integer-validation-not-approved": "ניתן להשתמש רק במספרים שלמים חיוביים.",
-	"bs-bookshelf-actionmenuentry-addtobook": "להוסיף לספר"
+	"bs-bookshelf-actionmenuentry-addtobook": "להוסיף לספר",
+	"bs-bookshelf-edit-title": "עריכת \"$1\""
 }

@@ -5,13 +5,15 @@
 			"DDPAT",
 			"Diman Russkov",
 			"Facenapalm",
+			"Gulka.nik",
 			"Ice bulldog",
 			"Kareyac",
 			"Meerrahtar",
 			"Megakott",
 			"Merrahtar",
 			"Okras",
-			"Pacha Tchernof"
+			"Pacha Tchernof",
+			"WindEwriX"
 		]
 	},
 	"bs-bookshelfui-new-book-text": "Заголовок книги",
@@ -79,5 +81,21 @@
 	"bs-bookshelfui-nothingtoexport-text": "Ваш выбор пуст",
 	"bs-bookshelfui-bookmanager-deletion-reason": "Удалено BookManager",
 	"bs-bookshelfui-bookmetatag-department": "Отдел",
-	"bs-bookshelfui-chapterpager-previous": "Предыдущая"
+	"bs-bookshelfui-chapterpager-previous": "Предыдущая",
+	"bs-bookshelfui-extension-description": "Позволяет BlueSpice управлять иерархическими коллекциями страниц википедии.",
+	"bs-bookshelfui-delete-book-text": "Вы действительно хотите удалить эту книгу? Теги \"Книжная полка\" <em>не</em> будут автоматически удаляться со связанных страниц википедии!",
+	"bs-bookshelfui-bookui-savingprogress-text": "Пожалуйста, подождите, пока книга не будет сохранена на сервере",
+	"bs-bookshelfui-manager-deletionfailure-text": "При попытке удалить книгу произошла следующая ошибка: $1",
+	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "Все страницы книги будут скопированы в это пространство имен. Ссылки будут адаптированы.",
+	"bs-bookshelfui-confirm-delete-text": "Вы действительно хотите удалить выбранную главу? Подглавы тоже будут удалены.",
+	"bs-bookshelfui-intro": "Здесь вы можете увидеть все доступные книги. Чтобы добавить новую книгу, перейдите в [[Special:Bookmanager|управление книгами]].",
+	"bs-bookshelfui-bookmanager-deletion-error-permission": "У вас недостаточно прав для выполнения этого действия.",
+	"bs-bookshelfui-bookmanager-deletion-error-unkown": "Произошла неизвестная ошибка. Пожалуйста, свяжитесь с администратором.",
+	"right-bookshelfbookmanager-viewspecialpage": "Доступ к специальной странице [[Special:BookshelfBookManager]]",
+	"action-bookshelfbookmanager-viewspecialpage": "доступ к специальной странице [[Special:BookshelfBookManager]]",
+	"right-bookshelfbookui-viewspecialpage": "Доступ к специальной странице [[Special:BookshelfBookUI]]",
+	"action-bookshelfbookui-viewspecialpage": "доступ к специальной странице [[Special:BookshelfBookUI]]",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Количество возвращаемых результатов",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Главное значение, на основе которого следует вернуть страницы",
+	"prefs-bookshelfui": "Специальная страница книжной полки"
 }

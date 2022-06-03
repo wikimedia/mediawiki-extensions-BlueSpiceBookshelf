@@ -5,6 +5,7 @@
 			"Beta16",
 			"Dansita",
 			"Gianfranco",
+			"GpieroMW",
 			"Luca.favorido",
 			"Stefano",
 			"TheRukk",
@@ -56,5 +57,12 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versione",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Imposta la versione del libro",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Scaffale",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro",
+	"bs-bookshelf-tagerror-no-attribute-given": "Non sono stati forniti attribuiti! Utilizzare <strong>src</strong> per configurare l'indice.",
+	"bs-bookshelf-tagerror-article-title-not-valid": "L'articolo di origine fornito (&quot;$1&quot;) non esiste.",
+	"bs-bookshelf-tagerror-article-content-not-valid": "L'articolo di origine fornito («$1») contiene dati non validi.",
+	"bs-bookshelf-error-type-title-mismatch": "Il titolo fornito non coincide con il tipo di libro dato",
+	"right-bookshelf-viewspecialpage": "Accede alla pagina speciale [[Special:Bookshelf]]",
+	"action-bookshelf-viewspecialpage": "accedere alla pagina speciale [[Special:Bookshelf]]",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definisce a quale libro appartengono le pagine"
 }
