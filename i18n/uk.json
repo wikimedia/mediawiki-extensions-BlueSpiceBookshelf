@@ -2,10 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"DDPAT",
-			"Piramidion",
-			"Ата",
 			"Ice bulldog",
-			"Samflint"
+			"Piramidion",
+			"Samflint",
+			"Ата"
 		]
 	},
 	"bs-bookshelf-extension-description": "Вмикає BlueSpice для керування й експорту ієрархічних колекцій статей.",

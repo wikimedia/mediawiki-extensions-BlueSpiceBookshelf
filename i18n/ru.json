@@ -5,6 +5,8 @@
 			"DDPAT",
 			"Daniel Mietchen",
 			"Facenapalm",
+			"Gulka.nik",
+			"Ice bulldog",
 			"Kareyac",
 			"Meerrahtar",
 			"Megakott",
@@ -12,9 +14,8 @@
 			"Okras",
 			"Pacha Tchernof",
 			"Tanzun",
-			"Арсен Асхат",
-			"Ice bulldog",
-			"WindEwriX"
+			"WindEwriX",
+			"Арсен Асхат"
 		]
 	},
 	"bs-bookshelf-tagerror-article-title-not-valid": "Указанная исходная статья («$1») не существует.",
@@ -79,5 +80,8 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Книжная полка",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Определяет, какая книга включает страницы",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Пронумеруйте оглавление книги и все заголовки на странице"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Пронумеруйте оглавление книги и все заголовки на странице",
+	"apihelp-bs-bookshelf-bookstore-param-book": "Указывает книгу, для которой должен быть предоставлен список глав.",
+	"bs-bookshelf-ve-bookmetainspector-title": "Метаданные книги",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Установить версию книги"
 }
