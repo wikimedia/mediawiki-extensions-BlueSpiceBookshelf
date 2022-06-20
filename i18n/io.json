@@ -6,5 +6,6 @@
 	},
 	"bs-bookshelf-action-editbook": "Redaktar fonto",
 	"bs-bookshelf-book-grid-title": "Libri",
-	"bs-bookshelf-ga-manager-label": "Libri"
+	"bs-bookshelf-ga-manager-label": "Libri",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titulo"
 }
