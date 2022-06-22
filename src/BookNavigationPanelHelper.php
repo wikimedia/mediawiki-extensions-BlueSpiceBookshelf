@@ -168,18 +168,21 @@ class BookNavigationPanelHelper {
 	/**
 	 *
 	 * @param BSTreeNode $node
-	 * @return string
+	 * @return array
 	 */
 	protected function makePlainTextNodeText( $node ) {
-		return \Html::element(
-			'span',
-			[
-				'level' => $node->articleNumber,
-				'name' => $node->articleNumber,
-				'title' => $node->text
-			],
-			$node->text
-		);
+		return [
+			\Html::element(
+				'span',
+				[
+					'level' => $node->articleNumber,
+					'name' => $node->articleNumber,
+					'title' => $node->text
+				],
+				$node->text
+			),
+			false
+		];
 	}
 
 	/**
