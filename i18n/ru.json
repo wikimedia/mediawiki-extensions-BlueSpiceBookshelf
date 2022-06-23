@@ -33,6 +33,7 @@
 	"bs-bookshelf-add-to-book-label-book": "Книга",
 	"bs-bookshelf-add-to-book-label-alias": "Псевдоним",
 	"bs-bookshelf-add-to-book-added": "Страница добавлена в книгу «$1».",
+	"apihelp-bs-bookshelf-bookstore-param-node": "Указывает узел, для которого должен быть предоставлен список подразделов.",
 	"apihelp-bs-bookshelf-bookstore-param-book": "Указывает книгу, для которой должен быть предоставлен список глав.",
 	"bs-bookshelf-setting-path-feature": "Книга",
 	"bs-bookshelf-empty-selection": "Ничего не выбрано",
