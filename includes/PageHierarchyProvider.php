@@ -471,6 +471,7 @@ class PageHierarchyProvider {
 		// $sLinkList = null;
 		$sLinkList = $sBookMeta;
 		$util = MediaWikiServices::getInstance()->getService( 'BSUtilityFactory' );
+		$wikiPageFactory = MediaWikiServices::getInstance()->getWikiPageFactory();
 
 		foreach ( $arHierarchyArray as $key => $value ) {
 			// making the number to stars 3.2.1 -> ***; 1.4 -> **
@@ -495,7 +496,7 @@ class PageHierarchyProvider {
 				// next page load. This should already be done by
 				// 'BsCore::addTemplateLinkDependencyByText'
 				// in 'Bookshelf:onBookshelfTag' but there it doesn't work :(
-				WikiPage::factory( $oArticleTitle )->doPurge();
+				$wikiPageFactory->newFromTitle( $oArticleTitle )->doPurge();
 			}
 
 			$sLinkList .= $sStars . ' ' . $sLink . "\n";

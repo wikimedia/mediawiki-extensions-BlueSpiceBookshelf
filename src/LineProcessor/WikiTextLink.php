@@ -5,8 +5,8 @@ namespace BlueSpice\Bookshelf\LineProcessor;
 use BlueSpice\Bookshelf\ILineProcessor;
 use BlueSpice\Bookshelf\TreeNode;
 use Content;
+use MediaWiki\MediaWikiServices;
 use Title;
-use WikiPage;
 
 class WikiTextLink extends LineProcessorBase implements ILineProcessor {
 	/**
@@ -103,7 +103,7 @@ class WikiTextLink extends LineProcessorBase implements ILineProcessor {
 	protected function handleRedirect() {
 		$this->result['is-redirect'] = $this->title->isRedirect();
 		if ( $this->title->isRedirect() ) {
-			$wikiPage = WikiPage::factory( $this->title );
+			$wikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $this->title );
 			$content = $wikiPage->getContent();
 			if ( $content instanceof Content ) {
 				$tagetTitle = $content->getUltimateRedirectTarget();
