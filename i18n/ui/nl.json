@@ -4,7 +4,8 @@
 			"Mainframe98",
 			"McDutchie",
 			"Romaine",
-			"Rots61"
+			"Rots61",
+			"DiGro"
 		]
 	},
 	"bs-bookshelfui-extension-description": "Stelt BlueSpice in staat hiërarchische verzamelingen van wikipagina's te beheren.",
@@ -63,6 +64,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "Algemene boeken",
 	"bs-bookshelfui-flyout-title": "Boekenlijst",
 	"bs-bookshelfui-flyout-intro": "Hier ziet u alle beschikbare boeken. Om een nieuw boek toe te voegen gaat u naar de pagina [[Special:Bookmanager|boekbeheer]].",
+	"bs-bookshelfui-intro": "Hier ziet u alle beschikbare boeken. Ga naar de pagina [[Special:Bookmanager|boekbeheer]] om een nieuw boek toe te voegen.",
 	"bs-bookshelfui-book-title-link-edit": "Boek bewerken",
 	"bs-bookshelfui-book-title-link-edit-text": "Boek bewerken",
 	"bs-bookshelfui-export-book-text": "Even geduld, het boek wordt aangemaakt.",

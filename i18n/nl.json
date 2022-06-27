@@ -4,7 +4,8 @@
 			"Mainframe98",
 			"McDutchie",
 			"Nickthijssen1994",
-			"Romaine"
+			"Romaine",
+			"DiGro"
 		]
 	},
 	"bs-bookshelf-extension-description": "Stelt BlueSpice in staat hiërarchische collecties artikelen te beheren en te exporteren.",
@@ -70,8 +71,10 @@
 	"bs-bookshelf-pref-supressbookns-help": "De naamruimte van paginanamen is verborgen in de PDF-uitvoer.",
 	"bs-bookshelf-warning": "PHP-uitzondering: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Aan boek toevoegen",
+	"bs-bookshelf-tag-booklist-description": "Genereert lijsten met artikelen uit de naamruimte \"book\" en kan worden gefilterd. De aanduiding van het filter is verplicht.",
 	"bs-bookshelf-ve-booklistinspector-title": "Boekenlijst",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
+	"bs-bookshelf-ve-booklist-attr-filter-help": "Filter op metadata in de indeling sleutel:waarde, bijv. titel:handboek",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titel",
 	"bs-bookshelf-ve-bookmeta-attr-title-help": "Stelt de titel van het boek in",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Ondertitel",
