@@ -1,6 +1,8 @@
 <?php
 namespace BlueSpice\Bookshelf\MassAdd\Handler;
 
+use MediaWiki\MediaWikiServices;
+
 class PageCollection implements \BlueSpice\Bookshelf\MassAdd\IHandler {
 	/**
 	 * Name of page collection
@@ -23,7 +25,8 @@ class PageCollection implements \BlueSpice\Bookshelf\MassAdd\IHandler {
 			return [];
 		}
 
-		$pageCollectionWikiPage = \WikiPage::newFromID( $pageCollectionTitle->getArticleID() );
+		$pageCollectionWikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()
+			->newFromID( $pageCollectionTitle->getArticleID() );
 		$pageCollectionContent = $pageCollectionWikiPage->getContent();
 		$pageCollectionText = \ContentHandler::getContentText( $pageCollectionContent );
 

@@ -1,6 +1,7 @@
 <?php
 
 use BlueSpice\Api\Response\Standard;
+use MediaWiki\MediaWikiServices;
 
 class ApiBookshelfManage extends BSApiTasksBase {
 
@@ -55,7 +56,7 @@ class ApiBookshelfManage extends BSApiTasksBase {
 			return $oResult;
 		}
 
-		$oPage = WikiPage::factory( $oTitle );
+		$oPage = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $oTitle );
 		$error = '';
 		$oResult->success = $oPage->doDeleteArticleReal(
 			wfMessage( 'bs-bookshelfui-bookmanager-deletion-reason' )->text(),
