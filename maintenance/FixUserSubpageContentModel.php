@@ -111,5 +111,5 @@ class FixUserSubpageContentModel extends LoggedUpdateMaintenance {
 	}
 }
 
-$maintClass = "FixUserSubpageContentModel";
+$maintClass = FixUserSubpageContentModel::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
