@@ -43,7 +43,7 @@ Ext.define('BS.Bookshelf.dialog.AddMass', {
 		}
 
 		for(var i = 0; i < items.length; i++) {
-			items[i].addListener( 'select', function ( oSender, record ) {
+			items[i].addListener( 'change', function ( oSender, record ) {
 				this.btnOK.enable();
 			}, this );
 		}
