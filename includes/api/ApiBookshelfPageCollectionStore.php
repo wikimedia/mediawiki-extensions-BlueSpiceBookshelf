@@ -11,7 +11,8 @@ class ApiBookshelfPageCollectionStore extends BSApiExtJSStoreBase {
 		$aPages = [];
 		$dbr = $this->getDB();
 
-		$pageCollectionPrefix = wfMessage( 'bs-pagecollection-prefix' )->plain();
+		$pageCollectionPrefix = wfMessage( 'bs-pagecollection-prefix' )->inContentLanguage()->plain();
+		$pageCollectionPrefix = str_replace( ' ', '_', $pageCollectionPrefix );
 		$pageCollectionPrefix .= "/";
 
 		$res = $dbr->select(
