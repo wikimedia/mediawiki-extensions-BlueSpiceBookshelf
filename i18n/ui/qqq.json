@@ -5,7 +5,8 @@
 			"BaRaN6161 TURK",
 			"MuratTheTurkish",
 			"Patric Wirth",
-			"孟天皓"
+			"孟天皓",
+			"Verdy p"
 		]
 	},
 	"bs-bookshelfui-extension-description": "{{desc|name=BlueSpiceBookShelfUI}}",
@@ -20,7 +21,7 @@
 	"bs-bookshelfui-delete-book-text": "Text of the book deletion promt that asks the user if the user really wants to delete the book. It also should warn, that the \"bookshelf\" tag will not be removed automatically from the linked pages.",
 	"bs-bookshelfui-export-selection": "Label for the button that allows to export the current selection from a book.\n{{Identical|Export selection}}",
 	"bs-bookshelfui-save-and-modify": "Label for the button that saves the current book and adds the book navigaion to all including pages",
-	"bs-bookshelfui-edit-source": "Label for the button that opens the source page - the book is saved in - in edit mode.\n{{Identical|Edit source page}}",
+	"bs-bookshelfui-edit-source": "Label for the button that opens the source page - the book is saved in - in edit mode.\n{{Identical|Edit source}}",
 	"bs-bookshelfui-open-source": "Label for the button that opens the source page, the book is saved in.\n{{Identical|Show source wikipage}}",
 	"bs-bookshelfui-bookui-savingprogress-title": "Title of the progress promt that shows while the book is saved.\nSaving Book",
 	"bs-bookshelfui-bookui-savingprogress-text": "Text of the progress promt that shows while the book is saved.\nPlease wait until the book is saved to the server",
