@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"DiGro",
 			"Mainframe98",
 			"McDutchie",
 			"Nickthijssen1994",
@@ -84,5 +85,7 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Boekenplank",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Boek",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definieert tot welk boek de pagina's behoren",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Voeg hoofdstuknummers van het boek toe aan de inhoudsopgave en alle koppen op de pagina"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Voeg hoofdstuknummers van het boek toe aan de inhoudsopgave en alle koppen op de pagina",
+	"bs-bookshelf-tag-booklist-description": "Genereert lijsten met artikelen uit de naamruimte \"book\" en kan worden gefilterd. De aanduiding van het filter is verplicht.",
+	"bs-bookshelf-ve-booklist-attr-filter-help": "Filter op metadata in de indeling sleutel:waarde, bijv. titel:handboek"
 }

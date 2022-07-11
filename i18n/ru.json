@@ -83,5 +83,6 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Пронумеруйте оглавление книги и все заголовки на странице",
 	"apihelp-bs-bookshelf-bookstore-param-book": "Указывает книгу, для которой должен быть предоставлен список глав.",
 	"bs-bookshelf-ve-bookmetainspector-title": "Метаданные книги",
-	"bs-bookshelf-ve-bookmeta-attr-version-help": "Установить версию книги"
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Установить версию книги",
+	"apihelp-bs-bookshelf-bookstore-param-node": "Указывает узел, для которого должен быть предоставлен список подразделов."
 }

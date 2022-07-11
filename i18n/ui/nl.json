@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"DiGro",
 			"Mainframe98",
 			"McDutchie",
 			"Romaine",
@@ -97,5 +98,6 @@
 	"bs-bookshelfui-panel-navigation-text": "Naar boeknavigatie",
 	"bs-bookshelfui-panel-navigation-title": "Terug naar boeknavigatie",
 	"bs-bookshelfui-panel-navigation-aria-label": "Naar boeknavigatie",
-	"bs-bookshelfui-panel-navigation-aria-desc": "Boeknavigatie als boomstructuur"
+	"bs-bookshelfui-panel-navigation-aria-desc": "Boeknavigatie als boomstructuur",
+	"bs-bookshelfui-intro": "Hier ziet u alle beschikbare boeken. Ga naar de pagina [[Special:Bookmanager|boekbeheer]] om een nieuw boek toe te voegen."
 }
