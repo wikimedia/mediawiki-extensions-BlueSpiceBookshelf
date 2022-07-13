@@ -174,8 +174,12 @@
 		},
 		"ext.bluespice.bookshelf.addToBook": {
 			"scripts": [
-				"BS.Bookshelf/dialog/AddToBook.js",
 				"bluespice.bookshelf.addToBook.js"
+			]
+		},
+		"ext.bluespice.bookshelf.addToBook.implementation": {
+			"scripts": [
+				"BS.Bookshelf/dialog/AddToBook.js"
 			],
 			"messages": [
 				"bs-bookshelf-add-to-book-label",
