@@ -374,6 +374,7 @@
 				"bluespice.bookshelf.special.css"
 			],
 			"dependencies": [
+				"ext.bluespice.bookshelf.storageLocation",
 				"ext.bluespice.bookshelf.flyout"
 			]
 		},
