@@ -10,6 +10,8 @@
 #bs-book-chapterpager-cnt .bookshelfui-chapterpager-heading h4 {
 	font-size: 15px;
 	margin: 0;
+	color: currentColor;
+	border-bottom: none;
 }
 
 #bs-book-chapterpager-cnt .bookshelfui-chapterpager {
