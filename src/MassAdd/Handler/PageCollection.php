@@ -17,7 +17,8 @@ class PageCollection implements \BlueSpice\Bookshelf\MassAdd\IHandler {
 	 * @return array
 	 */
 	public function getData() {
-		$pageCollectionPrefix = wfMessage( 'bs-pagecollection-prefix' )->plain();
+		$pageCollectionPrefix = wfMessage( 'bs-pagecollection-prefix' )->inContentLanguage()->plain();
+		$pageCollectionPrefix = str_replace( ' ', '_', $pageCollectionPrefix );
 		$pageCollectionPrefix .= "/";
 		$pageCollectionTitle = \Title::makeTitle( NS_MEDIAWIKI, $pageCollectionPrefix . $this->root );
 
