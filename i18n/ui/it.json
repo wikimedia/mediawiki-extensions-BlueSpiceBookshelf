@@ -88,5 +88,8 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Griglia",
 	"bs-bookshelfui-prof-defaultview-images": "Immagini",
 	"bs-bookshelfui-chapterpager-previous": "Precedente",
-	"bs-bookshelfui-chapterpager-next": "Successivo"
+	"bs-bookshelfui-chapterpager-next": "Successivo",
+	"apihelp-bs-bookshelf-manage-summary": "Fornisce compiti per la manipolazione del libro.",
+	"action-bookshelfbookmanager-viewspecialpage": "accedere alla pagina speciale [[Special:BookshelfBookManager]]",
+	"right-bookshelfbookui-viewspecialpage": "Accede alla pagina speciale [[Special:BookshelfBookUI]]"
 }

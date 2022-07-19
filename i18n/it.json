@@ -13,7 +13,7 @@
 			"Valepert"
 		]
 	},
-	"bs-bookshelf-tagerror-no-attribute-given": "Non sono stati forniti attribuiti! Utilizzare <strong>src</strong> per configurare l'indice.",
+	"bs-bookshelf-tagerror-no-attribute-given": "Non sono stati forniti attributi! Utilizzare <strong>src</strong> per configurare l'indice.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "L'articolo di origine fornito (&quot;$1&quot;) non esiste.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "L'articolo di origine fornito («$1») contiene dati non validi.",
 	"bs-bookshelf-positive-integer-validation-not-approved": "Sono consentiti solo interi positivi.",
@@ -64,5 +64,12 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Imposta la versione del libro",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Scaffale",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definisce a quale libro appartengono le pagine"
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definisce a quale libro appartengono le pagine",
+	"bs-bookshelf-extension-description": "Abilita BlueSpice a gestire raccolte gerarchiche di pagine wiki.",
+	"bs-bookshelf-tag-bookshelf-desc": "Inserisce la navigazione di un capitolo di un libro in una pagina del libro. Attraverso questa etichetta gli articoli citati vengono inseriti nel libro. La numerazione viene adattata automaticamente all'indice.",
+	"bs-bookshelf-tag-bookmeta-desc": "Etichetta per il salvataggio di vari metadati sugli articoli del libro. Questi sono inclusi nel libro. Gli attributi di questa etichetta devono essere correlati ai metadati dell'articolo del libro.",
+	"bs-bookshelf-tag-booklist-desc": "Genera elenchi di articoli dal namespace \"libro\" e può essere filtrato. L'indicazione del filtro è obbligatoria.",
+	"bs-bookshelf-add-to-book-mod-bstag": "L'etichetta \"scaffale\" della pagina è stata modificata. La pagina verrà ricaricata.",
+	"apihelp-bs-bookshelf-bookstore-param-node": "Specifica un nodo per il quale deve essere fornito un elenco di sottocapitoli.",
+	"prefs-bookshelf": "Pagina speciale scaffale"
 }

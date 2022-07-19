@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"DiGro",
 			"Mainframe98",
 			"McDutchie",
 			"Romaine",
-			"Rots61",
-			"DiGro"
+			"Rots61"
 		]
 	},
 	"bs-bookshelfui-extension-description": "Stelt BlueSpice in staat hiërarchische verzamelingen van wikipagina's te beheren.",
