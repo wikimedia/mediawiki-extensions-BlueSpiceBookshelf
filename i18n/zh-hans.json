@@ -9,6 +9,7 @@
 			"Lakejason0",
 			"Shimamura Sakura",
 			"StarrySky",
+			"Tr jason",
 			"VulpesVulpes825",
 			"Wenyuan Liu",
 			"Wzl19371",
@@ -94,5 +95,11 @@
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "作者",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "版本",
 	"bs-bookshelf-ve-bookshelfinspector-title": "书架",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "图书"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "图书",
+	"bs-bookshelf-ve-booklist-attr-filter-help": "使用元数据的键-值格式来筛选，例如：title:handbook",
+	"bs-bookshelf-ve-bookmeta-attr-title-help": "设定书籍的标题",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "设定书籍的副标题",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "设定书籍的作者",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "设定书籍的版本",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "定义页面属于哪本书"
 }

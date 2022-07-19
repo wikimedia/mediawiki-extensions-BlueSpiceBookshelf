@@ -5,7 +5,8 @@
 			"MITO",
 			"Markus Mikkonen",
 			"Mediawikitranslator",
-			"Pyscowicz"
+			"Pyscowicz",
+			"Yupik"
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "Vain positiiviset kokonaisluvut ovat sallittuja.",
@@ -15,7 +16,7 @@
 	"bs-bookshelf-tag-prev": "Edellinen",
 	"bs-bookshelf-tag-edit-book": "Muokkaa kirjaa",
 	"bs-bookshelf-personal-books-page-prefix": "$1/Kirjat/",
-	"bs-bookshelf-add-to-book-label": "Lisää kirja",
+	"bs-bookshelf-add-to-book-label": "Lisää kirjaan",
 	"bs-bookshelf-add-to-book-label-book": "Kirja",
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
 	"bs-bookshelf-setting-path-feature": "Kirja",
