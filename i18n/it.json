@@ -71,5 +71,11 @@
 	"bs-bookshelf-tag-booklist-desc": "Genera elenchi di articoli dal namespace \"libro\" e può essere filtrato. L'indicazione del filtro è obbligatoria.",
 	"bs-bookshelf-add-to-book-mod-bstag": "L'etichetta \"scaffale\" della pagina è stata modificata. La pagina verrà ricaricata.",
 	"apihelp-bs-bookshelf-bookstore-param-node": "Specifica un nodo per il quale deve essere fornito un elenco di sottocapitoli.",
-	"prefs-bookshelf": "Pagina speciale scaffale"
+	"prefs-bookshelf": "Pagina speciale scaffale",
+	"apihelp-bs-bookshelf-store-description": "Elenca tutti i libri. Consente ordinamento, filtraggio e impaginazione. Implementa parametri ExtJS Store.",
+	"apihelp-bs-bookshelf-bookstore-description": "Elenca tutti i capitoli di un determinato libro. Consente l'ordinamento, il filtraggio e l'impaginazione. Implementa i parametri ExtJS Store.",
+	"apihelp-query+bsbookshelf-summary": "Permette interrogazioni in tutti i libri.",
+	"bs-bookshelf-pref-supressbookns-help": "Il namespace dei nomi di pagina è nascosto nell'output PDF.",
+	"bs-bookshelf-ve-bookmetainspector-title": "Bookmeta",
+	"bs-bookshelf-tag-bookshelf-box-desc": "Inserisce la navigazione di capitoli di un libro in una pagina che non fa parte di un libro. La numerazione è automaticamente creata secondo il sommario"
 }
