@@ -59,7 +59,7 @@ class WikiTextLink extends LineProcessorBase implements ILineProcessor {
 
 	/**
 	 *
-	 * @param type $line
+	 * @param string $line
 	 * @return bool
 	 */
 	protected function getLink( $line ) {
