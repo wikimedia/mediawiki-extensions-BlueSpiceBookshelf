@@ -80,5 +80,6 @@
 	"bs-bookshelf-tag-bookshelf-box-desc": "Inserisce la navigazione di capitoli di un libro in una pagina che non fa parte di un libro. La numerazione è automaticamente creata secondo il sommario",
 	"apihelp-bs-bookshelf-bookstore-summary": "Elenca tutti i capitoli di un determinato libro. Consente l'ordinamento, il filtraggio e l'impaginazione. Implementa i parametri ExtJS Store.",
 	"apihelp-bs-bookshelf-store-summary": "Elenca tutti i libri. Consente ordinamento, filtraggio e impaginazione. Implementa parametri ExtJS Store.",
-	"bs-bookshelf-pref-titledisplaytext-help": "Mostra il titolo della navigazione del libro come titolo della pagina invece del nome della pagina."
+	"bs-bookshelf-pref-titledisplaytext-help": "Mostra il titolo della navigazione del libro come titolo della pagina invece del nome della pagina.",
+	"bs-bookshelf-ve-booklistinspector-title": "Elenco di libri"
 }

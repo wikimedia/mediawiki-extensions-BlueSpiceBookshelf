@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"bs-bookshelfui-manager-title": "Наслов",
+	"bs-bookshelfui-manager-deletionsuccess-title": "Успешно избришано!",
+	"bs-bookshelfui-manager-deletionsuccess-text": "Книгата е успешно избришана.",
+	"bs-bookshelfui-dlg-choosewikipage-title": "Викистраница",
+	"bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel": "Викистраница",
+	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "Наслов за приказ",
+	"bs-bookshelfui-ctxmnu-tag-edit": "Уреди ги поставките",
+	"bs-bookshelfui-dlg-metadata-title": "Метаподатоци",
+	"bs-bookshelfui-dlg-tagsettings-title": "Поставки за ознаки",
+	"bs-bookshelfui-dlg-copy-title": "Копирај „$1“",
+	"bs-bookshelfui-dlg-copy-name-addition": "(копирај)",
+	"bs-bookshelfui-empty-selection": "Ништо не е одбрано",
+	"bs-bookshelfui-dlg-choosecategory-label": "Категорија",
+	"bs-bookshelfui-dlg-type-label": "Извор",
+	"bs-bookshelfui-extjs-tooltip-add-mass": "Масовно додавање",
+	"bs-bookshelfui-dlg-addmass-title": "Масовно додавање"
+}
