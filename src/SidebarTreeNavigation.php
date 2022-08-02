@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf;
 
 use BSTreeNode;
+use Html;
 use HtmlArmor;
 use MediaWiki\MediaWikiServices;
 use PageHierarchyProvider;
@@ -209,11 +210,16 @@ class SidebarTreeNavigation extends \BSSkinTreeNavigation {
 		$currentTitle = $this->getSkinTemplate()->getSkin();
 		$target = \Title::newFromText( $node->articleTitle );
 
-		$num = '<span class="bs-articleNumber">' . $node->articleNumber . '.</span>';
-		$title = '<span class="bs-articleText">'
-			. str_replace( $node->articleNumber
-			. '. ', '', $node->text )
-		. '</span>';
+		$num = Html::element(
+			'span',
+			[ 'class' => 'bs-articleNumber' ],
+			$node->articleNumber
+		);
+		$title = Html::element(
+			'span',
+			[ 'class' => 'bs-articleText' ],
+			str_replace( $node->articleNumber . '. ', '', $node->text )
+		);
 
 		$attribs = [
 			'name' => $node->articleNumber,

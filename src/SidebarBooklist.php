@@ -2,7 +2,6 @@
 
 namespace BlueSpice\Bookshelf;
 
-use HtmlArmor;
 use MediaWiki\MediaWikiServices;
 use SkinTemplate;
 
@@ -95,7 +94,7 @@ class SidebarBooklist {
 				[],
 				MediaWikiServices::getInstance()->getLinkRenderer()->makeLink(
 					$firstChapterTitle,
-					new HtmlArmor( $bookTitleText ),
+					$bookTitleText,
 					$attribs
 				)
 			);

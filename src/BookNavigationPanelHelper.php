@@ -4,6 +4,7 @@ namespace BlueSpice\Bookshelf;
 
 use BSTreeNode;
 use BSTreeRenderer;
+use Html;
 use HtmlArmor;
 use InvalidArgumentException;
 use MediaWiki\MediaWikiServices;
@@ -192,14 +193,18 @@ class BookNavigationPanelHelper {
 	 */
 	protected function makeWikiPageNodeText( $node ) {
 		$currentTitle = $this->title;
-
 		$target = \Title::newFromText( $node->articleTitle );
 
-		$num = '<span class="bs-articleNumber">' . $node->articleNumber . '.</span>';
-		$title = '<span class="bs-articleText">'
-			. str_replace( $node->articleNumber
-			. '. ', '', $node->text )
-		. '</span>';
+		$num = Html::element(
+			'span',
+			[ 'class' => 'bs-articleNumber' ],
+			$node->articleNumber
+		);
+		$title = Html::element(
+			'span',
+			[ 'class' => 'bs-articleText' ],
+			str_replace( $node->articleNumber . '. ', '', $node->text )
+		);
 
 		$attribs = [
 			'name' => $node->articleNumber,
