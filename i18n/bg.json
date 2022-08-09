@@ -4,5 +4,7 @@
 			"Kareyac"
 		]
 	},
-	"bs-bookshelf-book-grid-title": "Книги"
+	"bs-bookshelf-book-grid-title": "Книги",
+	"bs-bookshelf-ga-manager-label": "Книги",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга"
 }
