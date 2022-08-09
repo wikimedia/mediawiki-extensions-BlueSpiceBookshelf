@@ -16,13 +16,11 @@ use RequestContext;
 class BookshelfHandler extends Handler {
 
 	/**
-	 *
 	 * @var array
 	 */
 	private $errors = [];
 
 	/**
-	 *
 	 * @param string $processedInput
 	 * @param array $processedArgs
 	 * @param Parser $parser
@@ -36,7 +34,6 @@ class BookshelfHandler extends Handler {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function handle() {
@@ -119,9 +116,9 @@ class BookshelfHandler extends Handler {
 			]
 		);
 
-		$this->parser->getOutput()->setProperty( 'bs-bookshelf-sourcearticle', $src );
-		$this->parser->getOutput()->setProperty( 'bs-bookshelf-number', $number );
-		$this->parser->getOutput()->setProperty( 'bs-bookshelf-display-title', $displayTitle );
+		$this->parser->getOutput()->setPageProperty( 'bs-bookshelf-sourcearticle', $src );
+		$this->parser->getOutput()->setPageProperty( 'bs-bookshelf-number', $number );
+		$this->parser->getOutput()->setPageProperty( 'bs-bookshelf-display-title', $displayTitle );
 
 		if ( $this->config->get( 'BookshelfTitleDisplayText' ) ) {
 			$titleTextText = $displayTitle;
@@ -153,7 +150,6 @@ class BookshelfHandler extends Handler {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function makeErrorOutput() {
@@ -170,7 +166,6 @@ class BookshelfHandler extends Handler {
 	}
 
 	/**
-	 *
 	 * @param string $errorKey
 	 * @return string
 	 */

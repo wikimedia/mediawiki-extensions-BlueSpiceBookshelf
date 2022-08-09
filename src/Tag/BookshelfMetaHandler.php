@@ -9,20 +9,19 @@ use Html;
 class BookshelfMetaHandler extends Handler {
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function handle() {
 		// TODO: Potential security risk: are sAttributes properly preprocessed here?
-		$this->parser->getOutput()->setProperty(
+		$this->parser->getOutput()->setPageProperty(
 			'bs-bookshelf-meta',
 			FormatJson::encode( $this->processedArgs )
 		);
-		$this->parser->getOutput()->setProperty(
+		$this->parser->getOutput()->setPageProperty(
 			'bs-universalexport-meta',
 			FormatJson::encode( $this->processedArgs )
 		);
-		$this->parser->getOutput()->setProperty( 'bs-tag-universalexport-meta', 1 );
+		$this->parser->getOutput()->setPageProperty( 'bs-tag-universalexport-meta', 1 );
 
 		$attribs = [
 			'class' => 'bs-universalexport-meta'
