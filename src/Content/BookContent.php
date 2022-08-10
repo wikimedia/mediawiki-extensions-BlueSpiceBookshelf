@@ -11,6 +11,7 @@ use TextContent;
 use Title;
 
 class BookContent extends TextContent {
+
 	/**
 	 * @param string $text
 	 * @param string $model_id
@@ -33,7 +34,7 @@ class BookContent extends TextContent {
 		// parse just to get links etc into the database.
 		$services = MediaWikiServices::getInstance();
 		$parser = $services->getService( 'Parser' );
-		$output = $parser->parse( $this->getNativeData(), $title, $options, true, true, $revId );
+		$output = $parser->parse( $this->getText(), $title, $options, true, true, $revId );
 		try {
 			$bookEditData = BookEditData::newFromTitleAndRequest(
 				$title, new \WebRequest()
