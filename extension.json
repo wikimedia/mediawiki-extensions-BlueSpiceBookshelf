@@ -91,6 +91,13 @@
 				"ext.bluespice.bookmeta.visualEditorTagDefinition",
 				"ext.bluespice.bookshelf.visualEditorTagDefinition"
 			]
+		},
+		"ContentDroplets": {
+			"Droplets": {
+				"booklist": {
+					"class": "\\BlueSpice\\Bookshelf\\ContentDroplets\\BooklistDroplet"
+				}
+			}
 		}
 	},
 	"GroupPermissions": {
@@ -428,6 +435,9 @@
 				"bs-bookshelf-ve-booklistinspector-title",
 				"bs-bookshelf-ve-booklist-attr-filter-label",
 				"bs-bookshelf-ve-booklist-attr-filter-help"
+			],
+			"dependencies": [
+				"ext.bluespice.visualEditorConnector.tags.classes"
 			]
 		},
 		"ext.bluespice.bookmeta.visualEditorTagDefinition": {
