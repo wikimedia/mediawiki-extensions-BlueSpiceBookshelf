@@ -3,6 +3,7 @@
 		"authors": [
 			"Hikemaniac",
 			"Mglaser",
+			"Mschlindwein",
 			"Robert Vogel <vogel@hallowelt.biz>",
 			"Umherirrender"
 		]
@@ -39,7 +40,7 @@
 	"bs-bookshelfui-ctxmnu-tag-edit": "Einstellungen bearbeiten",
 	"bs-bookshelfui-dlg-metadata-title": "Metadaten",
 	"bs-bookshelfui-dlg-tagsettings-title": "Einstellungen für Tag",
-	"bs-bookshelfui-dlg-copy-title": "Kopieren von '$1'",
+	"bs-bookshelfui-dlg-copy-title": "Kopieren von „$1“",
 	"bs-bookshelfui-dlg-copy-name-addition": " (Kopie)",
 	"bs-bookshelfui-dlg-copy-target-name-label": "Zielname",
 	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "In diesen Namensraum werden alle im Buch befindlichen Seiten kopiert. Dabei werden Links gegebenenfalls angepasst.",
