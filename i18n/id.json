@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Syman51"
+			"Syman51",
+			"Veracious"
 		]
 	},
 	"bs-bookshelf-tag-booklist-description": "Ciptakan daftar halaman dari ruang nama \"buku\" dan supaya bisa disaring. Indikasi saringan wajib",
@@ -18,5 +19,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versi",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Atur versi buku",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buku",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "Pertahankan buku kepada"
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Pertahankan buku kepada",
+	"bs-bookshelf-prof-defaultview-images": "Gambar"
 }
