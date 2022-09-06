@@ -106,7 +106,7 @@ class WikiTextLink extends LineProcessorBase implements ILineProcessor {
 			$wikiPage = WikiPage::factory( $this->title );
 			$content = $wikiPage->getContent();
 			if ( $content instanceof Content ) {
-				$tagetTitle = $content->getRedirectTarget();
+				$tagetTitle = $content->getUltimateRedirectTarget();
 				if ( $tagetTitle instanceof Title ) {
 					$this->result['redirected-from'] = $this->title->getPrefixedText();
 					$this->title = $tagetTitle;
