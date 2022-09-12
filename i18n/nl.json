@@ -87,5 +87,9 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definieert tot welk boek de pagina's behoren",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Voeg hoofdstuknummers van het boek toe aan de inhoudsopgave en alle koppen op de pagina",
 	"bs-bookshelf-tag-booklist-description": "Genereert lijsten met artikelen uit de naamruimte \"book\" en kan worden gefilterd. De aanduiding van het filter is verplicht.",
-	"bs-bookshelf-ve-booklist-attr-filter-help": "Filter op metadata in de indeling sleutel:waarde, bijv. titel:handboek"
+	"bs-bookshelf-ve-booklist-attr-filter-help": "Filter op metadata in de indeling sleutel:waarde, bijv. titel:handboek",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Toegangspunt \"Boekenplank\" tonen",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "De koppeling naar het toegangspunt \"Boekenplank\" tonen in de navigatie aan de linkerkant",
+	"bs-bookshelf-tag-bookmeta-description": "Tag voor het opslaan van verscheidene metagegevens over boekpagina's. Deze worden in het boek opgenomen. De attributen van deze tag moeten overeenkomen met de metagegevens van de boekpagina.",
+	"bs-bookshelf-ve-bookmetainspector-title": "Boekmeta"
 }
