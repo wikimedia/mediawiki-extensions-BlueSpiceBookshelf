@@ -46,8 +46,7 @@ class ApiBookshelfManage extends BSApiTasksBase {
 			return $oResult;
 		}
 
-		if ( !\MediaWiki\MediaWikiServices::getInstance()
-			->getPermissionManager()
+		if ( !$this->services->getPermissionManager()
 			->userCan( 'delete', $this->getUser(), $oTitle )
 		) {
 			$oResult->message = $oResult->errors['permission'] =

@@ -38,7 +38,7 @@ class ApiBookshelfBookStore extends BSApiExtJSStoreBase {
 				}
 			}
 
-			$this->getServices()->getHookContainer()->run( 'BSBookshelfBookStoreMakeData', [
+			$this->services->getHookContainer()->run( 'BSBookshelfBookStoreMakeData', [
 				&$aResult
 			] );
 		} catch ( Exception $ex ) {
