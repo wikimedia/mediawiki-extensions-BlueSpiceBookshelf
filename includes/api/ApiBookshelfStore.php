@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\Linker\LinkRenderer;
-use MediaWiki\MediaWikiServices;
 
 class ApiBookshelfStore extends BSApiExtJSStoreBase {
 
@@ -20,7 +19,7 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	public function __construct( $mainModule, $moduleName, $modulePrefix = '' ) {
 		parent::__construct( $mainModule, $moduleName, $modulePrefix );
 
-		$this->linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+		$this->linkRenderer = $this->services->getLinkRenderer();
 	}
 
 	/**
@@ -86,8 +85,7 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	public function fetchBookNamespaceBooks() {
 		$aData = [];
 
-		if ( MediaWikiServices::getInstance()
-			->getPermissionManager()
+		if ( $this->services->getPermissionManager()
 			->userCan(
 				'read',
 				$this->getUser(),
@@ -200,7 +198,7 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 		// $oBook->book_tree = $oPHP->getExtendedTOCJSON();
 
 		// This hook is DEPRECATED! Use hooks from base class instead!
-		$this->getServices()->getHookContainer()->run(
+		$this->services->getHookContainer()->run(
 			'BSBookshelfManagerGetBookDataRow',
 			[
 				$oTitle,
@@ -264,7 +262,7 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 		$book->book_meta = $php->getBookMeta();
 
 		// This hook is DEPRECATED! Use hooks from base class instead!
-		$this->getServices()->getHookContainer()->run(
+		$this->services->getHookContainer()->run(
 			'BSBookshelfManagerGetBookDataRow',
 			[
 				Title::newFromText( 'invalid', -1 ),
