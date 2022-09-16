@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"JohanahoJ",
 			"Mjälten",
 			"Sabelöga",
 			"Technic2",
@@ -51,5 +52,8 @@
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Författare",
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "Anger bokens författare",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Version",
-	"bs-bookshelf-ve-bookmeta-attr-version-help": "Anger bokens version"
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Anger bokens version",
+	"bs-bookshelf-ga-manager-label": "Böcker",
+	"bs-bookshelf-ve-booklistinspector-title": "Boklista",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Bokhylla"
 }
