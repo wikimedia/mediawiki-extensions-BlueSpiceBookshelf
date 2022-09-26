@@ -7,6 +7,7 @@
 			"Dimension",
 			"Hydra",
 			"Lakejason0",
+			"LittlePaw365",
 			"Qiyue2001",
 			"Shimamura Sakura",
 			"StarrySky",
@@ -102,6 +103,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "设定书籍的作者",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "版本",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "设定书籍的版本",
+	"bs-bookshelf-tag-bookshelf-box-desc": "在不属于书籍的页面中插入书籍的章节导航。编号会根据目录自动创建",
 	"bs-bookshelf-ve-bookshelfinspector-title": "书架",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "图书",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "定义页面属于哪本书"
