@@ -4,6 +4,7 @@ namespace BlueSpice\Bookshelf;
 
 use IContextSource;
 use InvalidArgumentException;
+use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\ComponentBase;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
@@ -111,7 +112,9 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 		if ( $title->isRedirect() ) {
 			$webRequestValues = $context->getRequest()->getValues();
 			if ( !isset( $webRequestValues['redirect'] ) || $webRequestValues['redirect'] !== 'no' ) {
-				$title = $context->getWikiPage()->getRedirectTarget();
+				/** @var Title $title */
+				$title = MediaWikiServices::getInstance()->getRedirectLookup()
+					->getRedirectTarget( $context->getWikiPage() );
 			}
 		}
 		try {
