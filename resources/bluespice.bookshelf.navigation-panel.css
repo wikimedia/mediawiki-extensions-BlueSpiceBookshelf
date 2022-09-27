@@ -99,6 +99,9 @@ li.bs-treenodeitem[aria-haspopup="true"] > div span.bs-icon {
 	padding: 0.375rem 0.75rem;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+#n-book-panel .bookshelfui-chapterpager a:visited {
+	color: var(--mws-secondary-fg);
+}
 #n-book-panel .bookshelfui-chapterpager a:hover {
 	background-color: var(--mws-secondary-bg--hover);
 	color: var(--mws-secondary-fg--hover);
@@ -134,10 +137,9 @@ li.bs-treenodeitem[aria-haspopup="true"] > div span.bs-icon {
 #n-book-panel .bs-treenodeitem a:hover,
 #n-book-panel .bs-treenodeitem a.active {
 	border: none;
-}
-#n-book-panel .bs-treenodeitem a:hover,
-#n-book-panel .bs-treenodeitem a.active {
 	border-left: none;
+	color: inherit;
+	background-color: transparent;
 }
 li.bs-treenodeitem::marker {
 	display: none;
