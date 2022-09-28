@@ -3,7 +3,6 @@
 namespace BlueSpice\Bookshelf\Special;
 
 use BlueSpice\Special\ManagerBase;
-use MediaWiki\MediaWikiServices;
 use stdClass;
 
 class BookshelfBookManager extends ManagerBase {
@@ -41,7 +40,7 @@ class BookshelfBookManager extends ManagerBase {
 		$config->dependencies = [
 			'ext.bluespice.extjs'
 		];
-		MediaWikiServices::getInstance()->getHookContainer()->run( 'BSBookshelfBookManager', [
+		$this->services->getHookContainer()->run( 'BSBookshelfBookManager', [
 			$this,
 			$this->getOutput(),
 			$config
