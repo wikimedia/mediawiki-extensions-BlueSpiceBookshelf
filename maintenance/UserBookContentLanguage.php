@@ -6,6 +6,14 @@ require_once dirname( dirname( dirname( __DIR__ ) ) ) . '/maintenance/Maintenanc
 
 class UserBookContentLanguage extends LoggedUpdateMaintenance {
 
+	/** @var MediaWikiServices */
+	protected $services = null;
+
+	public function __construct() {
+		parent::__construct();
+		$this->services = MediaWikiServices::getInstance();
+	}
+
 	/**
 	 * @param Title $bookTitle
 	 * @param string[] $langCodes
@@ -16,7 +24,7 @@ class UserBookContentLanguage extends LoggedUpdateMaintenance {
 		if ( !$bookTitle->isSubpage() ) {
 			return false;
 		}
-		$user = User::newFromName( $bookTitle->getRootText() );
+		$user = $this->services->getUserFactory()->newFromName( $bookTitle->getRootText() );
 		if ( !$user || $user->isAnon() ) {
 			// ignore non existing users such a delted ones - they do not need books anymore :)
 			return false;
@@ -60,7 +68,7 @@ class UserBookContentLanguage extends LoggedUpdateMaintenance {
 	 */
 	protected function doDBUpdates() {
 		$this->output( "...Update '" . $this->getUpdateKey() . "': " );
-		$res = MediaWikiServices::getInstance()->getDBLoadBalancer()
+		$res = $this->services->getDBLoadBalancer()
 			->getConnection( DB_REPLICA )->select(
 			'page',
 			[ 'page_id', 'page_namespace', 'page_title' ],
@@ -71,8 +79,8 @@ class UserBookContentLanguage extends LoggedUpdateMaintenance {
 			$this->output( "OK\n" );
 			return true;
 		}
-		$langUtils = MediaWikiServices::getInstance()->getLanguageNameUtils();
-		$contentLang = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' )
+		$langUtils = $this->services->getLanguageNameUtils();
+		$contentLang = $this->services->getConfigFactory()->makeConfig( 'bsg' )
 			->get( 'LanguageCode' );
 		$langCodes = array_keys( $langUtils->getLanguageNames() );
 		foreach ( $res as $row ) {
@@ -100,7 +108,7 @@ class UserBookContentLanguage extends LoggedUpdateMaintenance {
 	private function moveBook( Title $title, Title $moveTitle ) {
 		$status = Status::newGood();
 		try{
-			$move = MediaWikiServices::getInstance()->getMovePageFactory()->newMovePage( $title, $moveTitle );
+			$move = $this->services->getMovePageFactory()->newMovePage( $title, $moveTitle );
 			$status = $move->move(
 				$this->getMaintenanceUser(),
 				"Bookshelf: Store user books in content language subpage",
@@ -117,7 +125,7 @@ class UserBookContentLanguage extends LoggedUpdateMaintenance {
 	 * @return User
 	 */
 	protected function getMaintenanceUser() {
-		return MediaWikiServices::getInstance()->getService( 'BSUtilityFactory' )
+		return $this->services->getService( 'BSUtilityFactory' )
 			->getMaintenanceUser()->getUser();
 	}
 

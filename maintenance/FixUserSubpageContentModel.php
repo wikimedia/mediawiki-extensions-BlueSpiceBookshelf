@@ -75,7 +75,8 @@ class FixUserSubpageContentModel extends LoggedUpdateMaintenance {
 		if ( !$title->isSubpage() ) {
 			return false;
 		}
-		$user = User::newFromName( $title->getRootText() );
+		$user = MediaWikiServices::getInstance()->getUserFactory()
+			->newFromName( $title->getRootText() );
 		if ( !$user || $user->isAnon() ) {
 			// ignore non existing/deleted users - they do not need books anymore :)
 			return false;
