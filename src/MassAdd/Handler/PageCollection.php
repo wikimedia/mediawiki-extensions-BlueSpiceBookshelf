@@ -1,6 +1,8 @@
 <?php
 namespace BlueSpice\Bookshelf\MassAdd\Handler;
 
+use TextContent;
+
 class PageCollection implements \BlueSpice\Bookshelf\MassAdd\IHandler {
 	/**
 	 * Name of page collection
@@ -25,8 +27,8 @@ class PageCollection implements \BlueSpice\Bookshelf\MassAdd\IHandler {
 		}
 
 		$pageCollectionWikiPage = \WikiPage::newFromID( $pageCollectionTitle->getArticleID() );
-		$pageCollectionContent = $pageCollectionWikiPage->getContent();
-		$pageCollectionText = \ContentHandler::getContentText( $pageCollectionContent );
+		$content = $pageCollectionWikiPage->getContent();
+		$pageCollectionText = ( $content instanceof TextContent ) ? $content->getText() : '';
 
 		if ( trim( $pageCollectionText ) == '' ) {
 			return [];
