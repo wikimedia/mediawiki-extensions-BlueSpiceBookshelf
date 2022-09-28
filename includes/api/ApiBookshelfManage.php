@@ -1,7 +1,6 @@
 <?php
 
 use BlueSpice\Api\Response\Standard;
-use MediaWiki\MediaWikiServices;
 
 class ApiBookshelfManage extends BSApiTasksBase {
 
@@ -56,20 +55,17 @@ class ApiBookshelfManage extends BSApiTasksBase {
 			return $oResult;
 		}
 
-		$oPage = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $oTitle );
-		$error = '';
-		$oResult->success = $oPage->doDeleteArticleReal(
-			wfMessage( 'bs-bookshelfui-bookmanager-deletion-reason' )->text(),
-			$this->getUser(),
-			false,
-			null,
-			$error
-		)->isOK();
+		$page = $this->services->getWikiPageFactory()->newFromTitle( $oTitle );
+		$deletePage = $this->services->getDeletePageFactory()->newDeletePage( $page, $this->getUser() );
+		$deleteStatus = $deletePage->deleteIfAllowed(
+			wfMessage( 'bs-bookshelfui-bookmanager-deletion-reason' )->text()
+		);
 
-		if ( $oResult->success == false ) {
+		if ( $deleteStatus->isGood() == false ) {
 			$oResult->message =
 				wfMessage( 'bs-bookshelfui-bookmanager-deletion-error-unkown' )->text();
-			$oResult->errors['saving'] = $error;
+			// 'getLegacyHookErrors()' is '@internal' - used for backwards compatibility
+			$oResult->errors['saving'] = $deletePage->getLegacyHookErrors();
 			$dbw = wfGetDB( DB_PRIMARY );
 			wfDebugLog(
 				'BS::Bookshelf',
