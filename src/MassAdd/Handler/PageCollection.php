@@ -2,6 +2,7 @@
 namespace BlueSpice\Bookshelf\MassAdd\Handler;
 
 use MediaWiki\MediaWikiServices;
+use TextContent;
 
 class PageCollection implements \BlueSpice\Bookshelf\MassAdd\IHandler {
 	/**
@@ -28,8 +29,8 @@ class PageCollection implements \BlueSpice\Bookshelf\MassAdd\IHandler {
 
 		$pageCollectionWikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()
 			->newFromID( $pageCollectionTitle->getArticleID() );
-		$pageCollectionContent = $pageCollectionWikiPage->getContent();
-		$pageCollectionText = \ContentHandler::getContentText( $pageCollectionContent );
+		$content = $pageCollectionWikiPage->getContent();
+		$pageCollectionText = ( $content instanceof TextContent ) ? $content->getText() : '';
 
 		if ( trim( $pageCollectionText ) == '' ) {
 			return [];
