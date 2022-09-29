@@ -86,7 +86,8 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 		if ( !$title->isSubpage() ) {
 			return false;
 		}
-		$user = User::newFromName( $title->getRootText() );
+		$user = MediaWikiServices::getInstance()->getUserFactory()
+			->newFromName( $title->getRootText() );
 		if ( !$user || $user->isAnon() ) {
 			// ignore non existing/deleted users - they do not need books anymore :)
 			return false;
@@ -107,12 +108,13 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 	 */
 	protected function doDBUpdates() {
 		$this->output( "...Update '" . $this->getUpdateKey() . "': " );
+		$dbLoadBalancer = MediaWikiServices::getInstance()->getDBLoadBalancer();
 		$pages = $this->getPages(
-			MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA )
+			$dbLoadBalancer->getConnection( DB_REPLICA )
 		);
 		$res = $this->convert(
 			$pages,
-			MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY )
+			$dbLoadBalancer->getConnection( DB_PRIMARY )
 		);
 		$this->output( "OK\n" );
 		return $res;
