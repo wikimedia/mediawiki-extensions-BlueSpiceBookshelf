@@ -67,9 +67,6 @@
 			$( this ).prepend( $numNode.clone() );
 		});
 
-		if ( mw.user.options.get( 'numberheadings' ) === 0 ) {
-			return;
-		}
 		//This is MediaWiki behavior. Numbers only if more than one heading.
 		if ( $( '.mw-headline' ).length < 2 ) {
 			return;

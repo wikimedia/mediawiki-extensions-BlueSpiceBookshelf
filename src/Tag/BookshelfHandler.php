@@ -123,6 +123,9 @@ class BookshelfHandler extends Handler {
 		$this->parser->getOutput()->setProperty( 'bs-bookshelf-number', $number );
 		$this->parser->getOutput()->setProperty( 'bs-bookshelf-display-title', $displayTitle );
 
+		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) ) {
+			$this->parser->getOptions()->setNumberHeadings( true );
+		}
 		if ( $this->config->get( 'BookshelfTitleDisplayText' ) ) {
 			$titleTextText = $displayTitle;
 			if ( $number ) {
