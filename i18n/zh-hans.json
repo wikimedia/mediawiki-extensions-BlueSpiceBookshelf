@@ -106,5 +106,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "定义页面属于哪本书",
 	"bs-bookshelf-tag-bookmeta-description": "用于在书籍页面上保存各种元数据的标签。这些都会包含在书籍中。此标签的属性必须与书籍页面的元数据相关联。",
 	"bs-bookshelf-ve-bookmetainspector-title": "书籍元数据",
-	"bs-bookshelf-tag-bookshelf-box-desc": "在不属于书籍的页面中插入书籍的章节导航。编号会根据目录自动创建"
+	"bs-bookshelf-tag-bookshelf-box-desc": "在不属于书籍的页面中插入书籍的章节导航。编号会根据目录自动创建",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "将书籍章节编号添加到目录和页面的所有标题中"
 }
