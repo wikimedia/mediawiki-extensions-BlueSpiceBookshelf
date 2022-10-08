@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"JohanahoJ",
 			"Mjälten",
 			"Sabelöga",
 			"Technic2",
-			"WikiPhoenix",
-			"JohanahoJ"
+			"WikiPhoenix"
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "Enbart positiva heltal tillåts.",
