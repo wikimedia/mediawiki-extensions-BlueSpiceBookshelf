@@ -74,6 +74,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "通用图书",
 	"bs-bookshelfui-flyout-title": "图书列表",
 	"bs-bookshelfui-flyout-intro": "在这里你可以看到所有可用的书。要添加一本新书，请到[[Special:Bookmanager|book manager]]。",
+	"bs-bookshelfui-intro": "在此您可以查看所有可用的书籍。要添加新的书籍，请前往[[Special:Bookmanager|书籍管理]]。",
 	"bs-bookshelfui-book-title-link-edit": "编辑图书",
 	"bs-bookshelfui-book-title-link-edit-text": "编辑图书",
 	"bs-bookshelfui-export-book-text": "正在创建图书，请稍候。",
