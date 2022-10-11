@@ -73,7 +73,9 @@ class BookshelfHandler extends Handler {
 			return $this->makeErrorOutput();
 		}
 
-		$displayTitle = $titleText = $this->parser->getTitle()->getPrefixedText();
+		/** @var \Title $title */
+		$title = $this->parser->getPage();
+		$displayTitle = $titleText = $title->getPrefixedText();
 		$number = '';
 		$haschildren = false;
 
@@ -92,8 +94,8 @@ class BookshelfHandler extends Handler {
 				}
 				// Fallback in case of no display title but subpage
 				if ( str_replace( '_', ' ', $displayTitle ) === $titleText
-					&& $this->parser->getTitle()->isSubpage() ) {
-					$displayTitle = basename( $this->parser->getTitle()->getText() );
+					&& $title->isSubpage() ) {
+					$displayTitle = basename( $title->getText() );
 				}
 				$haschildren = isset( $entry->children ) && !empty( $entry->children );
 			}
