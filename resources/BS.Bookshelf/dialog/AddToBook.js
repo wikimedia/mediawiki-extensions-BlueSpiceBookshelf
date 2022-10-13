@@ -104,7 +104,7 @@
 
 			storage.appendText( null, wikiText, modifyBookshelfTag, selectedBook.page_id ).done( function() {
 				mw.notify(
-					mw.message( 'bs-bookshelf-add-to-book-added', selectedBook.book_displaytext ).parse(),
+					mw.message( 'bs-bookshelf-add-to-book-added', selectedBook.book_displaytext ).plain(),
 					{ title: messageTitle }
 				);
 				if ( modifyBookshelfTag ) {
