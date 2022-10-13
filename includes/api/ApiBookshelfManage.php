@@ -70,8 +70,9 @@ class ApiBookshelfManage extends BSApiTasksBase {
 				'BS::Bookshelf',
 				'SpecialBookshelfBookManager::ajaxDeleteBook: ' . $dbw->lastQuery()
 			);
+		} else {
+			$oResult->success = true;
 		}
-
 		return $oResult;
 	}
 }
