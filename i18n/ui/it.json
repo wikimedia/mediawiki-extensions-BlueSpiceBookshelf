@@ -91,5 +91,6 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Griglia",
 	"bs-bookshelfui-prof-defaultview-images": "Immagini",
 	"bs-bookshelfui-chapterpager-previous": "Precedente",
-	"bs-bookshelfui-chapterpager-next": "Successivo"
+	"bs-bookshelfui-chapterpager-next": "Successivo",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo di sorgente per l'aggiunta massiva"
 }

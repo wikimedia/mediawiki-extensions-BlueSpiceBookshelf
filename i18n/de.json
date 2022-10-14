@@ -32,7 +32,7 @@
 	"bs-bookshelf-add-to-book-label-book": "Buch",
 	"bs-bookshelf-add-to-book-label-alias": "Anzeigename",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "Das 'bookshelf' Element in der Seite verändern (neue Revision)",
-	"bs-bookshelf-add-to-book-added": "Die Seite wurde dem Buch '$1' hinzugefügt.",
+	"bs-bookshelf-add-to-book-added": "Die Seite wurde dem Buch „$1“ hinzugefügt.",
 	"bs-bookshelf-add-to-book-mod-bstag": "Das 'bookshelf' Element der Seite wurde geändert. Die Seite wird nun neu geladen.",
 	"apihelp-bs-bookshelf-store-description": "Listet alle Bücher auf. Ermöglicht das Sortieren, Filtern und Umblättern. Implementiert ExtJS Store Parameter.",
 	"apihelp-bs-bookshelf-store-param-tempBooks": "Liste von Büchern im lokalen Speicher des Clients die in die Antwort des Stores übernommen werden sollen.",
