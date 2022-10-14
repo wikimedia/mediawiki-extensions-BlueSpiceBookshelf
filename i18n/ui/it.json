@@ -91,5 +91,6 @@
 	"bs-bookshelfui-chapterpager-next": "Successivo",
 	"apihelp-bs-bookshelf-manage-summary": "Fornisce compiti per la manipolazione del libro.",
 	"action-bookshelfbookmanager-viewspecialpage": "accedere alla pagina speciale [[Special:BookshelfBookManager]]",
-	"right-bookshelfbookui-viewspecialpage": "Accede alla pagina speciale [[Special:BookshelfBookUI]]"
+	"right-bookshelfbookui-viewspecialpage": "Accede alla pagina speciale [[Special:BookshelfBookUI]]",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo di sorgente per l'aggiunta massiva"
 }
