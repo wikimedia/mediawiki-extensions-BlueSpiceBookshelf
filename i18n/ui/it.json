@@ -86,6 +86,7 @@
 	"action-bookshelfbookmanager-viewspecialpage": "accedere alla pagina speciale [[Special:BookshelfBookManager]]",
 	"right-bookshelfbookui-viewspecialpage": "Accede alla pagina speciale [[Special:BookshelfBookUI]]",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Numero di risultati da restituire",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo di sorgente per l'aggiunta massiva",
 	"prefs-bookshelfui": "Pagina speciale scaffale",
 	"bs-bookshelfui-prof-defaultview": "Vista predefinita",
 	"bs-bookshelfui-prof-defaultview-grid": "Griglia",
