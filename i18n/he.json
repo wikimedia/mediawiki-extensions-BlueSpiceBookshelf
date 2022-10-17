@@ -19,7 +19,7 @@
 	"bs-bookshelf-add-to-book-label": "להוסיף לספר",
 	"bs-bookshelf-add-to-book-label-book": "ספר",
 	"bs-bookshelf-add-to-book-label-alias": "כינוי",
-	"bs-bookshelf-add-to-book-added": "הדף נוסף לספר ‚$1’.",
+	"bs-bookshelf-add-to-book-added": "הדף נוסף לספר \"$1\".",
 	"bs-bookshelf-setting-path-feature": "ספר",
 	"bs-bookshelf-empty-selection": "לא נבחר דבר",
 	"apihelp-query+bsbookshelf-summary": "מאפשר לתשאל מול כל הספרים.",

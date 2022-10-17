@@ -22,7 +22,7 @@
 	"bs-bookshelf-add-to-book-label": "افزودن به یک کتاب",
 	"bs-bookshelf-add-to-book-label-book": "کتاب",
 	"bs-bookshelf-add-to-book-label-alias": "نام مستعار",
-	"bs-bookshelf-add-to-book-added": "صفحه به کتاب $1 افزوده شد.",
+	"bs-bookshelf-add-to-book-added": "صفحه به کتاب «$1» افزوده شد.",
 	"apihelp-bs-bookshelf-bookstore-param-book": "کتابی را مشخص می‌کند که فهرست فصل‌های آن باید فراهم آید.",
 	"bs-bookshelf-setting-path-feature": "کتاب",
 	"bs-bookshelf-empty-selection": "چیزی انتخاب نشده است",
