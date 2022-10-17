@@ -4,6 +4,7 @@
 			"500000000006城",
 			"A Chinese Wikipedian",
 			"AYZ04",
+			"CrownedWharf566",
 			"Dimension",
 			"Hydra",
 			"Lakejason0",
@@ -108,5 +109,6 @@
 	"bs-bookshelfui-panel-navigation-text": "至书籍导览",
 	"bs-bookshelfui-panel-navigation-title": "返回书籍导览",
 	"bs-bookshelfui-panel-navigation-aria-label": "至书籍导览",
-	"bs-bookshelfui-intro": "在此您可以查看所有可用的书籍。要添加新的书籍，请前往[[Special:Bookmanager|书籍管理]]。"
+	"bs-bookshelfui-intro": "在此您可以查看所有可用的书籍。要添加新的书籍，请前往[[Special:Bookmanager|书籍管理]]。",
+	"bs-bookshelfui-panel-navigation-aria-desc": "树状结构的图书导航"
 }

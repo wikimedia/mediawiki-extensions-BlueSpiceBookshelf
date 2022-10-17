@@ -68,5 +68,10 @@
 	"bs-bookshelfui-prof-defaultview-grid": "רשת",
 	"bs-bookshelfui-prof-defaultview-images": "תמונות",
 	"bs-bookshelfui-chapterpager-previous": "הקודם",
-	"bs-bookshelfui-chapterpager-next": "הבא"
+	"bs-bookshelfui-chapterpager-next": "הבא",
+	"bs-bookshelfui-open-source": "הצגת דף הוויקי המקורי",
+	"bs-bookshelfui-dlg-choosewikipage-title": "דף ויקי",
+	"bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel": "דף ויקי",
+	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "כותרת התצוגה",
+	"bs-bookshelfui-ctxmnu-open": "לפתוח את דף הוויקי בחלון חדש"
 }
