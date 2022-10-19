@@ -12,6 +12,7 @@
 	"bs-bookshelf-book-grid-title": "Knjige",
 	"bs-bookshelf-ga-manager-label": "Knjige",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Naslov",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Avtor",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Redakcija",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Knjiga"
 }
