@@ -13,5 +13,6 @@
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Knjižnica",
 	"bs-bookshelf-setting-path-feature": "Knjiga",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Naslov",
-	"bs-bookshelf-add-to-book-added": "Stran je bila dodana knjigi »$1«."
+	"bs-bookshelf-add-to-book-added": "Stran je bila dodana knjigi »$1«.",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Avtor"
 }
