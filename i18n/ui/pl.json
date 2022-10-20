@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Pefect",
 			"Rail",
 			"WaldiSt"
 		]
@@ -13,12 +14,16 @@
 	"bs-bookshelfui-manager-deletingprogress-title": "Usuwanie...",
 	"bs-bookshelfui-dlg-copy-name-addition": " (kopiuj)",
 	"bs-bookshelfui-dlg-copy-target-name-label": "Nazwa docelowa",
+	"bs-bookshelfui-nothingtoexport-text": "Twój wybór jest pusty",
+	"bs-bookshelfui-empty-selection": "Nic nie zaznaczono",
 	"bs-bookshelfui-dlg-type-label": "Źródło",
 	"bs-bookshelfui-dlg-choosepc-label": "Zbiór stron",
 	"bs-bookshelfui-type-pagecollection": "Zbiór stron",
 	"bs-bookshelfui-bookmetatag-title": "Tytuł",
+	"bs-bookshelfui-bookmetatag-subtitle": "Podtytuł",
 	"bs-bookshelfui-bookmetatag-author1": "Autor 1",
 	"bs-bookshelfui-bookmetatag-author2": "Autor 2",
+	"bs-bookshelfui-bookmetatag-docummentidentifier": "Identyfikator dokumentu",
 	"bs-bookshelfui-bookmetatag-department": "Dział",
 	"bs-bookshelfui-bookmetatag-version": "Wersja",
 	"bs-bookshelfui-extjs-tooltip-copy": "Kopiuj",
