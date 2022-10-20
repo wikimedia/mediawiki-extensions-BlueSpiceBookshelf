@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Pefect",
 			"Rail",
 			"WaldiSt"
 		]
@@ -24,5 +25,9 @@
 	"bs-bookshelfui-extjs-tooltip-copy": "Kopiuj",
 	"bs-bookshelfui-prof-defaultview-images": "Obrazy",
 	"bs-bookshelfui-chapterpager-previous": "Wstecz",
-	"bs-bookshelfui-chapterpager-next": "Dalej"
+	"bs-bookshelfui-chapterpager-next": "Dalej",
+	"bs-bookshelfui-nothingtoexport-text": "Twój wybór jest pusty",
+	"bs-bookshelfui-empty-selection": "Nic nie zaznaczono",
+	"bs-bookshelfui-bookmetatag-subtitle": "Podtytuł",
+	"bs-bookshelfui-bookmetatag-docummentidentifier": "Identyfikator dokumentu"
 }
