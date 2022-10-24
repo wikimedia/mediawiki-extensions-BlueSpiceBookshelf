@@ -30,5 +30,8 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Version",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Boghylde",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Bog",
-	"bs-bookshelf-actionmenuentry-addtobook": "Tilføj til bog"
+	"bs-bookshelf-actionmenuentry-addtobook": "Tilføj til bog",
+	"bs-bookshelf-action-editbook": "Rediger kilde",
+	"bs-bookshelf-action-editbook-create": "Rediger kilde",
+	"bs-bookshelf-ve-booklistinspector-title": "Bogliste"
 }
