@@ -1,5 +1,7 @@
 <?php
 
+use Wikimedia\ParamValidator\ParamValidator;
+
 class ApiBookshelfBookStore extends BSApiExtJSStoreBase {
 
 	/**
@@ -66,10 +68,10 @@ class ApiBookshelfBookStore extends BSApiExtJSStoreBase {
 	public function getAllowedParams() {
 		return parent::getAllowedParams() + [
 			'node' => [
-				ApiBase::PARAM_TYPE => 'string'
+				ParamValidator::PARAM_TYPE => 'string'
 			],
 			'book' => [
-				ApiBase::PARAM_TYPE => 'string'
+				ParamValidator::PARAM_TYPE => 'string'
 			],
 		];
 	}

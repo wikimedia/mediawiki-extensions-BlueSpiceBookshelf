@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Linker\LinkRenderer;
+use Wikimedia\ParamValidator\ParamValidator;
 
 class ApiBookshelfStore extends BSApiExtJSStoreBase {
 
@@ -62,9 +63,9 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 		$aParams = parent::getAllowedParams();
 		// TODO: Add 'user' field to allow fechting for different users
 		$aParams['tempBooks'] = [
-			ApiBase::PARAM_TYPE => 'string',
-			ApiBase::PARAM_REQUIRED => false,
-			ApiBase::PARAM_DFLT => '{}',
+			ParamValidator::PARAM_TYPE => 'string',
+			ParamValidator::PARAM_REQUIRED => false,
+			ParamValidator::PARAM_DEFAULT => '{}',
 		];
 		return $aParams;
 	}
