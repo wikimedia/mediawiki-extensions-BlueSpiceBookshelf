@@ -5,7 +5,8 @@
 			"Ice bulldog",
 			"Piramidion",
 			"Samflint",
-			"Ата"
+			"Ата",
+			"Пан Хаунд"
 		]
 	},
 	"bs-bookshelf-extension-description": "Вмикає BlueSpice для керування й експорту ієрархічних колекцій статей.",
@@ -30,7 +31,7 @@
 	"bs-bookshelf-add-to-book-label-book": "Книжка",
 	"bs-bookshelf-add-to-book-label-alias": "Псевдонім",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "Змінити тег 'bookshelf' на сторінці (у новій версії)",
-	"bs-bookshelf-add-to-book-added": "Сторінку було додано до книги «$1».",
+	"bs-bookshelf-add-to-book-added": "Сторінку було додано до книги \"$1\".",
 	"bs-bookshelf-add-to-book-mod-bstag": "Тег «bookshelf» цієї сторінки було змінено. Сторінку буде перезавантажено.",
 	"apihelp-bs-bookshelf-store-description": "Перелічує всі книги. Дає можливість сортування, фільтрування та пагінації. Реалізовує параметри ExtJS Store.",
 	"apihelp-bs-bookshelf-store-param-tempBooks": "Перелік книжок у локальному магазині клієнта, які треба включити у відповідь магазину",
