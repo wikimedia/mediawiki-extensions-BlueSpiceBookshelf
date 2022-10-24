@@ -1,5 +1,7 @@
 <?php
 
+use Wikimedia\ParamValidator\ParamValidator;
+
 class ApiQueryBookshelfBookNode extends ApiQueryBase {
 
 	/**
@@ -31,9 +33,9 @@ class ApiQueryBookshelfBookNode extends ApiQueryBase {
 	protected function getAllowedParams() {
 		return [
 			'prop' => [
-				ApiBase::PARAM_ISMULTI => true,
-				ApiBase::PARAM_DFLT => 'prev|current|next',
-				ApiBase::PARAM_TYPE => [
+				ParamValidator::PARAM_ISMULTI => true,
+				ParamValidator::PARAM_DEFAULT => 'prev|current|next',
+				ParamValidator::PARAM_TYPE => [
 					'prev',
 					'current',
 					'next',
@@ -42,10 +44,10 @@ class ApiQueryBookshelfBookNode extends ApiQueryBase {
 				]
 			],
 			'path' => [
-				ApiBase::PARAM_TYPE => 'string'
+				ParamValidator::PARAM_TYPE => 'string'
 			],
 			'book' => [
-				ApiBase::PARAM_TYPE => 'string'
+				ParamValidator::PARAM_TYPE => 'string'
 			],
 		];
 	}

@@ -1,5 +1,7 @@
 <?php
 
+use Wikimedia\ParamValidator\ParamValidator;
+
 class ApiBookshelfMassAddPageStore extends BSApiExtJSStoreBase {
 
 	/**
@@ -31,17 +33,17 @@ class ApiBookshelfMassAddPageStore extends BSApiExtJSStoreBase {
 			parent::getAllowedParams(),
 			[
 				'root' => [
-					ApiBase::PARAM_TYPE => 'string',
-					ApiBase::PARAM_REQUIRED => true
+					ParamValidator::PARAM_TYPE => 'string',
+					ParamValidator::PARAM_REQUIRED => true
 				],
 				'type' => [
-					ApiBase::PARAM_TYPE => 'string',
-					ApiBase::PARAM_REQUIRED => true
+					ParamValidator::PARAM_TYPE => 'string',
+					ParamValidator::PARAM_REQUIRED => true
 				],
 				'limit' => [
-					ApiBase::PARAM_TYPE => 'integer',
-					ApiBase::PARAM_REQUIRED => false,
-					ApiBase::PARAM_DFLT => 9999
+					ParamValidator::PARAM_TYPE => 'integer',
+					ParamValidator::PARAM_REQUIRED => false,
+					ParamValidator::PARAM_DEFAULT => 9999
 				]
 			]
 		);
