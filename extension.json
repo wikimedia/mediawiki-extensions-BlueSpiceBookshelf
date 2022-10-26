@@ -526,6 +526,12 @@
 		},
 		"discovery-skin": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\DiscoverySkin"
+		},
+		"addAddToBookEntry": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SkinTemplateNavigation\\AddAddToBookEntry"
+		},
+		"addEditBook": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SkinTemplateNavigation\\AddEditBook"
 		}
 	},
 	"Hooks": {
@@ -552,8 +558,8 @@
 		"BSBookshelfGetBookData": "\\BlueSpice\\Bookshelf\\Hook\\BSBookshelfGetBookData\\RunLegacyHook::callback",
 		"GetPreferences": "\\BlueSpice\\Bookshelf\\Hook\\GetPreferences\\BookshelfDefaultView::callback",
 		"SkinTemplateNavigation::Universal": [
-			"BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigationUniversal\\AddAddToBookEntry::callback",
-			"BlueSpice\\Bookshelf\\Hook\\SkinTemplateNavigationUniversal\\AddEditBook::callback"
+			"addAddToBookEntry",
+			"addEditBook"
 		],
 		"BSUEModulePDFAfterFindFiles": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFAfterFindFiles\\AddAttachments::callback",
 		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\Bookshelf\\Hook\\BSUsageTrackerRegisterCollectors\\NoOfUserBooks::callback",
