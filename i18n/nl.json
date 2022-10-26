@@ -30,7 +30,7 @@
 	"bs-bookshelf-add-to-book-label-book": "Boek",
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "De tag 'bookshelf' wijzigen in de pagina (nieuwe versie)",
-	"bs-bookshelf-add-to-book-added": "De pagina is aan het boek '$1' toegevoegd.",
+	"bs-bookshelf-add-to-book-added": "De pagina is aan het boek \"$1\" toegevoegd.",
 	"bs-bookshelf-add-to-book-mod-bstag": "De tag \"bookshelf\" van de pagina is gewijzigd. De pagina wordt opnieuw geladen.",
 	"apihelp-bs-bookshelf-store-description": "Geeft een overzicht van alle boeken. Maakt sorteren, filteren en pagineren mogelijk. Implementeert ExtJS Store-parameters.",
 	"apihelp-bs-bookshelf-store-param-tempBooks": "Lijst met boeken in de lokale opslag van de cliënt die moeten worden opgenomen in het opslagantwoord",
