@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Meno25",
 			"ديفيد",
 			"محمد أحمد عبد الفتاح"
 		]
@@ -61,6 +62,7 @@
 	"bs-bookshelfui-nav-link-title-all-books": "الكتب العامة",
 	"bs-bookshelfui-flyout-title": "قائمة الكتب",
 	"bs-bookshelfui-flyout-intro": "هنا يمكنك رؤية جميع الكتب المتاحة، لإضافة كتاب جديد؛ انتقل إلى [[Special:Bookmanager|مدير الكتاب]].",
+	"bs-bookshelfui-intro": "هنا يمكنك رؤية جميع الكتب المتاحة. لإضافة كتاب جديد ، انتقل إلى [[Special:Bookmanager|book manager]].",
 	"bs-bookshelfui-book-title-link-edit": "تحرير الكتاب",
 	"bs-bookshelfui-book-title-link-edit-text": "تحرير الكتاب",
 	"bs-bookshelfui-export-book-text": "الرجاء الانتظار أثناء إنشاء الكتاب.",
@@ -91,5 +93,9 @@
 	"bs-bookshelfui-prof-defaultview-grid": "شبكة",
 	"bs-bookshelfui-prof-defaultview-images": "الصور",
 	"bs-bookshelfui-chapterpager-previous": "السابق",
-	"bs-bookshelfui-chapterpager-next": "التالي"
+	"bs-bookshelfui-chapterpager-next": "التالي",
+	"bs-bookshelfui-panel-navigation-text": "لحجز الملاحة",
+	"bs-bookshelfui-panel-navigation-title": "العودة إلى كتاب الملاحة",
+	"bs-bookshelfui-panel-navigation-aria-label": "لحجز الملاحة",
+	"bs-bookshelfui-panel-navigation-aria-desc": "التنقل في الكتاب كهيكل شجرة"
 }
