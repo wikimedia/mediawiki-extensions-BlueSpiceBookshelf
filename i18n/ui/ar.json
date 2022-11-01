@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Meno25",
 			"ديفيد",
 			"محمد أحمد عبد الفتاح"
 		]
@@ -91,5 +92,10 @@
 	"bs-bookshelfui-prof-defaultview-grid": "شبكة",
 	"bs-bookshelfui-prof-defaultview-images": "الصور",
 	"bs-bookshelfui-chapterpager-previous": "السابق",
-	"bs-bookshelfui-chapterpager-next": "التالي"
+	"bs-bookshelfui-chapterpager-next": "التالي",
+	"bs-bookshelfui-intro": "هنا يمكنك رؤية جميع الكتب المتاحة. لإضافة كتاب جديد ، انتقل إلى [[Special:Bookmanager|book manager]].",
+	"bs-bookshelfui-panel-navigation-text": "لحجز الملاحة",
+	"bs-bookshelfui-panel-navigation-title": "العودة إلى كتاب الملاحة",
+	"bs-bookshelfui-panel-navigation-aria-label": "لحجز الملاحة",
+	"bs-bookshelfui-panel-navigation-aria-desc": "التنقل في الكتاب كهيكل شجرة"
 }
