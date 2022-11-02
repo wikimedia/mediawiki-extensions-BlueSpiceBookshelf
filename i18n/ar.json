@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"FiberAhmed",
+			"Meno25",
 			"أَحمد",
 			"ديفيد",
 			"محمد أحمد عبد الفتاح"
@@ -29,7 +30,7 @@
 	"bs-bookshelf-add-to-book-label-book": "كتاب",
 	"bs-bookshelf-add-to-book-label-alias": "الاسم المستعار",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "تعديل وسم \"رف الكتب\" في الصفحة (مراجعة جديدة)",
-	"bs-bookshelf-add-to-book-added": "تمت إضافة الصفحة إلى كتاب '$1'.",
+	"bs-bookshelf-add-to-book-added": "تمت إضافة الصفحة إلى كتاب \" $1 \".",
 	"bs-bookshelf-add-to-book-mod-bstag": "تم تغيير وسم \"رف الكتب\" للصفحة؛ ستتم إعادة تحميل الصفحة",
 	"apihelp-bs-bookshelf-store-description": "يسرد جميع الكتب، يسمح بالفرز والترشيح وترقيم الصفحات، تنفذ المعلمات مخزن ExtJS.",
 	"apihelp-bs-bookshelf-bookstore-description": "يسرد جميع الفصول لكتاب معين، يسمح بالفرز والترشيح وترقيم الصفحات، تنفذ المعلمات مخزن ExtJS.",
