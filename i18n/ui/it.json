@@ -92,5 +92,8 @@
 	"bs-bookshelfui-prof-defaultview-images": "Immagini",
 	"bs-bookshelfui-chapterpager-previous": "Precedente",
 	"bs-bookshelfui-chapterpager-next": "Successivo",
-	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo di sorgente per l'aggiunta massiva"
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo di sorgente per l'aggiunta massiva",
+	"bs-bookshelfui-panel-navigation-title": "Torna alla navigazione del libro",
+	"bs-bookshelfui-panel-navigation-aria-label": "Alla navigazione del libro",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navigazione del libro come struttura ad albero"
 }
