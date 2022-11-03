@@ -92,5 +92,8 @@
 	"apihelp-bs-bookshelf-manage-summary": "Fornisce compiti per la manipolazione del libro.",
 	"action-bookshelfbookmanager-viewspecialpage": "accedere alla pagina speciale [[Special:BookshelfBookManager]]",
 	"right-bookshelfbookui-viewspecialpage": "Accede alla pagina speciale [[Special:BookshelfBookUI]]",
-	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo di sorgente per l'aggiunta massiva"
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Tipo di sorgente per l'aggiunta massiva",
+	"bs-bookshelfui-panel-navigation-title": "Torna alla navigazione del libro",
+	"bs-bookshelfui-panel-navigation-aria-label": "Alla navigazione del libro",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navigazione del libro come struttura ad albero"
 }
