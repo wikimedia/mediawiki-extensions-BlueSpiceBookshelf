@@ -92,5 +92,8 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Griglia",
 	"bs-bookshelfui-prof-defaultview-images": "Immagini",
 	"bs-bookshelfui-chapterpager-previous": "Precedente",
-	"bs-bookshelfui-chapterpager-next": "Successivo"
+	"bs-bookshelfui-chapterpager-next": "Successivo",
+	"bs-bookshelfui-panel-navigation-title": "Torna alla navigazione del libro",
+	"bs-bookshelfui-panel-navigation-aria-label": "Alla navigazione del libro",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navigazione del libro come struttura ad albero"
 }
