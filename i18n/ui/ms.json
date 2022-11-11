@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Anakmalaysia",
 			"Tofeiku"
 		]
 	},
 	"bookshelf": "Rak buku",
-	"bs-bookshelfui-prof-defaultview-images": "Imej"
+	"bs-bookshelfui-prof-defaultview-images": "Imej",
+	"bs-bookshelfui-prof-defaultview": "Paparan lalai"
 }
