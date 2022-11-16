@@ -38,6 +38,7 @@ Ext.define('BS.Bookshelf.panel.BookEditor', {
 
 			this.btnOK = Ext.create('Ext.button.Split', {
 				text: mw.message('bs-extjs-save').plain(),
+				ariaLabel: mw.message('bs-extjs-save').plain(),
 				id: this.getId() + '-btn-save',
 				menu: new Ext.menu.Menu( {
 					items: [
@@ -48,6 +49,7 @@ Ext.define('BS.Bookshelf.panel.BookEditor', {
 		} else {
 			this.btnOK = Ext.create( 'Ext.button.Button', {
 				text: mw.message('bs-extjs-save').plain(),
+				ariaLabel: mw.message('bs-extjs-save').plain(),
 				id: this.getId() + '-btn-save'
 			} );
 		}
@@ -56,6 +58,7 @@ Ext.define('BS.Bookshelf.panel.BookEditor', {
 
 		this.btnCancel = Ext.create('Ext.Button', {
 			text: mw.message('bs-extjs-cancel').plain(),
+			ariaLabel: mw.message('bs-extjs-cancel').plain(),
 			id: this.getId() + '-btn-cancel'
 		});
 		this.btnCancel.on('click', this.onBtnCancelClick, this);
@@ -94,6 +97,7 @@ Ext.define('BS.Bookshelf.panel.BookEditor', {
 			icon: mw.config.get( 'wgScriptPath') + '/extensions/BlueSpiceBookshelf/resources/images/bs-btn_massadd.png',
 			iconCls: 'btn'+this.tbarHeight,
 			tooltip: mw.message( 'bs-bookshelfui-extjs-tooltip-add-mass' ).plain(),
+			ariaLabel: mw.message( 'bs-bookshelfui-extjs-tooltip-add-mass' ).plain(),
 			height: 50,
 			width: 52,
 			disabled: true

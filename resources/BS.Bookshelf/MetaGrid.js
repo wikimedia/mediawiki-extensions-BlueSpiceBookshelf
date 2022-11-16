@@ -16,12 +16,14 @@ Ext.define( 'BS.Bookshelf.MetaGrid', {
 	initComponent: function() {
 		this.btnAdd = new Ext.Button({
 			text: mw.message('bs-extjs-add').plain(),
+			ariaLabel: mw.message('bs-extjs-add').plain(),
 			iconCls: 'icon-fff-add'
 		});
 		this.btnAdd.on( 'click', this.onBtnAddClick, this );
 
 		this.btnRemove = new Ext.Button({
 			text: mw.message('bs-extjs-remove').plain(),
+			ariaLabel: mw.message('bs-extjs-remove').plain(),
 			iconCls: 'icon-fff-delete'
 		});
 		this.btnRemove.on( 'click', this.onBtnRemoveClick, this );
