@@ -179,6 +179,7 @@ Ext.define( 'BS.Bookshelf.panel.BookManager', {
 			icon: mw.config.get( 'wgScriptPath') + '/extensions/BlueSpiceBookshelf/resources/images/bs-btn_bookclone.png',
 			iconCls: 'btn'+this.tbarHeight,
 			tooltip: mw.message('bs-bookshelfui-extjs-tooltip-copy').plain(),
+			ariaLabel: mw.message('bs-bookshelfui-extjs-tooltip-copy').plain(),
 			height: 50,
 			width: 52,
 			disabled: true
