@@ -69,8 +69,7 @@ class BookContentHandler extends TextContentHandler {
 			$output->addJsConfigVars( 'bsBookshelfData', $bookEditData->getBookData() );
 			$output->addModules( [ 'ext.bluespice.bookshelf.view' ] );
 			$output->setText( \Html::element( 'div', [ 'id' => 'bs-bookshelf-view' ] ) );
-		}
-		catch ( MWException $e ) {
+		} catch ( MWException $e ) {
 			$output->addWarningMsg( "bs-bookshelf-warning", $e->getText() );
 		}
 	}

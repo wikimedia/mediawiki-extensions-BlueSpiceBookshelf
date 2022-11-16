@@ -109,8 +109,7 @@ class ModifyForExport extends BSUEModulePDFgetPage {
 
 			$aAncestors = $oPHP->getAncestorsFor( $sRequestedTitle );
 			$this->createRunningHeader( $this->page, $aAncestors, $oPHP->getBookMeta() );
-		}
-		catch ( Exception $e ) {
+		} catch ( Exception $e ) {
 			// No bookshelf tag? Well in this case we do not need to take any action...
 			wfDebugLog(
 				'BS::Bookshelf',

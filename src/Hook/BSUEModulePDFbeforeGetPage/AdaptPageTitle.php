@@ -45,8 +45,7 @@ class AdaptPageTitle {
 			}
 
 			$params['display-title'] = $sDisplayTitle;
-		}
-		catch ( Exception $e ) {
+		} catch ( Exception $e ) {
 			return true;
 		}
 
