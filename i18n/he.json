@@ -55,5 +55,9 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "מדף הספרים",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "ספר",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "הגדרת הספר שהדפים שייכים אליו",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "הוספת מספרי הפרקים של הספר לתוכן העניינים ולכל הכותרות בעמוד"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "הוספת מספרי הפרקים של הספר לתוכן העניינים ולכל הכותרות בעמוד",
+	"prefs-bookshelf": "דף מיוחד למדף ספרים",
+	"right-bookshelf-viewspecialpage": "גישה לדף המיוחד [[Special:Bookshelf]]",
+	"action-bookshelf-viewspecialpage": "לגשת לדף המיוחד [[Special:Bookshelf]]",
+	"bs-bookshelf-warning": "חריג PHP‏: $1"
 }
