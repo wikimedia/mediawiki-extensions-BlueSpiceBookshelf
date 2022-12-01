@@ -4,6 +4,7 @@
 			"A2y4",
 			"Aefgh39622",
 			"MathXplore",
+			"Omotecho",
 			"RYOUMA1117",
 			"Shirayuki"
 		]
@@ -37,6 +38,8 @@
 	"right-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] にアクセス",
 	"action-bookshelf-viewspecialpage": "特別ページ [[Special:Bookshelf]] へのアクセス",
 	"bs-bookshelf-action-save-to-local-storage": "ローカルストレージに保存",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "コンテンツの前に本の章見出しのページャーを表示",
+	"bs-bookshelf-pref-chapterpageraftercontent": "コンテンツの後に本の章見出しのページャーを表示",
 	"bs-bookshelf-warning": "PHPの例外： $1",
 	"bs-bookshelf-ve-booklistinspector-title": "本の一覧",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "フィルター",
