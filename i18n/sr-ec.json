@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BadDog",
+			"Milicevic01",
 			"Вукан Ц"
 		]
 	},
@@ -13,5 +14,7 @@
 	"bs-bookshelf-tag-edit-book": "Уреди књигу",
 	"bs-bookshelf-add-to-book-label": "Додај у књигу",
 	"bs-bookshelf-add-to-book-label-book": "Књига",
-	"bs-bookshelf-add-to-book-label-alias": "Псеудоним"
+	"bs-bookshelf-add-to-book-label-alias": "Псеудоним",
+	"bs-bookshelf-setting-path-feature": "Књига",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Аутор"
 }
