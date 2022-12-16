@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BadDog",
+			"Milicevic01",
 			"Вукан Ц"
 		]
 	},
@@ -30,5 +31,8 @@
 	"bs-bookshelfui-bookmetatag-version": "Верзија",
 	"bs-bookshelfui-extjs-tooltip-copy": "Копирај",
 	"bs-bookshelfui-chapterpager-previous": "Претходна",
-	"bs-bookshelfui-chapterpager-next": "Следећа"
+	"bs-bookshelfui-chapterpager-next": "Следећа",
+	"bs-bookshelfui-empty-selection": "Ништа није изабрано",
+	"bs-bookshelfui-bookmetatag-title": "Наслов",
+	"bs-bookshelfui-prof-defaultview-grid": "Мрежа"
 }
