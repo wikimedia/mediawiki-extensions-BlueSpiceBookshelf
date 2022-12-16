@@ -16,5 +16,10 @@
 	"bs-bookshelf-add-to-book-label-book": "Књига",
 	"bs-bookshelf-add-to-book-label-alias": "Псеудоним",
 	"bs-bookshelf-setting-path-feature": "Књига",
-	"bs-bookshelf-ve-bookmeta-attr-author-label": "Аутор"
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Аутор",
+	"bs-bookshelf-action-export-book": "Извези књигу",
+	"bs-bookshelf-edit-title": "$1 — уређивање",
+	"bs-bookshelf-book-grid-title": "Књиге",
+	"bs-bookshelf-prof-defaultview-images": "Слике",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Верзија"
 }
