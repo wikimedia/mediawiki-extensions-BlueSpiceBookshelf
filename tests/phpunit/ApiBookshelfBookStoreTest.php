@@ -1,5 +1,9 @@
 <?php
 
+namespace BlueSpice\Bookshelf\Tests;
+
+use ApiTestCase;
+
 /**
  * @group Broken
  * @group Database
