@@ -147,6 +147,9 @@
 	"AutoloadNamespaces": {
 		"BlueSpice\\Bookshelf\\": "src/"
 	},
+	"TestAutoloadNamespaces": {
+		"BlueSpice\\Bookshelf\\Tests\\": "tests/phpunit/"
+	},
 	"AutoloadClasses": {
 		"PageHierarchyProvider": "includes/PageHierarchyProvider.php",
 		"DynamicPageHierarchyProvider": "includes/DynamicPageHierarchyProvider.php",
