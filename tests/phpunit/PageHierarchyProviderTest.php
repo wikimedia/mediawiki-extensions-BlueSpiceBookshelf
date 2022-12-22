@@ -1,5 +1,11 @@
 <?php
 
+namespace BlueSpice\Bookshelf\Tests;
+
+use MediaWikiIntegrationTestCase;
+use PageHierarchyProvider;
+use Title;
+
 /**
  * @group BlueSpice
  * @group BlueSpiceBookmaker
