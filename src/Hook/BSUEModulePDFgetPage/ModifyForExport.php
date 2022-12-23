@@ -4,7 +4,6 @@ namespace BlueSpice\Bookshelf\Hook\BSUEModulePDFgetPage;
 
 use BlueSpice\UEModulePDF\Hook\BSUEModulePDFgetPage;
 use Exception;
-use MediaWiki\MediaWikiServices;
 use PageHierarchyProvider;
 use Title;
 
@@ -14,7 +13,9 @@ class ModifyForExport extends BSUEModulePDFgetPage {
 	 * @return bool
 	 */
 	protected function doProcess() {
-		$bUserNumberHeadings = (bool)$this->getContext()->getUser()->getOption( 'numberheadings' );
+		$services = $this->getServices();
+		$bUserNumberHeadings = $services->getUserOptionsLookup()
+			->getBoolOption( $this->getContext()->getUser(), 'numberheadings' );
 		// TODO RBV (10.02.12 16:35): Use Hook "BSUEModulePDFcleanUpDOM"
 		// Remove <bs:bookshelf ... /> generated Markup
 		$oBookshelfTagContainerElements =
@@ -28,9 +29,7 @@ class ModifyForExport extends BSUEModulePDFgetPage {
 		$sDisplayTitle = $sRequestedTitle;
 		try {
 			if ( isset( $this->params['php'] ) && isset( $this->params['php']['title'] ) ) {
-				$phpf = MediaWikiServices::getInstance()->getService(
-					'BSBookshelfPageHierarchyProviderFactory'
-				);
+				$phpf = $services->getService( 'BSBookshelfPageHierarchyProviderFactory' );
 				$oPHP = $phpf->getInstanceFor( $this->params['php']['title'], $this->params['php'] );
 
 			} else {
