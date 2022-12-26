@@ -8,11 +8,16 @@
 	"bs-bookshelf-action-editbook-create": "Uredi vir",
 	"bs-bookshelf-book-grid-title": "Knjige",
 	"bs-bookshelf-ga-manager-label": "Knjige",
-	"bs-bookshelf-ve-bookmeta-attr-version-label": "Redakcija",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Različica",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Knjiga",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Knjižnica",
 	"bs-bookshelf-setting-path-feature": "Knjiga",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Naslov",
 	"bs-bookshelf-add-to-book-added": "Stran je bila dodana knjigi »$1«.",
-	"bs-bookshelf-ve-bookmeta-attr-author-label": "Avtor"
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Avtor",
+	"bs-bookshelf-tag-bookmeta-desc": "Oznaka za shranjevanje različnih metapodatkov o knjižnih člankih. Ti so vključeni v knjigo. Atributi te oznake morajo biti usklajeni z metapodatki knjižnega članka.",
+	"bs-bookshelf-prof-defaultview-images": "Slike",
+	"bs-bookshelf-action-save-to-local-storage": "Shranjevanje v lokalno shrambo",
+	"bs-bookshelf-warning": "Izjema PHP: $1",
+	"bs-bookshelf-tag-bookmeta-description": "Oznaka za shranjevanje različnih metapodatkov o knjižnih straneh. Ti so vključeni v knjigo. Atributi te oznake morajo biti usklajeni z metapodatki knjižne strani."
 }
