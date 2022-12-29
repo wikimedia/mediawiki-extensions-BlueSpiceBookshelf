@@ -59,5 +59,8 @@
 	"prefs-bookshelf": "דף מיוחד למדף ספרים",
 	"right-bookshelf-viewspecialpage": "גישה לדף המיוחד [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "לגשת לדף המיוחד [[Special:Bookshelf]]",
-	"bs-bookshelf-warning": "חריג PHP‏: $1"
+	"bs-bookshelf-warning": "חריג PHP‏: $1",
+	"apihelp-bs-bookshelf-store-description": "רושמת את כל הספרים. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
+	"apihelp-bs-bookshelf-bookstore-description": "רושמת את כל הפרקים של ספר נתון. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
+	"apihelp-bs-bookshelf-bookstore-summary": "רושמת את כל הפרקים של ספר נתון. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS."
 }
