@@ -3,6 +3,7 @@
 		"authors": [
 			"Kareyac",
 			"Pefect",
+			"Superjurek",
 			"WaldiSt"
 		]
 	},
@@ -16,11 +17,13 @@
 	"bs-bookshelf-grouping-template-type-user_book": "Własne książki",
 	"bs-bookshelf-action-editbook": "Edytuj kod źródłowy",
 	"bs-bookshelf-action-editbook-create": "Edytuj kod źródłowy",
+	"bs-bookshelf-action-export-book": "Eksportuj książkę",
 	"bs-bookshelf-edit-title": "Edycja $1",
 	"bs-bookshelf-book-grid-title": "Książki",
 	"bs-bookshelf-prof-defaultview": "Widok domyślny",
 	"bs-bookshelf-prof-defaultview-images": "Obrazy",
 	"bs-bookshelf-actionmenuentry-addtobook": "Dodaj do książki",
+	"bs-bookshelf-ve-booklistinspector-title": "Lista książek",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtruj",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Tytuł",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Podtytuł",
