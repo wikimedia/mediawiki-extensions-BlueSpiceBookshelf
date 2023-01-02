@@ -3,6 +3,7 @@
 		"authors": [
 			"Kareyac",
 			"Pefect",
+			"Superjurek",
 			"WaldiSt"
 		]
 	},
@@ -26,5 +27,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Podtytuł",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autor",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Wersja",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Książka"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Książka",
+	"bs-bookshelf-action-export-book": "Eksportuj książkę",
+	"bs-bookshelf-ve-booklistinspector-title": "Lista książek"
 }
