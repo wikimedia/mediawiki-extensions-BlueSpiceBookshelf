@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Afalau",
 			"Robin Owain"
 		]
 	},
@@ -18,6 +19,6 @@
 	"bs-bookshelf-prof-defaultview-grid": "Grid",
 	"bs-bookshelf-prof-defaultview-images": "Delweddau",
 	"bs-bookshelf-action-save-to-local-storage": "Wrthi'n cadw ar storfa leol",
-	"bs-bookshelf-action-editbook": "Golygwch ffynhonnell y llyfr/au",
-	"bs-bookshelf-action-editbook-create": "Creewch ffynhonnell y llyfr"
+	"bs-bookshelf-action-editbook": "Golygu ffynhonnell",
+	"bs-bookshelf-action-editbook-create": "Golygu ffynhonnell"
 }
