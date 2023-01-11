@@ -68,7 +68,7 @@
 	"bs-bookshelf-warning": "Izjema PHP: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Dodaj v knjigo",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "Prikaži vstopno točko »knjižna polica«.",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "Prikaži vstopno točko »Knjižna polica« v levem podoknu za krmarjenje",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Prikaži vstopno točko »Knjižna polica« v navigaciji levo",
 	"bs-bookshelf-tag-booklist-description": "Ustvari sezname člankov iz imenskega prostora »Knjiga« in jo je mogoče filtrirati. Navedba filtra je obvezna.",
 	"bs-bookshelf-ve-booklistinspector-title": "Seznam knjig",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
