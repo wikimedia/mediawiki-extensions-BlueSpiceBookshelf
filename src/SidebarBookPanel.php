@@ -11,6 +11,7 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\ITabPanel;
 use PageHierarchyProvider;
+use Title;
 
 class SidebarBookPanel extends ComponentBase implements ITabPanel {
 
@@ -112,9 +113,9 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 		if ( $title->isRedirect() ) {
 			$webRequestValues = $context->getRequest()->getValues();
 			if ( !isset( $webRequestValues['redirect'] ) || $webRequestValues['redirect'] !== 'no' ) {
-				/** @var Title $title */
-				$title = MediaWikiServices::getInstance()->getRedirectLookup()
+				$redirTarget = MediaWikiServices::getInstance()->getRedirectLookup()
 					->getRedirectTarget( $context->getWikiPage() );
+				$title = Title::newFromLinkTarget( $redirTarget );
 			}
 		}
 		try {
