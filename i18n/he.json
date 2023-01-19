@@ -62,5 +62,6 @@
 	"bs-bookshelf-warning": "חריג PHP‏: $1",
 	"apihelp-bs-bookshelf-store-description": "רושמת את כל הספרים. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
 	"apihelp-bs-bookshelf-bookstore-description": "רושמת את כל הפרקים של ספר נתון. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
-	"apihelp-bs-bookshelf-bookstore-summary": "רושמת את כל הפרקים של ספר נתון. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS."
+	"apihelp-bs-bookshelf-bookstore-summary": "רושמת את כל הפרקים של ספר נתון. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
+	"bs-bookshelf-extension-description": "מאפשר ל־BlueSpice לנהל אוספים הייררכיים של ערכים ולייצא."
 }
