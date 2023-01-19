@@ -8,6 +8,7 @@
 			"שוקו מוקה"
 		]
 	},
+	"bs-bookshelf-extension-description": "מאפשר ל־BlueSpice לנהל אוספים הייררכיים של ערכים ולייצא.",
 	"bs-bookshelf-positive-integer-validation-not-approved": "ניתן להשתמש רק במספרים שלמים חיוביים.",
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "נא להשתמש ב־<i>left</i> או ב־<i>right</i>.",
 	"bs-bookshelf-specialpage-title": "ספרים",
