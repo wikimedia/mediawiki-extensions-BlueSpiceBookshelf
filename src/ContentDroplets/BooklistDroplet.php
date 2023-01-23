@@ -4,7 +4,6 @@ namespace BlueSpice\Bookshelf\ContentDroplets;
 
 use MediaWiki\Extension\ContentDroplets\Droplet\TagDroplet;
 use Message;
-use RawMessage;
 
 class BooklistDroplet extends TagDroplet {
 
@@ -12,21 +11,21 @@ class BooklistDroplet extends TagDroplet {
 	 * @inheritDoc
 	 */
 	public function getName(): Message {
-		return new RawMessage( 'Booklist' );
+		return Message::newFromKey( 'bs-bookshelf-droplet-name' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	public function getDescription(): Message {
-		return new RawMessage( "Booklist description" );
+		return Message::newFromKey( "bs-bookshelf-droplet-description" );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	public function getIcon(): string {
-		return 'book';
+		return 'droplet-book';
 	}
 
 	/**
