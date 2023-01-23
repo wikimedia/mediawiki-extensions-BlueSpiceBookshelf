@@ -430,6 +430,7 @@
 			"scripts": [
 				"bs.bookshelf/util/tag/BooklistDefinition.js"
 			],
+			"styles": "bluespice.booklist.droplet.css",
 			"messages": [
 				"bs-bookshelf-tag-booklist-description",
 				"bs-bookshelf-ve-booklistinspector-title",
