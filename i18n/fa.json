@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"0PAWN0",
 			"Beginneruser",
 			"FarsiNevis",
 			"Jeeputer",
@@ -57,5 +58,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "نسخه",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "نسخهٔ کتاب را تنظیم می‌کند",
 	"bs-bookshelf-ve-bookshelfinspector-title": "قفسه",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "کتاب"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "کتاب",
+	"bs-bookshelf-ve-booklistinspector-title": "فهرست‌کتاب",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "مشخص می کند که صفحات، متعلق به کدام کتاب است‌"
 }
