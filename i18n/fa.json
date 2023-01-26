@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"0PAWN0",
 			"Beginneruser",
 			"FarsiNevis",
 			"Jeeputer",
@@ -48,6 +49,7 @@
 	"action-bookshelf-viewspecialpage": "دست‌یابی به ویژه‌صفحهٔ [[Special:Bookshelf]]",
 	"bs-bookshelf-action-save-to-local-storage": "در حال ذخیرهٔ مخزن محلی",
 	"bs-bookshelf-actionmenuentry-addtobook": "افزودن به کتاب",
+	"bs-bookshelf-ve-booklistinspector-title": "فهرست‌کتاب",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "پالایه",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "عنوان",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "زیرنویس",
@@ -57,5 +59,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "نسخه",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "نسخهٔ کتاب را تنظیم می‌کند",
 	"bs-bookshelf-ve-bookshelfinspector-title": "قفسه",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "کتاب"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "کتاب",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "مشخص می کند که صفحات، متعلق به کدام کتاب است‌"
 }
