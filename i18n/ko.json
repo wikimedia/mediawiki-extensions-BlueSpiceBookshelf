@@ -61,5 +61,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "판",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "책의 판을 설정합니다",
 	"bs-bookshelf-ve-bookshelfinspector-title": "책장",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "책"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "책",
+	"bs-bookshelf-ve-booklistinspector-title": "책 목록"
 }
