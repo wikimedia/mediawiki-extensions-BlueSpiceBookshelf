@@ -50,6 +50,7 @@
 	"bs-bookshelf-pref-supressbookns-help": "문서 이름의 이름공간은 PDF 출력에서 숨겨집니다.",
 	"bs-bookshelf-warning": "PHP 예외: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "책에 추가",
+	"bs-bookshelf-ve-booklistinspector-title": "책 목록",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "필터",
 	"bs-bookshelf-ve-bookmetainspector-title": "북메타",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "제목",
