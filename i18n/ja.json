@@ -3,6 +3,7 @@
 		"authors": [
 			"A2y4",
 			"Aefgh39622",
+			"Buehl",
 			"MathXplore",
 			"Omotecho",
 			"RYOUMA1117",
@@ -49,5 +50,7 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "本棚",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "書籍",
 	"bs-bookshelf-pref-chapterpagerbeforecontent": "コンテンツの前に本の章見出しのページャーを表示",
-	"bs-bookshelf-pref-chapterpageraftercontent": "コンテンツの後に本の章見出しのページャーを表示"
+	"bs-bookshelf-pref-chapterpageraftercontent": "コンテンツの後に本の章見出しのページャーを表示",
+	"bs-bookshelf-actionmenuentry-addtobook": "ブックに追加",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "副題"
 }
