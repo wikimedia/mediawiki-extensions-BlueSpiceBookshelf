@@ -34,5 +34,6 @@
 	"bs-bookshelfui-chapterpager-next": "Следећа",
 	"bs-bookshelfui-empty-selection": "Ништа није изабрано",
 	"bs-bookshelfui-bookmetatag-title": "Наслов",
-	"bs-bookshelfui-prof-defaultview-grid": "Мрежа"
+	"bs-bookshelfui-prof-defaultview-grid": "Мрежа",
+	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "Наслов за приказ"
 }
