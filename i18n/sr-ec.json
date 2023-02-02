@@ -19,7 +19,11 @@
 	"bs-bookshelf-action-export-book": "Извези књигу",
 	"bs-bookshelf-edit-title": "$1 — уређивање",
 	"bs-bookshelf-book-grid-title": "Књиге",
+	"bs-bookshelf-ga-manager-label": "Књиге",
+	"bs-bookshelf-prof-defaultview": "Подразумевани приказ",
+	"bs-bookshelf-prof-defaultview-grid": "Мрежа",
 	"bs-bookshelf-prof-defaultview-images": "Слике",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Аутор",
-	"bs-bookshelf-ve-bookmeta-attr-version-label": "Верзија"
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Верзија",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Књига"
 }
