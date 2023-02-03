@@ -7,7 +7,8 @@
 			"Omotecho",
 			"RYOUMA1117",
 			"Shirayuki",
-			"Suchichi02"
+			"Suchichi02",
+			"背番号4のエース"
 		]
 	},
 	"bookshelfbookui": "書籍エディター",
@@ -79,5 +80,27 @@
 	"bs-bookshelfui-prof-defaultview-grid": "グリッド",
 	"bs-bookshelfui-prof-defaultview-images": "画像",
 	"bs-bookshelfui-chapterpager-previous": "前へ",
-	"bs-bookshelfui-chapterpager-next": "次へ"
+	"bs-bookshelfui-chapterpager-next": "次へ",
+	"bs-bookshelfui-extension-description": "BlueSpiceが記事の階層コレクションを管理およびエクスポートできるようにします。",
+	"bs-bookshelfui-delete-book-text": "本当にこの本を削除しますか? 「本棚」タグは、リンクされたウィキページから<em>自動的に削除されません</em>!",
+	"bs-bookshelfui-save-and-modify": "各ウィキページにブックナビゲーションを保存して追加する",
+	"bs-bookshelfui-edit-source": "ソースのウィキページを編集",
+	"bs-bookshelfui-open-source": "ソースのウィキページを表示",
+	"bs-bookshelfui-confirm-delete-text": "選択したチャプタを本当に削除しますか?サブチャプターも削除されます。",
+	"bs-bookshelfui-override-tag-title": "ウィキページの関連付けを変更する",
+	"bs-bookshelfui-override-tag-text": "ウィキページ内の本の関連付け(<code><bs:bookshelf /></code>)を追加または更新しますか?新しいバージョンのウィキページが作成されます。",
+	"apihelp-bs-bookshelf-manage-summary": "本を操作するためのタスクを提供します。",
+	"bs-bookshelfui-flyout-intro": "ここでは、利用可能なすべての書籍を表示できます。新しい本を追加するには、[[Special:Bookmanager|book manager]]に移動します。",
+	"bs-bookshelfui-intro": "ここでは、利用可能なすべての書籍を表示できます。新しい本を追加するには、[[Special:Bookmanager|book manager]]にアクセスしてください。",
+	"bs-bookshelfui-bookmanager-deletion-error-permission": "この操作を行なうために必要な権限がありません。",
+	"bs-bookshelfui-bookmanager-deletion-error-unkown": "不明なエラーが発生しました。管理者に連絡してください。",
+	"apihelp-bs-bookshelf-page-collection-store-summary": "ブックにまとめて追加できるページのコレクションを提供します。",
+	"apihelp-bs-bookshelf-mass-add-page-store-summary": "ブックにまとめて追加できるページを提供します。",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "どのページを返すかに基づくルート値を表示",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "一括追加のソースのタイプ",
+	"prefs-bookshelfui": "本棚特設ページ",
+	"bs-bookshelfui-panel-navigation-text": "ナビを予約するには",
+	"bs-bookshelfui-panel-navigation-title": "ブックナビゲーションに戻る",
+	"bs-bookshelfui-panel-navigation-aria-label": "ナビを予約するには",
+	"bs-bookshelfui-panel-navigation-aria-desc": "ツリー構造としてのブック ナビゲーション"
 }
