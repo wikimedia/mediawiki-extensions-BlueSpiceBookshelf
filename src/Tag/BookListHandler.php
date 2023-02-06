@@ -81,8 +81,10 @@ class BookListHandler extends Handler {
 			);
 			$meta = $oPHProvider->getBookMeta();
 			if ( empty( $meta ) ) {
-				// No tag found?
-				continue;
+				// No meta found - implicitly use page title as title meta
+				$meta = [
+					'title' => $sourceTitle->getText()
+				];
 			}
 
 			$match = false;
