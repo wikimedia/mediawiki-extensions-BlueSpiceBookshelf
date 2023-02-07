@@ -7,8 +7,10 @@
 			"שוקו מוקה"
 		]
 	},
+	"bs-bookshelfui-extension-description": "אפשרות ש־BlueSpice ינהל אוספים הייררכיים של דפי ויקי.",
 	"bookshelfbookui": "עורך ספרים",
 	"bookshelfbookmanager": "מנהל ספרים",
+	"bs-bookshelfui-editor-no-title-provided": "לא סופקה כותרת תקנית לספר",
 	"bs-bookshelfui-editor-title": "עורך ספרים: $1",
 	"bs-bookshelfui-widget-editor-link-text": "לערוך את הספר הזה",
 	"bs-bookshelfui-new-book-title": "ליצור ספר חדש",
@@ -69,6 +71,8 @@
 	"bs-bookshelfui-bookmetatag-department": "מחלקה",
 	"bs-bookshelfui-bookmetatag-version": "גרסה",
 	"bs-bookshelfui-extjs-tooltip-copy": "להעתיק",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "מספר התוצאות להחזרה",
+	"prefs-bookshelfui": "דף מיוחד למדף ספרים",
 	"bs-bookshelfui-prof-defaultview": "תצוגת בררת מחדל",
 	"bs-bookshelfui-prof-defaultview-grid": "רשת",
 	"bs-bookshelfui-prof-defaultview-images": "תמונות",
