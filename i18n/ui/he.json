@@ -73,5 +73,9 @@
 	"bs-bookshelfui-dlg-choosewikipage-title": "דף ויקי",
 	"bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel": "דף ויקי",
 	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "כותרת התצוגה",
-	"bs-bookshelfui-ctxmnu-open": "לפתוח את דף הוויקי בחלון חדש"
+	"bs-bookshelfui-ctxmnu-open": "לפתוח את דף הוויקי בחלון חדש",
+	"bs-bookshelfui-extension-description": "אפשרות ש־BlueSpice ינהל אוספים הייררכיים של דפי ויקי.",
+	"bs-bookshelfui-editor-no-title-provided": "לא סופקה כותרת תקנית לספר",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "מספר התוצאות להחזרה",
+	"prefs-bookshelfui": "דף מיוחד למדף ספרים"
 }
