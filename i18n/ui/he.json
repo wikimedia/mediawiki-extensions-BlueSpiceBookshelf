@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
+			"Xnet1234",
 			"YaronSh",
 			"ישראל קלר",
 			"שוקו מוקה"
@@ -77,5 +78,11 @@
 	"bs-bookshelfui-extension-description": "אפשרות ש־BlueSpice ינהל אוספים הייררכיים של דפי ויקי.",
 	"bs-bookshelfui-editor-no-title-provided": "לא סופקה כותרת תקנית לספר",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "מספר התוצאות להחזרה",
-	"prefs-bookshelfui": "דף מיוחד למדף ספרים"
+	"prefs-bookshelfui": "דף מיוחד למדף ספרים",
+	"bs-bookshelfui-delete-book-text": "האם {{gender:|אתה|את}} באמת רוצה למחוק את הספר הזה? תגיות \"מדף ספרים\" <em>לא</em> יוסרו אוטומטית מדפי הוויקיפדיה המקושרים!",
+	"bs-bookshelfui-save-and-modify": "{{gender:שמור והוסף|שמרי והוסיפי}} ניווט בספר לכל דף־ויקי",
+	"bs-bookshelfui-manager-deletionfailure-text": "השגיאה הבאה קרתה בעת ניסיון למחוק את הספר: $1",
+	"bs-bookshelfui-panel-navigation-text": "לניווט בספר",
+	"bs-bookshelfui-panel-navigation-title": "חזרה לניווט בספר",
+	"bs-bookshelfui-panel-navigation-aria-label": "לניווט בספר"
 }
