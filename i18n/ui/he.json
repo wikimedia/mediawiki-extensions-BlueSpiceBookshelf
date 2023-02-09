@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
+			"Xnet1234",
 			"YaronSh",
 			"ישראל קלר",
 			"שוקו מוקה"
@@ -16,7 +17,9 @@
 	"bs-bookshelfui-new-book-title": "ליצור ספר חדש",
 	"bs-bookshelfui-new-book-text": "כותרת הספר",
 	"bs-bookshelfui-delete-book-title": "למחוק ספר",
+	"bs-bookshelfui-delete-book-text": "האם {{gender:|אתה|את}} באמת רוצה למחוק את הספר הזה? תגיות \"מדף ספרים\" <em>לא</em> יוסרו אוטומטית מדפי הוויקיפדיה המקושרים!",
 	"bs-bookshelfui-export-selection": "יצוא הבחירה",
+	"bs-bookshelfui-save-and-modify": "{{gender:שמור והוסף|שמרי והוסיפי}} ניווט בספר לכל דף־ויקי",
 	"bs-bookshelfui-edit-source": "עריכת דף הוויקי המקורי",
 	"bs-bookshelfui-open-source": "הצגת דף הוויקי המקורי",
 	"bs-bookshelfui-bookui-savingprogress-title": "ספר נשמר",
@@ -27,6 +30,7 @@
 	"bs-bookshelfui-manager-deletionsuccess-title": "המחיקה הצליחה!",
 	"bs-bookshelfui-manager-deletionsuccess-text": "הספר נמחק.",
 	"bs-bookshelfui-manager-deletionfailure-title": "שגיאה במחיקה.",
+	"bs-bookshelfui-manager-deletionfailure-text": "השגיאה הבאה קרתה בעת ניסיון למחוק את הספר: $1",
 	"bs-bookshelfui-dlg-choosewikipage-title": "דף ויקי",
 	"bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel": "דף ויקי",
 	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "כותרת התצוגה",
@@ -77,5 +81,8 @@
 	"bs-bookshelfui-prof-defaultview-grid": "רשת",
 	"bs-bookshelfui-prof-defaultview-images": "תמונות",
 	"bs-bookshelfui-chapterpager-previous": "הקודם",
-	"bs-bookshelfui-chapterpager-next": "הבא"
+	"bs-bookshelfui-chapterpager-next": "הבא",
+	"bs-bookshelfui-panel-navigation-text": "לניווט בספר",
+	"bs-bookshelfui-panel-navigation-title": "חזרה לניווט בספר",
+	"bs-bookshelfui-panel-navigation-aria-label": "לניווט בספר"
 }
