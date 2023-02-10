@@ -32,8 +32,8 @@ class BooklistDroplet extends TagDroplet {
 	/**
 	 * @inheritDoc
 	 */
-	public function getRLModule(): string {
-		return 'ext.bluespice.booklist.visualEditorTagDefinition';
+	public function getRLModules(): array {
+		return [ 'ext.bluespice.booklist.visualEditorTagDefinition' ];
 	}
 
 	/**
