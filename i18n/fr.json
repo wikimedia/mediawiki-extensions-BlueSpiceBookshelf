@@ -22,7 +22,7 @@
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Veuillez utiliser <i>left</i> (gauche) ou <i>right</i> (droite).",
 	"bs-bookshelf-specialpage-title": "Livres",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Bibliothèque",
-	"bs-bookshelf-pref-SupressBookNS": "Supprimer le préfixe de l’espace de noms des articles de livre dans les sorties",
+	"bs-bookshelf-pref-SupressBookNS": "Supprimer le préfixe de l’espace de noms des articles de livre dans la sortie",
 	"bs-bookshelf-pref-TitleDisplayText": "Utiliser le titre d’affichage de la source du livre dans l’article",
 	"bs-bookshelf-pref-PrependPageTOCNumbers": "Préfixer la table des matières des articles ainsi que les titres avec la numérotation du livre",
 	"bs-bookshelf-tag-next": "Suivant",
