@@ -17,5 +17,9 @@
 	"bs-bookshelf-book-grid-title": "Knjige",
 	"bs-bookshelf-prof-defaultview-images": "Slike",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autor",
-	"bs-bookshelf-ve-bookmeta-attr-version-label": "Verzija"
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "Verzija",
+	"bs-bookshelf-ga-manager-label": "Knjige",
+	"bs-bookshelf-prof-defaultview": "Podrazumevani prikaz",
+	"bs-bookshelf-prof-defaultview-grid": "Mreža",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Knjiga"
 }
