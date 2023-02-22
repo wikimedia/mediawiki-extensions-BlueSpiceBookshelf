@@ -6,6 +6,7 @@
 			"Markus Mikkonen",
 			"Mediawikitranslator",
 			"Pyscowicz",
+			"Silvonen",
 			"Yupik"
 		]
 	},
@@ -40,5 +41,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versio",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Asettaa kirjan version",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Kirjahylly",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kirja"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kirja",
+	"bs-bookshelf-prof-defaultview": "Oletusnäkymä",
+	"bs-bookshelf-warning": "PHP-poikkeus: $1"
 }
