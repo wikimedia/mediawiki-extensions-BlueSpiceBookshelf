@@ -6,6 +6,7 @@
 			"Markus Mikkonen",
 			"Mediawikitranslator",
 			"Pyscowicz",
+			"Silvonen",
 			"Yupik"
 		]
 	},
@@ -28,8 +29,10 @@
 	"bs-bookshelf-book-grid-title": "Kirjat",
 	"bookshelf": "Kirjahylly",
 	"bs-bookshelf-ga-manager-label": "Kirjat",
+	"bs-bookshelf-prof-defaultview": "Oletusnäkymä",
 	"bs-bookshelf-prof-defaultview-grid": "Ruudukko",
 	"bs-bookshelf-prof-defaultview-images": "Kuvat",
+	"bs-bookshelf-warning": "PHP-poikkeus: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Lisää kirjaan",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Otsikko",
 	"bs-bookshelf-ve-bookmeta-attr-title-help": "Asettaa kirjan otsikon",
