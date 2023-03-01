@@ -130,7 +130,7 @@ class BookEditData {
 			}
 			$php = $phpf->getInstanceFor( $title, $params );
 
-			$tree = $php->getExtendedTOCJSON( [ 'suppress-number-in-text' => true ] );
+			$tree = $php->getExtendedTOCJSON( [ 'suppress-number-in-text' => true, 'no-cache' => true ] );
 			$meta = (object)$php->getBookMeta();
 			if ( $tree === null ) {
 				throw new Exception();
