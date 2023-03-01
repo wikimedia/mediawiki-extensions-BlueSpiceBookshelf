@@ -93,5 +93,7 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Bücherregal",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buch",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definiert, welchem Buch die Seiten angehören",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Fügt dem Inhaltsverzeichnis und allen Überschriften einer Seite die Kapitelnummerierung des Buches hinzu"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Fügt dem Inhaltsverzeichnis und allen Überschriften einer Seite die Kapitelnummerierung des Buches hinzu",
+	"bs-bookshelf-droplet-name": "Bücherliste",
+	"bs-bookshelf-droplet-description": "Liste an Seiten aus dem Namensraum Buch"
 }
