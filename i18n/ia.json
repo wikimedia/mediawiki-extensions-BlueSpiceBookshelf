@@ -87,5 +87,7 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Planca de libros",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Defini al qual libro pertine le paginas",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Adder numeros de capitulo del libro al tabula de contento e a tote le titulos in le pagina"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Adder numeros de capitulo del libro al tabula de contento e a tote le titulos in le pagina",
+	"bs-bookshelf-droplet-name": "Lista de libros",
+	"bs-bookshelf-droplet-description": "Lista de paginas in le spatio de nomines Book"
 }

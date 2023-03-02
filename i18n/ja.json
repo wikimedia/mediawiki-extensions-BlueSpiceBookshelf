@@ -8,6 +8,7 @@
 			"Omotecho",
 			"RYOUMA1117",
 			"Shirayuki",
+			"もなー(偽物)",
 			"背番号4のエース"
 		]
 	},
@@ -96,5 +97,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "ブックのバージョンを設定します",
 	"bs-bookshelf-tag-bookshelf-box-desc": "ブックの一部ではないページにブックの章ナビゲーションを挿入します。ナンバリングは目次に従って自動作成されます。",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "ページが属するブックを定義します",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "本の章番号を目次とページ内のすべての見出しに追加する"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "本の章番号を目次とページ内のすべての見出しに追加する",
+	"bs-bookshelf-droplet-name": "ブックリスト",
+	"bs-bookshelf-droplet-description": "Book名前空間内のページリスト"
 }
