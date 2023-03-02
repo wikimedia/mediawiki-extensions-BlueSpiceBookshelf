@@ -87,5 +87,7 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Knjižna polica",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Knjiga",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Določa, kateri knjigi pripadajo strani",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Kazalu vsebine in vsem naslovom na strani dodaj številke poglavij knjige"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Kazalu vsebine in vsem naslovom na strani dodaj številke poglavij knjige",
+	"bs-bookshelf-droplet-name": "Knjižni seznam",
+	"bs-bookshelf-droplet-description": "Seznam strani v imenskem prostoru Knjiga"
 }

@@ -91,5 +91,7 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Boekenplank",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Boek",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definieert tot welk boek de pagina's behoren",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Voeg hoofdstuknummers van het boek toe aan de inhoudsopgave en alle koppen op de pagina"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Voeg hoofdstuknummers van het boek toe aan de inhoudsopgave en alle koppen op de pagina",
+	"bs-bookshelf-droplet-name": "Boekenlijst",
+	"bs-bookshelf-droplet-description": "Lijst met pagina's in naamruimte Book"
 }

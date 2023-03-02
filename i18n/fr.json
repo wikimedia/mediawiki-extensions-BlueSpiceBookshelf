@@ -6,6 +6,7 @@
 			"DreZhsh",
 			"Eihel",
 			"Gomoko",
+			"Lewis2013",
 			"Thibaut120094",
 			"Verdy p",
 			"Wladek92"
@@ -94,5 +95,7 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Étagère",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Livre",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Définit à quel livre appartiennent les pages",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Ajouter les numéros de chapitre du livre à la table des matières et à tous les titres dans la page"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Ajouter les numéros de chapitre du livre à la table des matières et à tous les titres dans la page",
+	"bs-bookshelf-droplet-name": "Liste de livres",
+	"bs-bookshelf-droplet-description": "liste de pages dans l'espace nomme Livre"
 }
