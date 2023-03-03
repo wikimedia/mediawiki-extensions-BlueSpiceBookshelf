@@ -6,6 +6,7 @@
 			"AYZ04",
 			"Dimension",
 			"Hydra",
+			"John Smith Ri",
 			"Lakejason0",
 			"LittlePaw365",
 			"Qiyue2001",
@@ -107,5 +108,6 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "书架",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "图书",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "定义页面属于哪本书",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "将书籍章节编号添加到目录和页面的所有标题中"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "将书籍章节编号添加到目录和页面的所有标题中",
+	"bs-bookshelf-droplet-description": "命名空间 Book 中的页面列表"
 }

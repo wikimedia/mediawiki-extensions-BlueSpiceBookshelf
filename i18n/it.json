@@ -81,5 +81,7 @@
 	"bs-bookshelf-tag-bookshelf-box-desc": "Inserisce la navigazione di capitoli di un libro in una pagina che non fa parte di un libro. La numerazione è automaticamente creata secondo il sommario",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Scaffale",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definisce a quale libro appartengono le pagine"
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definisce a quale libro appartengono le pagine",
+	"bs-bookshelf-droplet-name": "Elenco di libri",
+	"bs-bookshelf-droplet-description": "Elenco delle pagine nel namespace Libro"
 }
