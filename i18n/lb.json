@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"bs-bookshelf-specialpage-title": "Bicher",
@@ -22,7 +23,7 @@
 	"bookshelf-summary": "Allgemeng Bicher",
 	"bs-bookshelf-ga-manager-label": "Bicher",
 	"bs-bookshelf-prof-defaultview-images": "Biller",
-	"bs-bookshelf-ve-booklistinspector-title": "Buchlëscht",
+	"bs-bookshelf-ve-booklistinspector-title": "Bicherlëscht",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
 	"bs-bookshelf-ve-bookmetainspector-title": "Bookmeta",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titel",
@@ -34,5 +35,11 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versioun",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "D'Versio9un vum Buch gëtt festgeluecht",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Etagère",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buch"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buch",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Wgl. benotzt <i>left</i> oder <i>right</i>.",
+	"bs-bookshelf-empty-selection": "Näischt ausgewielt",
+	"bs-bookshelf-grouping-template-type-ns_book": "Allgemeng Bicher",
+	"bookshelf": "Bicherregal",
+	"prefs-bookshelf": "Bicherregal Spezialsäit",
+	"bs-bookshelf-droplet-name": "Bicherlëscht"
 }
