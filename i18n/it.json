@@ -81,5 +81,7 @@
 	"apihelp-bs-bookshelf-bookstore-summary": "Elenca tutti i capitoli di un determinato libro. Consente l'ordinamento, il filtraggio e l'impaginazione. Implementa i parametri ExtJS Store.",
 	"apihelp-bs-bookshelf-store-summary": "Elenca tutti i libri. Consente ordinamento, filtraggio e impaginazione. Implementa parametri ExtJS Store.",
 	"bs-bookshelf-pref-titledisplaytext-help": "Mostra il titolo della navigazione del libro come titolo della pagina invece del nome della pagina.",
-	"bs-bookshelf-ve-booklistinspector-title": "Elenco di libri"
+	"bs-bookshelf-ve-booklistinspector-title": "Elenco di libri",
+	"bs-bookshelf-droplet-name": "Elenco di libri",
+	"bs-bookshelf-droplet-description": "Elenco delle pagine nel namespace Libro"
 }
