@@ -5,6 +5,7 @@
 			"Eduardoaddad",
 			"Fúlvio",
 			"Juan90264",
+			"Re demz",
 			"Svjatysberega",
 			"Wiiformii"
 		]
@@ -92,5 +93,6 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Estante de livros",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Livro",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definir qual livro com páginas pertencem a",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Adicione os números dos capítulos do livro ao índice e a todos os títulos da página"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Adicione os números dos capítulos do livro ao índice e a todos os títulos da página",
+	"bs-bookshelf-droplet-name": "Lista de livro"
 }
