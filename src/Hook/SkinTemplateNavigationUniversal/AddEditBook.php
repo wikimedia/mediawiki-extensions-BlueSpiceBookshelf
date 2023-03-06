@@ -29,15 +29,16 @@ class AddEditBook extends SkinTemplateNavigationUniversal {
 	 * @return bool
 	 */
 	protected function doProcess() {
+		// In case VisualEditor overrides with "Edit source"
 		$this->links['views']['edit'] = [
 			'text' => $this->msg( 'edit' )->text(),
 			'title' => $this->msg( 'edit' )->text(),
 			'href' => $this->sktemplate->getTitle()->getLocalURL( [
 				'action' => 'edit',
-			] ),
-			'id' => 'edit-book'
+			] )
 		];
 
+		// Add real "Edit source"
 		$this->links['views']['editbooksource'] = $this->links['views']['edit'];
 		$this->links['views']['editbooksource']['id']
 		= 'editbooksource';
