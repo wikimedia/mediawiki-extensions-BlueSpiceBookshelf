@@ -147,6 +147,13 @@ class PageHierarchyProvider {
 	 * @return stdClass The JSON object.
 	 */
 	public function getExtendedTOCJSON( $aParams = [] ) {
+		$aParams = array_merge(
+			[
+				'suppress-number-in-text' => false,
+				'no-cache' => false
+			],
+			$aParams
+		);
 		$cacheKey = $this->getCacheKey(
 			$this->oSourceArticleTitle,
 			__METHOD__,
@@ -158,13 +165,6 @@ class PageHierarchyProvider {
 		// initialize new aExtendedTOC for each BookEditPage call using $aParams check
 		// makes same as clear cache
 		if ( $result === false || $aParams['no-cache'] === true ) {
-			$aParams = array_merge(
-				[
-					'suppress-number-in-text' => false,
-				],
-				$aParams
-			);
-
 			$this->ensureExtendedTOCArray();
 			$aTOC = $this->aExtendedTOC;
 
