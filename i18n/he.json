@@ -91,5 +91,7 @@
 	"bs-bookshelf-tag-booklist-description": "יוצר רשימות של מאמרים ממרחב השמות \"ספר\" ויכול להיות מסונן. ציון המסנן הוא חובה.",
 	"bs-bookshelf-ve-booklist-attr-filter-help": "סינון לפי מטא־נתונים בתסדיר key:value, למשל title:handbook",
 	"bs-bookshelf-tag-bookmeta-description": "תג לשמירת מטא־נתונים שונים במאמרי ספרים. אלה כלולים בספר. המאפיינים של התג הזה צריכים להיות מתואמים עם המטא־נתונים של מאמר הספר",
-	"bs-bookshelf-tag-bookshelf-box-desc": "מכניס את ניווט הפרקים של ספר בעמוד שאינו חלק מספר. המספור נוצר אוטומטית בהתאם לתוכן העניינים"
+	"bs-bookshelf-tag-bookshelf-box-desc": "מכניס את ניווט הפרקים של ספר בעמוד שאינו חלק מספר. המספור נוצר אוטומטית בהתאם לתוכן העניינים",
+	"bs-bookshelf-droplet-name": "רשימת הספרים",
+	"bs-bookshelf-droplet-description": "רשימת דפים במרחב השמות ספר"
 }
