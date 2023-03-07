@@ -21,6 +21,11 @@ class BookshelfHandler extends Handler {
 	private $errors = [];
 
 	/**
+	 * @var Config
+	 */
+	private $config = null;
+
+	/**
 	 * @param string $processedInput
 	 * @param array $processedArgs
 	 * @param Parser $parser
@@ -122,9 +127,6 @@ class BookshelfHandler extends Handler {
 		$this->parser->getOutput()->setPageProperty( 'bs-bookshelf-number', $number );
 		$this->parser->getOutput()->setPageProperty( 'bs-bookshelf-display-title', $displayTitle );
 
-		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) ) {
-			$this->parser->getOptions()->setNumberHeadings( true );
-		}
 		if ( $this->config->get( 'BookshelfTitleDisplayText' ) ) {
 			$titleTextText = $displayTitle;
 			if ( $number ) {

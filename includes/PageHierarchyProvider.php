@@ -280,7 +280,7 @@ class PageHierarchyProvider {
 	 *
 	 * @param string $sArticleTitle
 	 * @param array $aParams
-	 * @return array
+	 * @return stdClass
 	 */
 	public function getEntryFor( $sArticleTitle, $aParams = [] ) {
 		$oJSON = $this->getExtendedTOCJSON( $aParams );
