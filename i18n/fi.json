@@ -43,5 +43,6 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Kirjahylly",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kirja",
 	"bs-bookshelf-prof-defaultview": "Oletusnäkymä",
-	"bs-bookshelf-warning": "PHP-poikkeus: $1"
+	"bs-bookshelf-warning": "PHP-poikkeus: $1",
+	"bs-bookshelf-empty-selection": "Ei mitään valittu"
 }
