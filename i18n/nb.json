@@ -82,5 +82,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Setter versjonen av boka",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Bokhylle",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Bok",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definer hvilken bok sidene hører til"
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definer hvilken bok sidene hører til",
+	"bs-bookshelf-droplet-name": "Bokliste",
+	"bs-bookshelf-droplet-description": "Liste over sider i boknavnerommet"
 }
