@@ -1,7 +1,8 @@
 <?php
 
-namespace BlueSpice\Bookshelf;
+namespace BlueSpice\Bookshelf\Panel;
 
+use BlueSpice\Bookshelf\BookNavigationPanelHelper;
 use IContextSource;
 use InvalidArgumentException;
 use MediaWiki\MediaWikiServices;

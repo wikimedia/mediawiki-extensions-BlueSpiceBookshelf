@@ -4,8 +4,8 @@ namespace BlueSpice\Bookshelf\HookHandler;
 
 use BlueSpice\Bookshelf\ChapterPagerPanel;
 use BlueSpice\Bookshelf\GlobalActionsManager;
-use BlueSpice\Bookshelf\MainLinkPanel;
-use BlueSpice\Bookshelf\SidebarBookPanel;
+use BlueSpice\Bookshelf\Panel\MainLinkPanel;
+use BlueSpice\Bookshelf\Panel\SidebarBookPanel;
 use ConfigFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\Hook\MWStakeCommonUIRegisterSkinSlotComponents;
 use RequestContext;
