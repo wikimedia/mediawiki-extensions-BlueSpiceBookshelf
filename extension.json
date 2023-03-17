@@ -533,6 +533,10 @@
 		},
 		"addEditBook": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SkinTemplateNavigation\\AddEditBook"
+		},
+		"heading-numberation": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\HeadingNumberationHandler",
+			"services": [ "ConfigFactory" ]
 		}
 	},
 	"Hooks": {
@@ -565,7 +569,8 @@
 		"BSUEModulePDFAfterFindFiles": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFAfterFindFiles\\AddAttachments::callback",
 		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\Bookshelf\\Hook\\BSUsageTrackerRegisterCollectors\\NoOfUserBooks::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
-		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface"
+		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface",
+		"ParserAfterTidy": "heading-numberation"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"

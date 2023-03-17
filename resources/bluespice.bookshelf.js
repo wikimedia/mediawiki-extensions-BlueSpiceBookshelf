@@ -1,7 +1,6 @@
 ( function ( mw, $, bs, d, undefined ) {
 	$( function () {
 		_renderBookNavigation();
-		_prependNumbersToTOCandHeadings();
 	} );
 
 	function _renderBookNavigation() {
@@ -40,39 +39,6 @@
 					}, opts.deferTime, me );
 				});
 			});
-		});
-	}
-
-	function _prependNumbersToTOCandHeadings() {
-		//Prepend number
-		if ( mw.config.get( 'bsgBookshelfPrependPageTOCNumbers' ) === false ) {
-			return;
-		}
-
-		var $firstBookshelfTag = $( '.bs-bookshelf-toc' ).first();
-		var hasChildren = $firstBookshelfTag.data( 'bs-has-children' );
-
-		if ( hasChildren == '1' ) {
-			return; //Otherwise the internal headlines would have same numbers as child node articles
-		}
-
-		var num = $firstBookshelfTag.data( 'bs-number' );
-		if ( !num ) {
-			return;
-		}
-		var $numNode = $( '<span>' ).addClass( 'bs-chapter-number' ).append( num + "." );
-
-		$( '#toc .tocnumber' ).each( function () {
-			//Write chapternumber in front of original numberation
-			$( this ).prepend( $numNode.clone() );
-		});
-
-		//This is MediaWiki behavior. Numbers only if more than one heading.
-		if ( $( '.mw-headline' ).length < 2 ) {
-			return;
-		}
-		$( '.mw-headline' ).each( function () {
-			$( this ).prepend( $numNode.clone() );
 		});
 	}
 
