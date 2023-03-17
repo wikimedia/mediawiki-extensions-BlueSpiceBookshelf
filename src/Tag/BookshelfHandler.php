@@ -12,6 +12,7 @@ use PageHierarchyProvider;
 use Parser;
 use PPFrame;
 use RequestContext;
+use Title;
 
 class BookshelfHandler extends Handler {
 
@@ -78,8 +79,8 @@ class BookshelfHandler extends Handler {
 			return $this->makeErrorOutput();
 		}
 
-		/** @var \Title $title */
-		$title = $this->parser->getPage();
+		$pageRef = $this->parser->getPage();
+		$title = Title::castFromPageReference( $pageRef );
 		$displayTitle = $titleText = $title->getPrefixedText();
 		$number = '';
 		$haschildren = false;
