@@ -14,8 +14,6 @@ class ModifyForExport extends BSUEModulePDFgetPage {
 	 */
 	protected function doProcess() {
 		$services = $this->getServices();
-		$bUserNumberHeadings = $services->getUserOptionsLookup()
-			->getBoolOption( $this->getContext()->getUser(), 'numberheadings' );
 		// TODO RBV (10.02.12 16:35): Use Hook "BSUEModulePDFcleanUpDOM"
 		// Remove <bs:bookshelf ... /> generated Markup
 		$oBookshelfTagContainerElements =
@@ -47,52 +45,10 @@ class ModifyForExport extends BSUEModulePDFgetPage {
 				&& $this->title->isSubpage() ) {
 				$sDisplayTitle = basename( $this->title->getText() );
 			}
-			$bHasChildren = isset( $oEntry->children ) && !empty( $oEntry->children );
 
 			$this->page['number'] = $sNumber;
 
-			// Add number to headlines
-			$sClassesToPrefix = [
-				'bs-ue-document-title',
-				'firstHeading',
-				// ATTENTION: In old MW this was 'mw-headline', but this now matches
-				// with 'mw-headline-number'
-				'mw-headline-number',
-				'tocnumber'
-			];
-
-			$sClassXpath = implode( "') or contains(@class, '", $sClassesToPrefix );
-			$sClassXpath = "contains(@class, '" . $sClassXpath . "')";
-
-			$oHeadlineElements = $this->DOMXPath->query( "//*[$sClassXpath]" );
-			foreach ( $oHeadlineElements as $oHeadlineElement ) {
-				if ( $oHeadlineElement->firstChild === null ) { continue;
-				}
-
-				$sSeparator = '.';
-				$sCssClass = $oHeadlineElement->getAttribute( 'class' );
-				if ( in_array( $sCssClass, [ 'bs-ue-document-title', 'firstHeading' ] ) ) {
-					$sSeparator = ' ';
-				}
-				if ( $sSeparator === '.' && $bUserNumberHeadings === false ) {
-					// No numberation for internal headings
-					continue;
-				}
-
-				if ( $sSeparator === '.' && $bHasChildren === true ) {
-					// Avoid number collision with child node articles
-					continue;
-				}
-
-				$numNode = $this->page['dom']->createElement( 'span', $sNumber . $sSeparator );
-				$numNode->setAttribute( 'class', 'bs-chapter-number' );
-
-				$oHeadlineElement->insertBefore(
-					$numNode,
-					$oHeadlineElement->firstChild
-				);
-			}
-
+/*
 			// Modify heading nodes
 			if ( $bUserNumberHeadings === true && $bHasChildren === false ) {
 				$BookmarkElements = $this->page['bookmark-element']->getElementsByTagName( 'bookmark' );
@@ -101,6 +57,7 @@ class ModifyForExport extends BSUEModulePDFgetPage {
 					$oBookmarkElement->setAttribute( 'name', $sNumber . '.' . $sName );
 				}
 			}
+*/
 
 			// Modify page title node
 			$this->page['bookmark-element']->setAttribute(
