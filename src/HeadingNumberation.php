@@ -27,7 +27,7 @@ class HeadingNumberation {
 	 * @return array
 	 */
 	private function buildHeadingMap( string $html ): array {
-		$regEx = '#<h(\d)><span class="mw-headline" id="(.*?)">(.*?)</span>(.*?)</h(\d)>#';
+		$regEx = '#<h(\d)>(.*?)<span class="mw-headline" id="(.*?)">(.*?)</span>(.*?)</h(\d)>#';
 
 		$headings = [];
 		$matches = [];
@@ -40,9 +40,10 @@ class HeadingNumberation {
 			$headings[] = [
 				'search' => $matches[0][$index],
 				'level' => (int)$matches[1][$index],
-				'id' => $matches[2][$index],
-				'text' => $matches[3][$index],
-				'additional' => $matches[4][$index],
+				'pre' => $matches[2][$index],
+				'id' => $matches[3][$index],
+				'text' => $matches[4][$index],
+				'post' => $matches[5][$index],
 			];
 		}
 
@@ -87,7 +88,7 @@ class HeadingNumberation {
 		$level = $item['level'];
 		$id = $item['id'];
 
-		$regEx = '#<h' . $level . '><span class="mw-headline" id="' . preg_quote( $id, '/' ) . '">';
+		$regEx = '#<h' . $level . '>(.*?)<span class="mw-headline" id="' . preg_quote( $id, '#' ) . '">';
 		$regEx .= '(.*?)</span>.*?</h' . $level . '>#';
 
 		return $regEx;
@@ -102,11 +103,13 @@ class HeadingNumberation {
 		$level = $item['level'];
 		$id = $item['id'];
 		$text = $item['text'];
-		$additional = $item['additional'];
+		$pre = $item['pre'];
+		$post = $item['post'];
 
 		$html = '<h' . $level . '>';
+		$html .= $pre;
 		$html .= '<span class="mw-headline" id="' . $id . '">' . $numberation . $text . '</span>';
-		$html .= $additional;
+		$html .= $post;
 		$html .= '</h' . $level . '>';
 
 		return $html;
