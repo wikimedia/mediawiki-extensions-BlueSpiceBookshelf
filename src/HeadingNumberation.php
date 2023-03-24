@@ -23,14 +23,15 @@ class HeadingNumberation {
 	}
 
 	/**
-	 * @param string $text
+	 * @param string $html
 	 * @return array
 	 */
-	private function buildHeadingMap( string $text ): array {
-		$regex = '#<h(\d)>.*?<span class="mw-headline" id="(.*?)">(.*?)</span>(.*?)</h(\d)>#';
+	private function buildHeadingMap( string $html ): array {
+		$regEx = '#<h(\d)><span class="mw-headline" id="(.*?)">(.*?)</span>(.*?)</h(\d)>#';
 
 		$headings = [];
-		$status = preg_match_all( $regex, $text, $matches );
+		$matches = [];
+		$status = preg_match_all( $regEx, $html, $matches );
 		if ( !$status ) {
 			return $headings;
 		}
@@ -39,7 +40,9 @@ class HeadingNumberation {
 			$headings[] = [
 				'search' => $matches[0][$index],
 				'level' => (int)$matches[1][$index],
-				'text' => $matches[3][$index]
+				'id' => $matches[2][$index],
+				'text' => $matches[3][$index],
+				'additional' => $matches[4][$index],
 			];
 		}
 
@@ -49,10 +52,10 @@ class HeadingNumberation {
 	/**
 	 * @param int $articleNumber
 	 * @param array $headings
-	 * @param string $text
+	 * @param string $html
 	 * @return string
 	 */
-	private function processHeadings( int $articleNumber, array $headings, string $text ): string {
+	private function processHeadings( int $articleNumber, array $headings, string $html ): string {
 		for ( $index = 0; $index < count( $headings ); $index++ ) {
 			$level = $headings[$index]['level'];
 
@@ -66,13 +69,47 @@ class HeadingNumberation {
 			$this->resetHeadingCounter( $level + 1 );
 			$numberation = $this->getHeadingNumberation( $articleNumber );
 
-			$repalcementText = $numberation . $headings[$index]['text'];
-
-			$replacement = str_replace( $headings[$index]['text'], $repalcementText, $headings[$index]['search'] );
-
-			$text = str_replace( $headings[$index]['search'], $replacement, $text );
+			$html = preg_replace(
+				$this->getReplacementRegEx( $headings[$index] ),
+				$this->getReplacementHtml( $numberation, $headings[$index] ),
+				$html
+			);
 		}
-		return $text;
+
+		return $html;
+	}
+
+	/**
+	 * @param array $item
+	 * @return string
+	 */
+	private function getReplacementRegEx( array $item ): string {
+		$level = $item['level'];
+		$id = $item['id'];
+
+		$regEx = '#<h' . $level . '><span class="mw-headline" id="' . preg_quote( $id, '/' ) . '">';
+		$regEx .= '(.*?)</span>.*?</h' . $level . '>#';
+
+		return $regEx;
+	}
+
+	/**
+	 * @param string $numberation
+	 * @param array $item
+	 * @return string
+	 */
+	private function getReplacementHtml( string $numberation, array $item ): string {
+		$level = $item['level'];
+		$id = $item['id'];
+		$text = $item['text'];
+		$additional = $item['additional'];
+
+		$html = '<h' . $level . '>';
+		$html .= '<span class="mw-headline" id="' . $id . '">' . $numberation . $text . '</span>';
+		$html .= $additional;
+		$html .= '</h' . $level . '>';
+
+		return $html;
 	}
 
 	/**
@@ -117,6 +154,7 @@ class HeadingNumberation {
 				unset( $counter[$index] );
 			}
 		}
+
 		return $counter;
 	}
 
