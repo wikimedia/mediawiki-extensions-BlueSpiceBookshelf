@@ -38,8 +38,8 @@ class TOCNumberation {
 	 * @return string
 	 */
 	private function getReplacementRegEx( string $numberation, string $text ): string {
-		$regEx = '#<span class="tocnumber">' . preg_quote( $numberation, '/' );
-		$regEx .= '</span> <span class="toctext">' . preg_quote( $text, '/' ) . '</span>#';
+		$regEx = '#<span class="tocnumber">' . preg_quote( $numberation, '#' );
+		$regEx .= '</span> <span class="toctext">' . preg_quote( $text, '#' ) . '</span>#';
 
 		return $regEx;
 	}
