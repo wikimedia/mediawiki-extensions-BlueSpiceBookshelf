@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\HookHandler;
 
 use BlueSpice\Bookshelf\HeadingNumberation;
+use BlueSpice\Bookshelf\TOCNumberation;
 use ConfigFactory;
 use Parser;
 
@@ -53,7 +54,18 @@ class HeadingNumberationHandler {
 		}
 
 		$headingNumberation = new HeadingNumberation();
-		$text = $headingNumberation->execute( $bookData['number'], $text );
+		$text = $headingNumberation->execute(
+			$bookData['number'],
+			$text
+		);
+
+		$tocNumberation = new TOCNumberation();
+		$tocHTML = $tocNumberation->execute(
+			$bookData['number'],
+			$parser->getOutput()->getTOCHTML()
+		);
+
+		$parser->getOutput()->setTOCHTML( $tocHTML );
 
 		return true;
 	}
