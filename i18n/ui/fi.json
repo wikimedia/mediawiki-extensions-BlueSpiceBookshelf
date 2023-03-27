@@ -48,5 +48,6 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Ruudukko",
 	"bs-bookshelfui-prof-defaultview-images": "Kuvat",
 	"bs-bookshelfui-chapterpager-previous": "Edellinen",
-	"bs-bookshelfui-chapterpager-next": "Seuraava"
+	"bs-bookshelfui-chapterpager-next": "Seuraava",
+	"bs-bookshelfui-export-book-text": "Odota, kun kirjaa luodaan."
 }
