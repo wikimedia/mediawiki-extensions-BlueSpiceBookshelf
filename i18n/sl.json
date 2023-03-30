@@ -47,7 +47,7 @@
 	"bs-bookshelf-action-export-book": "Izvozi knjigo",
 	"bs-bookshelf-edit-title": "Urejanje $1",
 	"bs-bookshelf-error-invalid-type": "Navedena vrsta knjige ni veljavna",
-	"bs-bookshelf-error-type-title-mismatch": "Podani naslov se ne ujema z dano vrsto knjige",
+	"bs-bookshelf-error-type-title-mismatch": "Predloženi naslov se ne ujema z dano vrsto knjige",
 	"bs-bookshelf-editor-no-title-provided": "Ni veljavnega naslova knjige",
 	"bs-bookshelf-book-grid-title": "Knjige",
 	"bookshelf": "Knjižna polica",
