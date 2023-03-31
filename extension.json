@@ -294,24 +294,14 @@
 				"ext.bluespice"
 			]
 		},
-		"ext.bluespice.bookshelf.pager.navigation.styles": {
+		"ext.bluespice.bookshelf.chapter-pager.styles": {
 			"styles": [
-				"bluespice.bookshelf.pager.navigation.less"
+				"bluespice.bookshelf.chapter-pager.css"
 			]
 		},
-		"ext.bluespice.bookshelf.pager.before-content.styles": {
+		"ext.bluespice.bookshelf.chapter-pager.panel.styles": {
 			"styles": [
-				"bluespice.bookshelf.pager.beforeContent.less"
-			]
-		},
-		"ext.bluespice.bookshelf.pager.after-content.styles": {
-			"styles": [
-				"bluespice.bookshelf.pager.afterContent.less"
-			]
-		},
-		"ext.bluespice.bookshelf.navigationTab.styles": {
-			"styles": [
-				"bluespice.bookshelf.navigationTab.less"
+				"bluespice.bookshelf.chapter-pager.panel.css"
 			]
 		},
 		"ext.bluespice.bookshelf.navigationTab": {
@@ -467,11 +457,6 @@
 				"bs-bookshelf-ve-bookshelfinspector-title",
 				"bs-bookshelf-ve-bookshelf-attr-book-label",
 				"bs-bookshelf-ve-bookshelf-attr-book-help"
-			]
-		},
-		"ext.bookshelf.pager.content.styles": {
-			"styles": [
-				"bluespice.bookshelf.pager.content.css"
 			]
 		}
 	},

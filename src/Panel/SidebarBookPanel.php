@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Bookshelf\Panel;
 
-use BlueSpice\Bookshelf\BookNavigationPanelHelper;
+use Html;
 use IContextSource;
 use InvalidArgumentException;
 use MediaWiki\MediaWikiServices;
@@ -10,6 +10,8 @@ use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\ComponentBase;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
+use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardFooter;
+use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\ITabPanel;
 use PageHierarchyProvider;
 use Title;
@@ -20,7 +22,12 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 *
 	 * @var Title
 	 */
-	protected $title = null;
+	protected $title;
+
+	/**
+	 * @var PageHierarchyProvider|null
+	 */
+	private $phProvider = null;
 
 	/**
 	 * @param Title $title
@@ -49,7 +56,11 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 * @inheritDoc
 	 */
 	public function getRequiredRLStyles(): array {
-		return [ 'ext.bookshelf.navigation-panel.styles' ];
+		return [
+			'ext.bookshelf.navigation-panel.styles',
+			'ext.bluespice.bookshelf.chapter-pager.styles',
+			'ext.bluespice.bookshelf.chapter-pager.panel.styles'
+		];
 	}
 
 	/**
@@ -89,15 +100,33 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 * @return IComponent[]
 	 */
 	public function getSubComponents(): array {
-		$bookNav = new BookNavigationPanelHelper();
-		$html = $bookNav->setUpBookNavigation( $this->title );
-
 		$items = [];
 		$items[] = new SimpleCard( [
 			'id' => 'n-book-panel',
 			'classes' => [ 'w-100', 'bg-transp' ],
 			'items' => [
-				new Literal( 'pager',  $html )
+				new SimpleCardHeader( [
+					'id' => 'n-book-panel-header',
+					'classes' => [ 'bg-transp' ],
+					'items' => [
+						new Literal(
+							'n-book-panel-header-text',
+							'<h4>' . $this->getBookTitle() . '</h4>'
+						)
+					]
+				] ),
+				new BookNavigationChapterPagerContainer( $this->title ),
+				new BookNavigationTreeContainer( $this->title ),
+				new SimpleCardFooter( [
+					'id' => 'n-book-panel-footer',
+					'classes' => [ 'bg-transp' ],
+						'items' => [
+							new Literal(
+								'n-book-panel-footer-text',
+								$this->getBookEditLink()
+							)
+						]
+				] )
 			]
 		] );
 
@@ -110,22 +139,21 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 * @return bool
 	 */
 	public function shouldRender( IContextSource $context ): bool {
-		$title = $context->getTitle();
-		if ( $title->isRedirect() ) {
+		if ( $this->title->isRedirect() ) {
 			$webRequestValues = $context->getRequest()->getValues();
 			if ( !isset( $webRequestValues['redirect'] ) || $webRequestValues['redirect'] !== 'no' ) {
 				$redirTarget = MediaWikiServices::getInstance()->getRedirectLookup()
 					->getRedirectTarget( $context->getWikiPage() );
-				$title = Title::newFromLinkTarget( $redirTarget );
+					$this->title  = Title::newFromLinkTarget( $redirTarget );
 			}
 		}
-		try {
-			$provider = PageHierarchyProvider::getInstanceForArticle(
-				$title->getPrefixedText()
-			);
-		} catch ( InvalidArgumentException $ex ) {
+
+		$phProvider = $this->getPageHierarchyProvider();
+
+		if ( $phProvider instanceof PageHierarchyProvider === false ) {
 			return false;
 		}
+
 		return true;
 	}
 
@@ -138,4 +166,80 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 		return $this->shouldRender( $context );
 	}
 
+	/**
+	 * @return PageHierarchyProvider|null
+	 */
+	private function getPageHierarchyProvider(): ?PageHierarchyProvider {
+		if ( $this->phProvider instanceof PageHierarchyProvider ) {
+			return $this->phProvider;
+		}
+
+		try {
+			$this->phProvider = PageHierarchyProvider::getInstanceForArticle(
+				$this->title->getPrefixedText()
+			);
+			return $this->phProvider;
+		} catch ( InvalidArgumentException $ex ) {
+			return null;
+		}
+
+		return null;
+	}
+
+	/**
+	 * @return string
+	 */
+	private function getBookTitle(): string {
+		if ( $this->phProvider === null ) {
+			return '';
+		}
+
+		$extendedToc = $this->phProvider->getExtendedTOCJSON();
+		$bookMeta = $this->phProvider->getBookMeta();
+
+		$bookTitle = $extendedToc->bookshelf->page_title;
+		if ( isset( $bookMeta['title'] ) ) {
+			$bookTitle = $bookMeta['title'];
+		}
+
+		return $bookTitle;
+	}
+
+	/**
+	 * @return string
+	 */
+	protected function getBookEditLink(): string {
+		$phProvider = $this->getPageHierarchyProvider();
+
+		if ( $phProvider instanceof PageHierarchyProvider === false ) {
+			return '';
+		}
+
+		// Check if the page is actually in the book before showing the book nav
+		if ( $phProvider->getEntryFor( $this->title->getPrefixedText() ) === null ) {
+			return '';
+		}
+
+		$extendedToc = $phProvider->getExtendedTOCJSON();
+
+		$bookEditorTitle = \Title::makeTitleSafe(
+			$extendedToc->bookshelf->page_namespace,
+			$extendedToc->bookshelf->page_title
+		);
+
+		$bookEditorLink = Html::openElement(
+			'a',
+			[
+				'id' => 'book-panel-edit-book',
+				'href' => $bookEditorTitle->getFullURL( [ 'action' => 'edit' ] ),
+				'title' => wfMessage( 'bs-bookshelfui-book-title-link-edit' )->plain()
+			]
+		);
+		$bookEditorLink .=
+			wfMessage( 'bs-bookshelfui-book-title-link-edit-text' )->plain();
+
+		$bookEditorLink .= Html::closeElement( 'a' );
+
+		return $bookEditorLink;
+	}
 }

@@ -1,7 +1,9 @@
 <?php
 
-namespace BlueSpice\Bookshelf;
+namespace BlueSpice\Bookshelf\Panel;
 
+use BlueSpice\Bookshelf\ChapterPager;
+use Html;
 use InvalidArgumentException;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use PageHierarchyProvider;
@@ -15,10 +17,16 @@ class ChapterPagerPanel extends Literal {
 	protected $title = null;
 
 	/**
+	 * @var string
+	 */
+	private $id = '';
+
+	/**
 	 * @inheritDoc
 	 */
-	public function __construct( $title ) {
+	public function __construct( $title, $id ) {
 		$this->title = $title;
+		$this->id = $id;
 		parent::__construct( 'bs-book-chapterpager', '' );
 	}
 
@@ -27,7 +35,7 @@ class ChapterPagerPanel extends Literal {
 	 * @return string
 	 */
 	public function getId(): string {
-		return 'bs-book-chapterpager';
+		return $this->id;
 	}
 
 	/**
@@ -37,7 +45,12 @@ class ChapterPagerPanel extends Literal {
 	public function getHtml(): string {
 		$chapterPager = new ChapterPager();
 		$chapterPager->makePagerData( $this->title );
-		return $chapterPager->getDefaultPagerHtml( $this->title );
+
+		$html = Html::openElement( 'div', [ 'class' => 'bs-bookshelfui-chapter-pager-default-pnl' ] );
+		$html .= $chapterPager->getDefaultPagerHtml( $this->title );
+		$html .= Html::closeElement( 'div' );
+
+		return $html;
 	}
 
 	/**
@@ -68,6 +81,9 @@ class ChapterPagerPanel extends Literal {
 	 * @inheritDoc
 	 */
 	public function getRequiredRLStyles(): array {
-		return [ 'ext.bookshelf.pager.content.styles' ];
+		return [
+			'ext.bluespice.bookshelf.chapter-pager.styles',
+			'ext.bluespice.bookshelf.chapter-pager.panel.styles'
+		];
 	}
 }
