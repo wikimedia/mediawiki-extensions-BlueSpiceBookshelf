@@ -1,6 +1,6 @@
 <?php
 
-namespace BlueSpice\Bookshelf;
+namespace BlueSpice\Bookshelf\Panel;
 
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;

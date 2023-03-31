@@ -309,10 +309,7 @@
 		"ext.bluespice.bookshelf.navigationTab.styles": {
 			"styles": [
 				"bluespice.bookshelf.navigationTab.less"
-			],
-			"skinStyles": {
-				"bluespicecalumma": "bluespice.bookshelf.Calumma.less"
-			}
+			]
 		},
 		"ext.bluespice.bookshelf.navigationTab": {
 			"scripts": [
@@ -548,12 +545,6 @@
 		],
 		"ContentHandlerDefaultModelFor": "BlueSpice\\Bookshelf\\Hook\\ContentHandlerDefaultModelFor\\GetBookContentHandler::callback",
 		"LoadExtensionSchemaUpdates": "BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddConvertContentModel::callback",
-		"ChameleonSkinTemplateOutputPageBeforeExec": [
-			"BlueSpice\\Bookshelf\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\SetBookContentModelActions::callback",
-			"BlueSpice\\Bookshelf\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddChapterPager::callback",
-			"BlueSpice\\Bookshelf\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddBookshelfUI::callback",
-			"BlueSpice\\Bookshelf\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddToBookTool::callback"
-		],
 		"BSUEModulePDFbeforeGetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFbeforeGetPage\\AdaptPageTitle::callback",
 		"BSUEModulePDFgetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFgetPage\\ModifyForExport::callback",
 		"BSUEModulePDFcollectMetaData": [
