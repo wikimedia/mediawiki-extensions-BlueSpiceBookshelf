@@ -118,6 +118,10 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 			$provider = PageHierarchyProvider::getInstanceForArticle(
 				$title->getPrefixedText()
 			);
+			// Check if the page is actually in the book before showing the book nav
+			if ( $provider->getEntryFor( $title->getPrefixedText() ) === null ) {
+				return false;
+			}
 		} catch ( InvalidArgumentException $ex ) {
 			return false;
 		}
