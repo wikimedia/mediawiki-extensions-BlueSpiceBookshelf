@@ -84,5 +84,9 @@
 	"bs-bookshelfui-manager-deletionfailure-text": "השגיאה הבאה אירעה בעת ניסיון למחוק את הספר: $1",
 	"bs-bookshelfui-panel-navigation-text": "לניווט בספר",
 	"bs-bookshelfui-panel-navigation-title": "חזרה לניווט בספר",
-	"bs-bookshelfui-panel-navigation-aria-label": "לניווט בספר"
+	"bs-bookshelfui-panel-navigation-aria-label": "לניווט בספר",
+	"right-bookshelfbookmanager-viewspecialpage": "גישה לדף המיוחד [[Special:BookshelfBookManager]]",
+	"action-bookshelfbookmanager-viewspecialpage": "לגשת לדף המיוחד [[Special:BookshelfBookManager]]",
+	"right-bookshelfbookui-viewspecialpage": "גישה לדף המיוחד [[Special:BookshelfBookUI]]",
+	"action-bookshelfbookui-viewspecialpage": "לגשת לדף המיוחד [[Special:BookshelfBookUI]]"
 }
