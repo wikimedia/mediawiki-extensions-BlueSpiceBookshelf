@@ -44,5 +44,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kirja",
 	"bs-bookshelf-prof-defaultview": "Oletusnäkymä",
 	"bs-bookshelf-warning": "PHP-poikkeus: $1",
-	"bs-bookshelf-empty-selection": "Ei mitään valittu"
+	"bs-bookshelf-empty-selection": "Ei mitään valittu",
+	"bs-bookshelf-droplet-name": "Kirjalista"
 }
