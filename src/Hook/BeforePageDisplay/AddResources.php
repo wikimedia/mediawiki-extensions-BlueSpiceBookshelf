@@ -8,9 +8,7 @@ class AddResources extends \BlueSpice\Hook\BeforePageDisplay {
 		$this->out->addModules( 'ext.bluespice.bookshelf.addToBook' );
 
 		$this->out->addModuleStyles( 'ext.bluespice.bookshelf.ui.styles' );
-		$this->out->addModuleStyles( 'ext.bluespice.bookshelf.navigationTab.styles' );
 		$this->out->addModules( 'ext.bluespice.bookshelf.navigationTab' );
-		$this->out->addModuleStyles( 'ext.bluespice.bookshelf.pager.navigation.styles' );
 
 		if ( !$this->skin->getUser()->isAnon() ) {
 			$location = $this->skin->msg(
