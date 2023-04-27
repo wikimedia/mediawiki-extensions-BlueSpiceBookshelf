@@ -100,5 +100,5 @@
 	"bs-bookshelfui-panel-navigation-text": "Label for navigation tab panel",
 	"bs-bookshelfui-panel-navigation-title": "Title for navigation tab panel",
 	"bs-bookshelfui-panel-navigation-aria-label": "Aria label for navigation tab panel",
-	"bs-bookshelfui-panel-navigation-aria-desc": "书本导航树结构"
+	"bs-bookshelfui-panel-navigation-aria-desc": "Aria description of book navigation"
 }
