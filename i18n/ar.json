@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alshamiri1",
 			"FiberAhmed",
 			"Meno25",
 			"أَحمد",
@@ -61,5 +62,25 @@
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "العنوان الفرعي",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "المؤلف",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "الإصدار",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "كتاب"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "كتاب",
+	"apihelp-bs-bookshelf-store-param-tempBooks": "قائمة الكتب الموجودة في المتجر المحلي للعميل والتي يجب تضمينها في استجابة المتجر",
+	"bs-bookshelf-pref-titledisplaytext-help": "يعرض العنوان من التنقل في الكتاب كعنوان للصفحة بدلاً من اسم الصفحة.",
+	"bs-bookshelf-action-export-book": "كتاب التصدير",
+	"bs-bookshelf-error-invalid-type": "نوع الكتاب المحدد غير صالح",
+	"bs-bookshelf-error-type-title-mismatch": "العنوان المقدم لا يتطابق مع نوع الكتاب المحدد",
+	"bs-bookshelf-editor-no-title-provided": "لم يتم توفير عنوان كتاب صالح",
+	"prefs-bookshelf": "صفحة خاصة برف الكتب",
+	"bs-bookshelf-prof-defaultview-grid": "شبكة",
+	"bs-bookshelf-action-save-to-local-storage": "الحفظ في التخزين المحلي",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "إظهار صفحة فصل الكتاب قبل المحتوى",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "أضف صفحة فصل في أسفل الصفحة.",
+	"bs-bookshelf-pref-supressbookns-help": "مساحة أسماء الصفحات مخفية في إخراج PDF.",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "إظهار نقطة الدخول \"Bookshelf\"",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "إظهار رابط نقطة الدخول \"Bookshelf\" في شريط التنقل الأيمن",
+	"bs-bookshelf-ve-booklistinspector-title": "قائمة الكتب",
+	"bs-bookshelf-ve-bookshelfinspector-title": "رف الكتب",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "يحدد الكتاب الذي تنتمي إليه الصفحات",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "أضف أرقام فصول الكتاب إلى جدول المحتويات وجميع العناوين الرئيسية في الصفحة",
+	"bs-bookshelf-droplet-name": "قائمة الكتب",
+	"bs-bookshelf-droplet-description": "قائمة الصفحات في كتاب مساحة الاسم"
 }
