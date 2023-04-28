@@ -32,7 +32,8 @@
 			groupLabelCallback: function( label, data ) {
 				var location = bs.bookshelf.storageLocationRegistry.lookup( label );
 				return location.getLabel();
-			}
+			},
+			$overlay: this.$overlay
 		} );
 		this.bookPicker.connect( this, {
 			change: function() {
