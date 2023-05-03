@@ -87,5 +87,12 @@
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "تعيين العنوان الفرعي للكتاب",
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "تعيين مؤلف الكتاب",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "تعيين إصدار الكتاب",
-	"bs-bookshelf-tag-bookshelf-box-desc": "يُدرج التنقل في فصل الكتاب في صفحة ليست جزءًا من كتاب.  يتم إنشاء الترقيم تلقائيًا وفقًا لجدول المحتويات"
+	"bs-bookshelf-tag-bookshelf-box-desc": "يُدرج التنقل في فصل الكتاب في صفحة ليست جزءًا من كتاب.  يتم إنشاء الترقيم تلقائيًا وفقًا لجدول المحتويات",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "أضف صفحة فصل في أعلى الصفحة.",
+	"bs-bookshelf-pref-chapterpageraftercontent": "إظهار صفحة فصل الكتاب بعد المحتوى",
+	"bs-bookshelf-warning": "استثناء PHP: $1",
+	"bs-bookshelf-tag-booklist-description": "يولد قوائم الصفحات من مساحة الاسم \"كتاب\" ويمكن تصفيتها. إشارة المرشح إلزامية",
+	"bs-bookshelf-ve-booklist-attr-filter-help": "قم بالتصفية حسب البيانات الوصفية في مفتاح التنسيق: القيمة ، على سبيل المثال العنوان: الدليل",
+	"bs-bookshelf-tag-bookmeta-description": "وسم لحفظ البيانات الوصفية المختلفة على صفحات الكتاب. تم تضمين هذه في الكتاب. يجب أن ترتبط سمات هذه العلامة بالبيانات الوصفية لصفحة الكتاب",
+	"bs-bookshelf-ve-bookmetainspector-title": "بوكميتا"
 }
