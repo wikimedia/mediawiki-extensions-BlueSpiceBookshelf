@@ -8,6 +8,7 @@ use DOMXPath;
 use FatalError;
 use MediaWiki\MediaWikiServices;
 use MWException;
+use PDFFileResolver;
 use Title;
 
 class AddAttachments {
@@ -74,6 +75,12 @@ class AddAttachments {
 					continue;
 				}
 
+				$fileResolver = PDFFileResolver::factory(
+					$oFileAnchorElement,
+					$params['webroot-filesystempath'],
+					'href'
+				);
+
 				// TODO: This should be part of BSF
 				$sHrefFilename = str_replace(
 					[ '/', '\\', ':', '*', '?', '"', '|', '>', '<', ],
@@ -91,7 +98,7 @@ class AddAttachments {
 				 * for unencoded filename
 				 */
 				);
-				$sAbsoluteFileSystemPath = $oLocalFile->getPath();
+				$sAbsoluteFileSystemPath = $fileResolver->getAbsoluteFilesystemPath();
 			} else {
 				continue;
 			}
