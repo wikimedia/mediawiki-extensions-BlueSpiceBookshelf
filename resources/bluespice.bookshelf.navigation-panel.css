@@ -1,12 +1,10 @@
 /* book title in book nav */
 #n-book-panel-header h4 {
-	font-size: 1.4rem;
+	font-size: var(--content-h4-font-size);
+	font-weight: var(--content-h4-font-weight);
 }
 
 /* tree nav */
-#bs-book-tree-nav {
-	border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);
-}
 #bs-book-tree-nav .mws-tree-item.acitve > div:first-child {
 	border-color: var(--sidebar-primary-marker--hover);
 	background-color: var(--sidebar-primary-bg--hover);
@@ -22,10 +20,13 @@
 #n-book-panel .card-footer #book-panel-edit-book:hover,
 #n-book-panel .card-footer #book-panel-edit-book:visited   {
 	visibility: hidden;
-	padding: 0 1em;
 	text-align: right;
 	font-size: 0.7rem;
+	color:  var(--sidebar-primary-fg);
 }
 #n-book-panel:hover .card-footer #book-panel-edit-book {
 	visibility: visible;
+}
+#n-book-panel .card-header {
+	border-bottom: none;
 }
