@@ -90,5 +90,7 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Estante",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Livro",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definir a que livro as páginas pertencem",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Adicionar números dos capítulos do livro ao índice e a todos os cabeçalhos da página"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Adicionar números dos capítulos do livro ao índice e a todos os cabeçalhos da página",
+	"bs-bookshelf-droplet-name": "Lista de livros",
+	"bs-bookshelf-droplet-description": "Lista das páginas no espaço nominal Livro"
 }
