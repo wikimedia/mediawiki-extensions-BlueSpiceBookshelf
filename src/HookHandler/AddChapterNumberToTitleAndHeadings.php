@@ -1,0 +1,146 @@
+<?php
+
+namespace BlueSpice\Bookshelf\HookHandler;
+
+use BlueSpice\Bookshelf\HeadingNumberation;
+use BlueSpice\Bookshelf\TOCNumberation;
+use ConfigFactory;
+use OutputPage;
+use Skin;
+
+class AddChapterNumberToTitleAndHeadings {
+
+	/**
+	 * @var Config
+	 */
+	private $config;
+
+	/**
+	 * @param ConfigFactory $configFactory
+	 */
+	public function __construct( ConfigFactory $configFactory ) {
+		$this->config = $configFactory->makeConfig( 'bsg' );
+	}
+
+	/**
+	 * @param OutputPage $out
+	 * @param Skin $skin
+	 * @return bool
+	 */
+	public function onBeforePageDisplay( $out, $skin ) {
+		$titleText = $skin->getTitle()->getFullText();
+		$bookData = $this->getBookData( $out->getHTML(), $titleText );
+
+		if ( empty( $bookData ) ) {
+			return true;
+		}
+
+		$displayTitle = $out->getPageTitle();
+
+		if ( $this->config->get( 'BookshelfTitleDisplayText' ) ) {
+			if ( isset( $bookData['articleDisplayTitle'] ) ) {
+				$displayTitle = $bookData['articleDisplayTitle'];
+			}
+
+		}
+
+		if ( isset( $bookData['number'] ) ) {
+			$out->setPageTitle( $bookData['number'] . ' ' . $displayTitle );
+		}
+
+		return true;
+	}
+
+	/**
+	 * @param OutputPage $out
+	 * @param string &$text
+	 * @return bool
+	 */
+	public function onOutputPageBeforeHTML( OutputPage $out, &$text ) {
+		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) === false ) {
+			return true;
+		}
+
+		$bookData = $this->getBookData( $text );
+
+		if ( isset( $bookData['has-children'] ) ) {
+			// Otherwise the internal headlines would have same numbers as child node articles
+			return true;
+		}
+
+		if ( isset( $bookData['number'] ) ) {
+			$headingNumberation = new HeadingNumberation();
+			$text = $headingNumberation->execute(
+				$bookData['number'],
+				$text
+			);
+
+			$tocNumberation = new TOCNumberation();
+			$$text = $tocNumberation->execute(
+				$bookData['number'],
+				$text
+			);
+		}
+		return true;
+	}
+
+	/**
+	 * @param string $html
+	 * @param string $titleText
+	 * @return array
+	 */
+	private function getBookData( string $html, string $titleText = '' ): array {
+		$bookshelfTag = [];
+		$status = preg_match(
+			'#<div\s(class=".*?bs-tag-bs_bookshelf.*?".*?)\s*><div\s(.*?)\s*></div>#',
+			$html,
+			$bookshelfTag
+		);
+
+		if ( !$status ) {
+			return [];
+		}
+
+		return $this->extractBookData( $bookshelfTag[2], $titleText );
+	}
+
+	/**
+	 * @param string $fullBookData
+	 * @param string $titleText
+	 * @return array
+	 */
+	private function extractBookData( string $fullBookData, string $titleText = '' ): array {
+		if ( $fullBookData === '' ) {
+			return [];
+		}
+
+		$bookData = [];
+
+		$data = [];
+		$status = preg_match( '#data-bs-number="(.*?)"#', $fullBookData, $data );
+		if ( $status ) {
+			$bookData['number'] = (int)$data[1];
+		}
+
+		$data = [];
+		$status = preg_match( '#data-bs-has-children="1"#', $fullBookData, $data );
+		if ( $status ) {
+			$bookData['has-children'] = true;
+		}
+
+		if ( $titleText === '' ) {
+			return $bookData;
+		}
+
+		$data = [];
+		$regEx = '&quot;articleTitle&quot;\:&quot;';
+		$regEx .= preg_quote( $titleText );
+		$regEx .= '&quot;,&quot;articleDisplayTitle&quot;\:&quot;(.*?)&quot;';
+		$status = preg_match( "#$regEx#", $fullBookData, $data );
+		if ( $status ) {
+			$bookData['articleDisplayTitle'] = $data[1];
+		}
+
+		return $bookData;
+	}
+}
