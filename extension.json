@@ -522,10 +522,17 @@
 		"heading-numberation": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\HeadingNumberationHandler",
 			"services": [ "ConfigFactory" ]
+		},
+		"add-chapter-number-to-title-and-headings": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\AddChapterNumberToTitleAndHeadings",
+			"services": [ "ConfigFactory" ]
 		}
 	},
 	"Hooks": {
-		"BeforePageDisplay": "\\BlueSpice\\Bookshelf\\Hook\\BeforePageDisplay\\AddResources::callback",
+		"BeforePageDisplay": [
+			"\\BlueSpice\\Bookshelf\\Hook\\BeforePageDisplay\\AddResources::callback",
+			"add-chapter-number-to-title-and-headings"
+		],
 		"BSInsertMagicAjaxGetData": [
 			"\\BlueSpice\\Bookshelf\\Hook\\BSInsertMagicAjaxGetData\\AddBookshelfTag::callback",
 			"\\BlueSpice\\Bookshelf\\Hook\\BSInsertMagicAjaxGetData\\AddBookmetaTag::callback",
@@ -549,7 +556,7 @@
 		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\Bookshelf\\Hook\\BSUsageTrackerRegisterCollectors\\NoOfUserBooks::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface",
-		"ParserAfterTidy": "heading-numberation"
+		"OutputPageBeforeHTML": "add-chapter-number-to-title-and-headings"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"

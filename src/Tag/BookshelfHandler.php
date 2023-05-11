@@ -128,17 +128,6 @@ class BookshelfHandler extends Handler {
 		$this->parser->getOutput()->setPageProperty( 'bs-bookshelf-number', $number );
 		$this->parser->getOutput()->setPageProperty( 'bs-bookshelf-display-title', $displayTitle );
 
-		if ( $this->config->get( 'BookshelfTitleDisplayText' ) ) {
-			$titleTextText = $displayTitle;
-			if ( $number ) {
-				$titleTextText = '<span class="bs-chapter-number">' . $number
-					. '. </span>' . $titleTextText;
-			}
-			if ( $titleTextText !== $titleText ) {
-				$this->parser->getOutput()->setTitleText( $titleTextText );
-			}
-		}
-
 		// This seems to better place than "BeforePageDisplay" hook
 		$this->parser->getOutput()->addModules( [ 'ext.bluespice.bookshelf' ] );
 		$this->parser->getOutput()->addModuleStyles( [ 'ext.bluespice.bookshelf.styles' ] );
