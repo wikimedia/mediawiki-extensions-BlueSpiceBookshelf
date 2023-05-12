@@ -24,11 +24,3 @@
 	display: none;
 }
 
-/**
- * Fix to hide tag in VE mode due to change in VE and mediawiki core this is now visible
- * https://phabricator.wikimedia.org/T295984
- * have to use !important due to VE sets inline style to display block
- */
-.mw-empty-elt[typeof="mw:Extension/bookshelf"] {
-	display: none !important;
-}
