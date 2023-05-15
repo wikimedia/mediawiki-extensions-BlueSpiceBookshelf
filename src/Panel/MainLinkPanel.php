@@ -68,7 +68,7 @@ class MainLinkPanel extends RestrictedTextLink {
 	 * @inheritDoc
 	 */
 	public function getRequiredRLStyles(): array {
-		return [ 'ext.bookshelf.special-bookshelf.styles' ];
+		return [];
 	}
 
 }
