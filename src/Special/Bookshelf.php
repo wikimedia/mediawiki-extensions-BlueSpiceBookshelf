@@ -30,6 +30,7 @@ class Bookshelf extends SpecialPage {
 			] )
 		);
 		$this->getOutput()->addModules( "ext.bluespice.bookshelf.special" );
+		$this->getOutput()->addModuleStyles( "ext.bookshelf.special-bookshelf.styles" );
 		$this->setHeaders();
 	}
 }
