@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Abuluntu",
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"EdoAug"
 		]
 	},
 	"bs-bookshelf-extension-description": "Lar BlueSpice behandle og eksportere hierarkiske samlinger av artikler.",
 	"bs-bookshelf-tag-bookshelf-desc": "Setter inn kapittelnavigering for ei bok i ei bokside. Med denne taggen inkluderes de nevnte artiklene i boka. Nummereringen tilpasses automatisk til innholdsfortegnelsen.",
 	"bs-bookshelf-tag-bookmeta-desc": "Tagg for å lagre diverse metadata om bokartikler. Disse inkluderes i boka. Attributtene til taggen må samsvare med metadataene til bokartikkelen.",
-	"bs-bookshelf-tag-booklist-desc": "Genererer lister over artikler fra navnerommet «book» og kan filtrerers. Indikasjonen av filteret er obligatorisk.",
+	"bs-bookshelf-tag-booklist-desc": "Genererer lister over artikler fra navnerommet «book» og kan filtreres. Indikasjonen av filteret er obligatorisk.",
 	"bs-bookshelf-tagerror-no-attribute-given": "Intet attributt angitt! Bruk <strong>src</strong> for å konfigurere innholdsfortegnelsen.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "Den gitte kildeartikkelen («$1») finnes ikke.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "Den gitte kildeartikkelen («$1») inneholder ugyldige data.",
@@ -68,9 +69,13 @@
 	"bs-bookshelf-pref-supressbookns-help": "Navnerommet til sidenavn skjules i den resulterende PDF-en.",
 	"bs-bookshelf-warning": "PHP-unntak: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Legg til bok",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Vis inngangspunktet «Bokhylle»",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Vis lenke til inngangspunktet «Bokhylle» i venstremenyen",
+	"bs-bookshelf-tag-booklist-description": "Genererer lister over sider fra navnerommet «book» og kan filtreres. Indikasjonen av filteret er obligatorisk.",
 	"bs-bookshelf-ve-booklistinspector-title": "Bokliste",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
 	"bs-bookshelf-ve-booklist-attr-filter-help": "Filtrer etter metadata i formatet nøkkel:verdi, f.eks. title:handbook",
+	"bs-bookshelf-tag-bookmeta-description": "Tagg for å lagre diverse metadata om boksider. Disse inkluderes i boka. Attributtene til taggen må samsvare med metadataene til boksiden",
 	"bs-bookshelf-ve-bookmetainspector-title": "Bokmeta",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Tittel",
 	"bs-bookshelf-ve-bookmeta-attr-title-help": "Setter tittelen på boka",
@@ -80,9 +85,11 @@
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "Setter forfatteren av boka",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versjon",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Setter versjonen av boka",
+	"bs-bookshelf-tag-bookshelf-box-desc": "Setter inn kapittelnavigering for en bok på en side som ikke er del av en bok. Nummerering skjer automatisk i henhold til innholdfortegnelsen",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Bokhylle",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Bok",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definer hvilken bok sidene hører til",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Legg til kapittelnumre for boken i innholdsfortegnelse og alle overskrifter på siden",
 	"bs-bookshelf-droplet-name": "Bokliste",
 	"bs-bookshelf-droplet-description": "Liste over sider i boknavnerommet"
 }
