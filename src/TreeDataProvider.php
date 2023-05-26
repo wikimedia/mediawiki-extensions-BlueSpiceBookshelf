@@ -55,7 +55,7 @@ class TreeDataProvider {
 
 		$itemData = [];
 		$this->titleFactory = new TitleFactory();
-		$title = $this->titleFactory->newFromID( $item->articleId );
+		$title = $this->titleFactory->newFromText( $item->articleTitle );
 
 		if ( $item->articleType === 'plain-text' ) {
 			$itemData = $this->makeTextNode( $item, $title, $path );
