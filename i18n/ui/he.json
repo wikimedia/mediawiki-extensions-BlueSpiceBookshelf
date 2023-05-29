@@ -97,5 +97,7 @@
 	"bs-bookshelfui-intro": "כאן אפשר לראות את כל הספרים הזמינים. כדי להוסיף ספר חדש, יש לעבור אל [[Special:Bookmanager|מנהל הספרים]].",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "ערך שורש שצריך להחזיר את הדפים עליו",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "סוג המקור להוספה המונית",
-	"bs-bookshelfui-panel-navigation-aria-desc": "ניווט בספר כמבנה עץ"
+	"bs-bookshelfui-panel-navigation-aria-desc": "ניווט בספר כמבנה עץ",
+	"apihelp-bs-bookshelf-page-collection-store-summary": "אספקת אוסף של דפים שניתן להוסיף באצווה לספר.",
+	"apihelp-bs-bookshelf-mass-add-page-store-summary": "אספקת דפים שניתן להוסיף באצווה לספר."
 }
