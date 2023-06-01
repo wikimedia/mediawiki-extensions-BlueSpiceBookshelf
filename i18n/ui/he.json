@@ -81,6 +81,8 @@
 	"bs-bookshelfui-bookmetatag-department": "מחלקה",
 	"bs-bookshelfui-bookmetatag-version": "גרסה",
 	"bs-bookshelfui-extjs-tooltip-copy": "להעתיק",
+	"apihelp-bs-bookshelf-page-collection-store-summary": "אספקת אוסף של דפים שניתן להוסיף באצווה לספר.",
+	"apihelp-bs-bookshelf-mass-add-page-store-summary": "אספקת דפים שניתן להוסיף באצווה לספר.",
 	"right-bookshelfbookmanager-viewspecialpage": "גישה לדף המיוחד [[Special:BookshelfBookManager]]",
 	"action-bookshelfbookmanager-viewspecialpage": "לגשת לדף המיוחד [[Special:BookshelfBookManager]]",
 	"right-bookshelfbookui-viewspecialpage": "גישה לדף המיוחד [[Special:BookshelfBookUI]]",
