@@ -183,12 +183,8 @@
 			]
 		},
 		"ext.bluespice.bookshelf.addToBook": {
-			"scripts": [
-				"bluespice.bookshelf.addToBook.js"
-			]
-		},
-		"ext.bluespice.bookshelf.addToBook.implementation": {
-			"scripts": [
+			"packageFiles": [
+				"bluespice.bookshelf.addToBook.js",
 				"BS.Bookshelf/dialog/AddToBook.js"
 			],
 			"messages": [
@@ -271,36 +267,9 @@
 				"ext.bookshelf.booktreeexport"
 			]
 		},
-		"ext.bluespice.bookshelf.ui.styles": {
-			"styles": "bluespice.bookshelf.UI.less",
-			"class": "\\BlueSpice\\ResourceModule\\LessVars"
-		},
-		"ext.bluespice.bookshelf.UI": {
-			"messages": [
-				"bs-deferred-action-status-pending",
-				"bs-deferred-action-status-running",
-				"bs-deferred-action-status-done",
-				"bs-deferred-action-status-error",
-				"bs-deferred-action-apicopypage-description",
-				"bs-deferred-action-apieditpage-description",
-				"bs-deferred-batch-title",
-				"bs-deferred-batch-progress-desc",
-				"bs-deferred-batch-actions",
-				"bs-deferred-batch-description",
-				"bs-deferred-batch-status",
-				"bs-bookshelf-specialpage-allpages-ns-book-text"
-			],
-			"dependencies": [
-				"ext.bluespice"
-			]
-		},
 		"ext.bluespice.bookshelf.chapter-pager.styles": {
 			"styles": [
-				"bluespice.bookshelf.chapter-pager.css"
-			]
-		},
-		"ext.bluespice.bookshelf.chapter-pager.panel.styles": {
-			"styles": [
+				"bluespice.bookshelf.chapter-pager.css",
 				"bluespice.bookshelf.chapter-pager.panel.css"
 			]
 		},
@@ -313,19 +282,7 @@
 				"bs-bookshelf-grouping-template-type-ns_book"
 			],
 			"dependencies": [
-				"ext.bluespice.bookshelf.UI"
-			]
-		},
-		"ext.bluespice.bookshelf.flyout": {
-			"scripts": [
-				"bluespice.bookshelf.flyout.js"
-			],
-			"messages": [
-				"bs-bookshelfui-manager-title"
-			],
-			"dependencies": [
-				"ext.bluespice.bookshelf.UI",
-				"ext.bluespice.extjs"
+				"ext.bluespice.extjs.BS.deferred"
 			]
 		},
 		"ext.bluespice.bookshelf.manager": {
@@ -348,19 +305,16 @@
 				"bs-bookshelfui-dlg-copy-target-namespace-qtip",
 				"bs-bookshelfui-grouping-template-books",
 				"bs-bookshelfui-book-type",
-				"bs-bookshelf-personal-books-page-prefix"
+				"bs-bookshelf-personal-books-page-prefix",
+				"bs-bookshelfui-extjs-tooltip-copy",
+				"bs-bookshelf-specialpage-allpages-ns-book-text"
 			],
 			"dependencies": [
 				"ext.bluespice.bookshelf.storageLocation",
 				"mediawiki.Title",
-				"ext.bluespice.bookshelf.UI",
-				"ext.bluespice.bookshelf.extjs.i18n",
-				"ext.bluespice.extjs"
-			]
-		},
-		"ext.bluespice.bookshelf.extjs.i18n": {
-			"messages": [
-				"bs-bookshelfui-extjs-tooltip-copy"
+				"ext.bluespice",
+				"ext.bluespice.extjs",
+				"ext.bluespice.extjs.BS.deferred"
 			]
 		},
 		"ext.bluespice.bookshelf.special": {
@@ -370,9 +324,13 @@
 			"styles": [
 				"bluespice.bookshelf.special.css"
 			],
+			"messages": [
+				"bs-bookshelfui-manager-title",
+				"bs-bookshelf-specialpage-allpages-ns-book-text"
+			],
 			"dependencies": [
 				"ext.bluespice.bookshelf.storageLocation",
-				"ext.bluespice.bookshelf.flyout"
+				"ext.bluespice.extjs"
 			]
 		},
 		"ext.bluespice.bookshelf.view": {

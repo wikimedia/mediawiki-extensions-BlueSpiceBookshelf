@@ -82,8 +82,7 @@ class ChapterPagerPanel extends Literal {
 	 */
 	public function getRequiredRLStyles(): array {
 		return [
-			'ext.bluespice.bookshelf.chapter-pager.styles',
-			'ext.bluespice.bookshelf.chapter-pager.panel.styles'
+			'ext.bluespice.bookshelf.chapter-pager.styles'
 		];
 	}
 }
