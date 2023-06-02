@@ -35,9 +35,13 @@ class ModifyForExport extends BSUEModulePDFgetPage {
 			}
 
 			$oEntry = $oPHP->getEntryFor( $sRequestedTitle );
-			$sNumber = $oEntry->articleNumber;
 
-			if ( isset( $oEntry->articleDisplayTitle ) ) {
+			$sNumber = "";
+			if ( $oEntry && property_exists( $oEntry, 'articleNumber' ) ) {
+				$sNumber = $oEntry->articleNumber;
+			}
+
+			if ( $oEntry && property_exists( $oEntry, 'articleDisplayTitle' ) ) {
 				$sDisplayTitle = $oEntry->articleDisplayTitle;
 			}
 			// Fallback in case of no display title but subpage
