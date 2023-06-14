@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Chrumps",
 			"Kareyac",
 			"Pefect",
 			"Superjurek",
@@ -29,5 +30,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Wersja",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Książka",
 	"bs-bookshelf-action-export-book": "Eksportuj książkę",
-	"bs-bookshelf-ve-booklistinspector-title": "Lista książek"
+	"bs-bookshelf-ve-booklistinspector-title": "Lista książek",
+	"bs-bookshelf-positive-integer-validation-not-approved": "Dozwolone są tylko dodatnie liczby całkowite."
 }
