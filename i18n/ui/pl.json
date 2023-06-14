@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Chrumps",
 			"Pefect",
 			"Rail",
 			"WaldiSt"
@@ -29,5 +30,9 @@
 	"bs-bookshelfui-nothingtoexport-text": "Twój wybór jest pusty",
 	"bs-bookshelfui-empty-selection": "Nic nie zaznaczono",
 	"bs-bookshelfui-bookmetatag-subtitle": "Podtytuł",
-	"bs-bookshelfui-bookmetatag-docummentidentifier": "Identyfikator dokumentu"
+	"bs-bookshelfui-bookmetatag-docummentidentifier": "Identyfikator dokumentu",
+	"bs-bookshelfui-manager-deletionfailure-title": "Błąd podczas usuwania!",
+	"bs-bookshelfui-dlg-choosecategory-label": "Kategoria",
+	"bs-bookshelfui-flyout-title": "Lista książek",
+	"bs-bookshelfui-bookmetatag-docummenttype": "Typ dokumentu"
 }
