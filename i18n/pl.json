@@ -4,9 +4,11 @@
 			"Kareyac",
 			"Pefect",
 			"Superjurek",
-			"WaldiSt"
+			"WaldiSt",
+			"Chrumps"
 		]
 	},
+	"bs-bookshelf-positive-integer-validation-not-approved": "Dozwolone są tylko dodatnie liczby całkowite.",
 	"bs-bookshelf-specialpage-title": "Książki",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Biblioteka",
 	"bs-bookshelf-tag-next": "Następny",

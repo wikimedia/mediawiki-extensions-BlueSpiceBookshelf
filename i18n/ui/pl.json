@@ -3,7 +3,8 @@
 		"authors": [
 			"Pefect",
 			"Rail",
-			"WaldiSt"
+			"WaldiSt",
+			"Chrumps"
 		]
 	},
 	"bs-bookshelfui-new-book-title": "Utwórz nową książkę",
@@ -12,18 +13,22 @@
 	"bs-bookshelfui-manager-title": "Tytuł",
 	"bs-bookshelfui-manager-deletingprogress-text": "Usuwanie wybranej książki",
 	"bs-bookshelfui-manager-deletingprogress-title": "Usuwanie...",
+	"bs-bookshelfui-manager-deletionfailure-title": "Błąd podczas usuwania!",
 	"bs-bookshelfui-dlg-copy-name-addition": " (kopiuj)",
 	"bs-bookshelfui-dlg-copy-target-name-label": "Nazwa docelowa",
 	"bs-bookshelfui-nothingtoexport-text": "Twój wybór jest pusty",
 	"bs-bookshelfui-empty-selection": "Nic nie zaznaczono",
+	"bs-bookshelfui-dlg-choosecategory-label": "Kategoria",
 	"bs-bookshelfui-dlg-type-label": "Źródło",
 	"bs-bookshelfui-dlg-choosepc-label": "Zbiór stron",
 	"bs-bookshelfui-type-pagecollection": "Zbiór stron",
+	"bs-bookshelfui-flyout-title": "Lista książek",
 	"bs-bookshelfui-bookmetatag-title": "Tytuł",
 	"bs-bookshelfui-bookmetatag-subtitle": "Podtytuł",
 	"bs-bookshelfui-bookmetatag-author1": "Autor 1",
 	"bs-bookshelfui-bookmetatag-author2": "Autor 2",
 	"bs-bookshelfui-bookmetatag-docummentidentifier": "Identyfikator dokumentu",
+	"bs-bookshelfui-bookmetatag-docummenttype": "Typ dokumentu",
 	"bs-bookshelfui-bookmetatag-department": "Dział",
 	"bs-bookshelfui-bookmetatag-version": "Wersja",
 	"bs-bookshelfui-extjs-tooltip-copy": "Kopiuj",
