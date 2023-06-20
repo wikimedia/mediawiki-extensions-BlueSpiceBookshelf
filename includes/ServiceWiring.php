@@ -1,6 +1,7 @@
 <?php
 
 use BlueSpice\Bookshelf\TreeParser;
+use BlueSpice\Bookshelf\Utilities;
 use BlueSpice\ExtensionAttributeBasedRegistry;
 use MediaWiki\MediaWikiServices;
 
@@ -19,6 +20,13 @@ return [
 	},
 	'BSBookshelfPageHierarchyProviderFactory' => static function ( MediaWikiServices $services ) {
 		return new \BlueSpice\Bookshelf\PageHierarchyProviderFactory();
+	},
+	'BSBookshelfUtilities' => static function ( MediaWikiServices $services ) {
+		return new Utilities(
+			RequestContext::getMain(),
+			$services->getMainConfig(),
+			$services
+		);
 	},
 ];
 
