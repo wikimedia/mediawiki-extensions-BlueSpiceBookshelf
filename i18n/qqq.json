@@ -98,5 +98,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Help message for the parameter \"book\"",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Help message for checkbox in config, when activated, article table of contents and headlines with book numberation are prepended",
 	"bs-bookshelf-droplet-name": "Title of droplet for tag \"booklist\"",
-	"bs-bookshelf-droplet-description": "Description of droplet for tag\"booklist\""
+	"bs-bookshelf-droplet-description": "Description of droplet for tag\"booklist\"",
+	"apihelp-bs-book-chapters-store-summary": "{{{{doc-apihelp-summary|bs-book-chapters-store}}}"
 }
