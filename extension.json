@@ -116,7 +116,8 @@
 		"bs-bookshelf-bookstore": "ApiBookshelfBookStore",
 		"bs-bookshelf-manage": "ApiBookshelfManage",
 		"bs-bookshelf-page-collection-store": "ApiBookshelfPageCollectionStore",
-		"bs-bookshelf-mass-add-page-store": "ApiBookshelfMassAddPageStore"
+		"bs-bookshelf-mass-add-page-store": "ApiBookshelfMassAddPageStore",
+		"bs-book-chapters-store": "BlueSpice\\Bookshelf\\Api\\Store\\ApiBookChaptersStore"
 	},
 	"APIListModules": {
 		"bsbookshelf": "ApiQueryBookshelf"
@@ -497,7 +498,10 @@
 			"\\BlueSpice\\Bookshelf\\Hook\\BSInsertMagicAjaxGetData\\AddBooklistTag::callback"
 		],
 		"ContentHandlerDefaultModelFor": "BlueSpice\\Bookshelf\\Hook\\ContentHandlerDefaultModelFor\\GetBookContentHandler::callback",
-		"LoadExtensionSchemaUpdates": "BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddConvertContentModel::callback",
+		"LoadExtensionSchemaUpdates": [
+			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddConvertContentModel::callback",
+			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBookChapterTable::callback"
+		],
 		"BSUEModulePDFbeforeGetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFbeforeGetPage\\AdaptPageTitle::callback",
 		"BSUEModulePDFgetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFgetPage\\ModifyForExport::callback",
 		"BSUEModulePDFcollectMetaData": [
