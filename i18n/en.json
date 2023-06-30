@@ -89,5 +89,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Defines which book the pages belongs to",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Add chapter numbers of the book to table of contents and all headlines in the page",
 	"bs-bookshelf-droplet-name": "Booklist",
-	"bs-bookshelf-droplet-description": "List of pages in namespace Book"
+	"bs-bookshelf-droplet-description": "List of pages in namespace Book",
+	"apihelp-bs-book-chapters-store-summary": "Allows querying of all books and their chapter pages."
 }
