@@ -89,5 +89,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Določa, kateri knjigi pripadajo strani",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Kazalu vsebine in vsem naslovom na strani dodaj številke poglavij knjige",
 	"bs-bookshelf-droplet-name": "Knjižni seznam",
-	"bs-bookshelf-droplet-description": "Seznam strani v imenskem prostoru Knjiga"
+	"bs-bookshelf-droplet-description": "Seznam strani v imenskem prostoru Knjiga",
+	"apihelp-bs-book-chapters-store-summary": "Omogoča poizvedovanje po vseh straneh knjig in njihovih poglavij"
 }
