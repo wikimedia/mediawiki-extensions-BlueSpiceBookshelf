@@ -97,5 +97,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Définit à quel livre appartiennent les pages",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Ajouter les numéros de chapitre du livre à la table des matières et à tous les titres dans la page",
 	"bs-bookshelf-droplet-name": "Liste de livres",
-	"bs-bookshelf-droplet-description": "Liste des pages dans l’espace de noms Livre"
+	"bs-bookshelf-droplet-description": "Liste des pages dans l’espace de noms Livre",
+	"apihelp-bs-book-chapters-store-summary": "Permet de chercher dans tous les livres et leurs pages de chapitre."
 }
