@@ -91,5 +91,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definer hvilken bok sidene hører til",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Legg til kapittelnumre for boken i innholdsfortegnelse og alle overskrifter på siden",
 	"bs-bookshelf-droplet-name": "Bokliste",
-	"bs-bookshelf-droplet-description": "Liste over sider i boknavnerommet"
+	"bs-bookshelf-droplet-description": "Liste over sider i boknavnerommet",
+	"apihelp-bs-book-chapters-store-summary": "Muligjør spørring av alle bøker og deres kapittelsider."
 }

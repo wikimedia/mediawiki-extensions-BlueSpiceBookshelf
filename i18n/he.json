@@ -93,5 +93,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "הגדרת הספר שהדפים שייכים אליו",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "הוספת מספרי הפרקים של הספר לתוכן העניינים ולכל הכותרות בדף",
 	"bs-bookshelf-droplet-name": "רשימת הספרים",
-	"bs-bookshelf-droplet-description": "רשימת דפים במרחב השמות ספר"
+	"bs-bookshelf-droplet-description": "רשימת דפים במרחב השמות ספר",
+	"apihelp-bs-book-chapters-store-summary": "אפשרות להריץ שאילתה על כל הספרים ודפי הפרקים שלהם."
 }
