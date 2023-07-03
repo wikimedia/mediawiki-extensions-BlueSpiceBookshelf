@@ -93,5 +93,6 @@
 	"bs-bookshelf-tag-bookmeta-description": "תג לשמירת מטא־נתונים שונים במאמרי ספרים. אלה כלולים בספר. המאפיינים של התג הזה צריכים להיות מתואמים עם המטא־נתונים של מאמר הספר",
 	"bs-bookshelf-tag-bookshelf-box-desc": "מכניס את ניווט הפרקים של ספר בעמוד שאינו חלק מספר. המספור נוצר אוטומטית בהתאם לתוכן העניינים",
 	"bs-bookshelf-droplet-name": "רשימת הספרים",
-	"bs-bookshelf-droplet-description": "רשימת דפים במרחב השמות ספר"
+	"bs-bookshelf-droplet-description": "רשימת דפים במרחב השמות ספר",
+	"apihelp-bs-book-chapters-store-summary": "אפשרות להריץ שאילתה על כל הספרים ודפי הפרקים שלהם."
 }
