@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"DiGro",
+			"HanV",
 			"Mainframe98",
 			"McDutchie",
 			"Nickthijssen1994",
@@ -32,9 +33,7 @@
 	"bs-bookshelf-add-to-book-label-mod-bstag": "De tag 'bookshelf' wijzigen in de pagina (nieuwe versie)",
 	"bs-bookshelf-add-to-book-added": "De pagina is aan het boek \"$1\" toegevoegd.",
 	"bs-bookshelf-add-to-book-mod-bstag": "De tag \"bookshelf\" van de pagina is gewijzigd. De pagina wordt opnieuw geladen.",
-	"apihelp-bs-bookshelf-store-description": "Geeft een overzicht van alle boeken. Maakt sorteren, filteren en pagineren mogelijk. Implementeert ExtJS Store-parameters.",
 	"apihelp-bs-bookshelf-store-param-tempBooks": "Lijst met boeken in de lokale opslag van de cliënt die moeten worden opgenomen in het opslagantwoord",
-	"apihelp-bs-bookshelf-bookstore-description": "Geeft een overzicht van alle hoofdstukken van een gegeven boek. Maakt sorteren, filteren en pagineren mogelijk. Implementeert ExtJS Store-parameters.",
 	"apihelp-bs-bookshelf-bookstore-param-node": "Geeft een knooppunt aan waarvoor een lijst met subhoofdstukken moet worden verstrekt.",
 	"apihelp-bs-bookshelf-bookstore-param-book": "Geeft het boek aan waarvoor een hoofdstukkenlijst moet worden verstrekt.",
 	"bs-bookshelf-setting-path-feature": "Boek",
@@ -93,5 +92,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definieert tot welk boek de pagina's behoren",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Voeg hoofdstuknummers van het boek toe aan de inhoudsopgave en alle koppen op de pagina",
 	"bs-bookshelf-droplet-name": "Boekenlijst",
-	"bs-bookshelf-droplet-description": "Lijst met pagina's in naamruimte Book"
+	"bs-bookshelf-droplet-description": "Lijst met pagina's in naamruimte Book",
+	"apihelp-bs-book-chapters-store-summary": "Maakt het opvragen van alle boeken en de hoofdstukpagina's mogelijk."
 }

@@ -34,8 +34,6 @@
 	"bs-bookshelf-add-to-book-label-mod-bstag": "Modifica il tag 'scaffale' nella pagina (nuova versione)",
 	"bs-bookshelf-add-to-book-added": "La pagina è stata aggiunta al libro \"$1\".",
 	"bs-bookshelf-add-to-book-mod-bstag": "L'etichetta \"scaffale\" della pagina è stata modificata. La pagina verrà ricaricata.",
-	"apihelp-bs-bookshelf-store-description": "Elenca tutti i libri. Consente ordinamento, filtraggio e impaginazione. Implementa parametri ExtJS Store.",
-	"apihelp-bs-bookshelf-bookstore-description": "Elenca tutti i capitoli di un determinato libro. Consente l'ordinamento, il filtraggio e l'impaginazione. Implementa i parametri ExtJS Store.",
 	"apihelp-bs-bookshelf-bookstore-param-node": "Specifica un nodo per il quale deve essere fornito un elenco di sottocapitoli.",
 	"apihelp-bs-bookshelf-bookstore-param-book": "Specifica il libro per il quale deve essere fornito un elenco di capitoli.",
 	"bs-bookshelf-setting-path-feature": "Libro",
