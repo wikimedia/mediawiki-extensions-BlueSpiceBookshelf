@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"DiGro",
+			"HanV",
 			"Mainframe98",
 			"McDutchie",
 			"Nickthijssen1994",
@@ -93,5 +94,6 @@
 	"bs-bookshelf-tag-bookmeta-description": "Tag voor het opslaan van verscheidene metagegevens over boekpagina's. Deze worden in het boek opgenomen. De attributen van deze tag moeten overeenkomen met de metagegevens van de boekpagina.",
 	"bs-bookshelf-ve-bookmetainspector-title": "Boekmeta",
 	"bs-bookshelf-droplet-name": "Boekenlijst",
-	"bs-bookshelf-droplet-description": "Lijst met pagina's in naamruimte Book"
+	"bs-bookshelf-droplet-description": "Lijst met pagina's in naamruimte Book",
+	"apihelp-bs-book-chapters-store-summary": "Maakt het opvragen van alle boeken en de hoofdstukpagina's mogelijk."
 }
