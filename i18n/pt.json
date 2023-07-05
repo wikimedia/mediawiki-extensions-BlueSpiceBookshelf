@@ -92,5 +92,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definir a que livro as páginas pertencem",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Adicionar números dos capítulos do livro ao índice e a todos os cabeçalhos da página",
 	"bs-bookshelf-droplet-name": "Lista de livros",
-	"bs-bookshelf-droplet-description": "Lista das páginas no espaço nominal Livro"
+	"bs-bookshelf-droplet-description": "Lista das páginas no espaço nominal Livro",
+	"apihelp-bs-book-chapters-store-summary": "Permite consulta de todos os livros e das suas páginas de capítulos."
 }
