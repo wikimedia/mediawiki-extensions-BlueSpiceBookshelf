@@ -90,9 +90,8 @@ class TreeDataProvider {
 
 		$data = [
 			'id' => $id,
-			'name' => $title->getPrefixedDBkey(),
+			'name' => $item->text,
 			'text' => $item->text,
-			'href' => $title->getLocalURL(),
 			'path' => trim( $path, '/' ),
 			'items' => []
 		];
