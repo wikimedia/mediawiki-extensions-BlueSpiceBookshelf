@@ -113,6 +113,7 @@ class TreeDataProvider {
 	 */
 	private function makeLinkNode( stdClass $item, Title $title, $path ): array {
 		$data = $this->makeTextNode( $item, $title, $path );
+		$data['name'] = $title->getPrefixedDBkey();
 		$data['href'] = $title->getLocalURL();
 
 		return $data;
