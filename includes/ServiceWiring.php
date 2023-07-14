@@ -1,8 +1,10 @@
 <?php
 
+use BlueSpice\Bookshelf\BookContextProviderFactory;
+use BlueSpice\Bookshelf\BookLookup;
+use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\Renderer\ComponentRenderer;
 use BlueSpice\Bookshelf\TreeParser;
-use BlueSpice\Bookshelf\Utilities;
 use BlueSpice\ExtensionAttributeBasedRegistry;
 use MediaWiki\MediaWikiServices;
 
@@ -22,13 +24,6 @@ return [
 	'BSBookshelfPageHierarchyProviderFactory' => static function ( MediaWikiServices $services ) {
 		return new \BlueSpice\Bookshelf\PageHierarchyProviderFactory();
 	},
-	'BSBookshelfUtilities' => static function ( MediaWikiServices $services ) {
-		return new Utilities(
-			RequestContext::getMain(),
-			$services->getMainConfig(),
-			$services
-		);
-	},
 	'BSBookshelfComponentRenderer' => static function ( MediaWikiServices $services ) {
 		$renderer = new ComponentRenderer(
 			$services->getService( 'MWStakeCommonUIComponentManager' ),
@@ -36,6 +31,27 @@ return [
 			$services->getService( 'MWStakeCommonUIRendererDataTreeRenderer' )
 		);
 		return $renderer;
+	},
+	'BSBookshelfBookLookup' => static function ( MediaWikiServices $services ) {
+		$provider = new BookLookup(
+			$services->getTitleFactory(),
+			$services->getDBLoadBalancer(),
+			$services->getService( 'BSBookshelfChapterLookup' )
+		);
+		return $provider;
+	},
+	'BSBookshelfChapterLookup' => static function ( MediaWikiServices $services ) {
+		$provider = new ChapterLookup(
+			$services->getDBLoadBalancer()
+		);
+		return $provider;
+	},
+	'BSBookshelfBookContextProviderFactory' => static function ( MediaWikiServices $services ) {
+		return new BookContextProviderFactory(
+			$services->getObjectFactory(),
+			$services->getService( 'BSBookshelfBookLookup' ),
+			$services->getTitleFactory()
+		);
 	},
 ];
 

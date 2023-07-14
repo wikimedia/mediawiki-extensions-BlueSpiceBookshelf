@@ -12,7 +12,8 @@
 	"requires": {
 		"MediaWiki": ">= 1.39.0",
 		"extensions": {
-			"BlueSpiceFoundation": ">= 4.3"
+			"BlueSpiceFoundation": ">= 4.3",
+			"MenuEditor": ">= 2.0.0"
 		}
 	},
 	"attributes": {
@@ -72,7 +73,6 @@
 					]
 				}
 			}
-
 		},
 		"BlueSpiceBookshelf": {
 			"LineProcessors": {
@@ -535,7 +535,10 @@
 	"HookHandlers": {
 		"common-user-interface": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\CommonUserInterface",
-			"services": [ "ConfigFactory" ]
+			"services": [
+				"ConfigFactory", "TitleFactory", "BSBookshelfBookContextProviderFactory",
+				"BSBookshelfBookLookup", "BSBookshelfChapterLookup", "MWStakeCommonUITreeDataGenerator"
+			]
 		},
 		"discovery-skin": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\DiscoverySkin"
@@ -553,6 +556,10 @@
 		"add-chapter-number-to-title-and-headings": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\AddChapterNumberToTitleAndHeadings",
 			"services": [ "ConfigFactory" ]
+		},
+		"book-source-update": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookPageSaveComplete",
+			"services": [ "TitleFactory", "MWStakeWikitextParserFactory", "DBLoadBalancer", "BSBookshelfBookLookup" ]
 		}
 	},
 	"Hooks": {
@@ -563,7 +570,8 @@
 		"ContentHandlerDefaultModelFor": "BlueSpice\\Bookshelf\\Hook\\ContentHandlerDefaultModelFor\\GetBookContentHandler::callback",
 		"LoadExtensionSchemaUpdates": [
 			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddConvertContentModel::callback",
-			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBookChapterTable::callback"
+			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBookChaptersTable::callback",
+			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBooksTable::callback"
 		],
 		"BSUEModulePDFbeforeGetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFbeforeGetPage\\AdaptPageTitle::callback",
 		"BSUEModulePDFgetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFgetPage\\ModifyForExport::callback",
@@ -581,7 +589,8 @@
 		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\Bookshelf\\Hook\\BSUsageTrackerRegisterCollectors\\NoOfUserBooks::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface",
-		"OutputPageBeforeHTML": "add-chapter-number-to-title-and-headings"
+		"OutputPageBeforeHTML": "add-chapter-number-to-title-and-headings",
+		"PageSaveComplete": "book-source-update"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"

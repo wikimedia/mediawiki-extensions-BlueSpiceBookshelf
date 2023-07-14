@@ -12,27 +12,22 @@ class Schema extends \MWStake\MediaWiki\Component\DataStore\Schema {
 				self::SORTABLE => true,
 				self::TYPE => FieldType::INT
 			],
-			Record::CHAPTER_BOOK_NAMESPACE => [
+			Record::CHAPTER_BOOK_ID => [
 				self::FILTERABLE => true,
 				self::SORTABLE => true,
 				self::TYPE => FieldType::STRING
 			],
-			Record::CHAPTER_BOOK_TITLE => [
-				self::FILTERABLE => true,
-				self::SORTABLE => true,
-				self::TYPE => FieldType::STRING
-			],
-			Record::CHAPTER_PAGE_NAMESPACE => [
-				self::FILTERABLE => true,
-				self::SORTABLE => true,
-				self::TYPE => FieldType::STRING
-			],
-			Record::CHAPTER_PAGE_TITLE => [
+			Record::CHAPTER_NAMESPACE => [
 				self::FILTERABLE => true,
 				self::SORTABLE => true,
 				self::TYPE => FieldType::STRING
 			],
 			Record::CHAPTER_TITLE => [
+				self::FILTERABLE => true,
+				self::SORTABLE => true,
+				self::TYPE => FieldType::STRING
+			],
+			Record::CHAPTER_NAME => [
 				self::FILTERABLE => true,
 				self::SORTABLE => true,
 				self::TYPE => FieldType::STRING

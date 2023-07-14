@@ -2,31 +2,53 @@
 
 namespace BlueSpice\Bookshelf\Panel;
 
+use BlueSpice\Bookshelf\BookContextProviderFactory;
+use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\TreeDataProvider;
 use IContextSource;
-use MediaWiki\MediaWikiServices;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleTreeContainer;
+use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
 use Title;
+use TitleFactory;
 
 class BookNavigationTreeContainer extends SimpleTreeContainer {
 
 	/** @var Title */
 	private $title = null;
 
-	/** @var MediaWikiServices */
-	private $services = null;
+	/** @var TitleFactory */
+	private $titleFactory = null;
 
 	/** @var array */
 	private $treeData = [];
 
+	/** @var BookContextProviderFactory */
+	private $bookContxtProviderFactory = null;
+
+	/** @var BookLookup */
+	private $bookLookup = null;
+
+	/** @var TreeDataGenerator */
+	private $treeDataGenerator = null;
+
 	/**
 	 * @param Title $title
+	 * @param TitleFactory $titleFactory
+	 * @param BookContextProviderFactory $bookContxtProviderFactory
+	 * @param BookLookup $bookLookup
+	 * @param TreeDataGenerator $treeDataGenerator
 	 */
-	public function __construct( Title $title ) {
+	public function __construct(
+		Title $title, TitleFactory $titleFactory, BookContextProviderFactory $bookContxtProviderFactory,
+		BookLookup $bookLookup, TreeDataGenerator $treeDataGenerator
+	) {
 		parent::__construct( [] );
 
 		$this->title = $title;
-		$this->services = MediaWikiServices::getInstance();
+		$this->titleFactory = $titleFactory;
+		$this->bookContxtProviderFactory = $bookContxtProviderFactory;
+		$this->bookLookup = $bookLookup;
+		$this->treeDataGenerator = $treeDataGenerator;
 	}
 
 	/**
@@ -40,9 +62,7 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 	 * @inheritDoc
 	 */
 	public function getSubComponents(): array {
-		$treeDataGenerator = $this->services->get( 'MWStakeCommonUITreeDataGenerator' );
-
-		$nodes = $treeDataGenerator->generate(
+		$nodes = $this->treeDataGenerator->generate(
 			$this->getTreeData(),
 			$this->getTreeExpandPaths()
 		);
@@ -58,7 +78,9 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 			return $this->treeData;
 		}
 
-		$treeDataProvider = new TreeDataProvider();
+		$treeDataProvider = new TreeDataProvider(
+			$this->bookLookup, $this->bookContxtProviderFactory, $this->titleFactory
+		);
 		$treeData = $treeDataProvider->get( $this->title );
 
 		$this->treeData = $treeData;
@@ -78,11 +100,10 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 	 * @return array
 	 */
 	private function getTreeExpandPaths(): array {
-		$name = $this->title->getPrefixedDBKey();
+		$name = $this->title->getPrefixedDBkey();
 		$treeData = $this->getTreeData();
 
 		$paths = $this->makeTreePathsList( $treeData );
-
 		if ( isset( $paths[$name] ) ) {
 			return [
 				$paths[$name]
@@ -99,16 +120,14 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 	private function makeTreePathsList( array $items ): array {
 		$paths = [];
 		foreach ( $items as $item ) {
-			$name = $item['name'];
+			$title = $this->titleFactory->newFromText( $item['name'] );
+			$name = $title->getPrefixedDBkey();
 			$path = $item['path'];
 
-			$paths[$name] = $path;
+			$paths[$name] = trim( $path, '/' );
 
 			if ( isset( $item['items'] ) && !empty( $item['items'] ) ) {
-				$paths = array_merge(
-					$paths,
-					$this->makeTreePathsList( $item['items'] )
-				);
+				$paths = $paths + $this->makeTreePathsList( $item['items'] );
 			}
 		}
 
