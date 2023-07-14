@@ -2,31 +2,54 @@
 
 namespace BlueSpice\Bookshelf\Panel;
 
+use BlueSpice\Bookshelf\BookContextProviderFactory;
+use BlueSpice\Bookshelf\BookLookup;
+use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\ChapterPager;
 use Html;
-use InvalidArgumentException;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
-use PageHierarchyProvider;
+use Title;
+use TitleFactory;
 
 class ChapterPagerPanel extends Literal {
 
-	/**
-	 *
-	 * @var Title
-	 */
+	/** @var Title */
 	protected $title = null;
 
-	/**
-	 * @var string
-	 */
+	/** @var TitleFactory */
+	private $titleFactory = null;
+
+	/** @var BookContextProviderFactory */
+	private $bookContextProviderFactory = null;
+
+	/** @var BookLookup */
+	private $bookLookup = null;
+
+	/** @var ChapterLookup */
+	private $chapterLookup = null;
+
+	/** @var string */
 	private $id = '';
 
 	/**
-	 * @inheritDoc
+	 * @param Title $title
+	 * @param TitleFactory $titleFactory
+	 * @param BookContextProviderFactory $bookContextProviderFactory
+	 * @param BookLookup $bookLookup
+	 * @param ChapterLookup $chapterLookup
+	 * @param string $id
 	 */
-	public function __construct( $title, $id ) {
+	public function __construct(
+		Title $title, TitleFactory $titleFactory, BookContextProviderFactory $bookContextProviderFactory,
+		BookLookup $bookLookup, ChapterLookup $chapterLookup, string $id
+	) {
 		$this->title = $title;
+		$this->titleFactory = $titleFactory;
+		$this->bookLookup = $bookLookup;
+		$this->bookContextProviderFactory = $bookContextProviderFactory;
+		$this->chapterLookup = $chapterLookup;
 		$this->id = $id;
+
 		parent::__construct( 'bs-book-chapterpager', '' );
 	}
 
@@ -43,8 +66,10 @@ class ChapterPagerPanel extends Literal {
 	 * @return string
 	 */
 	public function getHtml(): string {
-		$chapterPager = new ChapterPager();
-		$chapterPager->makePagerData( $this->title );
+		/** @var ChapterPager */
+		$chapterPager = new ChapterPager(
+			$this->titleFactory, $this->bookContextProviderFactory, $this->chapterLookup
+		);
 
 		$html = Html::openElement( 'div', [ 'class' => 'bs-bookshelfui-chapter-pager-default-pnl' ] );
 		$html .= $chapterPager->getDefaultPagerHtml( $this->title );
@@ -66,13 +91,10 @@ class ChapterPagerPanel extends Literal {
 				$title = $context->getWikiPage()->getRedirectTarget();
 			}
 		}
-		try {
-			$provider = PageHierarchyProvider::getInstanceForArticle(
-				$title->getPrefixedText()
-			);
-		} catch ( InvalidArgumentException $ex ) {
+		if ( empty( $this->bookLookup->getBooksForPage( $title ) ) ) {
 			return false;
 		}
+
 		return true;
 	}
 

@@ -4,11 +4,10 @@
 -- See https://www.mediawiki.org/wiki/Manual:Schema_changes
 CREATE TABLE /*_*/bs_book_chapters (
   chapter_id INT UNSIGNED AUTO_INCREMENT NOT NULL,
-  chapter_book_namespace VARBINARY(255) NOT NULL,
-  chapter_book_title VARBINARY(255) NOT NULL,
-  chapter_page_namespace VARBINARY(255),
-  chapter_page_title VARBINARY(255),
-  chapter_title VARBINARY(255),
+  chapter_book_id INT UNSIGNED NOT NULL,
+  chapter_namespace VARBINARY(255) DEFAULT NULL,
+  chapter_title VARBINARY(255) DEFAULT NULL,
+  chapter_name VARBINARY(255) NOT NULL,
   chapter_number VARBINARY(255) NOT NULL,
   chapter_type VARBINARY(255) NOT NULL,
   INDEX chapter_id_idx (chapter_id),

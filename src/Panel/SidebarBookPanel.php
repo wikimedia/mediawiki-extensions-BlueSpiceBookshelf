@@ -2,6 +2,9 @@
 
 namespace BlueSpice\Bookshelf\Panel;
 
+use BlueSpice\Bookshelf\BookContextProviderFactory;
+use BlueSpice\Bookshelf\BookLookup;
+use BlueSpice\Bookshelf\ChapterLookup;
 use Html;
 use IContextSource;
 use InvalidArgumentException;
@@ -13,27 +16,52 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardFooter;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\ITabPanel;
+use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
 use PageHierarchyProvider;
 use Title;
+use TitleFactory;
 
 class SidebarBookPanel extends ComponentBase implements ITabPanel {
 
-	/**
-	 *
-	 * @var Title
-	 */
+	/** @var Title */
 	protected $title;
 
-	/**
-	 * @var PageHierarchyProvider|null
-	 */
+	/** @var PageHierarchyProvider */
 	private $phProvider = null;
+
+	/** @var TitleFactory */
+	private $titleFactory = null;
+
+	/** @var BookContextProviderFactory */
+	private $bookContextProviderFactory = null;
+
+	/** @var BookLookup */
+	private $bookLookup = null;
+
+	/** @var ChapterLookup */
+	private $chapterLookup = null;
+
+	/** @var TreeDataGenerator */
+	private $treeDataGenerator = null;
 
 	/**
 	 * @param Title $title
+	 * @param TitleFactory $titleFactory
+	 * @param BookContextProviderFactory $bookContextProviderFactory
+	 * @param BookLookup $bookLookup
+	 * @param ChapterLookup $chapterLookup
+	 * @param TreeDataGenerator $treeDataGenerator
 	 */
-	public function __construct( $title ) {
+	public function __construct(
+		Title $title, TitleFactory $titleFactory, BookContextProviderFactory $bookContextProviderFactory,
+		BookLookup $bookLookup, ChapterLookup $chapterLookup, TreeDataGenerator $treeDataGenerator
+	) {
 		$this->title = $title;
+		$this->titleFactory = $titleFactory;
+		$this->bookContextProviderFactory = $bookContextProviderFactory;
+		$this->bookLookup = $bookLookup;
+		$this->chapterLookup = $chapterLookup;
+		$this->treeDataGenerator = $treeDataGenerator;
 	}
 
 	/**
@@ -114,8 +142,13 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 						)
 					]
 				] ),
-				new BookNavigationChapterPagerContainer( $this->title ),
-				new BookNavigationTreeContainer( $this->title ),
+				new BookNavigationChapterPagerContainer(
+					$this->title, $this->titleFactory, $this->bookContextProviderFactory, $this->chapterLookup
+				),
+				new BookNavigationTreeContainer(
+					$this->title, $this->titleFactory, $this->bookContextProviderFactory,
+					$this->bookLookup, $this->treeDataGenerator
+				),
 				new SimpleCardFooter( [
 					'id' => 'n-book-panel-footer',
 					'classes' => [ 'bg-transp' ],
@@ -147,9 +180,9 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 			}
 		}
 
-		$phProvider = $this->getPageHierarchyProvider();
+		$provider = $this->bookContextProviderFactory->getProvider( $this->title );
 
-		if ( $phProvider instanceof PageHierarchyProvider === false ) {
+		if ( $provider->getActiveBook() === null ) {
 			return false;
 		}
 

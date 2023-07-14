@@ -3,12 +3,11 @@
 namespace BlueSpice\Bookshelf;
 
 use Html;
-use InvalidArgumentException;
-use PageHierarchyProvider;
 use Title;
+use TitleFactory;
 
 class ChapterPager {
-	/** @var string */
+	/** @var Title */
 	protected $bookTitle;
 
 	/** @var array */
@@ -20,94 +19,100 @@ class ChapterPager {
 	/** @var array */
 	protected $nextTitle = [];
 
-	/** @var PageHierarchyProvider|null */
-	private $phProvider = null;
+	/** @var TitleFactory */
+	private $titleFactory = null;
+
+	/** @var ChapterLookup */
+	private $chapterLookup = null;
+
+	/** @var bookContextProviderFactory */
+	private $bookContextProviderFactory = null;
 
 	/**
-	 * @param Title $title
-	 * @return PageHierarchyProvider|null
+	 * @param TitleFactory $titleFactory
+	 * @param BookContextProviderFactory $bookContextProviderFactory
+	 * @param ChapterLookup $chapterLookup
 	 */
-	private function getPageHierarchyProvider( Title $title ): ?PageHierarchyProvider {
-		if ( $this->phProvider instanceof PageHierarchyProvider ) {
-			return $this->phProvider;
-		}
-
-		try {
-			$this->phProvider = PageHierarchyProvider::getInstanceForArticle(
-				$title->getPrefixedText()
-			);
-			return $this->phProvider;
-		} catch ( InvalidArgumentException $ex ) {
-			return null;
-		}
-
-		return null;
+	public function __construct(
+		TitleFactory $titleFactory, BookContextProviderFactory $bookContextProviderFactory, ChapterLookup $chapterLookup
+	) {
+		$this->titleFactory = $titleFactory;
+		$this->chapterLookup = $chapterLookup;
+		$this->bookContextProviderFactory = $bookContextProviderFactory;
 	}
 
 	/**
 	 * @param Title $title
-	 * @return void
+	 * @return bool
 	 */
-	public function makePagerData( $title ) {
-		$phProvider = $this->getPageHierarchyProvider( $title );
-		if ( $phProvider instanceof PageHierarchyProvider ) {
-			$extendedToc = $this->phProvider->getExtendedTOCJSON();
-			$bookMeta = $this->phProvider->getBookMeta();
+	private function makePagerData( $title ): bool {
+		/** @var IBookContextProvider */
+		$bookContextProvider = $this->bookContextProviderFactory->getProvider( $title );
+		$this->bookTitle = $bookContextProvider->getActiveBook();
 
-			$this->bookTitle = $extendedToc->bookshelf->page_title;
-			if ( isset( $bookMeta['title'] ) ) {
-				$this->bookTitle = $bookMeta['title'];
+		if ( !$this->bookTitle ) {
+			return false;
+		}
+
+		$chapters = $this->chapterLookup->getChaptersOfBook( $this->bookTitle );
+
+		$chapterPages = [];
+		$current = 0;
+		foreach ( $chapters as $chapter ) {
+			if ( $chapter->getType() === 'plain-text' ) {
+				continue;
 			}
 
-			$flatArray = $this->flatArray( (array)$extendedToc->children );
-			for ( $i = 0; $i < count( $flatArray ); $i++ ) {
-				if ( $title->getFullText() === $flatArray[$i]['articleTitle'] ) {
-					$this->currentTitle = $flatArray[$i];
-					if ( $i > 0 ) {
-						$this->previousTitle = $flatArray[$i - 1];
-					}
-					if ( ( $i + 1 ) < count( $flatArray ) ) {
-						$this->nextTitle = $flatArray[$i + 1];
-					}
-				}
+			$chapterPages[] = $chapter;
+
+			$chapterTitle = $this->titleFactory->makeTitle( $chapter->getNamespace(), $chapter->getTitle() );
+			if ( $title->equals( $chapterTitle ) ) {
+				$current = count( $chapterPages ) - 1;
 			}
 		}
+
+		$this->currentTitle = $chapterPages[$current];
+		if ( $current > 0 ) {
+			/** @var ChapterDataModel */
+			$chapterData = $chapterPages[$current - 1];
+			$this->previousTitle = $this->makeChapterArray( $chapterData );
+		}
+		if ( count( $chapterPages ) - 1 > $current ) {
+			/** @var ChapterDataModel */
+			$chapterData = $chapterPages[$current + 1];
+			$this->nextTitle = $this->makeChapterArray( $chapterData );
+		}
+
+		return true;
 	}
 
 	/**
-	 *
-	 * @param array $data
+	 * @param ChapterDataModel $chapter
 	 * @return array
 	 */
-	private function flatArray( $data ) {
-		$items = [];
-		for ( $i = 0; $i < count( $data ); $i++ ) {
-			$item = (array)$data[$i];
-			if ( array_key_exists( 'children', $item ) ) {
-				$children = $this->flatArray( (array)$item['children'] );
-				unset( $item['children'] );
-				$items[] = array_merge( $items, $item );
-				$items = array_merge( $items, $children );
-			} else {
-				$items[] = $item;
-			}
-		}
-		return $items;
+	private function makeChapterArray( ChapterDataModel $chapter ): array {
+		return [
+			'chapter_namespace' => $chapter->getNamespace(),
+			'chapter_title' => $chapter->getTitle(),
+			'chapter_name' => $chapter->getName(),
+			'chapter_number' => $chapter->getNumber(),
+			'chapter_type' => $chapter->getType(),
+		];
 	}
 
 	/**
 	 *
 	 * @return string
 	 */
-	public function getBookTitle() {
-		return $this->bookTitle;
+	private function getBookTitle() {
+		return $this->bookTitle->getText();
 	}
 
 	/**
 	 *
 	 * @return array
 	 */
-	public function getNextPageData() {
+	private function getNextPageData() {
 		return $this->nextTitle;
 	}
 
@@ -123,7 +128,7 @@ class ChapterPager {
 	 *
 	 * @return array
 	 */
-	public function getCurrentPageData() {
+	private function getCurrentPageData() {
 		return $this->currentTitle;
 	}
 
@@ -131,7 +136,7 @@ class ChapterPager {
 	 *
 	 * @return array
 	 */
-	public function getPreviousPageData() {
+	private function getPreviousPageData() {
 		return $this->previousTitle;
 	}
 
@@ -144,14 +149,19 @@ class ChapterPager {
 	}
 
 	/**
-	 *
+	 * @param Title $title
 	 * @return string
 	 */
-	public function getPagerToolbar(): string {
-		$html = Html::openElement( 'div', [ 'class' => 'bs-chapter-pager-toolbar' ] );
-		$html .= $this->getPreviousPageButton();
-		$html .= $this->getNextPageButton();
-		$html .= Html::closeElement( 'div' );
+	public function getPagerToolbar( Title $title ): string {
+		$html = '';
+
+		if ( $this->makePagerData( $title ) ) {
+			$html = Html::openElement( 'div', [ 'class' => 'bs-chapter-pager-toolbar' ] );
+			$html .= $this->getPreviousPageButton();
+			$html .= $this->getNextPageButton();
+			$html .= Html::closeElement( 'div' );
+		}
+
 		return $html;
 	}
 
@@ -161,9 +171,22 @@ class ChapterPager {
 	 * @return string
 	 */
 	private function makePagerButton( array $pageData, string $type ): string {
+		$label = '';
+		if ( isset( $pageData['chapter_name'] ) ) {
+			$label = $pageData['chapter_name'];
+		}
+
 		$btnTitle = null;
-	   if ( !empty( $pageData ) && isset( $pageData['articleTitle'] ) ) {
-		   $btnTitle = Title::newFromText( $pageData['articleTitle'] );
+	   if ( isset( $pageData['chapter_namespace'] ) && isset( $pageData['chapter_title'] )
+		) {
+		   $btnTitle = $this->titleFactory->makeTitle(
+				$pageData['chapter_namespace'],
+				$pageData['chapter_title']
+		   );
+
+		   if ( $label === '' ) {
+				$label = $btnTitle->getText();
+		   }
 	   }
 
 	   $btnData = [];
@@ -171,7 +194,7 @@ class ChapterPager {
 		   $btnData = [
 			   'class' => "$type-chapter",
 			   'href' => $btnTitle->getFullURL(),
-			   'title' => $pageData['text']
+			   'title' => $pageData['chapter_name']
 		   ];
 	   } else {
 		   $btnData = [
@@ -197,19 +220,24 @@ class ChapterPager {
 	}
 
 	/**
+	 * @param Title $title
 	 * @return string
 	 */
-	public function getDefaultPagerHtml() {
-		$html = Html::openElement( 'div', [ 'class' => 'bs-chapter-pager-heading' ] );
-		$html .= Html::element(
-			'h4',
-			[
-				'class' => 'book-title'
-			],
-			$this->getBookTitle()
-		);
-		$html .= Html::closeElement( 'div' );
-		$html .= $this->getPagerToolbar();
+	public function getDefaultPagerHtml( Title $title ) {
+		$html = '';
+
+		if ( $this->makePagerData( $title ) ) {
+			$html = Html::openElement( 'div', [ 'class' => 'bs-chapter-pager-heading' ] );
+			$html .= Html::element(
+				'h4',
+				[
+					'class' => 'book-title'
+				],
+				$this->getBookTitle()
+			);
+			$html .= Html::closeElement( 'div' );
+			$html .= $this->getPagerToolbar( $title );
+		}
 
 		return $html;
 	}
