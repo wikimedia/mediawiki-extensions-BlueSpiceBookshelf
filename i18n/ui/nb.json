@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"EdoAug",
 			"Jon Harald Søby"
 		]
 	},
@@ -77,8 +78,8 @@
 	"bs-bookshelfui-bookmetatag-department": "Avdeling",
 	"bs-bookshelfui-bookmetatag-version": "Versjon",
 	"bs-bookshelfui-extjs-tooltip-copy": "Kopier",
-	"apihelp-bs-bookshelf-page-collection-store-summary": "Gir en samling av sider som kan legges til i ei bok ''en masse''.",
-	"apihelp-bs-bookshelf-mass-add-page-store-summary": "Gir sider som kan legges til i ei bok ''en masse''.",
+	"apihelp-bs-bookshelf-page-collection-store-summary": "Gir en samling av sider som kan legges samlet til i ei bok.",
+	"apihelp-bs-bookshelf-mass-add-page-store-summary": "Gir sider som kan legges samlet til i ei bok.",
 	"right-bookshelfbookmanager-viewspecialpage": "Få tilgang tli spesialsiden [[Special:BookshelfBookManager]]",
 	"action-bookshelfbookmanager-viewspecialpage": "få tilgang til spesialsiden [[Special:BookshelfBookManager]]",
 	"right-bookshelfbookui-viewspecialpage": "Få tilgang til spesialsiden [[Special:BookshelfBookUI]]",
