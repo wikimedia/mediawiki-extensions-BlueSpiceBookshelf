@@ -103,7 +103,7 @@ class BookListHandler extends Handler {
 				continue;
 			}
 
-			$link = $this->linkRenderer->makeLink( $sourceTitle );
+			$link = $this->linkRenderer->makeLink( $sourceTitle, $sourceTitle->getText() );
 			$books[] = [
 				'link' => $link,
 				'meta' => $meta
