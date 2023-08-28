@@ -25,7 +25,7 @@
 	"bs-bookshelf-add-to-book-label": "Adder a un libro",
 	"bs-bookshelf-add-to-book-label-book": "Libro",
 	"bs-bookshelf-add-to-book-label-alias": "Alias",
-	"bs-bookshelf-add-to-book-label-mod-bstag": "Modificar le etiquetta 'bookshelf' in le pagina (nove version)",
+	"bs-bookshelf-add-to-book-label-mod-bstag": "Modificar le etiquetta ‘bookshelf’ in le pagina (nove version)",
 	"bs-bookshelf-add-to-book-added": "Le pagina ha essite addite al libro \"$1\".",
 	"bs-bookshelf-add-to-book-mod-bstag": "Le etiquetta \"bookshelf\" del pagina ha cambiate. Le pagina essera recargate.",
 	"apihelp-bs-bookshelf-store-param-tempBooks": "Lista de libros in le immagazinage local del cliente que debe esser includite in le responsa de immagazinage",
