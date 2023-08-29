@@ -119,7 +119,7 @@ class AddChapterNumberToTitleAndHeadings {
 		$data = [];
 		$status = preg_match( '#data-bs-number="(.*?)"#', $fullBookData, $data );
 		if ( $status ) {
-			$bookData['number'] = (int)$data[1];
+			$bookData['number'] = $data[1];
 		}
 
 		$data = [];
