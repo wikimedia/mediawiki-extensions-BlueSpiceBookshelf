@@ -51,12 +51,12 @@ class HeadingNumberation {
 	}
 
 	/**
-	 * @param int $articleNumber
+	 * @param string $articleNumber
 	 * @param array $headings
 	 * @param string $html
 	 * @return string
 	 */
-	private function processHeadings( int $articleNumber, array $headings, string $html ): string {
+	private function processHeadings( string $articleNumber, array $headings, string $html ): string {
 		for ( $index = 0; $index < count( $headings ); $index++ ) {
 			$level = $headings[$index]['level'];
 
@@ -134,10 +134,10 @@ class HeadingNumberation {
 	}
 
 	/**
-	 * @param int $articleNumber
+	 * @param string $articleNumber
 	 * @return string
 	 */
-	private function getHeadingNumberation( int $articleNumber ): string {
+	private function getHeadingNumberation( string $articleNumber ): string {
 		$counter = $this->clearHeadingCounter();
 		$numberation = implode( '.', $counter );
 
