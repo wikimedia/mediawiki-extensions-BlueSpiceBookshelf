@@ -76,7 +76,7 @@ class AddChapterNumberToTitleAndHeadings {
 			);
 
 			$tocNumberation = new TOCNumberation();
-			$$text = $tocNumberation->execute(
+			$text = $tocNumberation->execute(
 				$bookData['number'],
 				$text
 			);
