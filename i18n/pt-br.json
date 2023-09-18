@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Fúlvio",
@@ -96,5 +97,5 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definir qual livro com páginas pertencem a",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Adicione os números dos capítulos do livro ao índice e a todos os títulos da página",
 	"bs-bookshelf-droplet-name": "Lista de livro",
-	"apihelp-bs-book-chapters-store-summary": "permite\n  consulta de todos os livros e suas páginas de capítulo."
+	"apihelp-bs-book-chapters-store-summary": "Permite consulta de todos os livros e suas páginas de capítulo."
 }
