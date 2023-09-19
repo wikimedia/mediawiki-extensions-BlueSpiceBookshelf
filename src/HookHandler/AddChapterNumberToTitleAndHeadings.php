@@ -136,7 +136,12 @@ class AddChapterNumberToTitleAndHeadings {
 		$regEx = '&quot;articleTitle&quot;\:&quot;';
 		$regEx .= preg_quote( $titleText );
 		$regEx .= '&quot;,&quot;articleDisplayTitle&quot;\:&quot;(.*?)&quot;';
-		$status = preg_match( "#$regEx#", $fullBookData, $data );
+
+		$fullBookData = preg_replace_callback( '/\\\\u([0-9a-fA-F]{4})/u', static function ( $matches ) {
+			return mb_convert_encoding( pack( 'H*', $matches[1] ), 'UTF-8', 'UTF-16BE' );
+		}, $fullBookData );
+
+		$status = preg_match( "#$regEx#u", $fullBookData, $data );
 		if ( $status ) {
 			$bookData['articleDisplayTitle'] = $data[1];
 		}
