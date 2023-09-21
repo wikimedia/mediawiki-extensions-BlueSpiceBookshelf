@@ -97,6 +97,7 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 	 * @return array
 	 */
 	private function makeTreePathsList( array $items ): array {
+		$paths = [];
 		foreach ( $items as $item ) {
 			$name = $item['name'];
 			$path = $item['path'];
