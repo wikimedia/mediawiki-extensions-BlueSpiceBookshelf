@@ -166,6 +166,12 @@ class BookEditData {
 			'version' => [
 				'displayName' => wfMessage( 'bs-bookshelfui-bookmetatag-version' )->text()
 			],
+			'bookshelfimage' => [
+				'displayName' => wfMessage( 'bs-bookshelfui-bookmetatag-bookshelfimage' )->text()
+			],
+			'bookshelf' => [
+				'displayName' => wfMessage( 'bs-bookshelfui-bookmetatag-bookshelf' )->text()
+			],
 		];
 
 		$pm = MediaWikiServices::getInstance()->getPermissionManager();
