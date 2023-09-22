@@ -2,6 +2,7 @@
 
 use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
+use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\Renderer\ComponentRenderer;
 use BlueSpice\Bookshelf\TreeParser;
@@ -43,6 +44,13 @@ return [
 	'BSBookshelfChapterLookup' => static function ( MediaWikiServices $services ) {
 		$provider = new ChapterLookup(
 			$services->getDBLoadBalancer()
+		);
+		return $provider;
+	},
+	'BSBookshelfMetaLookup' => static function ( MediaWikiServices $services ) {
+		$provider = new BookMetaLookup(
+			$services->getDBLoadBalancer(),
+			$services->getService( 'BSBookshelfBookLookup' )
 		);
 		return $provider;
 	},

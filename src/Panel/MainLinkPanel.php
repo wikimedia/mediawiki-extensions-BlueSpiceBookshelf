@@ -38,7 +38,7 @@ class MainLinkPanel extends RestrictedTextLink {
 	 * @return string
 	 */
 	public function getHref(): string {
-		$specialPage = SpecialPage::getTitleFor( 'Bookshelf' );
+		$specialPage = SpecialPage::getTitleFor( 'Books' );
 		return $specialPage->getLocalURL();
 	}
 

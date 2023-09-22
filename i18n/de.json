@@ -105,5 +105,17 @@
 	"bs-bookshelf-droplet-pdf-description": "Ein Link, um ein Buch als PDF herunterzuladen",
 	"bs-bookshelf-droplet-pdf-book-label": "Buch für Export",
 	"bs-bookshelf-droplet-pdf-template-label": "Book PDF-Template",
-	"bs-bookshelf-droplet-pdf-link-label": "Link-Label"
+	"bs-bookshelf-droplet-pdf-link-label": "Link-Label",
+	"bs-bookshelf-booknav-book-label": "Buch",
+	"books": "Bücher",
+	"bs-books-overview-page-loading-text": "Bücherübersicht läd gerade ...",
+	"bs-books-overview-page-bookshelf-various-books": "Verschiedene Bücher",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "Weitere Aktionen für dieses Buch",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "Weitere Aktionen für dieses Buch",
+	"bs-books-overview-page-book-anchor-title": "Die erste Seite des Buches $1 öffnen",
+	"bs-books-overview-page-book-anchor-aria-label": "Die erste Seite des Buches $1 öffnen",
+	"bs-books-overview-page-book-action-edit-text": "Bearbeiten",
+	"bs-books-overview-page-book-action-edit-title": "Buch $1 bearbeiten",
+	"bs-books-overview-page-book-action-delete-text": "Löschen",
+	"bs-books-overview-page-book-action-delete-title": "Buch $1 löschen"
 }

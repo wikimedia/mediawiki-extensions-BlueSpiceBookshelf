@@ -132,7 +132,8 @@
 		"bs-bookshelf-manage": "ApiBookshelfManage",
 		"bs-bookshelf-page-collection-store": "ApiBookshelfPageCollectionStore",
 		"bs-bookshelf-mass-add-page-store": "ApiBookshelfMassAddPageStore",
-		"bs-book-chapters-store": "BlueSpice\\Bookshelf\\Api\\Store\\ApiBookChaptersStore"
+		"bs-book-chapters-store": "BlueSpice\\Bookshelf\\Api\\Store\\ApiBookChaptersStore",
+		"bs-books-overview-store": "BlueSpice\\Bookshelf\\Api\\Store\\ApiBooksOverviewStore"
 	},
 	"APIListModules": {
 		"bsbookshelf": "ApiQueryBookshelf"
@@ -485,6 +486,38 @@
 			"dependencies": [
 				"ext.contentdroplets.bootstrap"
 			]
+		},
+		"ext.bluespice.books.special.vue": {
+			"es6": true,
+			"dependencies": [
+				"mediawiki.api",
+				"vue",
+				"@wikimedia/codex"
+			],
+			"packageFiles": [
+				"vue/init.js",
+				"vue/components/BooksApp.vue",
+				"vue/components/Bookshelf.vue",
+				"vue/components/Card.vue",
+				"vue/components/Action.vue",
+				"vue/components/ActionsMenu.vue"
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
+			"messages": [
+				"bs-books-overview-page-book-anchor-title",
+				"bs-books-overview-page-book-anchor-aria-label",
+				"bs-books-overview-page-bookshelf-various-books",
+				"bs-books-overview-page-book-actions-dropdown-menu-aria-label",
+				"bs-books-overview-page-book-actions-dropdown-menu-title"
+			]
+		},
+		"ext.bluespice.books.special.styles": {
+			"styles": {
+				"bluespice.special.books.css": {}
+			}
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -530,7 +563,8 @@
 	"SpecialPages": {
 		"BookshelfBookManager": "\\BlueSpice\\Bookshelf\\Special\\BookshelfBookManager",
 		"BookshelfBookEditor": "\\BlueSpice\\Bookshelf\\Special\\BookshelfBookEditor",
-		"Bookshelf": "\\BlueSpice\\Bookshelf\\Special\\Bookshelf"
+		"Bookshelf": "\\BlueSpice\\Bookshelf\\Special\\Bookshelf",
+		"Books": "\\BlueSpice\\Bookshelf\\Special\\Books"
 	},
 	"HookHandlers": {
 		"common-user-interface": {
@@ -570,8 +604,9 @@
 		"ContentHandlerDefaultModelFor": "BlueSpice\\Bookshelf\\Hook\\ContentHandlerDefaultModelFor\\GetBookContentHandler::callback",
 		"LoadExtensionSchemaUpdates": [
 			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddConvertContentModel::callback",
+			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBooksTable::callback",
 			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBookChaptersTable::callback",
-			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBooksTable::callback"
+			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBookMetaTable::callback"
 		],
 		"BSUEModulePDFbeforeGetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFbeforeGetPage\\AdaptPageTitle::callback",
 		"BSUEModulePDFgetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFgetPage\\ModifyForExport::callback",

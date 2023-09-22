@@ -5,6 +5,8 @@ namespace BlueSpice\Bookshelf\HookHandler;
 use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\BookSourceParser;
 use BlueSpice\Bookshelf\ChapterUpdater;
+use BlueSpice\Bookshelf\Content\BookContent;
+use MediaWiki\Linker\LinkTarget;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Page\PageIdentity;
 use MediaWiki\Revision\RevisionRecord;
@@ -63,6 +65,11 @@ class BookPageSaveComplete {
 	public function onPageSaveComplete( WikiPage $wikiPage, UserIdentity $user, string $summary,
 		int $flags, RevisionRecord $revisionRecord, EditResult $editResult
 	) {
+		$content = $wikiPage->getContent();
+		if ( $content instanceof BookContent == false ) {
+			return;
+		}
+
 		$bookSourceParser = new BookSourceParser(
 			$revisionRecord,
 			$this->parserFactory->getNodeProcessors(),
@@ -70,12 +77,17 @@ class BookPageSaveComplete {
 		);
 
 		$chapterData = $bookSourceParser->getChapterDataModelArray();
+		if ( empty( $chapterData ) ) {
+			return;
+		}
 
 		$book = $wikiPage->getTitle();
 		$status = $this->doDBUpdate( $book, $chapterData );
 		if ( !$status ) {
 			$this->logger->error( 'onPageSaveComplete: Database update error' );
 		}
+
+		$this->updateMeta( $book, $wikiPage );
 	}
 
 	/**
@@ -90,4 +102,57 @@ class BookPageSaveComplete {
 		return $status;
 	}
 
+	/**
+	 * TODO: Remove again after refactoring Book editor
+	 * @param LinkTarget $title
+	 * @param WikiPage $wikiPage
+	 */
+	private function updateMeta( LinkTarget $title, WikiPage $wikiPage ) {
+		$bookId = $this->bookLookup->getBookId( $title );
+		if ( $bookId === null ) {
+			return;
+		}
+
+		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
+		$db->delete(
+			'bs_book_meta',
+			[
+				'm_book_id' => $bookId
+			]
+		);
+
+		$content = $wikiPage->getContent();
+
+		if ( $content instanceof \TextContent ) {
+			$text = $content->getText();
+
+			$tagMatches = [];
+			preg_match( '#<bookmeta (.*?)/>#', $text, $tagMatches );
+
+			if ( count( $tagMatches ) > 0 ) {
+				$matches = [];
+				preg_match_all( '#(.*?)=\"(.*?)\"#', $tagMatches[1], $matches );
+
+				if ( count( $matches ) > 0 ) {
+					for ( $index = 0; $index < count( $matches[0] ); $index++ ) {
+						$key = $matches[1][$index];
+						$value = $matches[2][$index];
+
+						$meta[$key] = $value;
+					}
+				}
+			}
+		}
+
+		foreach ( $meta as $key => $value ) {
+			$db->insert(
+				'bs_book_meta',
+				[
+					'm_book_id' => $bookId,
+					'm_key' => trim( $key ),
+					'm_value' => trim( $value )
+				]
+			);
+		}
+	}
 }
