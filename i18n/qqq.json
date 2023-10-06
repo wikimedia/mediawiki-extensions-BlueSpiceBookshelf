@@ -105,5 +105,10 @@
 	"bs-bookshelf-booknav-chapter-label": "Label for chapter text field",
 	"bs-bookshelf-booknav-chapter-help": "Help message for chapter text field",
 	"bs-bookshelf-booknav-book-not-exist": "Message displayed when the book doesn't exist",
-	"bs-bookshelf-booknav-chapter-not-exist": "Message displayed when the chapter doesn't exist"
+	"bs-bookshelf-booknav-chapter-not-exist": "Message displayed when the chapter doesn't exist",
+	"bs-bookshelf-droplet-pdf-name": "Title of droplet for template BookPDFLink",
+	"bs-bookshelf-droplet-pdf-description": "Description of droplet for template BookPDFLink",
+	"bs-bookshelf-droplet-pdf-book-label": "Label for title input to select book",
+	"bs-bookshelf-droplet-pdf-template-label": "Label for dropdown to select template",
+	"bs-bookshelf-droplet-pdf-link-label": "Label for text input field to insert label of link"
 }
