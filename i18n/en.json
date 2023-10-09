@@ -5,9 +5,6 @@
 		]
 	},
 	"bs-bookshelf-extension-description": "Enables BlueSpice to manage and export hierarchical collections of articles.",
-	"bs-bookshelf-tag-bookshelf-desc": "Inserts a chapter navigation of a book in a book page. Through this tag the mentioned articles are included in the book. Numbering is automatically adapted to the table of content.",
-	"bs-bookshelf-tag-bookmeta-desc": "Tag for saving various meta data on book articles. These are included in the book. The attributes of this tag have to correlate with the meta data of the book article.",
-	"bs-bookshelf-tag-booklist-desc": "Generates lists of articles from the namespace \"book\" and can be filtered. The indication of the filter is mandatory.",
 	"bs-bookshelf-tagerror-no-attribute-given": "No attribute provided! Use <strong>src</strong> to configure the table of contents.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "The provided source article (&quot;$1&quot;) does not exist.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "The provided source article (&quot;$1&quot;) contains invalid data.",
