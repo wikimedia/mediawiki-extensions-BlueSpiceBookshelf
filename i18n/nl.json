@@ -10,9 +10,6 @@
 		]
 	},
 	"bs-bookshelf-extension-description": "Stelt BlueSpice in staat hiërarchische collecties artikelen te beheren en te exporteren.",
-	"bs-bookshelf-tag-bookshelf-desc": "Voegt een hoofdstuknavigatie van een boek in een boekpagina in. Via deze tag worden de genoemde artikelen in het boek opgenomen. De nummering wordt automatisch aangepast aan de inhoudsopgave.",
-	"bs-bookshelf-tag-bookmeta-desc": "Tag voor het opslaan van verscheidene metagegevens over boekartikelen. Deze worden in het boek opgenomen. De attributen van deze tag moeten overeenkomen met de metagegevens van het boekartikel.",
-	"bs-bookshelf-tag-booklist-desc": "Genereert lijsten met artikelen uit de naamruimte \"book\" en kan worden gefilterd. De aanduiding van het filter is verplicht.",
 	"bs-bookshelf-tagerror-no-attribute-given": "Geen attribuut opgegeven! Gebruik <strong>src</strong> om de inhoudsopgave in te stellen.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "Het opgegeven bronartikel (&quot;$1&quot;) bestaat niet.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "Het opgegeven bronartikel (&quot;$1&quot;) bevat ongeldige gegevens.",

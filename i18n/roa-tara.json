@@ -5,9 +5,6 @@
 		]
 	},
 	"bs-bookshelf-extension-description": "Abbilite BlueSpice a gestì e esportà le collezziune gerarcheche de vôsce.",
-	"bs-bookshelf-tag-bookshelf-desc": "Sckaffe 'na navigazzione de le capitole de 'nu libbre jndr'à 'na pàgene d'u libbre. Ausanne stu tag le vôsce citate avènene sckaffate jndr'à 'u libbre. 'A numerazione avène adattate automatecamende a 'u sommarie.",
-	"bs-bookshelf-tag-bookmeta-desc": "Tag pa reggistrazzione de le diverse metadate sus a le vôsce d'u libbre. Chiste sò 'ngluse jndr'à 'u libbre. Le attrebbute de stu tag onna essere correlate a le metadate d'a vôsce d'u libbre.",
-	"bs-bookshelf-tag-booklist-desc": "Genere elenghe de vôsce da 'u namespace \"libbre\" e pò essere filtrate. L'indicazione d'u filtre jè obbligatorie.",
 	"bs-bookshelf-tagerror-no-attribute-given": "Nisciune attrebbute date! Ause <strong>src</strong> pe configurà 'a tabbelle de le condenute.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "'A vôsce de origgene date (&quot;$1&quot;) non g'esiste.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "'A vôsce de origgene date (&quot;$1&quot;) tène date invalide.",

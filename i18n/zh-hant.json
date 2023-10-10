@@ -7,9 +7,6 @@
 		]
 	},
 	"bs-bookshelf-extension-description": "啟動 BlueSpice 來管理與匯出條目的層級集合。",
-	"bs-bookshelf-tag-bookshelf-desc": "在書籍頁面裡插入書籍的章節導航。所提到的條目會透過此標籤包含在書籍裡。編號會自動按目錄做變動。",
-	"bs-bookshelf-tag-bookmeta-desc": "用於在書籍條目裡儲存各種詮釋資料的標籤。這些會包含在書籍裡。此標籤的屬性必須與書籍條目的詮釋資料相關。",
-	"bs-bookshelf-tag-booklist-desc": "從命名空間「book」產生條目清單，並可做出篩選。篩選器的指示為必要。",
 	"bs-bookshelf-tagerror-no-attribute-given": "沒有提供屬性！使用 <strong>src</strong> 來設置目錄。",
 	"bs-bookshelf-tagerror-article-title-not-valid": "提供的來源條目（&quot;$1&quot;）不存在。",
 	"bs-bookshelf-tagerror-article-content-not-valid": "提供的來源條目（&quot;$1&quot;）包含無效資料。",

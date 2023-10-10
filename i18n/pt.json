@@ -8,9 +8,6 @@
 		]
 	},
 	"bs-bookshelf-extension-description": "Permite que o BlueSpice administre e exporte coleções hierárquicas de artigos.",
-	"bs-bookshelf-tag-bookshelf-desc": "Insere uma navegação dos capítulos de um livro numa página de um livro. Através desta etiqueta, os artigos mencionados são incluídos no livro. A numeração é automaticamente adaptada ao índice.",
-	"bs-bookshelf-tag-bookmeta-desc": "Etiqueta para guardar vários metadados em artigos de livros. Estes metadados são incluídos no livro. Os atributos desta etiqueta têm de estar correlacionados com os metadados do artigo de livro.",
-	"bs-bookshelf-tag-booklist-desc": "Gera listas de artigos do espaço nominal \"livro\" e pode ser filtrada. A indicação do filtro é obrigatória.",
 	"bs-bookshelf-tagerror-no-attribute-given": "Não foi fornecido nenhum atributo! Usar <strong>src</strong> para configurar o índice.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "O artigo de origem fornecido (&quot;$1&quot;) não existe.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "O artigo de origem fornecido (&quot;$1&quot;) contém dados inválidos.",

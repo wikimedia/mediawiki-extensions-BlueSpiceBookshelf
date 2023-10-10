@@ -7,9 +7,6 @@
 		]
 	},
 	"bs-bookshelf-extension-description": "Lar BlueSpice behandle og eksportere hierarkiske samlinger av artikler.",
-	"bs-bookshelf-tag-bookshelf-desc": "Setter inn kapittelnavigering for ei bok i ei bokside. Med denne taggen inkluderes de nevnte artiklene i boka. Nummereringen tilpasses automatisk til innholdsfortegnelsen.",
-	"bs-bookshelf-tag-bookmeta-desc": "Tagg for å lagre diverse metadata om bokartikler. Disse inkluderes i boka. Attributtene til taggen må samsvare med metadataene til bokartikkelen.",
-	"bs-bookshelf-tag-booklist-desc": "Genererer lister over artikler fra navnerommet «book» og kan filtreres. Indikasjonen av filteret er obligatorisk.",
 	"bs-bookshelf-tagerror-no-attribute-given": "Intet attributt angitt! Bruk <strong>src</strong> for å konfigurere innholdsfortegnelsen.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "Den gitte kildeartikkelen («$1») finnes ikke.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "Den gitte kildeartikkelen («$1») inneholder ugyldige data.",

@@ -14,9 +14,6 @@
 		]
 	},
 	"bs-bookshelf-extension-description": "Abilita BlueSpice a gestire raccolte gerarchiche di pagine wiki.",
-	"bs-bookshelf-tag-bookshelf-desc": "Inserisce la navigazione di un capitolo di un libro in una pagina del libro. Attraverso questa etichetta gli articoli citati vengono inseriti nel libro. La numerazione viene adattata automaticamente all'indice.",
-	"bs-bookshelf-tag-bookmeta-desc": "Etichetta per il salvataggio di vari metadati sugli articoli del libro. Questi sono inclusi nel libro. Gli attributi di questa etichetta devono essere correlati ai metadati dell'articolo del libro.",
-	"bs-bookshelf-tag-booklist-desc": "Genera elenchi di articoli dal namespace \"libro\" e può essere filtrato. L'indicazione del filtro è obbligatoria.",
 	"bs-bookshelf-tagerror-no-attribute-given": "Non sono stati forniti attributi! Utilizzare <strong>src</strong> per configurare l'indice.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "L'articolo di origine fornito (&quot;$1&quot;) non esiste.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "L'articolo di origine fornito («$1») contiene dati non validi.",

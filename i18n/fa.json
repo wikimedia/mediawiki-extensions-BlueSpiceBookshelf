@@ -8,7 +8,6 @@
 			"LordProfo"
 		]
 	},
-	"bs-bookshelf-tag-booklist-desc": "فهرستی از مقاله‌های موجود در فضای نام «کتاب» را ایجاد می‌کند و می‌توان آن را پالایش کرد. نشانه‌گذاری پالایه اختیاری است.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "مقالهٔ مقصد ارائه‌شده (&quot;$1&quot;) وجود ندارد.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "مقالهٔ مقصد ارائه‌شده (&quot;$1&quot;) شامل داده‌های نامعتبر است.",
 	"bs-bookshelf-positive-integer-validation-not-approved": "فقط اعداد صحیح مثبت، مجازند.",

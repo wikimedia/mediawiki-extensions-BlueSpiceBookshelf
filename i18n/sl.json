@@ -5,9 +5,6 @@
 		]
 	},
 	"bs-bookshelf-extension-description": "Programju BlueSpice omogoča upravljanje in izvoz hierarhičnih zbirk člankov.",
-	"bs-bookshelf-tag-bookshelf-desc": "Na stran knjige vstavi krmarjenje po poglavjih knjige. Prek te oznake so v knjigo vključeni omenjeni članki. Številčenje se samodejno prilagaja kazalu.",
-	"bs-bookshelf-tag-bookmeta-desc": "Oznaka za shranjevanje različnih metapodatkov o knjižnih člankih. Ti so vključeni v knjigo. Atributi te oznake morajo biti usklajeni z metapodatki knjižnega članka.",
-	"bs-bookshelf-tag-booklist-desc": "Ustvari sezname člankov iz imenskega prostora »book« in jo je mogoče filtrirati. Navedba filtra je obvezna.",
 	"bs-bookshelf-tagerror-no-attribute-given": "Atribut ni naveden! Za konfiguracijo kazala vsebine uporabite <strong>src</strong>.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "Navedeni izvorni članek (»$1«) ne obstaja.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "Navedeni izvorni članek (»$1«) vsebuje neveljavne podatke.",
