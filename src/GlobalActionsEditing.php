@@ -6,7 +6,7 @@ use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
 use SpecialPage;
 
-class GlobalActionsManager extends RestrictedTextLink {
+class GlobalActionsEditing extends RestrictedTextLink {
 
 	/**
 	 *
@@ -46,7 +46,7 @@ class GlobalActionsManager extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getText(): Message {
-		return Message::newFromKey( 'bs-bookshelf-ga-manager-label' );
+		return Message::newFromKey( 'bs-bookshelf-ga-editing-label' );
 	}
 
 	/**
@@ -60,6 +60,6 @@ class GlobalActionsManager extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getAriaLabel(): Message {
-		return Message::newFromKey( 'bs-bookshelf-ga-manager-label' );
+		return Message::newFromKey( 'bs-bookshelf-ga-editing-label' );
 	}
 }
