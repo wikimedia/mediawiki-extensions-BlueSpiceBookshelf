@@ -57,7 +57,6 @@ class AddAttachments {
 				continue;
 			}
 
-			// Available with MW1.24+ and BS2.23+
 			$sFileTitle = $oFileAnchorElement->getAttribute( 'data-bs-title' );
 			$oTitle = Title::newFromText( $sFileTitle );
 			if ( $oTitle === null ) {
@@ -65,7 +64,7 @@ class AddAttachments {
 				$sFileTitle = $oFileAnchorElement->getAttribute( 'title' );
 				$oTitle = Title::makeTitle( NS_FILE, $sFileTitle );
 			}
-			if ( $oTitle->exists() ) {
+			if ( $oTitle->isKnown() ) {
 				$oFile = $repoGroup->findFile( $oTitle );
 				$oBackend = $oFile->getRepo()->getBackend();
 				$oLocalFile = $oBackend->getLocalReference(
