@@ -168,5 +168,6 @@
 	"bs-bookshelf-droplet-search-name": "Content droplet name",
 	"bs-bookshelf-droplet-search-description": "Content droplet description",
 	"bs-bookshelf-droplet-search-book": "Tag inspector field label in VisualEditor",
-	"bs-bookshelf-droplet-search-book-help": "Tag inspector field help in VisualEditor"
+	"bs-bookshelf-droplet-search-book-help": "Tag inspector field help in VisualEditor",
+	"bs-bookshelf-notification-subscription-set-book-title": "Label for the Notifications subscription set"
 }
