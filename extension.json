@@ -195,6 +195,14 @@
 					"module": "ext.bookshelf.menuEditor.tools"
 				}
 			}
+		},
+		"Notifications": {
+			"ManualSubscriberProviderSets": {
+				"book": {
+					"class": "BlueSpice\\Bookshelf\\Notifications\\SubscriptionSet\\Book",
+					"services": [ "BSBookshelfBookLookup", "TitleFactory" ]
+				}
+			}
 		}
 	},
 	"GroupPermissions": {
@@ -769,6 +777,18 @@
 		"ext.bluespice.bookshelf.editmetadata": {
 			"scripts": [
 				"bluespice.bookshelf.editmetadata.js"
+			]
+		},
+		"ext.bluespice.bookshelf.notificationsSubscriptionSet": {
+			"scripts": [
+				"notificationsSubscriptionSetBook.js",
+				"notificationsSubscriptionSetBookEditor.js"
+			],
+			"messages": [
+				"bs-bookshelf-notification-subscription-set-book-title"
+			],
+			"dependencies": [
+				"ext.notifications.subscription.set.bootstrap"
 			]
 		}
 	},
