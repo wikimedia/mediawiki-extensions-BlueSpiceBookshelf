@@ -39,7 +39,8 @@
 			"TagRegistry": {
 				"bookmeta": "\\BlueSpice\\Bookshelf\\Tag\\BookshelfMeta",
 				"bookshelf": "\\BlueSpice\\Bookshelf\\Tag\\Bookshelf",
-				"booklist": "\\BlueSpice\\Bookshelf\\Tag\\BookList"
+				"booklist": "\\BlueSpice\\Bookshelf\\Tag\\BookList",
+				"booknav": "\\BlueSpice\\Bookshelf\\Tag\\BookNav"
 			},
 			"DynamicFileRegistry": {
 				"bookshelfimage": "\\BlueSpice\\Bookshelf\\DynamicFileDispatcher\\BookshelfImage"
@@ -89,13 +90,17 @@
 			"TagDefinitions": [
 				"ext.bluespice.booklist.visualEditorTagDefinition",
 				"ext.bluespice.bookmeta.visualEditorTagDefinition",
-				"ext.bluespice.bookshelf.visualEditorTagDefinition"
+				"ext.bluespice.bookshelf.visualEditorTagDefinition",
+				"ext.bluespice.booknav.visualEditorTagDefinition"
 			]
 		},
 		"ContentDroplets": {
 			"Droplets": {
 				"booklist": {
 					"class": "\\BlueSpice\\Bookshelf\\ContentDroplets\\BooklistDroplet"
+				},
+				"booknav": {
+					"class": "\\BlueSpice\\Bookshelf\\ContentDroplets\\BookNavDroplet"
 				}
 			}
 		}
@@ -417,6 +422,28 @@
 				"bs-bookshelf-ve-bookshelf-attr-book-label",
 				"bs-bookshelf-ve-bookshelf-attr-book-help"
 			]
+		},
+		"ext.bluespice.booknav.visualEditorTagDefinition": {
+			"scripts": [
+				"nodes/bs.bookshelf.ce.BookNavNode.js",
+				"nodes/bs.bookshelf.dm.BookNavNode.js",
+				"nodes/bs.bookshelf.ui.BookNavInspector.js",
+				"nodes/bs.bookshelf.ui.BookNavInspectorTool.js"
+			],
+			"messages": [
+				"bs-bookshelf-booknav-name",
+				"bs-bookshelf-booknav-desc",
+				"bs-bookshelf-booknav-book-label",
+				"bs-bookshelf-booknav-book-help",
+				"bs-bookshelf-booknav-chapter-label",
+				"bs-bookshelf-booknav-chapter-help"
+			],
+			"dependencies": [
+				"ext.visualEditor.mwcore"
+			]
+		},
+		"ext.bluespice.booknav.styles": {
+			"styles": "bluespice.bookshelf.booknav.css"
 		}
 	},
 	"ResourceFileModulePaths": {
