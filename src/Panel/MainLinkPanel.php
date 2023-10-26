@@ -46,21 +46,21 @@ class MainLinkPanel extends RestrictedTextLink {
 	 * @return Message
 	 */
 	public function getText(): Message {
-		return Message::newFromKey( 'bookshelf' );
+		return Message::newFromKey( 'bs-bookshelf-mainlinks-label' );
 	}
 
 	/**
 	 * @return Message
 	 */
 	public function getTitle(): Message {
-		return Message::newFromKey( 'bookshelf' );
+		return Message::newFromKey( 'bs-bookshelf-mainlinks-label' );
 	}
 
 	/**
 	 * @return Message
 	 */
 	public function getAriaLabel(): Message {
-		return Message::newFromKey( 'bookshelf' );
+		return Message::newFromKey( 'bs-bookshelf-mainlinks-label' );
 	}
 
 	/**
