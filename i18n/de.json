@@ -73,8 +73,8 @@
 	"bs-bookshelf-pref-supressbookns-help": "Der Namensraum wird bei der Anzeige des Seitennamens im PDF unterdrückt.",
 	"bs-bookshelf-warning": "PHP Exception: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Zu einem Buch hinzufügen",
-	"bs-bookshelf-config-mainlinks-bookshelf-label": "Einstiegspunkt \"Bookshelf\" anzeigen",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "Einstiegspunkt \"Bookshelf\" in der linken Navigation anzeigen",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Einstiegspunkt \"Bücher\" anzeigen",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Einstiegspunkt \"Bücher\" in der linken Navigation anzeigen",
 	"bs-bookshelf-tag-booklist-description": "Erzeugt eine Liste von Artikeln aus dem Namensraum \"Buch\" und ist filterbar. Die Angabe des Filters ist dabei zwingend erforderlich",
 	"bs-bookshelf-ve-booklistinspector-title": "Bücherliste",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
@@ -95,5 +95,7 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definiert, welchem Buch die Seiten angehören",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Fügt dem Inhaltsverzeichnis und allen Überschriften einer Seite die Kapitelnummerierung des Buches hinzu",
 	"bs-bookshelf-droplet-name": "Bücherliste",
-	"bs-bookshelf-droplet-description": "Liste an Seiten aus dem Namensraum Buch"
+	"bs-bookshelf-droplet-description": "Liste an Seiten aus dem Namensraum Buch",
+	"bs-bookshelf-mainlinks-label": "Bücher",
+	"bs-bookshelf-ga-editing-label": "Bücher"
 }

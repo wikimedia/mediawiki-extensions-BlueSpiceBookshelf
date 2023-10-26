@@ -67,8 +67,8 @@
 	"bs-bookshelf-pref-supressbookns-help": "The namespace of page names is hidden in the PDF output.",
 	"bs-bookshelf-warning": "PHP exception: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Add to book",
-	"bs-bookshelf-config-mainlinks-bookshelf-label": "Show entrypoint \"Bookshelf\"",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "Show entrypoint \"Bookshelf\" link in the left navigation",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Show entrypoint \"Books\"",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Show entrypoint \"Books\" link in the left navigation",
 	"bs-bookshelf-tag-booklist-description": "Generates lists of pages from the namespace \"book\" and can be filtered. The indication of the filter is mandatory",
 	"bs-bookshelf-ve-booklistinspector-title": "Booklist",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
@@ -90,5 +90,7 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Add chapter numbers of the book to table of contents and all headlines in the page",
 	"bs-bookshelf-droplet-name": "Booklist",
 	"bs-bookshelf-droplet-description": "List of pages in namespace Book",
-	"apihelp-bs-book-chapters-store-summary": "Allows querying of all books and their chapter pages."
+	"apihelp-bs-book-chapters-store-summary": "Allows querying of all books and their chapter pages.",
+	"bs-bookshelf-mainlinks-label": "Books",
+	"bs-bookshelf-ga-editing-label": "Books"
 }
