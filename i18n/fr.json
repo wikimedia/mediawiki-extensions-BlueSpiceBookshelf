@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"BlueCamille",
 			"Daniel Mietchen",
 			"DreZhsh",
 			"Eihel",
@@ -56,7 +57,8 @@
 	"bookshelf": "Étagère",
 	"bookshelf-summary": "Livres généraux",
 	"prefs-bookshelf": "Page spéciale étagère",
-	"bs-bookshelf-ga-manager-label": "Livres",
+	"bs-bookshelf-mainlinks-label": "Livres",
+	"bs-bookshelf-ga-editing-label": "Livres",
 	"bs-bookshelf-prof-defaultview": "Affichage par défaut",
 	"bs-bookshelf-prof-defaultview-grid": "Grille",
 	"bs-bookshelf-prof-defaultview-images": "Images",
@@ -71,7 +73,7 @@
 	"bs-bookshelf-warning": "Exception PHP : $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Ajouter au livre",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "Afficher le point d’entrée « Étagère »",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "Afficher le lien du point d’entrée « Étagère » dans le panneau de navigation à gauche",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Afficher le lien du point d’entrée « Livres » dans le panneau de navigation à gauche",
 	"bs-bookshelf-tag-booklist-description": "Génère des listes de pages à partir de l’espace de noms « livre » et peut être filtré. L’indication du filtre est obligatoire.",
 	"bs-bookshelf-ve-booklistinspector-title": "Liste de livres",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtre",
