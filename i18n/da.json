@@ -33,5 +33,6 @@
 	"bs-bookshelf-actionmenuentry-addtobook": "Tilføj til bog",
 	"bs-bookshelf-action-editbook": "Rediger kilde",
 	"bs-bookshelf-action-editbook-create": "Rediger kilde",
-	"bs-bookshelf-ve-booklistinspector-title": "Bogliste"
+	"bs-bookshelf-ve-booklistinspector-title": "Bogliste",
+	"bs-bookshelf-mainlinks-label": "Bøger"
 }

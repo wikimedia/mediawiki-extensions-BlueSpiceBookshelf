@@ -92,5 +92,13 @@
 	"bs-bookshelf-droplet-description": "List of pages in namespace Book",
 	"apihelp-bs-book-chapters-store-summary": "Allows querying of all books and their chapter pages.",
 	"bs-bookshelf-mainlinks-label": "Books",
-	"bs-bookshelf-ga-editing-label": "Books"
+	"bs-bookshelf-ga-editing-label": "Books",
+	"bs-bookshelf-booknav-name": "Book navigation",
+	"bs-bookshelf-booknav-desc": "Shows book navigation",
+	"bs-bookshelf-booknav-book-label": "Book",
+	"bs-bookshelf-booknav-book-help": "Select a book to use",
+	"bs-bookshelf-booknav-chapter-label": "Chapter",
+	"bs-bookshelf-booknav-chapter-help": "Select a chapter to show",
+	"bs-bookshelf-booknav-book-not-exist": "Book $1 doesn't exist",
+	"bs-bookshelf-booknav-chapter-not-exist": "Chapter $1 doesn't exist"
 }

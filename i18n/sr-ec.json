@@ -25,5 +25,7 @@
 	"bs-bookshelf-ga-manager-label": "Књиге",
 	"bs-bookshelf-prof-defaultview": "Подразумевани приказ",
 	"bs-bookshelf-prof-defaultview-grid": "Мрежа",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Књига"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Књига",
+	"bs-bookshelf-mainlinks-label": "Књиге",
+	"bs-bookshelf-ga-editing-label": "Књиге"
 }

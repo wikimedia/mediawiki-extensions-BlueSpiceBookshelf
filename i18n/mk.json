@@ -42,5 +42,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "Го задава авторот на книгата",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Верзија",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Ја задава верзијата на книгата",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга",
+	"bs-bookshelf-mainlinks-label": "Книги"
 }

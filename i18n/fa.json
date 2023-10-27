@@ -60,5 +60,6 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "قفسه",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "کتاب",
 	"bs-bookshelf-ve-booklistinspector-title": "فهرست‌کتاب",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "مشخص می کند که صفحات، متعلق به کدام کتاب است‌"
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "مشخص می کند که صفحات، متعلق به کدام کتاب است‌",
+	"bs-bookshelf-mainlinks-label": "کتاب‌ها"
 }
