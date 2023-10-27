@@ -83,5 +83,6 @@
 	"bs-bookshelf-pref-titledisplaytext-help": "Mostra il titolo della navigazione del libro come titolo della pagina invece del nome della pagina.",
 	"bs-bookshelf-ve-booklistinspector-title": "Elenco di libri",
 	"bs-bookshelf-droplet-name": "Elenco di libri",
-	"bs-bookshelf-droplet-description": "Elenco delle pagine nel namespace Libro"
+	"bs-bookshelf-droplet-description": "Elenco delle pagine nel namespace Libro",
+	"bs-bookshelf-mainlinks-label": "Libri"
 }

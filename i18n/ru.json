@@ -84,5 +84,6 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Книжная полка",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Определяет, какая книга включает страницы",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Пронумеруйте оглавление книги и все заголовки на странице"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Пронумеруйте оглавление книги и все заголовки на странице",
+	"bs-bookshelf-mainlinks-label": "Книги"
 }

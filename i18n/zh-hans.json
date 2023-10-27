@@ -111,5 +111,6 @@
 	"bs-bookshelf-tag-bookshelf-box-desc": "在不属于书籍的页面中插入书籍的章节导航。编号会根据目录自动创建",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "将书籍章节编号添加到目录和页面的所有标题中",
 	"bs-bookshelf-droplet-description": "命名空间 Book 中的页面列表",
-	"bs-bookshelf-droplet-name": "书单"
+	"bs-bookshelf-droplet-name": "书单",
+	"bs-bookshelf-mainlinks-label": "图书"
 }
