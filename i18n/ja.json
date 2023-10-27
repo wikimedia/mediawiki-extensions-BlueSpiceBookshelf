@@ -97,5 +97,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "ページが属するブックを定義します",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "本の章番号を目次とページ内のすべての見出しに追加する",
 	"bs-bookshelf-droplet-name": "ブックリスト",
-	"bs-bookshelf-droplet-description": "Book名前空間内のページリスト"
+	"bs-bookshelf-droplet-description": "Book名前空間内のページリスト",
+	"bs-bookshelf-mainlinks-label": "書籍"
 }

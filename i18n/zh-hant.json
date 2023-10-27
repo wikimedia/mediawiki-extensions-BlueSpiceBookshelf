@@ -92,5 +92,6 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "添加書籍章節號碼到目錄與頁面所有的章節標題",
 	"bs-bookshelf-droplet-name": "書籍清單",
 	"bs-bookshelf-droplet-description": "書籍命名空間的頁面清單",
-	"apihelp-bs-book-chapters-store-summary": "允許所有書籍與其章節頁面的查詢。"
+	"apihelp-bs-book-chapters-store-summary": "允許所有書籍與其章節頁面的查詢。",
+	"bs-bookshelf-mainlinks-label": "書籍"
 }

@@ -72,8 +72,8 @@
 	"bs-bookshelf-pref-supressbookns-help": "De naamruimte van paginanamen is verborgen in de PDF-uitvoer.",
 	"bs-bookshelf-warning": "PHP-uitzondering: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Aan boek toevoegen",
-	"bs-bookshelf-config-mainlinks-bookshelf-label": "Toegangspunt \"Boekenplank\" tonen",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "De koppeling naar het toegangspunt \"Boekenplank\" tonen in de navigatie aan de linkerkant",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Toegangspunt “Boeken” tonen",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "De koppeling naar het toegangspunt “Boeken” tonen in de navigatie aan de linkerkant",
 	"bs-bookshelf-tag-booklist-description": "Genereert lijsten met artikelen uit de naamruimte \"book\" en kan worden gefilterd. De aanduiding van het filter is verplicht.",
 	"bs-bookshelf-ve-booklistinspector-title": "Boekenlijst",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
@@ -95,5 +95,7 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Voeg hoofdstuknummers van het boek toe aan de inhoudsopgave en alle koppen op de pagina",
 	"bs-bookshelf-droplet-name": "Boekenlijst",
 	"bs-bookshelf-droplet-description": "Lijst met pagina's in naamruimte Book",
-	"apihelp-bs-book-chapters-store-summary": "Maakt het opvragen van alle boeken en de hoofdstukpagina's mogelijk."
+	"apihelp-bs-book-chapters-store-summary": "Maakt het opvragen van alle boeken en de hoofdstukpagina's mogelijk.",
+	"bs-bookshelf-mainlinks-label": "Boeken",
+	"bs-bookshelf-ga-editing-label": "Boeken"
 }

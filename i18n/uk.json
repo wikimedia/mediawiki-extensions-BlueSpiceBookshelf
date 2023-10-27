@@ -92,5 +92,6 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Книжкова полиця",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Визначає до якої книги відносяться сторінки",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "Додати номери розділів книги до змісту і всіх заголовків на сторінці"
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Додати номери розділів книги до змісту і всіх заголовків на сторінці",
+	"bs-bookshelf-mainlinks-label": "Книги"
 }
