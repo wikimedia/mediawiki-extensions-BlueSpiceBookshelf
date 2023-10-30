@@ -96,5 +96,13 @@
 	"bs-bookshelf-droplet-description": "רשימת דפים במרחב השמות ספר",
 	"apihelp-bs-book-chapters-store-summary": "אפשרות להריץ שאילתה על כל הספרים ודפי הפרקים שלהם.",
 	"bs-bookshelf-mainlinks-label": "ספרים",
-	"bs-bookshelf-ga-editing-label": "ספרים"
+	"bs-bookshelf-ga-editing-label": "ספרים",
+	"bs-bookshelf-booknav-name": "ניווט בספר",
+	"bs-bookshelf-booknav-desc": "הצגת ניווט בספר",
+	"bs-bookshelf-booknav-book-label": "ספר",
+	"bs-bookshelf-booknav-book-help": "נא לבחור ספר לשימוש",
+	"bs-bookshelf-booknav-chapter-label": "פרק",
+	"bs-bookshelf-booknav-chapter-help": "נא לבחור פרק להצגה",
+	"bs-bookshelf-booknav-book-not-exist": "הספר $1 לא קיים",
+	"bs-bookshelf-booknav-chapter-not-exist": "הפרק $1 אינו קיים"
 }
