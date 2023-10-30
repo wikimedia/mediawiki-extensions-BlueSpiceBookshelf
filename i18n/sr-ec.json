@@ -26,5 +26,10 @@
 	"bs-bookshelf-prof-defaultview-images": "Слике",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Аутор",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Верзија",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Књига"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Књига",
+	"bs-bookshelf-booknav-book-label": "Књига",
+	"bs-bookshelf-booknav-chapter-label": "Поглавље",
+	"bs-bookshelf-booknav-chapter-help": "Изаберите поглавље за приказ",
+	"bs-bookshelf-booknav-book-not-exist": "Књига $1 не постоји",
+	"bs-bookshelf-booknav-chapter-not-exist": "Поглавље $1 не постоји"
 }

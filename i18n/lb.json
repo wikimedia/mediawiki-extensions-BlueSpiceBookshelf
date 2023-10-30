@@ -27,6 +27,7 @@
 	"bookshelf-summary": "Allgemeng Bicher",
 	"prefs-bookshelf": "Bicherregal Spezialsäit",
 	"bs-bookshelf-mainlinks-label": "Bicher",
+	"bs-bookshelf-ga-editing-label": "Bicher",
 	"bs-bookshelf-prof-defaultview-images": "Biller",
 	"bs-bookshelf-ve-booklistinspector-title": "Bicherlëscht",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
@@ -41,5 +42,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "D'Versio9un vum Buch gëtt festgeluecht",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Etagère",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buch",
-	"bs-bookshelf-droplet-name": "Bicherlëscht"
+	"bs-bookshelf-droplet-name": "Bicherlëscht",
+	"bs-bookshelf-booknav-book-label": "Buch",
+	"bs-bookshelf-booknav-book-not-exist": "D'Buch $1 gëtt et net"
 }

@@ -86,5 +86,13 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Adder numeros de capitulo del libro al tabula de contento e a tote le titulos in le pagina",
 	"bs-bookshelf-droplet-name": "Lista de libros",
 	"bs-bookshelf-droplet-description": "Lista de paginas in le spatio de nomines Book",
-	"apihelp-bs-book-chapters-store-summary": "Permitte consultar tote le libros e lor paginas de capitulo."
+	"apihelp-bs-book-chapters-store-summary": "Permitte consultar tote le libros e lor paginas de capitulo.",
+	"bs-bookshelf-booknav-name": "Navigation in libro",
+	"bs-bookshelf-booknav-desc": "Monstra navigation in libro",
+	"bs-bookshelf-booknav-book-label": "Libro",
+	"bs-bookshelf-booknav-book-help": "Selige un libro a usar",
+	"bs-bookshelf-booknav-chapter-label": "Capitulo",
+	"bs-bookshelf-booknav-chapter-help": "Selige un capitulo a monstrar",
+	"bs-bookshelf-booknav-book-not-exist": "Le libro $1 non existe",
+	"bs-bookshelf-booknav-chapter-not-exist": "Le capitulo $1 non existe"
 }
