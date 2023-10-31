@@ -97,5 +97,10 @@
 	"bs-bookshelf-droplet-name": "Bücherliste",
 	"bs-bookshelf-droplet-description": "Liste an Seiten aus dem Namensraum Buch",
 	"bs-bookshelf-mainlinks-label": "Bücher",
-	"bs-bookshelf-ga-editing-label": "Bücher"
+	"bs-bookshelf-ga-editing-label": "Bücher",
+	"bs-bookshelf-droplet-pdf-name": "Buch PDF Link",
+	"bs-bookshelf-droplet-pdf-description": "Ein Link, um ein Buch als PDF herunterzuladen",
+	"bs-bookshelf-droplet-pdf-book-label": "Buch für Export",
+	"bs-bookshelf-droplet-pdf-template-label": "Book PDF-Template",
+	"bs-bookshelf-droplet-pdf-link-label": "Link-Label"
 }
