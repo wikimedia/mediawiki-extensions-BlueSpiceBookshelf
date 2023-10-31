@@ -25,7 +25,7 @@ class BookNavDroplet extends TagDroplet {
 	 * @inheritDoc
 	 */
 	public function getIcon(): string {
-		return 'booknav-icon';
+		return 'droplet-booknav';
 	}
 
 	/**

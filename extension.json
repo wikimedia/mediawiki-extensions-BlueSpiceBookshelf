@@ -440,6 +440,7 @@
 				"nodes/bs.bookshelf.ui.BookNavInspector.js",
 				"nodes/bs.bookshelf.ui.BookNavInspectorTool.js"
 			],
+			"styles": "bluespice.booknav.droplet.css",
 			"messages": [
 				"bs-bookshelf-booknav-name",
 				"bs-bookshelf-booknav-desc",
@@ -462,6 +463,9 @@
 					"name": "object/config.json",
 					"callback": "BlueSpice\\Bookshelf\\ClientConfig::makeConfigJson"
 				}
+			],
+			"styles": [
+				"bluespice.book-pdf.droplet.css"
 			],
 			"messages": [
 				"bs-bookshelf-droplet-pdf-book-label",
