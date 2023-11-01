@@ -45,5 +45,6 @@
 	"bs-bookshelf-mainlinks-label": "Bicher",
 	"bs-bookshelf-ga-editing-label": "Bicher",
 	"bs-bookshelf-booknav-book-label": "Buch",
-	"bs-bookshelf-booknav-book-not-exist": "D'Buch $1 gëtt et net"
+	"bs-bookshelf-booknav-book-not-exist": "D'Buch $1 gëtt et net",
+	"bs-bookshelf-droplet-pdf-name": "Buch-PDF-Link"
 }
