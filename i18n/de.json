@@ -92,7 +92,7 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Fügt dem Inhaltsverzeichnis und allen Überschriften einer Seite die Kapitelnummerierung des Buches hinzu",
 	"bs-bookshelf-droplet-name": "Bücherliste",
 	"bs-bookshelf-droplet-description": "Liste an Seiten aus dem Namensraum Buch",
-	"bs-bookshelf-droplet-pdf-name": "Buch PDF Link",
+	"bs-bookshelf-droplet-pdf-name": "Buch-PDF-Link",
 	"bs-bookshelf-droplet-pdf-description": "Ein Link, um ein Buch als PDF herunterzuladen",
 	"bs-bookshelf-droplet-pdf-book-label": "Buch für Export",
 	"bs-bookshelf-droplet-pdf-template-label": "Book PDF-Template",

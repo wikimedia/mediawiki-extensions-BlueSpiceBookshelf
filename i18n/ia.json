@@ -94,5 +94,10 @@
 	"bs-bookshelf-booknav-chapter-label": "Capitulo",
 	"bs-bookshelf-booknav-chapter-help": "Selige un capitulo a monstrar",
 	"bs-bookshelf-booknav-book-not-exist": "Le libro $1 non existe",
-	"bs-bookshelf-booknav-chapter-not-exist": "Le capitulo $1 non existe"
+	"bs-bookshelf-booknav-chapter-not-exist": "Le capitulo $1 non existe",
+	"bs-bookshelf-droplet-pdf-name": "Ligamine a PDF de libro",
+	"bs-bookshelf-droplet-pdf-description": "Ligamine que discarga un libro in formato PDF",
+	"bs-bookshelf-droplet-pdf-book-label": "Libro a exportar",
+	"bs-bookshelf-droplet-pdf-template-label": "Patrono de PDF de libro",
+	"bs-bookshelf-droplet-pdf-link-label": "Etiquetta del ligamine"
 }

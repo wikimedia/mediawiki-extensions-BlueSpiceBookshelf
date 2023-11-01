@@ -15,5 +15,8 @@
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "শিরোনাম",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "লেখক",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "সংস্করণ",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "বই"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "বই",
+	"bs-bookshelf-booknav-book-label": "বই",
+	"bs-bookshelf-booknav-book-help": "ব্যবহার করার জন্য একটি বই নির্বাচন করুন",
+	"bs-bookshelf-booknav-chapter-label": "অধ্যায়"
 }

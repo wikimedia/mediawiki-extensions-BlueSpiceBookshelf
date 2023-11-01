@@ -98,5 +98,10 @@
 	"bs-bookshelf-booknav-chapter-label": "פרק",
 	"bs-bookshelf-booknav-chapter-help": "נא לבחור פרק להצגה",
 	"bs-bookshelf-booknav-book-not-exist": "הספר $1 לא קיים",
-	"bs-bookshelf-booknav-chapter-not-exist": "הפרק $1 אינו קיים"
+	"bs-bookshelf-booknav-chapter-not-exist": "הפרק $1 אינו קיים",
+	"bs-bookshelf-droplet-pdf-name": "קישור ל־PDF של הספר",
+	"bs-bookshelf-droplet-pdf-description": "קישור להורדת ספר כ־PDF",
+	"bs-bookshelf-droplet-pdf-book-label": "איזה ספר לייצא",
+	"bs-bookshelf-droplet-pdf-template-label": "תבנית PDF של ספר",
+	"bs-bookshelf-droplet-pdf-link-label": "תווית הקישור"
 }
