@@ -26,5 +26,6 @@
 	"bs-bookshelf-booknav-chapter-not-exist": "অধ্যায় $1 বিদ্যমান নেই",
 	"bs-bookshelf-droplet-pdf-book-label": "রপ্তানির বই",
 	"bs-bookshelf-droplet-pdf-template-label": "বই পিডিএফ টেমপ্লেট",
-	"bs-bookshelf-droplet-pdf-link-label": "সংযোগ স্তর"
+	"bs-bookshelf-droplet-pdf-link-label": "সংযোগ স্তর",
+	"bs-bookshelf-droplet-pdf-name": "বইয়ের পিডিএফ লিঙ্ক"
 }
