@@ -14,6 +14,7 @@
 			"Shimamura Sakura",
 			"StarrySky",
 			"Tr jason",
+			"U.T.",
 			"VulpesVulpes825",
 			"Wenyuan Liu",
 			"Wzl19371",
@@ -106,5 +107,7 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "定义页面属于哪本书",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "将书籍章节编号添加到目录和页面的所有标题中",
 	"bs-bookshelf-droplet-name": "书单",
-	"bs-bookshelf-droplet-description": "命名空间 Book 中的页面列表"
+	"bs-bookshelf-droplet-description": "命名空间 Book 中的页面列表",
+	"bs-bookshelf-booknav-chapter-label": "章节",
+	"bs-bookshelf-booknav-chapter-help": "选择要显示的章节"
 }

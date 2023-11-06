@@ -70,7 +70,7 @@
 	"bs-bookshelfui-export-book-text": "Even geduld, het boek wordt aangemaakt.",
 	"bs-bookshelfui-bookmanager-deletion-reason": "Verwijderd door BookManager",
 	"bs-bookshelfui-bookmanager-deletion-error-pageid": "Het opgegeven artikel kon niet worden gevonden.",
-	"bs-bookshelfui-bookmanager-deletion-error-permission": "U hebt geen rechten om deze handeling uit te voeren.",
+	"bs-bookshelfui-bookmanager-deletion-error-permission": "U hebt geen rechten om deze handeling te verrichten.",
 	"bs-bookshelfui-bookmanager-deletion-error-unkown": "Een onbekende fout is opgetreden. Neem contact op met uw administrator.",
 	"bs-bookshelfui-bookmetatag-title": "Titel",
 	"bs-bookshelfui-bookmetatag-subtitle": "Ondertitel",
