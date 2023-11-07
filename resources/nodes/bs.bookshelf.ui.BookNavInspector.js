@@ -14,7 +14,7 @@
 	bs.bookshelf.ui.BookNavInspector.static.name = 'booknavInspector';
 
 	bs.bookshelf.ui.BookNavInspector.static.title = OO.ui.deferMsg(
-		'bs-bookshelf-booknav-name'
+		'bs-bookshelf-booknav-title'
 	);
 
 	bs.bookshelf.ui.BookNavInspector.static.modelClasses = [ bs.bookshelf.dm.BookNavNode ];

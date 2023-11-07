@@ -11,7 +11,7 @@ class BookNavDroplet extends TagDroplet {
 	 * @inheritDoc
 	 */
 	public function getName(): Message {
-		return Message::newFromKey( 'bs-bookshelf-booknav-name' );
+		return Message::newFromKey( 'bs-bookshelf-booknav-title' );
 	}
 
 	/**

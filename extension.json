@@ -442,7 +442,7 @@
 			],
 			"styles": "bluespice.booknav.droplet.css",
 			"messages": [
-				"bs-bookshelf-booknav-name",
+				"bs-bookshelf-booknav-title",
 				"bs-bookshelf-booknav-desc",
 				"bs-bookshelf-booknav-book-label",
 				"bs-bookshelf-booknav-book-help",
