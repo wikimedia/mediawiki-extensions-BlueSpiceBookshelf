@@ -9,7 +9,7 @@
 	bs.bookshelf.ui.BookNavInspectorTool.static.group = 'none';
 	bs.bookshelf.ui.BookNavInspectorTool.static.autoAddToCatchall = false;
 	bs.bookshelf.ui.BookNavInspectorTool.static.icon = 'bluespice';
-	bs.bookshelf.ui.BookNavInspectorTool.static.title = OO.ui.deferMsg( 'bs-bookshelf-booknav-name' );
+	bs.bookshelf.ui.BookNavInspectorTool.static.title = OO.ui.deferMsg( 'bs-bookshelf-booknav-title' );
 	bs.bookshelf.ui.BookNavInspectorTool.static.modelClasses = [ bs.bookshelf.dm.BookNavNode ];
 	bs.bookshelf.ui.BookNavInspectorTool.static.commandName = 'booknavCommand';
 	ve.ui.toolFactory.register( bs.bookshelf.ui.BookNavInspectorTool );
