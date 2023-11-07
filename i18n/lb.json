@@ -45,5 +45,6 @@
 	"bs-bookshelf-droplet-name": "Bicherlëscht",
 	"bs-bookshelf-booknav-book-label": "Buch",
 	"bs-bookshelf-booknav-book-not-exist": "D'Buch $1 gëtt et net",
-	"bs-bookshelf-droplet-pdf-name": "Buch-PDF-Link"
+	"bs-bookshelf-droplet-pdf-name": "Buch-PDF-Link",
+	"bs-bookshelf-droplet-pdf-book-label": "Buch fir z'exportéieren"
 }
