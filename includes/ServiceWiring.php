@@ -1,5 +1,6 @@
 <?php
 
+use BlueSpice\Bookshelf\Renderer\ComponentRenderer;
 use BlueSpice\Bookshelf\TreeParser;
 use BlueSpice\Bookshelf\Utilities;
 use BlueSpice\ExtensionAttributeBasedRegistry;
@@ -27,6 +28,14 @@ return [
 			$services->getMainConfig(),
 			$services
 		);
+	},
+	'BSBookshelfComponentRenderer' => static function ( MediaWikiServices $services ) {
+		$renderer = new ComponentRenderer(
+			$services->getService( 'MWStakeCommonUIComponentManager' ),
+			$services->getService( 'MWStakeCommonUIRendererDataTreeBuilder' ),
+			$services->getService( 'MWStakeCommonUIRendererDataTreeRenderer' )
+		);
+		return $renderer;
 	},
 ];
 
