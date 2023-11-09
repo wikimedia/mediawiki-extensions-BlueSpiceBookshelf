@@ -3,9 +3,9 @@
 namespace BlueSpice\Bookshelf\Tag;
 
 use BlueSpice\Bookshelf\Panel\BookNavigationTreeContainer;
-use BlueSpice\Discovery\Renderer\ComponentRenderer;
+use BlueSpice\Bookshelf\Renderer\ComponentRenderer;
 use BlueSpice\Tag\Handler;
-use MediaWiki\MediaWikiServices;
+use Html;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleTreeLinkNode;
 use PageHierarchyProvider;
@@ -40,19 +40,19 @@ class BookNavHandler extends Handler {
 	 * @param Parser $parser
 	 * @param PPFrame $frame
 	 * @param TitleFactory $titleFactory
+	 * @param ComponentRenderer $componentRenderer
 	 */
 	public function __construct( $processedInput, array $processedArgs, Parser $parser,
-		PPFrame $frame, TitleFactory $titleFactory ) {
+		PPFrame $frame, TitleFactory $titleFactory, ComponentRenderer $componentRenderer ) {
 		parent::__construct( $processedInput, $processedArgs, $parser, $frame );
 		$this->bookInput = $this->processedArgs[self::ATTR_BOOK];
 		$this->chapterInput = $this->processedArgs[self::ATTR_CHAPTER];
 		$this->titleFactory = $titleFactory;
-		$this->componentRenderer = MediaWikiServices::getInstance()
-			->getService( 'BlueSpiceDiscoveryComponentRenderer' );
+		$this->componentRenderer = $componentRenderer;
 	}
 
 	/**
-	 * @return string $tree
+	 * @return string $bookNav
 	 */
 	public function handle(): string {
 		$bookTitle = $this->titleFactory->newFromText( $this->bookInput, NS_BOOK );
@@ -60,36 +60,48 @@ class BookNavHandler extends Handler {
 			return Message::newFromKey( 'bs-bookshelf-booknav-book-not-exist', $this->bookInput )->plain();
 		}
 
-		$pageTitle = $this->getPageTitle();
+		$pageTitle = $this->getPageTitle( $bookTitle->getFullText() );
 		if ( !$pageTitle || !$pageTitle->exists() ) {
 			return Message::newFromKey( 'bs-bookshelf-booknav-chapter-not-exist', $this->chapterInput )->plain();
 		}
 
 		$parserOutput = $this->parser->getOutput();
-		$parserOutput->addModules( [ 'mwstake.component.commonui.tree-component' ] );
-		$parserOutput->addModuleStyles( [ 'ext.bluespice.booknav.styles' ] );
+		$parserOutput->addModules( [
+			'ext.bluespice.bookshelf.bookNavFilter',
+			'mwstake.component.commonui.tree-component'
+		] );
+		$parserOutput->addModuleStyles( [ 'ext.bluespice.bookshelf.booknav.styles' ] );
 
 		$bookNavTreeContainer = new BookNavigationTreeContainer( $pageTitle );
 		$subComponents = $bookNavTreeContainer->getSubComponents();
 
+		$bookNav = Html::openElement( 'div', [
+			'style' => 'display: flex;'
+		] );
+		$bookNav .= Html::element( 'h2', [
+			'style' => 'width: 80%; margin: 0; padding: 0;'
+		],	$bookTitle->getText()
+		);
+		$bookNav .= $this->buildSearchBox();
+		$bookNav .= Html::closeElement( 'div' );
+
 		if ( $this->chapterInput === '' ) {
-			$string = '';
 			foreach ( $subComponents as $subComponent ) {
-				$string .= $this->componentRenderer->getComponentHtml( $subComponent );
+				$bookNav .= $this->componentRenderer->getComponentHtml( $subComponent );
 			}
-			return $string;
+		} else {
+			$bookNav .= $this->buildTreeFromSubComponents( $subComponents );
 		}
 
-		$tree = $this->extractTreeFromSubComponents( $subComponents );
-
-		return $tree;
+		return $bookNav;
 	}
 
 	/**
+	 * @param string $bookTitle
 	 * @return Title|null
 	 */
-	private function getPageTitle(): ?Title {
-		$provider = PageHierarchyProvider::getInstanceFor( "Book:$this->bookInput" );
+	private function getPageTitle( string $bookTitle ): ?Title {
+		$provider = PageHierarchyProvider::getInstanceFor( $bookTitle );
 		$toc = $provider->getSimpleTOCArray();
 		foreach ( $toc as $page ) {
 			$chapterParts = [];
@@ -113,11 +125,45 @@ class BookNavHandler extends Handler {
 	}
 
 	/**
+	 * @return string $searchBox
+	 */
+	private function buildSearchBox(): string {
+		$searchBox = Html::openElement( 'div', [
+			'data-selector' => '.bs-tag-booknav .mws-tree-item',
+			'style' => 'width: 20%;'
+		] );
+		$searchBox .= Html::openElement( 'div', [
+			'id' => 'ooui-php-1',
+			// phpcs:ignore Generic.Files.LineLength.TooLong
+			'class' => 'container-filter-search oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-iconElement oo-ui-textInputWidget oo-ui-textInputWidget-type-search oo-ui-textInputWidget-php',
+			// phpcs:ignore Generic.Files.LineLength.TooLong
+			'data-ooui' => '{"_":"OO.ui.SearchInputWidget","type":"search","icon":"search","required":false,"classes":["container-filter-search"]}'
+		] );
+		$searchBox .= Html::element( 'input', [
+			'type' => 'search',
+			'tabindex' => '0',
+			'value' => '',
+			'placeholder' => Message::newFromKey( 'bs-bookshelf-booknav-searchbox-placeholder' )->text(),
+			'class' => 'oo-ui-inputWidget-input'
+		] );
+		$searchBox .= Html::element( 'span', [
+			'class' => 'oo-ui-iconElement-icon oo-ui-icon-search'
+		] );
+		$searchBox .= Html::element( 'span', [
+			'class' => 'oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'
+		] );
+		$searchBox .= Html::closeElement( 'div' );
+		$searchBox .= Html::closeElement( 'div' );
+
+		return $searchBox;
+	}
+
+	/**
 	 * @param SimpleTreeLinkNode[] $subComponents
 	 * @param string &$tree
 	 * @return string $tree
 	 */
-	private function extractTreeFromSubComponents( array $subComponents, string &$tree = '' ) {
+	private function buildTreeFromSubComponents( array $subComponents, string &$tree = '' ) {
 		foreach ( $subComponents as $subComponent ) {
 			$chapterBranch = $subComponent->getText()->plain();
 			$spacePos = strpos( $chapterBranch, ' ' );
@@ -128,7 +174,7 @@ class BookNavHandler extends Handler {
 
 			$subComponents = $subComponent->getSubComponents();
 			if ( !empty( $subComponents ) ) {
-				$this->extractTreeFromSubComponents( $subComponents, $tree );
+				$this->buildTreeFromSubComponents( $subComponents, $tree );
 			}
 		}
 
