@@ -30,6 +30,7 @@ class BookNav extends Tag {
 	 */
 	public function getHandler( $processedInput, array $processedArgs, Parser $parser, PPFrame $frame ) {
 		$titleFactory = $this->services->getTitleFactory();
+		$componentRenderer = $this->services->getService( 'BSBookshelfComponentRenderer' );
 
 		return new BookNavHandler(
 			$processedInput,
@@ -37,6 +38,7 @@ class BookNav extends Tag {
 			$parser,
 			$frame,
 			$titleFactory,
+			$componentRenderer
 		);
 	}
 

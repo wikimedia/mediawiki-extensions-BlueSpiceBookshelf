@@ -1,3 +1,14 @@
 .bs-tag-booknav {
 	list-style: none;
+	background-color: #fafafc;
+	padding: 20px;
+	padding-bottom: 13.75px;
+}
+
+.bs-tag-booknav .mws-tree-item-children {
+	margin: 0;
+}
+
+.bs-tag-booknav .mws-tree-expander {
+	padding: calc( ( var( --mws-tree-item-min-height ) - 1.5em ) / 2 ) 0;
 }

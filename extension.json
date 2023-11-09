@@ -450,11 +450,21 @@
 				"bs-bookshelf-booknav-chapter-help"
 			],
 			"dependencies": [
-				"ext.visualEditor.mwcore"
+				"ext.bluespice.bookshelf.booknav.styles",
+				"ext.visualEditor.mwcore",
+				"mediawiki.widgets"
 			]
 		},
-		"ext.bluespice.booknav.styles": {
+		"ext.bluespice.bookshelf.booknav.styles": {
 			"styles": "bluespice.bookshelf.booknav.css"
+		},
+		"ext.bluespice.bookshelf.bookNavFilter": {
+			"scripts": [
+				"bluespice.bookshelf.bookNavFilter.js"
+			],
+			"dependencies": [
+				"oojs-ui-core"
+			]
 		},
 		"ext.bluespice.bookshelf.droplet-bookpdf": {
 			"packageFiles": [
