@@ -103,7 +103,7 @@
 	"bs-bookshelf-mainlinks-label": "Label for link used in the left navigation for the page name of [[Special:Bookshelf]].\n{{Identical|Bookshelf}}",
 	"bs-bookshelf-ga-editing-label": "Label for global actions menu entry\n\n{{Identical|Book}}",
 	"bs-bookshelf-booknav-name": "Name for Book Navigation",
-	"bs-bookshelf-booknav-desc": "Description of droplet for Book Navigation",
+	"bs-bookshelf-booknav-desc": "Description of the Book Table of Contents droplet",
 	"bs-bookshelf-booknav-book-label": "Label for book text field",
 	"bs-bookshelf-booknav-book-help": "Help message for book text field",
 	"bs-bookshelf-booknav-chapter-label": "Label for chapter text field",
@@ -114,5 +114,6 @@
 	"bs-bookshelf-droplet-pdf-description": "Description of droplet for template BookPDFLink",
 	"bs-bookshelf-droplet-pdf-book-label": "Label for title input to select book",
 	"bs-bookshelf-droplet-pdf-template-label": "Label for dropdown to select template",
-	"bs-bookshelf-droplet-pdf-link-label": "Label for text input field to insert label of link"
+	"bs-bookshelf-droplet-pdf-link-label": "Label for text input field to insert label of link",
+	"bs-bookshelf-booknav-title": "Title of the Book Table of Contents droplet"
 }
