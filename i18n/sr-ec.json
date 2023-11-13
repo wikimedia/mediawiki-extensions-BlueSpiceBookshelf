@@ -27,6 +27,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Аутор",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Верзија",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Књига",
+	"bs-bookshelf-booknav-desc": "Списак свих изабраних поглавља књиге",
 	"bs-bookshelf-booknav-book-label": "Књига",
 	"bs-bookshelf-booknav-chapter-label": "Поглавље",
 	"bs-bookshelf-booknav-chapter-help": "Изаберите поглавље за приказ",

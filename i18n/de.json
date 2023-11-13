@@ -7,6 +7,7 @@
 			"Mglaser",
 			"Mschlindwein",
 			"Schmackes",
+			"SehrGuterCode",
 			"Stephan Muggli <muggli@hallowelt.biz>"
 		]
 	},
@@ -94,6 +95,9 @@
 	"bs-bookshelf-droplet-description": "Liste an Seiten aus dem Namensraum Buch",
 	"bs-bookshelf-booknav-title": "Buch-Inhaltsverzeichnis",
 	"bs-bookshelf-booknav-desc": "Liste aller oder einzelner Kapitel eines Buches",
+	"bs-bookshelf-booknav-chapter-label": "Kapitel",
+	"bs-bookshelf-booknav-book-not-exist": "Buch $1 existiert nicht",
+	"bs-bookshelf-booknav-chapter-not-exist": "Kapitel $1 existiert nicht",
 	"bs-bookshelf-droplet-pdf-name": "Buch-PDF-Link",
 	"bs-bookshelf-droplet-pdf-description": "Ein Link, um ein Buch als PDF herunterzuladen",
 	"bs-bookshelf-droplet-pdf-book-label": "Buch für Export",

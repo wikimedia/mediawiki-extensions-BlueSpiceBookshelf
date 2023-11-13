@@ -8,6 +8,7 @@
 			"RYOUMA1117",
 			"Shirayuki",
 			"Suchichi02",
+			"もなー(偽物)",
 			"背番号4のエース"
 		]
 	},
@@ -84,8 +85,8 @@
 	"bs-bookshelfui-bookmetatag-department": "部門",
 	"bs-bookshelfui-bookmetatag-version": "バージョン",
 	"bs-bookshelfui-extjs-tooltip-copy": "コピー",
-	"apihelp-bs-bookshelf-page-collection-store-summary": "ブックにまとめて追加できるページのコレクションを提供します。",
-	"apihelp-bs-bookshelf-mass-add-page-store-summary": "ブックにまとめて追加できるページを提供します。",
+	"apihelp-bs-bookshelf-page-collection-store-summary": "書籍にまとめて追加できるページのコレクションを提供します。",
+	"apihelp-bs-bookshelf-mass-add-page-store-summary": "書籍にまとめて追加できるページを提供します。",
 	"right-bookshelfbookmanager-viewspecialpage": "特別ページ [[Special:BookshelfBookManager]] にアクセス",
 	"action-bookshelfbookmanager-viewspecialpage": "特別ページ [[Special:BookshelfBookManager]] へのアクセス",
 	"right-bookshelfbookui-viewspecialpage": "特別ページ [[Special:BookshelfBookUI]] にアクセス",
