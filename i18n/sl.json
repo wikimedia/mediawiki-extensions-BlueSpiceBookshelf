@@ -92,5 +92,7 @@
 	"bs-bookshelf-droplet-description": "Seznam strani v imenskem prostoru Knjiga",
 	"apihelp-bs-book-chapters-store-summary": "Omogoča poizvedovanje po vseh straneh knjig in njihovih poglavij",
 	"bs-bookshelf-mainlinks-label": "Knjige",
-	"bs-bookshelf-ga-editing-label": "Knjige"
+	"bs-bookshelf-ga-editing-label": "Knjige",
+	"bs-bookshelf-booknav-title": "Knjižno kazalo",
+	"bs-bookshelf-booknav-desc": "Seznam vseh ali izbranih poglavij knjige"
 }

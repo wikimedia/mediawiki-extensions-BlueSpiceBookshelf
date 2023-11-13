@@ -98,7 +98,7 @@
 	"bs-bookshelf-mainlinks-label": "ספרים",
 	"bs-bookshelf-ga-editing-label": "ספרים",
 	"bs-bookshelf-booknav-name": "ניווט בספר",
-	"bs-bookshelf-booknav-desc": "הצגת ניווט בספר",
+	"bs-bookshelf-booknav-desc": "רשימת של כל הפרקים או של הפרקים הנבחרים של ספר",
 	"bs-bookshelf-booknav-book-label": "ספר",
 	"bs-bookshelf-booknav-book-help": "נא לבחור ספר לשימוש",
 	"bs-bookshelf-booknav-chapter-label": "פרק",
@@ -109,5 +109,6 @@
 	"bs-bookshelf-droplet-pdf-description": "קישור להורדת ספר כ־PDF",
 	"bs-bookshelf-droplet-pdf-book-label": "איזה ספר לייצא",
 	"bs-bookshelf-droplet-pdf-template-label": "תבנית PDF של ספר",
-	"bs-bookshelf-droplet-pdf-link-label": "תווית הקישור"
+	"bs-bookshelf-droplet-pdf-link-label": "תווית הקישור",
+	"bs-bookshelf-booknav-title": "תוכן העניינים של הספר"
 }
