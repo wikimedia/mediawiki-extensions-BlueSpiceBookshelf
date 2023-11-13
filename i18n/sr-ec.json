@@ -32,5 +32,6 @@
 	"bs-bookshelf-booknav-chapter-label": "Поглавље",
 	"bs-bookshelf-booknav-chapter-help": "Изаберите поглавље за приказ",
 	"bs-bookshelf-booknav-book-not-exist": "Књига $1 не постоји",
-	"bs-bookshelf-booknav-chapter-not-exist": "Поглавље $1 не постоји"
+	"bs-bookshelf-booknav-chapter-not-exist": "Поглавље $1 не постоји",
+	"bs-bookshelf-booknav-desc": "Списак свих изабраних поглавља књиге"
 }

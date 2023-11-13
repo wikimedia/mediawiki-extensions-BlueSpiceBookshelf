@@ -8,6 +8,7 @@
 			"RYOUMA1117",
 			"Shirayuki",
 			"Suchichi02",
+			"もなー(偽物)",
 			"背番号4のエース"
 		]
 	},
@@ -94,8 +95,8 @@
 	"bs-bookshelfui-intro": "ここでは、利用可能なすべての書籍を表示できます。新しい本を追加するには、[[Special:Bookmanager|book manager]]にアクセスしてください。",
 	"bs-bookshelfui-bookmanager-deletion-error-permission": "この操作を行なうために必要な権限がありません。",
 	"bs-bookshelfui-bookmanager-deletion-error-unkown": "不明なエラーが発生しました。管理者に連絡してください。",
-	"apihelp-bs-bookshelf-page-collection-store-summary": "ブックにまとめて追加できるページのコレクションを提供します。",
-	"apihelp-bs-bookshelf-mass-add-page-store-summary": "ブックにまとめて追加できるページを提供します。",
+	"apihelp-bs-bookshelf-page-collection-store-summary": "書籍にまとめて追加できるページのコレクションを提供します。",
+	"apihelp-bs-bookshelf-mass-add-page-store-summary": "書籍にまとめて追加できるページを提供します。",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "どのページを返すかに基づくルート値を表示",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "一括追加のソースのタイプ",
 	"prefs-bookshelfui": "本棚特設ページ",

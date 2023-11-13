@@ -99,7 +99,7 @@
 	"bs-bookshelf-mainlinks-label": "Boeken",
 	"bs-bookshelf-ga-editing-label": "Boeken",
 	"bs-bookshelf-booknav-name": "Boeknavigatie",
-	"bs-bookshelf-booknav-desc": "Toont boeknavigatie",
+	"bs-bookshelf-booknav-desc": "Lijst met alle of geselecteerde hoofdstukken van een boek",
 	"bs-bookshelf-booknav-book-label": "Boek",
 	"bs-bookshelf-booknav-book-help": "Kies een boek om te gebruiken",
 	"bs-bookshelf-booknav-chapter-label": "Hoofdstuk",
@@ -110,5 +110,6 @@
 	"bs-bookshelf-droplet-pdf-description": "Link waarmee een boek als PDF wordt gedownload",
 	"bs-bookshelf-droplet-pdf-book-label": "Boek om te exporteren",
 	"bs-bookshelf-droplet-pdf-template-label": "Boek-PDF-sjabloon",
-	"bs-bookshelf-droplet-pdf-link-label": "Linklabel"
+	"bs-bookshelf-droplet-pdf-link-label": "Linklabel",
+	"bs-bookshelf-booknav-title": "Inhoudsopgave boek"
 }
