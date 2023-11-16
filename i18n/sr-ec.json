@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BadDog",
+			"Kizule",
 			"Milicevic01",
 			"Вукан Ц"
 		]
@@ -33,5 +34,26 @@
 	"bs-bookshelf-booknav-chapter-help": "Изаберите поглавље за приказ",
 	"bs-bookshelf-booknav-book-not-exist": "Књига $1 не постоји",
 	"bs-bookshelf-booknav-chapter-not-exist": "Поглавље $1 не постоји",
-	"bs-bookshelf-booknav-desc": "Списак свих изабраних поглавља књиге"
+	"bs-bookshelf-booknav-desc": "Списак свих изабраних поглавља књиге",
+	"bs-bookshelf-grouping-template-type-local_storage": "Привремене књиге",
+	"bs-bookshelf-grouping-template-type-ns_book": "Опште књиге",
+	"bs-bookshelf-grouping-template-type-user_book": "Сопствене књиге",
+	"bs-bookshelf-action-editbook": "Уреди извор",
+	"bs-bookshelf-action-editbook-create": "Уреди извор",
+	"bs-bookshelf-error-invalid-type": "Наведен тип књиге није исправан",
+	"bs-bookshelf-error-type-title-mismatch": "Наведен наслов се не поклапа са датим типом књиге",
+	"bs-bookshelf-editor-no-title-provided": "Није наведен важећи наслов књиге",
+	"bookshelf": "Полица са књигама",
+	"bookshelf-summary": "Опште књиге",
+	"bs-bookshelf-actionmenuentry-addtobook": "Додај у књигу",
+	"bs-bookshelf-ve-booklistinspector-title": "Списак књига",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Филтер",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "Наслов",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Поднаслов",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "Поставњање поднаслова књиге",
+	"bs-bookshelf-ve-bookmeta-attr-author-help": "Постављање аутора књиге",
+	"bs-bookshelf-ve-bookmeta-attr-version-help": "Постављање верзије књиге",
+	"bs-bookshelf-ve-bookshelfinspector-title": "Полица са књигама",
+	"bs-bookshelf-droplet-name": "Списак књига",
+	"bs-bookshelf-droplet-description": "Списак страница у именском простору Књига"
 }

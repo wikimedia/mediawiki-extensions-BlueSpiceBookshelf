@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BadDog",
+			"Kizule",
 			"Milicevic01",
 			"Вукан Ц"
 		]
@@ -35,5 +36,33 @@
 	"bs-bookshelfui-empty-selection": "Ништа није изабрано",
 	"bs-bookshelfui-bookmetatag-title": "Наслов",
 	"bs-bookshelfui-prof-defaultview-grid": "Мрежа",
-	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "Наслов за приказ"
+	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "Наслов за приказ",
+	"bs-bookshelfui-editor-no-title-provided": "Није наведен важећи наслов књиге",
+	"bs-bookshelfui-manager-title": "Наслов",
+	"bs-bookshelfui-manager-deletionsuccess-title": "Успешно обрисано!",
+	"bs-bookshelfui-manager-deletionsuccess-text": "Књига је успешно обрисана.",
+	"bs-bookshelfui-manager-deletionfailure-title": "Грешка приликом брисања!",
+	"bs-bookshelfui-manager-deletionfailure-text": "Дошло је до следеће грешке приликом брисање књиге: $1",
+	"bs-bookshelfui-dlg-choosewikipage-title": "Вики страница",
+	"bs-bookshelfui-ctxmnu-open": "Отвори вики страницу у новом прозору",
+	"bs-bookshelfui-ctxmnu-edit": "Измени наслов за приказ",
+	"bs-bookshelfui-ctxmnu-delete": "Обриши из књиге",
+	"bs-bookshelfui-dlg-copy-title": "Копирај \"$1\"",
+	"bs-bookshelfui-dlg-copy-target-name-label": "Циљно име",
+	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "Све странице ове књиге ће бити копиране у овај именски простор. Везе ће бити адаптиране.",
+	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Једна књига|$1 књига}})",
+	"bs-bookshelfui-book-type": "Тип књиге",
+	"bs-bookshelfui-dlg-type-label": "Извор",
+	"bs-bookshelfui-type-category": "Све странице категорије",
+	"bs-bookshelfui-type-subpages": "Све подстранице странице",
+	"bs-bookshelfui-type-pagecollection": "Збирка страница",
+	"bs-bookshelfui-intro": "Овде можете видети све доступне књиге. Да бисте додали нову, идите на [[Special:Bookmanager|управљач књигама]].",
+	"bs-bookshelfui-bookmanager-deletion-error-pageid": "Наведен чланак није могуће пронаћи.",
+	"bs-bookshelfui-bookmanager-deletion-error-unkown": "Дошло је до непознате грешке. Контактирајте вашег администратора.",
+	"bs-bookshelfui-bookmetatag-subtitle": "Поднаслов",
+	"bs-bookshelfui-bookmetatag-author2": "Аутор 2",
+	"bs-bookshelfui-bookmetatag-docummentidentifier": "ID документа",
+	"bs-bookshelfui-bookmetatag-docummenttype": "Врста документа",
+	"bs-bookshelfui-prof-defaultview": "Подразумевани приказ",
+	"bs-bookshelfui-prof-defaultview-images": "Слике"
 }
