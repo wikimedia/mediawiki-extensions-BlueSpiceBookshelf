@@ -481,6 +481,9 @@
 				"bs-bookshelf-droplet-pdf-book-label",
 				"bs-bookshelf-droplet-pdf-template-label",
 				"bs-bookshelf-droplet-pdf-link-label"
+			],
+			"dependencies": [
+				"ext.contentdroplets.bootstrap"
 			]
 		}
 	},
