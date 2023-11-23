@@ -83,5 +83,16 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definisce a quale libro appartengono le pagine",
 	"bs-bookshelf-droplet-name": "Elenco di libri",
-	"bs-bookshelf-droplet-description": "Elenco delle pagine nel namespace Libro"
+	"bs-bookshelf-droplet-description": "Elenco delle pagine nel namespace Libro",
+	"bs-bookshelf-mainlinks-label": "Libri",
+	"bs-bookshelf-ga-editing-label": "Libri",
+	"bs-bookshelf-booknav-title": "Indice del libro",
+	"bs-bookshelf-booknav-desc": "Elenco di tutti i capitoli o di quelli selezionati di un libro",
+	"bs-bookshelf-booknav-book-label": "Libro",
+	"bs-bookshelf-booknav-book-help": "Seleziona un libro da utilizzare",
+	"bs-bookshelf-booknav-chapter-label": "Capitolo",
+	"bs-bookshelf-booknav-chapter-help": "Seleziona un capitolo da mostrare",
+	"bs-bookshelf-booknav-book-not-exist": "Il libro $1 non esiste",
+	"bs-bookshelf-booknav-chapter-not-exist": "Il capitolo $1 non esiste",
+	"bs-bookshelf-droplet-pdf-link-label": "Etichetta del collegamento"
 }

@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Al Riaz Uddin Ripon",
+			"Borhan",
 			"আফতাবুজ্জামান",
 			"খাত্তাব হাসান"
 		]
@@ -15,5 +16,16 @@
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "শিরোনাম",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "লেখক",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "সংস্করণ",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "বই"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "বই",
+	"bs-bookshelf-ga-editing-label": "বইসমূহ",
+	"bs-bookshelf-booknav-book-label": "বই",
+	"bs-bookshelf-booknav-book-help": "ব্যবহার করার জন্য একটি বই নির্বাচন করুন",
+	"bs-bookshelf-booknav-chapter-label": "অধ্যায়",
+	"bs-bookshelf-booknav-chapter-help": "প্রদর্শনের জন্য একটি অধ্যায় নির্বাচন করুন",
+	"bs-bookshelf-booknav-book-not-exist": "বই $1 বিদ্যমান নেই",
+	"bs-bookshelf-booknav-chapter-not-exist": "অধ্যায় $1 বিদ্যমান নেই",
+	"bs-bookshelf-droplet-pdf-name": "বইয়ের পিডিএফ লিঙ্ক",
+	"bs-bookshelf-droplet-pdf-book-label": "রপ্তানির বই",
+	"bs-bookshelf-droplet-pdf-template-label": "বই পিডিএফ টেমপ্লেট",
+	"bs-bookshelf-droplet-pdf-link-label": "সংযোগ স্তর"
 }

@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hakim1bal"
+			"Hakim1bal",
+			"ⵣⵉⵔⵉ ⴰⵎⵖⵏⴰⵙ"
 		]
 	},
-	"bs-bookshelf-edit-title": "ⴰⵙⵏⴼⵍ ⵏ $1"
+	"bs-bookshelf-edit-title": "ⴰⵙⵏⴼⵍ ⵏ $1",
+	"bs-bookshelf-ga-editing-label": "ⵉⴷⵍⵉⵙⵏ"
 }

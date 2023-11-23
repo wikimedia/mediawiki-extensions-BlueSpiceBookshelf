@@ -83,7 +83,7 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "ページの上部に章ページャーを追加します。",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "ページの下部に章ページャーを追加します。",
 	"bs-bookshelf-pref-supressbookns-help": "ページ名の名前空間は、PDF出力では隠されています。",
-	"bs-bookshelf-config-mainlinks-bookshelf-label": "エントリポイント「本棚」を表示",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "エントリポイント「書籍」を表示",
 	"bs-bookshelf-config-mainlinks-bookshelf-help": "左側のナビゲーションにエントリポイントの「本棚」リンクを表示",
 	"bs-bookshelf-tag-booklist-description": "名前空間「book」から記事のリストを生成し、フィルタリングできます。フィルターの表示は必須です。",
 	"bs-bookshelf-ve-booklist-attr-filter-help": "key:valueの形式のメタデータでフィルタリングします。例:title:handbook",
@@ -97,5 +97,16 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "ページが属するブックを定義します",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "本の章番号を目次とページ内のすべての見出しに追加する",
 	"bs-bookshelf-droplet-name": "ブックリスト",
-	"bs-bookshelf-droplet-description": "Book名前空間内のページリスト"
+	"bs-bookshelf-droplet-description": "Book名前空間内のページリスト",
+	"bs-bookshelf-mainlinks-label": "書籍",
+	"bs-bookshelf-ga-editing-label": "書籍",
+	"bs-bookshelf-booknav-chapter-label": "章",
+	"bs-bookshelf-booknav-chapter-help": "表示する章を選択",
+	"bs-bookshelf-booknav-book-not-exist": "書籍「$1」は存在しません",
+	"bs-bookshelf-booknav-chapter-not-exist": "章「$1」は存在しません",
+	"bs-bookshelf-droplet-pdf-name": "書籍のPDFリンク",
+	"bs-bookshelf-droplet-pdf-description": "書籍を PDF としてダウンロードするリンク",
+	"bs-bookshelf-droplet-pdf-book-label": "エクスポートする本",
+	"bs-bookshelf-droplet-pdf-template-label": "書籍の PDF テンプレート",
+	"bs-bookshelf-droplet-pdf-link-label": "リンクラベル"
 }

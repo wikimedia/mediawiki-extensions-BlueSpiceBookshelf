@@ -100,5 +100,6 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Adicione os números dos capítulos do livro ao índice e a todos os títulos da página",
 	"bs-bookshelf-droplet-name": "Lista de livro",
 	"apihelp-bs-book-chapters-store-summary": "Permite consulta de todos os livros e suas páginas de capítulo.",
-	"bs-bookshelf-droplet-description": "Lista de páginas no espaço nominal “Book”"
+	"bs-bookshelf-droplet-description": "Lista de páginas no espaço nominal “Book”",
+	"bs-bookshelf-mainlinks-label": "Livros"
 }

@@ -19,5 +19,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Títol",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autor",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Version",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libre"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libre",
+	"bs-bookshelf-mainlinks-label": "Libres"
 }
