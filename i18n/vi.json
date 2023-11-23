@@ -2,10 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Keo010122",
-			"NguyenHung"
+			"NguyenHung",
+			"Pisceskaze"
 		]
 	},
 	"bs-bookshelf-action-editbook": "Sửa mã nguồn",
 	"bs-bookshelf-action-editbook-create": "Sửa mã nguồn",
-	"bs-bookshelf-ga-manager-label": "Sách"
+	"bs-bookshelf-ga-manager-label": "Sách",
+	"bs-bookshelf-mainlinks-label": "Sách",
+	"bs-bookshelf-droplet-pdf-name": "Liên kết sách PDF",
+	"bs-bookshelf-droplet-pdf-description": "Liên kết tải sách dưới dạng PDF",
+	"bs-bookshelf-droplet-pdf-link-label": "Nhãn liên kết"
 }

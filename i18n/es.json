@@ -104,5 +104,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Define a qué libro pertenecen las páginas",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Añade los números de los capítulos del libro al índice y a todos los titulares de la página",
 	"bs-bookshelf-droplet-name": "Lista de libros",
-	"bs-bookshelf-droplet-description": "Lista de páginas en el espacio de nombres Libro"
+	"bs-bookshelf-droplet-description": "Lista de páginas en el espacio de nombres Libro",
+	"bs-bookshelf-mainlinks-label": "Libros"
 }

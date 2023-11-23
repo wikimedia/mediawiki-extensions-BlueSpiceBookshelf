@@ -11,5 +11,8 @@
 	"bs-bookshelf-setting-path-feature": "کتاب",
 	"bs-bookshelf-grouping-template-type-ns_book": "عام کتاباں",
 	"bs-bookshelf-grouping-template-type-user_book": "آپݨیاں کتاباں",
-	"bs-bookshelf-droplet-name": "کتاب تندیر"
+	"bs-bookshelf-droplet-name": "کتاب تندیر",
+	"bs-bookshelf-ga-editing-label": "کتاباں",
+	"bs-bookshelf-booknav-book-label": "کتاب",
+	"bs-bookshelf-booknav-chapter-label": "باب"
 }

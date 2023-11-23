@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Chrumps",
 			"Kareyac",
+			"Mro",
 			"Pefect",
 			"Superjurek",
 			"WaldiSt"
@@ -29,5 +31,18 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Wersja",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Książka",
 	"bs-bookshelf-action-export-book": "Eksportuj książkę",
-	"bs-bookshelf-ve-booklistinspector-title": "Lista książek"
+	"bs-bookshelf-ve-booklistinspector-title": "Lista książek",
+	"bs-bookshelf-extension-description": "Umożliwia BlueSpice zarządzanie zhierarchizowanymi zbiorami stron.",
+	"bs-bookshelf-tagerror-no-attribute-given": "Nie podano atrybutu! Użyj <strong>src</strong> , aby skonfigurować spis treści.",
+	"bs-bookshelf-tagerror-article-title-not-valid": "Podany artykuł źródłowy (&quot;$1&quot;) nie istnieje.",
+	"bs-bookshelf-tagerror-article-content-not-valid": "Podany artykuł źródłowy (&quot;$1&quot;) zawiera nieprawidłowe dane.",
+	"bs-bookshelf-positive-integer-validation-not-approved": "Dozwolone są tylko dodatnie liczby całkowite.",
+	"bs-bookshelf-tagerror-attribute-float-not-valid": "Dozwolone wartośći to <i>left</i> lub <i>right</i>.",
+	"bs-bookshelf-pref-SupressBookNS": "Pomijaj prefiks przestrzeni nazw artykułów wchodzących w skład książki w wynikach",
+	"bs-bookshelf-pref-TitleDisplayText": "Używaj wyświetlanego tytułu ze źródła książki w artykule",
+	"bs-bookshelf-pref-PrependPageTOCNumbers": "Rozszerz spis treści artykułu i nagłówki w artykule o numer artykułu",
+	"bs-bookshelf-tag-edit-book": "Edytuj książkę",
+	"bs-bookshelf-personal-books-page-prefix": "$1/Książki/",
+	"bs-bookshelf-add-to-book-label-book": "Książka",
+	"bs-bookshelf-add-to-book-label-alias": "Alias"
 }

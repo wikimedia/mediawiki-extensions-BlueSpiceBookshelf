@@ -62,5 +62,8 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "책의 판을 설정합니다",
 	"bs-bookshelf-ve-bookshelfinspector-title": "책장",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "책",
-	"bs-bookshelf-ve-booklistinspector-title": "책 목록"
+	"bs-bookshelf-ve-booklistinspector-title": "책 목록",
+	"bs-bookshelf-mainlinks-label": "책",
+	"bs-bookshelf-droplet-name": "책 목록",
+	"bs-bookshelf-droplet-description": "책 이름공간의 문서 목록"
 }

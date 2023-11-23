@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Abuluntu",
+			"EdoAug",
 			"Jon Harald Søby"
 		]
 	},
@@ -84,5 +85,13 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Bok",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definer hvilken bok sidene hører til",
 	"bs-bookshelf-droplet-name": "Bokliste",
-	"bs-bookshelf-droplet-description": "Liste over sider i boknavnerommet"
+	"bs-bookshelf-droplet-description": "Liste over sider i boknavnerommet",
+	"bs-bookshelf-mainlinks-label": "Bøker",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Vis inngangspunktet «Bokhylle»",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Vis lenke til inngangspunktet «Bokhylle» i venstremenyen",
+	"bs-bookshelf-tag-booklist-description": "Genererer lister over sider fra navnerommet «book» og kan filtreres. Indikasjonen av filteret er obligatorisk.",
+	"bs-bookshelf-tag-bookmeta-description": "Tagg for å lagre diverse metadata om boksider. Disse inkluderes i boka. Attributtene til taggen må samsvare med metadataene til boksiden",
+	"bs-bookshelf-tag-bookshelf-box-desc": "Setter inn kapittelnavigering for en bok på en side som ikke er del av en bok. Nummerering skjer automatisk i henhold til innholdfortegnelsen",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Legg til kapittelnumre for boken i innholdsfortegnelse og alle overskrifter på siden",
+	"apihelp-bs-book-chapters-store-summary": "Muligjør spørring av alle bøker og deres kapittelsider."
 }

@@ -58,5 +58,6 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Knygų lentyna",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Knyga",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Nurodo, kuriai knygai priklauso puslapiai",
-	"bs-bookshelf-droplet-name": "Knygų sąrašas"
+	"bs-bookshelf-droplet-name": "Knygų sąrašas",
+	"bs-bookshelf-mainlinks-label": "Knygos"
 }

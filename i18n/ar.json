@@ -94,5 +94,7 @@
 	"bs-bookshelf-tag-booklist-description": "يولد قوائم الصفحات من مساحة الاسم \"كتاب\" ويمكن تصفيتها. إشارة المرشح إلزامية",
 	"bs-bookshelf-ve-booklist-attr-filter-help": "قم بالتصفية حسب البيانات الوصفية في مفتاح التنسيق: القيمة ، على سبيل المثال العنوان: الدليل",
 	"bs-bookshelf-tag-bookmeta-description": "وسم لحفظ البيانات الوصفية المختلفة على صفحات الكتاب. تم تضمين هذه في الكتاب. يجب أن ترتبط سمات هذه العلامة بالبيانات الوصفية لصفحة الكتاب",
-	"bs-bookshelf-ve-bookmetainspector-title": "بوكميتا"
+	"bs-bookshelf-ve-bookmetainspector-title": "بوكميتا",
+	"bs-bookshelf-mainlinks-label": "كتب",
+	"bs-bookshelf-ga-editing-label": "كتب"
 }

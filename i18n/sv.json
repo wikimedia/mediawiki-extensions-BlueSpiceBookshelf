@@ -57,5 +57,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Anger bokens version",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Bokhylla",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Bok",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definierar vilken bok sidorna tillhör"
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "Definierar vilken bok sidorna tillhör",
+	"bs-bookshelf-mainlinks-label": "Böcker"
 }
