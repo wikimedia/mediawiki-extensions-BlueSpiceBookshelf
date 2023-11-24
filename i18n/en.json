@@ -106,5 +106,6 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Book to export",
 	"bs-bookshelf-droplet-pdf-template-label": "Book PDF template",
 	"bs-bookshelf-droplet-pdf-link-label": "Link label",
-	"bs-bookshelf-booknav-title": "Book table of contents"
+	"bs-bookshelf-booknav-title": "Book table of contents",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Search"
 }

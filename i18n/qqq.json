@@ -115,5 +115,6 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Label for title input to select book",
 	"bs-bookshelf-droplet-pdf-template-label": "Label for dropdown to select template",
 	"bs-bookshelf-droplet-pdf-link-label": "Label for text input field to insert label of link",
-	"bs-bookshelf-booknav-title": "Title of the Book Table of Contents droplet"
+	"bs-bookshelf-booknav-title": "Title of the Book Table of Contents droplet",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Placeholder for search box"
 }
