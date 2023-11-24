@@ -40,7 +40,11 @@
 			expanded: false
 		} );
 
-		this.bookInput = new OO.ui.TextInputWidget();
+		this.bookInput = new mw.widgets.TitleInputWidget( {
+			required: true,
+			namespace: 1504,
+			$overlay: true
+		} );
 		this.chapterInput = new OO.ui.TextInputWidget();
 
 		this.bookLayout = new OO.ui.FieldLayout( this.bookInput, {
