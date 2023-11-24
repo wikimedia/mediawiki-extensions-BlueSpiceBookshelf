@@ -108,5 +108,6 @@
 	"bs-bookshelf-droplet-pdf-description": "Ein Link, um ein Buch als PDF herunterzuladen",
 	"bs-bookshelf-droplet-pdf-book-label": "Buch für Export",
 	"bs-bookshelf-droplet-pdf-template-label": "Book PDF-Template",
-	"bs-bookshelf-droplet-pdf-link-label": "Link-Label"
+	"bs-bookshelf-droplet-pdf-link-label": "Link-Label",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Durchsuchen"
 }
