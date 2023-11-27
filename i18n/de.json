@@ -98,10 +98,10 @@
 	"bs-bookshelf-booknav-chapter-label": "Kapitel",
 	"bs-bookshelf-booknav-book-not-exist": "Buch $1 existiert nicht",
 	"bs-bookshelf-booknav-chapter-not-exist": "Kapitel $1 existiert nicht",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Durchsuchen",
 	"bs-bookshelf-droplet-pdf-name": "Buch-PDF-Link",
 	"bs-bookshelf-droplet-pdf-description": "Ein Link, um ein Buch als PDF herunterzuladen",
 	"bs-bookshelf-droplet-pdf-book-label": "Buch für Export",
 	"bs-bookshelf-droplet-pdf-template-label": "Book PDF-Template",
-	"bs-bookshelf-droplet-pdf-link-label": "Link-Label",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Durchsuchen"
+	"bs-bookshelf-droplet-pdf-link-label": "Link-Label"
 }

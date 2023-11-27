@@ -100,6 +100,7 @@
 	"bs-bookshelf-booknav-chapter-help": "Kies een hoofdstuk om weer te geven",
 	"bs-bookshelf-booknav-book-not-exist": "Boek $1 bestaat niet",
 	"bs-bookshelf-booknav-chapter-not-exist": "Hoofdstuk $1 bestaat niet",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Zoeken",
 	"bs-bookshelf-droplet-pdf-name": "Boek-PDF-link",
 	"bs-bookshelf-droplet-pdf-description": "Link waarmee een boek als PDF wordt gedownload",
 	"bs-bookshelf-droplet-pdf-book-label": "Boek om te exporteren",

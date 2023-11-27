@@ -99,6 +99,7 @@
 	"bs-bookshelf-booknav-chapter-help": "נא לבחור פרק להצגה",
 	"bs-bookshelf-booknav-book-not-exist": "הספר $1 לא קיים",
 	"bs-bookshelf-booknav-chapter-not-exist": "הפרק $1 אינו קיים",
+	"bs-bookshelf-booknav-searchbox-placeholder": "חיפוש",
 	"bs-bookshelf-droplet-pdf-name": "קישור ל־PDF של הספר",
 	"bs-bookshelf-droplet-pdf-description": "קישור להורדת ספר כ־PDF",
 	"bs-bookshelf-droplet-pdf-book-label": "איזה ספר לייצא",
