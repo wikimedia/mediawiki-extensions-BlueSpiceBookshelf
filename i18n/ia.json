@@ -105,5 +105,6 @@
 	"bs-bookshelf-droplet-pdf-description": "Ligamine que discarga un libro in formato PDF",
 	"bs-bookshelf-droplet-pdf-book-label": "Libro a exportar",
 	"bs-bookshelf-droplet-pdf-template-label": "Patrono de PDF de libro",
-	"bs-bookshelf-droplet-pdf-link-label": "Etiquetta del ligamine"
+	"bs-bookshelf-droplet-pdf-link-label": "Etiquetta del ligamine",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Cercar"
 }
