@@ -111,5 +111,6 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Boek om te exporteren",
 	"bs-bookshelf-droplet-pdf-template-label": "Boek-PDF-sjabloon",
 	"bs-bookshelf-droplet-pdf-link-label": "Linklabel",
-	"bs-bookshelf-booknav-title": "Inhoudsopgave boek"
+	"bs-bookshelf-booknav-title": "Inhoudsopgave boek",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Zoeken"
 }
