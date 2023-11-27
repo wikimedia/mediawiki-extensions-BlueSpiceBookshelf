@@ -106,5 +106,6 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Libro a exportar",
 	"bs-bookshelf-droplet-pdf-template-label": "Patrono de PDF de libro",
 	"bs-bookshelf-droplet-pdf-link-label": "Etiquetta del ligamine",
-	"bs-bookshelf-booknav-title": "Tabula de contento del libro"
+	"bs-bookshelf-booknav-title": "Tabula de contento del libro",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Cercar"
 }

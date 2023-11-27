@@ -110,5 +110,6 @@
 	"bs-bookshelf-droplet-pdf-book-label": "איזה ספר לייצא",
 	"bs-bookshelf-droplet-pdf-template-label": "תבנית PDF של ספר",
 	"bs-bookshelf-droplet-pdf-link-label": "תווית הקישור",
-	"bs-bookshelf-booknav-title": "תוכן העניינים של הספר"
+	"bs-bookshelf-booknav-title": "תוכן העניינים של הספר",
+	"bs-bookshelf-booknav-searchbox-placeholder": "חיפוש"
 }

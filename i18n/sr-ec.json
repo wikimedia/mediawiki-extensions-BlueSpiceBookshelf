@@ -55,5 +55,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Постављање верзије књиге",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Полица са књигама",
 	"bs-bookshelf-droplet-name": "Списак књига",
-	"bs-bookshelf-droplet-description": "Списак страница у именском простору Књига"
+	"bs-bookshelf-droplet-description": "Списак страница у именском простору Књига",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Претрага"
 }
