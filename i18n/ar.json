@@ -96,5 +96,7 @@
 	"bs-bookshelf-tag-bookmeta-description": "وسم لحفظ البيانات الوصفية المختلفة على صفحات الكتاب. تم تضمين هذه في الكتاب. يجب أن ترتبط سمات هذه العلامة بالبيانات الوصفية لصفحة الكتاب",
 	"bs-bookshelf-ve-bookmetainspector-title": "بوكميتا",
 	"bs-bookshelf-mainlinks-label": "كتب",
-	"bs-bookshelf-ga-editing-label": "كتب"
+	"bs-bookshelf-ga-editing-label": "كتب",
+	"bs-bookshelf-booknav-book-label": "كتاب",
+	"bs-bookshelf-booknav-book-not-exist": "الكتاب $1 غير موجود"
 }

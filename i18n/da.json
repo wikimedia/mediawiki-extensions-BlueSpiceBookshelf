@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Saederup92"
+			"Saederup92",
+			"Zakawer2"
 		]
 	},
 	"bs-bookshelf-specialpage-title": "Bøger",
@@ -34,5 +35,6 @@
 	"bs-bookshelf-action-editbook": "Rediger kilde",
 	"bs-bookshelf-action-editbook-create": "Rediger kilde",
 	"bs-bookshelf-ve-booklistinspector-title": "Bogliste",
-	"bs-bookshelf-mainlinks-label": "Bøger"
+	"bs-bookshelf-mainlinks-label": "Bøger",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Søg"
 }
