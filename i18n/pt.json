@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Caiofernandes",
 			"Fúlvio",
 			"Hamilton Abreu",
 			"Mansil alfalb",
@@ -94,5 +95,6 @@
 	"bs-bookshelf-droplet-name": "Lista de livros",
 	"bs-bookshelf-droplet-description": "Lista das páginas no espaço nominal Livro",
 	"apihelp-bs-book-chapters-store-summary": "Permite consulta de todos os livros e das suas páginas de capítulos.",
-	"bs-bookshelf-mainlinks-label": "Livros"
+	"bs-bookshelf-mainlinks-label": "Livros",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Pesquisar"
 }
