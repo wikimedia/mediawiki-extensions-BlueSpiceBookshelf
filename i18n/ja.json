@@ -98,6 +98,7 @@
 	"bs-bookshelf-booknav-chapter-help": "表示する章を選択",
 	"bs-bookshelf-booknav-book-not-exist": "書籍「$1」は存在しません",
 	"bs-bookshelf-booknav-chapter-not-exist": "章「$1」は存在しません",
+	"bs-bookshelf-booknav-searchbox-placeholder": "検索",
 	"bs-bookshelf-droplet-pdf-name": "書籍のPDFリンク",
 	"bs-bookshelf-droplet-pdf-description": "書籍を PDF としてダウンロードするリンク",
 	"bs-bookshelf-droplet-pdf-book-label": "エクスポートする本",

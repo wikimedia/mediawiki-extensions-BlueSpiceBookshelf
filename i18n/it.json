@@ -88,5 +88,6 @@
 	"bs-bookshelf-booknav-chapter-help": "Seleziona un capitolo da mostrare",
 	"bs-bookshelf-booknav-book-not-exist": "Il libro $1 non esiste",
 	"bs-bookshelf-booknav-chapter-not-exist": "Il capitolo $1 non esiste",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Ricerca",
 	"bs-bookshelf-droplet-pdf-link-label": "Etichetta del collegamento"
 }

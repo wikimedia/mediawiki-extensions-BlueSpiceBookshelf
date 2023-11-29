@@ -90,5 +90,7 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "يحدد الكتاب الذي تنتمي إليه الصفحات",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "أضف أرقام فصول الكتاب إلى جدول المحتويات وجميع العناوين الرئيسية في الصفحة",
 	"bs-bookshelf-droplet-name": "قائمة الكتب",
-	"bs-bookshelf-droplet-description": "قائمة الصفحات في كتاب مساحة الاسم"
+	"bs-bookshelf-droplet-description": "قائمة الصفحات في كتاب مساحة الاسم",
+	"bs-bookshelf-booknav-book-label": "كتاب",
+	"bs-bookshelf-booknav-book-not-exist": "الكتاب $1 غير موجود"
 }
