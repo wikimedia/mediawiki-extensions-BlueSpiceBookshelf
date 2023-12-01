@@ -101,6 +101,8 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Book to export",
 	"bs-bookshelf-droplet-pdf-template-label": "Book PDF template",
 	"bs-bookshelf-droplet-pdf-link-label": "Link label",
+	"bs-bookshelf-search-center-result-books-label": "Part of {{PLURAL:$1|book|books}}",
+	"bs-bookshelf-search-center-filter-books-label": "Book",
 	"apihelp-bs-books-overview-store-summary": "Lists all books including bookshelf, first chapter link and actions.",
 	"books": "Books",
 	"bs-books-overview-page-loading-text": "Book overview is loading ...",
