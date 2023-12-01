@@ -112,6 +112,8 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Label for title input to select book",
 	"bs-bookshelf-droplet-pdf-template-label": "Label for dropdown to select template",
 	"bs-bookshelf-droplet-pdf-link-label": "Label for text input field to insert label of link",
+	"bs-bookshelf-search-center-result-books-label": "Label for the search result field",
+	"bs-bookshelf-search-center-filter-books-label": "Label for the search filter type",
 	"apihelp-bs-books-overview-store-summary": "{{doc-apihelp-summary|bs-books-overview-store}}",
 	"books": "Special page name for [[Special:Book]] special page.\n{{Identical|Bookshelf}}",
 	"bs-books-overview-page-loading-text": "Loading indicator text for special page [[Special:Book]]",
