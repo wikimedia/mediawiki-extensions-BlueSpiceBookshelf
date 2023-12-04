@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eleassar"
+			"Eleassar",
+			"Upwinxp"
 		]
 	},
 	"bs-bookshelf-action-editbook": "Uredi vir",
@@ -66,9 +67,9 @@
 	"bs-bookshelf-prof-defaultview-grid": "Mreža",
 	"right-bookshelf-viewspecialpage": "Dostop do posebne strani [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "dostop do posebne strani [[Special:Bookshelf]]",
-	"bs-bookshelf-pref-chapterpagerbeforecontent": "Pred vsebino prikaži krmarjenje po poglavju",
-	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Na vrh strani doda krmarjenje po poglavjih.",
-	"bs-bookshelf-pref-chapterpageraftercontent": "Po vsebini prikaži krmarjenje po poglavjih knjige",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Krmarjenje po poglavjih knjige prikaži pred vsebino",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Na vrhu strani doda krmarjenje po poglavjih.",
+	"bs-bookshelf-pref-chapterpageraftercontent": "Krmarjenje po poglavjih knjige prikaži po vsebini",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Na dnu strani doda krmarjenje po poglavju.",
 	"bs-bookshelf-pref-supressbookns-help": "Imenski prostor imen strani je skrit v izhodu PDF.",
 	"bs-bookshelf-actionmenuentry-addtobook": "Dodaj v knjigo",
@@ -94,5 +95,17 @@
 	"bs-bookshelf-mainlinks-label": "Knjige",
 	"bs-bookshelf-ga-editing-label": "Knjige",
 	"bs-bookshelf-booknav-title": "Knjižno kazalo",
-	"bs-bookshelf-booknav-desc": "Seznam vseh ali izbranih poglavij knjige"
+	"bs-bookshelf-booknav-desc": "Seznam vseh ali izbranih poglavij knjige",
+	"bs-bookshelf-booknav-book-label": "Knjiga",
+	"bs-bookshelf-booknav-book-help": "Izberite knjigo, ki jo želite uporabiti",
+	"bs-bookshelf-booknav-chapter-label": "Poglavje",
+	"bs-bookshelf-booknav-chapter-help": "Izberite poglavje, ki ga želite prikazati",
+	"bs-bookshelf-booknav-book-not-exist": "Knjiga $1 ne obstaja",
+	"bs-bookshelf-booknav-chapter-not-exist": "Poglavje $1 ne obstaja",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Išči",
+	"bs-bookshelf-droplet-pdf-name": "Povezava do knjige v obliki PDF",
+	"bs-bookshelf-droplet-pdf-description": "Povezava, na kateri je knjiga na voljo kot PDF",
+	"bs-bookshelf-droplet-pdf-book-label": "Knjiga za izvoz",
+	"bs-bookshelf-droplet-pdf-template-label": "Predloga PDF za knjigo",
+	"bs-bookshelf-droplet-pdf-link-label": "Oznaka povezave"
 }
