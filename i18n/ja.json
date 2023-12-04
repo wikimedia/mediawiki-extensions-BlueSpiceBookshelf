@@ -10,6 +10,7 @@
 			"RYOUMA1117",
 			"Shirayuki",
 			"もなー(偽物)",
+			"翻訳者a",
 			"背番号4のエース"
 		]
 	},
@@ -112,5 +113,10 @@
 	"bs-bookshelf-droplet-pdf-book-label": "エクスポートする本",
 	"bs-bookshelf-droplet-pdf-template-label": "書籍の PDF テンプレート",
 	"bs-bookshelf-droplet-pdf-link-label": "リンクラベル",
-	"bs-bookshelf-booknav-searchbox-placeholder": "検索"
+	"bs-bookshelf-booknav-searchbox-placeholder": "検索",
+	"apihelp-bs-book-chapters-store-summary": "すべての書籍とその章のページのクエリを許可します。",
+	"bs-bookshelf-booknav-title": "目次を非表示にする",
+	"bs-bookshelf-booknav-desc": "本のすべての章または選択した章のリスト",
+	"bs-bookshelf-booknav-book-label": "書籍",
+	"bs-bookshelf-booknav-book-help": "使用する本を選択してください"
 }
