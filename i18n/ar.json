@@ -91,6 +91,9 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "أضف أرقام فصول الكتاب إلى جدول المحتويات وجميع العناوين الرئيسية في الصفحة",
 	"bs-bookshelf-droplet-name": "قائمة الكتب",
 	"bs-bookshelf-droplet-description": "قائمة الصفحات في كتاب مساحة الاسم",
+	"bs-bookshelf-booknav-title": "جدول محتويات الكتاب",
 	"bs-bookshelf-booknav-book-label": "كتاب",
-	"bs-bookshelf-booknav-book-not-exist": "الكتاب $1 غير موجود"
+	"bs-bookshelf-booknav-book-help": "حدد كتابًا لاستخدامه",
+	"bs-bookshelf-booknav-book-not-exist": "الكتاب $1 غير موجود",
+	"bs-bookshelf-booknav-chapter-not-exist": "الفصل $1 غير موجود"
 }
