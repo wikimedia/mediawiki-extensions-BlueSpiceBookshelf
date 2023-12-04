@@ -10,7 +10,8 @@
 			"Lewis2013",
 			"Thibaut120094",
 			"Verdy p",
-			"Wladek92"
+			"Wladek92",
+			"Wnagxsi"
 		]
 	},
 	"bs-bookshelf-extension-description": "Permet à BlueSpice de gérer et exporter des collections hiérarchiques d’articles.",
@@ -76,7 +77,7 @@
 	"bs-bookshelf-pref-supressbookns-help": "L’espace de noms pour les noms de pages est caché dans la sortie PDF.",
 	"bs-bookshelf-warning": "Exception PHP : $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Ajouter au livre",
-	"bs-bookshelf-config-mainlinks-bookshelf-label": "Afficher le point d’entrée « Étagère »",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Afficher le point d'entrée \"Livres\"",
 	"bs-bookshelf-config-mainlinks-bookshelf-help": "Afficher le lien du point d’entrée « Livres » dans le panneau de navigation à gauche",
 	"bs-bookshelf-tag-booklist-description": "Génère des listes de pages à partir de l’espace de noms « livre » et peut être filtré. L’indication du filtre est obligatoire.",
 	"bs-bookshelf-ve-booklistinspector-title": "Liste de livres",
