@@ -8,7 +8,8 @@
 			"Mschlindwein",
 			"Schmackes",
 			"SehrGuterCode",
-			"Stephan Muggli <muggli@hallowelt.biz>"
+			"Stephan Muggli <muggli@hallowelt.biz>",
+			"Wdwd translator"
 		]
 	},
 	"bs-bookshelf-extension-description": "Ermöglicht das Zusammenstellen von hierarchisch gegliederten Artikelsammlungen.",
@@ -76,7 +77,7 @@
 	"bs-bookshelf-warning": "PHP Exception: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Zu einem Buch hinzufügen",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "Einstiegspunkt \"Bücher\" anzeigen",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "Einstiegspunkt \"Bücher\" in der linken Navigation anzeigen",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Einstiegspunkt „Bücher“ in der linken Navigation anzeigen",
 	"bs-bookshelf-tag-booklist-description": "Erzeugt eine Liste von Artikeln aus dem Namensraum \"Buch\" und ist filterbar. Die Angabe des Filters ist dabei zwingend erforderlich",
 	"bs-bookshelf-ve-booklistinspector-title": "Bücherliste",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
@@ -108,5 +109,6 @@
 	"bs-bookshelf-booknav-chapter-label": "Kapitel",
 	"bs-bookshelf-booknav-book-not-exist": "Buch $1 existiert nicht",
 	"bs-bookshelf-booknav-chapter-not-exist": "Kapitel $1 existiert nicht",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Durchsuchen"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Durchsuchen",
+	"bs-bookshelf-booknav-book-label": "Buch"
 }
