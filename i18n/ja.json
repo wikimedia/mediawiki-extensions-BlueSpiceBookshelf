@@ -10,7 +10,8 @@
 			"Shirayuki",
 			"もなー(偽物)",
 			"背番号4のエース",
-			"Chqaz"
+			"Chqaz",
+			"翻訳者a"
 		]
 	},
 	"bs-bookshelf-extension-description": "BlueSpiceが記事の階層コレクションを管理およびエクスポートできるようにします。",
@@ -99,8 +100,12 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "本の章番号を目次とページ内のすべての見出しに追加する",
 	"bs-bookshelf-droplet-name": "ブックリスト",
 	"bs-bookshelf-droplet-description": "Book名前空間内のページリスト",
+	"apihelp-bs-book-chapters-store-summary": "すべての書籍とその章のページのクエリを許可します。",
 	"bs-bookshelf-mainlinks-label": "書籍",
 	"bs-bookshelf-ga-editing-label": "書籍",
+	"bs-bookshelf-booknav-desc": "本のすべての章または選択した章のリスト",
+	"bs-bookshelf-booknav-book-label": "書籍",
+	"bs-bookshelf-booknav-book-help": "使用する本を選択してください",
 	"bs-bookshelf-booknav-chapter-label": "章",
 	"bs-bookshelf-booknav-chapter-help": "表示する章を選択",
 	"bs-bookshelf-booknav-book-not-exist": "書籍「$1」は存在しません",
@@ -109,5 +114,6 @@
 	"bs-bookshelf-droplet-pdf-description": "書籍を PDF としてダウンロードするリンク",
 	"bs-bookshelf-droplet-pdf-book-label": "エクスポートする本",
 	"bs-bookshelf-droplet-pdf-template-label": "書籍の PDF テンプレート",
-	"bs-bookshelf-droplet-pdf-link-label": "リンクラベル"
+	"bs-bookshelf-droplet-pdf-link-label": "リンクラベル",
+	"bs-bookshelf-booknav-title": "目次を非表示にする"
 }

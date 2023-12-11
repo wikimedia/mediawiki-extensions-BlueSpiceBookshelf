@@ -98,5 +98,8 @@
 	"bs-bookshelf-mainlinks-label": "كتب",
 	"bs-bookshelf-ga-editing-label": "كتب",
 	"bs-bookshelf-booknav-book-label": "كتاب",
-	"bs-bookshelf-booknav-book-not-exist": "الكتاب $1 غير موجود"
+	"bs-bookshelf-booknav-book-help": "حدد كتابًا لاستخدامه",
+	"bs-bookshelf-booknav-book-not-exist": "الكتاب $1 غير موجود",
+	"bs-bookshelf-booknav-chapter-not-exist": "الفصل $1 غير موجود",
+	"bs-bookshelf-booknav-title": "جدول محتويات الكتاب"
 }
