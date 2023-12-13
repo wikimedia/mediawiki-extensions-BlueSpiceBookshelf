@@ -96,5 +96,16 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Ajouter les numéros de chapitre du livre à la table des matières et à tous les titres dans la page",
 	"bs-bookshelf-droplet-name": "Liste de livres",
 	"bs-bookshelf-droplet-description": "Liste des pages dans l’espace de noms Livre",
-	"apihelp-bs-book-chapters-store-summary": "Permet de chercher dans tous les livres et leurs pages de chapitre."
+	"apihelp-bs-book-chapters-store-summary": "Permet de chercher dans tous les livres et leurs pages de chapitre.",
+	"bs-bookshelf-booknav-desc": "Liste de tous les chapîtres ou d'une sélection d'un livre",
+	"bs-bookshelf-booknav-book-label": "Livre",
+	"bs-bookshelf-booknav-book-help": "Sélectionner un livre à utiliser",
+	"bs-bookshelf-booknav-chapter-label": "Chapître",
+	"bs-bookshelf-booknav-chapter-help": "Sélectionner un chapître à afficher",
+	"bs-bookshelf-booknav-book-not-exist": "Le livre $1 n'existe pas",
+	"bs-bookshelf-booknav-chapter-not-exist": "Le chapître $1 n'existe pas",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Chercher",
+	"bs-bookshelf-droplet-pdf-name": "Lien du livre PDF",
+	"bs-bookshelf-droplet-pdf-description": "Lien permettant de télécharger un livre au format PDF",
+	"bs-bookshelf-droplet-pdf-template-label": "Modèle de livre PDF"
 }

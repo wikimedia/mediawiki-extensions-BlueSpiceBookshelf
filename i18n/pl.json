@@ -35,8 +35,12 @@
 	"bs-bookshelf-action-export-book": "Eksportuj książkę",
 	"bs-bookshelf-edit-title": "Edycja $1",
 	"bs-bookshelf-book-grid-title": "Książki",
+	"bs-bookshelf-mainlinks-label": "Książki",
+	"bs-bookshelf-ga-editing-label": "Książki",
 	"bs-bookshelf-prof-defaultview": "Widok domyślny",
+	"bs-bookshelf-prof-defaultview-grid": "Siatka",
 	"bs-bookshelf-prof-defaultview-images": "Obrazy",
+	"bs-bookshelf-warning": "Wyjątek PHP: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Dodaj do książki",
 	"bs-bookshelf-ve-booklistinspector-title": "Lista książek",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtruj",
@@ -44,5 +48,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "Podtytuł",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autor",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Wersja",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Książka"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Książka",
+	"bs-bookshelf-booknav-book-label": "Książka",
+	"bs-bookshelf-booknav-chapter-label": "Rozdział"
 }
