@@ -44,5 +44,11 @@
 	"bs-bookshelf-tag-edit-book": "Edytuj książkę",
 	"bs-bookshelf-personal-books-page-prefix": "$1/Książki/",
 	"bs-bookshelf-add-to-book-label-book": "Książka",
-	"bs-bookshelf-add-to-book-label-alias": "Alias"
+	"bs-bookshelf-add-to-book-label-alias": "Alias",
+	"bs-bookshelf-mainlinks-label": "Książki",
+	"bs-bookshelf-ga-editing-label": "Książki",
+	"bs-bookshelf-prof-defaultview-grid": "Siatka",
+	"bs-bookshelf-warning": "Wyjątek PHP: $1",
+	"bs-bookshelf-booknav-book-label": "Książka",
+	"bs-bookshelf-booknav-chapter-label": "Rozdział"
 }
