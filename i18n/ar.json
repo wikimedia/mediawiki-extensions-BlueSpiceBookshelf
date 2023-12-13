@@ -101,5 +101,8 @@
 	"bs-bookshelf-booknav-book-not-exist": "الكتاب $1 غير موجود",
 	"bs-bookshelf-booknav-title": "جدول محتويات الكتاب",
 	"bs-bookshelf-booknav-book-help": "حدد كتابًا لاستخدامه",
-	"bs-bookshelf-booknav-chapter-not-exist": "الفصل $1 غير موجود"
+	"bs-bookshelf-booknav-chapter-not-exist": "الفصل $1 غير موجود",
+	"bs-bookshelf-booknav-desc": "قائمة بجميع الفصول المختارة من كتاب",
+	"bs-bookshelf-booknav-chapter-label": "فصل",
+	"bs-bookshelf-booknav-chapter-help": "اختصر فصلًا لعرضه"
 }
