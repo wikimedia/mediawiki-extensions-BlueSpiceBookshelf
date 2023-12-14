@@ -104,5 +104,6 @@
 	"bs-bookshelf-booknav-chapter-not-exist": "الفصل $1 غير موجود",
 	"bs-bookshelf-booknav-desc": "قائمة بجميع الفصول المختارة من كتاب",
 	"bs-bookshelf-booknav-chapter-label": "فصل",
-	"bs-bookshelf-booknav-chapter-help": "اختصر فصلًا لعرضه"
+	"bs-bookshelf-booknav-chapter-help": "اختصر فصلًا لعرضه",
+	"bs-bookshelf-booknav-searchbox-placeholder": "بحث"
 }
