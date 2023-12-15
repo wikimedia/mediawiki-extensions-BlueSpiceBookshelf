@@ -85,5 +85,8 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Определяет, какая книга включает страницы",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Пронумеруйте оглавление книги и все заголовки на странице",
-	"bs-bookshelf-mainlinks-label": "Книги"
+	"bs-bookshelf-mainlinks-label": "Книги",
+	"bs-bookshelf-ga-editing-label": "Книги",
+	"bs-bookshelf-booknav-book-label": "Книга",
+	"bs-bookshelf-booknav-chapter-label": "Глава"
 }
