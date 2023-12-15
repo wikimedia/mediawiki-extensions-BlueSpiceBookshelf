@@ -85,5 +85,8 @@
 	"bs-bookshelf-ve-bookmetainspector-title": "Метаданные книги",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Установить версию книги",
 	"apihelp-bs-bookshelf-bookstore-param-node": "Указывает узел, для которого должен быть предоставлен список подразделов.",
-	"bs-bookshelf-mainlinks-label": "Книги"
+	"bs-bookshelf-mainlinks-label": "Книги",
+	"bs-bookshelf-ga-editing-label": "Книги",
+	"bs-bookshelf-booknav-book-label": "Книга",
+	"bs-bookshelf-booknav-chapter-label": "Глава"
 }
