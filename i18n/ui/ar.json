@@ -3,6 +3,7 @@
 		"authors": [
 			"Meno25",
 			"ديفيد",
+			"علاء",
 			"محمد أحمد عبد الفتاح"
 		]
 	},
@@ -69,7 +70,7 @@
 	"bs-bookshelfui-export-book-text": "الرجاء الانتظار أثناء إنشاء الكتاب.",
 	"bs-bookshelfui-bookmanager-deletion-reason": "تم حذفه بواسطة مدير الكتاب",
 	"bs-bookshelfui-bookmanager-deletion-error-pageid": "لا يمكن العثور على المقالة المقدمة.",
-	"bs-bookshelfui-bookmanager-deletion-error-permission": "ليست لديك الصلاحية الكافية للقيام بهذا الفعل.",
+	"bs-bookshelfui-bookmanager-deletion-error-permission": "ليس لديك الصلاحية الكافية للقيام بهذا الفعل.",
 	"bs-bookshelfui-bookmanager-deletion-error-unkown": "حدث خطأ غير معروف؛ يُرجَى الاتصال بالإداري الخاص بك.",
 	"bs-bookshelfui-bookmetatag-title": "العنوان",
 	"bs-bookshelfui-bookmetatag-subtitle": "العنوان الفرعي",
