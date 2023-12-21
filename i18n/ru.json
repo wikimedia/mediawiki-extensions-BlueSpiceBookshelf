@@ -14,6 +14,7 @@
 			"Okras",
 			"Pacha Tchernof",
 			"Tanzun",
+			"Vlad5250",
 			"WindEwriX",
 			"Арсен Асхат"
 		]
@@ -88,5 +89,6 @@
 	"bs-bookshelf-mainlinks-label": "Книги",
 	"bs-bookshelf-ga-editing-label": "Книги",
 	"bs-bookshelf-booknav-book-label": "Книга",
-	"bs-bookshelf-booknav-chapter-label": "Глава"
+	"bs-bookshelf-booknav-chapter-label": "Глава",
+	"bs-bookshelf-pref-SupressBookNS": "Не выводить префикс пространства имён для книжных статей в выводе"
 }
