@@ -11,6 +11,7 @@
 			"Fitoschido",
 			"Igmc4",
 			"Jakeukalane",
+			"Jmabel",
 			"MarleneR329",
 			"Rodney Araujo",
 			"SpikeShroom",
@@ -82,8 +83,8 @@
 	"bs-bookshelf-pref-supressbookns-help": "El espacio de nombres de los nombres de página está oculto en la salida PDF.",
 	"bs-bookshelf-warning": "Excepción de PHP: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Añadir al libro",
-	"bs-bookshelf-config-mainlinks-bookshelf-label": "Mostrar punto de entrada \"Estantería\"",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "Mostrar el enlace punto de entrada \"Estantería\" en la navegación de la izquierda",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Mostrar punto de entrada \"Libros\"",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Mostrar el enlace punto de entrada \"Libros\" en la navegación de la izquierda",
 	"bs-bookshelf-tag-booklist-description": "Genera listas de páginas del espacio de nombres \"libro\" y puede ser filtrado. La indicación del filtro es obligatoria",
 	"bs-bookshelf-ve-booklistinspector-title": "Lista de libros",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtro",
@@ -105,5 +106,12 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Añade los números de los capítulos del libro al índice y a todos los titulares de la página",
 	"bs-bookshelf-droplet-name": "Lista de libros",
 	"bs-bookshelf-droplet-description": "Lista de páginas en el espacio de nombres Libro",
-	"bs-bookshelf-mainlinks-label": "Libros"
+	"bs-bookshelf-mainlinks-label": "Libros",
+	"bs-bookshelf-ga-editing-label": "Libros",
+	"bs-bookshelf-booknav-book-label": "Libro",
+	"bs-bookshelf-booknav-chapter-label": "Capítulo",
+	"bs-bookshelf-booknav-chapter-help": "Seleccione un capítulo para mostrar",
+	"bs-bookshelf-booknav-book-not-exist": "El libro $1 no existe",
+	"bs-bookshelf-booknav-chapter-not-exist": "El capítulo $1 no existe",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Buscar"
 }
