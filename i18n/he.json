@@ -9,7 +9,7 @@
 		]
 	},
 	"bs-bookshelf-extension-description": "אפשרות ש־BlueSpice ינהל אוספים הייררכיים של ערכים ולייצא אותם.",
-	"bs-bookshelf-tagerror-no-attribute-given": "לא סופק מאפיין! יש להשתמש ב־<strong>src</strong> כדי להגדיר את תוכן העניינים.",
+	"bs-bookshelf-tagerror-no-attribute-given": "לא סופקה תכונה! יש להשתמש ב־<strong>src</strong> כדי להגדיר את תוכן העניינים.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "מאמר המקור שסופק (&quot;$1&quot;) אינו קיים.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "מאמר המקור שסופק (&quot;$1&quot;) מכיל נתונים לא תקינים.",
 	"bs-bookshelf-positive-integer-validation-not-approved": "ניתן להשתמש רק במספרים שלמים חיוביים.",
@@ -73,7 +73,7 @@
 	"bs-bookshelf-ve-booklistinspector-title": "רשימת הספרים",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "מסנן",
 	"bs-bookshelf-ve-booklist-attr-filter-help": "סינון לפי מטא־נתונים בתסדיר key:value, למשל title:handbook",
-	"bs-bookshelf-tag-bookmeta-description": "תג לשמירת מטא־נתונים שונים במאמרי ספרים. אלה כלולים בספר. המאפיינים של התג הזה צריכים להיות מתואמים עם המטא־נתונים של מאמר הספר",
+	"bs-bookshelf-tag-bookmeta-description": "תג לשמירת מטא־נתונים שונים בדפי ספרים. אלה כלולים בספר. התכונות של התג הזה צריכות להיות מתואמות עם המטא־נתונים של דף הספר",
 	"bs-bookshelf-ve-bookmetainspector-title": "נתוני הספר",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "כותרת",
 	"bs-bookshelf-ve-bookmeta-attr-title-help": "הגדרת הכותרת של הספר",
