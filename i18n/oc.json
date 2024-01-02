@@ -20,5 +20,12 @@
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autor",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Version",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libre",
-	"bs-bookshelf-mainlinks-label": "Libres"
+	"bs-bookshelf-mainlinks-label": "Libres",
+	"bs-bookshelf-add-to-book-label": "Apondre a un libre",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtre",
+	"bs-bookshelf-booknav-book-label": "Libre",
+	"bs-bookshelf-booknav-book-help": "Selecionnar un libre d'utilizar",
+	"bs-bookshelf-booknav-chapter-label": "Capítol",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Cercar",
+	"bs-bookshelf-droplet-pdf-name": "Liame dau libre PDF"
 }
