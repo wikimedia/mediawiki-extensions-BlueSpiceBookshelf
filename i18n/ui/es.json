@@ -11,6 +11,7 @@
 			"Ihojose",
 			"Joanmp17",
 			"Nancystodd",
+			"Rodney Araujo",
 			"TehFrog",
 			"Whovian Biologist"
 		]
@@ -88,8 +89,8 @@
 	"bs-bookshelfui-bookmetatag-department": "Departamento",
 	"bs-bookshelfui-bookmetatag-version": "Versión",
 	"bs-bookshelfui-extjs-tooltip-copy": "Copiar",
-	"apihelp-bs-bookshelf-page-collection-store-summary": "Proporciona una colección de páginas que puede ser añadida en bloque a un libro.",
-	"apihelp-bs-bookshelf-mass-add-page-store-summary": "Proporciona páginas que pueden ser añadidas en bloque a un libro.",
+	"apihelp-bs-bookshelf-page-collection-store-summary": "Proporciona una colección de páginas en masa que puede ser añadida en bloque a un libro.",
+	"apihelp-bs-bookshelf-mass-add-page-store-summary": "Proporciona páginas que pueden ser añadidas en masa a un libro.",
 	"right-bookshelfbookmanager-viewspecialpage": "Acceso a la página especial [[Special:BookshelfBookManager]]",
 	"action-bookshelfbookmanager-viewspecialpage": "acceder a la página especial [[Special:BookshelfBookManager]]",
 	"right-bookshelfbookui-viewspecialpage": "Acceder a la página especial [[Special:BookshelfBookUI]]",
