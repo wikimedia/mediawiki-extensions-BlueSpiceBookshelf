@@ -107,5 +107,9 @@
 	"bs-bookshelf-booknav-chapter-help": "Seleccione un capítulo para mostrar",
 	"bs-bookshelf-booknav-book-not-exist": "El libro $1 no existe",
 	"bs-bookshelf-booknav-chapter-not-exist": "El capítulo $1 no existe",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Buscar"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Buscar",
+	"bs-bookshelf-droplet-pdf-description": "Enlace que descarga un libro como PDF",
+	"bs-bookshelf-droplet-pdf-book-label": "Libro para exportar",
+	"bs-bookshelf-droplet-pdf-template-label": "Plantilla de libro en PDF",
+	"bs-bookshelf-droplet-pdf-link-label": "Etiqueta del enlace"
 }
