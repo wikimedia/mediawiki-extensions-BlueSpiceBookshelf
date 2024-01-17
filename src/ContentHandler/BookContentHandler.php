@@ -61,8 +61,8 @@ class BookContentHandler extends TextContentHandler {
 			);
 
 		try {
-			$dbKey = $cpoParams->getPage()->getDBkey();
-			$title = Title::newFromDBkey( $dbKey );
+			$pageRef = $cpoParams->getPage();
+			$title = Title::castFromPageReference( $pageRef );
 			$bookEditData = BookEditData::newFromTitleAndRequest(
 				$title, new \WebRequest()
 			);
