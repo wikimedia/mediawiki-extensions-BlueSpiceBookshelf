@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Lhanars",
 			"Nicolas Eynaud"
 		]
 	},
@@ -26,5 +27,5 @@
 	"bs-bookshelf-booknav-book-help": "Selecionnar un libre d'utilizar",
 	"bs-bookshelf-booknav-chapter-label": "Capítol",
 	"bs-bookshelf-booknav-searchbox-placeholder": "Cercar",
-	"bs-bookshelf-droplet-pdf-name": "Liame dau libre PDF"
+	"bs-bookshelf-droplet-pdf-name": "Ligam del PDF"
 }
