@@ -27,7 +27,7 @@ class SessionProvider implements IBookContextProvider {
 	 * @return bool
 	 */
 	public function isResponsible(): bool {
-		if ( $this->sessionData !== '' ) {
+		if ( $this->sessionData !== null && $this->sessionData !== '' ) {
 			return true;
 		}
 		return false;
@@ -38,7 +38,7 @@ class SessionProvider implements IBookContextProvider {
 	 */
 	public function getActiveBook(): ?Title {
 		$book = $this->titleFactory->newFromText( $this->sessionData );
-		if ( $book->exists() ) {
+		if ( $book && $book->exists() ) {
 			return $book;
 		}
 		return null;
