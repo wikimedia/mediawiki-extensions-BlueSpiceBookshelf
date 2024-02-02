@@ -31,8 +31,7 @@ class QueryProvider implements IBookContextProvider {
 	 * @return bool
 	 */
 	public function isResponsible(): bool {
-		if ( $this->param !== '' ) {
-			$this->webRequest->setSessionData( 'book', $this->param );
+		if ( $this->param !== null && $this->param !== '' ) {
 			return true;
 		}
 		return false;
@@ -46,7 +45,7 @@ class QueryProvider implements IBookContextProvider {
 	 */
 	public function getActiveBook(): ?Title {
 		$book = $this->titleFactory->newFromText( $this->param );
-		if ( $book->exists() ) {
+		if ( $book && $book->exists() ) {
 			return $book;
 		}
 		return null;

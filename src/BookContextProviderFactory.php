@@ -30,8 +30,6 @@ class BookContextProviderFactory {
 	}
 
 	/**
-	 * Returns prefixed db key of book source page
-	 *
 	 * @param Title $title
 	 * @return IBookContextProvider
 	 */
@@ -40,14 +38,16 @@ class BookContextProviderFactory {
 		$books = $this->bookLookup->getBooksForPage( $title );
 		$specs = $this->getSpecs();
 
-		$responsibleProvider = $this->createProvider( $specs['query'], $books );
-		if ( $responsibleProvider !== null ) {
-			return $responsibleProvider;
-		}
+		if ( !$title->isSpecial( 'Userlogin' ) ) {
+			$responsibleProvider = $this->createProvider( $specs['query'], $books );
+			if ( $responsibleProvider !== null ) {
+				return $responsibleProvider;
+			}
 
-		$responsibleProvider = $this->createProvider( $specs['session'], $books );
-		if ( $responsibleProvider !== null ) {
-			return $responsibleProvider;
+			$responsibleProvider = $this->createProvider( $specs['session'], $books );
+			if ( $responsibleProvider !== null ) {
+				return $responsibleProvider;
+			}
 		}
 
 		// If no other provider is responsible use the default provider.
