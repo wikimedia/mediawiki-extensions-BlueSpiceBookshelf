@@ -2,9 +2,6 @@
 
 namespace BlueSpice\Bookshelf;
 
-use InvalidArgumentException;
-use PageHierarchyProvider;
-use stdClass;
 use Title;
 use TitleFactory;
 
@@ -16,8 +13,25 @@ class TreeDataProvider {
 	/** @var Title */
 	private $title;
 
-	/** @var PageHierarchyProvider */
-	private $phProvider = null;
+	/** @var BookContextProviderFactory */
+	private $bookContextProviderFactory = null;
+
+	/** @var BookLookup */
+	private $bookLookup = null;
+
+	/**
+	 * @param BookLookup $bookLookup
+	 * @param BookContextProviderFactory $bookContextProviderFactory
+	 * @param TitleFactory $titleFactory
+	 */
+	public function __construct(
+		BookLookup $bookLookup,
+		BookContextProviderFactory $bookContextProviderFactory, TitleFactory $titleFactory
+	) {
+		$this->bookLookup = $bookLookup;
+		$this->bookContextProviderFactory = $bookContextProviderFactory;
+		$this->titleFactory = $titleFactory;
+	}
 
 	/**
 	 * @param Title $title
@@ -26,50 +40,57 @@ class TreeDataProvider {
 	public function get( Title $title ): array {
 		$this->title = $title;
 
-		$phProvider = $this->getPageHierarchyProvider();
-		if ( $phProvider instanceof PageHierarchyProvider === false ) {
+		$books = $this->bookLookup->getBooksForPage( $title );
+		if ( empty( $books ) ) {
 			return [];
 		}
 
-		$extendedTOC = $phProvider->getExtendedTOCJSON();
+		$bookContextProvider = $this->bookContextProviderFactory->getProvider( $title );
+		$activeBook = $bookContextProvider->getActiveBook();
+		if ( !$activeBook ) {
+			return [];
+		}
+		$items = $this->bookLookup->getBookHierarchy( $activeBook );
 
 		$data = [];
-		foreach ( $extendedTOC->children as $item ) {
-			$this->processTocItem( $item, $data );
+		foreach ( $items as $item ) {
+			$this->processItem( $item, $data );
 		}
 
 		return $data;
 	}
 
 	/**
-	 * @param stdClass $item
+	 * @param array $item
 	 * @param array &$data
 	 * @param string $path
 	 * @return void
 	 */
-	private function processTocItem( stdClass $item, array &$data, $path = '' ): void {
-		$fullId = md5( $item->text );
-		$id = substr( $fullId, 0, 6 );
+	private function processItem( array $item, array &$data, $path = '' ): void {
+		$itemData = [];
 
+		$fullId = md5( $item['chapter_name'] );
+		$id = substr( $fullId, 0, 6 );
 		$path .= "/$id";
 
-		$itemData = [];
-		$this->titleFactory = new TitleFactory();
-		$title = $this->titleFactory->newFromText( $item->articleTitle );
+		$title = $this->titleFactory->makeTitle(
+			$item['chapter_namespace'],
+			$item['chapter_title']
+		);
 
-		if ( $item->articleType === 'plain-text' ) {
-			$itemData = $this->makeTextNode( $item, $title, $path );
+		if ( $this->getNodeType( $item ) === 'plain-text' ) {
+			$itemData = $this->makeTextNode( $item, $title, $id, $path );
 		}
-		if ( $item->articleType === 'wikilink-with-alias' ) {
-			$itemData = $this->makeLinkNode( $item, $title, $path );
+		if ( $this->getNodeType( $item ) === 'wikilink-with-alias' ) {
+			$itemData = $this->makeLinkNode( $item, $title, $id, $path );
 		}
-		if ( $item->articleType === 'wikilink' ) {
-			$itemData = $this->makeLinkNode( $item, $title, $path );
+		if ( $this->getNodeType( $item ) === 'wikilink' ) {
+			$itemData = $this->makeLinkNode( $item, $title, $id, $path );
 		}
 
-		if ( isset( $item->children ) && !empty( $item->children ) ) {
-			foreach ( $item->children as $children ) {
-				$this->processTocItem( $children, $itemData['items'], $path );
+		if ( isset( $item['chapter_children'] ) && !empty( $item['chapter_children'] ) ) {
+			foreach ( $item['chapter_children'] as $children ) {
+				$this->processItem( $children, $itemData['items'], $path );
 			}
 		}
 
@@ -79,24 +100,30 @@ class TreeDataProvider {
 	}
 
 	/**
-	 * @param stdClass $item
+	 * @param array $item
+	 * @return string
+	 */
+	private function getNodeType( array $item ): string {
+		return $item['chapter_type'];
+	}
+
+	/**
+	 * @param array $item
 	 * @param Title $title
+	 * @param string $id
 	 * @param string $path
 	 * @return array
 	 */
-	private function makeTextNode( stdClass $item, Title $title, $path ): array {
-		$fullId = md5( $item->text );
-		$id = substr( $fullId, 0, 6 );
-
+	private function makeTextNode( array $item, Title $title, string $id, string $path ): array {
 		$data = [
 			'id' => $id,
-			'name' => $item->text,
-			'text' => $item->text,
+			'name' => $item['chapter_name'],
+			'text' => $item['chapter_number'] . ' ' . $item['chapter_name'],
 			'path' => trim( $path, '/' ),
 			'items' => []
 		];
 
-		$classes = $this->getClasses( $title, [ $item->articleType ] );
+		$classes = $this->getClasses( $title, [ $item['chapter_type'] ] );
 
 		if ( !empty( $classes ) ) {
 			$data['classes'] = $classes;
@@ -106,14 +133,14 @@ class TreeDataProvider {
 	}
 
 	/**
-	 * @param stdClass $item
+	 * @param array $item
 	 * @param Title $title
+	 * @param string $id
 	 * @param string $path
 	 * @return array
 	 */
-	private function makeLinkNode( stdClass $item, Title $title, $path ): array {
-		$data = $this->makeTextNode( $item, $title, $path );
-		$data['name'] = $title->getPrefixedDBkey();
+	private function makeLinkNode( array $item, Title $title, $id, $path ): array {
+		$data = $this->makeTextNode( $item, $title, $id, $path );
 		$data['href'] = $title->getLocalURL();
 
 		return $data;
@@ -144,23 +171,4 @@ class TreeDataProvider {
 		return $classes;
 	}
 
-	/**
-	 * @return PageHierarchyProvider|null
-	 */
-	private function getPageHierarchyProvider(): ?PageHierarchyProvider {
-		if ( $this->phProvider instanceof PageHierarchyProvider ) {
-			return $this->phProvider;
-		}
-
-		try {
-			$this->phProvider = PageHierarchyProvider::getInstanceForArticle(
-				$this->title->getPrefixedText()
-			);
-			return $this->phProvider;
-		} catch ( InvalidArgumentException $ex ) {
-			return null;
-		}
-
-		return null;
-	}
 }

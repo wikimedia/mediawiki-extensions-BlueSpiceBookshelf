@@ -4,13 +4,10 @@
 -- See https://www.mediawiki.org/wiki/Manual:Schema_changes
 CREATE TABLE /*_*/bs_book_chapters (
   chapter_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-  chapter_book_namespace BLOB NOT NULL,
-  chapter_book_title BLOB NOT NULL,
-  chapter_page_namespace BLOB,
-  chapter_page_title BLOB,
-  chapter_title BLOB,
-  chapter_number BLOB NOT NULL,
-  chapter_type BLOB NOT NULL
+  chapter_book_id INTEGER UNSIGNED NOT NULL,
+  chapter_namespace BLOB DEFAULT NULL,
+  chapter_title BLOB DEFAULT NULL, chapter_name BLOB NOT NULL,
+  chapter_number BLOB NOT NULL, chapter_type BLOB NOT NULL
 );
 
 CREATE INDEX chapter_id_idx ON /*_*/bs_book_chapters (chapter_id);
