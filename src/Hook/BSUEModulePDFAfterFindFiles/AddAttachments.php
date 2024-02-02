@@ -59,12 +59,15 @@ class AddAttachments {
 
 			$sFileTitle = $oFileAnchorElement->getAttribute( 'data-bs-title' );
 			$oTitle = Title::newFromText( $sFileTitle );
+			if ( $oTitle && $oTitle->getNamespace() === NS_MEDIA ) {
+				$oTitle = Title::makeTitle( NS_FILE, $oTitle->getDBkey() );
+			}
 			if ( $oTitle === null ) {
 				// Fallback to less secure standard attribute
 				$sFileTitle = $oFileAnchorElement->getAttribute( 'title' );
 				$oTitle = Title::makeTitle( NS_FILE, $sFileTitle );
 			}
-			if ( $oTitle->isKnown() ) {
+			if ( $oTitle->exists() ) {
 				$oFile = $repoGroup->findFile( $oTitle );
 				$oBackend = $oFile->getRepo()->getBackend();
 				$oLocalFile = $oBackend->getLocalReference(
