@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kly",
-			"Lakejason0"
+			"Lakejason0",
+			"Winston Sung"
 		]
 	},
 	"bs-bookshelfui-extension-description": "啟動 BlueSpice 來管理 wiki 頁面收藏的層級集合。",
@@ -28,8 +29,8 @@
 	"bs-bookshelfui-manager-deletionsuccess-text": "書籍已刪除成功。",
 	"bs-bookshelfui-manager-deletionfailure-title": "刪除出現錯誤！",
 	"bs-bookshelfui-manager-deletionfailure-text": "當嘗試刪除書籍時發生以下錯誤：$1",
-	"bs-bookshelfui-dlg-choosewikipage-title": "Wiki 頁面",
-	"bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel": "Wiki 頁面",
+	"bs-bookshelfui-dlg-choosewikipage-title": "wiki 頁面",
+	"bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel": "wiki 頁面",
 	"bs-bookshelfui-dlg-choosewikipage-tfDisplayName": "顯示標題",
 	"bs-bookshelfui-ctxmnu-open": "在新視窗開啟 wiki 頁面",
 	"bs-bookshelfui-ctxmnu-edit": "編輯顯示標題",
