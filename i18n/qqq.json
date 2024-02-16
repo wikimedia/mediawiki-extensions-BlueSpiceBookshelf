@@ -111,5 +111,17 @@
 	"bs-bookshelf-droplet-pdf-description": "Description of droplet for template BookPDFLink",
 	"bs-bookshelf-droplet-pdf-book-label": "Label for title input to select book",
 	"bs-bookshelf-droplet-pdf-template-label": "Label for dropdown to select template",
-	"bs-bookshelf-droplet-pdf-link-label": "Label for text input field to insert label of link"
+	"bs-bookshelf-droplet-pdf-link-label": "Label for text input field to insert label of link",
+	"apihelp-bs-books-overview-store-summary": "{{doc-apihelp-summary|bs-books-overview-store}}",
+	"books": "Special page name for [[Special:Book]] special page.\n{{Identical|Bookshelf}}",
+	"bs-books-overview-page-loading-text": "Loading indicator text for special page [[Special:Book]]",
+	"bs-books-overview-page-bookshelf-various-books": "Default label for a bookshelf section on special page [[Special:Book]]. This message is used if no bookshelf is set.",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "Aria label for dropdown menu button with additional actions on special page [[Special:Book]].",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "Title for dropdown menu button with additional actions on special page [[Special:Book]].",
+	"bs-books-overview-page-book-anchor-title": "Title attribute of link opening the first page of the book. Used on special page [[Special:Book]].",
+	"bs-books-overview-page-book-anchor-aria-label": "Aria-label attribute of link opening the first page of the book. Used on special page [[Special:Book]].",
+	"bs-books-overview-page-book-action-edit-text": "Text for button witch triggers action edit for a page. Used on special page [[Special:Book]].",
+	"bs-books-overview-page-book-action-edit-title": "Title attribute for button witch triggers action edit for a page. Used on special page [[Special:Book]].",
+	"bs-books-overview-page-book-action-delete-text": "Text for button witch triggers action delete for a page. Used on special page [[Special:Book]].",
+	"bs-books-overview-page-book-action-delete-title": "Title attribute  for button witch triggers action delete for a page. Used on special page [[Special:Book]]."
 }

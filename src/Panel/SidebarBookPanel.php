@@ -7,7 +7,6 @@ use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use Html;
 use IContextSource;
-use InvalidArgumentException;
 use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\ComponentBase;
@@ -17,7 +16,6 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardFooter;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\ITabPanel;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
-use PageHierarchyProvider;
 use Title;
 use TitleFactory;
 
@@ -25,9 +23,6 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 
 	/** @var Title */
 	protected $title;
-
-	/** @var PageHierarchyProvider */
-	private $phProvider = null;
 
 	/** @var TitleFactory */
 	private $titleFactory = null;
@@ -127,6 +122,9 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 * @return IComponent[]
 	 */
 	public function getSubComponents(): array {
+		$bookContextProvider = $this->bookContextProviderFactory->getProvider( $this->title );
+		$activeBook = $bookContextProvider->getActiveBook();
+
 		$items = [];
 		$items[] = new SimpleCard( [
 			'id' => 'n-book-panel',
@@ -138,7 +136,7 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 					'items' => [
 						new Literal(
 							'n-book-panel-header-text',
-							'<h4>' . $this->getBookTitle() . '</h4>'
+							'<h4>' . $this->getBookTitle( $activeBook ) . '</h4>'
 						)
 					]
 				] ),
@@ -155,7 +153,7 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 						'items' => [
 							new Literal(
 								'n-book-panel-footer-text',
-								$this->getBookEditLink()
+								$this->getBookEditLink( $activeBook )
 							)
 						]
 				] )
@@ -199,75 +197,31 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	}
 
 	/**
-	 * @return PageHierarchyProvider|null
+	 * @param Title|null $activeBook
+	 * @return string
 	 */
-	private function getPageHierarchyProvider(): ?PageHierarchyProvider {
-		if ( $this->phProvider instanceof PageHierarchyProvider ) {
-			return $this->phProvider;
+	private function getBookTitle( $activeBook ): string {
+		if ( $activeBook instanceof Title ) {
+			return $activeBook->getText();
 		}
 
-		try {
-			$this->phProvider = PageHierarchyProvider::getInstanceForArticle(
-				$this->title->getPrefixedText()
-			);
-			// Check if the page is actually in the book before showing the book nav
-			if ( $this->phProvider->getEntryFor( $this->title->getPrefixedText() ) === null ) {
-				return null;
-			}
-			return $this->phProvider;
-		} catch ( InvalidArgumentException $ex ) {
-			return null;
-		}
-
-		return null;
+		return '';
 	}
 
 	/**
+	 * @param Title|null $activeBook
 	 * @return string
 	 */
-	private function getBookTitle(): string {
-		if ( $this->phProvider === null ) {
+	protected function getBookEditLink( $activeBook ): string {
+		if ( $activeBook instanceof Title === false ) {
 			return '';
 		}
-
-		$extendedToc = $this->phProvider->getExtendedTOCJSON();
-		$bookMeta = $this->phProvider->getBookMeta();
-
-		$bookTitle = $extendedToc->bookshelf->page_title;
-		if ( isset( $bookMeta['title'] ) ) {
-			$bookTitle = $bookMeta['title'];
-		}
-
-		return $bookTitle;
-	}
-
-	/**
-	 * @return string
-	 */
-	protected function getBookEditLink(): string {
-		$phProvider = $this->getPageHierarchyProvider();
-
-		if ( $phProvider instanceof PageHierarchyProvider === false ) {
-			return '';
-		}
-
-		// Check if the page is actually in the book before showing the book nav
-		if ( $phProvider->getEntryFor( $this->title->getPrefixedText() ) === null ) {
-			return '';
-		}
-
-		$extendedToc = $phProvider->getExtendedTOCJSON();
-
-		$bookEditorTitle = \Title::makeTitleSafe(
-			$extendedToc->bookshelf->page_namespace,
-			$extendedToc->bookshelf->page_title
-		);
 
 		$bookEditorLink = Html::openElement(
 			'a',
 			[
 				'id' => 'book-panel-edit-book',
-				'href' => $bookEditorTitle->getFullURL( [ 'action' => 'edit' ] ),
+				'href' => $activeBook->getFullURL( [ 'action' => 'edit' ] ),
 				'title' => wfMessage( 'bs-bookshelfui-book-title-link-edit' )->plain()
 			]
 		);

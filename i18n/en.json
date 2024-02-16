@@ -102,5 +102,17 @@
 	"bs-bookshelf-droplet-pdf-description": "Link that downloads a book as PDF",
 	"bs-bookshelf-droplet-pdf-book-label": "Book to export",
 	"bs-bookshelf-droplet-pdf-template-label": "Book PDF template",
-	"bs-bookshelf-droplet-pdf-link-label": "Link label"
+	"bs-bookshelf-droplet-pdf-link-label": "Link label",
+	"apihelp-bs-books-overview-store-summary": "Lists all books including bookshelf, first chapter link and actions.",
+	"books": "Books",
+	"bs-books-overview-page-loading-text": "Book overview is loading ...",
+	"bs-books-overview-page-bookshelf-various-books": "Various books",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "More actions for this book",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "More actions for this book",
+	"bs-books-overview-page-book-anchor-title": "Open first page of book $1",
+	"bs-books-overview-page-book-anchor-aria-label": "Open first page of book $1",
+	"bs-books-overview-page-book-action-edit-text": "Edit",
+	"bs-books-overview-page-book-action-edit-title": "Edit book $1",
+	"bs-books-overview-page-book-action-delete-text": "Delete",
+	"bs-books-overview-page-book-action-delete-title": "Delete book $1"
 }

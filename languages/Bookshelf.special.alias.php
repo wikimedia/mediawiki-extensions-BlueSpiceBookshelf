@@ -5,12 +5,14 @@ $specialPageAliases = [];
 $specialPageAliases['en'] = [
 	'BookshelfBookManager' => [ 'BookshelfBookManager', 'BookManager', 'BookManager' ],
 	'BookshelfBookEditor' => [ 'BookshelfBookUI', 'Book Editor' ],
-	'Bookshelf' => [ 'Bookshelf' ]
+	'Bookshelf' => [ 'Bookshelf' ],
+	'Books' => [ 'Books' ]
 ];
 
 /** German (Deutsch) */
 $specialPageAliases['de'] = [
 	'BookshelfBookManager' => [ 'Bücherverwaltung' ],
 	'BookshelfBookEditor' => [ 'Bucheditor' ],
-	'Bookshelf' => [ 'Bücherregal' ]
+	'Bookshelf' => [ 'Bücherregal' ],
+	'Books' => [ 'Bücher' ]
 ];
