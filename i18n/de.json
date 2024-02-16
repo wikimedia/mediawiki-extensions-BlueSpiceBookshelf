@@ -110,5 +110,16 @@
 	"bs-bookshelf-booknav-book-not-exist": "Buch $1 existiert nicht",
 	"bs-bookshelf-booknav-chapter-not-exist": "Kapitel $1 existiert nicht",
 	"bs-bookshelf-booknav-searchbox-placeholder": "Durchsuchen",
-	"bs-bookshelf-booknav-book-label": "Buch"
+	"bs-bookshelf-booknav-book-label": "Buch",
+	"books": "Bücher",
+	"bs-books-overview-page-loading-text": "Bücherübersicht läd gerade ...",
+	"bs-books-overview-page-bookshelf-various-books": "Verschiedene Bücher",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "Weitere Aktionen für dieses Buch",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "Weitere Aktionen für dieses Buch",
+	"bs-books-overview-page-book-anchor-title": "Die erste Seite des Buches $1 öffnen",
+	"bs-books-overview-page-book-anchor-aria-label": "Die erste Seite des Buches $1 öffnen",
+	"bs-books-overview-page-book-action-edit-text": "Bearbeiten",
+	"bs-books-overview-page-book-action-edit-title": "Buch $1 bearbeiten",
+	"bs-books-overview-page-book-action-delete-text": "Löschen",
+	"bs-books-overview-page-book-action-delete-title": "Buch $1 löschen"
 }
