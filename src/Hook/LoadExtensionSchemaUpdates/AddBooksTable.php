@@ -14,6 +14,12 @@ class AddBooksTable extends LoadExtensionSchemaUpdates {
 			'bs_books',
 			"$dir/maintenance/db/sql/$dbType/bs_books.sql"
 		);
+
+		$this->updater->addExtensionField(
+			'bs_books',
+			'book_name',
+			"$dir/maintenance/db/sql/$dbType/bs_books.patch.sql"
+		);
 	}
 
 	/**
