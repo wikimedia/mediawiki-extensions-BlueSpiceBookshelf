@@ -99,5 +99,7 @@
 	"bs-bookshelfui-panel-navigation-text": "לניווט בספר",
 	"bs-bookshelfui-panel-navigation-title": "חזרה לניווט בספר",
 	"bs-bookshelfui-panel-navigation-aria-label": "לניווט בספר",
-	"bs-bookshelfui-panel-navigation-aria-desc": "ניווט בספר כמבנה עץ"
+	"bs-bookshelfui-panel-navigation-aria-desc": "ניווט בספר כמבנה עץ",
+	"bs-bookshelfui-bookmetatag-bookshelf": "מדף ספרים",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "תמונת מדף ספרים"
 }

@@ -64,5 +64,6 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Мрежа",
 	"bs-bookshelfui-prof-defaultview-images": "Слике",
 	"bs-bookshelfui-chapterpager-previous": "Претходна",
-	"bs-bookshelfui-chapterpager-next": "Следећа"
+	"bs-bookshelfui-chapterpager-next": "Следећа",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Полица са књигама"
 }

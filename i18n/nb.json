@@ -87,5 +87,14 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Legg til kapittelnumre for boken i innholdsfortegnelse og alle overskrifter på siden",
 	"bs-bookshelf-droplet-name": "Bokliste",
 	"bs-bookshelf-droplet-description": "Liste over sider i boknavnerommet",
-	"apihelp-bs-book-chapters-store-summary": "Muligjør spørring av alle bøker og deres kapittelsider."
+	"apihelp-bs-book-chapters-store-summary": "Muligjør spørring av alle bøker og deres kapittelsider.",
+	"bs-books-overview-page-loading-text": "Bokoversikt laster …",
+	"bs-books-overview-page-bookshelf-various-books": "Diverse bøker",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "Flere handlinger for denne boka",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "Flere handlinger for denne boka",
+	"bs-books-overview-page-book-anchor-aria-label": "Åpne første side av boka $1",
+	"bs-books-overview-page-book-action-edit-text": "Rediger",
+	"bs-books-overview-page-book-action-edit-title": "Rediger boka $1",
+	"bs-books-overview-page-book-action-delete-text": "Slett",
+	"bs-books-overview-page-book-action-delete-title": "Slett boka $1"
 }
