@@ -110,5 +110,17 @@
 	"bs-bookshelf-droplet-pdf-book-label": "איזה ספר לייצא",
 	"bs-bookshelf-droplet-pdf-template-label": "תבנית PDF של ספר",
 	"bs-bookshelf-droplet-pdf-link-label": "תווית הקישור",
-	"bs-bookshelf-booknav-searchbox-placeholder": "חיפוש"
+	"bs-bookshelf-booknav-searchbox-placeholder": "חיפוש",
+	"apihelp-bs-books-overview-store-summary": "מציגה את כל הספרים כולל מדף הספרים, קישור לפרק הראשון ופעולות.",
+	"books": "ספרים",
+	"bs-books-overview-page-loading-text": "סקירת הספר בטעינה...",
+	"bs-books-overview-page-bookshelf-various-books": "מגוון ספרים",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "פעולות נוספות לספר הזה",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "פעולות נוספות לספר הזה",
+	"bs-books-overview-page-book-anchor-title": "פתיחת העמוד הראשון של הספר $1",
+	"bs-books-overview-page-book-anchor-aria-label": "פתיחת העמוד הראשון של הספר $1",
+	"bs-books-overview-page-book-action-edit-text": "עריכה",
+	"bs-books-overview-page-book-action-edit-title": "עריכת הספר $1",
+	"bs-books-overview-page-book-action-delete-text": "מחיקה",
+	"bs-books-overview-page-book-action-delete-title": "מחיקת הספר $1"
 }
