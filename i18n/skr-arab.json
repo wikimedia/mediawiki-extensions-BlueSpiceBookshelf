@@ -15,5 +15,8 @@
 	"bs-bookshelf-ga-editing-label": "کتاباں",
 	"bs-bookshelf-booknav-book-label": "کتاب",
 	"bs-bookshelf-booknav-chapter-label": "باب",
-	"bs-bookshelf-booknav-searchbox-placeholder": "ڳولو"
+	"bs-bookshelf-booknav-searchbox-placeholder": "ڳولو",
+	"books": "کتاباں",
+	"bs-books-overview-page-book-action-edit-text": "لکھو",
+	"bs-books-overview-page-book-action-delete-text": "مٹاؤ"
 }

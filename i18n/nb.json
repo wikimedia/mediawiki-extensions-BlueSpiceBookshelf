@@ -93,5 +93,14 @@
 	"bs-bookshelf-tag-bookshelf-box-desc": "Setter inn kapittelnavigering for en bok på en side som ikke er del av en bok. Nummerering skjer automatisk i henhold til innholdfortegnelsen",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "Legg til kapittelnumre for boken i innholdsfortegnelse og alle overskrifter på siden",
 	"apihelp-bs-book-chapters-store-summary": "Muligjør spørring av alle bøker og deres kapittelsider.",
-	"bs-bookshelf-mainlinks-label": "Bøker"
+	"bs-bookshelf-mainlinks-label": "Bøker",
+	"bs-books-overview-page-loading-text": "Bokoversikt laster …",
+	"bs-books-overview-page-bookshelf-various-books": "Diverse bøker",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "Flere handlinger for denne boka",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "Flere handlinger for denne boka",
+	"bs-books-overview-page-book-anchor-aria-label": "Åpne første side av boka $1",
+	"bs-books-overview-page-book-action-edit-text": "Rediger",
+	"bs-books-overview-page-book-action-edit-title": "Rediger boka $1",
+	"bs-books-overview-page-book-action-delete-text": "Slett",
+	"bs-books-overview-page-book-action-delete-title": "Slett boka $1"
 }

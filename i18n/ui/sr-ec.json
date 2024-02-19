@@ -64,5 +64,6 @@
 	"bs-bookshelfui-bookmetatag-docummentidentifier": "ID документа",
 	"bs-bookshelfui-bookmetatag-docummenttype": "Врста документа",
 	"bs-bookshelfui-prof-defaultview": "Подразумевани приказ",
-	"bs-bookshelfui-prof-defaultview-images": "Слике"
+	"bs-bookshelfui-prof-defaultview-images": "Слике",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Полица са књигама"
 }

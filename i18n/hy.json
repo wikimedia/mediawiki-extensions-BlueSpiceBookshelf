@@ -19,5 +19,11 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Գիրք",
 	"bs-bookshelf-mainlinks-label": "Գրքեր",
 	"bs-bookshelf-ga-editing-label": "Գրքեր",
-	"bs-bookshelf-booknav-book-label": "Գիրք"
+	"bs-bookshelf-booknav-book-label": "Գիրք",
+	"books": "Գրքեր",
+	"bs-books-overview-page-bookshelf-various-books": "Տարբեր գրքեր",
+	"bs-books-overview-page-book-action-edit-text": "Խմբագրել",
+	"bs-books-overview-page-book-action-edit-title": "Խմբագրել $1 գիրքը",
+	"bs-books-overview-page-book-action-delete-text": "Ջնջել",
+	"bs-books-overview-page-book-action-delete-title": "Ջնջել $1 գիրքը"
 }

@@ -56,5 +56,10 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Полица са књигама",
 	"bs-bookshelf-droplet-name": "Списак књига",
 	"bs-bookshelf-droplet-description": "Списак страница у именском простору Књига",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Претрага"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Претрага",
+	"books": "Књиге",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "Више радњи за ову књигу",
+	"bs-books-overview-page-book-action-edit-text": "Уреди",
+	"bs-books-overview-page-book-action-edit-title": "Уреди књигу $1",
+	"bs-books-overview-page-book-action-delete-text": "Обриши"
 }
