@@ -26,23 +26,25 @@ class ClientConfig {
 
 		$availableTemplates = [];
 		$dir = opendir( $defaultTemplatePath );
-		$subDir = readdir( $dir );
-		while ( $subDir !== false ) {
-			if ( in_array( $subDir, [ '.', '..', 'common' ] ) ) {
-				$subDir = readdir( $dir );
-				continue;
-			}
-
-			if ( !is_dir( "{$defaultTemplatePath}/{$subDir}" ) ) {
-				$subDir = readdir( $dir );
-				continue;
-			}
-
-			if ( file_exists( "{$defaultTemplatePath}/{$subDir}/template.php" ) ) {
-				$availableTemplates[] = $subDir;
-			}
-
+		if ( $dir ) {
 			$subDir = readdir( $dir );
+			while ( $subDir !== false ) {
+				if ( in_array( $subDir, [ '.', '..', 'common' ] ) ) {
+					$subDir = readdir( $dir );
+					continue;
+				}
+
+				if ( !is_dir( "{$defaultTemplatePath}/{$subDir}" ) ) {
+					$subDir = readdir( $dir );
+					continue;
+				}
+
+				if ( file_exists( "{$defaultTemplatePath}/{$subDir}/template.php" ) ) {
+					$availableTemplates[] = $subDir;
+				}
+
+				$subDir = readdir( $dir );
+			}
 		}
 
 		if ( empty( $availableTemplates ) ) {
