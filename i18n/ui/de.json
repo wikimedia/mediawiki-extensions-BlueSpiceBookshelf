@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Brettchenweber",
 			"Hikemaniac",
 			"Mglaser",
 			"Mschlindwein",
@@ -101,5 +102,5 @@
 	"bs-bookshelfui-panel-navigation-aria-label": "Zur Buchnavigation",
 	"bs-bookshelfui-panel-navigation-aria-desc": "Buchnavigation als Baumstruktur",
 	"bs-bookshelfui-bookmetatag-bookshelf": "Bücherregal",
-	"bs-bookshelfui-bookmetatag-bookshelfimage": "Bücherregal Bild"
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "Bücherregal-Bild"
 }
