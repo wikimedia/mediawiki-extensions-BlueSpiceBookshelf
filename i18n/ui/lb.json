@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"bookshelfbookmanager": "Bichermanager",
@@ -35,5 +36,6 @@
 	"bs-bookshelfui-extjs-tooltip-copy": "Kopéieren",
 	"bs-bookshelfui-prof-defaultview-images": "Biller",
 	"bs-bookshelfui-chapterpager-previous": "Vireg",
-	"bs-bookshelfui-chapterpager-next": "Nächst"
+	"bs-bookshelfui-chapterpager-next": "Nächst",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Bicherregal"
 }
