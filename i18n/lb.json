@@ -47,5 +47,13 @@
 	"bs-bookshelf-booknav-book-not-exist": "D'Buch $1 gëtt et net",
 	"bs-bookshelf-booknav-searchbox-placeholder": "Sichen",
 	"bs-bookshelf-droplet-pdf-name": "Buch-PDF-Link",
-	"bs-bookshelf-droplet-pdf-book-label": "Buch fir z'exportéieren"
+	"bs-bookshelf-droplet-pdf-book-label": "Buch fir z'exportéieren",
+	"books": "Bicher",
+	"bs-books-overview-page-bookshelf-various-books": "Verschidde Bicher",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "Méi Aktioune fir dëst Buch",
+	"bs-books-overview-page-book-anchor-aria-label": "Déi éischt Säit vum Buch $1 opmaachen",
+	"bs-books-overview-page-book-action-edit-text": "Änneren",
+	"bs-books-overview-page-book-action-edit-title": "Buch $1 änneren",
+	"bs-books-overview-page-book-action-delete-text": "Läschen",
+	"bs-books-overview-page-book-action-delete-title": "Buch $1 läschen"
 }
