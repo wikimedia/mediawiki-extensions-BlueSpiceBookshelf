@@ -35,11 +35,7 @@ class BookshelfImage extends ArticlePreviewImage {
 		}
 
 		if ( empty( $coverpage ) ) {
-			return new ImageExternal(
-				$this,
-				$this->buildFallbackURL(),
-				$this->getContext()->getUser()
-			);
+			return new StaticCoverImage( $this );
 		}
 
 		$parsedUrl = wfParseUrl( $coverpage );
