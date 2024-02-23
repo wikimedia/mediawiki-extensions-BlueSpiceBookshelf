@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Eitvys200",
+			"Homo",
 			"Nokeoo"
 		]
 	},
 	"bs-bookshelfui-extension-description": "Įgalina BlueSpice valdyti viki puslapių hierarchinens kolekcijas.",
 	"bookshelfbookui": "Knygų redaktorius",
-	"bookshelfbookmanager": "Knygų tvarkytojas",
+	"bookshelfbookmanager": "Knygų tvarkyklė",
 	"bs-bookshelfui-editor-no-title-provided": "Nepateiktas galimas knygos pavadinimas",
 	"bs-bookshelfui-editor-title": "Knygos redaktorius: $1",
 	"bs-bookshelfui-widget-editor-link-text": "Redaguoti šią knygą",
