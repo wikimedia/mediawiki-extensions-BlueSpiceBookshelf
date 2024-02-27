@@ -116,5 +116,7 @@
 	"bs-bookshelf-booknav-title": "目次を非表示にする",
 	"bs-bookshelf-booknav-desc": "本のすべての章または選択した章のリスト",
 	"bs-bookshelf-booknav-book-label": "書籍",
-	"bs-bookshelf-booknav-book-help": "使用する本を選択してください"
+	"bs-bookshelf-booknav-book-help": "使用する本を選択してください",
+	"bs-books-overview-page-book-action-edit-text": "編集",
+	"bs-books-overview-page-book-action-delete-text": "削除"
 }
