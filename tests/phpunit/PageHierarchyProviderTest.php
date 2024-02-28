@@ -53,25 +53,25 @@ class PageHierarchyProviderTest extends MediaWikiIntegrationTestCase {
 			$oTree->articleTitle
 		);
 
-		$this->assertObjectHasAttribute( 'children', $oTree );
+		$this->assertObjectHasProperty( 'children', $oTree );
 		$this->assertCount( 3, $oTree->children );
 
 		$oChapterTwo = $oTree->children[1];
-		$this->assertObjectHasAttribute( 'children', $oChapterTwo );
+		$this->assertObjectHasProperty( 'children', $oChapterTwo );
 		$this->assertCount( 4, $oChapterTwo->children );
 
 		$this->recursiveCheckTreeNode( $oTree );
 	}
 
 	public function recursiveCheckTreeNode( $oTreeNode ) {
-		$this->assertObjectHasAttribute( 'text', $oTreeNode );
-		# $this->assertObjectHasAttribute( 'bookshelf', $oTreeNode );
+		$this->assertObjectHasProperty( 'text', $oTreeNode );
+		# $this->assertObjectHasProperty( 'bookshelf', $oTreeNode );
 
-		$this->assertObjectHasAttribute( 'articleId', $oTreeNode );
-		$this->assertObjectHasAttribute( 'articleTitle', $oTreeNode );
-		$this->assertObjectHasAttribute( 'articleDisplayTitle', $oTreeNode );
+		$this->assertObjectHasProperty( 'articleId', $oTreeNode );
+		$this->assertObjectHasProperty( 'articleTitle', $oTreeNode );
+		$this->assertObjectHasProperty( 'articleDisplayTitle', $oTreeNode );
 
-		$this->assertObjectHasAttribute( 'children', $oTreeNode );
+		$this->assertObjectHasProperty( 'children', $oTreeNode );
 		$this->assertIsArray( $oTreeNode->children );
 
 		foreach ( $oTreeNode->children as $oChildNode ) {
