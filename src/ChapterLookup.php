@@ -72,24 +72,18 @@ class ChapterLookup {
 	}
 
 	/**
-	 * @param Title $page
 	 * @param Title $book
-	 * @return array
+	 * @param Title $title
+	 * @return ChapterInfo@null
 	 */
-	private function getChapterInfoFor( Title $page, Title $book ): array {
-		$chapterInfo = [];
-
+	public function getChapterInfoFor( Title $book, Title $title ): ?ChapterInfo {
 		$db = $this->loadBalancer->getConnection( DB_REPLICA );
 		$res = $db->select(
 			'bs_books',
 			'book_id',
 			[
-				'book_namespace' => $page->getNamespace(),
-				'book_title' => $page->getDBKey(),
-			],
-			__METHOD__,
-			[
-				 'ORDER BY' => 'chapter_number'
+				'book_namespace' => $book->getNamespace(),
+				'book_title' => $book->getDBKey(),
 			]
 		);
 
@@ -104,25 +98,80 @@ class ChapterLookup {
 
 		$results = $db->select(
 			'bs_book_chapters',
-			'chapter_number',
+			[ 'chapter_name', 'chapter_number', 'chapter_type' ],
 			[
 				'chapter_book_id' => $bookID,
-				'chapter_namespace' => $page->getNamespace(),
-				'chapter_title' => $page->getDBKey(),
+				'chapter_namespace' => $title->getNamespace(),
+				'chapter_title' => $title->getDBKey(),
 			],
 			__METHOD__,
 			[
-				 'ORDER BY' => 'chapter_number'
+				'ORDER BY' => 'chapter_number'
 			]
 		);
 
+		$chapterInfo = null;
 		foreach ( $results as $result ) {
-			$chapterInfo = [
-				'chapter_name' => $result->chapter_number,
-				'chapter_number' => $result->chapter_number
-			];
+			$chapterInfo = new ChapterInfo(
+				$result->chapter_name,
+				$result->chapter_number,
+				$result->chapter_type
+			);
 		}
 
 		return $chapterInfo;
+	}
+
+	/**
+	 * @param Title $book
+	 * @param ChapterInfo $chapterInfo
+	 * @return ChapterInfo[]
+	 */
+	public function getChildren( Title $book, ChapterInfo $chapterInfo ): array {
+		$db = $this->loadBalancer->getConnection( DB_REPLICA );
+		$res = $db->select(
+			'bs_books',
+			'book_id',
+			[
+				'book_namespace' => $book->getNamespace(),
+				'book_title' => $book->getDBKey(),
+			]
+		);
+
+		$bookID = null;
+		foreach ( $res as $row ) {
+			$bookID = $row->book_id;
+		}
+
+		if ( $bookID === null ) {
+			return [];
+		}
+
+		$results = $db->select(
+			'bs_book_chapters',
+			'*',
+			[
+				'chapter_book_id=' . $bookID,
+				'chapter_number like "' . $chapterInfo->getNumber() . '%"',
+				'NOT chapter_number="' . $chapterInfo->getNumber() . '"',
+			],
+			__METHOD__,
+			[
+				'ORDER BY' => 'chapter_number'
+			]
+		);
+
+		$children = [];
+		foreach ( $results as $result ) {
+			$children[] = new ChapterDataModel(
+				$result->chapter_namespace,
+				$result->chapter_title,
+				$result->chapter_name,
+				$result->chapter_number,
+				$result->chapter_type
+			);
+		}
+
+		return $children;
 	}
 }

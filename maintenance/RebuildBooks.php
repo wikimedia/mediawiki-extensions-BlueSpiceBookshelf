@@ -178,7 +178,7 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 				[
 					'book_namespace' => $book->getNamespace(),
 					'book_title' => $book->getDBkey(),
-					'book_name' => $book->getDBkey(),
+					'book_name' => $book->getText(),
 					'book_type' => $type
 				]
 			);

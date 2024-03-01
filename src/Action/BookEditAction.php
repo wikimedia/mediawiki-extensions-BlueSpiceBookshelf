@@ -4,6 +4,7 @@ namespace BlueSpice\Bookshelf\Action;
 
 use BlueSpice\Bookshelf\BookEditData;
 use EditAction;
+use Html;
 use Message;
 use Title;
 
@@ -47,11 +48,13 @@ class BookEditAction extends EditAction {
 		$data = $bookEditData->getBookData();
 		$out->addJsConfigVars( 'bsBookshelfData', $data );
 
-		$out->addModules( [
-			'ext.bluespice.bookshelf.styles',
-			'ext.bluespice.bookshelf.editor'
-		] );
-
-		$out->addHTML( \Html::element( 'div', [ 'id' => 'bs-bookshelf-editorpanel' ] ) );
+		$out->addModules( "ext.bluespice.bookshelf.book-editor" );
+		$out->addHTML(
+			Html::element( 'div', [
+				'id' => 'bs-bookshelf-book-editor-container',
+				'style' => '',
+				'class' => ''
+			] )
+		);
 	}
 }

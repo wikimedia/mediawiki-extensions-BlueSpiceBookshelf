@@ -123,5 +123,14 @@
 	"bs-books-overview-page-book-action-edit-text": "Text for button witch triggers action edit for a page. Used on special page [[Special:Book]].",
 	"bs-books-overview-page-book-action-edit-title": "Title attribute for button witch triggers action edit for a page. Used on special page [[Special:Book]].",
 	"bs-books-overview-page-book-action-delete-text": "Text for button witch triggers action delete for a page. Used on special page [[Special:Book]].",
-	"bs-books-overview-page-book-action-delete-title": "Title attribute  for button witch triggers action delete for a page. Used on special page [[Special:Book]]."
+	"bs-books-overview-page-book-action-delete-title": "Title attribute  for button witch triggers action delete for a page. Used on special page [[Special:Book]].",
+	"bs-bookshelf-chapter-plain-text-label": "Label for input select field",
+	"bs-bookshelf-chapter-plain-text-label-edit": "Label for a section in a form dialog",
+	"bs-bookshelf-chapter-plain-text-input-label": "Label for form input",
+	"bs-bookshelf-chapter-wikilink-with-alias-label": "Label for input select field",
+	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "Label for a section in a form dialog",
+	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Label for form input",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Label for form input",
+	"bs-bookshelf-toolbar-tool-metadata-title": "Title for button in toolbar to edit book metadata",
+	"bs-bookshelf-toolbar-tool-metadata-label": "Label for button in toolbar to edit book metadata"
 }

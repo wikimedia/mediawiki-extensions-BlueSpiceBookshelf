@@ -113,6 +113,33 @@
 					"extensions/BlueSpiceBookshelf/data/Content/ContentDropletsTemplates/manifest.json"
 				]
 			}
+		},
+		"MenuEditor": {
+			"Menus": {
+				"bookeditor": {
+					"class": "BlueSpice\\Bookshelf\\MenuEditor\\BookEditor",
+					"services": [ "MWStakeWikitextParserFactory", "TitleFactory" ]
+				}
+			},
+			"Nodes": {
+				"bs-bookshelf-chapter-wikilink-with-alias": {
+					"classname": "ext.bookshelf.ui.data.node.WikiLinkWithAliasNode",
+					"module": "bluespice.bookshelf.menuEditor.node"
+				},
+				"bs-bookshelf-chapter-plain-text": {
+					"classname": "ext.bookshelf.ui.data.node.PlainTextNode",
+					"module": "bluespice.bookshelf.menuEditor.node"
+				}
+			},
+			"ToolbarTools": {
+				"metadata": {
+					"classname": "ext.bookshelf.ui.tools.MetadataTool",
+					"group": {
+						"name": "new"
+					},
+					"module": "ext.bookshelf.menuEditor.tools"
+				}
+			}
 		}
 	},
 	"GroupPermissions": {
@@ -518,6 +545,48 @@
 			"styles": {
 				"bluespice.special.books.css": {}
 			}
+		},
+		"bluespice.bookshelf.menueditor.book": {
+			"scripts": [
+				"ui/data/tree/BookEditorTree.js"
+			],
+			"dependencies": [
+				"ext.oOJSPlus.data",
+				"ext.menuEditor.tree",
+				"ext.menuEditor.node",
+				"oojs-ui.styles.icons-editing-list",
+				"ext.oOJSPlus.formelements",
+				"ext.bluespice"
+			]
+		},
+		"bluespice.bookshelf.menuEditor.node": {
+			"scripts": [
+				"ui/data/node/PlainTextNode.js",
+				"ui/data/node/WikiLinkWithAliasNode.js"
+			],
+			"dependencies": [
+				"ext.menuEditor.tree",
+				"oojs-ui.styles.icons-editing-styling",
+				"oojs-ui.styles.icons-editing-advanced"
+			],
+			"messages": [
+				"bs-bookshelf-chapter-plain-text-label",
+				"bs-bookshelf-chapter-plain-text-label-edit",
+				"bs-bookshelf-chapter-plain-text-input-label",
+				"bs-bookshelf-chapter-wikilink-with-alias-label",
+				"bs-bookshelf-chapter-wikilink-with-alias-label-edit",
+				"bs-bookshelf-chapter-wikilink-with-alias-target-input-label",
+				"bs-bookshelf-chapter-wikilink-with-alias-text-input-label"
+			]
+		},
+		"ext.bookshelf.menuEditor.tools": {
+			"scripts": [
+				"ui/tools/MetadataTool.js"
+			],
+			"messages": [
+				"bs-bookshelf-toolbar-tool-metadata-title",
+				"bs-bookshelf-toolbar-tool-metadata-label"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -589,11 +658,14 @@
 		},
 		"add-chapter-number-to-title-and-headings": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\AddChapterNumberToTitleAndHeadings",
-			"services": [ "ConfigFactory" ]
+			"services": [ "ConfigFactory", "BSBookshelfBookContextProviderFactory", "BSBookshelfChapterLookup" ]
 		},
 		"book-source-update": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookPageSaveComplete",
 			"services": [ "TitleFactory", "MWStakeWikitextParserFactory", "DBLoadBalancer", "BSBookshelfBookLookup" ]
+		},
+		"book-content-default-mode": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SetBookContentHandler"
 		}
 	},
 	"Hooks": {
@@ -601,7 +673,8 @@
 			"\\BlueSpice\\Bookshelf\\Hook\\BeforePageDisplay\\AddResources::callback",
 			"add-chapter-number-to-title-and-headings"
 		],
-		"ContentHandlerDefaultModelFor": "BlueSpice\\Bookshelf\\Hook\\ContentHandlerDefaultModelFor\\GetBookContentHandler::callback",
+		"ContentHandlerDefaultModelFor": "book-content-default-mode",
+		"MediaWikiServices": "book-content-default-mode",
 		"LoadExtensionSchemaUpdates": [
 			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddConvertContentModel::callback",
 			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBooksTable::callback",

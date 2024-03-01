@@ -2,13 +2,16 @@
 
 namespace BlueSpice\Bookshelf;
 
+use BlueSpice\Bookshelf\Content\BookContent;
+use BlueSpice\Bookshelf\MenuEditor\Node\ChapterPlainText;
+use BlueSpice\Bookshelf\MenuEditor\Node\ChapterWikiLinkWithAlias;
+use Content;
 use MediaWiki\Extension\MenuEditor\IMenuNodeProcessor;
-use MediaWiki\Extension\MenuEditor\Node\RawText;
-use MediaWiki\Extension\MenuEditor\Node\WikiLink;
+use MediaWiki\Extension\MenuEditor\Node\MenuNode;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Revision\SlotRecord;
 use MWStake\MediaWiki\Lib\Nodes\INodeProcessor;
-use MWStake\MediaWiki\Lib\Nodes\MutableNode;
 use TitleFactory;
 
 class BookSourceParser extends WikitextMenuParser {
@@ -24,7 +27,6 @@ class BookSourceParser extends WikitextMenuParser {
 	public function __construct( RevisionRecord $revision, array $nodeProcessors, TitleFactory $titleFactory ) {
 		$filteredNodesProcessors = $this->filterNodeProcessors( $nodeProcessors );
 		$this->titleFactory = $titleFactory;
-
 		parent::__construct( $revision, $filteredNodesProcessors );
 	}
 
@@ -43,10 +45,10 @@ class BookSourceParser extends WikitextMenuParser {
 	 * @return array
 	 */
 	private function getSupportedNodeProcessors( array $nodeProcessors ): array {
-		$supportedNames = [ 'menu-raw-text', 'menu-wiki-link' ];
+		$supportedNames = [ 'bs-bookshelf-chapter-plain-text', 'bs-bookshelf-chapter-wikilink-with-alias' ];
 		$supportedNodeProcessors = [];
 
-		foreach ( $supportedNames as $key => $name ) {
+		foreach ( $supportedNames as $name ) {
 			if ( isset( $nodeProcessors[$name] ) ) {
 				$supportedNodeProcessors[$name] = $nodeProcessors[$name];
 			}
@@ -72,11 +74,10 @@ class BookSourceParser extends WikitextMenuParser {
 		$number = [];
 		$chapters = [];
 		foreach ( $nodes as $node ) {
-			if ( $node instanceof MutableNode === false ) {
+			if ( $node instanceof MenuNode === false ) {
 				continue;
 			}
-
-			if ( $node instanceof RawText ) {
+			if ( $node instanceof ChapterPlainText ) {
 				$chapters[] = new ChapterDataModel(
 					null,
 					null,
@@ -84,7 +85,7 @@ class BookSourceParser extends WikitextMenuParser {
 					$this->buildChapterNumber( $node->getLevel(), $lastLevel, $number ),
 					ChapterDataModel::PLAIN_TEXT
 				);
-			} elseif ( $node instanceof WikiLink ) {
+			} elseif ( $node instanceof ChapterWikiLinkWithAlias ) {
 				$target = $this->titleFactory->newFromText( $node->getTarget() );
 
 				$name = $node->getLabel();
@@ -134,4 +135,10 @@ class BookSourceParser extends WikitextMenuParser {
 		return implode( '.', $number );
 	}
 
+	/**
+	 * @return Content
+	 */
+	public function getContent(): Content {
+		return new BookContent( $this->revision->getContent( SlotRecord::MAIN )->getText() );
+	}
 }

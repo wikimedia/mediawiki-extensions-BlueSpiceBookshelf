@@ -2,6 +2,8 @@
 
 namespace BlueSpice\Bookshelf;
 
+use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterPlainTextProcessor;
+use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterWikiLinkWithAliasProcessor;
 use MWDebug;
 
 /**
@@ -44,6 +46,18 @@ class Extension extends \BlueSpice\Extension {
 		// force enable user namespace subpages, cause we need to save books in these
 		$GLOBALS['wgNamespacesWithSubpages'][NS_USER] = true;
 		static::checkLegacy();
+
+		mwsInitComponents();
+		$GLOBALS['mwsgWikitextNodeProcessorRegistry'] += [
+			'bs-bookshelf-chapter-plain-text' => [
+				'class' => ChapterPlainTextProcessor::class,
+				'services' => [ 'TitleFactory' ]
+			],
+			'bs-bookshelf-chapter-wikilink-with-alias' => [
+				'class' => ChapterWikiLinkWithAliasProcessor::class,
+				'services' => [ 'TitleFactory' ]
+			]
+		];
 	}
 
 	/**

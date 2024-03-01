@@ -15,6 +15,7 @@ use TextContentHandler;
 use Title;
 
 class BookContentHandler extends TextContentHandler {
+
 	/**
 	 * @param string $modelId
 	 */
