@@ -112,5 +112,14 @@
 	"bs-books-overview-page-book-action-edit-text": "Edit",
 	"bs-books-overview-page-book-action-edit-title": "Edit book $1",
 	"bs-books-overview-page-book-action-delete-text": "Delete",
-	"bs-books-overview-page-book-action-delete-title": "Delete book $1"
+	"bs-books-overview-page-book-action-delete-title": "Delete book $1",
+	"bs-bookshelf-chapter-plain-text-label": "Text chapter heading",
+	"bs-bookshelf-chapter-plain-text-label-edit": "Add a new chapter heading",
+	"bs-bookshelf-chapter-plain-text-input-label": "Text",
+	"bs-bookshelf-chapter-wikilink-with-alias-label": "Wiki page chapter",
+	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "Add a new wiki page chapter",
+	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Target",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Text",
+	"bs-bookshelf-toolbar-tool-metadata-title": "Edit metadata",
+	"bs-bookshelf-toolbar-tool-metadata-label": "Edit metadata"
 }

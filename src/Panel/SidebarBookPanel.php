@@ -124,7 +124,23 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 		$bookContextProvider = $this->bookContextProviderFactory->getProvider( $this->title );
 		$activeBook = $bookContextProvider->getActiveBook();
 
+		if ( $activeBook instanceof Title === false ) {
+			return [];
+		}
+
 		$items = [];
+		$items[] = new BookSelectWidget( [
+				'id' => 'book-nav-pri-book-selector',
+				'container-classes' => [],
+				'button-classes' => [],
+				'menu-classes' => []
+			],
+			$activeBook,
+			$this->title,
+			$this->bookLookup,
+			$this->titleFactory
+		);
+
 		$items[] = new SimpleCard( [
 			'id' => 'n-book-panel',
 			'classes' => [ 'w-100', 'bg-transp' ],

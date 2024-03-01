@@ -3,6 +3,8 @@
 namespace BlueSpice\Bookshelf\ContextProvider;
 
 use BlueSpice\Bookshelf\IBookContextProvider;
+use MediaWiki\Session\Session;
+use MediaWiki\Session\SessionManager;
 use Title;
 use TitleFactory;
 use WebRequest;
@@ -10,44 +12,51 @@ use WebRequest;
 class QueryProvider implements IBookContextProvider {
 
 	/** @var TitleFactory */
-	private $titleFactory = null;
+	protected $titleFactory = null;
+
+	/** @var Session */
+	protected $session = null;
 
 	/** @var WebRequest */
-	private $webRequest = null;
+	private $request = null;
 
-	/** @var string|false */
-	private $param = false;
+	/** @var string */
+	protected $param = '';
 
 	/**
 	 * @param TitleFactory $titleFactory
 	 */
 	public function __construct( TitleFactory $titleFactory ) {
 		$this->titleFactory = $titleFactory;
-		$this->webRequest = new WebRequest();
-		$this->param = $this->webRequest->getText( 'book', '' );
+		$this->session = SessionManager::getGlobalSession();
+		$this->request = $this->session->getRequest();
+		$this->param = $this->request->getText( 'book', '' );
 	}
 
 	/**
 	 * @return bool
 	 */
 	public function isResponsible(): bool {
-		if ( $this->param !== null && $this->param !== '' ) {
+		if ( $this->param !== '' ) {
 			return true;
 		}
 		return false;
 	}
 
 	/**
-	 * Returns the book title that should be used
-	 * for the current page
-	 *
 	 * @return Title|null
 	 */
 	public function getActiveBook(): ?Title {
+		if ( $this->param === '' ) {
+			return null;
+		}
+
 		$book = $this->titleFactory->newFromText( $this->param );
 		if ( $book && $book->exists() ) {
+			$this->session->set( 'book', $book->getPrefixedText() );
 			return $book;
 		}
+
 		return null;
 	}
 

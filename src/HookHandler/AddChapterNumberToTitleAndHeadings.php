@@ -2,24 +2,45 @@
 
 namespace BlueSpice\Bookshelf\HookHandler;
 
+use BlueSpice\Bookshelf\BookContextProviderFactory;
+use BlueSpice\Bookshelf\ChapterInfo;
+use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\HeadingNumberation;
 use BlueSpice\Bookshelf\TOCNumberation;
 use ConfigFactory;
 use OutputPage;
 use Skin;
+use Title;
 
 class AddChapterNumberToTitleAndHeadings {
 
-	/**
-	 * @var Config
-	 */
+	/** @var Config */
 	private $config;
+
+	/** @var BookContextProviderFactory */
+	private $bookContextProviderFactory = null;
+
+	/** @var ChapterLookup */
+	private $bookChapterLookup = null;
+
+	/** @var ChapterInfo */
+	private $chapterInfo = null;
+
+	/** @var Title */
+	private $activeBook = null;
 
 	/**
 	 * @param ConfigFactory $configFactory
+	 * @param BookContextProviderFactory $bookContextProviderFactory
+	 * @param ChapterLookup $bookChapterLookup
 	 */
-	public function __construct( ConfigFactory $configFactory ) {
+	public function __construct(
+		ConfigFactory $configFactory, BookContextProviderFactory $bookContextProviderFactory,
+		ChapterLookup $bookChapterLookup
+	) {
 		$this->config = $configFactory->makeConfig( 'bsg' );
+		$this->bookContextProviderFactory = $bookContextProviderFactory;
+		$this->bookChapterLookup = $bookChapterLookup;
 	}
 
 	/**
@@ -28,10 +49,11 @@ class AddChapterNumberToTitleAndHeadings {
 	 * @return bool
 	 */
 	public function onBeforePageDisplay( $out, $skin ) {
-		$titleText = $skin->getTitle()->getFullText();
-		$bookData = $this->getBookData( $out->getHTML(), $titleText );
+		$displayTitle = $out->getPageTitle();
 
-		if ( empty( $bookData ) ) {
+		$activeBook = $this->getActiveBook( $out->getTitle() );
+		$chapterInfo = $this->getChapterInfo( $out->getTitle() );
+		if ( $chapterInfo instanceof ChapterInfo === false ) {
 			return true;
 		}
 
@@ -55,14 +77,12 @@ class AddChapterNumberToTitleAndHeadings {
 		// If a title text is set in the book source it should be used instead of title
 		// and even instead of DISPLAYTITLE
 		if ( $this->config->get( 'BookshelfTitleDisplayText' ) ) {
-			if ( isset( $bookData['articleDisplayTitle'] ) ) {
-				$displayTitle = $bookData['articleDisplayTitle'];
-			}
+			$displayTitle = $chapterInfo->getname();
 		}
 
-		if ( isset( $bookData['number'] ) ) {
-			$out->setPageTitle( $bookData['number'] . ' ' . $displayTitle );
-		}
+		$number = $chapterInfo->getNumber();
+
+		$out->setPageTitle( "$number $displayTitle" );
 
 		return true;
 	}
@@ -77,91 +97,56 @@ class AddChapterNumberToTitleAndHeadings {
 			return true;
 		}
 
-		$bookData = $this->getBookData( $text );
+		$activeBook = $this->getActiveBook( $out->getTitle() );
+		$chapterInfo = $this->getChapterInfo( $out->getTitle() );
+		if ( $chapterInfo instanceof ChapterInfo === false ) {
+			return true;
+		}
 
-		if ( isset( $bookData['has-children'] ) ) {
+		$children = $this->bookChapterLookup->getChildren( $this->activeBook, $chapterInfo );
+		if ( !empty( $children ) ) {
 			// Otherwise the internal headlines would have same numbers as child node articles
 			return true;
 		}
 
-		if ( isset( $bookData['number'] ) ) {
-			$headingNumberation = new HeadingNumberation();
-			$text = $headingNumberation->execute(
-				$bookData['number'],
-				$text
-			);
+		$headingNumberation = new HeadingNumberation();
+		$text = $headingNumberation->execute(
+			$chapterInfo->getNumber(),
+			$text
+		);
 
-			$tocNumberation = new TOCNumberation();
-			$text = $tocNumberation->execute(
-				$bookData['number'],
-				$text
-			);
-		}
+		$tocNumberation = new TOCNumberation();
+		$text = $tocNumberation->execute(
+			$chapterInfo->getNumber(),
+			$text
+		);
+
 		return true;
 	}
 
 	/**
-	 * @param string $html
-	 * @param string $titleText
-	 * @return array
+	 * @param Title $title
+	 * @return $title|null
 	 */
-	private function getBookData( string $html, string $titleText = '' ): array {
-		$bookshelfTag = [];
-		$status = preg_match(
-			'#<div\s(class=".*?bs-tag-bs_bookshelf.*?".*?)\s*><div\s(.*?)\s*></div>#',
-			$html,
-			$bookshelfTag
-		);
-
-		if ( !$status ) {
-			return [];
+	private function getActiveBook( Title $title ): ?Title {
+		if ( $this->activeBook === null ) {
+			$bookContextProvider = $this->bookContextProviderFactory->getProvider( $title );
+			$this->activeBook = $bookContextProvider->getActiveBook();
 		}
-
-		return $this->extractBookData( $bookshelfTag[2], $titleText );
+		return $this->activeBook;
 	}
 
 	/**
-	 * @param string $fullBookData
-	 * @param string $titleText
-	 * @return array
+	 * @param Title $title
+	 * @return ChapterInfo|null
 	 */
-	private function extractBookData( string $fullBookData, string $titleText = '' ): array {
-		if ( $fullBookData === '' ) {
-			return [];
+	private function getChapterInfo( Title $title ): ?ChapterInfo {
+		if ( $this->activeBook === null ) {
+			return $this->chapterInfo;
 		}
-
-		$bookData = [];
-
-		$data = [];
-		$status = preg_match( '#data-bs-number="(.*?)"#', $fullBookData, $data );
-		if ( $status ) {
-			$bookData['number'] = $data[1];
+		if ( $this->chapterInfo === null ) {
+			$this->chapterInfo = $this->bookChapterLookup->getChapterInfoFor( $this->activeBook, $title );
 		}
-
-		$data = [];
-		$status = preg_match( '#data-bs-has-children="1"#', $fullBookData, $data );
-		if ( $status ) {
-			$bookData['has-children'] = true;
-		}
-
-		if ( $titleText === '' ) {
-			return $bookData;
-		}
-
-		$data = [];
-		$regEx = '&quot;articleTitle&quot;\:&quot;';
-		$regEx .= preg_quote( $titleText );
-		$regEx .= '&quot;,&quot;articleDisplayTitle&quot;\:&quot;(.*?)&quot;';
-
-		$fullBookData = preg_replace_callback( '/\\\\u([0-9a-fA-F]{4})/u', static function ( $matches ) {
-			return mb_convert_encoding( pack( 'H*', $matches[1] ), 'UTF-8', 'UTF-16BE' );
-		}, $fullBookData );
-
-		$status = preg_match( "#$regEx#u", $fullBookData, $data );
-		if ( $status ) {
-			$bookData['articleDisplayTitle'] = $data[1];
-		}
-
-		return $bookData;
+		return $this->chapterInfo;
 	}
 }

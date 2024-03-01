@@ -55,7 +55,7 @@ class DefaultProvider implements IBookContextProvider {
 	 * @return int
 	 */
 	public function getPriority(): int {
-		return 0;
+		return 10;
 	}
 
 }
