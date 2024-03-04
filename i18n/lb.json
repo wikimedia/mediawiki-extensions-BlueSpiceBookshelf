@@ -56,5 +56,8 @@
 	"bs-books-overview-page-book-action-edit-text": "Änneren",
 	"bs-books-overview-page-book-action-edit-title": "Buch $1 änneren",
 	"bs-books-overview-page-book-action-delete-text": "Läschen",
-	"bs-books-overview-page-book-action-delete-title": "Buch $1 läschen"
+	"bs-books-overview-page-book-action-delete-title": "Buch $1 läschen",
+	"bs-books-overview-page-loading-text": "D'Buchiwwersiicht gëtt gelueden...",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "Méi Aktioune fir dëst Buch",
+	"bs-books-overview-page-book-anchor-title": "Déi éischt Säit vum Buch $1 opmaachen"
 }
