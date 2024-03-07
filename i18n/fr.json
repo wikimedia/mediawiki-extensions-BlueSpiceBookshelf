@@ -8,6 +8,7 @@
 			"Eihel",
 			"Gomoko",
 			"Lewis2013",
+			"MacOS Weed",
 			"Thibaut120094",
 			"Verdy p",
 			"Wladek92",
@@ -113,5 +114,6 @@
 	"bs-bookshelf-booknav-searchbox-placeholder": "Chercher",
 	"bs-bookshelf-droplet-pdf-name": "Lien du livre PDF",
 	"bs-bookshelf-droplet-pdf-description": "Lien permettant de télécharger un livre au format PDF",
-	"bs-bookshelf-droplet-pdf-template-label": "Modèle de livre PDF"
+	"bs-bookshelf-droplet-pdf-template-label": "Modèle de livre PDF",
+	"bs-bookshelf-droplet-pdf-link-label": "Libellé du lien"
 }
