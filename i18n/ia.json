@@ -106,5 +106,17 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Libro a exportar",
 	"bs-bookshelf-droplet-pdf-template-label": "Patrono de PDF de libro",
 	"bs-bookshelf-droplet-pdf-link-label": "Etiquetta del ligamine",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Cercar"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Cercar",
+	"apihelp-bs-books-overview-store-summary": "Lista tote le libros includente le planca de libros, un ligamine al prime capitulo, e le actiones.",
+	"books": "Libros",
+	"bs-books-overview-page-loading-text": "Le panorama del libro se carga…",
+	"bs-books-overview-page-bookshelf-various-books": "Varie libros",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "Altere actiones pro iste libro",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "Altere actiones pro iste libro",
+	"bs-books-overview-page-book-anchor-title": "Aperir le prime pagina del libro $1",
+	"bs-books-overview-page-book-anchor-aria-label": "Aperir le prime pagina del libro $1",
+	"bs-books-overview-page-book-action-edit-text": "Modificar",
+	"bs-books-overview-page-book-action-edit-title": "Modificar le libro $1",
+	"bs-books-overview-page-book-action-delete-text": "Deler",
+	"bs-books-overview-page-book-action-delete-title": "Deler le libro $1"
 }
