@@ -57,8 +57,7 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 */
 	public function getRequiredRLStyles(): array {
 		return [
-			'ext.bookshelf.navigation-panel.styles',
-			'ext.bluespice.bookshelf.chapter-pager.styles'
+			'ext.bookshelf.navigation-panel.styles'
 		];
 	}
 
