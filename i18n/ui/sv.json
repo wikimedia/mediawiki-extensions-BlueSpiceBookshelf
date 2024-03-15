@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Josve05a",
 			"Mjälten",
 			"Technic2",
 			"WikiPhoenix"
@@ -75,5 +76,6 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Rutnät",
 	"bs-bookshelfui-prof-defaultview-images": "Bilder",
 	"bs-bookshelfui-chapterpager-previous": "Föregående",
-	"bs-bookshelfui-chapterpager-next": "Nästa"
+	"bs-bookshelfui-chapterpager-next": "Nästa",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Bokhylla"
 }
