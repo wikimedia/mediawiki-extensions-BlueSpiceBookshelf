@@ -13,7 +13,7 @@ class PrependPageTOCNumbers extends BooleanSetting implements \BlueSpice\Bookshe
 	public function getPaths() {
 		return [
 			static::MAIN_PATH_FEATURE . '/' . static::FEATURE_CONTENT_STRUCTURING . '/BlueSpiceBookshelf',
-			static::MAIN_PATH_EXTENSION . '/BlueSpiceBookshelf/' . static::FEATURE_CONTENT_STRUCTURING ,
+			static::MAIN_PATH_EXTENSION . '/BlueSpiceBookshelf/' . static::FEATURE_CONTENT_STRUCTURING,
 			static::MAIN_PATH_PACKAGE . '/' . static::PACKAGE_PRO . '/BlueSpiceBookshelf',
 		];
 	}

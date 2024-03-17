@@ -13,7 +13,7 @@ class SupressBookNS extends BooleanSetting implements \BlueSpice\Bookshelf\ISett
 	public function getPaths() {
 		return [
 			static::MAIN_PATH_FEATURE . '/' . static::FEATURE_EXPORT . '/BlueSpiceBookshelf',
-			static::MAIN_PATH_EXTENSION . '/BlueSpiceBookshelf/' . static::FEATURE_EXPORT ,
+			static::MAIN_PATH_EXTENSION . '/BlueSpiceBookshelf/' . static::FEATURE_EXPORT,
 			static::MAIN_PATH_PACKAGE . '/' . static::PACKAGE_PRO . '/BlueSpiceBookshelf',
 		];
 	}

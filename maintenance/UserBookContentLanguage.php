@@ -107,7 +107,7 @@ class UserBookContentLanguage extends LoggedUpdateMaintenance {
 	 */
 	private function moveBook( Title $title, Title $moveTitle ) {
 		$status = Status::newGood();
-		try{
+		try {
 			$move = $this->services->getMovePageFactory()->newMovePage( $title, $moveTitle );
 			$status = $move->move(
 				$this->getMaintenanceUser(),

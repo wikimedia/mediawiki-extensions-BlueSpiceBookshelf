@@ -530,15 +530,16 @@ class PageHierarchyProvider {
 			do {
 				if ( isset( $sText[ $iDepth ] ) && $sText[ $iDepth ] == $this->sIndentChar ) {
 					$iDepth++;
-				} else { $bIsIndentCharacter = false;
+				} else {
+					$bIsIndentCharacter = false;
 				}
-			}
-			while ( $bIsIndentCharacter );
+			} while ( $bIsIndentCharacter );
 			$sText = substr( $sText, $iDepth );
 
 			// Skip line processing if empty
 			$sText = trim( $sText );
-			if ( empty( $sText ) ) { continue;
+			if ( empty( $sText ) ) {
+				continue;
 			}
 
 			if ( $iDepth > $iLevel ) {

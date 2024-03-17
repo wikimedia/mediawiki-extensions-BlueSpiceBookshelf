@@ -18,7 +18,7 @@ use PHPUnit\Framework\TestCase;
 class TreeParserTest extends TestCase {
 
 	/**
-	 * @covers TreeParser::__construct
+	 * @covers \BlueSpice\Bookshelf\TreeParser::__construct
 	 */
 	public function testContructor() {
 		$mockConfig = $this->createMock( 'Config' );
@@ -32,7 +32,7 @@ class TreeParserTest extends TestCase {
 	}
 
 	/**
-	 * @covers TreeParser::parseWikiTextList
+	 * @covers \BlueSpice\Bookshelf\TreeParser::parseWikiTextList
 	 * @dataProvider provideParseWikiTextListData
 	 */
 	public function testParseWikiTextList( $wikiText, $expectedTree ) {

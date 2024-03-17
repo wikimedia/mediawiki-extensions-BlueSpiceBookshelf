@@ -80,7 +80,7 @@ class BookNavHandler extends Handler {
 		] );
 		$bookNav .= Html::element( 'h2', [
 			'style' => 'width: 80%; margin: 0; padding: 0;'
-		],	$bookTitle->getText()
+		], $bookTitle->getText()
 		);
 		$bookNav .= $this->buildSearchBox();
 		$bookNav .= Html::closeElement( 'div' );

@@ -81,7 +81,8 @@ class PageHierarchyProviderFactory {
 	 */
 	public function findSuitableSourceArticleReference( $aTags ) {
 		foreach ( $aTags as $aTag ) {
-			if ( empty( $aTag ) ) { continue;
+			if ( empty( $aTag ) ) {
+				continue;
 			}
 			$aAttributes = $aTag['attributes'];
 			$sSourceArticleTitle = '';
