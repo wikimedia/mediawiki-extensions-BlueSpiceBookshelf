@@ -16,6 +16,7 @@
 			"Tanzun",
 			"Vlad5250",
 			"WindEwriX",
+			"Yurina Tatiana",
 			"Арсен Асхат"
 		]
 	},
@@ -90,5 +91,12 @@
 	"bs-bookshelf-ga-editing-label": "Книги",
 	"bs-bookshelf-booknav-book-label": "Книга",
 	"bs-bookshelf-booknav-chapter-label": "Глава",
-	"bs-bookshelf-pref-SupressBookNS": "Не выводить префикс пространства имён для книжных статей в выводе"
+	"bs-bookshelf-pref-SupressBookNS": "Не выводить префикс пространства имён для книжных статей в выводе",
+	"bs-bookshelf-droplet-name": "Список книг",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Поиск",
+	"books": "Книги",
+	"bs-books-overview-page-book-action-edit-text": "Править",
+	"bs-books-overview-page-book-action-edit-title": "Править книгу $1",
+	"bs-books-overview-page-book-action-delete-text": "Удалить",
+	"bs-books-overview-page-book-action-delete-title": "Удалить книгу $1"
 }

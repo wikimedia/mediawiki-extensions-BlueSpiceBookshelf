@@ -13,7 +13,8 @@
 			"Merrahtar",
 			"Okras",
 			"Pacha Tchernof",
-			"WindEwriX"
+			"WindEwriX",
+			"Yurina Tatiana"
 		]
 	},
 	"bs-bookshelfui-extension-description": "Позволяет BlueSpice управлять иерархическими коллекциями страниц википедии.",
@@ -96,5 +97,6 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Сетка",
 	"bs-bookshelfui-prof-defaultview-images": "Изображения",
 	"bs-bookshelfui-chapterpager-previous": "Предыдущая",
-	"bs-bookshelfui-chapterpager-next": "Следующая"
+	"bs-bookshelfui-chapterpager-next": "Следующая",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Книжная полка"
 }
