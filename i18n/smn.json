@@ -12,5 +12,7 @@
 	"bs-bookshelf-prof-defaultview-images": "Koveh",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Kirjerááju",
 	"bs-bookshelf-tag-edit-book": "Mute kirje",
-	"bs-bookshelf-ve-booklist-attr-filter-label": "Sillee"
+	"bs-bookshelf-ve-booklist-attr-filter-label": "Sillee",
+	"bs-bookshelf-add-to-book-label": "Lasseet kiirján",
+	"bs-bookshelf-actionmenuentry-addtobook": "Lasseet kiirján"
 }
