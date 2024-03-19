@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
 class HeadingNumberationTest extends TestCase {
 
 	/**
-	 * @covers HeadingNumberation::execute
+	 * @covers \BlueSpice\Bookshelf\HeadingNumberation::execute
 	 */
 	public function testExecute() {
 		$input = file_get_contents( __DIR__ . '/data/heading_numberation_input.html' );

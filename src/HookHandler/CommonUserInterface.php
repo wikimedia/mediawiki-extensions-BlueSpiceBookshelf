@@ -120,10 +120,10 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 						'factory' => static function () use (
 							$title, $titleFactory, $bookContextProviderFactory, $bookLookup, $chapterLookup
 						) {
-						return new ChapterPagerPanel(
+							return new ChapterPagerPanel(
 							$title, $titleFactory, $bookContextProviderFactory, $bookLookup, $chapterLookup,
 							'bs-bookshelfui-chapter-pager-cnt-top'
-						);
+							);
 						}
 					]
 				]

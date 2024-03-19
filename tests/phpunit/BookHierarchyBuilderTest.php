@@ -35,7 +35,7 @@ class BookHierarchyBuilderTest extends TestCase {
 	 * @return array
 	 */
 	private function getExpected(): array {
-	  return [
+		return [
 		[
 		  'chapter_namespace' => '0',
 		  'chapter_title' => 'Test_chap_A',
@@ -111,7 +111,7 @@ class BookHierarchyBuilderTest extends TestCase {
 			]
 		  ]
 		],
-	 ];
+		];
 	}
 
 	/**

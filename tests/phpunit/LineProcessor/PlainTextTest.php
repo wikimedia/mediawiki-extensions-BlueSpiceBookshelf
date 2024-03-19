@@ -16,7 +16,7 @@ class PlainTextTest extends TestCase {
 	/**
 	 * @param string $line
 	 * @param string $message
-	 * @covers PlainText::applies
+	 * @covers \BlueSpice\Bookshelf\LineProcessor\PlainText::applies
 	 * @dataProvider provideTestAppliesData
 	 */
 	public function testApplies( $line, $message ) {
@@ -40,7 +40,7 @@ class PlainTextTest extends TestCase {
 	/**
 	 *
 	 * @param string $line
-	 * @covers PlainText::process
+	 * @covers \BlueSpice\Bookshelf\LineProcessor\PlainText::process
 	 * @dataProvider provideTestProcessData
 	 */
 	public function testProcess( $line ) {

@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
 class TOCNumberationTest extends TestCase {
 
 	/**
-	 * @covers TOCNumberation::execute
+	 * @covers \BlueSpice\Bookshelf\TOCNumberation::execute
 	 */
 	public function testExecute() {
 		$input = file_get_contents( __DIR__ . '/data/toc_numberation_input.html' );

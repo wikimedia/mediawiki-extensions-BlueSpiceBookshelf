@@ -156,10 +156,10 @@ class TreeParser {
 				while ( $depth < $level ) {
 					array_pop( $number );
 					$level--;
-					$number[$level - 1] ++;
+					$number[$level - 1]++;
 				}
 			} else {
-				$number[$level - 1] ++;
+				$number[$level - 1]++;
 			}
 			$this->simpleTOC[] = [
 				'number-array' => $number,

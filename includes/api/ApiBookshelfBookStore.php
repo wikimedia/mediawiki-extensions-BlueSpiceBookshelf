@@ -19,7 +19,7 @@ class ApiBookshelfBookStore extends BSApiExtJSStoreBase {
 		$aParams = $this->extractRequestParams( false );
 		$aResult = [];
 
-		try{
+		try {
 			$oPHP = PageHierarchyProvider::getInstanceFor( $aParams['book'] );
 			$oTree = $oPHP->getExtendedTOCJSON();
 			if ( $aParams['node'] && $aParams['node'] !== 'root' ) {
