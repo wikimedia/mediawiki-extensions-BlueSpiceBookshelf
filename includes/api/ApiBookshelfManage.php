@@ -65,7 +65,7 @@ class ApiBookshelfManage extends BSApiTasksBase {
 				wfMessage( 'bs-bookshelfui-bookmanager-deletion-error-unkown' )->text();
 			// 'getLegacyHookErrors()' is '@internal' - used for backwards compatibility
 			$oResult->errors['saving'] = $deletePage->getLegacyHookErrors();
-			$dbw = wfGetDB( DB_PRIMARY );
+			$dbw = $this->services->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 			wfDebugLog(
 				'BS::Bookshelf',
 				'SpecialBookshelfBookManager::ajaxDeleteBook: ' . $dbw->lastQuery()
