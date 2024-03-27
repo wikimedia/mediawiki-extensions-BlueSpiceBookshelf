@@ -3,6 +3,7 @@
 		"authors": [
 			"0PAWN0",
 			"Beginneruser",
+			"Ebraminio",
 			"FarsiNevis",
 			"Jeeputer",
 			"LordProfo",
@@ -62,7 +63,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "نسخهٔ کتاب را تنظیم می‌کند",
 	"bs-bookshelf-ve-bookshelfinspector-title": "قفسه",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "کتاب",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "مشخص می کند که صفحات، متعلق به کدام کتاب است‌",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "مشخص می‌کند که صفحات، متعلق به کدام کتاب است‌",
 	"bs-bookshelf-booknav-desc": "پیمایش کتاب را نشان می‌دهد",
 	"bs-bookshelf-booknav-book-label": "کتاب",
 	"bs-bookshelf-booknav-book-help": "کتابی را برای استفاده انتخاب کنید",
