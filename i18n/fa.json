@@ -3,6 +3,7 @@
 		"authors": [
 			"0PAWN0",
 			"Beginneruser",
+			"Ebraminio",
 			"FarsiNevis",
 			"Jeeputer",
 			"LordProfo",
@@ -61,7 +62,7 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "قفسه",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "کتاب",
 	"bs-bookshelf-ve-booklistinspector-title": "فهرست‌کتاب",
-	"bs-bookshelf-ve-bookshelf-attr-book-help": "مشخص می کند که صفحات، متعلق به کدام کتاب است‌",
+	"bs-bookshelf-ve-bookshelf-attr-book-help": "مشخص می‌کند که صفحات، متعلق به کدام کتاب است‌",
 	"bs-bookshelf-mainlinks-label": "کتاب‌ها",
 	"bs-bookshelf-ga-editing-label": "کتاب‌ها",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "نمایش نقطه ورود «کتاب‌ها»",
