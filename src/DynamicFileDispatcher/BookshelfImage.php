@@ -38,7 +38,9 @@ class BookshelfImage extends ArticlePreviewImage {
 			return new StaticCoverImage( $this );
 		}
 
-		$parsedUrl = wfParseUrl( $coverpage );
+		$services = MediaWikiServices::getInstance();
+		$urlUtils = $services->getUrlUtils();
+		$parsedUrl = $urlUtils->parse( $coverpage );
 		if ( $parsedUrl !== false ) {
 			return new ImageExternal(
 				$this,
@@ -47,7 +49,7 @@ class BookshelfImage extends ArticlePreviewImage {
 			);
 		}
 
-		$file = MediaWikiServices::getInstance()->getRepoGroup()->findFile( $coverpage );
+		$file = $services->getRepoGroup()->findFile( $coverpage );
 		if ( $file instanceof \File ) {
 			// TODO: Add "transformable" RepoFile to BSF
 			return new ImageExternal(
