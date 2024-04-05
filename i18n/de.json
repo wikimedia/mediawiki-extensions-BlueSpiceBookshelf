@@ -9,6 +9,7 @@
 			"Schmackes",
 			"SehrGuterCode",
 			"Stephan Muggli <muggli@hallowelt.biz>",
+			"TomatoCake",
 			"Wdwd translator"
 		]
 	},
@@ -97,6 +98,7 @@
 	"bs-bookshelf-booknav-title": "Buch-Inhaltsverzeichnis",
 	"bs-bookshelf-booknav-desc": "Liste aller oder einzelner Kapitel eines Buches",
 	"bs-bookshelf-booknav-book-label": "Buch",
+	"bs-bookshelf-booknav-book-help": "Wähle ein zu verwendendes Buch aus",
 	"bs-bookshelf-booknav-chapter-label": "Kapitel",
 	"bs-bookshelf-booknav-book-not-exist": "Buch $1 existiert nicht",
 	"bs-bookshelf-booknav-chapter-not-exist": "Kapitel $1 existiert nicht",
