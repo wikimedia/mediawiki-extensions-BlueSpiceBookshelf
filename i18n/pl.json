@@ -50,5 +50,8 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Wersja",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Książka",
 	"bs-bookshelf-booknav-book-label": "Książka",
-	"bs-bookshelf-booknav-chapter-label": "Rozdział"
+	"bs-bookshelf-booknav-chapter-label": "Rozdział",
+	"books": "Książki",
+	"bs-books-overview-page-book-action-delete-text": "Usuń",
+	"bs-books-overview-page-book-action-delete-title": "Usuń książkę $1"
 }
