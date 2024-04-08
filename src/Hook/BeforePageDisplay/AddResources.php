@@ -9,7 +9,11 @@ class AddResources extends \BlueSpice\Hook\BeforePageDisplay {
 			'ext.bluespice.bookshelf.navigationTab',
 			'mwstake.component.commonui.tree-component'
 		] );
-		$this->out->addModuleStyles( [ 'ext.bluespice.bookshelf.chapter-pager.styles' ] );
+
+		$this->out->addModuleStyles( [
+			'ext.bluespice.bookshelf.chapter-pager.styles',
+			'ext.bluespice.bookshelf.booknav.styles'
+		] );
 
 		if ( !$this->skin->getUser()->isAnon() ) {
 			$location = $this->skin->msg(
