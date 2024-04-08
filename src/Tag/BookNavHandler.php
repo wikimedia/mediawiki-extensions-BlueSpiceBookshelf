@@ -85,6 +85,9 @@ class BookNavHandler extends Handler {
 		$bookNav .= $this->buildSearchBox();
 		$bookNav .= Html::closeElement( 'div' );
 
+		$bookNav .= Html::openElement( 'ul', [
+			'class' => 'mws-tree'
+		] );
 		if ( $this->chapterInput === '' ) {
 			foreach ( $subComponents as $subComponent ) {
 				$bookNav .= $this->componentRenderer->getComponentHtml( $subComponent );
@@ -92,6 +95,7 @@ class BookNavHandler extends Handler {
 		} else {
 			$bookNav .= $this->buildTreeFromSubComponents( $subComponents );
 		}
+		$bookNav .= Html::closeElement( 'ul' );
 
 		return $bookNav;
 	}
