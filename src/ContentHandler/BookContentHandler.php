@@ -66,7 +66,7 @@ class BookContentHandler extends TextContentHandler {
 			$bookEditData = BookEditData::newFromTitleAndRequest(
 				$title, new \WebRequest()
 			);
-			$output->addJsConfigVars( 'bsBookshelfData', $bookEditData->getBookData() );
+			$output->setJsConfigVar( 'bsBookshelfData', $bookEditData->getBookData() );
 			$output->addModules( [ 'ext.bluespice.bookshelf.view' ] );
 			$output->setText( \Html::element( 'div', [ 'id' => 'bs-bookshelf-view' ] ) );
 		}
