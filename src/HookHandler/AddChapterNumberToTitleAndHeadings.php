@@ -38,7 +38,9 @@ class AddChapterNumberToTitleAndHeadings {
 		$displayTitle = $out->getPageTitle();
 
 		// Page title text might be wrapped in HTML elements and it may contain a namespace
-		// <span class="mw-page-title-namespace">...</span><span class="mw-page-title-separator">:</span><span class="mw-page-title-main">...</span>
+		// <span class="mw-page-title-namespace">...</span>
+		// <span class="mw-page-title-separator">:</span>
+		// <span class="mw-page-title-main">...</span>
 		// In any case we want to show only the subpage title or DISPLAYTITLE but
 		// DISPLAYTITLE is not wrapped in html
 		$regEx = '.*?(<span\s*?class="mw-page-title-main"\s*?>)(.*)(</span>).*$';
