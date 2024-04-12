@@ -28,7 +28,11 @@ class AddChapterNumberToTitleAndHeadings {
 	 * @return bool
 	 */
 	public function onBeforePageDisplay( $out, $skin ) {
-		$titleText = $skin->getTitle()->getFullText();
+		$title = $out->getTitle();
+		if ( !$title ) {
+			return true;
+		}
+		$titleText = $title->getFullText();
 		$bookData = $this->getBookData( $out->getHTML(), $titleText );
 
 		if ( empty( $bookData ) ) {
