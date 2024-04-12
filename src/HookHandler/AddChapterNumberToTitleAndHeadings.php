@@ -49,13 +49,17 @@ class AddChapterNumberToTitleAndHeadings {
 	 * @return bool
 	 */
 	public function onBeforePageDisplay( $out, $skin ) {
-		$displayTitle = $out->getPageTitle();
+		$title = $out->getTitle();
+		if ( !$title ) {
+			return true;
+		}
 
-		$chapterInfo = $this->getChapterInfo( $out->getTitle() );
+		$chapterInfo = $this->getChapterInfo( $title );
 		if ( $chapterInfo instanceof ChapterInfo === false ) {
 			return true;
 		}
 
+		$displayTitle = $out->getPageTitle();
 		// If a title text is set in the book source it should be used instead of title
 		// and even instead of DISPLAYTITLE
 		if ( $this->config->get( 'BookshelfTitleDisplayText' ) ) {
