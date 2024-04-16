@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf;
 
 use InvalidArgumentException;
+use MediaWiki\MediaWikiServices;
 use PageHierarchyProvider;
 use stdClass;
 use Title;
@@ -88,10 +89,16 @@ class TreeDataProvider {
 		$fullId = md5( $item->text );
 		$id = substr( $fullId, 0, 6 );
 
+		$text = $item->articleNumber . '. ' . $item->articleTitle;
+		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
+		if ( $config->get( 'BookshelfTitleDisplayText' ) === true ) {
+			$text = $item->articleNumber . '. ' . $item->articleDisplayTitle;
+		}
+
 		$data = [
 			'id' => $id,
-			'name' => $item->text,
-			'text' => $item->text,
+			'name' => $text,
+			'text' => $text,
 			'path' => trim( $path, '/' ),
 			'items' => []
 		];
