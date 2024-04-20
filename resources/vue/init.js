@@ -23,7 +23,8 @@
 
 					return h( BooksApp, {
 						items: books,
-						searchableData: searchableData
+						searchableData: searchableData,
+						searchPlaceholderLabel: mw.message( 'bs-books-overview-page-book-search-placeholder' ).plain()
 					} );
 				}
 			} );

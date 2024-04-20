@@ -538,7 +538,8 @@
 				"bs-books-overview-page-book-anchor-aria-label",
 				"bs-books-overview-page-bookshelf-various-books",
 				"bs-books-overview-page-book-actions-dropdown-menu-aria-label",
-				"bs-books-overview-page-book-actions-dropdown-menu-title"
+				"bs-books-overview-page-book-actions-dropdown-menu-title",
+				"bs-books-overview-page-book-search-placeholder"
 			]
 		},
 		"ext.bluespice.books.special.styles": {
