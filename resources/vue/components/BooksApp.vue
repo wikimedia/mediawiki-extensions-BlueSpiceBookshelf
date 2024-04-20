@@ -3,6 +3,7 @@
 		<cdx-search-input
 			:clearable="true"
 			:placeholder="searchPlaceholderLabel"
+			:aria-label="searchPlaceholderLabel"
 			@update:model-value="getSearchResults"
 		></cdx-search-input>
 	</div>
@@ -28,6 +29,9 @@ module.exports = exports = {
 		},
 		searchableData: {
 			type: Array
+		},
+		searchPlaceholderLabel: {
+			type: String
 		}
 	},
 	components: {

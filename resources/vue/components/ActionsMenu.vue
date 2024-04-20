@@ -1,5 +1,5 @@
 <template>
-	<div class="dropdown">
+	<li class="dropdown">
 		<a href="" class="dropdown-toggle bi bi-three-dots" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-bind:title="title" v-bind:aria-label="label" rel="nofollow noindex"></a>
 		<ul class="dropdown-menu">
 			<action v-for="secondaryAction in secondaryActions"
@@ -12,7 +12,7 @@
 				>
 			</action>
 		</ul>
-	</div>
+	</li>
 </template>
 
 <script>
