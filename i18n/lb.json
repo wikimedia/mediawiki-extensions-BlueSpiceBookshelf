@@ -58,5 +58,8 @@
 	"bs-books-overview-page-book-action-edit-text": "Änneren",
 	"bs-books-overview-page-book-action-edit-title": "Buch $1 änneren",
 	"bs-books-overview-page-book-action-delete-text": "Läschen",
-	"bs-books-overview-page-book-action-delete-title": "Buch $1 läschen"
+	"bs-books-overview-page-book-action-delete-title": "Buch $1 läschen",
+	"bs-bookshelf-chapter-plain-text-input-label": "Text",
+	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Zil",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Text"
 }
