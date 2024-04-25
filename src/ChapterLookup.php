@@ -2,7 +2,10 @@
 
 namespace BlueSpice\Bookshelf;
 
+use stdClass;
 use Title;
+use TitleFactory;
+use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class ChapterLookup {
@@ -12,11 +15,16 @@ class ChapterLookup {
 	 */
 	private $loadBalancer = null;
 
+	/** @var TitleFactory */
+	private $titleFactory = null;
+
 	/**
 	 * @param LoadBalancer $loadBalancer
+	 * @param TitleFactory $titleFactory
 	 */
-	public function __construct( LoadBalancer $loadBalancer	) {
+	public function __construct( LoadBalancer $loadBalancer, TitleFactory $titleFactory	) {
 		$this->loadBalancer = $loadBalancer;
+		$this->titleFactory = $titleFactory;
 	}
 
 	/**
@@ -59,13 +67,7 @@ class ChapterLookup {
 		);
 
 		foreach ( $results as $result ) {
-			$pages[] = new ChapterDataModel(
-				$result->chapter_namespace,
-				$result->chapter_title,
-				$result->chapter_name,
-				(string)$result->chapter_number,
-				$result->chapter_type,
-			);
+			$pages[] = $this->makeChapter( $result, $db );
 		}
 
 		return $pages;
@@ -98,7 +100,7 @@ class ChapterLookup {
 
 		$results = $db->select(
 			'bs_book_chapters',
-			[ 'chapter_name', 'chapter_number', 'chapter_type' ],
+			'*',
 			[
 				'chapter_book_id' => $bookID,
 				'chapter_namespace' => $title->getNamespace(),
@@ -112,11 +114,7 @@ class ChapterLookup {
 
 		$chapterInfo = null;
 		foreach ( $results as $result ) {
-			$chapterInfo = new ChapterInfo(
-				$result->chapter_name,
-				$result->chapter_number,
-				$result->chapter_type
-			);
+			$chapterInfo = $this->makeChapterInfo( $result, $db );
 		}
 
 		return $chapterInfo;
@@ -163,15 +161,87 @@ class ChapterLookup {
 
 		$children = [];
 		foreach ( $results as $result ) {
-			$children[] = new ChapterDataModel(
-				$result->chapter_namespace,
-				$result->chapter_title,
-				$result->chapter_name,
-				$result->chapter_number,
-				$result->chapter_type
-			);
+			$children[] = $this->makeChapter( $result, $db );
 		}
 
 		return $children;
+	}
+
+	/**
+	 * @param stdClass $result
+	 * @param IDatabase $db
+	 * @return ChapterInfo
+	 */
+	private function makeChapterInfo( stdClass $result, IDatabase $db ): ChapterInfo {
+		$name = $result->chapter_name;
+
+		if ( $result->chapter_namespace !== null && $result->chapter_title !== null ) {
+			$title = $this->titleFactory->makeTitle(
+				$result->chapter_namespace,
+				$result->chapter_title
+			);
+
+			if ( $title instanceof Title && $name === $title->getSubpageText() ) {
+				// Check if page property displaytitle is set
+				$name = $this->makeName( $title, $name, $db );
+			}
+		}
+
+		return new ChapterInfo(
+			$name,
+			$result->chapter_number,
+			$result->chapter_type
+		);
+	}
+
+	/**
+	 * @param stdClass $result
+	 * @param IDatabase $db
+	 * @return ChapterDataModel
+	 */
+	private function makeChapter( stdClass $result, IDatabase $db ): ChapterDataModel {
+		$name = $result->chapter_name;
+
+		if ( $result->chapter_namespace !== null && $result->chapter_title !== null ) {
+			$title = $this->titleFactory->makeTitle(
+				$result->chapter_namespace,
+				$result->chapter_title
+			);
+
+			if ( $title instanceof Title && $name === $title->getSubpageText() ) {
+				// Check if page property displaytitle is set
+				$name = $this->makeName( $title, $name, $db );
+			}
+		}
+
+		return new ChapterDataModel(
+			$result->chapter_namespace,
+			$result->chapter_title,
+			$name,
+			(string)$result->chapter_number,
+			$result->chapter_type,
+		);
+	}
+
+	/**
+	 * @param Title $title
+	 * @param string $name
+	 * @param IDatabase $db
+	 * @return string
+	 */
+	private function makeName( Title $title, string $name, IDatabase $db ): string {
+		$res = $db->select(
+			'page_props',
+			[ '*' ],
+			[
+				'pp_page' => $title->getId(),
+				'pp_propname' => 'displaytitle'
+			]
+		);
+
+		foreach ( $res as $row ) {
+			$name = $row->pp_value;
+		}
+		return $name;
 	}
 }
