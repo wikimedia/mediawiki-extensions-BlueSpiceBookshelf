@@ -124,5 +124,7 @@
 	"bs-bookshelf-droplet-pdf-description": "以PDF格式下载书籍的链接",
 	"bs-bookshelf-droplet-pdf-book-label": "要导出的书籍",
 	"bs-bookshelf-droplet-pdf-template-label": "书籍PDF模板",
-	"bs-bookshelf-droplet-pdf-link-label": "链接文本"
+	"bs-bookshelf-droplet-pdf-link-label": "链接文本",
+	"bs-books-overview-page-book-action-edit-text": "编辑",
+	"bs-books-overview-page-book-action-delete-text": "删除"
 }
