@@ -550,24 +550,30 @@
 			"scripts": [
 				"ui/data/tree/BookEditorTree.js"
 			],
+			"styles": [
+				"bluespice.booktree.css"
+			],
 			"dependencies": [
 				"ext.oOJSPlus.data",
 				"ext.menuEditor.tree",
 				"ext.menuEditor.node",
 				"oojs-ui.styles.icons-editing-list",
 				"ext.oOJSPlus.formelements",
-				"ext.bluespice"
+				"ext.bluespice",
+				"bluespice.bookshelf.processor.chapternumber"
 			]
 		},
 		"bluespice.bookshelf.menuEditor.node": {
 			"scripts": [
+				"ui/data/node/BookTreeNode.js",
 				"ui/data/node/PlainTextNode.js",
 				"ui/data/node/WikiLinkWithAliasNode.js"
 			],
 			"dependencies": [
 				"ext.menuEditor.tree",
 				"oojs-ui.styles.icons-editing-styling",
-				"oojs-ui.styles.icons-editing-advanced"
+				"oojs-ui.styles.icons-editing-advanced",
+				"bluespice.bookshelf.processor.chapternumber"
 			],
 			"messages": [
 				"bs-bookshelf-chapter-plain-text-label",
@@ -587,11 +593,29 @@
 				"bs-bookshelf-toolbar-tool-metadata-title",
 				"bs-bookshelf-toolbar-tool-metadata-label"
 			]
+		},
+		"bluespice.bookshelf.processor.chapternumber": {
+			"scripts": [
+				"ui/data/BookNumberProcessor.js"
+			],
+			"dependencies": [
+				"oojs"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
 		"remoteExtPath": "BlueSpiceBookshelf/resources"
+	},
+	"QUnitTestModule": {
+		"localBasePath": "",
+		"remoteExtPath": "BlueSpiceBookshelf",
+		"scripts": [
+			"tests/qunit/BookNodeNumbering.test.js"
+		],
+		"dependencies": [
+			"bluespice.bookshelf.processor.chapternumber"
+		]
 	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"

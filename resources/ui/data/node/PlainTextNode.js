@@ -4,7 +4,7 @@ ext.bookshelf.ui.data.node.PlainTextNode = function ( cfg ) {
 	ext.bookshelf.ui.data.node.PlainTextNode.parent.call( this, cfg );
 };
 
-OO.inheritClass( ext.bookshelf.ui.data.node.PlainTextNode, ext.menueditor.ui.data.node.TreeNode );
+OO.inheritClass( ext.bookshelf.ui.data.node.PlainTextNode, ext.bookshelf.ui.data.node.BookTreeNode );
 
 ext.bookshelf.ui.data.node.PlainTextNode.static.canHaveChildren = true;
 
