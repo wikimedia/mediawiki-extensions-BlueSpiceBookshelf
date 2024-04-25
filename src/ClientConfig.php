@@ -5,6 +5,7 @@ namespace BlueSpice\Bookshelf;
 use Config;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\ResourceLoader\Context;
+use MWStake\MediaWiki\Component\ManifestRegistry\ManifestAttributeBasedRegistry;
 
 class ClientConfig {
 
@@ -58,5 +59,51 @@ class ClientConfig {
 			'defaultTemplate' => $defaultTemplate,
 			'availableTemplates' => $availableTemplates
 		];
+	}
+
+	/**
+	 *
+	 * @return array
+	 */
+	public static function getRegisteredMetadata() {
+		$registry = new ManifestAttributeBasedRegistry(
+			'BlueSpiceBookshelfMetaData'
+		);
+		$services = MediaWikiServices::getInstance();
+		$objectFactory = $services->getObjectFactory();
+
+		$pages = [];
+		$data = $registry->getAllValues();
+		$modules = [];
+		foreach ( $data as $key => $spec ) {
+			$object = $objectFactory->createObject( $registry->getObjectSpec( $key ) );
+			if ( !( $object instanceof IMetaDataDescription ) ) {
+				continue;
+			}
+
+			$pages[ $key ] = [
+				'classname' => $object->getJSClassname(),
+				'key' => $object->getKey()
+			];
+			$modules = array_merge( $modules, $object->getRLModules() );
+		}
+		array_unique( $modules );
+		return [
+			'modules' => $modules,
+			'pages' => $pages
+		];
+	}
+
+	/**
+	 *
+	 * @return array
+	 */
+	public static function getBookshelfData() {
+		$services = MediaWikiServices::getInstance();
+		$metaLookup = $services->get( 'BSBookshelfBookMetaLookup' );
+
+		$values = $metaLookup->getAllMetaValuesForKey( 'bookshelf' );
+		$values = array_unique( $values );
+		return $values;
 	}
 }

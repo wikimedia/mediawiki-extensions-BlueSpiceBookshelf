@@ -84,6 +84,38 @@
 				"subpages": "BlueSpice\\Bookshelf\\MassAdd\\Handler\\Subpage::factory",
 				"category": "BlueSpice\\Bookshelf\\MassAdd\\Handler\\Category::factory",
 				"pagecollection": "BlueSpice\\Bookshelf\\MassAdd\\Handler\\PageCollection::factory"
+			},
+			"MetaData": {
+				"title": {
+					"class": "BlueSpice\\Bookshelf\\MetaData\\BookTitle"
+				},
+				"author1": {
+					"class": "BlueSpice\\Bookshelf\\MetaData\\Author1"
+				},
+				"author2": {
+					"class": "BlueSpice\\Bookshelf\\MetaData\\Author2"
+				},
+				"bookshelf": {
+					"class": "BlueSpice\\Bookshelf\\MetaData\\Bookshelf"
+				},
+				"department": {
+					"class": "BlueSpice\\Bookshelf\\MetaData\\Department"
+				},
+				"identifier": {
+					"class": "BlueSpice\\Bookshelf\\MetaData\\Identifier"
+				},
+				"bookshelfimage": {
+					"class": "BlueSpice\\Bookshelf\\MetaData\\Image"
+				},
+				"subtitle": {
+					"class": "BlueSpice\\Bookshelf\\MetaData\\Subtitle"
+				},
+				"docummenttype": {
+					"class": "BlueSpice\\Bookshelf\\MetaData\\Type"
+				},
+				"version": {
+					"class": "BlueSpice\\Bookshelf\\MetaData\\Version"
+				}
 			}
 		},
 		"BlueSpiceVisualEditorConnector": {
@@ -532,12 +564,40 @@
 			]
 		},
 		"ext.bookshelf.menuEditor.tools": {
-			"scripts": [
+			"packageFiles": [
 				"ui/tools/MetadataTool.js"
 			],
 			"messages": [
 				"bs-bookshelf-toolbar-tool-metadata-title",
 				"bs-bookshelf-toolbar-tool-metadata-label"
+			],
+			"dependencies": [
+				"oojs"
+			]
+		},
+		"ext.bookshelf.metadata.dialog": {
+			"packageFiles": [
+				"ui/dialog/MetaDataDialog.js",
+				{
+					"name": "ui/dialog/metadata.json",
+					"callback": "BlueSpice\\Bookshelf\\ClientConfig::getRegisteredMetadata"
+				},
+				"ui/widget/MetaDataLayout.js",
+				"ui/widget/MetaDataOutlineWidget.js",
+				"ui/widget/MetaDataOutlineSelectWidget.js",
+				"ui/widget/MetaDataOutlineItemWidget.js"
+			],
+			"styles": [
+				"ui/widget/metadata.widget.styles.css"
+			],
+			"messages": [
+				"bs-bookshelf-metadata-dlg-title",
+				"bs-bookshelf-metadata-dlg-action-save-label",
+				"cancel",
+				"bs-bookshelf-metadata-widget-checkbox-title"
+			],
+			"dependencies": [
+				"oojs"
 			]
 		},
 		"bluespice.bookshelf.processor.chapternumber": {
@@ -546,6 +606,47 @@
 			],
 			"dependencies": [
 				"oojs"
+			]
+		},
+		"bluespice.bookshelf.metadata.pages": {
+			"packageFiles": [
+				"ui/pages/MetadataBookPages.js",
+				"ui/pages/MetaDataPage.js",
+				"ui/pages/BookTitleMeta.js",
+				"ui/pages/Author1Meta.js",
+				"ui/pages/Author2Meta.js",
+				"ui/pages/BookSubtitleMeta.js",
+				"ui/pages/DepartmentMeta.js",
+				"ui/pages/IdentifierMeta.js",
+				"ui/pages/ImageMeta.js",
+				"ui/pages/TypeMeta.js",
+				"ui/pages/VersionMeta.js",
+				"ui/pages/BookshelfMeta.js",
+				{
+					"name": "ui/pages/bookshelfdata.json",
+					"callback": "BlueSpice\\Bookshelf\\ClientConfig::getBookshelfData"
+				}
+			],
+			"messages": [
+				"bs-bookshelfui-bookmetatag-title",
+				"bs-bookshelfui-bookmetatag-author1",
+				"bs-bookshelfui-bookmetatag-subtitle",
+				"bs-bookshelfui-bookmetatag-author2",
+				"bs-bookshelfui-bookmetatag-bookshelf",
+				"bs-bookshelfui-bookmetatag-docummentidentifier",
+				"bs-bookshelfui-bookmetatag-docummenttype",
+				"bs-bookshelfui-bookmetatag-department",
+				"bs-bookshelfui-bookmetatag-version",
+				"bs-bookshelfui-bookmetatag-bookshelfimage"
+			],
+			"dependencies": [
+				"oojs",
+				"ext.oOJSPlus.widgets"
+			]
+		},
+		"bluespice.bookshelf.api": {
+			"scripts": [
+				"api/Api.js"
 			]
 		}
 	},
@@ -674,6 +775,13 @@
 	"DefaultUserOptions": {
 		"bs-bookshelf-defaultview": "gridviewpanel"
 	},
+	"RestRoutes": [
+		{
+			"path": "/bookshelf/metadata/{booktitle}",
+			"class": "\\BlueSpice\\Bookshelf\\Rest\\GetBookMetadata",
+			"services": [ "TitleFactory", "BSBookshelfBookMetaLookup" ]
+		}
+	],
 	"load_composer_autoloader": true,
 	"manifest_version": 2
 }

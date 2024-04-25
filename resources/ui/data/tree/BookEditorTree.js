@@ -3,10 +3,18 @@ bs.util.registerNamespace( 'ext.bookshelf.ui.data.tree' );
 ext.bookshelf.ui.data.tree.BookEditorTree = function ( cfg ) {
 	cfg.classes = [ 'bs-book-tree' ];
 	ext.bookshelf.ui.data.tree.BookEditorTree.parent.call( this, cfg );
-
+	this.metadata = [];
 	this.numberProcessor = new ext.bookshelf.ui.data.BookNumberProcessor();
 	this.connect( this, {
 		nodeRemoved: 'updateNodeNumbers'
+	} );
+
+	mw.hook( 'menueditor.toolbar' ).add( function ( menuToolbar ) {
+		menuToolbar.toolbar.connect( this, {
+			metadataset: function ( metadata ) {
+				this.metadata = metadata;
+			}
+		} );
 	} );
 };
 
