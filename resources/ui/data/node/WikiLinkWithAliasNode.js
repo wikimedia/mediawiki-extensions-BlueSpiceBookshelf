@@ -4,7 +4,7 @@ ext.bookshelf.ui.data.node.WikiLinkWithAliasNode = function ( cfg ) {
 	ext.bookshelf.ui.data.node.WikiLinkWithAliasNode.parent.call( this, cfg );
 };
 
-OO.inheritClass( ext.bookshelf.ui.data.node.WikiLinkWithAliasNode, ext.menueditor.ui.data.node.TreeNode );
+OO.inheritClass( ext.bookshelf.ui.data.node.WikiLinkWithAliasNode, ext.bookshelf.ui.data.node.BookTreeNode );
 
 ext.bookshelf.ui.data.node.WikiLinkWithAliasNode.static.canHaveChildren = false;
 
