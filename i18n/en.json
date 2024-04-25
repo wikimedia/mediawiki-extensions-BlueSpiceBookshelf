@@ -121,6 +121,9 @@
 	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "Add a new wiki page chapter",
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Target",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Text",
-	"bs-bookshelf-toolbar-tool-metadata-title": "Edit metadata",
-	"bs-bookshelf-toolbar-tool-metadata-label": "Edit metadata"
+	"bs-bookshelf-toolbar-tool-metadata-title": "Edit meta data",
+	"bs-bookshelf-toolbar-tool-metadata-label": "Edit meta data",
+	"bs-bookshelf-metadata-widget-checkbox-title": "Select property $1",
+	"bs-bookshelf-metadata-dlg-title": "Edit meta data",
+	"bs-bookshelf-metadata-dlg-action-save-label": "Save"
 }

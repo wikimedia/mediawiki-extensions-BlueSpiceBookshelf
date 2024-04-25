@@ -131,5 +131,8 @@
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Label for form input",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Label for form input",
 	"bs-bookshelf-toolbar-tool-metadata-title": "Title for button in toolbar to edit book metadata",
-	"bs-bookshelf-toolbar-tool-metadata-label": "Label for button in toolbar to edit book metadata"
+	"bs-bookshelf-toolbar-tool-metadata-label": "Label for button in toolbar to edit book metadata",
+	"bs-bookshelf-metadata-widget-checkbox-title": "Title for checkbox which allows to add a metadata property for a book\nParameters:\n* $1 - translated name of property",
+	"bs-bookshelf-metadata-dlg-title": "Title for dialog to set metadata for a book",
+	"bs-bookshelf-metadata-dlg-action-save-label": "Label for action button in dialog to save meta data"
 }

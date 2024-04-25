@@ -14,6 +14,18 @@ ext.bookshelf.ui.tools.MetadataTool.static.displayBothIconAndLabel = true;
 
 ext.bookshelf.ui.tools.MetadataTool.prototype.onSelect = function () {
 	this.setActive( false );
-	this.toolbar.emit( 'updateState' );
+	mw.loader.using( 'ext.bookshelf.metadata.dialog' ).done( function () {
+		var windowManager = new OO.ui.WindowManager();
+		$( document.body ).append( windowManager.$element );
+
+		var dialog = new ext.bookshelf.ui.dialog.MetaDataDialog();
+		windowManager.addWindows( [ dialog ] );
+		windowManager.openWindow( dialog );
+		dialog.on( 'metadataset', function ( metadata ) {
+			this.toolbar.emit( 'metadataset', metadata );
+		}.bind( this ) );
+		this.toolbar.emit( 'updateState' );
+	}.bind( this ) );
 };
+
 ext.bookshelf.ui.tools.MetadataTool.prototype.onUpdateState = function () {};

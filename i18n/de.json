@@ -129,5 +129,8 @@
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Ziel",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Text",
 	"bs-bookshelf-toolbar-tool-metadata-title": "Metadaten bearbeiten",
-	"bs-bookshelf-toolbar-tool-metadata-label": "Metadaten bearbeiten"
+	"bs-bookshelf-toolbar-tool-metadata-label": "Metadaten bearbeiten",
+	"bs-bookshelf-metadata-widget-checkbox-title": "Eigenschaft $1 auswählen",
+	"bs-bookshelf-metadata-dlg-title": "Metadaten bearbeiten",
+	"bs-bookshelf-metadata-dlg-action-save-label": "Speichern"
 }
