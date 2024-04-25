@@ -3,8 +3,8 @@
 namespace BlueSpice\Bookshelf\DynamicFileDispatcher;
 
 use BlueSpice\DynamicFileDispatcher\ArticlePreviewImage;
-use BlueSpice\DynamicFileDispatcher\Params;
 use MediaWiki\MediaWikiServices;
+use Title;
 
 class BookshelfImage extends ArticlePreviewImage {
 
@@ -23,7 +23,7 @@ class BookshelfImage extends ArticlePreviewImage {
 	 * @return StaticCoverImage|ImageExternal
 	 */
 	public function getFile() {
-		$title = \Title::newFromText( $this->params[static::TITLETEXT] );
+		$title = Title::newFromText( $this->params[static::TITLETEXT] );
 		$this->pageHierarchyProvider = \PageHierarchyProvider::getInstanceFor(
 			$title->getPrefixedText()
 		);
@@ -39,15 +39,6 @@ class BookshelfImage extends ArticlePreviewImage {
 		}
 
 		$services = MediaWikiServices::getInstance();
-		$urlUtils = $services->getUrlUtils();
-		$parsedUrl = $urlUtils->parse( $coverpage );
-		if ( $parsedUrl !== false ) {
-			return new ImageExternal(
-				$this,
-				$coverpage,
-				$this->getContext()->getUser()
-			);
-		}
 
 		$file = $services->getRepoGroup()->findFile( $coverpage );
 		if ( $file instanceof \File ) {
@@ -61,27 +52,16 @@ class BookshelfImage extends ArticlePreviewImage {
 			);
 		}
 
+		$urlUtils = $services->getUrlUtils();
+		$parsedUrl = $urlUtils->parse( $coverpage );
+		if ( $parsedUrl !== false ) {
+			return new ImageExternal(
+				$this,
+				$coverpage,
+				$this->getContext()->getUser()
+			);
+		}
+
 		return new StaticCoverImage( $this );
 	}
-
-	/**
-	 *
-	 * @return string
-	 */
-	protected function buildFallbackURL() {
-		$dfdUrlBuilder = MediaWikiServices::getInstance()
-			->getService( 'BSDynamicFileDispatcherUrlBuilder' );
-
-		$extendedToc = $this->pageHierarchyProvider->getExtendedTOCArray();
-		$firstPage = $extendedToc[0];
-		$title = \Title::newFromText( $firstPage['title'] );
-
-		return $dfdUrlBuilder->build( new Params( [
-			Params::MODULE => static::MODULE_NAME,
-			static::TITLETEXT => $title->getPrefixedText(),
-			static::HEIGHT => $this->params[static::HEIGHT],
-			static::WIDTH => $this->params[static::WIDTH],
-		] ) );
-	}
-
 }
