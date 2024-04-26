@@ -148,7 +148,7 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 			'bookshelf' => ''
 		];
 
-		$meta = $this->bookMetaLookup->getMeta( $book );
+		$meta = $this->bookMetaLookup->getMetaForBook( $book );
 
 		return array_merge( $requiredMeta, $meta );
 	}
@@ -210,6 +210,9 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 			$basename = basename( $meta['bookshelfimage'] );
 
 			$fileTitle = $this->titleFactory->newFromText( $basename );
+			if ( !$fileTitle->exists() || $fileTitle->getNamespace() !== NS_FILE ) {
+				$fileTitle = $this->titleFactory->newFromText( $basename, NS_FILE );
+			}
 
 			$localFile = $this->repoGroup->findFile( $fileTitle );
 			if ( $localFile !== false ) {
