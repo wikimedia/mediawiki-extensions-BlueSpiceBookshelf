@@ -51,33 +51,15 @@ class AddChapterNumberToTitleAndHeadings {
 	public function onBeforePageDisplay( $out, $skin ) {
 		$displayTitle = $out->getPageTitle();
 
-		$activeBook = $this->getActiveBook( $out->getTitle() );
 		$chapterInfo = $this->getChapterInfo( $out->getTitle() );
 		if ( $chapterInfo instanceof ChapterInfo === false ) {
 			return true;
 		}
 
-		$displayTitle = $out->getPageTitle();
-
-		// Page title text might be wrapped in HTML elements and it may contain a namespace
-		// <span class="mw-page-title-namespace">...</span>
-		// <span class="mw-page-title-separator">:</span>
-		// <span class="mw-page-title-main">...</span>
-		// In any case we want to show only the subpage title or DISPLAYTITLE but
-		// DISPLAYTITLE is not wrapped in html
-		$regEx = '.*?(<span\s*?class="mw-page-title-main"\s*?>)(.*)(</span>).*$';
-		$matches = [];
-		$status = preg_match( '#' . $regEx . '#', $displayTitle, $matches );
-		if ( $status ) {
-			// We only want to show the subpage title.
-			$subpageText = $skin->getTitle()->getSubpageText();
-			$displayTitle = $matches[1] . $subpageText . $matches[3];
-		}
-
 		// If a title text is set in the book source it should be used instead of title
 		// and even instead of DISPLAYTITLE
 		if ( $this->config->get( 'BookshelfTitleDisplayText' ) ) {
-			$displayTitle = $chapterInfo->getname();
+			$displayTitle = $chapterInfo->getName();
 		}
 
 		$number = $chapterInfo->getNumber();
