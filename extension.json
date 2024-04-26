@@ -664,7 +664,7 @@
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\CommonUserInterface",
 			"services": [
 				"ConfigFactory", "TitleFactory", "BSBookshelfBookContextProviderFactory",
-				"BSBookshelfBookLookup", "BSBookshelfChapterLookup", "MWStakeCommonUITreeDataGenerator"
+				"BSBookshelfBookLookup", "BSBookshelfBookChapterLookup", "MWStakeCommonUITreeDataGenerator"
 			]
 		},
 		"discovery-skin": {
@@ -682,7 +682,7 @@
 		},
 		"add-chapter-number-to-title-and-headings": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\AddChapterNumberToTitleAndHeadings",
-			"services": [ "ConfigFactory", "BSBookshelfBookContextProviderFactory", "BSBookshelfChapterLookup" ]
+			"services": [ "ConfigFactory", "BSBookshelfBookContextProviderFactory", "BSBookshelfBookChapterLookup" ]
 		},
 		"book-source-update": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookPageSaveComplete",

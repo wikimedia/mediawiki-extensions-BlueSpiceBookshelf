@@ -2,10 +2,13 @@
 
 namespace BlueSpice\Bookshelf\Tag;
 
+use BlueSpice\Bookshelf\BookContextProviderFactory;
+use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\ParamProcessor\ParamDefinition;
 use BlueSpice\ParamProcessor\ParamType;
 use BlueSpice\Tag\Tag;
 use MediaWiki\MediaWikiServices;
+use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
 use Parser;
 use PPFrame;
 
@@ -32,13 +35,23 @@ class BookNav extends Tag {
 		$titleFactory = $this->services->getTitleFactory();
 		$componentRenderer = $this->services->getService( 'BSBookshelfComponentRenderer' );
 
+		/** @var BookContextProviderFactory */
+		$bookContxtProviderFactory = $this->services->getService( 'BSBookshelfBookContextProviderFactory' );
+		/** @var BookLookup */
+		$bookLookup = $this->services->getService( 'BSBookshelfBookLookup' );
+		/** @var TreeDataGenerator */
+		$treeDataGenerator = $this->services->getService( 'MWStakeCommonUITreeDataGenerator' );
+
 		return new BookNavHandler(
 			$processedInput,
 			$processedArgs,
 			$parser,
 			$frame,
 			$titleFactory,
-			$componentRenderer
+			$componentRenderer,
+			$bookContxtProviderFactory,
+			$bookLookup,
+			$treeDataGenerator
 		);
 	}
 

@@ -19,34 +19,43 @@ class TreeDataProvider {
 	/** @var BookLookup */
 	private $bookLookup = null;
 
+	/** @var string */
+	private $idPrefix = null;
+
 	/**
 	 * @param BookLookup $bookLookup
 	 * @param BookContextProviderFactory $bookContextProviderFactory
 	 * @param TitleFactory $titleFactory
+	 * @param string $idPrefix
 	 */
 	public function __construct(
-		BookLookup $bookLookup,
-		BookContextProviderFactory $bookContextProviderFactory, TitleFactory $titleFactory
+		BookLookup $bookLookup, BookContextProviderFactory $bookContextProviderFactory,
+		TitleFactory $titleFactory, string $idPrefix = ''
 	) {
 		$this->bookLookup = $bookLookup;
 		$this->bookContextProviderFactory = $bookContextProviderFactory;
 		$this->titleFactory = $titleFactory;
+		$this->idPrefix = $idPrefix;
 	}
 
 	/**
 	 * @param Title $title
+	 * @param Title|null $forceActiveBook
 	 * @return array
 	 */
-	public function get( Title $title ): array {
+	public function get( Title $title, $forceActiveBook = null ): array {
 		$this->title = $title;
-
-		$books = $this->bookLookup->getBooksForPage( $title );
-		if ( empty( $books ) ) {
-			return [];
+		if ( $forceActiveBook === null ) {
+			$books = $this->bookLookup->getBooksForPage( $title );
+			if ( empty( $books ) ) {
+				return [];
+			}
+			$bookContextProvider = $this->bookContextProviderFactory->getProvider( $title );
+			$activeBook = $bookContextProvider->getActiveBook();
+		} else {
+			$activeBook = $forceActiveBook;
 		}
 
-		$bookContextProvider = $this->bookContextProviderFactory->getProvider( $title );
-		$activeBook = $bookContextProvider->getActiveBook();
 		if ( !$activeBook ) {
 			return [];
 		}
@@ -70,7 +79,8 @@ class TreeDataProvider {
 		$itemData = [];
 
 		$fullId = md5( $item['chapter_name'] );
-		$id = substr( $fullId, 0, 6 );
+		$id = $this->idPrefix;
+		$id .= substr( $fullId, 0, 6 );
 		$path .= "/$id";
 
 		$title = $this->titleFactory->makeTitle(

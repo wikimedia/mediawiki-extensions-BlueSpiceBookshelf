@@ -66,7 +66,9 @@ class BookList extends Tag {
 			$frame,
 			$services->getTitleFactory(),
 			$services->getDBLoadBalancer(),
-			$services->getLinkRenderer()
+			$services->getLinkRenderer(),
+			$services->getService( 'BSBookshelfBookLookup' ),
+			$services->getService( 'BSBookshelfBookMetaLookup' )
 		);
 	}
 
