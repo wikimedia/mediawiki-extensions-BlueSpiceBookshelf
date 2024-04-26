@@ -10,7 +10,6 @@ use MediaWiki\Extension\MenuEditor\IMenuNodeProcessor;
 use MediaWiki\Extension\MenuEditor\Node\MenuNode;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Revision\RevisionRecord;
-use MediaWiki\Revision\SlotRecord;
 use MWStake\MediaWiki\Lib\Nodes\INodeProcessor;
 use TitleFactory;
 
@@ -136,9 +135,9 @@ class BookSourceParser extends WikitextMenuParser {
 	}
 
 	/**
-	 * @return Content
+	 * @inheritDoc
 	 */
-	public function getContent(): Content {
-		return new BookContent( $this->revision->getContent( SlotRecord::MAIN )->getText() );
+	protected function getContentObject(): Content {
+		return new BookContent( $this->rawData );
 	}
 }
