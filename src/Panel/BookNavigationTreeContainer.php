@@ -31,16 +31,24 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 	/** @var TreeDataGenerator */
 	private $treeDataGenerator = null;
 
+	/** @var Title|null */
+	private $forceActiveBook = null;
+
+	/** @var string */
+	private $idPrefix = null;
+
 	/**
 	 * @param Title $title
 	 * @param TitleFactory $titleFactory
 	 * @param BookContextProviderFactory $bookContxtProviderFactory
 	 * @param BookLookup $bookLookup
 	 * @param TreeDataGenerator $treeDataGenerator
+	 * @param Title|null $forceActiveBook
+	 * @param string $idPrefix
 	 */
 	public function __construct(
 		Title $title, TitleFactory $titleFactory, BookContextProviderFactory $bookContxtProviderFactory,
-		BookLookup $bookLookup, TreeDataGenerator $treeDataGenerator
+		BookLookup $bookLookup, TreeDataGenerator $treeDataGenerator, $forceActiveBook = null, string $idPrefix = ''
 	) {
 		parent::__construct( [] );
 
@@ -49,6 +57,8 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 		$this->bookContxtProviderFactory = $bookContxtProviderFactory;
 		$this->bookLookup = $bookLookup;
 		$this->treeDataGenerator = $treeDataGenerator;
+		$this->forceActiveBook = $forceActiveBook;
+		$this->idPrefix = $idPrefix;
 	}
 
 	/**
@@ -79,13 +89,12 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 		}
 
 		$treeDataProvider = new TreeDataProvider(
-			$this->bookLookup, $this->bookContxtProviderFactory, $this->titleFactory
+			$this->bookLookup, $this->bookContxtProviderFactory, $this->titleFactory, $this->idPrefix
 		);
-		$treeData = $treeDataProvider->get( $this->title );
 
-		$this->treeData = $treeData;
+		$this->treeData = $treeDataProvider->get( $this->title, $this->forceActiveBook );
 
-		return $treeData;
+		return $this->treeData;
 	}
 
 	/**
