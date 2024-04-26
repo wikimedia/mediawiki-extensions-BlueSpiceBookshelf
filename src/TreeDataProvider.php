@@ -63,19 +63,20 @@ class TreeDataProvider {
 
 		$data = [];
 		foreach ( $items as $item ) {
-			$this->processItem( $item, $data );
+			$this->processItem( $activeBook, $item, $data );
 		}
 
 		return $data;
 	}
 
 	/**
+	 * @param Title $activeBook
 	 * @param array $item
 	 * @param array &$data
 	 * @param string $path
 	 * @return void
 	 */
-	private function processItem( array $item, array &$data, $path = '' ): void {
+	private function processItem( Title $activeBook, array $item, array &$data, $path = '' ): void {
 		$itemData = [];
 
 		$fullId = md5( $item['chapter_name'] );
@@ -92,15 +93,15 @@ class TreeDataProvider {
 			$itemData = $this->makeTextNode( $item, $title, $id, $path );
 		}
 		if ( $this->getNodeType( $item ) === 'wikilink-with-alias' ) {
-			$itemData = $this->makeLinkNode( $item, $title, $id, $path );
+			$itemData = $this->makeLinkNode( $activeBook, $item, $title, $id, $path );
 		}
 		if ( $this->getNodeType( $item ) === 'wikilink' ) {
-			$itemData = $this->makeLinkNode( $item, $title, $id, $path );
+			$itemData = $this->makeLinkNode( $activeBook, $item, $title, $id, $path );
 		}
 
 		if ( isset( $item['chapter_children'] ) && !empty( $item['chapter_children'] ) ) {
 			foreach ( $item['chapter_children'] as $children ) {
-				$this->processItem( $children, $itemData['items'], $path );
+				$this->processItem( $activeBook, $children, $itemData['items'], $path );
 			}
 		}
 
@@ -143,15 +144,17 @@ class TreeDataProvider {
 	}
 
 	/**
+	 * @param Title $activeBook
 	 * @param array $item
 	 * @param Title $title
 	 * @param string $id
 	 * @param string $path
 	 * @return array
 	 */
-	private function makeLinkNode( array $item, Title $title, $id, $path ): array {
+	private function makeLinkNode( Title $activeBook, array $item, Title $title, $id, $path ): array {
 		$data = $this->makeTextNode( $item, $title, $id, $path );
-		$data['href'] = $title->getLocalURL();
+		$text = $activeBook->getPrefixedText();
+		$data['href'] = $title->getLocalURL( "book=$text" );
 
 		return $data;
 	}
