@@ -2,10 +2,11 @@
 
 namespace BlueSpice\Bookshelf\Tag;
 
+use BlueSpice\Bookshelf\BookLookup;
+use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Tag\Handler;
 use Html;
 use MediaWiki\Linker\LinkRenderer;
-use PageHierarchyProvider;
 use Parser;
 use PPFrame;
 use TitleFactory;
@@ -27,6 +28,12 @@ class BookListHandler extends Handler {
 	 */
 	protected $linkRenderer = null;
 
+	/** @var BookLookup */
+	private $bookLookup = null;
+
+	/** @var BookMetaLookup */
+	private $bookMetaLookup = null;
+
 	/**
 	 * @param string $processedInput
 	 * @param array $processedArgs
@@ -35,14 +42,20 @@ class BookListHandler extends Handler {
 	 * @param TitleFactory $titleFactory
 	 * @param LoadBalancer $lb
 	 * @param LinkRenderer $linkRenderer
+	 * @param BookLookup $bookLookup
+	 * @param BookMetaLookup $bookMetaLookup
 	 */
-	public function __construct( $processedInput, array $processedArgs, Parser $parser,
+	public function __construct(
+		$processedInput, array $processedArgs, Parser $parser,
 		PPFrame $frame, TitleFactory $titleFactory, LoadBalancer $lb,
-		LinkRenderer $linkRenderer ) {
+		LinkRenderer $linkRenderer, BookLookup $bookLookup, BookMetaLookup $bookMetaLookup
+	) {
 		parent::__construct( $processedInput, $processedArgs, $parser, $frame );
 		$this->titleFactory = $titleFactory;
 		$this->lb = $lb;
 		$this->linkRenderer = $linkRenderer;
+		$this->bookLookup = $bookLookup;
+		$this->bookMetaLookup = $bookMetaLookup;
 	}
 
 	/**
@@ -61,61 +74,55 @@ class BookListHandler extends Handler {
 		}
 		// TODO RBV (19.12.11 16:32): error message if invalid filter
 
-		$books = [];
-		$res = $this->lb->getConnection( DB_REPLICA )->select(
-			'page',
-			[ 'page_id' ],
-			[ 'page_namespace' => NS_BOOK ],
-			__METHOD__,
-			[ 'ORDER BY' => 'page_id' ]
-		);
+		$books = $this->bookLookup->getBooks();
 
-		foreach ( $res as $row ) {
-			$sourceTitle = $this->titleFactory->newFromID( $row->page_id );
-			if ( !$sourceTitle ) {
+		$bookList = [];
+		foreach ( $books as $book ) {
+			$title = $this->titleFactory->makeTitle( $book->getNamespace(), $book->getTitle() );
+			if ( !$title || !$title->exists() ) {
 				continue;
 			}
 
-			$oPHProvider = PageHierarchyProvider::getInstanceFor(
-				$sourceTitle->getPrefixedText()
-			);
-			$meta = $oPHProvider->getBookMeta();
-			if ( empty( $meta ) ) {
-				// No meta found - implicitly use page title as title meta
-				$meta = [
-					'title' => $sourceTitle->getText()
-				];
+			$meta = $this->bookMetaLookup->getMetaForBook( $title );
+			if ( !isset( $meta['title'] ) ) {
+				$meta['title'] = $book->getName();
+			}
+			if ( !isset( $meta['source'] ) ) {
+				$meta['source'] = $title->getPrefixedText();
 			}
 
-			$match = false;
-			foreach ( $parsedFilters as $key => $value ) {
-				if ( empty( $meta[$key] ) ) {
+			if ( !empty( $parsedFilters ) ) {
+				$match = false;
+				foreach ( $parsedFilters as $key => $value ) {
+					if ( empty( $meta[$key] ) ) {
+						continue;
+					}
+					if ( strpos( $meta[$key], $value ) === false ) {
+						continue;
+					}
+					$match = true;
+					break;
+				}
+				if ( !$match ) {
+					// Not what we are looking for
 					continue;
 				}
-				if ( strpos( $meta[$key], $value ) === false ) {
-					continue;
-				}
-				$match = true;
-				break;
-			}
-			if ( !$match ) {
-				// Not what we are looking for
-				continue;
 			}
 
-			$link = $this->linkRenderer->makeLink( $sourceTitle, $sourceTitle->getText() );
-			$books[] = [
-				'link' => $link,
-				'meta' => $meta
+			$link = $this->linkRenderer->makeLink( $title, $book->getName() );
+
+			$bookList[] = [
+				'meta' => $meta,
+				'link' => $link
 			];
 		}
 
 		// TODO RBV (20.12.11 10:30): Display meta in tooltip...
 		// TODO: allow PDF links to be injected
 		$out = Html::openElement( 'ul' );
-		foreach ( $books as $book ) {
+		foreach ( $bookList as $bookLIstItem ) {
 			$out .= Html::openElement( 'li' );
-			$out .= $book['link'];
+			$out .= $bookLIstItem['link'];
 			$out .= Html::closeElement( 'li' );
 		}
 		$out .= Html::closeElement( 'ul' );

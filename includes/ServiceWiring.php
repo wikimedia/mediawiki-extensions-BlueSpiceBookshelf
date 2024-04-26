@@ -37,18 +37,18 @@ return [
 		$provider = new BookLookup(
 			$services->getTitleFactory(),
 			$services->getDBLoadBalancer(),
-			$services->getService( 'BSBookshelfChapterLookup' )
+			$services->getService( 'BSBookshelfBookChapterLookup' )
 		);
 		return $provider;
 	},
-	'BSBookshelfChapterLookup' => static function ( MediaWikiServices $services ) {
+	'BSBookshelfBookChapterLookup' => static function ( MediaWikiServices $services ) {
 		$provider = new ChapterLookup(
 			$services->getDBLoadBalancer(),
 			$services->getTitleFactory()
 		);
 		return $provider;
 	},
-	'BSBookshelfMetaLookup' => static function ( MediaWikiServices $services ) {
+	'BSBookshelfBookMetaLookup' => static function ( MediaWikiServices $services ) {
 		$provider = new BookMetaLookup(
 			$services->getDBLoadBalancer(),
 			$services->getService( 'BSBookshelfBookLookup' )
