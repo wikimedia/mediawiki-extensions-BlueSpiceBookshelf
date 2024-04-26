@@ -5,12 +5,12 @@ namespace BlueSpice\Bookshelf\Data\BooksOverview;
 use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\BooksOverviewActions\Delete;
 use BlueSpice\Bookshelf\BooksOverviewActions\Edit;
+use BlueSpice\Bookshelf\ChapterDataModel;
+use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\IBooksOverviewAction;
 use Config;
-use InvalidArgumentException;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
-use PageHierarchyProvider;
 use RepoGroup;
 use Title;
 use TitleFactory;
@@ -18,39 +18,28 @@ use User;
 
 class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\SecondaryDataProvider {
 
-	/**
-	 * @var TitleFactory
-	 */
+	/** @var TitleFactory */
 	private $titleFactory = null;
 
-	/**
-	 * @var PermissionManager
-	 */
+	/** @var PermissionManager */
 	private $permissionManager = null;
 
-	/**
-	 * @var HookContainer
-	 */
+	/** @var HookContainer */
 	private $hookRunner = null;
 
-	/**
-	 * @var User
-	 */
+	/** @var User */
 	private $user = null;
 
-	/**
-	 * @var RepoGroup
-	 */
+	/** @var RepoGroup */
 	private $repoGroup = null;
 
-	/**
-	 * @var Config
-	 */
+	/** @var Config */
 	private $config = null;
 
-	/**
-	 * @var BookMetaLookup
-	 */
+	/** @var ChapterLookup */
+	private $bookChapterLookup = null;
+
+	/** @var BookMetaLookup */
 	private $bookMetaLookup = null;
 
 	/**
@@ -77,11 +66,13 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 	 * @param User $user
 	 * @param RepoGroup $repoGroup
 	 * @param Config $config
+	 * @param ChapterLookup $bookChapterLookup
 	 * @param BookMetaLookup $bookMetaLookup
 	 */
 	public function __construct(
 		TitleFactory $titleFactory, PermissionManager $permissionManager,
-		HookContainer $hookRunner, User $user, RepoGroup $repoGroup, Config $config, BookMetaLookup $bookMetaLookup
+		HookContainer $hookRunner, User $user, RepoGroup $repoGroup, Config $config, ChapterLookup $bookChapterLookup,
+		BookMetaLookup $bookMetaLookup
 	) {
 		$this->titleFactory = $titleFactory;
 		$this->permissionManager = $permissionManager;
@@ -89,6 +80,7 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 		$this->hookRunner = $hookRunner;
 		$this->repoGroup = $repoGroup;
 		$this->config = $config;
+		$this->bookChapterLookup = $bookChapterLookup;
 		$this->bookMetaLookup = $bookMetaLookup;
 	}
 
@@ -130,7 +122,36 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 		$localUrl = '';
 
 		if ( $book->isKnown() ) {
-			$localUrl = $book->getLocalURL();
+			$chapters = $this->bookChapterLookup->getChaptersOfBook( $book );
+			if ( empty( $chapters ) ) {
+				return $localUrl;
+			}
+
+			$chapterDataModel = null;
+			foreach ( $chapters as $chapter ) {
+				if ( $chapter instanceof ChapterDataModel === false ) {
+					continue;
+				}
+
+				if ( $chapter->getType() === 'plain-text' ) {
+					continue;
+				}
+
+				$chapterDataModel = $chapter;
+				break;
+			}
+
+			$chapterPage = $this->titleFactory->makeTitle(
+				$chapterDataModel->getNamespace(),
+				$chapterDataModel->getTitle()
+			);
+
+			if ( !$chapterPage ) {
+				return $localUrl;
+			}
+
+			$text = $book->getFullText();
+			$localUrl = $chapterPage->getLocalURL( [ 'book' => $text ] );
 		}
 
 		return $localUrl;
@@ -321,23 +342,6 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 
 			return $positionA > $positionB ? 1 : 0;
 		} );
-	}
-
-	/**
-	 * @param Title $title
-	 * @return PageHierarchyProvider|null
-	 */
-	private function getPageHierarchyProvider( Title $title ): ?PageHierarchyProvider {
-		try {
-			$phProvider = PageHierarchyProvider::getInstanceFor(
-				$title->getPrefixedDBkey()
-			);
-			return $phProvider;
-		} catch ( InvalidArgumentException $e ) {
-			return null;
-		}
-
-		return null;
 	}
 
 	/**

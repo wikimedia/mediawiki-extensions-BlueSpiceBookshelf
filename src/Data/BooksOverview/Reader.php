@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\Data\BooksOverview;
 
 use BlueSpice\Bookshelf\BookMetaLookup;
+use BlueSpice\Bookshelf\ChapterLookup;
 use Config;
 use IContextSource;
 use MediaWiki\HookContainer\HookContainer;
@@ -46,6 +47,9 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 	 */
 	private $repoGroup = null;
 
+	/** @var ChapterLookup */
+	private $bookChapterLookup = null;
+
 	/** @var BookMetaLookup */
 	private $bookMetaLookup = null;
 
@@ -58,12 +62,14 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 	 * @param PermissionManager $permissionManager
 	 * @param HookContainer $hookRunner
 	 * @param RepoGroup $repoGroup
+	 * @param ChapterLookup $bookChapterLookup
 	 * @param BookMetaLookup $bookMetaLookup
 	 */
 	public function __construct(
 		IContextSource $context, Config $config, LoadBalancer $loadBalancer,
 		TitleFactory $titleFactory, PermissionManager $permissionManager,
-		HookContainer $hookRunner, RepoGroup $repoGroup, BookMetaLookup $bookMetaLookup
+		HookContainer $hookRunner, RepoGroup $repoGroup, ChapterLookup $bookChapterLookup,
+		BookMetaLookup $bookMetaLookup
 	) {
 		$context = RequestContext::getMain();
 		$this->config = $config;
@@ -75,6 +81,7 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 		$this->hookRunner = $hookRunner;
 		$this->user = $context->getUser();
 		$this->repoGroup = $repoGroup;
+		$this->bookChapterLookup = $bookChapterLookup;
 		$this->bookMetaLookup = $bookMetaLookup;
 	}
 
@@ -95,7 +102,8 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 	protected function makeSecondaryDataProvider() {
 		return new SecondaryDataProvider(
 			$this->titleFactory, $this->permissionManager, $this->hookRunner,
-			$this->user, $this->repoGroup, $this->config, $this->bookMetaLookup
+			$this->user, $this->repoGroup, $this->config, $this->bookChapterLookup,
+			$this->bookMetaLookup
 		);
 	}
 

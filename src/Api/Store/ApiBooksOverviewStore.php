@@ -29,6 +29,7 @@ class ApiBooksOverviewStore extends \BlueSpice\Api\Store {
 			new Context( RequestContext::getMain(), $this->getConfig() ),
 			$this->getConfig(),
 			$this->services->getDBLoadBalancer(),
+			$this->services->getService( 'BSBookshelfBookChapterLookup' ),
 			$this->services->getService( 'BSBookshelfBookMetaLookup' ),
 			$this->services->getTitleFactory(),
 			$this->services->getPermissionManager(),
