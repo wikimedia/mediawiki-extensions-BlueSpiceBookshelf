@@ -7,13 +7,11 @@
 			"MuratTheTurkish",
 			"Rapsar",
 			"Sqances",
-			"ToprakM"
+			"ToprakM",
+			"RuzDD"
 		]
 	},
 	"bs-bookshelf-extension-description": "BlueSpice'in hiyerarşik madde koleksiyonlarını yönetmesini ve dışa aktarmasını sağlar.",
-	"bs-bookshelf-tag-bookshelf-desc": "Kitap sayfasına bir kitabın bölüm gezintisini ekler. Bu etiket sayesinde söz konusu maddeler kitaba dahil edilmiştir. Numaralandırma otomatik olarak içerik tablosuna uyarlanır.",
-	"bs-bookshelf-tag-bookmeta-desc": "Kitap makalelerine çeşitli meta verileri kaydetmek için etiket. Bunlar kitaba dahildir. Bu etiketin özellikleri, kitap makalesinin meta verileriyle ilişkili olmalıdır.",
-	"bs-bookshelf-tag-booklist-desc": "\"Kitap\" ad alanından madde listeleri oluşturur ve filtrelenebilir. Filtrenin gösterilmesi zorunludur.",
 	"bs-bookshelf-tagerror-no-attribute-given": "Özellik belirtilmedi! İçindekiler tablosunu yapılandırmak için <strong>src</strong> tuşunu kullanın.",
 	"bs-bookshelf-tagerror-article-title-not-valid": "Sağlanan kaynak madde (&quot;$1&quot;) mevcut değil.",
 	"bs-bookshelf-tagerror-article-content-not-valid": "Sağlanan kaynak madde (&quot;$1&quot;) geçersiz veriler içeriyor.",
@@ -59,7 +57,8 @@
 	"bookshelf": "Kitaplık",
 	"bookshelf-summary": "Genel Kitaplar",
 	"prefs-bookshelf": "Kitaplık özel sayfası",
-	"bs-bookshelf-ga-manager-label": "Kitaplar",
+	"bs-bookshelf-mainlinks-label": "Kitaplar",
+	"bs-bookshelf-ga-editing-label": "Kitaplar",
 	"bs-bookshelf-prof-defaultview": "Varsayılan görünüm",
 	"bs-bookshelf-prof-defaultview-grid": "Izgara",
 	"bs-bookshelf-prof-defaultview-images": "Resimler",
@@ -82,6 +81,5 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Sürüm",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Kitabın sürümünü belirler",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Kitaplık",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kitap",
-	"bs-bookshelf-mainlinks-label": "Kitaplar"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kitap"
 }

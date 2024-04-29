@@ -10,7 +10,8 @@
 			"SehrGuterCode",
 			"Stephan Muggli <muggli@hallowelt.biz>",
 			"Wdwd translator",
-			"TomatoCake"
+			"TomatoCake",
+			"Justman10000"
 		]
 	},
 	"bs-bookshelf-extension-description": "Ermöglicht das Zusammenstellen von hierarchisch gegliederten Artikelsammlungen.",
@@ -102,6 +103,7 @@
 	"bs-bookshelf-booknav-book-label": "Buch",
 	"bs-bookshelf-booknav-book-help": "Wähle ein zu verwendendes Buch aus",
 	"bs-bookshelf-booknav-chapter-label": "Kapitel",
+	"bs-bookshelf-booknav-chapter-help": "Wähle das anzuzeigende Kapitel aus",
 	"bs-bookshelf-booknav-book-not-exist": "Buch $1 existiert nicht",
 	"bs-bookshelf-booknav-chapter-not-exist": "Kapitel $1 existiert nicht",
 	"bs-bookshelf-booknav-searchbox-placeholder": "Durchsuchen",
@@ -120,5 +122,14 @@
 	"bs-books-overview-page-book-action-edit-text": "Bearbeiten",
 	"bs-books-overview-page-book-action-edit-title": "Buch $1 bearbeiten",
 	"bs-books-overview-page-book-action-delete-text": "Löschen",
-	"bs-books-overview-page-book-action-delete-title": "Buch $1 löschen"
+	"bs-books-overview-page-book-action-delete-title": "Buch $1 löschen",
+	"bs-bookshelf-chapter-plain-text-label": "Text-Kapitelüberschrift",
+	"bs-bookshelf-chapter-plain-text-label-edit": "Eine neue Kapitelüberschrift hinzufügen",
+	"bs-bookshelf-chapter-plain-text-input-label": "Text",
+	"bs-bookshelf-chapter-wikilink-with-alias-label": "Wiki-Seiten-Kapitel",
+	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "Ein neues Kapitel der Wiki-Seite hinzufügen",
+	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Ziel",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Text",
+	"bs-bookshelf-toolbar-tool-metadata-title": "Metadaten bearbeiten",
+	"bs-bookshelf-toolbar-tool-metadata-label": "Metadaten bearbeiten"
 }
