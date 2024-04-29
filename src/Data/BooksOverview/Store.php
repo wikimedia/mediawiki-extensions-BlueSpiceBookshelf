@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\Data\BooksOverview;
 
 use BlueSpice\Bookshelf\BookMetaLookup;
+use BlueSpice\Bookshelf\ChapterLookup;
 use Config;
 use IContextSource;
 use MediaWiki\HookContainer\HookContainer;
@@ -15,40 +16,29 @@ use Wikimedia\Rdbms\LoadBalancer;
 
 class Store implements IStore {
 
-	/**
-	 * @var \IContextSource
-	 */
+	/** @var \IContextSource */
 	protected $context = null;
 
-	/**
-	 * @var Config
-	 */
+	/** @var Config */
 	private $config = null;
 
-	/**
-	 * @var LoadBalancer
-	 */
+	/** @var LoadBalancer */
 	private $loadBalancer = null;
 
-	/**
-	 * @var TitleFactory
-	 */
+	/** @var TitleFactory */
 	private $titleFactory = null;
 
-	/**
-	 * @var HookContainer
-	 */
+	/** @var HookContainer */
 	private $hookRunner = null;
 
-	/**
-	 * @var PermissionManager
-	 */
+	/** @var PermissionManager */
 	private $permissionManager = null;
 
-	/**
-	 * @var RepoGroup
-	 */
+	/** @var RepoGroup */
 	private $repoGroup = null;
+
+	/** @var ChapterLookup */
+	private $bookChapterLookup = null;
 
 	/** @var BookMetaLookup */
 	private $bookMetaLookup = null;
@@ -57,6 +47,7 @@ class Store implements IStore {
 	 * @param ContextSource $context
 	 * @param Config $config
 	 * @param LoadBalancer $loadBalancer
+	 * @param ChapterLookup $bookChapterLookup
 	 * @param BookMetaLookup $bookMetaLookup
 	 * @param TitleFactory $titleFactory
 	 * @param PermissionManager $permissionManager
@@ -64,13 +55,14 @@ class Store implements IStore {
 	 * @param RepoGroup $repoGroup
 	 */
 	public function __construct(
-		IContextSource $context, Config $config, LoadBalancer $loadBalancer,
+		IContextSource $context, Config $config, LoadBalancer $loadBalancer, ChapterLookup $bookChapterLookup,
 		BookMetaLookup $bookMetaLookup, TitleFactory $titleFactory, PermissionManager $permissionManager,
 		HookContainer $hookContainer, RepoGroup $repoGroup
 	) {
 		$this->context = $context;
 		$this->config = $config;
 		$this->loadBalancer = $loadBalancer;
+		$this->bookChapterLookup = $bookChapterLookup;
 		$this->bookMetaLookup = $bookMetaLookup;
 		$this->titleFactory = $titleFactory;
 		$this->permissionManager = $permissionManager;
@@ -91,6 +83,7 @@ class Store implements IStore {
 			$this->permissionManager,
 			$this->hookRunner,
 			$this->repoGroup,
+			$this->bookChapterLookup,
 			$this->bookMetaLookup
 		);
 	}
