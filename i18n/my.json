@@ -5,15 +5,15 @@
 			"MM abc.xyz"
 		]
 	},
-	"bs-bookshelf-action-editbook": "ရင်းမြစ်ကို တည်းဖြတ်ရန်",
-	"bs-bookshelf-action-editbook-create": "ရင်းမြစ်ကို တည်းဖြတ်ရန်",
-	"bs-bookshelf-ga-manager-label": "စာအုပ်များ",
-	"bs-bookshelf-specialpage-title": "စာအုပ်များ",
-	"bs-bookshelf-specialpage-allpages-ns-book-text": "စာကြည့်တိုက်",
-	"bs-bookshelf-tag-next": "ရှေ့",
-	"bs-bookshelf-tag-prev": "ယခင်",
-	"bs-bookshelf-ve-bookmeta-attr-version-label": "ဗားရှင်း",
-	"bs-bookshelf-mainlinks-label": "စာအုပ်များ",
-	"apihelp-bs-books-overview-store-summary": "စာအုပ်စင်၊ ပထမအခန်းလင့်ခ်နှင့် လုပ်ဆောင်ချက်များ အပါအဝင် စာအုပ်အားလုံးကို စာရင်းပြုစုထားသည်။",
-	"bs-books-overview-page-book-actions-dropdown-menu-title": "ဤစာအုပ်အတွက် နောက်ထပ်လုပ်ဆောင်မှုများ"
+	"bs-bookshelf-action-editbook": "\u101b\u1004\u103a\u1038\u1019\u103c\u1005\u103a\u1000\u102d\u102f \u1010\u100a\u103a\u1038\u1016\u103c\u1010\u103a\u101b\u1014\u103a",
+	"bs-bookshelf-action-editbook-create": "\u101b\u1004\u103a\u1038\u1019\u103c\u1005\u103a\u1000\u102d\u102f \u1010\u100a\u103a\u1038\u1016\u103c\u1010\u103a\u101b\u1014\u103a",
+	"bs-bookshelf-ga-manager-label": "\u1005\u102c\u1021\u102f\u1015\u103a\u1019\u103b\u102c\u1038",
+	"bs-bookshelf-specialpage-title": "\u1005\u102c\u1021\u102f\u1015\u103a\u1019\u103b\u102c\u1038",
+	"bs-bookshelf-specialpage-allpages-ns-book-text": "\u1005\u102c\u1000\u103c\u100a\u1037\u103a\u1010\u102d\u102f\u1000\u103a",
+	"bs-bookshelf-tag-next": "\u101b\u103e\u1031\u1037",
+	"bs-bookshelf-tag-prev": "\u101a\u1001\u1004\u103a",
+	"bs-bookshelf-ve-bookmeta-attr-version-label": "\u1017\u102c\u1038\u101b\u103e\u1004\u103a\u1038",
+	"bs-bookshelf-mainlinks-label": "\u1005\u102c\u1021\u102f\u1015\u103a\u1019\u103b\u102c\u1038",
+	"apihelp-bs-books-overview-store-summary": "\u1005\u102c\u1021\u102f\u1015\u103a\u1005\u1004\u103a\u104a \u1015\u1011\u1019\u1021\u1001\u1014\u103a\u1038\u101c\u1004\u1037\u103a\u1001\u103a\u1014\u103e\u1004\u1037\u103a \u101c\u102f\u1015\u103a\u1006\u1031\u102c\u1004\u103a\u1001\u103b\u1000\u103a\u1019\u103b\u102c\u1038 \u1021\u1015\u102b\u1021\u101d\u1004\u103a \u1005\u102c\u1021\u102f\u1015\u103a\u1021\u102c\u1038\u101c\u102f\u1036\u1038\u1000\u102d\u102f \u1005\u102c\u101b\u1004\u103a\u1038\u1015\u103c\u102f\u1005\u102f\u1011\u102c\u1038\u101e\u100a\u103a\u104b",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "\u1024\u1005\u102c\u1021\u102f\u1015\u103a\u1021\u1010\u103d\u1000\u103a \u1014\u1031\u102c\u1000\u103a\u1011\u1015\u103a\u101c\u102f\u1015\u103a\u1006\u1031\u102c\u1004\u103a\u1019\u103e\u102f\u1019\u103b\u102c\u1038"
 }
