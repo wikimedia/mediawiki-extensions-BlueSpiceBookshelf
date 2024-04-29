@@ -87,6 +87,21 @@ class BookSelectWidget extends SimpleDropdown {
 		return $this->getText();
 	}
 
+
+	/**
+	 * @return array
+	 */
+	public function getContainerClasses(): array {
+		return [ 'book-select-widget'];
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getMenuClasses(): array {
+		return [ 'mws-dropdown-secondary' ];
+	}
+
 	/**
 	 * @param Title|null $activeBook
 	 * @return string

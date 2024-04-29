@@ -410,7 +410,8 @@
 		},
 		"ext.bookshelf.navigation-panel.styles": {
 			"styles": [
-				"bluespice.bookshelf.navigation-panel.css"
+				"bluespice.bookshelf.navigation-panel.css",
+				"bluespice.bookshelf.book-select-widgets.css"
 			]
 		},
 		"ext.bookshelf.special-bookshelf.styles": {
