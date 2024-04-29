@@ -6,11 +6,11 @@
 			"Pisceskaze"
 		]
 	},
-	"bs-bookshelf-action-editbook": "Sửa mã nguồn",
-	"bs-bookshelf-action-editbook-create": "Sửa mã nguồn",
-	"bs-bookshelf-ga-manager-label": "Sách",
-	"bs-bookshelf-mainlinks-label": "Sách",
-	"bs-bookshelf-droplet-pdf-name": "Liên kết sách PDF",
-	"bs-bookshelf-droplet-pdf-description": "Liên kết tải sách dưới dạng PDF",
-	"bs-bookshelf-droplet-pdf-link-label": "Nhãn liên kết"
+	"bs-bookshelf-action-editbook": "S\u1eeda m\u00e3 ngu\u1ed3n",
+	"bs-bookshelf-action-editbook-create": "S\u1eeda m\u00e3 ngu\u1ed3n",
+	"bs-bookshelf-ga-manager-label": "S\u00e1ch",
+	"bs-bookshelf-mainlinks-label": "S\u00e1ch",
+	"bs-bookshelf-droplet-pdf-name": "Li\u00ean k\u1ebft s\u00e1ch PDF",
+	"bs-bookshelf-droplet-pdf-description": "Li\u00ean k\u1ebft t\u1ea3i s\u00e1ch d\u01b0\u1edbi d\u1ea1ng PDF",
+	"bs-bookshelf-droplet-pdf-link-label": "Nh\u00e3n li\u00ean k\u1ebft"
 }

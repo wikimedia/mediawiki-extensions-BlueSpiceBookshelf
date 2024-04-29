@@ -4,11 +4,11 @@
 			"Bosogo"
 		]
 	},
-	"bs-bookshelf-prof-defaultview-images": "Сүрөттөр",
-	"bs-bookshelf-ve-bookmeta-attr-title-label": "Аталыш",
-	"bs-bookshelf-book-grid-title": "Китептер",
-	"bs-bookshelf-ga-manager-label": "Китептер",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Китеп",
-	"bs-bookshelf-ve-bookmeta-attr-author-label": "Автор",
-	"bs-bookshelf-mainlinks-label": "Китептер"
+	"bs-bookshelf-prof-defaultview-images": "\u0421\u04af\u0440\u04e9\u0442\u0442\u04e9\u0440",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "\u0410\u0442\u0430\u043b\u044b\u0448",
+	"bs-bookshelf-book-grid-title": "\u041a\u0438\u0442\u0435\u043f\u0442\u0435\u0440",
+	"bs-bookshelf-ga-manager-label": "\u041a\u0438\u0442\u0435\u043f\u0442\u0435\u0440",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "\u041a\u0438\u0442\u0435\u043f",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "\u0410\u0432\u0442\u043e\u0440",
+	"bs-bookshelf-mainlinks-label": "\u041a\u0438\u0442\u0435\u043f\u0442\u0435\u0440"
 }

@@ -6,7 +6,7 @@
 		]
 	},
 	"bs-bookshelf-specialpage-title": "Libres",
-	"bs-bookshelf-specialpage-allpages-ns-book-text": "Bibliotèca",
+	"bs-bookshelf-specialpage-allpages-ns-book-text": "Bibliot\u00e8ca",
 	"bs-bookshelf-tag-next": "Seguent",
 	"bs-bookshelf-tag-prev": "Precedent",
 	"bs-bookshelf-tag-edit-book": "Modificar lo libre",
@@ -17,7 +17,7 @@
 	"bookshelf-summary": "Libres generaus",
 	"bs-bookshelf-ga-manager-label": "Libres",
 	"bs-bookshelf-prof-defaultview-images": "Imatges",
-	"bs-bookshelf-ve-bookmeta-attr-title-label": "Títol",
+	"bs-bookshelf-ve-bookmeta-attr-title-label": "T\u00edtol",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autor",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Version",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libre",
@@ -26,7 +26,7 @@
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtre",
 	"bs-bookshelf-booknav-book-label": "Libre",
 	"bs-bookshelf-booknav-book-help": "Selecionnar un libre d'utilizar",
-	"bs-bookshelf-booknav-chapter-label": "Capítol",
+	"bs-bookshelf-booknav-chapter-label": "Cap\u00edtol",
 	"bs-bookshelf-booknav-searchbox-placeholder": "Cercar",
 	"bs-bookshelf-droplet-pdf-name": "Ligam del PDF"
 }
