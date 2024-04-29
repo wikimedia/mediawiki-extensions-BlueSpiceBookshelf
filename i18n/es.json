@@ -113,6 +113,7 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Libro para exportar",
 	"bs-bookshelf-droplet-pdf-template-label": "Plantilla de libro en PDF",
 	"bs-bookshelf-droplet-pdf-link-label": "Etiqueta del enlace",
+	"bs-books-overview-page-book-search-placeholder": "Encontrar el libro",
 	"bs-bookshelf-chapter-plain-text-label": "Título del capítulo de texto",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Agregar un nuevo título de capítulo",
 	"bs-bookshelf-chapter-plain-text-input-label": "Texto",
