@@ -4,9 +4,7 @@
 			"Abijeet Patro"
 		]
 	},
-	"bs-bookshelf-ga-editing-label": "\u092a\u0941\u0938\u094d\u0924\u0915\u0947\u0902",
-	"bs-bookshelf-booknav-book-label": "\u092a\u0941\u0938\u094d\u0924\u0915",
-	"bs-bookshelf-booknav-searchbox-placeholder": "\u0916\u094b\u091c\u0947\u0902",
-	"bs-bookshelf-chapter-plain-text-input-label": "\u091f\u0947\u0915\u094d\u0938\u094d\u091f",
-	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "\u091f\u0947\u0915\u094d\u0938\u094d\u091f"
+	"bs-bookshelf-ga-editing-label": "पुस्तकें",
+	"bs-bookshelf-booknav-book-label": "पुस्तक",
+	"bs-bookshelf-booknav-searchbox-placeholder": "खोजें"
 }
