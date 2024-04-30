@@ -4,8 +4,8 @@
 			"Krisztina"
 		]
 	},
-	"bs-bookshelf-tag-bookshelf-desc": "Egy k\u00f6nyv fejezet szerinti navig\u00e1ci\u00f3j\u00e1t sz\u00farja be a k\u00f6nyv lapj\u00e1ba. Ezen a c\u00edmk\u00e9n kereszt\u00fcl az eml\u00edtett lapok beker\u00fclnek a k\u00f6nyvbe. A sz\u00e1moz\u00e1s automatikusan a tartalomjegyz\u00e9khez igazodik.",
-	"bs-bookshelf-tagerror-no-attribute-given": "Nincs megadott attrib\u00fatum! Haszn\u00e1lja a <strong>src<\/strong> hogy be\u00e1ll\u00edtsa a  tartalomjegyz\u00e9ket.",
-	"bs-bookshelf-add-to-book-added": "\"$1\" k\u00f6nyvh\u00f6z hozz\u00e1adta a lapot.",
-	"bs-bookshelf-tag-bookshelf-box-desc": "Egy k\u00f6nyv fejezet szerinti navig\u00e1ci\u00f3j\u00e1t sz\u00farja be a k\u00f6nyv lapj\u00e1ba, amely nem r\u00e9sze a k\u00f6nyvnek. A sz\u00e1moz\u00e1s automatikusan a tartalomjegyz\u00e9khez igazodik."
+	"bs-bookshelf-tag-bookshelf-desc": "Egy könyv fejezet szerinti navigációját szúrja be a könyv lapjába. Ezen a címkén keresztül az említett lapok bekerülnek a könyvbe. A számozás automatikusan a tartalomjegyzékhez igazodik.",
+	"bs-bookshelf-tagerror-no-attribute-given": "Nincs megadott attribútum! Használja a <strong>src</strong> hogy beállítsa a  tartalomjegyzéket.",
+	"bs-bookshelf-add-to-book-added": "\"$1\" könyvhöz hozzáadta a lapot.",
+	"bs-bookshelf-tag-bookshelf-box-desc": "Egy könyv fejezet szerinti navigációját szúrja be a könyv lapjába, amely nem része a könyvnek. A számozás automatikusan a tartalomjegyzékhez igazodik."
 }

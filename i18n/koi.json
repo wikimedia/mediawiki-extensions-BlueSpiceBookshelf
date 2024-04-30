@@ -1,23 +1,23 @@
 {
 	"@metadata": {
 		"authors": [
-			"\u0420\u0438\u043c\u043c\u0430"
+			"Римма"
 		]
 	},
-	"bs-bookshelf-ga-editing-label": "\u041d\u0435\u0431\u04e7\u0433\u0433\u0435\u0437",
-	"bs-bookshelf-config-mainlinks-bookshelf-label": "\u041c\u044b\u0447\u0447\u0430\u0432\u043d\u044b \" \u041d\u0435\u0431\u04e7\u0433\u0433\u0435\u0437\" \u043f\u044b\u0440\u0430\u043d\u0456\u043d",
-	"bs-bookshelf-config-mainlinks-bookshelf-help": "\u041c\u044b\u0447\u0447\u0430\u0432\u043d\u044b \u0448\u0443\u043b\u044c\u0433\u0430 \u043d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u044f \u0438\u043d\u0434\u0430\u043d\u043f\u04e7\u043b\u044b\u043d \" \u041d\u0435\u0431\u04e7\u0433\u0433\u0435\u0437\" \u044b\u0441\u0442\u0456\u0441\u044c\u04e7\u043c\u043b\u0456\u0441\u044c \u043f\u044b\u0440\u0430\u043d\u0456\u043d.",
-	"bs-bookshelf-booknav-name": "\u041d\u0435\u0431\u04e7\u0433 \u043a\u0443\u0437\u044f \u0432\u0435\u0448\u0442\u0430\u0441\u044c\u04e7\u043c",
-	"bs-bookshelf-booknav-desc": "\u041c\u044b\u0447\u0447\u0430\u043b\u04e7 \u043d\u0435\u0431\u04e7\u0433 \u043a\u0443\u0437\u044f \u0432\u0435\u0448\u0442\u0430\u0441\u044c\u04e7\u043c",
-	"bs-bookshelf-booknav-book-label": "\u041d\u0435\u0431\u04e7\u0433",
-	"bs-bookshelf-booknav-book-help": "\u0411\u04e7\u0440\u0439\u04e7 \u0443\u0434\u0436\u04e7 \u043f\u044b\u0440\u0442\u04e7\u043c \u043f\u043e\u043d\u0434\u0430 \u043d\u0435\u0431\u04e7\u0433",
-	"bs-bookshelf-booknav-chapter-label": "\u042e\u0440\u043f\u0430\u0441",
-	"bs-bookshelf-booknav-chapter-help": "\u0411\u04e7\u0440\u0439\u04e7 \u043c\u044b\u0447\u0447\u0430\u043b\u04e7\u043c \u043f\u043e\u043d\u0434\u0430 \u044e\u0440\u043f\u0430\u0441",
-	"bs-bookshelf-booknav-book-not-exist": "\u041d\u0435\u0431\u04e7\u0433 $1 \u0430\u0431\u0443",
-	"bs-bookshelf-booknav-chapter-not-exist": "\u042e\u0440\u043f\u0430\u0441 $1 \u0430\u0431\u0443",
-	"bs-bookshelf-droplet-pdf-name": "PDF-\u044b\u043d \u043d\u0435\u0431\u04e7\u0433 \u0432\u044b\u043b\u04e7 \u044b\u0441\u0442\u0456\u0441\u044c\u04e7\u043c",
-	"bs-bookshelf-droplet-pdf-description": "PDF-\u044b\u043d \u043d\u0435\u0431\u04e7\u0433\u0433\u0435\u0437 \u043a\u04e7\u0440\u0442\u0430\u043b\u04e7\u043c \u043f\u043e\u043d\u0434\u0430 \u044b\u0441\u0442\u0456\u0441\u044c\u04e7\u043c",
-	"bs-bookshelf-droplet-pdf-book-label": "\u042b\u0441\u0442\u04e7\u043c \u043f\u043e\u043d\u0434\u0430 \u043d\u0435\u0431\u04e7\u0433",
-	"bs-bookshelf-droplet-pdf-template-label": "PDF-\u044b\u043d \u043d\u0435\u0431\u04e7\u0433 \u0431\u0430\u043b\u0430",
-	"bs-bookshelf-droplet-pdf-link-label": "\u042b\u0441\u0442\u0456\u0441\u044c\u04e7\u043c \u043f\u0430\u0441"
+	"bs-bookshelf-ga-editing-label": "Небӧггез",
+	"bs-bookshelf-config-mainlinks-bookshelf-label": "Мыччавны \" Небӧггез\" пыранін",
+	"bs-bookshelf-config-mainlinks-bookshelf-help": "Мыччавны шульга навигация инданпӧлын \" Небӧггез\" ыстісьӧмлісь пыранін.",
+	"bs-bookshelf-booknav-name": "Небӧг кузя вештасьӧм",
+	"bs-bookshelf-booknav-desc": "Мыччалӧ небӧг кузя вештасьӧм",
+	"bs-bookshelf-booknav-book-label": "Небӧг",
+	"bs-bookshelf-booknav-book-help": "Бӧрйӧ уджӧ пыртӧм понда небӧг",
+	"bs-bookshelf-booknav-chapter-label": "Юрпас",
+	"bs-bookshelf-booknav-chapter-help": "Бӧрйӧ мыччалӧм понда юрпас",
+	"bs-bookshelf-booknav-book-not-exist": "Небӧг $1 абу",
+	"bs-bookshelf-booknav-chapter-not-exist": "Юрпас $1 абу",
+	"bs-bookshelf-droplet-pdf-name": "PDF-ын небӧг вылӧ ыстісьӧм",
+	"bs-bookshelf-droplet-pdf-description": "PDF-ын небӧггез кӧрталӧм понда ыстісьӧм",
+	"bs-bookshelf-droplet-pdf-book-label": "Ыстӧм понда небӧг",
+	"bs-bookshelf-droplet-pdf-template-label": "PDF-ын небӧг бала",
+	"bs-bookshelf-droplet-pdf-link-label": "Ыстісьӧм пас"
 }
