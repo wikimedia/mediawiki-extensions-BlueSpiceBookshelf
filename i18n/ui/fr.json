@@ -2,12 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Aaribaud",
+			"Alien333",
 			"Eihel",
 			"Gomoko",
 			"Thibaut120094",
 			"Verdy p",
-			"Wladek92",
-			"Alien333"
+			"Wladek92"
 		]
 	},
 	"bs-bookshelfui-extension-description": "Permet à BlueSpice de gérer les collections hiérarchiques de pages wiki.",

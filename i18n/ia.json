@@ -123,5 +123,6 @@
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Destination",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Texto",
 	"bs-bookshelf-toolbar-tool-metadata-title": "Modificar metadatos",
-	"bs-bookshelf-toolbar-tool-metadata-label": "Modificar metadatos"
+	"bs-bookshelf-toolbar-tool-metadata-label": "Modificar metadatos",
+	"bs-books-overview-page-book-search-placeholder": "Cercar libro"
 }

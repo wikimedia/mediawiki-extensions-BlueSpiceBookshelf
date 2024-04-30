@@ -127,5 +127,6 @@
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "יעד",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "טקסט",
 	"bs-bookshelf-toolbar-tool-metadata-title": "עריכת מטא־נתונים",
-	"bs-bookshelf-toolbar-tool-metadata-label": "עריכת מטא־נתונים"
+	"bs-bookshelf-toolbar-tool-metadata-label": "עריכת מטא־נתונים",
+	"bs-books-overview-page-book-search-placeholder": "למצוא ספר"
 }
