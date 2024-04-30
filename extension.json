@@ -296,9 +296,6 @@
 			"messages": [
 				"bs-bookshelfui-widget-editor-link-text",
 				"bs-bookshelf-grouping-template-type-ns_book"
-			],
-			"dependencies": [
-				"ext.bluespice.extjs.BS.deferred"
 			]
 		},
 		"ext.bluespice.bookshelf.manager": {
