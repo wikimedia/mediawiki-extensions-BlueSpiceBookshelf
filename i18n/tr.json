@@ -6,6 +6,7 @@
 			"Joseph",
 			"MuratTheTurkish",
 			"Rapsar",
+			"RuzDD",
 			"Sqances",
 			"ToprakM"
 		]
@@ -83,5 +84,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Kitabın sürümünü belirler",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Kitaplık",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kitap",
-	"bs-bookshelf-mainlinks-label": "Kitaplar"
+	"bs-bookshelf-mainlinks-label": "Kitaplar",
+	"bs-bookshelf-ga-editing-label": "Kitaplar"
 }

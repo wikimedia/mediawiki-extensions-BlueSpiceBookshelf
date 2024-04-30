@@ -61,5 +61,10 @@
 	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "Више радњи за ову књигу",
 	"bs-books-overview-page-book-action-edit-text": "Уреди",
 	"bs-books-overview-page-book-action-edit-title": "Уреди књигу $1",
-	"bs-books-overview-page-book-action-delete-text": "Обриши"
+	"bs-books-overview-page-book-action-delete-text": "Обриши",
+	"bs-books-overview-page-book-search-placeholder": "Претрага књига",
+	"bs-bookshelf-chapter-plain-text-input-label": "Текст",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Текст",
+	"bs-bookshelf-toolbar-tool-metadata-title": "Уреди метаподатке",
+	"bs-bookshelf-toolbar-tool-metadata-label": "Уреди метаподатке"
 }

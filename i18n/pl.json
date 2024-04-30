@@ -50,5 +50,8 @@
 	"bs-bookshelf-prof-defaultview-grid": "Siatka",
 	"bs-bookshelf-warning": "Wyjątek PHP: $1",
 	"bs-bookshelf-booknav-book-label": "Książka",
-	"bs-bookshelf-booknav-chapter-label": "Rozdział"
+	"bs-bookshelf-booknav-chapter-label": "Rozdział",
+	"books": "Książki",
+	"bs-books-overview-page-book-action-delete-text": "Usuń",
+	"bs-books-overview-page-book-action-delete-title": "Usuń książkę $1"
 }

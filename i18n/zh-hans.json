@@ -130,5 +130,17 @@
 	"bs-bookshelf-droplet-pdf-description": "以PDF格式下载书籍的链接",
 	"bs-bookshelf-droplet-pdf-book-label": "要导出的书籍",
 	"bs-bookshelf-droplet-pdf-template-label": "书籍PDF模板",
-	"bs-bookshelf-droplet-pdf-link-label": "链接文本"
+	"bs-bookshelf-droplet-pdf-link-label": "链接文本",
+	"bs-books-overview-page-book-action-edit-text": "编辑",
+	"bs-books-overview-page-book-action-delete-text": "删除",
+	"bs-books-overview-page-book-search-placeholder": "查找图书",
+	"bs-bookshelf-chapter-plain-text-label": "文本章节标题",
+	"bs-bookshelf-chapter-plain-text-label-edit": "添加新章节标题",
+	"bs-bookshelf-chapter-plain-text-input-label": "文本",
+	"bs-bookshelf-chapter-wikilink-with-alias-label": "wiki页面章节",
+	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "添加新的wiki页面章节",
+	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "目标",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "文本",
+	"bs-bookshelf-toolbar-tool-metadata-title": "编辑元数据",
+	"bs-bookshelf-toolbar-tool-metadata-label": "编辑元数据"
 }

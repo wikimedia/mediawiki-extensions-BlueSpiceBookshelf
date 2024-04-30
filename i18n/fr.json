@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"Alien333",
 			"BlueCamille",
 			"Daniel Mietchen",
 			"DreZhsh",
@@ -115,5 +116,27 @@
 	"bs-bookshelf-droplet-pdf-name": "Lien du livre PDF",
 	"bs-bookshelf-droplet-pdf-description": "Lien permettant de télécharger un livre au format PDF",
 	"bs-bookshelf-droplet-pdf-template-label": "Modèle de livre PDF",
-	"bs-bookshelf-droplet-pdf-link-label": "Libellé du lien"
+	"bs-bookshelf-droplet-pdf-link-label": "Libellé du lien",
+	"bs-bookshelf-booknav-title": "Table des matières du livre",
+	"bs-bookshelf-droplet-pdf-book-label": "Livre à exporter",
+	"books": "Livres",
+	"bs-books-overview-page-loading-text": "L'aperçu du livre est en cours de chargement...",
+	"bs-books-overview-page-bookshelf-various-books": "Divers livres",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "Plus d'actions pour ce livre",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "Plus d'actions pour ce livre",
+	"bs-books-overview-page-book-anchor-title": "Ouvrir la première page du livre $1",
+	"bs-books-overview-page-book-anchor-aria-label": "Ouvrir la première page du livre $1",
+	"bs-books-overview-page-book-action-edit-text": "Modifier",
+	"bs-books-overview-page-book-action-edit-title": "Modifier le livre $1",
+	"bs-books-overview-page-book-action-delete-text": "Supprimer",
+	"bs-books-overview-page-book-action-delete-title": "Supprimer le livre $1",
+	"bs-bookshelf-chapter-plain-text-label": "Titre du chapitre du texte",
+	"bs-bookshelf-chapter-plain-text-label-edit": "Ajouter un nouveau titre de chapitre",
+	"bs-bookshelf-chapter-plain-text-input-label": "Texte",
+	"bs-bookshelf-chapter-wikilink-with-alias-label": "Chapitre de la page de wiki",
+	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "Ajouter un nouveau chapitre à la page de wiki",
+	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Cible",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Texte",
+	"bs-bookshelf-toolbar-tool-metadata-title": "Modifier les métadonnées",
+	"bs-bookshelf-toolbar-tool-metadata-label": "Modifier les métadonnées"
 }
