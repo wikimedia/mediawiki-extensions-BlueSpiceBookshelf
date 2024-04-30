@@ -87,12 +87,11 @@ class BookSelectWidget extends SimpleDropdown {
 		return $this->getText();
 	}
 
-
 	/**
 	 * @return array
 	 */
 	public function getContainerClasses(): array {
-		return [ 'book-select-widget'];
+		return [ 'book-select-widget' ];
 	}
 
 	/**
