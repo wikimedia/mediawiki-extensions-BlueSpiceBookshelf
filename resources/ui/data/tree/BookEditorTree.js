@@ -5,6 +5,9 @@ ext.bookshelf.ui.data.tree.BookEditorTree = function ( cfg ) {
 	ext.bookshelf.ui.data.tree.BookEditorTree.parent.call( this, cfg );
 
 	this.numberProcessor = new ext.bookshelf.ui.data.BookNumberProcessor();
+	this.connect( this, {
+		nodeRemoved: 'updateNodeNumbers'
+	} );
 };
 
 // eslint-disable-next-line max-len
@@ -45,6 +48,17 @@ ext.bookshelf.ui.data.tree.BookEditorTree.prototype.createItemWidget = function 
 
 ext.bookshelf.ui.data.tree.BookEditorTree.prototype.onDragStop = function( item, $target, e, ui ) {
 	ext.bookshelf.ui.data.tree.BookEditorTree.parent.prototype.onDragStop.call( this, item, $target, e, ui );
+	this.updateNodeNumbers();
+};
+
+ext.bookshelf.ui.data.tree.BookEditorTree.prototype.getNodes = function () {
+	var nodes = ext.menueditor.ui.data.tree.Tree.parent.prototype.getNodes.call( this );
+	return nodes.map( function ( e ) {
+		return $.extend( e.getNodeData(), { level: e.getLevel() + 1, name: e.getName() } );
+	} );
+};
+
+ext.bookshelf.ui.data.tree.BookEditorTree.prototype.updateNodeNumbers = function () {
 	var data = this.getNodes();
 	var numberings = this.numberProcessor.calculateNumbersFromList( data );
 
@@ -57,11 +71,4 @@ ext.bookshelf.ui.data.tree.BookEditorTree.prototype.onDragStop = function( item,
 		var item = this.flat[ name ];
 		item.updateNumber( numberings[ i ] );
 	};
-};
-
-ext.menueditor.ui.data.tree.Tree.prototype.getNodes = function () {
-	var nodes = ext.menueditor.ui.data.tree.Tree.parent.prototype.getNodes.call( this );
-	return nodes.map( function ( e ) {
-		return $.extend( e.getNodeData(), { level: e.getLevel() + 1, name: e.getName() } );
-	} );
 };
