@@ -10,7 +10,7 @@ abstract class LineProcessorBase implements ILineProcessor {
 		return new static();
 	}
 
-	public function isFinal() {
+	public function isFinal(): bool {
 		return false;
 	}
 }
