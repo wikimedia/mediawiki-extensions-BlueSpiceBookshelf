@@ -800,6 +800,13 @@
 		"addNewBook": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SkinTemplateNavigation\\AddNewBook",
 			"services": [ "PermissionManager", "TitleFactory" ]
+		},
+		"ue-module-pdf": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\UEModulePDF",
+			"services": [
+				"BSBookshelfBookContextProviderFactory", "BSBookshelfBookLookup", "BSBookshelfBookChapterLookup",
+				"TitleFactory", "ConfigFactory", "MainConfig", "RepoGroup", "HookContainer"
+			]
 		}
 	},
 	"Hooks": {
@@ -815,12 +822,9 @@
 			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBookChaptersTable::callback",
 			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBookMetaTable::callback"
 		],
-		"BSUEModulePDFbeforeGetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFbeforeGetPage\\AdaptPageTitle::callback",
-		"BSUEModulePDFgetPage": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFgetPage\\ModifyForExport::callback",
-		"BSUEModulePDFcollectMetaData": [
-			"\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFcollectMetaData\\SupressBookNS::callback",
-			"\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFcollectMetaData\\AddBookMeta::callback"
-		],
+		"BSUEModulePDFgetPage": "ue-module-pdf",
+		"BSUEModulePDFcollectMetaData": "ue-module-pdf",
+		"BSUEModulePDFAfterFindFiles": "ue-module-pdf",
 		"BSBookshelfGetBookData": "\\BlueSpice\\Bookshelf\\Hook\\BSBookshelfGetBookData\\RunLegacyHook::callback",
 		"GetPreferences": "\\BlueSpice\\Bookshelf\\Hook\\GetPreferences\\BookshelfDefaultView::callback",
 		"SkinTemplateNavigation::Universal": [
@@ -828,7 +832,6 @@
 			"addEditBook",
 			"addNewBook"
 		],
-		"BSUEModulePDFAfterFindFiles": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFAfterFindFiles\\AddAttachments::callback",
 		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\Bookshelf\\Hook\\BSUsageTrackerRegisterCollectors\\NoOfUserBooks::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface",
