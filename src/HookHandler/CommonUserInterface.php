@@ -5,7 +5,6 @@ namespace BlueSpice\Bookshelf\HookHandler;
 use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
-use BlueSpice\Bookshelf\GlobalActionsEditing;
 use BlueSpice\Bookshelf\Panel\ChapterPagerPanel;
 use BlueSpice\Bookshelf\Panel\MainLinkPanel;
 use BlueSpice\Bookshelf\Panel\SidebarBookPanel;
@@ -60,16 +59,6 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 	 * @inheritDoc
 	 */
 	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ): void {
-		$registry->register(
-			'GlobalActionsEditing',
-			[
-				'bs-special-bookshelf' => [
-					'factory' => static function () {
-						return new GlobalActionsEditing();
-					}
-				]
-			]
-		);
 		$config = $this->configFactory->makeConfig( 'bsg' );
 		if ( $config->get( 'BookshelfMainLinksBookshelf' ) ) {
 			$registry->register(

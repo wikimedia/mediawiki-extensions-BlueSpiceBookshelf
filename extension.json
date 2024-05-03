@@ -326,54 +326,6 @@
 				"bs-bookshelf-grouping-template-type-ns_book"
 			]
 		},
-		"ext.bluespice.bookshelf.manager": {
-			"scripts": "bluespice.bookshelf.manager.js",
-			"messages": [
-				"bs-bookshelfui-new-book-title",
-				"bs-bookshelfui-new-book-text",
-				"bs-bookshelfui-delete-book-title",
-				"bs-bookshelfui-delete-book-text",
-				"bs-bookshelfui-manager-title",
-				"bs-bookshelfui-manager-deletingprogress-text",
-				"bs-bookshelfui-manager-deletingprogress-title",
-				"bs-bookshelfui-manager-deletionsuccess-title",
-				"bs-bookshelfui-manager-deletionsuccess-text",
-				"bs-bookshelfui-manager-deletionfailure-title",
-				"bs-bookshelfui-manager-deletionfailure-text",
-				"bs-bookshelfui-dlg-copy-title",
-				"bs-bookshelfui-dlg-copy-target-name-label",
-				"bs-bookshelfui-dlg-copy-name-addition",
-				"bs-bookshelfui-dlg-copy-target-namespace-qtip",
-				"bs-bookshelfui-grouping-template-books",
-				"bs-bookshelfui-book-type",
-				"bs-bookshelf-personal-books-page-prefix",
-				"bs-bookshelfui-extjs-tooltip-copy",
-				"bs-bookshelf-specialpage-allpages-ns-book-text"
-			],
-			"dependencies": [
-				"ext.bluespice.bookshelf.storageLocation",
-				"mediawiki.Title",
-				"ext.bluespice",
-				"ext.bluespice.extjs",
-				"ext.bluespice.extjs.BS.deferred"
-			]
-		},
-		"ext.bluespice.bookshelf.special": {
-			"scripts": [
-				"bluespice.bookshelf.special.js"
-			],
-			"styles": [
-				"bluespice.bookshelf.special.css"
-			],
-			"messages": [
-				"bs-bookshelfui-manager-title",
-				"bs-bookshelf-specialpage-allpages-ns-book-text"
-			],
-			"dependencies": [
-				"ext.bluespice.bookshelf.storageLocation",
-				"ext.bluespice.extjs"
-			]
-		},
 		"ext.bluespice.bookshelf.view": {
 			"scripts": [
 				"bluespice.bookshelf.view.js"
@@ -409,11 +361,6 @@
 			"styles": [
 				"bluespice.bookshelf.navigation-panel.css",
 				"bluespice.bookshelf.book-select-widgets.css"
-			]
-		},
-		"ext.bookshelf.special-bookshelf.styles": {
-			"styles": [
-				"bluespice.bookshelf.special-bookshelf.css"
 			]
 		},
 		"ext.bluespice.booklist.visualEditorTagDefinition": {
@@ -653,9 +600,7 @@
 		}
 	},
 	"SpecialPages": {
-		"BookshelfBookManager": "\\BlueSpice\\Bookshelf\\Special\\BookshelfBookManager",
 		"BookshelfBookEditor": "\\BlueSpice\\Bookshelf\\Special\\BookshelfBookEditor",
-		"Bookshelf": "\\BlueSpice\\Bookshelf\\Special\\Bookshelf",
 		"Books": "\\BlueSpice\\Bookshelf\\Special\\Books"
 	},
 	"HookHandlers": {
