@@ -214,11 +214,14 @@ class ChapterLookup {
 			}
 		}
 
+		$number = (string)$result->chapter_number;
+		$normalizedNumber = trim( $number, '.' ) . '.';
+
 		return new ChapterDataModel(
 			$result->chapter_namespace,
 			$result->chapter_title,
 			$name,
-			(string)$result->chapter_number,
+			$normalizedNumber,
 			$result->chapter_type,
 		);
 	}
