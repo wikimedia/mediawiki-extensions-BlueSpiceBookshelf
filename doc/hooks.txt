@@ -13,19 +13,6 @@ $oJSTreeJSON:
 &$sNumber:
 &$aAdditionalAttribs:
 
-==SpecialBookshelfBookManager.class==
-
-'BSBookshelfBookManager':
-$this:
-$wgOut:
-$oData:
-&$aPlugins
-
-'BSBookshelfManagerGetBookDataRow': deprecated
-$oBookTitle:
-$oBookRow:
-
-
 ==SpecialBookshelfBookUI.class==
 
 'BSBookshelfBookUI':
