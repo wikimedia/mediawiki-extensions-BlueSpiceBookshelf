@@ -110,5 +110,6 @@
 	"bs-bookshelfui-panel-navigation-text": "至书籍导览",
 	"bs-bookshelfui-panel-navigation-title": "返回书籍导览",
 	"bs-bookshelfui-panel-navigation-aria-label": "至书籍导览",
-	"bs-bookshelfui-panel-navigation-aria-desc": "树状结构的图书导航"
+	"bs-bookshelfui-panel-navigation-aria-desc": "树状结构的图书导航",
+	"bs-bookshelfui-bookmetatag-bookshelf": "书架"
 }
