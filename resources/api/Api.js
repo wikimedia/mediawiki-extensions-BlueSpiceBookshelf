@@ -7,7 +7,6 @@ ext.bookshelf.api.Api = function () {
 ext.bookshelf.api.Api.prototype.ajax = function ( path, data, method ) {
 	data = data || {};
 	var dfd = $.Deferred();
-
 	$.ajax( {
 		method: method,
 		url: this.makeUrl( path ),
@@ -44,6 +43,15 @@ ext.bookshelf.api.Api.prototype.get = function ( path, params ) {
 	return this.ajax( path, params, 'GET' );
 };
 
+ext.bookshelf.api.Api.prototype.post = function ( path, params ) {
+	params = params || {};
+	return this.ajax( path, JSON.stringify( { meta: params } ), 'POST' );
+};
+
 ext.bookshelf.api.Api.prototype.getBookMetadata = function ( bookTitle ) {
 	return this.get( 'metadata/' + encodeURIComponent( bookTitle ) );
+};
+
+ext.bookshelf.api.Api.prototype.saveBookMetadata = function ( bookTitle, data ) {
+	return this.post( 'metadata/' + encodeURIComponent( bookTitle ), data );
 };
