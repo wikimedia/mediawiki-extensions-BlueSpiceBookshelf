@@ -3,19 +3,31 @@ bs.util.registerNamespace( 'ext.bookshelf.ui.data.tree' );
 ext.bookshelf.ui.data.tree.BookEditorTree = function ( cfg ) {
 	cfg.classes = [ 'bs-book-tree' ];
 	ext.bookshelf.ui.data.tree.BookEditorTree.parent.call( this, cfg );
-	this.metadata = [];
 	this.numberProcessor = new ext.bookshelf.ui.data.BookNumberProcessor();
+	this.bookTitle = mw.config.get( 'wgRelevantPageName' );
+	this.metadataManager = new ext.bookshelf.data.BookMetaDataManager( this.bookTitle );
+
 	this.connect( this, {
 		nodeRemoved: 'updateNodeNumbers'
 	} );
 
 	mw.hook( 'menueditor.toolbar' ).add( function ( menuToolbar ) {
+		this.metadataManager.load().done( function ( data ) {
+			menuToolbar.toolbar.data = data;
+		} );
 		menuToolbar.toolbar.connect( this, {
 			metadataset: function ( metadata ) {
-				this.metadata = metadata;
+				this.metadataManager.setData( metadata );
+			},
+			save: function() {
+				this.metadataManager.save( this.metadataManager.getData() ).done( function () {
+					this.emit( 'saveSuccess' );
+				} ).fail( function ( error ) {
+					console.log( error );
+				} );
 			}
 		} );
-	} );
+	}.bind( this ) );
 };
 
 // eslint-disable-next-line max-len

@@ -15,12 +15,18 @@ ext.bookshelf.ui.tools.MetadataTool.static.displayBothIconAndLabel = true;
 ext.bookshelf.ui.tools.MetadataTool.prototype.onSelect = function () {
 	this.setActive( false );
 	mw.loader.using( 'ext.bookshelf.metadata.dialog' ).done( function () {
-		var windowManager = new OO.ui.WindowManager();
-		$( document.body ).append( windowManager.$element );
-
-		var dialog = new ext.bookshelf.ui.dialog.MetaDataDialog();
-		windowManager.addWindows( [ dialog ] );
-		windowManager.openWindow( dialog );
+		if ( !this.windowManager ) {
+			this.windowManager = new OO.ui.WindowManager( {
+				modal: true
+			} );
+			$( document.body ).append( this.windowManager.$element );
+		}
+		var data = this.toolbar.data;
+		var dialog = new ext.bookshelf.ui.dialog.MetaDataDialog( {
+			data: data
+		} );
+		this.windowManager.addWindows( [ dialog ] );
+		this.windowManager.openWindow( dialog );
 		dialog.on( 'metadataset', function ( metadata ) {
 			this.toolbar.emit( 'metadataset', metadata );
 		}.bind( this ) );

@@ -6,8 +6,8 @@ require( './../widget/MetaDataOutlineWidget.js' );
 ext.bookshelf.ui.dialog.MetaDataDialog = function ( config ) {
 	config = config || {};
 	this.bookTitle = config.bookTitle || mw.config.get( 'wgRelevantPageName' );
+	this.originData = config.data;
 	ext.bookshelf.ui.dialog.MetaDataDialog.super.call( this, config );
-	this.originData = [];
 	this.metadata = [];
 }
 OO.inheritClass( ext.bookshelf.ui.dialog.MetaDataDialog, OO.ui.ProcessDialog );
@@ -32,19 +32,16 @@ ext.bookshelf.ui.dialog.MetaDataDialog.prototype.initialize = function () {
 	var data = require( './metadata.json');
 	var modules = data.modules;
 
-	this.getMetaDataValues().done( function () {
-		mw.loader.using( modules ).done( function () {
-			var pages = this.getPagesFromConfig( data.pages );
-			var metaDataKeys = this.getKeysFromConfig( data.pages );
-
-			this.content = new ext.bookshelf.ui.widget.MetaDataLayout( {
-				originData: this.originData,
-				metaDataKeys: metaDataKeys
-			} );
-			this.content.addItems( pages );
-			this.$body.append( this.content.$element );
-			this.updateSize();
-		}.bind( this ) );
+	mw.loader.using( modules ).done( function () {
+		var pages = this.getPagesFromConfig( data.pages );
+		var metaDataKeys = this.getKeysFromConfig( data.pages );
+		this.content = new ext.bookshelf.ui.widget.MetaDataLayout( {
+			originData: this.originData,
+			metaDataKeys: metaDataKeys
+		} );
+		this.content.addItems( pages );
+		this.$body.append( this.content.$element );
+		this.updateSize();
 	}.bind( this ) );
 };
 
@@ -76,14 +73,14 @@ ext.bookshelf.ui.dialog.MetaDataDialog.prototype.getActionProcess = function ( a
 };
 
 ext.bookshelf.ui.dialog.MetaDataDialog.prototype.getNewMetaData = function () {
-	var data = [];
+	var data = {};
 	var pages = this.content.pages;
 	for ( var page in pages ) {
 		var value = pages[ page ].getValue();
 		if ( value === '' ) {
 			continue;
 		}
-		data.push( { [ page ]: value } );
+		data[ page ] = value;
 	}
 	return data;
 }
