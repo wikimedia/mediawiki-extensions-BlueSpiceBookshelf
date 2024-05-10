@@ -739,7 +739,7 @@
 			"services": [ "ConfigFactory", "BSBookshelfBookContextProviderFactory", "BSBookshelfBookChapterLookup" ]
 		},
 		"book-source-update": {
-			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookPageSaveComplete",
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookSave",
 			"services": [ "TitleFactory", "MWStakeWikitextParserFactory", "DBLoadBalancer", "BSBookshelfBookLookup" ]
 		},
 		"book-content-default-mode": {
@@ -776,7 +776,7 @@
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface",
 		"OutputPageBeforeHTML": "add-chapter-number-to-title-and-headings",
-		"PageSaveComplete": "book-source-update"
+		"MultiContentSave": "book-source-update"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
@@ -786,9 +786,16 @@
 	},
 	"RestRoutes": [
 		{
+			"method": "GET",
 			"path": "/bookshelf/metadata/{booktitle}",
 			"class": "\\BlueSpice\\Bookshelf\\Rest\\GetBookMetadata",
 			"services": [ "TitleFactory", "BSBookshelfBookMetaLookup" ]
+		},
+		{
+			"method": "POST",
+			"path": "/bookshelf/metadata/{booktitle}",
+			"class": "\\BlueSpice\\Bookshelf\\Rest\\PostBookMetadata",
+			"services": [ "TitleFactory", "WikiPageFactory", "BSBookshelfBookLookup", "BSBookshelfBookMetaLookup" ]
 		}
 	],
 	"load_composer_autoloader": true,
