@@ -538,7 +538,8 @@
 				"oojs-ui.styles.icons-editing-list",
 				"ext.oOJSPlus.formelements",
 				"ext.bluespice",
-				"bluespice.bookshelf.processor.chapternumber"
+				"bluespice.bookshelf.processor.chapternumber",
+				"bluespice.bookshelf.metadata.manager"
 			]
 		},
 		"bluespice.bookshelf.menuEditor.node": {
@@ -647,6 +648,14 @@
 		"bluespice.bookshelf.api": {
 			"scripts": [
 				"api/Api.js"
+			]
+		},
+		"bluespice.bookshelf.metadata.manager": {
+			"scripts": [
+				"data/BookMetaDataManager.js"
+			],
+			"dependencies": [
+				"oojs"
 			]
 		}
 	},
