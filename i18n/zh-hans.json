@@ -137,5 +137,7 @@
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "目标",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "文本",
 	"bs-bookshelf-toolbar-tool-metadata-title": "编辑元数据",
-	"bs-bookshelf-toolbar-tool-metadata-label": "编辑元数据"
+	"bs-bookshelf-toolbar-tool-metadata-label": "编辑元数据",
+	"bs-bookshelf-metadata-dlg-title": "编辑元数据",
+	"bs-bookshelf-metadata-dlg-action-save-label": "保存"
 }

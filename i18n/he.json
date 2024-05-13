@@ -126,5 +126,8 @@
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "יעד",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "טקסט",
 	"bs-bookshelf-toolbar-tool-metadata-title": "עריכת מטא־נתונים",
-	"bs-bookshelf-toolbar-tool-metadata-label": "עריכת מטא־נתונים"
+	"bs-bookshelf-toolbar-tool-metadata-label": "עריכת מטא־נתונים",
+	"bs-bookshelf-metadata-widget-checkbox-title": "בחירת מאפיין $1",
+	"bs-bookshelf-metadata-dlg-title": "עריכת מטא־נתונים",
+	"bs-bookshelf-metadata-dlg-action-save-label": "שמירה"
 }

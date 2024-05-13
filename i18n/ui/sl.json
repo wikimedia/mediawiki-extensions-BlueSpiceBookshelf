@@ -95,5 +95,7 @@
 	"bs-bookshelfui-panel-navigation-text": "Na krmarjenje po knjigi",
 	"bs-bookshelfui-panel-navigation-title": "Nazaj na krmarjenje po knjigi",
 	"bs-bookshelfui-panel-navigation-aria-label": "Na krmarjenje po knjigi",
-	"bs-bookshelfui-panel-navigation-aria-desc": "Krmarjenje po knjigi kot drevesna struktura"
+	"bs-bookshelfui-panel-navigation-aria-desc": "Krmarjenje po knjigi kot drevesna struktura",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Knjižna polica",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "Slika knjižne police"
 }
