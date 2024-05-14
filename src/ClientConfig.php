@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf;
 
 use Config;
+use ExtensionRegistry;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\ResourceLoader\Context;
 use MWStake\MediaWiki\Component\ManifestRegistry\ManifestAttributeBasedRegistry;
@@ -105,5 +106,17 @@ class ClientConfig {
 		$values = $metaLookup->getAllMetaValuesForKey( 'bookshelf' );
 		$values = array_unique( $values );
 		return $values;
+	}
+
+	/**
+	 *
+	 * @return array
+	 */
+	public static function getCreateNewBookPlugins() {
+		$modules = ExtensionRegistry::getInstance()->getAttribute(
+			'BlueSpiceBookshelfCreateNewBookModules'
+		);
+
+		return $modules;
 	}
 }

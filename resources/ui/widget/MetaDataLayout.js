@@ -7,7 +7,7 @@ ext.bookshelf.ui.widget.MetaDataLayout = function ( config ) {
 	config = config || {};
 	config.outlined = true;
 	config.padded = true;
-	config.expanded = true;
+	config.expanded = false;
 	// Parent constructor
 	ext.bookshelf.ui.widget.MetaDataLayout.super.call( this, config );
 
@@ -20,7 +20,7 @@ ext.bookshelf.ui.widget.MetaDataLayout = function ( config ) {
 	this.stackLayout = new OO.ui.StackLayout( {
 		continuous: true,
 		padded: true,
-		expanded: true
+		expanded: false
 	} );
 	this.setContentPanel( this.stackLayout );
 	this.autoFocus = config.autoFocus === undefined || !!config.autoFocus;
@@ -33,7 +33,7 @@ ext.bookshelf.ui.widget.MetaDataLayout = function ( config ) {
 	} );
 
 	this.outlinePanel = new OO.ui.PanelLayout( {
-		expanded: true,
+		expanded: false,
 		scrollable: true
 	} );
 	this.setMenuPanel( this.outlinePanel );
