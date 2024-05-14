@@ -8,5 +8,6 @@
 	"bs-bookshelf-booknav-book-label": "पुस्तक",
 	"bs-bookshelf-booknav-searchbox-placeholder": "खोजें",
 	"bs-bookshelf-chapter-plain-text-input-label": "टेक्स्ट",
-	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "टेक्स्ट"
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "टेक्स्ट",
+	"bs-bookshelf-metadata-dlg-action-save-label": "सहेजें"
 }
