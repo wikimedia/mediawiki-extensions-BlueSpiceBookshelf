@@ -14,7 +14,9 @@
 	};
 
 	bs.bookshelf.ui.pages.ImageMeta.prototype.setup = function () {
-		this.inputWidget = new OOJSPlus.ui.widget.FileSearchWidget( {} );
+		this.inputWidget = new OOJSPlus.ui.widget.FileSearchWidget( {
+			extensions: [ 'png', 'jpg' ]
+		} );
 
 		var fieldLayout = new OO.ui.FieldLayout( this.inputWidget, {
 			align: 'top',
