@@ -1,8 +1,8 @@
-(function( mw, $, bs, d, undefined ){
+(function( mw, $, d ){
 	$(d).on('BSContextMenuBeforeCreate', function( e, $anchor, items ) {
 		var bsTitle = $anchor.data('bs-title');
 		if( !bsTitle ) {
-		        return;
+			return;
 		}
 		var title = new mw.Title( bsTitle );
 		if( title.getNamespaceId() === bs.ns.NS_BOOK ) {
@@ -15,4 +15,4 @@
 			});
 		}
 	});
-})( mediaWiki, jQuery, blueSpice, document );
+})( mediaWiki, jQuery, document );

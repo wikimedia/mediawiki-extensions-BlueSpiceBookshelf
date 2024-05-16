@@ -1,4 +1,4 @@
-( function ( mw, $, bs, d, undefined ) {
+( function ( mw, $, d ) {
 	$( function () {
 		_renderBookNavigation();
 	} );
@@ -42,7 +42,7 @@
 		});
 	}
 
-} )( mediaWiki, jQuery, blueSpice, document );
+} )( mediaWiki, jQuery, document );
 
 //Note from old implementation:
 /* Workaround for very strange bug: The TreePanel always scrolled to the
