@@ -160,6 +160,52 @@ class BookLookup {
 
 	/**
 	 * @param Title $title
+	 * @return BookInfo|null
+	 */
+	public function getBookInfo( Title $title ): ?BookInfo {
+		$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
+
+		$result = $dbr->select(
+			'bs_books',
+			'*',
+			[
+				'book_namespace' => $title->getNamespace(),
+				'book_title' => $title->getDBKey()
+			],
+			__METHOD__,
+			[]
+		);
+
+		if ( !$result ) {
+			return null;
+		}
+
+		$info = [];
+		foreach ( $result as $res ) {
+			$info = [
+				'book_id' => $res->book_id,
+				'book_namespace' => $res->book_namespace,
+				'book_title' => $res->book_title,
+				'book_name' => $res->book_name,
+				'book_type' => $res->book_type,
+			];
+		}
+
+		if ( empty( $info ) ) {
+			return null;
+		}
+
+		return new BookInfo(
+			$info['book_id'],
+			$info['book_namespace'],
+			$info['book_title'],
+			$info['book_name'],
+			$info['book_type'],
+		);
+	}
+
+	/**
+	 * @param Title $title
 	 * @return array
 	 */
 	public function getBookHierarchy( Title $title ): array {
