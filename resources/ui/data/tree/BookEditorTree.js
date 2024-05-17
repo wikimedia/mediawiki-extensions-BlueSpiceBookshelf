@@ -8,7 +8,8 @@ ext.bookshelf.ui.data.tree.BookEditorTree = function ( cfg ) {
 	this.metadataManager = new ext.bookshelf.data.BookMetaDataManager( this.bookTitle );
 
 	this.connect( this, {
-		nodeRemoved: 'updateNodeNumbers'
+		nodeRemoved: 'updateNodeNumbers',
+		nodeAdded: 'updateNodeNumbers'
 	} );
 
 	mw.hook( 'menueditor.toolbar' ).add( function ( menuToolbar ) {
