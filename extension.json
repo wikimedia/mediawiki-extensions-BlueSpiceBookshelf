@@ -13,7 +13,8 @@
 		"MediaWiki": ">= 1.39.0",
 		"extensions": {
 			"BlueSpiceFoundation": ">= 4.3",
-			"MenuEditor": ">= 2.0.0"
+			"MenuEditor": ">= 2.0.0",
+			"VueJsPlus": ">=1.0.0"
 		}
 	},
 	"attributes": {
@@ -117,7 +118,8 @@
 					"class": "BlueSpice\\Bookshelf\\MetaData\\Version"
 				}
 			},
-			"CreateNewBookModules": []
+			"CreateNewBookModules": [],
+			"BookViewTools": {}
 		},
 		"BlueSpiceVisualEditorConnector": {
 			"TagDefinitions": [
@@ -360,21 +362,21 @@
 			]
 		},
 		"ext.bluespice.bookshelf.view": {
-			"scripts": [
-				"bluespice.bookshelf.view.js"
+			"packageFiles": [
+				"bluespice.bookshelf.view.js",
+				{
+					"name": "bookViewTools.json",
+					"callback": "BlueSpice\\Bookshelf\\ClientConfig::makeBookViewTools"
+				}
 			],
 			"styles": [
-				"bluespice.bookshelf.editor.css",
-				"bluespice.bookshelf.icons.css"
 			],
 			"messages": [
-				"bs-bookshelfui-ctxmnu-open",
-				"bs-bookshelfui-ctxmnu-edit",
-				"bs-bookshelfui-ctxmnu-delete",
-				"bs-bookshelfui-ctxmnu-tag-edit"
 			],
 			"dependencies": [
-				"ext.bookshelf.booktreeexport"
+				"mediawiki.api",
+				"vue",
+				"ext.vuejsplus-data-tree.vue"
 			]
 		},
 		"ext.bookshelf.booktreeexport": {

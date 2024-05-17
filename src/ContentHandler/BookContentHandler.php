@@ -4,15 +4,18 @@ namespace BlueSpice\Bookshelf\ContentHandler;
 
 use BlueSpice\Bookshelf\Action\BookEditAction;
 use BlueSpice\Bookshelf\Action\BookEditSourceAction;
-use BlueSpice\Bookshelf\BookEditData;
+use BlueSpice\Bookshelf\BookViewTreeDataBuilder;
+use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\Content\BookContent;
 use Content;
+use Html;
 use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\MediaWikiServices;
 use MWException;
 use ParserOutput;
 use TextContentHandler;
 use Title;
+use TitleFactory;
 
 class BookContentHandler extends TextContentHandler {
 
@@ -51,7 +54,8 @@ class BookContentHandler extends TextContentHandler {
 		ParserOutput &$output
 	) {
 		// parse just to get links etc into the database, HTML is replaced below.
-		$output = MediaWikiServices::getInstance()->getParser()
+		$services = MediaWikiServices::getInstance();
+		$output = $services->getParser()
 			->parse(
 				$content->getText(),
 				$cpoParams->getPage(),
@@ -63,15 +67,43 @@ class BookContentHandler extends TextContentHandler {
 
 		try {
 			$pageRef = $cpoParams->getPage();
-			$title = Title::castFromPageReference( $pageRef );
-			$bookEditData = BookEditData::newFromTitleAndRequest(
-				$title, new \WebRequest()
-			);
-			$output->setJsConfigVar( 'bsBookshelfData', $bookEditData->getBookData() );
-			$output->addModules( [ 'ext.bluespice.bookshelf.view' ] );
-			$output->setText( \Html::element( 'div', [ 'id' => 'bs-bookshelf-view' ] ) );
+			$titleFactory = $services->getTitleFactory();
+			$book = $titleFactory->castFromPageReference( $pageRef );
+
+			$bookLookup = $services->get( 'BSBookshelfBookChapterLookup' );
+			if ( $bookLookup instanceof ChapterLookup ) {
+				$this->setChaptersTree( $output, $book, $bookLookup, $titleFactory );
+				$this->setHtmlFrame( $output );
+				$output->addModules( [ 'ext.bluespice.bookshelf.view' ] );
+			}
 		} catch ( MWException $e ) {
 			$output->addWarningMsg( "bs-bookshelf-warning", $e->getText() );
 		}
+	}
+
+	/**
+	 * @param ParserOutput $output
+	 * @param Title $book
+	 * @param ChapterLookup $chapterLookup
+	 * @param TitleFactory $titleFactory
+	 */
+	private function setChaptersTree(
+		ParserOutput $output, Title $book, ChapterLookup $chapterLookup, TitleFactory $titleFactory
+	) {
+		$chapters = $chapterLookup->getChaptersOfBook( $book );
+
+		$dataBuilder = new BookViewTreeDataBuilder( $titleFactory );
+		$data = $dataBuilder->build( $book, $chapters );
+
+		$output->setJsConfigVar( 'bsBookshelfTreeData', $data );
+	}
+
+	/**
+	 * @param ParserOutput $output
+	 */
+	private function setHtmlFrame( ParserOutput $output ) {
+		$html = Html::element( 'div', [ 'id' => 'bs-bookshelf-view' ] );
+
+		$output->setText( $html );
 	}
 }

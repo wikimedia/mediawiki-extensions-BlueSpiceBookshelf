@@ -119,4 +119,46 @@ class ClientConfig {
 
 		return $modules;
 	}
+
+	/**
+	 * @param Context $context
+	 * @return array
+	 */
+	public static function makeBookViewTools( Context $context ) {
+		$tools = [];
+
+		$registry = ExtensionRegistry::getInstance()->getAttribute(
+			'BlueSpiceBookshelfBookViewTools'
+		);
+		$services = MediaWikiServices::getInstance();
+		$objectFactory = $services->getObjectFactory();
+		$modules = [];
+		foreach ( $registry as $key => $spec ) {
+			$tool = $objectFactory->createObject( $spec );
+
+			if ( $tool instanceof IBookViewTool === false ) {
+				continue;
+			}
+
+			if ( !empty( $tool->getRLModules() ) ) {
+				$modules = array_merge( $modules, $tool->getRLModules() );
+			}
+
+			$tools[] = [
+				'type' => $tool->getType(),
+				'label' => $context->msg( $tool->getLabelMsgKey() )->plain(),
+				'class' => implode( ' ', $tool->getClasses() ),
+				'callback' => $tool->getCallback(),
+				'slot' => $tool->getSlot(),
+				'position' => $tool->getPosition(),
+				'modules' => $tool->getRLModules(),
+				'permission' => $tool->getRequiredPermission(),
+				'selectable' => $tool->requireSelectableTree()
+			];
+		}
+		return [
+			'tools' => $tools,
+			'modules' => $modules
+		];
+	}
 }
