@@ -115,6 +115,7 @@
 	"bs-books-overview-page-book-action-edit-title": "Modificar le libro $1",
 	"bs-books-overview-page-book-action-delete-text": "Deler",
 	"bs-books-overview-page-book-action-delete-title": "Deler le libro $1",
+	"bs-books-overview-page-book-search-placeholder": "Cercar libro",
 	"bs-bookshelf-chapter-plain-text-label": "Texto del titulo del capitulo",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Adder un nove titulo de capitulo",
 	"bs-bookshelf-chapter-plain-text-input-label": "Texto",
@@ -124,5 +125,7 @@
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Texto",
 	"bs-bookshelf-toolbar-tool-metadata-title": "Modificar metadatos",
 	"bs-bookshelf-toolbar-tool-metadata-label": "Modificar metadatos",
-	"bs-books-overview-page-book-search-placeholder": "Cercar libro"
+	"bs-bookshelf-metadata-widget-checkbox-title": "Seliger proprietate $1",
+	"bs-bookshelf-metadata-dlg-title": "Modificar metadatos",
+	"bs-bookshelf-metadata-dlg-action-save-label": "Salveguardar"
 }

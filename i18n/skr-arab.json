@@ -21,5 +21,9 @@
 	"bs-books-overview-page-book-action-delete-text": "مٹاؤ",
 	"bs-bookshelf-chapter-plain-text-input-label": "ٹیکسٹ",
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "نشانہ",
-	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "ٹیکسٹ"
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "ٹیکسٹ",
+	"bs-bookshelf-toolbar-tool-metadata-title": "میٹا ڈیٹا وچ تبدیلی کرو",
+	"bs-bookshelf-toolbar-tool-metadata-label": "میٹا ڈیٹا وچ تبدیلی کرو",
+	"bs-bookshelf-metadata-dlg-title": "میٹا ڈیٹا وچ تبدیلی کرو",
+	"bs-bookshelf-metadata-dlg-action-save-label": "بچاؤ"
 }

@@ -92,5 +92,10 @@
 	"bs-bookshelf-booknav-chapter-not-exist": "Il capitolo $1 non esiste",
 	"bs-bookshelf-booknav-searchbox-placeholder": "Ricerca",
 	"bs-bookshelf-droplet-pdf-link-label": "Etichetta del collegamento",
-	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Testo"
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Testo",
+	"bs-bookshelf-toolbar-tool-metadata-title": "Modifica metadati",
+	"bs-bookshelf-toolbar-tool-metadata-label": "Modifica metadati",
+	"bs-bookshelf-metadata-widget-checkbox-title": "Seleziona la proprietà $1",
+	"bs-bookshelf-metadata-dlg-title": "Modifica metadati",
+	"bs-bookshelf-metadata-dlg-action-save-label": "Salva"
 }

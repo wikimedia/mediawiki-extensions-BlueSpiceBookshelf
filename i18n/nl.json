@@ -129,5 +129,8 @@
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Doel",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Tekst",
 	"bs-bookshelf-toolbar-tool-metadata-title": "Metagegevens bewerken",
-	"bs-bookshelf-toolbar-tool-metadata-label": "Metagegevens bewerken"
+	"bs-bookshelf-toolbar-tool-metadata-label": "Metagegevens bewerken",
+	"bs-bookshelf-metadata-widget-checkbox-title": "Eigenschap $1 selecteren",
+	"bs-bookshelf-metadata-dlg-title": "Metagegevens bewerken",
+	"bs-bookshelf-metadata-dlg-action-save-label": "Opslaan"
 }

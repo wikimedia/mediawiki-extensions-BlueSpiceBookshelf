@@ -61,5 +61,10 @@
 	"bs-books-overview-page-book-action-delete-title": "Buch $1 läschen",
 	"bs-bookshelf-chapter-plain-text-input-label": "Text",
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Zil",
-	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Text"
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Text",
+	"bs-bookshelf-toolbar-tool-metadata-title": "Metadonnéeën änneren",
+	"bs-bookshelf-toolbar-tool-metadata-label": "Metadonnéeën änneren",
+	"bs-bookshelf-metadata-widget-checkbox-title": "Eegenschafat $1 auswielen",
+	"bs-bookshelf-metadata-dlg-title": "Metadonnéeën änneren",
+	"bs-bookshelf-metadata-dlg-action-save-label": "Späicheren"
 }
