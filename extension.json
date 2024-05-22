@@ -672,6 +672,9 @@
 					"callback": "BlueSpice\\Bookshelf\\ClientConfig::getBookshelfData"
 				}
 			],
+			"styles": [
+				"bluespice.bookshelf.createNewBook.styles.css"
+			],
 			"messages": [
 				"cancel",
 				"bs-bookshelf-newbook-dlg-title",
