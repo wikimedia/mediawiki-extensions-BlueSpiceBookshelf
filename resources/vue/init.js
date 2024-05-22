@@ -6,6 +6,12 @@
 		var deferred = $.Deferred();
 		var dfdList = getStoreData();
 
+		let filter = '';
+		let query = window.location.search;
+		let queryParams = new URLSearchParams( query );
+		if ( queryParams.has( 'filter' ) ) {
+			filter = queryParams.get( 'filter' );
+		}
 		dfdList.done( function( response ) {
 			var h = Vue.h;
 
@@ -24,7 +30,8 @@
 					return h( BooksApp, {
 						items: books,
 						searchableData: searchableData,
-						searchPlaceholderLabel: mw.message( 'bs-books-overview-page-book-search-placeholder' ).plain()
+						searchPlaceholderLabel: mw.message( 'bs-books-overview-page-book-search-placeholder' ).plain(),
+						filter: filter
 					} );
 				}
 			} );
@@ -63,12 +70,19 @@
 	function setSearchableData ( items ) {
 		var data = [];
 		items.forEach( function ( item )  {
+			let title = mw.Title.makeTitle( item.book_namespace, item.book_title );
+			let prefText = '';
+			if ( title !== null ) {
+				prefText = title.getPrefixedDb();
+			}
 			data.push(
-				item.book_title.toLowerCase() + " "
+				prefText.toLowerCase() + " "
+				+ item.book_title.toLowerCase() + " "
 				+ item.displaytitle.toLowerCase() + " "
 				+ item.subtitle.toLowerCase()
 			);
 		} );
+
 		return data;
 	}
 
