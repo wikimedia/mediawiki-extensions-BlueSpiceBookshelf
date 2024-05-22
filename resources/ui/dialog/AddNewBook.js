@@ -8,7 +8,9 @@ OO.inheritClass( ext.bookshelf.ui.dialog.AddNewBookDialog, OO.ui.ProcessDialog )
 
 ext.bookshelf.ui.dialog.AddNewBookDialog.static.name = 'AddNewBookDialog';
 ext.bookshelf.ui.dialog.AddNewBookDialog.static.title = mw.message( 'bs-bookshelf-newbook-dlg-title' ).text();
-ext.bookshelf.ui.dialog.AddNewBookDialog.static.size = 'larger';
+
+ext.bookshelf.ui.dialog.AddNewBookDialog.static.size = 'large';
+
 ext.bookshelf.ui.dialog.AddNewBookDialog.static.actions = [
 	{
 		action: 'save',
@@ -90,7 +92,8 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.initialize = function () {
 ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.addCoverImageLayout = function () {
 	var imageLayout = new OO.ui.PanelLayout( {
 		expanded: false,
-		padded: true
+		padded: true,
+		classes: [ 'bs-bookshelf-new-book-image-panel' ]
 	} );
 	this.coverImageInput = new OO.ui.SelectFileWidget( {
 		showDropTarget: true
