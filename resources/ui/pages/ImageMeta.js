@@ -15,7 +15,8 @@
 
 	bs.bookshelf.ui.pages.ImageMeta.prototype.setup = function () {
 		this.inputWidget = new OOJSPlus.ui.widget.FileSearchWidget( {
-			extensions: [ 'png', 'jpg' ]
+			extensions: [ 'png', 'jpg' ],
+			value: this.value
 		} );
 
 		var fieldLayout = new OO.ui.FieldLayout( this.inputWidget, {

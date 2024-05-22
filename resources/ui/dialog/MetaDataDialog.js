@@ -45,21 +45,6 @@ ext.bookshelf.ui.dialog.MetaDataDialog.prototype.initialize = function () {
 	}.bind( this ) );
 };
 
-ext.bookshelf.ui.dialog.MetaDataDialog.prototype.getMetaDataValues = function () {
-	var dfd = $.Deferred();
-	mw.loader.using( [ 'bluespice.bookshelf.api' ] ).done( function () {
-		var api = new ext.bookshelf.api.Api();
-		api.getBookMetadata( this.bookTitle ).done( function ( data ) {
-			this.originData = data;
-			dfd.resolve();
-		}.bind( this ) ).fail( function () {
-			dfd.resolve();
-		} );
-	}.bind( this ) );
-
-	return dfd.promise();
-};
-
 ext.bookshelf.ui.dialog.MetaDataDialog.prototype.getActionProcess = function ( action ) {
 	var dialog = this;
 	if ( action ) {
