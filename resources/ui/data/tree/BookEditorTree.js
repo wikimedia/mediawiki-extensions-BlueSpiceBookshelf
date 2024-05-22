@@ -19,11 +19,10 @@ ext.bookshelf.ui.data.tree.BookEditorTree = function ( cfg ) {
 		menuToolbar.toolbar.connect( this, {
 			metadataset: function ( metadata ) {
 				this.metadataManager.setData( metadata );
+				menuToolbar.toolbar.data = metadata;
 			},
 			save: function() {
-				this.metadataManager.save( this.metadataManager.getData() ).done( function () {
-					this.emit( 'saveSuccess' );
-				} ).fail( function ( error ) {
+				this.metadataManager.save( this.metadataManager.getData() ).fail( function ( error ) {
 					console.log( error );
 				} );
 			}

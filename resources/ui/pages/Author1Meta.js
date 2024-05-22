@@ -14,7 +14,9 @@
 	};
 
 	bs.bookshelf.ui.pages.Author1Meta.prototype.setup = function () {
-		this.inputWidget = new OO.ui.TextInputWidget();
+		this.inputWidget = new OO.ui.TextInputWidget( {
+			value: this.value
+		} );
 
 		var fieldLayout = new OO.ui.FieldLayout( this.inputWidget, {
 			align: 'top',
