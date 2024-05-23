@@ -61,6 +61,11 @@ class Schema extends \MWStake\MediaWiki\Component\DataStore\Schema {
 				self::FILTERABLE => false,
 				self::SORTABLE => false,
 				self::TYPE => FieldType::STRING
+			],
+			Record::BOOK_EDIT_URL => [
+				self::FILTERABLE => false,
+				self::SORTABLE => false,
+				self::TYPE => FieldType::STRING
 			]
 		] );
 	}

@@ -14,4 +14,5 @@ class Record extends \MWStake\MediaWiki\Component\DataStore\Record {
 	public const FIRST_CHAPTER_URL = 'first_chapter_url';
 	public const ACTIONS = 'actions';
 	public const ACTIONS_MODULES = 'modules';
+	public const BOOK_EDIT_URL = 'book_edit_url';
 }

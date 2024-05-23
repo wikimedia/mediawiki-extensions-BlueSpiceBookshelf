@@ -1,6 +1,6 @@
 <template>
 	<div v-bind:class="cardClass">
-		<a  class="bs-card-anchor" v-bind:href="first_chapter_url" v-bind:aria-label="cardAnchorAriaLabel" v-bind:title="cardAnchorTitle" v-bind:aria-disabled="ariaDisabled" rel="nofollow noindex">
+		<a  class="bs-card-anchor" v-bind:href="href" v-bind:aria-label="cardAnchorAriaLabel" v-bind:title="cardAnchorTitle" v-bind:aria-disabled="ariaDisabled" rel="nofollow noindex">
 			<div class="bs-card-image" v-bind:style="{ backgroundImage: 'url(' + image_url + ')' }"></div>
 			<div class="bs-card-body" >
 				<div class="bs-card-title">{{title}}</div>
@@ -41,7 +41,8 @@ module.exports = {
 		bookshelf: String,
 		first_chapter_url: String,
 		image_url: String,
-		actions: Array
+		actions: Array,
+		book_edit_url: String
 	},
 	components: {
 		'action': Action,
@@ -50,12 +51,19 @@ module.exports = {
 	data: function () {
 		var cardClass = "bs-card";
 		var ariaDisabled = false;
-		if ( this.first_chapter_url === '' ) {
+		var href = this.first_chapter_url;
+		if ( this.first_chapter_url === '' && this.book_edit_url === '' ) {
 			cardClass = "bs-card new disabled";
 			ariaDisabled = true;
 		}
 		var cardAnchorTitle = mw.message( 'bs-books-overview-page-book-anchor-title', this.title ).plain();
 		var cardAnchorAriaLabel = mw.message( 'bs-books-overview-page-book-anchor-aria-label', this.title ).plain();
+
+		if ( this.book_edit_url !== '' ) {
+			cardAnchorTitle = mw.message( 'bs-books-overview-page-edit-book-anchor-title', this.title ).plain();
+			cardAnchorAriaLabel = mw.message( 'bs-books-overview-page-edit-book-anchor-aria-label', this.title ).plain();
+			href = this.book_edit_url;
+		}
 
 		// Get the object from proxy
 		var actions = toRaw( this.actions );
@@ -97,7 +105,8 @@ module.exports = {
 			cardAnchorTitle: cardAnchorTitle,
 			cardAnchorAriaLabel: cardAnchorAriaLabel,
 			primaryActions: primaryActions,
-			actionsMenu: actionsMenu
+			actionsMenu: actionsMenu,
+			href: href
 		};
 	},
 }

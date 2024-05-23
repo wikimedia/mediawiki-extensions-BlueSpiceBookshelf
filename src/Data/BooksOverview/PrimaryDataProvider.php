@@ -15,22 +15,11 @@ class PrimaryDataProvider extends \BlueSpice\Data\Settings\PrimaryDataProvider {
 	public function makeData( $params ) {
 		$this->data = [];
 
-		$joinCond = 'c.chapter_id = ( select c1.chapter_id from bs_book_chapters as c1 ';
-		$joinCond .= 'where c1.chapter_book_id=b.book_id and not c1.chapter_title="NULL" limit 1)';
-
 		$filterConds = $this->makePreFilterConds( $params->getFilter() );
 
 		$res = $this->db->select(
-			[ 'b' => 'bs_books', 'c' => 'bs_book_chapters' ],
-			[ 'b.book_name', 'b.book_namespace', 'b.book_title', 'c.chapter_namespace', 'c.chapter_title', ],
-			[],
-			__METHOD__,
-			[],
-			[
-				'c' => [
-					'JOIN', [ $joinCond ]
-				]
-			]
+			[ 'b' => 'bs_books' ],
+			[ 'b.book_name', 'b.book_namespace', 'b.book_title', ]
 		);
 
 		foreach ( $res as $row ) {

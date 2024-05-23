@@ -108,10 +108,28 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 		$localUrl = $this->makeFirstChapterURL( $book );
 		$dataSet->set( Record::FIRST_CHAPTER_URL, $localUrl );
 
+		$editUrl = $this->makeBookEditURL( $book );
+		$dataSet->set( Record::BOOK_EDIT_URL, $editUrl );
+
 		$imageURL = $this->makeImageURL( $meta );
 		$dataSet->set( Record::IMAGE_URL, $imageURL );
 
 		$this->setActions( $dataSet, $displayTitle );
+	}
+
+	/**
+	 * @param Title $book
+	 * @return string
+	 */
+	private function makeBookEditURL( Title $book ): string {
+		if ( !$book->isKnown() ) {
+			return '';
+		}
+		$chapters = $this->bookChapterLookup->getChaptersOfBook( $book );
+		if ( !empty( $chapters ) ) {
+			return '';
+		}
+		return $book->getEditURL();
 	}
 
 	/**
