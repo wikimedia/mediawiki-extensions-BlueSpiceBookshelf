@@ -32,6 +32,10 @@ module.exports = exports = {
 		},
 		searchPlaceholderLabel: {
 			type: String
+		},
+		filter: {
+			type: String,
+			default: ''
 		}
 	},
 	components: {
@@ -47,6 +51,10 @@ module.exports = exports = {
 		// If we use bookshelfs here for createBookshelfs the search input would not change the visible items.
 		var initialBookshelfs = createBookshelfs( this.items );
 
+		if ( this.filter !== '' ) {
+			initialBookshelfs = filter( initialBookshelfs, this.items, this.searchableData, this.filter );
+		}
+
 		return {
 			searchInput: [],
 			bookshelfs: initialBookshelfs
@@ -54,47 +62,53 @@ module.exports = exports = {
 	},
 	methods: {
 		getSearchResults: function( search ) {
-			search = search.toLowerCase();
-			found = 1;
-
 			if ( !this.items ) {
 				return;
 			}
 
-			if ( search !== '' && search !== false ) {
-				if ( search.search( ' ' ) !== -1 ) {
-					this.searchInput = search.split( ' ' );
-				} else  {
-					this.searchInput[0] = search;
-				}
-
-				for ( let x = 0; x < this.searchableData.length; x++ ) {
-					for (let y = 0; y < this.searchInput.length; y++ ) {
-						if ( this.searchableData[x].search( this.searchInput[y] )  === -1 ) {
-							found = 0;
-						}
-					}
-
-					if ( found === 0 ) {
-						this.items[x].isVisible = false;
-						this.bookshelfs = createBookshelfs( this.items );
-					} else {
-						this.items[x].isVisible = true;
-						this.bookshelfs = createBookshelfs( this.items );
-					}
-
-					found = 1;
-				}
-			} else {
-				// All chars in search input had been deleted
-				this.items.forEach( function( item ) {
-					item.isVisible = true;
-				} );
-				this.bookshelfs = createBookshelfs( this.items );
-			}
+			this.bookshelfs = filter( this.bookshelfs, this.items, this.searchableData, search );
 		}
 	}
 };
+
+function filter( data, items, searchableData, search ) {
+	search = search.toLowerCase();
+	let found = 1;
+
+	let searchInput = [];
+	if ( search !== '' && search !== false ) {
+		if ( search.search( ' ' ) !== -1 ) {
+			searchInput = search.split( ' ' );
+		} else  {
+			searchInput[0] = search;
+		}
+
+		for ( let x = 0; x < searchableData.length; x++ ) {
+			for ( let y = 0; y < searchInput.length; y++ ) {
+				if ( searchableData[x].search( searchInput[y] )  === -1 ) {
+					found = 0;
+				}
+			}
+
+			if ( found === 0 ) {
+				items[x].isVisible = false;
+				data = createBookshelfs( items );
+			} else {
+				items[x].isVisible = true;
+				data = createBookshelfs( items );
+			}
+
+			found = 1;
+		}
+	} else {
+		// All chars in search input had been deleted
+		items.forEach( function( item ) {
+			item.isVisible = true;
+		} );
+		data = createBookshelfs( items );
+	}
+	return data;
+}
 
 function createBookshelfs( items ) {
 	// Find all bookshelf names
