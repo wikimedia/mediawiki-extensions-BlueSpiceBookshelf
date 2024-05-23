@@ -8,6 +8,7 @@
 				v-bind:subtitle="book.subtitle"
 				v-bind:bookshelf="book.bookshelf"
 				v-bind:first_chapter_url="book.first_chapter_url"
+				v-bind:book_edit_url="book.book_edit_url"
 				v-bind:image_url=book.image_url
 				v-bind:actions=book.actions
 			></card>
