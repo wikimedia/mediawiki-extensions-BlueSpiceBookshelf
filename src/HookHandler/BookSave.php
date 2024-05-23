@@ -82,7 +82,6 @@ class BookSave {
 		if ( $content instanceof BookContent ) {
 			$this->doSaveBookSource( $title, $revisionRecord );
 		}
-
 		return true;
 	}
 
@@ -174,7 +173,7 @@ class BookSave {
 		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
 
 		$type = 'public';
-		if ( $book->getNamespace() === NS_BOOK ) {
+		if ( $book->getNamespace() !== NS_BOOK ) {
 			$type = 'private';
 		}
 

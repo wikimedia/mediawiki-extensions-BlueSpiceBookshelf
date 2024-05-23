@@ -116,7 +116,8 @@
 				"version": {
 					"class": "BlueSpice\\Bookshelf\\MetaData\\Version"
 				}
-			}
+			},
+			"CreateNewBookModules": []
 		},
 		"BlueSpiceVisualEditorConnector": {
 			"TagDefinitions": [
@@ -657,6 +658,42 @@
 			"dependencies": [
 				"oojs"
 			]
+		},
+		"ext.bluespice.bookshelf.createNewBook": {
+			"packageFiles": [
+				"bluespice.bookshelf.createNewBook.js",
+				{
+					"name": "pluginModules.json",
+					"callback": "BlueSpice\\Bookshelf\\ClientConfig::getCreateNewBookPlugins"
+				},
+				"ui/dialog/AddNewBook.js",
+				{
+					"name": "ui/dialog/bookshelfdata.json",
+					"callback": "BlueSpice\\Bookshelf\\ClientConfig::getBookshelfData"
+				}
+			],
+			"messages": [
+				"cancel",
+				"bs-bookshelf-newbook-dlg-title",
+				"bs-bookshelf-metadata-dlg-action-save-label",
+				"bs-bookshelf-newbook-dlg-input-title-placeholder",
+				"bs-bookshelf-newbook-dlg-input-title-label",
+				"bs-bookshelf-newbook-dlg-input-subtitle-placeholder",
+				"bs-bookshelf-newbook-dlg-input-subtitle-label",
+				"bs-bookshelf-newbook-dlg-input-bookshelf-label",
+				"bs-bookshelf-newbook-dlg-input-image-label",
+				"bs-bookshelf-newbook-dlg-input-bookshelf-placeholder",
+				"bs-bookshelf-newbook-dlg-input-image-select-placeholder",
+				"bs-bookshelf-newbook-dlg-cover-image-text",
+				"bs-bookshelf-newbook-dlg-error-metadata-save",
+				"bs-bookshelf-newbook-dlg-error-book-save",
+				"bs-bookshelf-newbook-dlg-book-save-summary",
+				"bs-bookshelf-newbook-dlg-upload-error-unhandled",
+				"bs-bookshelf-newbook-dlg-upload-error-duplicate",
+				"bs-bookshelf-newbook-dlg-upload-error-badfilename",
+				"bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label",
+				"bs-bookshelf-newbook-dlg-upload-title-exists"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -744,6 +781,10 @@
 		},
 		"book-content-default-mode": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SetBookContentHandler"
+		},
+		"addNewBook": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SkinTemplateNavigation\\AddNewBook",
+			"services": [ "PermissionManager", "TitleFactory" ]
 		}
 	},
 	"Hooks": {
@@ -769,7 +810,8 @@
 		"GetPreferences": "\\BlueSpice\\Bookshelf\\Hook\\GetPreferences\\BookshelfDefaultView::callback",
 		"SkinTemplateNavigation::Universal": [
 			"addAddToBookEntry",
-			"addEditBook"
+			"addEditBook",
+			"addNewBook"
 		],
 		"BSUEModulePDFAfterFindFiles": "\\BlueSpice\\Bookshelf\\Hook\\BSUEModulePDFAfterFindFiles\\AddAttachments::callback",
 		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\Bookshelf\\Hook\\BSUsageTrackerRegisterCollectors\\NoOfUserBooks::callback",
