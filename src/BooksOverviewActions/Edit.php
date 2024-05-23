@@ -86,4 +86,11 @@ class Edit implements IBooksOverviewAction {
 	public function getRequiredPermission(): string {
 		return 'edit';
 	}
+
+	/**
+	 * @return array
+	 */
+	public function getRLModules(): array {
+		return [];
+	}
 }

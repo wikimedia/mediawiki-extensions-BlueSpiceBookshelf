@@ -273,6 +273,7 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 			$this->setExternalActionItems( $actionsItems, $book, $displayTitle );
 
 			$this->sortActionItems( $actionsItems );
+			$modules = [];
 			foreach ( $actionsItems as $actionItem ) {
 				if ( $actionItem instanceof IBooksOverviewAction === false ) {
 					continue;
@@ -289,8 +290,9 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 						'text' => $actionItem->getText()->plain(),
 						'title' => $actionItem->getTitle()->plain(),
 						'href' => $actionItem->getHref(),
-						'book' => $book->getPrefixedDBkey()
+						'book' => $book->getPrefixedDBkey(),
 					];
+					$modules = array_merge( $actionItem->getRLModules(), $modules );
 
 					$actions[$name] = $actionData;
 				}
@@ -300,6 +302,11 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 		$dataSet->set(
 			Record::ACTIONS,
 			$actions
+		);
+		array_unique( $modules );
+		$dataSet->set(
+			Record::ACTIONS_MODULES,
+			$modules
 		);
 	}
 

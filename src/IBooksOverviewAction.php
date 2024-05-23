@@ -45,4 +45,9 @@ interface IBooksOverviewAction {
 	 * @return string
 	 */
 	public function getRequiredPermission(): string;
+
+	/**
+	 * @return array
+	 */
+	public function getRLModules(): array;
 }
