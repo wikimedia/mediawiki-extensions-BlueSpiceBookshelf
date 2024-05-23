@@ -53,7 +53,10 @@
 					"action": "bs-books-overview-store",
 			} )
 			.done( function( response ) {
-				dfd.resolve( response.results );
+				var modules = getModules( response.results );
+				mw.loader.using( modules ).done( function () {
+					dfd.resolve( response.results );
+				} );
 			} ).fail( function() {
 				dfd.reject()
 			} );
@@ -84,6 +87,21 @@
 		} );
 
 		return data;
+	}
+
+	function getModules( results ) {
+		var allModules = [];
+		results.forEach( function ( result ) {
+			if ( result.modules.length <= 0 ) {
+				return;
+			}
+			allModules = allModules.concat( result.modules );
+		} );
+
+		var modules = allModules.filter( function ( v, i, self ) {
+			return i == self.indexOf( v );
+		} );
+		return modules;
 	}
 
 	render();

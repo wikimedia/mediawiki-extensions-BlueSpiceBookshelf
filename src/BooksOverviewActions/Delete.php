@@ -86,4 +86,11 @@ class Delete implements IBooksOverviewAction {
 	public function getRequiredPermission(): string {
 		return 'delete';
 	}
+
+	/**
+	 * @return array
+	 */
+	public function getRLModules(): array {
+		return [];
+	}
 }
