@@ -155,5 +155,7 @@
 	"bs-bookshelf-newbook-dlg-upload-error-duplicate": "Error message displayed if a identical file has previously been deleted.",
 	"bs-bookshelf-newbook-dlg-upload-error-badfilename": "Error message displayed if a filename contains invalid characters.",
 	"bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label": "Label for confirm dialog to use existing image",
-	"bs-bookshelf-newbook-dlg-upload-title-exists": "Label to insert new file name if filename already exists"
+	"bs-bookshelf-newbook-dlg-upload-title-exists": "Label to insert new file name if filename already exists",
+	"bs-books-overview-page-edit-book-anchor-title": "Title attribute of link opening the edit url to edit the book\nParameters: * $1: Name of book",
+	"bs-books-overview-page-edit-book-anchor-aria-label": "Aria label attribute of link opening the edit url to edit the book\nParameters: * $1: Name of book"
 }
