@@ -7,6 +7,7 @@ use ExtensionRegistry;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\ResourceLoader\Context;
 use MWStake\MediaWiki\Component\ManifestRegistry\ManifestAttributeBasedRegistry;
+use stdClass;
 
 class ClientConfig {
 
@@ -160,5 +161,39 @@ class ClientConfig {
 			'tools' => $tools,
 			'modules' => $modules
 		];
+	}
+
+	/**
+	 * @return array
+	 */
+	public static function getPageCollections() {
+		$pages = [];
+		$services = MediaWikiServices::getInstance();
+		$dbr = $services->getDBLoadBalancer()->getConnection( DB_REPLICA );
+
+		$pageCollectionPrefix = wfMessage( 'bs-pagecollection-prefix' )->inContentLanguage()->plain();
+		$pageCollectionPrefix = str_replace( ' ', '_', $pageCollectionPrefix );
+		$pageCollectionPrefix .= "/";
+
+		$res = $dbr->select(
+			'page',
+			[ 'page_title' ],
+			[
+				"page_namespace" => NS_MEDIAWIKI,
+				"page_title" . $dbr->buildLike( $pageCollectionPrefix, $dbr->anyString() )
+			]
+		);
+
+		foreach ( $res as $row ) {
+			$pageTitle = str_replace( $pageCollectionPrefix, '', $row->page_title );
+
+			$pageData = new stdClass();
+			$pageData->pc_title = $pageTitle;
+			$pages[ $pageTitle ] = $pageData;
+		}
+		ksort( $pages );
+		$pages = array_values( $pages );
+
+		return $pages;
 	}
 }

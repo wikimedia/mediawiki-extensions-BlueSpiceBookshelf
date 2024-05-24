@@ -156,5 +156,6 @@
 	"bs-books-overview-page-edit-book-anchor-aria-label": "Das Buch $1 bearbeiten",
 	"bs-bookshelf-add-to-book-summary": "Seite $1 hinzugefügt",
 	"bs-books-overview-page-book-action-metadata-text": "Metadaten bearbeiten",
-	"bs-books-overview-page-book-action-metadata-title": "Metadaten für Buch $1 bearbeiten"
+	"bs-books-overview-page-book-action-metadata-title": "Metadaten für Buch $1 bearbeiten",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Hinzufügen"
 }
