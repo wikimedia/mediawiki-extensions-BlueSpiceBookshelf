@@ -788,6 +788,10 @@
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookDelete",
 			"services": [ "TitleFactory", "DBLoadBalancer", "BSBookshelfBookLookup" ]
 		},
+		"book-source-move": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookMove",
+			"services": [ "TitleFactory", "MWStakeWikitextParserFactory", "DBLoadBalancer", "BSBookshelfBookLookup" ]
+		},
 		"book-content-default-mode": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SetBookContentHandler"
 		},
@@ -828,7 +832,8 @@
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface",
 		"OutputPageBeforeHTML": "add-chapter-number-to-title-and-headings",
 		"MultiContentSave": "book-source-update",
-		"PageDeleteComplete": "book-source-delete"
+		"PageDeleteComplete": "book-source-delete",
+		"PageMoveComplete": "book-source-move"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"

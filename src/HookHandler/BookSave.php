@@ -75,7 +75,6 @@ class BookSave {
 
 		if ( $revisionRecord->hasSlot( 'book_meta' ) ) {
 			$this->doSaveBookMeta( $title, $revisionRecord );
-			return true;
 		}
 
 		$content = $revisionRecord->getContent( SlotRecord::MAIN );
