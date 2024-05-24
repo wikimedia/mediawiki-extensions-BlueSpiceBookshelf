@@ -73,7 +73,7 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.initialize = function () {
 
 	this.bookshelfInput = new OO.ui.ComboBoxInputWidget( {
 		options: options,
-		$overlay: true,
+		$overlay: this.$overlay,
 		placeholder: mw.message( 'bs-bookshelf-newbook-dlg-input-bookshelf-placeholder' ).text()
 	} );
 	var bookshelfLayout = new OO.ui.FieldLayout( this.bookshelfInput, {
