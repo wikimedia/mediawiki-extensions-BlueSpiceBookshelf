@@ -102,7 +102,8 @@ class BookEditor implements ParsableMenu {
 	 */
 	public function getToolbarItems(): array {
 		return [
-			"metadata"
+			"metadata",
+			"massAdd"
 		];
 	}
 }

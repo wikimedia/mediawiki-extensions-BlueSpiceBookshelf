@@ -21,6 +21,9 @@ ext.bookshelf.ui.data.tree.BookEditorTree = function ( cfg ) {
 				this.metadataManager.setData( metadata );
 				menuToolbar.toolbar.data = metadata;
 			},
+			mass_add_pages: function ( pages ) {
+				this.buildLinks( pages );
+			},
 			save: function() {
 				this.metadataManager.save( this.metadataManager.getData() ).fail( function ( error ) {
 					console.log( error );
@@ -91,4 +94,14 @@ ext.bookshelf.ui.data.tree.BookEditorTree.prototype.updateNodeNumbers = function
 		var item = this.flat[ name ];
 		item.updateNumber( numberings[ i ] );
 	};
+};
+
+ext.bookshelf.ui.data.tree.BookEditorTree.prototype.buildLinks = function ( pages ) {
+	pages.forEach( function ( page ) {
+		this.addSubnodeWithData( {
+			type: 'bs-bookshelf-chapter-wikilink-with-alias',
+			target: page.prefixed_text,
+			label: page.page_title
+		} , '' );
+	}.bind( this ) );
 };

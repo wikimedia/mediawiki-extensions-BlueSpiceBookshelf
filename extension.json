@@ -173,6 +173,13 @@
 						"name": "new"
 					},
 					"module": "ext.bookshelf.menuEditor.tools"
+				},
+				"massAdd": {
+					"classname": "ext.bookshelf.ui.tools.MassAddTool",
+					"group": {
+						"name": "new"
+					},
+					"module": "ext.bookshelf.menuEditor.tools"
 				}
 			}
 		}
@@ -571,12 +578,14 @@
 			]
 		},
 		"ext.bookshelf.menuEditor.tools": {
-			"packageFiles": [
-				"ui/tools/MetadataTool.js"
+			"scripts": [
+				"ui/tools/MetadataTool.js",
+				"ui/tools/MassAddTool.js"
 			],
 			"messages": [
 				"bs-bookshelf-toolbar-tool-metadata-title",
-				"bs-bookshelf-toolbar-tool-metadata-label"
+				"bs-bookshelf-toolbar-tool-metadata-label",
+				"bs-bookshelfui-extjs-tooltip-add-mass"
 			],
 			"dependencies": [
 				"oojs"
@@ -605,6 +614,30 @@
 			],
 			"dependencies": [
 				"oojs"
+			]
+		},
+		"ext.bookshelf.massadd.dialog": {
+			"packageFiles": [
+				"ui/dialog/MassAddDialog.js",
+				{
+					"name": "ui/dialog/collections.json",
+					"callback": "BlueSpice\\Bookshelf\\ClientConfig::getPageCollections"
+				}
+			],
+			"messages": [
+				"bs-bookshelfui-dlg-addmass-title",
+				"cancel",
+				"bs-bookshelfui-dlg-type-label",
+				"bs-bookshelfui-type-category",
+				"bs-bookshelfui-type-subpages",
+				"bs-bookshelfui-type-pagecollection",
+				"bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel",
+				"bs-bookshelfui-dlg-choosecategory-label",
+				"bs-bookshelfui-dlg-choosepc-label",
+				"bs-bookshelf-massadd-dlg-save-action-label"
+			],
+			"dependencies": [
+				"ext.oOJSPlus.widgets"
 			]
 		},
 		"bluespice.bookshelf.processor.chapternumber": {
