@@ -151,5 +151,6 @@
 	"bs-books-overview-page-edit-book-anchor-aria-label": "Edit book $1",
 	"bs-bookshelf-add-to-book-summary": "Added page $1",
 	"bs-books-overview-page-book-action-metadata-text": "Edit metadata",
-	"bs-books-overview-page-book-action-metadata-title": "Edit metadata for book $1"
+	"bs-books-overview-page-book-action-metadata-title": "Edit metadata for book $1",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Add"
 }
