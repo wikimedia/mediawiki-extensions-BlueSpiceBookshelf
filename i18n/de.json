@@ -156,5 +156,7 @@
 	"bs-bookshelf-newbook-dlg-upload-title-exists": "Eine Datei mit diesem Namen existiert bereits. Bitte einen neuen Namen für die Datei eingeben",
 	"bs-books-overview-page-edit-book-anchor-title": "Das Buch $1 bearbeiten",
 	"bs-books-overview-page-edit-book-anchor-aria-label": "Das Buch $1 bearbeiten",
-	"bs-bookshelf-add-to-book-summary": "Seite $1 hinzugefügt"
+	"bs-bookshelf-add-to-book-summary": "Seite $1 hinzugefügt",
+	"bs-books-overview-page-book-action-metadata-text": "Metadaten bearbeiten",
+	"bs-books-overview-page-book-action-metadata-title": "Metadaten für Buch $1 bearbeiten"
 }
