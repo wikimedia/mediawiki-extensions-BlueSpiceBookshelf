@@ -154,7 +154,9 @@
 	"bs-bookshelf-newbook-dlg-upload-error-badfilename": "Error message displayed if a filename contains invalid characters.",
 	"bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label": "Label for confirm dialog to use existing image",
 	"bs-bookshelf-newbook-dlg-upload-title-exists": "Label to insert new file name if filename already exists",
-	"bs-books-overview-page-edit-book-anchor-title": "Title attribute of link opening the edit url to edit the book\nParameters:\n* $1: Name of book",
-	"bs-books-overview-page-edit-book-anchor-aria-label": "Aria label attribute of link opening the edit url to edit the book\nParameters:\n* $1: Name of book",
-	"bs-bookshelf-add-to-book-summary": "Summary for edit action when added to book\nParameters: * $1: Name of page"
+	"bs-books-overview-page-edit-book-anchor-title": "Title attribute of link opening the edit url to edit the book\nParameters: * $1: Name of book",
+	"bs-books-overview-page-edit-book-anchor-aria-label": "Aria label attribute of link opening the edit url to edit the book\nParameters: * $1: Name of book",
+	"bs-bookshelf-add-to-book-summary": "Summary for edit action when added to book\nParameters: * $1: Name of page",
+	"bs-books-overview-page-book-action-metadata-text": "Text for button to open a dialog to edit metadata of a book",
+	"bs-books-overview-page-book-action-metadata-title": "Title for button to edit metadata of a book\nParameters: * - $1: Name of book"
 }

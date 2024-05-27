@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\Data\BooksOverview;
 
 use BlueSpice\Bookshelf\BookMetaLookup;
+use BlueSpice\Bookshelf\BooksOverviewActions\BookMetaData;
 use BlueSpice\Bookshelf\BooksOverviewActions\Delete;
 use BlueSpice\Bookshelf\BooksOverviewActions\Edit;
 use BlueSpice\Bookshelf\ChapterDataModel;
@@ -355,6 +356,8 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 
 		// Edit action
 		$actions['edit'] = new Edit( $book, $displayTitle );
+
+		$actions['metadata' ] = new BookMetaData( $book, $displayTitle );
 	}
 
 	/**
