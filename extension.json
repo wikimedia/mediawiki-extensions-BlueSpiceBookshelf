@@ -702,6 +702,11 @@
 				"bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label",
 				"bs-bookshelf-newbook-dlg-upload-title-exists"
 			]
+		},
+		"ext.bluespice.bookshelf.editmetadata": {
+			"scripts": [
+				"bluespice.bookshelf.editmetadata.js"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
