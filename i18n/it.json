@@ -95,5 +95,7 @@
 	"bs-bookshelf-toolbar-tool-metadata-label": "Modifica metadati",
 	"bs-bookshelf-metadata-widget-checkbox-title": "Seleziona la proprietà $1",
 	"bs-bookshelf-metadata-dlg-title": "Modifica metadati",
-	"bs-bookshelf-metadata-dlg-action-save-label": "Salva"
+	"bs-bookshelf-metadata-dlg-action-save-label": "Salva",
+	"bs-books-overview-page-edit-book-anchor-title": "Modifica libro $1",
+	"bs-books-overview-page-edit-book-anchor-aria-label": "Modifica libro $1"
 }

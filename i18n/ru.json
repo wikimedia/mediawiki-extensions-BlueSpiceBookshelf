@@ -4,6 +4,7 @@
 			"Amikeco",
 			"DDPAT",
 			"Daniel Mietchen",
+			"Dirruw'o",
 			"Facenapalm",
 			"Gulka.nik",
 			"Ice bulldog",
@@ -123,5 +124,7 @@
 	"bs-bookshelf-toolbar-tool-metadata-title": "Изменить метаданные",
 	"bs-bookshelf-toolbar-tool-metadata-label": "Изменить метаданные",
 	"bs-bookshelf-metadata-dlg-title": "Изменить метаданные",
-	"bs-bookshelf-metadata-dlg-action-save-label": "Сохранить"
+	"bs-bookshelf-metadata-dlg-action-save-label": "Сохранить",
+	"bs-books-overview-page-edit-book-anchor-title": "Править книгу $1",
+	"bs-books-overview-page-edit-book-anchor-aria-label": "Править книгу $1"
 }
