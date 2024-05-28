@@ -91,7 +91,7 @@
 	"bs-bookshelf-config-mainlinks-bookshelf-help": "在左侧导航中显示入口点“书本”链接",
 	"bs-bookshelf-tag-booklist-description": "从命名空间\"book\"生成文章列表，并可以进行筛选。过滤器的指示是强制性的。",
 	"bs-bookshelf-ve-booklistinspector-title": "书单",
-	"bs-bookshelf-ve-booklist-attr-filter-label": "过滤器",
+	"bs-bookshelf-ve-booklist-attr-filter-label": "筛选",
 	"bs-bookshelf-ve-booklist-attr-filter-help": "使用元数据的键-值格式来筛选，例如：title:handbook",
 	"bs-bookshelf-tag-bookmeta-description": "用于在书籍页面上保存各种元数据的标签。这些都会包含在书籍中。此标签的属性必须与书籍页面的元数据相关联。",
 	"bs-bookshelf-ve-bookmetainspector-title": "书籍元数据",
