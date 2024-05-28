@@ -155,5 +155,6 @@
 	"bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label": "Dieses Bild ist ein Duplikat. Soll stattdessen das bereits existierende Bild eingefügt werden? Ansonsten kann ein neues Bild hinzugefügt werden.",
 	"bs-bookshelf-newbook-dlg-upload-title-exists": "Eine Datei mit diesem Namen existiert bereits. Bitte einen neuen Namen für die Datei eingeben",
 	"bs-books-overview-page-edit-book-anchor-title": "Das Buch $1 bearbeiten",
-	"bs-books-overview-page-edit-book-anchor-aria-label": "Das Buch $1 bearbeiten"
+	"bs-books-overview-page-edit-book-anchor-aria-label": "Das Buch $1 bearbeiten",
+	"bs-bookshelf-add-to-book-summary": "Seite $1 hinzugefügt"
 }
