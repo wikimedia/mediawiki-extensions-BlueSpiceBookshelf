@@ -60,10 +60,6 @@ class ChapterLookup {
 			[
 				'chapter_book_id' => $bookID
 			],
-			__METHOD__,
-			[
-				'ORDER BY' => 'chapter_number'
-			]
 		);
 
 		foreach ( $results as $result ) {
