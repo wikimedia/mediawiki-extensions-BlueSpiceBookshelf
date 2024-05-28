@@ -273,7 +273,8 @@
 				"bs-bookshelf-add-to-book-label-mod-bstag",
 				"bs-bookshelf-add-to-book-added",
 				"bs-bookshelf-add-to-book-mod-bstag",
-				"bs-bookshelf-empty-selection"
+				"bs-bookshelf-empty-selection",
+				"bs-bookshelf-add-to-book-summary"
 			],
 			"dependencies": [
 				"ext.bluespice.bookshelf.storageLocation",

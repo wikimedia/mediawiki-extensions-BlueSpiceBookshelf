@@ -39,15 +39,6 @@
 			change: function() {
 				var data = this.bookPicker.getSelectedItemData();
 				if ( typeof data === 'object' && data !== null ) {
-					var type = data.book_type;
-					var location = bs.bookshelf.storageLocationRegistry.lookup( type );
-					if ( location && location.allowChangingPageTags() ) {
-						this.overrideBookshelfTagLayout.$element.show();
-					} else {
-						this.overrideBookshelfTag.setSelected( false );
-						this.overrideBookshelfTagLayout.$element.hide();
-					}
-					this.updateSize();
 					this.actions.setAbilities( { add: true } );
 				} else {
 					this.actions.setAbilities( { add: false } );
@@ -58,14 +49,6 @@
 			value: this.pageName,
 			id: 'page-alias'
 		} );
-		this.overrideBookshelfTag = new OO.ui.CheckboxInputWidget( {
-			id: 'override-bookshelf-tag'
-		} );
-		this.overrideBookshelfTagLayout = new OO.ui.FieldLayout( this.overrideBookshelfTag, {
-			label: mw.message( 'bs-bookshelf-add-to-book-label-mod-bstag' ).plain(),
-			align: 'inline'
-		} );
-		this.overrideBookshelfTagLayout.$element.hide();
 
 		return [
 			new OO.ui.FieldLayout( this.bookPicker, {
@@ -75,8 +58,7 @@
 			new OO.ui.FieldLayout( this.alias, {
 				label: mw.message( 'bs-bookshelf-add-to-book-label-alias' ).plain(),
 				align: 'top'
-			} ),
-			this.overrideBookshelfTagLayout
+			} )
 		];
 	};
 
@@ -85,7 +67,7 @@
 	 * @param string action
 	 * @returns OO.ui.Process|null if not handling
 	 */
-	OOJSPlus.ui.dialog.FormDialog.prototype.onAction = function( action ) {
+	bs.bookshelf.dialog.AddToBook.prototype.onAction = function( action ) {
 		if ( action === 'add' ) {
 			var dfd = $.Deferred();
 			var selectedBook = this.bookPicker.getSelectedItemData();
@@ -94,37 +76,37 @@
 				dfd.reject( new OO.ui.Error() );
 			}
 			var alias = this.alias.getValue(),
-				modifyBookshelfTag = this.overrideBookshelfTag.isSelected(),
-				messageTitle = mw.message( 'bs-bookshelf-add-to-book-label' ).plain(),
-				storage = bs.bookshelf.storageLocationRegistry.lookup( selectedBook.book_type );
+				messageTitle = mw.message( 'bs-bookshelf-add-to-book-label' ).plain();
 
 			var wikiText = "\n* [[{0}|{1}]]".format(
 				this.pageName,
 				alias
 			);
 
-			storage.appendText( null, wikiText, modifyBookshelfTag, selectedBook.page_id ).done( function() {
-				mw.notify(
-					mw.message( 'bs-bookshelf-add-to-book-added', selectedBook.book_displaytext ).plain(),
-					{ title: messageTitle }
-				);
-				if ( modifyBookshelfTag ) {
-					mw.notify(
-						mw.message( 'bs-bookshelf-add-to-book-mod-bstag' ).plain(),
-						{ title: messageTitle }
-					);
-					this.close( { needsReload: true } );
-				}
-				this.close();
-				dfd.resolve();
-			}.bind( this ) ).fail( function() {
-				dfd.reject( new OO.ui.Error() );
-			} );
+			mw.loader.using( 'mediawiki.api' ).done( function () {
+				const mwApi = new mw.Api();
+				mwApi.postWithToken( 'csrf', {
+					action: 'edit',
+					title: selectedBook.book_prefixedtext,
+					appendtext: wikiText,
+					summary: mw.message( 'bs-bookshelf-add-to-book-summary', this.pageName ).text()
+				} ).fail( function ( error ) {
+					dfd.reject( new OO.ui.Error( error ) );
+				} )
+					.done( function () {
+						mw.notify(
+							mw.message( 'bs-bookshelf-add-to-book-added', selectedBook.book_displaytext ).plain(),
+							{ title: messageTitle }
+						);
+						this.close( { action: action } );
+						dfd.resolve();
+				}.bind( this ) );
+			}.bind( this ) );
 
 			return dfd.promise();
 		}
 
-		return OOJSPlus.ui.dialog.FormDialog.parent.prototype.onAction.call( this, action );
+		return bs.bookshelf.dialog.AddToBook.parent.prototype.onAction.call( this, action );
 	};
 
 } ) ( mediaWiki, jQuery, blueSpice );
