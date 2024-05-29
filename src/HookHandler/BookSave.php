@@ -73,12 +73,16 @@ class BookSave {
 			return true;
 		}
 
+		if ( $title->getNamespace() !== NS_BOOK ) {
+			return true;
+		}
+
 		if ( $revisionRecord->hasSlot( 'book_meta' ) ) {
 			$this->doSaveBookMeta( $title, $revisionRecord );
 		}
 
 		$content = $revisionRecord->getContent( SlotRecord::MAIN );
-		if ( $content instanceof BookContent ) {
+		if ( $content instanceof BookContent || $content->isEmpty() ) {
 			$this->doSaveBookSource( $title, $revisionRecord );
 		}
 		return true;
@@ -94,13 +98,13 @@ class BookSave {
 			$this->parserFactory->getNodeProcessors(),
 			$this->titleFactory
 		);
-
+		$updater = new ChapterUpdater( $this->loadBalancer, $this->bookLookup, $this->logger );
 		$chapterData = $bookSourceParser->getChapterDataModelArray();
 		if ( empty( $chapterData ) ) {
+			$updater->delete( $book );
 			return;
 		}
 
-		$updater = new ChapterUpdater( $this->loadBalancer, $this->bookLookup, $this->logger );
 		$status = $updater->update( $book, $chapterData );
 		if ( !$status ) {
 			$this->logger->error( 'onMultiContentSave: Database update error' );
