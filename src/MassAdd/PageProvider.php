@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\MassAdd;
 
 class PageProvider {
+	/** @var PageProvider */
 	private static $instance;
 	protected $root;
 	protected $type;
