@@ -148,5 +148,6 @@
 	"bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label": "This image is a duplicate. Should the existing image be inserted instead? Otherwise a new image can be added.",
 	"bs-bookshelf-newbook-dlg-upload-title-exists": "A file with this name exists already. Please insert a new filename",
 	"bs-books-overview-page-edit-book-anchor-title": "Edit book $1",
-	"bs-books-overview-page-edit-book-anchor-aria-label": "Edit book $1"
+	"bs-books-overview-page-edit-book-anchor-aria-label": "Edit book $1",
+	"bs-bookshelf-add-to-book-summary": "Added page $1"
 }
