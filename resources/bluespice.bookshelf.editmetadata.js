@@ -22,7 +22,9 @@ $( document ).on( 'click', '.bs-books-overview-action-metadata', function( e ) {
 				data: data
 			} );
 			dialog.on( 'metadataset', function ( metadata ) {
-				metadataManager.save( metadata ).fail( function ( error ) {
+				metadataManager.save( metadata ).done( function () {
+					window.location.reload();
+				} ).fail( function ( error ) {
 					console.log( error );
 				} );
 			}.bind( this ) );
