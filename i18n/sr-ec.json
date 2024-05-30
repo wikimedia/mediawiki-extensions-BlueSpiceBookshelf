@@ -70,5 +70,9 @@
 	"bs-bookshelf-metadata-dlg-title": "Уреди метаподатке",
 	"bs-bookshelf-metadata-dlg-action-save-label": "Сачувај",
 	"bs-books-overview-page-edit-book-anchor-title": "Уреди књигу $1",
-	"bs-books-overview-page-edit-book-anchor-aria-label": "Уреди књигу $1"
+	"bs-books-overview-page-edit-book-anchor-aria-label": "Уреди књигу $1",
+	"bs-bookshelf-add-to-book-summary": "Додата страница $1",
+	"bs-books-overview-page-book-action-metadata-text": "Уреди метаподатке",
+	"bs-books-overview-page-book-action-metadata-title": "Уреди метаподатке књиге $1",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Додај"
 }

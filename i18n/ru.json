@@ -126,5 +126,9 @@
 	"bs-bookshelf-metadata-dlg-title": "Изменить метаданные",
 	"bs-bookshelf-metadata-dlg-action-save-label": "Сохранить",
 	"bs-books-overview-page-edit-book-anchor-title": "Править книгу $1",
-	"bs-books-overview-page-edit-book-anchor-aria-label": "Править книгу $1"
+	"bs-books-overview-page-edit-book-anchor-aria-label": "Править книгу $1",
+	"bs-bookshelf-add-to-book-summary": "Добавлена страница $1",
+	"bs-books-overview-page-book-action-metadata-text": "Править метаданные",
+	"bs-books-overview-page-book-action-metadata-title": "Править метаданные книги $1",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Добавить"
 }

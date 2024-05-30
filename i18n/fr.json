@@ -8,6 +8,7 @@
 			"DreZhsh",
 			"Eihel",
 			"Gomoko",
+			"Graineahumus",
 			"Lewis2013",
 			"MacOS Weed",
 			"SleaY",
@@ -136,5 +137,9 @@
 	"bs-bookshelf-toolbar-tool-metadata-label": "Modifier les métadonnées",
 	"bs-bookshelf-newbook-dlg-input-subtitle-label": "Sous-titre",
 	"bs-bookshelf-newbook-dlg-input-image-select-placeholder": "Choisissez une image existante",
-	"bs-bookshelf-newbook-dlg-upload-error-badfilename": "Le nom de fichier $1 contient des caractères invalides."
+	"bs-bookshelf-newbook-dlg-upload-error-badfilename": "Le nom de fichier $1 contient des caractères invalides.",
+	"bs-bookshelf-add-to-book-summary": "Page $1 ajoutée",
+	"bs-books-overview-page-book-action-metadata-text": "Modifier les métadonnées",
+	"bs-books-overview-page-book-action-metadata-title": "Modifier les métadonnées du livre $1",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Ajouter"
 }

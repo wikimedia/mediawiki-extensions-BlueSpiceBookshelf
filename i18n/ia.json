@@ -146,5 +146,9 @@
 	"bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label": "Iste imagine es un duplicato. Debe le imagine existente esser inserite in su loco? Si non, un nove imagine pote esser addite.",
 	"bs-bookshelf-newbook-dlg-upload-title-exists": "Un file con iste nomine ja existe. Per favor insere un nove nomine de file",
 	"bs-books-overview-page-edit-book-anchor-title": "Modificar le libro $1",
-	"bs-books-overview-page-edit-book-anchor-aria-label": "Modificar le libro $1"
+	"bs-books-overview-page-edit-book-anchor-aria-label": "Modificar le libro $1",
+	"bs-bookshelf-add-to-book-summary": "Pagina $1 addite",
+	"bs-books-overview-page-book-action-metadata-text": "Modificar metadatos",
+	"bs-books-overview-page-book-action-metadata-title": "Modificar metadatos pro le libro $1",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Adder"
 }
