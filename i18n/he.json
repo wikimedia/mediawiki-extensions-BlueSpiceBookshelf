@@ -150,5 +150,9 @@
 	"bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label": "התמונה הזאת היא זהה לתמונה אחרת. אולי כדאי להוסיף את התמונה הקיימת? אם לא, אפשר גם להוסיף תמונה חדשה.",
 	"bs-bookshelf-newbook-dlg-upload-title-exists": "קובץ בשם כזה כבר קיים. נא להזין שם קובץ חדש",
 	"bs-books-overview-page-edit-book-anchor-title": "עריכת הספר $1",
-	"bs-books-overview-page-edit-book-anchor-aria-label": "עריכת הספר $1"
+	"bs-books-overview-page-edit-book-anchor-aria-label": "עריכת הספר $1",
+	"bs-bookshelf-add-to-book-summary": "נוסף הדף $1",
+	"bs-books-overview-page-book-action-metadata-text": "עריכת מטא־נתונים",
+	"bs-books-overview-page-book-action-metadata-title": "עריכת מטא־נתונים עבור הספר $1",
+	"bs-bookshelf-massadd-dlg-save-action-label": "הוספה"
 }
