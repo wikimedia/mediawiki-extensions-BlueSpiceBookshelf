@@ -30,6 +30,12 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 	/** @var Title[] */
 	private $books = [];
 
+	/** @var array */
+	private $invalidBookIDs = [];
+
+	/** @var array */
+	private $existingBooks = [];
+
 	/**
 	 * @return string
 	 */
@@ -63,89 +69,16 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 		$this->revisionLookup = $services->getRevisionLookup();
 		$this->parserFactory = $services->get( 'MWStakeWikitextParserFactory' );
 
-		$this->truncateTables();
 		$this->fetchBooks();
 		$this->updateBooksTable();
-		$this->updateBookChaptersTable();
 		$this->updateBookMetaTable();
+		$this->updateBookChaptersTable();
 
 		return true;
 	}
 
-	private function truncateTables() {
-		// Truncate 'bs_book_chapters'
-		$res = $this->db->select(
-			'bs_book_chapters',
-			'chapter_id',
-			[]
-		);
-
-		$chapterIDs = [];
-		foreach ( $res as $row ) {
-			$chapterIDs[] = $row->chapter_id;
-		}
-
-		if ( !empty( $chapterIDs ) ) {
-			$this->output( "Truncate table 'bs_book_chapters' ..." );
-			$this->db->delete(
-				'bs_book_chapters',
-				[
-					'chapter_id' => $chapterIDs
-				]
-			);
-			$this->output( "\033[32m  done\n\033[39m" );
-		}
-
-		// Truncate 'bs_books'
-		$res = $this->db->select(
-			'bs_books',
-			'book_id',
-			[]
-		);
-
-		$bookIDs = [];
-		foreach ( $res as $row ) {
-			$bookIDs[] = $row->book_id;
-		}
-
-		if ( !empty( $bookIDs ) ) {
-			$this->output( "Truncate table 'bs_books' ..." );
-			$this->db->delete(
-				'bs_books',
-				[
-					'book_id' => $bookIDs
-				]
-			);
-			$this->output( "\033[32m  done\n\033[39m" );
-		}
-
-		// Truncate 'bs_book_meta'
-		$res = $this->db->select(
-			'bs_book_meta',
-			'm_id',
-			[]
-		);
-
-		$metaIDs = [];
-		foreach ( $res as $row ) {
-			$metaIDs[] = $row->m_id;
-		}
-
-		if ( !empty( $metaIDs ) ) {
-			$this->output( "Truncate table 'bs_book_meta' ..." );
-			$this->db->delete(
-				'bs_book_meta',
-				[
-					'm_id' => $metaIDs
-				]
-			);
-			$this->output( "\033[32m  done\n\033[39m" );
-		}
-	}
-
 	private function fetchBooks() {
-		$dbr = $this->getDB( DB_REPLICA );
-		$res = $dbr->select(
+		$res = $this->db->select(
 			'page',
 			'*',
 			[
@@ -166,13 +99,46 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 	}
 
 	private function updateBooksTable() {
-		foreach ( $this->books as $book ) {
+		$res = $this->db->select(
+			'bs_books',
+			[ 'book_id', 'book_namespace', 'book_title' ],
+		);
+
+		foreach ( $res as $row ) {
+			$title = $this->titleFactory->makeTitle( $row->book_namespace, $row->book_title );
+			$key = $title->getPrefixedDBkey();
+			if ( !isset( $this->books[$key] ) ) {
+				$this->invalidBookIDs[] = $row->book_id;
+			} else {
+				$this->existingBooks[] = $key;
+			}
+		}
+
+		// Delete not existing books
+		if ( !empty( $this->invalidBookIDs ) ) {
+			$this->output( "Cleaning table 'bs_books' ..." );
+			$this->db->delete(
+				'bs_books',
+				[
+					'book_id' => $this->invalidBookIDs
+				]
+			);
+			$this->output( "\033[32m  done\n\033[39m" );
+		}
+
+		// Add new books
+		foreach ( $this->books as $key => $book ) {
+			$this->output( "Insert into 'bs_books' " . $book->getPrefixedDBKey() );
+			if ( in_array( $key, $this->existingBooks ) ) {
+				$this->output( "\033[32m  skipping\n\033[39m" );
+				continue;
+			}
+
 			$type = 'public';
 			if ( $book->getNamespace() === NS_USER ) {
 				$type = 'private';
 			}
 
-			$this->output( "Insert into 'bs_books' " . $book->getPrefixedDBKey() );
 			$this->db->insert(
 				'bs_books',
 				[
@@ -186,56 +152,25 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 		}
 	}
 
-	private function updateBookChaptersTable() {
-		foreach ( $this->books as $book ) {
-			$revisionRecord = $this->revisionLookup->getRevisionByTitle( $book );
-			$bookSourceParser = new BookSourceParser(
-				$revisionRecord,
-				$this->parserFactory->getNodeProcessors(),
-				$this->titleFactory
-			);
-
-			/** @var ChapterDataModel */
-			$chapters = $bookSourceParser->getChapterDataModelArray();
-
-			$res = $this->db->select(
-				'bs_books',
-				'book_id',
+	private function updateBookMetaTable() {
+		// Delete unused book meta
+		if ( !empty( $this->invalidBookIDs ) ) {
+			$this->output( "Cleaning table 'bs_book_meta' ..." );
+			$this->db->delete(
+				'bs_book_meta',
 				[
-					'book_namespace' => $book->getNamespace(),
-					'book_title' => $book->getDBkey()
+					'm_book_id' => $this->invalidBookIDs
 				]
 			);
-
-			$bookId = null;
-			foreach ( $res as $row ) {
-				$bookId = $row->book_id;
-			}
-
-			if ( $bookId !== null ) {
-				foreach ( $chapters as $chapter ) {
-					$this->output( "Insert " . $chapter->getName() . " into 'bs_book_chapters' ..." );
-					$this->db->insert(
-						'bs_book_chapters',
-						[
-							'chapter_book_id' => $bookId,
-							'chapter_namespace' => $chapter->getNamespace(),
-							'chapter_title' => $chapter->getTitle(),
-							'chapter_name' => $chapter->getName(),
-							'chapter_number' => $chapter->getNumber(),
-							'chapter_type' => $chapter->getType()
-						]
-					);
-					$this->output( "\033[32m  done\n\033[39m" );
-				}
-			} else {
-				$this->output( "\033[31mNo valid book_id for " . $book->getPrefixedDBKey() . "\n\033[39m" );
-			}
+			$this->output( "\033[32m  done\n\033[39m" );
 		}
-	}
 
-	private function updateBookMetaTable() {
-		foreach ( $this->books as $book ) {
+		// Add new book meta
+		foreach ( $this->books as $key => $book ) {
+			if ( in_array( $key, $this->existingBooks ) ) {
+				continue;
+			}
+
 			$meta = [];
 
 			$res = $this->db->select(
@@ -290,7 +225,80 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 						'm_value' => trim( $value )
 					]
 				);
+				if ( $key === 'title' ) {
+					// Update book name
+					$this->db->update(
+						'bs_books',
+						[
+							'book_name' => $value
+						],
+						[
+							'book_id' => $bookId
+						]
+					);
+				}
 				$this->output( "\033[32m  done\n\033[39m" );
+			}
+		}
+	}
+
+	private function updateBookChaptersTable() {
+		// Delete unused book chapters
+		if ( !empty( $this->invalidBookIDs ) ) {
+			$this->output( "Cleaning table 'bs_book_chapters' ..." );
+			$this->db->delete(
+				'bs_book_chapters',
+				[
+					'chapter_book_id' => $this->invalidBookIDs
+				]
+			);
+			$this->output( "\033[32m  done\n\033[39m" );
+		}
+
+		// Add new book chapters
+		foreach ( $this->books as $book ) {
+			$revisionRecord = $this->revisionLookup->getRevisionByTitle( $book );
+			$bookSourceParser = new BookSourceParser(
+				$revisionRecord,
+				$this->parserFactory->getNodeProcessors(),
+				$this->titleFactory
+			);
+
+			/** @var ChapterDataModel */
+			$chapters = $bookSourceParser->getChapterDataModelArray();
+
+			$res = $this->db->select(
+				'bs_books',
+				'book_id',
+				[
+					'book_namespace' => $book->getNamespace(),
+					'book_title' => $book->getDBkey()
+				]
+			);
+
+			$bookId = null;
+			foreach ( $res as $row ) {
+				$bookId = $row->book_id;
+			}
+
+			if ( $bookId !== null ) {
+				foreach ( $chapters as $chapter ) {
+					$this->output( "Insert " . $chapter->getName() . " into 'bs_book_chapters' ..." );
+					$this->db->insert(
+						'bs_book_chapters',
+						[
+							'chapter_book_id' => $bookId,
+							'chapter_namespace' => $chapter->getNamespace(),
+							'chapter_title' => $chapter->getTitle(),
+							'chapter_name' => $chapter->getName(),
+							'chapter_number' => $chapter->getNumber(),
+							'chapter_type' => $chapter->getType()
+						]
+					);
+					$this->output( "\033[32m  done\n\033[39m" );
+				}
+			} else {
+				$this->output( "\033[31mNo valid book_id for " . $book->getPrefixedDBKey() . "\n\033[39m" );
 			}
 		}
 	}
