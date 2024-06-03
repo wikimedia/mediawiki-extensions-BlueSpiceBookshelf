@@ -38,7 +38,7 @@
 	"bs-bookshelf-book-grid-title": "책",
 	"bookshelf": "책장",
 	"bookshelf-summary": "일반 책",
-	"bs-bookshelf-ga-manager-label": "책",
+	"bs-bookshelf-mainlinks-label": "책",
 	"bs-bookshelf-prof-defaultview": "기본 뷰",
 	"bs-bookshelf-prof-defaultview-grid": "그리드",
 	"bs-bookshelf-prof-defaultview-images": "이미지",
@@ -50,6 +50,7 @@
 	"bs-bookshelf-pref-supressbookns-help": "문서 이름의 이름공간은 PDF 출력에서 숨겨집니다.",
 	"bs-bookshelf-warning": "PHP 예외: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "책에 추가",
+	"bs-bookshelf-ve-booklistinspector-title": "책 목록",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "필터",
 	"bs-bookshelf-ve-bookmetainspector-title": "북메타",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "제목",
@@ -62,8 +63,14 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "책의 판을 설정합니다",
 	"bs-bookshelf-ve-bookshelfinspector-title": "책장",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "책",
-	"bs-bookshelf-ve-booklistinspector-title": "책 목록",
 	"bs-bookshelf-droplet-name": "책 목록",
 	"bs-bookshelf-droplet-description": "책 이름공간의 문서 목록",
-	"bs-bookshelf-mainlinks-label": "책"
+	"bs-bookshelf-toolbar-tool-metadata-title": "메타 데이터 편집",
+	"bs-bookshelf-toolbar-tool-metadata-label": "메타 데이터 편집",
+	"bs-bookshelf-metadata-widget-checkbox-title": "$1 속성 선택",
+	"bs-bookshelf-metadata-dlg-title": "메타 데이터 편집",
+	"bs-bookshelf-metadata-dlg-action-save-label": "저장",
+	"bs-bookshelf-newbook-dlg-title": "새 책 만들기",
+	"bs-books-overview-page-edit-book-anchor-title": "책 $1 편집",
+	"bs-books-overview-page-edit-book-anchor-aria-label": "책 $1 편집"
 }

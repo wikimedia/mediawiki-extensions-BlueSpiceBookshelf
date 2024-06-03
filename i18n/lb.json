@@ -66,5 +66,12 @@
 	"bs-bookshelf-toolbar-tool-metadata-label": "Metadonnéeën änneren",
 	"bs-bookshelf-metadata-widget-checkbox-title": "Eegenschafat $1 auswielen",
 	"bs-bookshelf-metadata-dlg-title": "Metadonnéeën änneren",
-	"bs-bookshelf-metadata-dlg-action-save-label": "Späicheren"
+	"bs-bookshelf-metadata-dlg-action-save-label": "Späicheren",
+	"bs-bookshelf-newbook-dlg-input-title-label": "Buchtitel",
+	"bs-bookshelf-newbook-dlg-input-subtitle-label": "Ënnertitel",
+	"bs-bookshelf-newbook-dlg-input-bookshelf-label": "Bicherregal",
+	"bs-bookshelf-add-to-book-summary": "Säit $1 derbäigesat",
+	"bs-books-overview-page-book-action-metadata-text": "Metadonnéeën änneren",
+	"bs-books-overview-page-book-action-metadata-title": "Metadonnéeë fir d'Buch $1 änneren",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Derbäisetzen"
 }

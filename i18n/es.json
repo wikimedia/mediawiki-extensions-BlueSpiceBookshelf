@@ -18,7 +18,8 @@
 			"SpikeShroom",
 			"TehFrog",
 			"Warming Hearth",
-			"Whovian Biologist"
+			"Whovian Biologist",
+			"AnupamM"
 		]
 	},
 	"bs-bookshelf-extension-description": "Habilita BlueSpice para controlar y exportar colecciones jerárquicas de artículos.",
@@ -127,5 +128,9 @@
 	"bs-bookshelf-toolbar-tool-metadata-label": "Editar metadatos",
 	"bs-bookshelf-metadata-widget-checkbox-title": "Seleccionar propiedad $1",
 	"bs-bookshelf-metadata-dlg-title": "Editar metadatos",
-	"bs-bookshelf-metadata-dlg-action-save-label": "Guardar"
+	"bs-bookshelf-metadata-dlg-action-save-label": "Guardar",
+	"bs-bookshelf-newbook-dlg-input-image-select-placeholder": ">Elige la imagen existente",
+	"bs-books-overview-page-book-action-metadata-text": "Editar metadatos",
+	"bs-books-overview-page-book-action-metadata-title": "Editar metadatos para el libro $1",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Añadir"
 }

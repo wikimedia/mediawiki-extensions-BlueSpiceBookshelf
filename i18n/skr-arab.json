@@ -25,5 +25,7 @@
 	"bs-bookshelf-toolbar-tool-metadata-title": "میٹا ڈیٹا وچ تبدیلی کرو",
 	"bs-bookshelf-toolbar-tool-metadata-label": "میٹا ڈیٹا وچ تبدیلی کرو",
 	"bs-bookshelf-metadata-dlg-title": "میٹا ڈیٹا وچ تبدیلی کرو",
-	"bs-bookshelf-metadata-dlg-action-save-label": "بچاؤ"
+	"bs-bookshelf-metadata-dlg-action-save-label": "بچاؤ",
+	"bs-bookshelf-newbook-dlg-title": "نویں کتاب بݨاؤ",
+	"bs-books-overview-page-edit-book-anchor-aria-label": "کتاب $1 وچ تبدیلی کرو"
 }
