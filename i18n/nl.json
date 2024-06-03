@@ -151,5 +151,9 @@
 	"bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label": "Deze afbeelding is een duplicaat. Moet in plaats daarvan de bestaande afbeelding worden ingevoegd? Anders kan een nieuwe afbeelding worden toegevoegd.",
 	"bs-bookshelf-newbook-dlg-upload-title-exists": "Er is al een bestand met deze naam. Voer een nieuwe bestandsnaam in",
 	"bs-books-overview-page-edit-book-anchor-title": "Boek $1 bewerken",
-	"bs-books-overview-page-edit-book-anchor-aria-label": "Boek $1 bewerken"
+	"bs-books-overview-page-edit-book-anchor-aria-label": "Boek $1 bewerken",
+	"bs-bookshelf-add-to-book-summary": "Pagina $1 toegevoegd",
+	"bs-books-overview-page-book-action-metadata-text": "Metagegevens bewerken",
+	"bs-books-overview-page-book-action-metadata-title": "Metagegevens voor boek $1 bewerken",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Toevoegen"
 }

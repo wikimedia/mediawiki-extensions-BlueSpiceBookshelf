@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Исмаил Садуев",
 			"Умар"
 		]
 	},
@@ -18,8 +19,8 @@
 	"bs-bookshelf-grouping-template-type-local_storage": "Ханна жайнаш",
 	"bs-bookshelf-grouping-template-type-ns_book": "Коьрта жайнаш",
 	"bs-bookshelf-grouping-template-type-user_book": "Долара жайнаш",
-	"bs-bookshelf-action-editbook": "Нисйе",
-	"bs-bookshelf-action-editbook-create": "Нисйе",
+	"bs-bookshelf-action-editbook": "Нисйан",
+	"bs-bookshelf-action-editbook-create": "Нисйан",
 	"bs-bookshelf-action-export-book": "Жайна экспортде",
 	"bs-bookshelf-edit-title": "Хийцам $1",
 	"bs-bookshelf-error-invalid-type": "Билгалйина жайнан магийна йоцу тайпа",
