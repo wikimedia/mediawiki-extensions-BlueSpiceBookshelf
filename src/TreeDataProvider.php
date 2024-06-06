@@ -79,7 +79,9 @@ class TreeDataProvider {
 	private function processItem( Title $activeBook, array $item, array &$data, $path = '' ): void {
 		$itemData = [];
 
-		$fullId = md5( $item['chapter_name'] );
+		$book = $activeBook->getPrefixedDBkey();
+
+		$fullId = md5( $book . $item['chapter_name'] );
 		$id = $this->idPrefix;
 		$id .= substr( $fullId, 0, 6 );
 		$path .= "/$id";
@@ -128,6 +130,9 @@ class TreeDataProvider {
 	private function makeTextNode( array $item, Title $title, string $id, string $path ): array {
 		$data = [
 			'id' => $id,
+			'type' => $item['chapter_type'],
+			'namespace' => $item['chapter_namespace'],
+			'title' => $item['chapter_title'],
 			'name' => $item['chapter_name'],
 			'text' => $item['chapter_number'] . ' ' . $item['chapter_name'],
 			'path' => trim( $path, '/' ),
