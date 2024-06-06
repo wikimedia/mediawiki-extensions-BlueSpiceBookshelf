@@ -7,12 +7,15 @@
 			@update:model-value="getSearchResults"
 		></cdx-search-input>
 	</div>
-	<div class="bs-books-bookshelfs">
+	<div class="bs-books-bookshelfs" v-if="hasData" >
 		<bookshelf  v-for="bookshelf in bookshelfs"
 			v-show="bookshelf.isVisible"
 			v-bind:bookshelf="bookshelf.name"
 			v-bind:books="bookshelf.books"
 		></bookshelf>
+	</div>
+	<div class="bs-books-bookshelfs-empty" v-else>
+		{{ emptyMsg }}
 	</div>
 </template>
 
@@ -25,13 +28,16 @@ module.exports = exports = {
 	name: 'BooksApp',
 	props: {
 		items: {
-			type: Array
+			type: Array,
+			default: []
 		},
 		searchableData: {
-			type: Array
+			type: Array,
+			default: []
 		},
 		searchPlaceholderLabel: {
-			type: String
+			type: String,
+			default: ''
 		},
 		filter: {
 			type: String,
@@ -47,17 +53,27 @@ module.exports = exports = {
 			item.isVisible = true;
 		} );
 
-		// Initial bookselfs is in local scope. The bookshelfs value in return statement is global.
-		// If we use bookshelfs here for createBookshelfs the search input would not change the visible items.
-		var initialBookshelfs = createBookshelfs( this.items );
+		var hasData = true;
+		var emtyMsg = '';
+		var initialBookshelfs = [];
+		if ( this.items.length > 0 ) {
+			// Initial bookselfs is in local scope. The bookshelfs value in return statement is global.
+			// If we use bookshelfs here for createBookshelfs the search input would not change the visible items.
+			initialBookshelfs = createBookshelfs( this.items );
 
-		if ( this.filter !== '' ) {
-			initialBookshelfs = filter( initialBookshelfs, this.items, this.searchableData, this.filter );
+			if ( this.filter !== '' ) {
+				initialBookshelfs = filter( initialBookshelfs, this.items, this.searchableData, this.filter );
+			}
+		} else {
+			hasData = false;
+			emtyMsg = mw.message( 'bs-books-overview-page-bookshelf-empty' ).plain();
 		}
 
 		return {
 			searchInput: [],
-			bookshelfs: initialBookshelfs
+			bookshelfs: initialBookshelfs,
+			hasData: hasData,
+			emptyMsg: emtyMsg
 		};
 	},
 	methods: {
@@ -180,6 +196,9 @@ function createBookshelfs( items ) {
 }
 .bs-books-bookshelfs {
 	margin-top: 20px;
+}
+.bs-books-bookshelfs-empty {
+	padding: 20px;
 }
 @media ( max-width: 768px ) {
 	.bs-books-search {
