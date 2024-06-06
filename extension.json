@@ -557,7 +557,8 @@
 				"bs-books-overview-page-book-actions-dropdown-menu-title",
 				"bs-books-overview-page-book-search-placeholder",
 				"bs-books-overview-page-edit-book-anchor-title",
-				"bs-books-overview-page-edit-book-anchor-aria-label"
+				"bs-books-overview-page-edit-book-anchor-aria-label",
+				"bs-books-overview-page-bookshelf-empty"
 			]
 		},
 		"ext.bluespice.books.special.styles": {

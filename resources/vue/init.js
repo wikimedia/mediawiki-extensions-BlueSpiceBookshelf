@@ -21,6 +21,7 @@
 				},
 				render: function() {
 					var books = [];
+					var searchableData  = [];
 
 					if ( response.length > 0 ) {
 						books = response;
@@ -53,11 +54,13 @@
 					"action": "bs-books-overview-store",
 			} )
 			.done( function( response ) {
+				console.log( 'success' );
 				var modules = getModules( response.results );
 				mw.loader.using( modules ).done( function () {
 					dfd.resolve( response.results );
 				} );
 			} ).fail( function() {
+				console.log( 'fail' );
 				dfd.reject()
 			} );
 		} );
