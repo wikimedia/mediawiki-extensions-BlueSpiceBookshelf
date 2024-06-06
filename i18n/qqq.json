@@ -161,5 +161,10 @@
 	"bs-bookshelf-add-to-book-summary": "Summary for edit action when added to book\nParameters: * $1: Name of page",
 	"bs-books-overview-page-book-action-metadata-text": "Text for button to open a dialog to edit metadata of a book",
 	"bs-books-overview-page-book-action-metadata-title": "Title for button to edit metadata of a book\nParameters: * - $1: Name of book",
-	"bs-bookshelf-massadd-dlg-save-action-label": "Label for dialog action to start mass adding"
+	"bs-bookshelf-massadd-dlg-save-action-label": "Label for dialog action to start mass adding",
+	"bs-bookshelf-tag-searchinbook-error": "Error message when search in book failed.\n$1 - book name specified",
+	"bs-bookshelf-droplet-search-name": "Content droplet name",
+	"bs-bookshelf-droplet-search-description": "Content droplet description",
+	"bs-bookshelf-droplet-search-book": "Tag inspector field label in VisualEditor",
+	"bs-bookshelf-droplet-search-book-help": "Tag inspector field help in VisualEditor"
 }

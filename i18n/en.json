@@ -152,5 +152,10 @@
 	"bs-bookshelf-add-to-book-summary": "Added page $1",
 	"bs-books-overview-page-book-action-metadata-text": "Edit metadata",
 	"bs-books-overview-page-book-action-metadata-title": "Edit metadata for book $1",
-	"bs-bookshelf-massadd-dlg-save-action-label": "Add"
+	"bs-bookshelf-massadd-dlg-save-action-label": "Add",
+	"bs-bookshelf-tag-searchinbook-error": "Specify a valid book name",
+	"bs-bookshelf-droplet-search-name": "Search in a book",
+	"bs-bookshelf-droplet-search-description": "Search for pages in a book",
+	"bs-bookshelf-droplet-search-book": "Book",
+	"bs-bookshelf-droplet-search-book-help": "Name of the book to search in"
 }

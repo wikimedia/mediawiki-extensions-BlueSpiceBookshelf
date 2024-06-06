@@ -42,7 +42,8 @@
 				"bookmeta": "\\BlueSpice\\Bookshelf\\Tag\\BookshelfMeta",
 				"bookshelf": "\\BlueSpice\\Bookshelf\\Tag\\Bookshelf",
 				"booklist": "\\BlueSpice\\Bookshelf\\Tag\\BookList",
-				"booknav": "\\BlueSpice\\Bookshelf\\Tag\\BookNav"
+				"booknav": "\\BlueSpice\\Bookshelf\\Tag\\BookNav",
+				"searchinbook": "BlueSpice\\Bookshelf\\Tag\\SearchInBook"
 			},
 			"DynamicFileRegistry": {
 				"bookshelfimage": "\\BlueSpice\\Bookshelf\\DynamicFileDispatcher\\BookshelfImage"
@@ -126,7 +127,8 @@
 				"ext.bluespice.booklist.visualEditorTagDefinition",
 				"ext.bluespice.bookmeta.visualEditorTagDefinition",
 				"ext.bluespice.bookshelf.visualEditorTagDefinition",
-				"ext.bluespice.booknav.visualEditorTagDefinition"
+				"ext.bluespice.booknav.visualEditorTagDefinition",
+				"ext.bluespice.searchinbook.visualEditorTagDefinition"
 			]
 		},
 		"ContentDroplets": {
@@ -139,6 +141,9 @@
 				},
 				"bookpdf": {
 					"class": "\\BlueSpice\\Bookshelf\\ContentDroplets\\BookPDFDroplet"
+				},
+				"search_in_book": {
+					"class": "BlueSpice\\Bookshelf\\ContentDroplets\\SearchInBook"
 				}
 			}
 		},
@@ -153,10 +158,10 @@
 			"PluginRegistry": {
 				"books": {
 					"class": "BlueSpice\\Bookshelf\\ExtendedSearch\\Books",
-					"services": [ "TitleFactory", "LinkRenderer", "BSBookshelfUtilities" ]
-                                }
-                        }
-                },
+					"services": [ "TitleFactory", "LinkRenderer", "BSBookshelfBookLookup" ]
+				}
+			}
+		},
 		"MenuEditor": {
 			"Menus": {
 				"bookeditor": {
@@ -477,6 +482,21 @@
 				"ext.bluespice.bookshelf.booknav.styles",
 				"ext.visualEditor.mwcore",
 				"mediawiki.widgets"
+			]
+		},
+		"ext.bluespice.searchinbook.visualEditorTagDefinition": {
+			"scripts": [
+				"ui/widget/BookInputWidget.js",
+				"ext.bluespice.bookshelf.SearchInBook.js"
+			],
+			"messages": [
+				"bs-bookshelf-droplet-search-name",
+				"bs-bookshelf-droplet-search-description",
+				"bs-bookshelf-droplet-search-book",
+				"bs-bookshelf-droplet-search-book-help"
+			],
+			"dependencies": [
+				"ext.bluespice.tagsearch.visualEditor"
 			]
 		},
 		"ext.bluespice.bookshelf.booknav.styles": {
