@@ -6,10 +6,13 @@ use BlueSpice\Bookshelf\Content\BookContent;
 use BlueSpice\Bookshelf\MenuEditor\Node\ChapterPlainText;
 use BlueSpice\Bookshelf\MenuEditor\Node\ChapterWikiLinkWithAlias;
 use Content;
+use FormatJson;
+use JsonContent;
 use MediaWiki\Extension\MenuEditor\IMenuNodeProcessor;
 use MediaWiki\Extension\MenuEditor\Node\MenuNode;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Storage\PageUpdater;
 use MWStake\MediaWiki\Lib\Nodes\INodeProcessor;
 use TitleFactory;
 
@@ -37,6 +40,27 @@ class BookSourceParser extends WikitextMenuParser {
 		$filteredNodeProcessors = $this->getSupportedNodeProcessors( $nodeProcessors );
 
 		return $filteredNodeProcessors;
+	}
+
+	/**
+	 * @param array $nodes
+	 * @param bool $replace
+	 * @return void
+	 */
+	public function addNodesFromData( array $nodes, bool $replace = false ) {
+		parent::addNodesFromData( $nodes['nodes'], $replace );
+		$meta = $nodes['metadata'] ?? [];
+		$content = new JsonContent( FormatJson::encode( $meta ) );
+		$this->revision->setContent( 'book_meta', $content );
+	}
+
+	/**
+	 * @param PageUpdater $updater
+	 * @return void
+	 */
+	protected function setUpdaterSlotsOnSave( PageUpdater $updater ) {
+		parent::setUpdaterSlotsOnSave( $updater );
+		$updater->setContent( 'book_meta', $this->revision->getContent( 'book_meta' ) );
 	}
 
 	/**
