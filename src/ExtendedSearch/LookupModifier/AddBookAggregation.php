@@ -7,14 +7,14 @@ use BS\ExtendedSearch\Source\LookupModifier\LookupModifier;
 class AddBookAggregation extends LookupModifier {
 
 	/**
-	 * @inerhitDoc
+	 * @return void
 	 */
 	public function apply() {
 		$this->lookup->setBucketTermsAggregation( 'books' );
 	}
 
 	/**
-	 * @inerhitDoc
+	 * @return void
 	 */
 	public function undo() {
 		$this->lookup->removeBucketTermsAggregation( 'books' );

@@ -71,8 +71,6 @@ class BookLookup {
 	 * @return BookDataModel[]
 	 */
 	public function getBooksForPage( Title $title ): array {
-		$books = [];
-
 		$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
 
 		$res = $dbr->select(
@@ -163,15 +161,45 @@ class BookLookup {
 	 * @return BookInfo|null
 	 */
 	public function getBookInfo( Title $title ): ?BookInfo {
+		return $this->bookInfoFromConds( [
+			'book_namespace' => $title->getNamespace(),
+			'book_title' => $title->getDBKey()
+		] );
+	}
+
+	/**
+	 * @param string $name
+	 * @return BookInfo|null
+	 */
+	public function getBookInfoFromName( string $name ) {
+		return $this->bookInfoFromConds( [
+			'book_name' => $name
+		] );
+	}
+
+	/**
+	 * @param string $name
+	 * @return Title|null
+	 */
+	public function getBookTitleFromName( string $name ): ?Title {
+		$info = $this->getBookInfoFromName( $name );
+		if ( !$info ) {
+			return null;
+		}
+		return $this->titleFactory->makeTitle( $info->getNamespace(), $info->getTitle() );
+	}
+
+	/**
+	 * @param array $conds
+	 * @return BookInfo|null
+	 */
+	private function bookInfoFromConds( array $conds ): ?BookInfo {
 		$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
 
-		$result = $dbr->select(
+		$result = $dbr->selectRow(
 			'bs_books',
 			'*',
-			[
-				'book_namespace' => $title->getNamespace(),
-				'book_title' => $title->getDBKey()
-			],
+			$conds,
 			__METHOD__,
 			[]
 		);
@@ -180,27 +208,12 @@ class BookLookup {
 			return null;
 		}
 
-		$info = [];
-		foreach ( $result as $res ) {
-			$info = [
-				'book_id' => $res->book_id,
-				'book_namespace' => $res->book_namespace,
-				'book_title' => $res->book_title,
-				'book_name' => $res->book_name,
-				'book_type' => $res->book_type,
-			];
-		}
-
-		if ( empty( $info ) ) {
-			return null;
-		}
-
 		return new BookInfo(
-			$info['book_id'],
-			$info['book_namespace'],
-			$info['book_title'],
-			$info['book_name'],
-			$info['book_type'],
+			$result->book_id,
+			$result->book_namespace,
+			$result->book_title,
+			$result->book_name,
+			$result->book_type,
 		);
 	}
 

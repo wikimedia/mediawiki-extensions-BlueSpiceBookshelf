@@ -2,26 +2,29 @@
 
 namespace BlueSpice\Bookshelf\ExtendedSearch\LookupModifier;
 
-use BlueSpice\Bookshelf\Utilities;
+use BlueSpice\Bookshelf\BookLookup;
+use BS\ExtendedSearch\Lookup;
 use BS\ExtendedSearch\Source\LookupModifier\LookupModifier;
+use IContextSource;
 
 class ParseBookFilter extends LookupModifier {
 
-	/** @var Utilities */
-	private $utility;
+	/** @var BookLookup */
+	private $bookLookup;
+
 	/** @var array */
 	private $originalFilters = [ 'books' => [] ];
 	/** @var array */
 	private $parsedFilters = [ 'books' => [] ];
 
 	/**
-	 * @param $lookup
-	 * @param $context
-	 * @param Utilities $utilities
+	 * @param Lookup $lookup
+	 * @param IContextSource $context
+	 * @param BookLookup $bookLookup
 	 */
-	public function __construct( $lookup, $context, Utilities $utilities ) {
+	public function __construct( $lookup, $context, BookLookup $bookLookup ) {
 		parent::__construct( $lookup, $context );
-		$this->utility = $utilities;
+		$this->bookLookup = $bookLookup;
 	}
 
 	/**
@@ -37,13 +40,14 @@ class ParseBookFilter extends LookupModifier {
 		$books = $terms['books'];
 		// Remove the original filter
 		$this->lookup->removeTermsFilter( 'books', $books );
-		$newValues = array_map( function( $bookName ) {
-			$bookData = $this->utility->queryBookSingle( [ 'book_name' => $bookName ] );
-			if ( !$bookData ) {
+		$newValues = array_map( function ( $bookName ) {
+			$title = $this->bookLookup->getBookTitleFromName( $bookName );
+			if ( !$title ) {
 				return null;
 			}
-			return $bookData['book_title_object']->getPrefixedDbKey();
+			return $title->getPrefixedDBkey();
 		}, $books );
+		$newValues = array_filter( $newValues );
 		$this->parsedFilters['books'] = $newValues;
 		$this->lookup->addTermsFilter( 'books', $newValues );
 	}
@@ -55,7 +59,7 @@ class ParseBookFilter extends LookupModifier {
 		if ( !empty( $this->originalFilters['books'] ) ) {
 			$this->lookup->addTermsFilter( 'books', $this->originalFilters['books'] );
 		}
-		if ( !empty ( $this->parsedFilters['books'] ) ) {
+		if ( !empty( $this->parsedFilters['books'] ) ) {
 			$this->lookup->removeTermsFilter( 'books', $this->parsedFilters['books'] );
 		}
 	}
