@@ -45,7 +45,7 @@ class ChapterLookup {
 			__METHOD__
 		);
 
-		if ( $res < 1 ) {
+		if ( $res->numRows() === 0 ) {
 			return [];
 		}
 
