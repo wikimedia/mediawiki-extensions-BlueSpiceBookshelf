@@ -23,7 +23,7 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 	private $treeData = [];
 
 	/** @var BookContextProviderFactory */
-	private $bookContxtProviderFactory = null;
+	private $bookContextProviderFactory = null;
 
 	/** @var BookLookup */
 	private $bookLookup = null;
@@ -40,21 +40,21 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 	/**
 	 * @param Title $title
 	 * @param TitleFactory $titleFactory
-	 * @param BookContextProviderFactory $bookContxtProviderFactory
+	 * @param BookContextProviderFactory $bookContextProviderFactory
 	 * @param BookLookup $bookLookup
 	 * @param TreeDataGenerator $treeDataGenerator
 	 * @param Title|null $forceActiveBook
 	 * @param string $idPrefix
 	 */
 	public function __construct(
-		Title $title, TitleFactory $titleFactory, BookContextProviderFactory $bookContxtProviderFactory,
+		Title $title, TitleFactory $titleFactory, BookContextProviderFactory $bookContextProviderFactory,
 		BookLookup $bookLookup, TreeDataGenerator $treeDataGenerator, $forceActiveBook = null, string $idPrefix = ''
 	) {
 		parent::__construct( [] );
 
 		$this->title = $title;
 		$this->titleFactory = $titleFactory;
-		$this->bookContxtProviderFactory = $bookContxtProviderFactory;
+		$this->bookContextProviderFactory = $bookContextProviderFactory;
 		$this->bookLookup = $bookLookup;
 		$this->treeDataGenerator = $treeDataGenerator;
 		$this->forceActiveBook = $forceActiveBook;
@@ -89,7 +89,7 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 		}
 
 		$treeDataProvider = new TreeDataProvider(
-			$this->bookLookup, $this->bookContxtProviderFactory, $this->titleFactory, $this->idPrefix
+			$this->bookLookup, $this->bookContextProviderFactory, $this->titleFactory, $this->idPrefix
 		);
 
 		$this->treeData = $treeDataProvider->get( $this->title, $this->forceActiveBook );
@@ -109,10 +109,26 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 	 * @return array
 	 */
 	private function getTreeExpandPaths(): array {
-		$name = $this->title->getPrefixedDBkey();
 		$treeData = $this->getTreeData();
 
-		$paths = $this->makeTreePathsList( $treeData );
+		$activeBook = $this->forceActiveBook;
+		$book = '';
+		if ( $activeBook === null ) {
+
+			$books = $this->bookLookup->getBooksForPage( $this->title );
+			if ( empty( $books ) ) {
+				return [];
+			}
+			$bookContextProvider = $this->bookContextProviderFactory->getProvider( $this->title );
+			$activeBook = $bookContextProvider->getActiveBook();
+			if ( $activeBook ) {
+				$book = $activeBook->getPrefixedDBkey();
+			}
+		}
+
+		$name = md5( $book . $this->title->getPrefixedDBkey() );
+
+		$paths = $this->makeTreePathsList( $treeData, $activeBook->getPrefixedDBkey() );
 		if ( isset( $paths[$name] ) ) {
 			return [
 				$paths[$name]
@@ -124,19 +140,24 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 
 	/**
 	 * @param array $items
+	 * @param string $book
 	 * @return array
 	 */
-	private function makeTreePathsList( array $items ): array {
+	private function makeTreePathsList( array $items, string $book ): array {
 		$paths = [];
 		foreach ( $items as $item ) {
-			$title = $this->titleFactory->newFromText( $item['name'] );
-			$name = $title->getPrefixedDBkey();
+			$name = md5( $book . $item['name'] );
+			if ( $item['type'] === 'wikilink-with-alias' ) {
+				$title = $this->titleFactory->makeTitle( $item['namespace'], $item['title'] );
+				$name = md5( $book . $title->getPrefixedDBkey() );
+			}
+
 			$path = $item['path'];
 
 			$paths[$name] = trim( $path, '/' );
 
 			if ( isset( $item['items'] ) && !empty( $item['items'] ) ) {
-				$paths = $paths + $this->makeTreePathsList( $item['items'] );
+				$paths = $paths + $this->makeTreePathsList( $item['items'], $book );
 			}
 		}
 
