@@ -23,11 +23,6 @@ ext.bookshelf.ui.data.tree.BookEditorTree = function ( cfg ) {
 			},
 			mass_add_pages: function ( pages ) {
 				this.buildLinks( pages );
-			},
-			save: function() {
-				this.metadataManager.save( this.metadataManager.getData() ).fail( function ( error ) {
-					console.log( error );
-				} );
 			}
 		} );
 	}.bind( this ) );
@@ -76,9 +71,11 @@ ext.bookshelf.ui.data.tree.BookEditorTree.prototype.onDragStop = function( item,
 
 ext.bookshelf.ui.data.tree.BookEditorTree.prototype.getNodes = function () {
 	var nodes = ext.menueditor.ui.data.tree.Tree.parent.prototype.getNodes.call( this );
-	return nodes.map( function ( e ) {
+	nodes = nodes.map( function ( e ) {
 		return $.extend( e.getNodeData(), { level: e.getLevel() + 1, name: e.getName() } );
 	} );
+
+	return { nodes: nodes, metadata: this.metadataManager.getData() };
 };
 
 ext.bookshelf.ui.data.tree.BookEditorTree.prototype.updateNodeNumbers = function () {
