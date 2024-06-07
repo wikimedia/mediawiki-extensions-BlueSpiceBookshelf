@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Bookshelf;
 
+use ConfigFactory;
 use stdClass;
 use Title;
 use TitleFactory;
@@ -18,13 +19,20 @@ class ChapterLookup {
 	/** @var TitleFactory */
 	private $titleFactory = null;
 
+	/** @var Config */
+	private $config = null;
+
 	/**
 	 * @param LoadBalancer $loadBalancer
 	 * @param TitleFactory $titleFactory
+	 * @param ConfigFactory $configFactory
 	 */
-	public function __construct( LoadBalancer $loadBalancer, TitleFactory $titleFactory	) {
+	public function __construct(
+		LoadBalancer $loadBalancer, TitleFactory $titleFactory, ConfigFactory $configFactory
+	) {
 		$this->loadBalancer = $loadBalancer;
 		$this->titleFactory = $titleFactory;
+		$this->config = $configFactory->makeConfig( 'bsg' );
 	}
 
 	/**
@@ -101,10 +109,6 @@ class ChapterLookup {
 				'chapter_book_id' => $bookID,
 				'chapter_namespace' => $title->getNamespace(),
 				'chapter_title' => $title->getDBKey(),
-			],
-			__METHOD__,
-			[
-				'ORDER BY' => 'chapter_number'
 			]
 		);
 
@@ -148,10 +152,6 @@ class ChapterLookup {
 				'chapter_book_id=' . $bookID,
 				'chapter_number like "' . $chapterInfo->getNumber() . '%"',
 				'NOT chapter_number="' . $chapterInfo->getNumber() . '"',
-			],
-			__METHOD__,
-			[
-				'ORDER BY' => 'chapter_number'
 			]
 		);
 
@@ -177,9 +177,12 @@ class ChapterLookup {
 				$result->chapter_title
 			);
 
-			if ( $title instanceof Title && $name === $title->getSubpageText() ) {
-				// Check if page property displaytitle is set
-				$name = $this->makeName( $title, $name, $db );
+			// Check if page property displaytitle is set
+			$name = $this->makeName( $title, $title->getText(), $db );
+
+			if ( $this->config->get( 'BookshelfTitleDisplayText' ) === true ) {
+				// reset to database value
+				$name = $result->chapter_name;
 			}
 		}
 
@@ -204,9 +207,12 @@ class ChapterLookup {
 				$result->chapter_title
 			);
 
-			if ( $title instanceof Title && $name === $title->getSubpageText() ) {
-				// Check if page property displaytitle is set
-				$name = $this->makeName( $title, $name, $db );
+			// Check if page property displaytitle is set
+			$name = $this->makeName( $title, $title->getText(), $db );
+
+			if ( $this->config->get( 'BookshelfTitleDisplayText' ) === true ) {
+				// reset to database value
+				$name = $result->chapter_name;
 			}
 		}
 
