@@ -47,11 +47,11 @@ class AddEditBook implements SkinTemplateNavigation__UniversalHook {
 		] );
 
 		// Add real "Edit source"
-		$links['views']['editbooksource'] = $links['views']['edit'];
-		$links['views']['editbooksource']['id'] = 'ca-editbooksource';
-		$links['views']['editbooksource']['text']
+		$links['views']['menueditsource'] = $links['views']['edit'];
+		$links['views']['menueditsource']['id'] = 'ca-editbooksource';
+		$links['views']['menueditsource']['text']
 			= $sktemplate->msg( 'bs-bookshelf-action-editbook' )->plain();
-		$links['views']['editbooksource']['href'] = $sktemplate->getTitle()->getLinkURL( [
+		$links['views']['menueditsource']['href'] = $sktemplate->getTitle()->getLinkURL( [
 			'action' => 'editbooksource'
 		] );
 	}
