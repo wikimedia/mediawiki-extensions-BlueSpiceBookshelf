@@ -111,6 +111,20 @@ class AddChapterNumberToTitleAndHeadings {
 	}
 
 	/**
+	 * @param boolean &$skip
+	 * @param string &$prefix
+	 * @param Title $title
+	 * @param string $html
+	 */
+	public function onNumberHeadingsBeforeApply( &$skip, &$prefix, $title, $html ) {
+		$chapterInfo = $this->getChapterInfo( $title );
+		if ( $chapterInfo instanceof ChapterInfo === false ) {
+			return true;
+		}
+		$skip = true;
+	}
+
+	/**
 	 * @param Title $title
 	 * @return $title|null
 	 */
