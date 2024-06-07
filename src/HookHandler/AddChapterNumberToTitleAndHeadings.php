@@ -111,10 +111,11 @@ class AddChapterNumberToTitleAndHeadings {
 	}
 
 	/**
-	 * @param boolean &$skip
+	 * @param bool &$skip
 	 * @param string &$prefix
 	 * @param Title $title
 	 * @param string $html
+	 * @return bool
 	 */
 	public function onNumberHeadingsBeforeApply( &$skip, &$prefix, $title, $html ) {
 		$chapterInfo = $this->getChapterInfo( $title );
@@ -122,11 +123,12 @@ class AddChapterNumberToTitleAndHeadings {
 			return true;
 		}
 		$skip = true;
+		return true;
 	}
 
 	/**
 	 * @param Title $title
-	 * @return $title|null
+	 * @return Title|null
 	 */
 	private function getActiveBook( Title $title ): ?Title {
 		if ( $this->activeBook === null ) {
