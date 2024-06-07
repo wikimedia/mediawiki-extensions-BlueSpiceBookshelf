@@ -558,7 +558,8 @@
 				"bs-books-overview-page-book-search-placeholder",
 				"bs-books-overview-page-edit-book-anchor-title",
 				"bs-books-overview-page-edit-book-anchor-aria-label",
-				"bs-books-overview-page-bookshelf-empty"
+				"bs-books-overview-page-bookshelf-empty",
+				"bs-books-overview-page-aria-live-filtered-rows"
 			]
 		},
 		"ext.bluespice.books.special.styles": {
