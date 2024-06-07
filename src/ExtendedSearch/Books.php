@@ -2,10 +2,11 @@
 
 namespace BlueSpice\Bookshelf\ExtendedSearch;
 
+use BlueSpice\Bookshelf\BookInfo;
+use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\ExtendedSearch\LookupModifier\AddBookAggregation;
 use BlueSpice\Bookshelf\ExtendedSearch\LookupModifier\AddSourceFields;
 use BlueSpice\Bookshelf\ExtendedSearch\LookupModifier\ParseBookFilter;
-use BlueSpice\Bookshelf\Utilities;
 use BS\ExtendedSearch\ILookupModifierProvider;
 use BS\ExtendedSearch\ISearchDocumentProvider;
 use BS\ExtendedSearch\ISearchSource;
@@ -36,23 +37,22 @@ class Books implements
 
 	/** @var TitleFactory */
 	private $titleFactory;
-	/** @var LinkRenderer  */
+	/** @var LinkRenderer */
 	private $linkRenderer;
-	/** @var Utilities */
-	private $utilities;
-
+	/** @var BookLookup */
+	private $bookLookup;
 	/** @var array */
 	private $bookTitles = [];
 
 	/**
 	 * @param TitleFactory $titleFactory
 	 * @param LinkRenderer $linkRenderer
-	 * @param Utilities $utilities
+	 * @param BookLookup $bookLookup
 	 */
-	public function __construct( TitleFactory $titleFactory, LinkRenderer $linkRenderer, Utilities $utilities ) {
+	public function __construct( TitleFactory $titleFactory, LinkRenderer $linkRenderer, BookLookup $bookLookup ) {
 		$this->titleFactory = $titleFactory;
 		$this->linkRenderer = $linkRenderer;
-		$this->utilities = $utilities;
+		$this->bookLookup = $bookLookup;
 	}
 
 	/**
@@ -115,12 +115,12 @@ class Books implements
 		$books = $resultObject->getSourceParam( 'books' ) ?? [];
 		$books = array_map( function ( $book ) {
 			$this->assertBookTitle( $book );
-			$bookData = $this->getBookData( $this->bookTitles[$book] );
-			if ( !$bookData ) {
+			$bookInfo = $this->getBookInfo( $this->bookTitles[$book] );
+			if ( !$bookInfo ) {
 				return null;
 			}
 			// Show display name of the book
-			return $this->linkRenderer->makeLink( $this->bookTitles[$book], $bookData['book_name'] );
+			return $this->linkRenderer->makeLink( $this->bookTitles[$book], $bookInfo->getName() );
 		}, $books );
 		// remove nulls
 		$books = array_filter( $books );
@@ -155,7 +155,7 @@ class Books implements
 		return [
 			new AddBookAggregation( $lookup, $context ),
 			new AddSourceFields( $lookup, $context ),
-			new ParseBookFilter( $lookup, $context, $this->utilities ),
+			new ParseBookFilter( $lookup, $context, $this->bookLookup ),
 		];
 	}
 
@@ -168,7 +168,7 @@ class Books implements
 		if ( !( $documentProviderSource instanceof WikiPage ) ) {
 			return [];
 		}
-		$books = $this->utilities->getBooksForPage( $documentProviderSource->getTitle() );
+		$books = $this->bookLookup->getBooksForPage( $documentProviderSource->getTitle() );
 		// Book prefixed db keys
 		return array_keys( $books );
 	}
@@ -181,11 +181,11 @@ class Books implements
 	private function formatBuckets( array $buckets ) {
 		foreach ( $buckets as &$bucket ) {
 			$this->assertBookTitle( $bucket['key'] );
-			$bookData = $this->getBookData( $this->bookTitles[$bucket['key']] );
-			if ( !$bookData ) {
+			$bookInfo = $this->getBookInfo( $this->bookTitles[$bucket['key']] );
+			if ( !$bookInfo ) {
 				continue;
 			}
-			$bucket['key'] = $bookData['book_name'];
+			$bucket['key'] = $bookInfo->getName();
 		}
 
 		return $buckets;
@@ -208,14 +208,12 @@ class Books implements
 	/**
 	 * @param PageIdentity|null $page
 	 *
-	 * @return array|null
+	 * @return BookInfo|null
 	 */
-	private function getBookData( ?PageIdentity $page ): ?array {
+	private function getBookInfo( ?PageIdentity $page ): ?BookInfo {
 		if ( !$page ) {
 			return null;
 		}
-		return $this->utilities->queryBookSingle( [
-			'book_namespace' => $page->getNamespace(), 'book_title' => $page->getDBkey()
-		] );
+		return $this->bookLookup->getBookInfo( $page );
 	}
 }
