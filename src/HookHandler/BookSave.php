@@ -6,21 +6,19 @@ use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\BookSourceParser;
 use BlueSpice\Bookshelf\ChapterUpdater;
 use BlueSpice\Bookshelf\Content\BookContent;
-use CommentStoreComment;
+use Exception;
 use JsonContent;
 use MediaWiki\Logger\LoggerFactory;
-use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
-use MediaWiki\User\UserIdentity;
+use MediaWiki\Storage\Hook\MultiContentSaveHook;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Psr\Log\LoggerInterface;
-use Status;
 use Title;
 use TitleFactory;
 use Wikimedia\Rdbms\LoadBalancer;
 
-class BookSave {
+class BookSave implements MultiContentSaveHook {
 
 	/** @var TitleFactory */
 	private $titleFactory = null;
@@ -55,19 +53,14 @@ class BookSave {
 	}
 
 	/**
-	 * @param RenderedRevision $renderedRevision
-	 * @param UserIdentity $user
-	 * @param CommentStoreComment $summary
-	 * @param int $flags
-	 * @param Status $hookStatus
-	 * @return bool
+	 * @inheritDoc
 	 */
 	public function onMultiContentSave(
-		RenderedRevision $renderedRevision, UserIdentity $user, CommentStoreComment $summary, $flags, Status $hookStatus
+		$renderedRevision, $user, $summary, $flags, $hookStatus
 	) {
 		$revisionRecord = $renderedRevision->getRevision();
 		$page = $revisionRecord->getPage();
-		$title = $this->titleFactory->newFromID( $page->getId() );
+		$title = $this->titleFactory->castFromPageIdentity( $page );
 
 		if ( !$title ) {
 			return true;
@@ -98,13 +91,15 @@ class BookSave {
 			$this->parserFactory->getNodeProcessors(),
 			$this->titleFactory
 		);
+
+		$this->assertBook( $book );
+
 		$updater = new ChapterUpdater( $this->loadBalancer, $this->bookLookup, $this->logger );
 		$chapterData = $bookSourceParser->getChapterDataModelArray();
 		if ( empty( $chapterData ) ) {
 			$updater->delete( $book );
 			return;
 		}
-
 		$status = $updater->update( $book, $chapterData );
 		if ( !$status ) {
 			$this->logger->error( 'onMultiContentSave: Database update error' );
@@ -116,11 +111,8 @@ class BookSave {
 	 * @param RevisionRecord $revisionRecord
 	 */
 	private function doSaveBookMeta( Title $book, RevisionRecord $revisionRecord ) {
+		$this->assertBook( $book );
 		$bookInfo = $this->bookLookup->getBookInfo( $book );
-		if ( $bookInfo === null ) {
-			$this->createBookEntry( $book );
-			$bookInfo = $this->bookLookup->getBookInfo( $book );
-		}
 
 		if ( $bookInfo === null ) {
 			return;
@@ -172,6 +164,16 @@ class BookSave {
 	/**
 	 * @param Title $book
 	 */
+	private function assertBook( Title $book ) {
+		$bookId = $this->bookLookup->getBookId( $book );
+		if ( $bookId === null ) {
+			$this->createBookEntry( $book );
+		}
+	}
+
+	/**
+	 * @param Title $book
+	 */
 	private function createBookEntry( Title $book ) {
 		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
 
@@ -180,7 +182,7 @@ class BookSave {
 			$type = 'private';
 		}
 
-		$db->insert(
+		$status = $db->insert(
 			'bs_books',
 			[
 				'book_namespace' => $book->getNamespace(),
@@ -189,5 +191,10 @@ class BookSave {
 				'book_type' => $type,
 			]
 		);
+
+		if ( !$status ) {
+			$this->logger->error( 'onMultiContentSave: Could not create book' );
+			throw new Exception( 'onMultiContentSave: Could not create book' );
+		}
 	}
 }
