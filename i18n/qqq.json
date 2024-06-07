@@ -128,6 +128,7 @@
 	"bs-books-overview-page-book-action-delete-title": "Title attribute  for button witch triggers action delete for a page. Used on special page [[Special:Book]].",
 	"bs-books-overview-page-book-search-placeholder": "Placehoder for searchbox on [[Special:Books]]",
 	"bs-books-overview-page-bookshelf-empty": "Note for the user that no books are available",
+	"bs-books-overview-page-aria-live-filtered-rows": "Aria live counter for filtered books",
 	"bs-bookshelf-chapter-plain-text-label": "Label for input select field",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Label for a section in a form dialog",
 	"bs-bookshelf-chapter-plain-text-input-label": "Label for form input",
