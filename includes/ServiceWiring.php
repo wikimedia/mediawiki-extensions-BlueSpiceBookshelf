@@ -44,7 +44,8 @@ return [
 	'BSBookshelfBookChapterLookup' => static function ( MediaWikiServices $services ) {
 		$provider = new ChapterLookup(
 			$services->getDBLoadBalancer(),
-			$services->getTitleFactory()
+			$services->getTitleFactory(),
+			$services->getConfigFactory()
 		);
 		return $provider;
 	},
