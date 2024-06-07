@@ -1,6 +1,7 @@
 <template>
 	<div class="bs-books-search">
 		<cdx-search-input
+			v-model="searchInputValue"
 			:clearable="true"
 			:placeholder="searchPlaceholderLabel"
 			:aria-label="searchPlaceholderLabel"
@@ -17,6 +18,10 @@
 	<div class="bs-books-bookshelfs-empty" v-else>
 		{{ emptyMsg }}
 	</div>
+	<div
+		id="bs-books-aria-lve"
+		aria-live="polite"
+	>{{ ariaLiveInitial }}</div>
 </template>
 
 <script>
@@ -61,19 +66,26 @@ module.exports = exports = {
 			// If we use bookshelfs here for createBookshelfs the search input would not change the visible items.
 			initialBookshelfs = createBookshelfs( this.items );
 
+			var initialSearchInputValue = '';
 			if ( this.filter !== '' ) {
 				initialBookshelfs = filter( initialBookshelfs, this.items, this.searchableData, this.filter );
+				initialSearchInputValue = this.filter;
 			}
 		} else {
 			hasData = false;
 			emtyMsg = mw.message( 'bs-books-overview-page-bookshelf-empty' ).plain();
 		}
 
+		let visibleItems = this.items.filter( obj => { return obj.isVisible === true } );
+
 		return {
 			searchInput: [],
 			bookshelfs: initialBookshelfs,
 			hasData: hasData,
-			emptyMsg: emtyMsg
+			emptyMsg: emtyMsg,
+			searchInputValue: initialSearchInputValue,
+			bookshelfs: initialBookshelfs,
+			ariaLiveInitial: mw.message( 'bs-books-overview-page-aria-live-filtered-rows', visibleItems.length ).toString()
 		};
 	},
 	methods: {
@@ -83,6 +95,9 @@ module.exports = exports = {
 			}
 
 			this.bookshelfs = filter( this.bookshelfs, this.items, this.searchableData, search );
+
+			let visibleItems = this.items.filter( obj => { return obj.isVisible === true } );
+			updateAriaLiveSection( visibleItems.length );
 		}
 	}
 };
@@ -183,6 +198,11 @@ function createBookshelfs( items ) {
 
 	return bookshelfsInData;
 }
+
+function updateAriaLiveSection( count ) {
+	text = mw.message( 'bs-books-overview-page-aria-live-filtered-rows', count ).toString();
+	$( '#bs-books-aria-lve' ).html( text );
+}
 </script>
 
 <style lang="css">
@@ -199,6 +219,10 @@ function createBookshelfs( items ) {
 }
 .bs-books-bookshelfs-empty {
 	padding: 20px;
+}
+#bs-books-aria-lve {
+	height: 0;
+	overflow: hidden;
 }
 @media ( max-width: 768px ) {
 	.bs-books-search {

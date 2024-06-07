@@ -119,6 +119,7 @@
 	"bs-books-overview-page-book-action-delete-title": "Delete book $1",
 	"bs-books-overview-page-book-search-placeholder": "Find book",
 	"bs-books-overview-page-bookshelf-empty": "There are no books available",
+	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|One book|$1 books}} found",
 	"bs-bookshelf-chapter-plain-text-label": "Text chapter heading",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Add a new chapter heading",
 	"bs-bookshelf-chapter-plain-text-input-label": "Text",
