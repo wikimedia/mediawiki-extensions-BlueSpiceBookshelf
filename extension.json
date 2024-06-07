@@ -877,7 +877,8 @@
 		"OutputPageBeforeHTML": "add-chapter-number-to-title-and-headings",
 		"MultiContentSave": "book-source-update",
 		"PageDeleteComplete": "book-source-delete",
-		"PageMoveComplete": "book-source-move"
+		"PageMoveComplete": "book-source-move",
+		"NumberHeadingsBeforeApply": "add-chapter-number-to-title-and-headings"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
