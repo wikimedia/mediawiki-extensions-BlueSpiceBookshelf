@@ -149,6 +149,14 @@
 				]
 			}
 		},
+		"BlueSpiceExtendedSearch": {
+			"PluginRegistry": {
+				"books": {
+					"class": "BlueSpice\\Bookshelf\\ExtendedSearch\\Books",
+					"services": [ "TitleFactory", "LinkRenderer", "BSBookshelfUtilities" ]
+                                }
+                        }
+                },
 		"MenuEditor": {
 			"Menus": {
 				"bookeditor": {
