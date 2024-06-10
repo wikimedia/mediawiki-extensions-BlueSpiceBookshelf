@@ -79,7 +79,8 @@ ext.bookshelf.ui.data.tree.BookEditorTree.prototype.getNodes = function () {
 };
 
 ext.bookshelf.ui.data.tree.BookEditorTree.prototype.updateNodeNumbers = function () {
-	var data = this.getNodes();
+	var allNodes = this.getNodes();
+	var data = allNodes.nodes;
 	var numberings = this.numberProcessor.calculateNumbersFromList( data );
 
 	if ( numberings.length === 0 ) {
