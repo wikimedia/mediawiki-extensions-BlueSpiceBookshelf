@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Anakmalaysia",
+			"Hakimi97",
 			"Tofeiku"
 		]
 	},
@@ -11,5 +12,6 @@
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Tambah kelui bab di atas laman.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Tunjuk kelui bab buku selepas kandungan",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Tambah kelui bab di bawah laman.",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Pengarang",
 	"bs-bookshelf-droplet-name": "Senarai buku"
 }

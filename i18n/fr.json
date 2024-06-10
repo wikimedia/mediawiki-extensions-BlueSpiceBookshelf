@@ -115,6 +115,7 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Livre à exporter",
 	"bs-bookshelf-droplet-pdf-template-label": "Modèle de livre PDF",
 	"bs-bookshelf-droplet-pdf-link-label": "Libellé du lien",
+	"bs-bookshelf-search-center-filter-books-label": "Livre",
 	"books": "Livres",
 	"bs-books-overview-page-loading-text": "L'aperçu du livre est en cours de chargement...",
 	"bs-books-overview-page-bookshelf-various-books": "Divers livres",
@@ -143,6 +144,7 @@
 	"bs-bookshelf-newbook-dlg-title": "Créer un nouveau livre",
 	"bs-bookshelf-newbook-dlg-input-title-placeholder": "Créer un titre de livre",
 	"bs-bookshelf-newbook-dlg-input-title-label": "Titre de livre",
+	"bs-bookshelf-newbook-dlg-input-subtitle-placeholder": "Créer un sous-titre",
 	"bs-bookshelf-newbook-dlg-input-subtitle-label": "Sous-titre",
 	"bs-bookshelf-newbook-dlg-input-image-select-placeholder": "Choisissez une image existante",
 	"bs-bookshelf-newbook-dlg-error-metadata-save": "Les métadonnées n'ont pas pu être enregistrées",
@@ -156,5 +158,8 @@
 	"bs-bookshelf-add-to-book-summary": "Page $1 ajoutée",
 	"bs-books-overview-page-book-action-metadata-text": "Modifier les métadonnées",
 	"bs-books-overview-page-book-action-metadata-title": "Modifier les métadonnées du livre $1",
-	"bs-bookshelf-massadd-dlg-save-action-label": "Ajouter"
+	"bs-bookshelf-massadd-dlg-save-action-label": "Ajouter",
+	"bs-bookshelf-tag-searchinbook-error": "Spécifiez un nom de livre valide",
+	"bs-bookshelf-droplet-search-book": "Livre",
+	"bs-bookshelf-droplet-search-book-help": "Nom du livre dans lequel rechercher"
 }

@@ -16,6 +16,8 @@
 	"bs-bookshelf-booknav-book-label": "کتاب",
 	"bs-bookshelf-booknav-chapter-label": "باب",
 	"bs-bookshelf-booknav-searchbox-placeholder": "ڳولو",
+	"bs-bookshelf-search-center-result-books-label": "{{PLURAL:$1|کتاب|کتاباں}} دا حصہ",
+	"bs-bookshelf-search-center-filter-books-label": "کتاب",
 	"books": "کتاباں",
 	"bs-books-overview-page-book-action-edit-text": "لکھو",
 	"bs-books-overview-page-book-action-delete-text": "مٹاؤ",
@@ -28,5 +30,7 @@
 	"bs-bookshelf-metadata-dlg-action-save-label": "بچاؤ",
 	"bs-bookshelf-newbook-dlg-title": "نویں کتاب بݨاؤ",
 	"bs-books-overview-page-edit-book-anchor-aria-label": "کتاب $1 وچ تبدیلی کرو",
-	"bs-bookshelf-massadd-dlg-save-action-label": "شامل کرو"
+	"bs-bookshelf-massadd-dlg-save-action-label": "شامل کرو",
+	"bs-bookshelf-droplet-search-name": "کتاب وچ ڳولو",
+	"bs-bookshelf-droplet-search-book": "کتاب"
 }
