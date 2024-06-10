@@ -56,6 +56,7 @@
 	"bs-bookshelf-booknav-book-not-exist": "Књига $1 не постоји",
 	"bs-bookshelf-booknav-chapter-not-exist": "Поглавље $1 не постоји",
 	"bs-bookshelf-booknav-searchbox-placeholder": "Претрага",
+	"bs-bookshelf-search-center-filter-books-label": "Књига",
 	"books": "Књиге",
 	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "Више радњи за ову књигу",
 	"bs-books-overview-page-book-action-edit-text": "Уреди",
@@ -74,5 +75,7 @@
 	"bs-bookshelf-add-to-book-summary": "Додата страница $1",
 	"bs-books-overview-page-book-action-metadata-text": "Уреди метаподатке",
 	"bs-books-overview-page-book-action-metadata-title": "Уреди метаподатке књиге $1",
-	"bs-bookshelf-massadd-dlg-save-action-label": "Додај"
+	"bs-bookshelf-massadd-dlg-save-action-label": "Додај",
+	"bs-bookshelf-droplet-search-name": "Претражи књигу",
+	"bs-bookshelf-droplet-search-book": "Књига"
 }

@@ -105,6 +105,8 @@
 	"bs-bookshelf-droplet-pdf-book-label": "איזה ספר לייצא",
 	"bs-bookshelf-droplet-pdf-template-label": "תבנית PDF של ספר",
 	"bs-bookshelf-droplet-pdf-link-label": "תווית הקישור",
+	"bs-bookshelf-search-center-result-books-label": "חלק {{PLURAL:$1|מספר|מספרים}}",
+	"bs-bookshelf-search-center-filter-books-label": "ספר",
 	"apihelp-bs-books-overview-store-summary": "מציגה את כל הספרים כולל מדף הספרים, קישור לפרק הראשון ופעולות.",
 	"books": "ספרים",
 	"bs-books-overview-page-loading-text": "סקירת הספר בטעינה...",
@@ -154,5 +156,10 @@
 	"bs-bookshelf-add-to-book-summary": "נוסף הדף $1",
 	"bs-books-overview-page-book-action-metadata-text": "עריכת מטא־נתונים",
 	"bs-books-overview-page-book-action-metadata-title": "עריכת מטא־נתונים עבור הספר $1",
-	"bs-bookshelf-massadd-dlg-save-action-label": "הוספה"
+	"bs-bookshelf-massadd-dlg-save-action-label": "הוספה",
+	"bs-bookshelf-tag-searchinbook-error": "יש לציין שם ספר תקין",
+	"bs-bookshelf-droplet-search-name": "חיפוש בספר",
+	"bs-bookshelf-droplet-search-description": "חפש דפים בספר",
+	"bs-bookshelf-droplet-search-book": "ספר",
+	"bs-bookshelf-droplet-search-book-help": "שם הספר לחיפוש"
 }

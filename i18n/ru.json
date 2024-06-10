@@ -103,6 +103,7 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Книга для экспорта",
 	"bs-bookshelf-droplet-pdf-template-label": "Шаблон PDF-книги",
 	"bs-bookshelf-droplet-pdf-link-label": "Ярлык ссылки",
+	"bs-bookshelf-search-center-filter-books-label": "Книга",
 	"apihelp-bs-books-overview-store-summary": "Перечисляет все книги, включая книжную полку, ссылку на первую главу и действия.",
 	"books": "Книги",
 	"bs-books-overview-page-loading-text": "Обзор книги загружается...",
@@ -130,5 +131,7 @@
 	"bs-bookshelf-add-to-book-summary": "Добавлена страница $1",
 	"bs-books-overview-page-book-action-metadata-text": "Править метаданные",
 	"bs-books-overview-page-book-action-metadata-title": "Править метаданные книги $1",
-	"bs-bookshelf-massadd-dlg-save-action-label": "Добавить"
+	"bs-bookshelf-massadd-dlg-save-action-label": "Добавить",
+	"bs-bookshelf-droplet-search-name": "Искать в книге",
+	"bs-bookshelf-droplet-search-book": "Книга"
 }
