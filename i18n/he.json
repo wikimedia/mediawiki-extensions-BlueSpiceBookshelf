@@ -120,6 +120,8 @@
 	"bs-books-overview-page-book-action-delete-text": "מחיקה",
 	"bs-books-overview-page-book-action-delete-title": "מחיקת הספר $1",
 	"bs-books-overview-page-book-search-placeholder": "למצוא ספר",
+	"bs-books-overview-page-bookshelf-empty": "אין ספרים זמינים",
+	"bs-books-overview-page-aria-live-filtered-rows": "({{PLURAL:$1|נמצא ספר אחד|נמצאו $1 ספרים}})",
 	"bs-bookshelf-chapter-plain-text-label": "כותרת פרק טקסט",
 	"bs-bookshelf-chapter-plain-text-label-edit": "הוספת כותרת פרק חדשה",
 	"bs-bookshelf-chapter-plain-text-input-label": "טקסט",
@@ -161,5 +163,6 @@
 	"bs-bookshelf-droplet-search-name": "חיפוש בספר",
 	"bs-bookshelf-droplet-search-description": "חפש דפים בספר",
 	"bs-bookshelf-droplet-search-book": "ספר",
-	"bs-bookshelf-droplet-search-book-help": "שם הספר לחיפוש"
+	"bs-bookshelf-droplet-search-book-help": "שם הספר לחיפוש",
+	"bs-bookshelf-notification-subscription-set-book-title": "ספר"
 }

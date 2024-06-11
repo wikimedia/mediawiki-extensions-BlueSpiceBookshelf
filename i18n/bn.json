@@ -29,5 +29,6 @@
 	"bs-bookshelf-droplet-pdf-name": "বইয়ের পিডিএফ লিঙ্ক",
 	"bs-bookshelf-droplet-pdf-book-label": "রপ্তানির বই",
 	"bs-bookshelf-droplet-pdf-template-label": "বই পিডিএফ টেমপ্লেট",
-	"bs-bookshelf-droplet-pdf-link-label": "সংযোগ স্তর"
+	"bs-bookshelf-droplet-pdf-link-label": "সংযোগ স্তর",
+	"bs-bookshelf-search-center-filter-books-label": "বই"
 }
