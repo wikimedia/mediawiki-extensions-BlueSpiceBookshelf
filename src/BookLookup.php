@@ -45,7 +45,7 @@ class BookLookup {
 			__METHOD__
 		);
 
-		if ( $results < 1 ) {
+		if ( $results->numRows() < 1 ) {
 			return [];
 		}
 
