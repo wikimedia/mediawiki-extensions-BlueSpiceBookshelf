@@ -142,13 +142,20 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.getActionProcess = function (
 	if ( action ) {
 		dialog.bookData = dialog.getBookData();
 		var process = new OO.ui.Process( function () {
+			var dfd = new $.Deferred();
 			dialog.pushPending();
 			var uploadDfd = dialog.uploadImage();
 			uploadDfd.done( function () {
-				dialog.save();
+				dialog.save().done( function () {
+					dfd.resolve();
+				}).fail( function ( error ) {
+					dfd.reject( error );
+				} );
 			} ).fail( function ( error ) {
 				dialog.handleUploadErrors( error, arguments );
+				dfd.reject( error );
 			} );
+			return dfd.promise();
 		} );
 		mw.hook( 'bs.bookshelf.newbook.actionprocess' ).fire( process, dialog );
 		return process.next( function () {
@@ -185,21 +192,30 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.getBookData = function () {
 };
 
 ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.save = function () {
+	var dfd = new $.Deferred();
 	this.saveBook().done( function () {
 		var saveMetadataDfd = this.saveMetadata();
 		saveMetadataDfd.done( function () {
 			this.popPending();
+			dfd.resolve();
 		}.bind( this ) )
-		.fail( function ( error ) {
+		.fail( function () {
 			this.popPending();
-			console.error( error );
-			this.showErrors( new OO.ui.Error( mw.message( 'bs-bookshelf-newbook-dlg-error-metadata-save' ).text() ) );
+			dfd.reject(
+				new OO.ui.Error(
+					mw.message( 'bs-bookshelf-newbook-dlg-error-metadata-save' ).text(),
+					{ recoverable: false }
+			) );
 		}.bind( this ) );
-	}.bind( this ) ).fail( function ( error ) {
+	}.bind( this ) ).fail( function () {
 		this.popPending();
-		console.error( error );
-		this.showErrors( new OO.ui.Error( mw.message( 'bs-bookshelf-newbook-dlg-error-book-save' ).text() ) );
+		dfd.reject(
+			new OO.ui.Error(
+				mw.message( 'bs-bookshelf-newbook-dlg-error-book-save' ).text(),
+				{ recoverable: false }
+		) );
 	}.bind( this ) );
+	return dfd.promise();
 };
 
 ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.saveBook = function () {
@@ -211,10 +227,11 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.saveBook = function () {
 			action: 'edit',
 			title: this.bookTitle,
 			text: '',
+			createonly: true,
 			summary: mw.message( 'bs-bookshelf-newbook-dlg-book-save-summary' ).text(),
 			contentmodel: 'book'
 		} ).fail( function () {
-			dfd.reject( [ new OO.ui.Error( arguments[ 0 ], { recoverable: false } ) ] );
+			dfd.reject( arguments );
 		} )
 			.done( function ( resp ) {
 				dfd.resolve( arguments );
