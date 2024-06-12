@@ -77,5 +77,6 @@
 	"bs-books-overview-page-book-action-metadata-title": "Уреди метаподатке књиге $1",
 	"bs-bookshelf-massadd-dlg-save-action-label": "Додај",
 	"bs-bookshelf-droplet-search-name": "Претражи књигу",
-	"bs-bookshelf-droplet-search-book": "Књига"
+	"bs-bookshelf-droplet-search-book": "Књига",
+	"bs-bookshelf-notification-subscription-set-book-title": "Књига"
 }

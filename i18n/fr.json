@@ -128,6 +128,7 @@
 	"bs-books-overview-page-book-action-delete-text": "Supprimer",
 	"bs-books-overview-page-book-action-delete-title": "Supprimer le livre $1",
 	"bs-books-overview-page-book-search-placeholder": "Trouver un livre",
+	"bs-books-overview-page-bookshelf-empty": "Il n'y a pas de livres disponibles",
 	"bs-bookshelf-chapter-plain-text-label": "Titre du chapitre du texte",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Ajouter un nouveau titre de chapitre",
 	"bs-bookshelf-chapter-plain-text-input-label": "Texte",
@@ -160,6 +161,8 @@
 	"bs-books-overview-page-book-action-metadata-title": "Modifier les métadonnées du livre $1",
 	"bs-bookshelf-massadd-dlg-save-action-label": "Ajouter",
 	"bs-bookshelf-tag-searchinbook-error": "Spécifiez un nom de livre valide",
+	"bs-bookshelf-droplet-search-name": "Rechercher dans un livre",
+	"bs-bookshelf-droplet-search-description": "Rechercher des pages dans un livre",
 	"bs-bookshelf-droplet-search-book": "Livre",
 	"bs-bookshelf-droplet-search-book-help": "Nom du livre dans lequel rechercher"
 }
