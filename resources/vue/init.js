@@ -54,7 +54,6 @@
 					"action": "bs-books-overview-store",
 			} )
 			.done( function( response ) {
-				console.log( 'success' );
 				var modules = getModules( response.results );
 				mw.loader.using( modules ).done( function () {
 					dfd.resolve( response.results );
