@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\MenuEditor;
 
 use BlueSpice\Bookshelf\BookSourceParser;
+use MediaWiki\Extension\MenuEditor\EditPermissionProvider;
 use MediaWiki\Extension\MenuEditor\ParsableMenu;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Revision\RevisionRecord;
@@ -12,7 +13,7 @@ use RequestContext;
 use Title;
 use TitleFactory;
 
-class BookEditor implements ParsableMenu {
+class BookEditor implements ParsableMenu, EditPermissionProvider {
 	/** @var ParserFactory */
 	private $parserFactory = null;
 
