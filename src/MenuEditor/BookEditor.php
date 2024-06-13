@@ -106,4 +106,11 @@ class BookEditor implements ParsableMenu {
 			"massAdd"
 		];
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getEditRight(): string {
+		return 'edit';
+	}
 }
