@@ -116,6 +116,8 @@
 	"bs-books-overview-page-book-action-delete-text": "Deler",
 	"bs-books-overview-page-book-action-delete-title": "Deler le libro $1",
 	"bs-books-overview-page-book-search-placeholder": "Cercar libro",
+	"bs-books-overview-page-bookshelf-empty": "Il non ha libros disponibile",
+	"bs-books-overview-page-aria-live-filtered-rows": "({{PLURAL:$1|Un libro|$1 libros}}) trovate",
 	"bs-bookshelf-chapter-plain-text-label": "Texto del titulo del capitulo",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Adder un nove titulo de capitulo",
 	"bs-bookshelf-chapter-plain-text-input-label": "Texto",
@@ -157,5 +159,6 @@
 	"bs-bookshelf-droplet-search-name": "Cercar in un libro",
 	"bs-bookshelf-droplet-search-description": "Cercar paginas in un libro",
 	"bs-bookshelf-droplet-search-book": "Libro",
-	"bs-bookshelf-droplet-search-book-help": "Nomine del libro in le qual cercar"
+	"bs-bookshelf-droplet-search-book-help": "Nomine del libro in le qual cercar",
+	"bs-bookshelf-notification-subscription-set-book-title": "Libro"
 }
