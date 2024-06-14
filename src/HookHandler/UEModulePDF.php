@@ -8,6 +8,7 @@ use BlueSpice\Bookshelf\ChapterLookup;
 use Config;
 use ConfigFactory;
 use DOMElement;
+use DOMXPath;
 use MediaWiki\HookContainer\HookContainer;
 use PDFFileResolver;
 use RepoGroup;
@@ -27,9 +28,6 @@ class UEModulePDF {
 
 	/** @var TitleFactory */
 	private $titleFactory = null;
-
-	/** @var ConfigFactory */
-	private $configFactory = null;
 
 	/** @var Config */
 	private $config = null;
@@ -63,34 +61,33 @@ class UEModulePDF {
 		$this->bookLookup = $bookLookup;
 		$this->bookChapterLookup = $bookChapterLookup;
 		$this->titleFactory = $titleFactory;
-		$this->configFactory = $configFactory;
 		$this->config = $configFactory->makeConfig( 'bsg' );
 		$this->mainConfig = $mainConfig;
 		$this->repoGroup = $repoGroup;
 		$this->hookContainer = $hookContainer;
 	}
 
-	/*
-	 * @param \Title $title
+	/**
+	 * @param Title $title
 	 * @param array &$page
 	 * @param array &$params
-	 * @param \DOMXPath $DOMXPath
+	 * @param DOMXPath $DOMXPath
 	 */
 	public function onBSUEModulePDFgetPage( $title, &$page, &$params, $DOMXPath ) {
 		$bookContextProvider = $this->bookContextProviderFactory->getProvider( $title );
 		$activeBook = $bookContextProvider->getActiveBook();
 		if ( !$activeBook ) {
-			return true;
+			return;
 		}
 
 		$ancestors = $this->getAncestorsFor( $activeBook, $title );
 		if ( empty( $ancestors ) ) {
-			return true;
+			return;
 		}
 
 		$bookInfo = $this->bookLookup->getBookInfo( $activeBook );
 		if ( $bookInfo === null ) {
-			return true;
+			return;
 		}
 
 		$bookName = $bookInfo->getName();
@@ -179,10 +176,10 @@ class UEModulePDF {
 	}
 
 	/**
-	 * @param \Title $title
+	 * @param Title $title
 	 * @param array $pageDOM
 	 * @param array &$params
-	 * @param \DOMXPath $DOMXPath
+	 * @param DOMXPath $DOMXPath
 	 * @param array &$meta
 	 * @return bool
 	 */
