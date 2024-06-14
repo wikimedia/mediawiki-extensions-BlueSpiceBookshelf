@@ -157,10 +157,10 @@ class AddChapterNumberToTitleAndHeadings {
 	 * @return ChapterInfo|null
 	 */
 	private function getChapterInfo( Title $title, Title $activeBook ): ?ChapterInfo {
-		if ( $activeBook === null ) {
-			return null;
+		if ( $this->chapterInfo === null ) {
+			$this->chapterInfo = $this->bookChapterLookup->getChapterInfoFor( $activeBook, $title );
 		}
-		$this->chapterInfo = $this->bookChapterLookup->getChapterInfoFor( $activeBook, $title );
+
 		return $this->chapterInfo;
 	}
 }

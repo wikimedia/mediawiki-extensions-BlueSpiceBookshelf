@@ -207,11 +207,17 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.save = function () {
 					{ recoverable: false }
 			) );
 		}.bind( this ) );
-	}.bind( this ) ).fail( function () {
+	}.bind( this ) ).fail( function ( error ) {
 		this.popPending();
+		var errorMsg = mw.message( 'bs-bookshelf-newbook-dlg-error-book-save' ).text();
+		if ( error[ 0 ] === 'articleexists' ) {
+			errorMsg = mw.message( 'bs-bookshelf-newbook-dlg-error-book-exists' ).text();
+		} else {
+			console.error( error );
+		}
 		dfd.reject(
 			new OO.ui.Error(
-				mw.message( 'bs-bookshelf-newbook-dlg-error-book-save' ).text(),
+				errorMsg,
 				{ recoverable: false }
 		) );
 	}.bind( this ) );
