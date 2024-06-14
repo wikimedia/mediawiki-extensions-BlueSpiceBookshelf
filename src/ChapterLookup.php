@@ -80,7 +80,7 @@ class ChapterLookup {
 	/**
 	 * @param Title $book
 	 * @param Title $title
-	 * @return ChapterInfo@null
+	 * @return ChapterInfo|null
 	 */
 	public function getChapterInfoFor( Title $book, Title $title ): ?ChapterInfo {
 		$db = $this->loadBalancer->getConnection( DB_REPLICA );
@@ -99,7 +99,7 @@ class ChapterLookup {
 		}
 
 		if ( $bookID === null ) {
-			return '';
+			return null;
 		}
 
 		$results = $db->select(
