@@ -771,7 +771,8 @@
 				"bs-bookshelf-newbook-dlg-upload-error-duplicate",
 				"bs-bookshelf-newbook-dlg-upload-error-badfilename",
 				"bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label",
-				"bs-bookshelf-newbook-dlg-upload-title-exists"
+				"bs-bookshelf-newbook-dlg-upload-title-exists",
+				"bs-bookshelf-newbook-dlg-error-book-exists"
 			]
 		},
 		"ext.bluespice.bookshelf.editmetadata": {
