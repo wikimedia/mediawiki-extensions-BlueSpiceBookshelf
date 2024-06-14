@@ -8,12 +8,10 @@ use BlueSpice\Bookshelf\MenuEditor\Node\ChapterWikiLinkWithAlias;
 use Content;
 use FormatJson;
 use JsonContent;
-use MediaWiki\Extension\MenuEditor\IMenuNodeProcessor;
 use MediaWiki\Extension\MenuEditor\Node\MenuNode;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Storage\PageUpdater;
-use MWStake\MediaWiki\Lib\Nodes\INodeProcessor;
 use TitleFactory;
 
 class BookSourceParser extends WikitextMenuParser {
@@ -27,19 +25,8 @@ class BookSourceParser extends WikitextMenuParser {
 	 * @param TitleFactory $titleFactory
 	 */
 	public function __construct( RevisionRecord $revision, array $nodeProcessors, TitleFactory $titleFactory ) {
-		$filteredNodesProcessors = $this->filterNodeProcessors( $nodeProcessors );
 		$this->titleFactory = $titleFactory;
-		parent::__construct( $revision, $filteredNodesProcessors );
-	}
-
-	/**
-	 * @param array $nodeProcessors
-	 * @return array
-	 */
-	private function filterNodeProcessors( array $nodeProcessors ): array {
-		$filteredNodeProcessors = $this->getSupportedNodeProcessors( $nodeProcessors );
-
-		return $filteredNodeProcessors;
+		parent::__construct( $revision, $nodeProcessors );
 	}
 
 	/**
@@ -61,30 +48,6 @@ class BookSourceParser extends WikitextMenuParser {
 	protected function setUpdaterSlotsOnSave( PageUpdater $updater ) {
 		parent::setUpdaterSlotsOnSave( $updater );
 		$updater->setContent( 'book_meta', $this->revision->getContent( 'book_meta' ) );
-	}
-
-	/**
-	 * @param array $nodeProcessors
-	 * @return array
-	 */
-	private function getSupportedNodeProcessors( array $nodeProcessors ): array {
-		$supportedNames = [ 'bs-bookshelf-chapter-plain-text', 'bs-bookshelf-chapter-wikilink-with-alias' ];
-		$supportedNodeProcessors = [];
-
-		foreach ( $supportedNames as $name ) {
-			if ( isset( $nodeProcessors[$name] ) ) {
-				$supportedNodeProcessors[$name] = $nodeProcessors[$name];
-			}
-		}
-
-		$supportedNodeProcessors = array_filter(
-			$supportedNodeProcessors,
-			static function ( INodeProcessor $processor ) {
-				return $processor instanceof IMenuNodeProcessor;
-			}
-		);
-
-		return $supportedNodeProcessors;
 	}
 
 	/**
