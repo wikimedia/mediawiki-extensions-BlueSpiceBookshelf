@@ -6,6 +6,7 @@ use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\BooksOverviewActions\BookMetaData;
 use BlueSpice\Bookshelf\BooksOverviewActions\Delete;
 use BlueSpice\Bookshelf\BooksOverviewActions\Edit;
+use BlueSpice\Bookshelf\BooksOverviewActions\View;
 use BlueSpice\Bookshelf\ChapterDataModel;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\IBooksOverviewAction;
@@ -163,6 +164,7 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 			if ( $chapterDataModel === null ) {
 				return $localUrl;
 			}
+
 
 			$chapterPage = $this->titleFactory->makeTitle(
 				$chapterDataModel->getNamespace(),
@@ -354,6 +356,9 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 	 */
 	private function setDefaultActionItems( array &$actions, Title $book, string $displayTitle ) {
 		$actions = [];
+
+		// View action
+		$actions['view'] = new View( $book, $displayTitle );
 
 		// Delete action
 		$actions['delete'] = new Delete( $book, $displayTitle );
