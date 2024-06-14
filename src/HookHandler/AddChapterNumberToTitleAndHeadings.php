@@ -54,7 +54,11 @@ class AddChapterNumberToTitleAndHeadings {
 			return true;
 		}
 
-		$chapterInfo = $this->getChapterInfo( $title );
+		$activeBook = $this->getActiveBook( $out->getTitle() );
+		if ( !$activeBook ) {
+			return true;
+		}
+		$chapterInfo = $this->getChapterInfo( $title, $activeBook );
 		if ( $chapterInfo instanceof ChapterInfo === false ) {
 			return true;
 		}
@@ -84,7 +88,10 @@ class AddChapterNumberToTitleAndHeadings {
 		}
 
 		$activeBook = $this->getActiveBook( $out->getTitle() );
-		$chapterInfo = $this->getChapterInfo( $out->getTitle() );
+		if ( !$activeBook ) {
+			return true;
+		}
+		$chapterInfo = $this->getChapterInfo( $out->getTitle(), $activeBook );
 		if ( $chapterInfo instanceof ChapterInfo === false ) {
 			return true;
 		}
@@ -118,11 +125,17 @@ class AddChapterNumberToTitleAndHeadings {
 	 * @return bool
 	 */
 	public function onNumberHeadingsBeforeApply( &$skip, &$prefix, $title, $html ) {
-		$chapterInfo = $this->getChapterInfo( $title );
+		$activeBook = $this->getActiveBook( $title );
+		if ( !$activeBook ) {
+			return true;
+		}
+		$chapterInfo = $this->getChapterInfo( $title, $activeBook );
 		if ( $chapterInfo instanceof ChapterInfo === false ) {
 			return true;
 		}
-		$skip = true;
+		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) === true ) {
+			$skip = true;
+		}
 		return true;
 	}
 
@@ -142,12 +155,12 @@ class AddChapterNumberToTitleAndHeadings {
 	 * @param Title $title
 	 * @return ChapterInfo|null
 	 */
-	private function getChapterInfo( Title $title ): ?ChapterInfo {
-		if ( $this->activeBook === null ) {
+	private function getChapterInfo( Title $title, Title $activeBook ): ?ChapterInfo {
+		if ( $activeBook === null ) {
 			return $this->chapterInfo;
 		}
 		if ( $this->chapterInfo === null ) {
-			$this->chapterInfo = $this->bookChapterLookup->getChapterInfoFor( $this->activeBook, $title );
+			$this->chapterInfo = $this->bookChapterLookup->getChapterInfoFor( $activeBook, $title );
 		}
 		return $this->chapterInfo;
 	}
