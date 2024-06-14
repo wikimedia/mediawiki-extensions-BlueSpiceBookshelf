@@ -80,8 +80,10 @@
 			if ( title !== null ) {
 				prefText = title.getPrefixedDb();
 			}
+
 			data.push(
 				prefText.toLowerCase() + " "
+				+ item.bookshelf.toLowerCase() + " "
 				+ item.book_title.toLowerCase() + " "
 				+ item.displaytitle.toLowerCase() + " "
 				+ item.subtitle.toLowerCase()
