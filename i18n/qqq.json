@@ -171,5 +171,6 @@
 	"bs-bookshelf-droplet-search-description": "Content droplet description",
 	"bs-bookshelf-droplet-search-book": "Tag inspector field label in VisualEditor",
 	"bs-bookshelf-droplet-search-book-help": "Tag inspector field help in VisualEditor",
-	"bs-bookshelf-notification-subscription-set-book-title": "Label for the Notifications subscription set"
+	"bs-bookshelf-notification-subscription-set-book-title": "Label for the Notifications subscription set",
+	"bs-bookshelf-newbook-dlg-error-book-exists": "Error text in create new book dialog if book with this name already exists"
 }
