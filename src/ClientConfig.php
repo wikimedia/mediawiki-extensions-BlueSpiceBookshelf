@@ -106,7 +106,7 @@ class ClientConfig {
 
 		$values = $metaLookup->getAllMetaValuesForKey( 'bookshelf' );
 		$values = array_unique( $values );
-		return $values;
+		return array_values( $values );
 	}
 
 	/**
