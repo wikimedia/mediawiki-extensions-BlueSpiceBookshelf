@@ -4,6 +4,7 @@ namespace BlueSpice\Bookshelf\MenuEditor;
 
 use BlueSpice\Bookshelf\BookSourceParser;
 use MediaWiki\Extension\MenuEditor\EditPermissionProvider;
+use MediaWiki\Extension\MenuEditor\Menu\GenericMenu;
 use MediaWiki\Extension\MenuEditor\ParsableMenu;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Revision\RevisionRecord;
@@ -13,9 +14,7 @@ use RequestContext;
 use Title;
 use TitleFactory;
 
-class BookEditor implements ParsableMenu, EditPermissionProvider {
-	/** @var ParserFactory */
-	private $parserFactory = null;
+class BookEditor extends GenericMenu implements ParsableMenu, EditPermissionProvider {
 
 	/** @var TitleFactory */
 	private $titleFactory = null;
@@ -28,7 +27,7 @@ class BookEditor implements ParsableMenu, EditPermissionProvider {
 	 * @param TitleFactory $titleFactory
 	 */
 	public function __construct( ParserFactory $parserFactory, TitleFactory $titleFactory ) {
-		$this->parserFactory = $parserFactory;
+		parent::__construct( $parserFactory );
 		$this->titleFactory = $titleFactory;
 	}
 
@@ -94,8 +93,15 @@ class BookEditor implements ParsableMenu, EditPermissionProvider {
 			$revision = $this->parserFactory->getRevisionForText( '', $title );
 		}
 		return new BookSourceParser(
-			$revision, $this->parserFactory->getNodeProcessors(), $this->titleFactory
+			$revision, $this->getProcessors(), $this->titleFactory
 		);
+	}
+
+	/**
+	 * @return string[]
+	 */
+	public function getAllowedNodes(): array {
+		return [ 'bs-bookshelf-chapter-wikilink-with-alias', 'bs-bookshelf-chapter-plain-text' ];
 	}
 
 	/**
