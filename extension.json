@@ -398,8 +398,9 @@
 					"callback": "BlueSpice\\Bookshelf\\ClientConfig::makeBookViewTools"
 				}
 			],
-			"styles": [
-			],
+			"styles": {
+				"bluespice.bookshelf.view.css": {}
+			},
 			"messages": [
 			],
 			"dependencies": [

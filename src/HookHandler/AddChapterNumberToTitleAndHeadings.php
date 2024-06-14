@@ -153,6 +153,7 @@ class AddChapterNumberToTitleAndHeadings {
 
 	/**
 	 * @param Title $title
+	 * @param Title $activeBook
 	 * @return ChapterInfo|null
 	 */
 	private function getChapterInfo( Title $title, Title $activeBook ): ?ChapterInfo {

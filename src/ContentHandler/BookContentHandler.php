@@ -4,6 +4,8 @@ namespace BlueSpice\Bookshelf\ContentHandler;
 
 use BlueSpice\Bookshelf\Action\BookEditAction;
 use BlueSpice\Bookshelf\Action\BookEditSourceAction;
+use BlueSpice\Bookshelf\BookInfo;
+use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\BookViewTreeDataBuilder;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\Content\BookContent;
@@ -71,9 +73,10 @@ class BookContentHandler extends TextContentHandler {
 			$titleFactory = $services->getTitleFactory();
 			$book = $titleFactory->castFromPageReference( $pageRef );
 
-			$bookLookup = $services->get( 'BSBookshelfBookChapterLookup' );
-			if ( $bookLookup instanceof ChapterLookup ) {
-				$this->setChaptersTree( $output, $book, $bookLookup, $titleFactory );
+			$bookLookup = $services->get( 'BSBookshelfBookLookup' );
+			$bookChapterLookup = $services->get( 'BSBookshelfBookChapterLookup' );
+			if ( $bookChapterLookup instanceof ChapterLookup ) {
+				$this->setChaptersTree( $output, $book, $bookLookup, $bookChapterLookup, $titleFactory );
 				$this->setHtmlFrame( $output );
 				$output->addModules( [ 'ext.bluespice.bookshelf.view' ] );
 			}
@@ -86,16 +89,27 @@ class BookContentHandler extends TextContentHandler {
 	/**
 	 * @param ParserOutput $output
 	 * @param Title $book
+	 * @param BookLookup $bookLookup
 	 * @param ChapterLookup $chapterLookup
 	 * @param TitleFactory $titleFactory
 	 */
 	private function setChaptersTree(
-		ParserOutput $output, Title $book, ChapterLookup $chapterLookup, TitleFactory $titleFactory
+		ParserOutput $output,
+		Title $book,
+		BookLookup $bookLookup,
+		ChapterLookup $chapterLookup,
+		TitleFactory $titleFactory
 	) {
 		$chapters = $chapterLookup->getChaptersOfBook( $book );
+		$bookInfo = $bookLookup->getBookInfo( $book );
+
+		$name = '';
+		if ( $bookInfo instanceof BookInfo ) {
+			$name = $bookInfo->getName();
+		}
 
 		$dataBuilder = new BookViewTreeDataBuilder( $titleFactory );
-		$data = $dataBuilder->build( $book, $chapters );
+		$data = $dataBuilder->build( $book, $chapters, $name );
 
 		$output->setJsConfigVar( 'bsBookshelfTreeData', $data );
 	}
