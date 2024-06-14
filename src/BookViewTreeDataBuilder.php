@@ -20,9 +20,14 @@ class BookViewTreeDataBuilder {
 	/**
 	 * @param Title $book
 	 * @param ChapterDataModel[] $chapters
+	 * @param string $bookName
 	 * @return array
 	 */
-	public function build( Title $book, array $chapters ): array {
+	public function build( Title $book, array $chapters, string $bookName = '' ): array {
+		if ( $bookName === '' ) {
+			$bookName = $book->getText();
+		}
+
 		$text = $book->getPrefixedText();
 		$query = "book=$text";
 
@@ -80,7 +85,20 @@ class BookViewTreeDataBuilder {
 			}
 		}
 
-		return $hierarchy;
+		$bookHierarchy = [
+			[
+				'label' => $bookName,
+				'name' => $book->getText(),
+				'chapter' => [
+					'number' => '',
+					'name' => $book->getText(),
+					'type' => 'plain-text',
+				],
+				'children' => $hierarchy
+			]
+		];
+
+		return $bookHierarchy;
 	}
 
 	/**

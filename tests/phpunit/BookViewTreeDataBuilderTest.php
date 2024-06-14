@@ -42,126 +42,138 @@ class BookViewTreeDataBuilderTest extends TestCase {
 	private function getExpected( TitleFactory $titleFactory, string $query = '' ): array {
 		return [
 			[
-				'label' => '1 My display title',
-				'name' => 'Test chap A',
-				'href' => $this->makeURL( $titleFactory, 'Test chap A', $query ),
-				'class' => 'new',
+				'label' => 'Testbook',
+				'name' => 'Testbook',
 				'chapter' => [
-					'namespace' => '0',
-					'title' => 'Test_chap_A',
-					'number' => '1',
-					'name' => 'My display title',
-					'type' => 'wikilink-with-alias',
+					'number' => '',
+					'name' => 'Testbook',
+					'type' => 'plain-text',
 				],
 				'children' => [
 					[
-						'label' => '1.1 Test chap B',
-						'name' => 'Test chap B',
-						'href' => $this->makeURL( $titleFactory, 'Test chap B', $query ),
+						'label' => '1 My display title',
+						'name' => 'Test chap A',
+						'href' => $this->makeURL( $titleFactory, 'Test chap A', $query ),
 						'class' => 'new',
 						'chapter' => [
 							'namespace' => '0',
-							'title' => 'Test_chap_B',
-							'number' => '1.1',
-							'name' => 'Test chap B',
+							'title' => 'Test_chap_A',
+							'number' => '1',
+							'name' => 'My display title',
 							'type' => 'wikilink-with-alias',
 						],
 						'children' => [
 							[
-								'label' => '1.1.1 Test chap C',
-								'name' => 'Test chap C',
-								'href' => $this->makeURL( $titleFactory, 'Test chap C', $query ),
+								'label' => '1.1 Test chap B',
+								'name' => 'Test chap B',
+								'href' => $this->makeURL( $titleFactory, 'Test chap B', $query ),
 								'class' => 'new',
 								'chapter' => [
 									'namespace' => '0',
-									'title' => 'Test_chap_C',
-									'number' => '1.1.1',
-									'name' => 'Test chap C',
+									'title' => 'Test_chap_B',
+									'number' => '1.1',
+									'name' => 'Test chap B',
 									'type' => 'wikilink-with-alias',
 								],
 								'children' => [
 									[
-										'label' => '1.1.1.1 My plain text label 1',
-										'name' => 'My plain text label 1',
+										'label' => '1.1.1 Test chap C',
+										'name' => 'Test chap C',
+										'href' => $this->makeURL( $titleFactory, 'Test chap C', $query ),
+										'class' => 'new',
 										'chapter' => [
-											'number' => '1.1.1.1',
-											'name' => 'My plain text label 1',
-											'type' => 'plain-text',
+											'namespace' => '0',
+											'title' => 'Test_chap_C',
+											'number' => '1.1.1',
+											'name' => 'Test chap C',
+											'type' => 'wikilink-with-alias',
 										],
 										'children' => [
 											[
-												'label' => '1.1.1.1.1 Test chap D',
-												'name' => 'Test chap D',
-												'href' => $this->makeURL( $titleFactory, 'Test chap D', $query ),
-												'class' => 'new',
+												'label' => '1.1.1.1 My plain text label 1',
+												'name' => 'My plain text label 1',
 												'chapter' => [
-													'namespace' => '0',
-													'title' => 'Test_chap_D',
-													'number' => '1.1.1.1.1',
-													'name' => 'Test chap D',
-													'type' => 'wikilink-with-alias',
+													'number' => '1.1.1.1',
+													'name' => 'My plain text label 1',
+													'type' => 'plain-text',
 												],
+												'children' => [
+													[
+														'label' => '1.1.1.1.1 Test chap D',
+														'name' => 'Test chap D',
+														'href' =>
+															$this->makeURL( $titleFactory, 'Test chap D', $query ),
+														'class' => 'new',
+														'chapter' => [
+															'namespace' => '0',
+															'title' => 'Test_chap_D',
+															'number' => '1.1.1.1.1',
+															'name' => 'Test chap D',
+															'type' => 'wikilink-with-alias',
+														],
+													],
+												]
 											],
 										]
 									],
 								]
 							],
-						]
-					],
-					[
-						'label' => '1.2 Test chap G',
-						'name' => 'Test chap G',
-						'href' => $this->makeURL( $titleFactory, 'Test chap G', $query ),
-						'class' => 'new',
-						'chapter' => [
-							'namespace' => '0',
-							'title' => 'Test_chap_G',
-							'number' => '1.2',
-							'name' => 'Test chap G',
-							'type' => 'wikilink-with-alias',
-						],
-					],
-				]
-			],
-			[
-				'label' => '2 My plain text label 2',
-				'name' => 'My plain text label 2',
-				'chapter' => [
-					'number' => '2',
-					'name' => 'My plain text label 2',
-					'type' => 'plain-text',
-				],
-				'children' => [
-					[
-						'label' => '2.1 Test chap E',
-						'name' => 'Test chap E',
-						'href' => $this->makeURL( $titleFactory, 'Test chap E', $query ),
-						'class' => 'new',
-						'chapter' => [
-							'namespace' => '0',
-							'title' => 'Test_chap_E',
-							'number' => '2.1',
-							'name' => 'Test chap E',
-							'type' => 'wikilink-with-alias',
-						],
-						'children' => [
 							[
-								'label' => '2.1.1 Test chap F',
-								'name' => 'Template:Test chap F',
-								'href' => $this->makeURL( $titleFactory, 'Test chap F', $query, 10 ),
+								'label' => '1.2 Test chap G',
+								'name' => 'Test chap G',
+								'href' => $this->makeURL( $titleFactory, 'Test chap G', $query ),
 								'class' => 'new',
 								'chapter' => [
-									'namespace' => '10',
-									'title' => 'Test_chap_F',
-									'number' => '2.1.1',
-									'name' => 'Test chap F',
+									'namespace' => '0',
+									'title' => 'Test_chap_G',
+									'number' => '1.2',
+									'name' => 'Test chap G',
 									'type' => 'wikilink-with-alias',
 								],
 							],
 						]
-					]
+					],
+					[
+						'label' => '2 My plain text label 2',
+						'name' => 'My plain text label 2',
+						'chapter' => [
+							'number' => '2',
+							'name' => 'My plain text label 2',
+							'type' => 'plain-text',
+						],
+						'children' => [
+							[
+								'label' => '2.1 Test chap E',
+								'name' => 'Test chap E',
+								'href' => $this->makeURL( $titleFactory, 'Test chap E', $query ),
+								'class' => 'new',
+								'chapter' => [
+									'namespace' => '0',
+									'title' => 'Test_chap_E',
+									'number' => '2.1',
+									'name' => 'Test chap E',
+									'type' => 'wikilink-with-alias',
+								],
+								'children' => [
+									[
+										'label' => '2.1.1 Test chap F',
+										'name' => 'Template:Test chap F',
+										'href' => $this->makeURL( $titleFactory, 'Test chap F', $query, 10 ),
+										'class' => 'new',
+										'chapter' => [
+											'namespace' => '10',
+											'title' => 'Test_chap_F',
+											'number' => '2.1.1',
+											'name' => 'Test chap F',
+											'type' => 'wikilink-with-alias',
+										],
+									],
+								]
+							]
+						]
+					],
 				]
-			],
+			]
 		];
 	}
 
