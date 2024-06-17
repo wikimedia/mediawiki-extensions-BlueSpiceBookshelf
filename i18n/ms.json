@@ -2,14 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Anakmalaysia",
-			"Tofeiku"
+			"Tofeiku",
+			"Hakimi97"
 		]
 	},
 	"bookshelf": "Rak buku",
+	"bs-bookshelf-prof-defaultview": "Paparan lalai",
 	"bs-bookshelf-pref-chapterpagerbeforecontent": "Tunjuk kelui bab buku sebelum kandungan",
 	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Tambah kelui bab di atas laman.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Tunjuk kelui bab buku selepas kandungan",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Tambah kelui bab di bawah laman.",
-	"bs-bookshelf-prof-defaultview": "Paparan lalai",
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Pengarang",
 	"bs-bookshelf-droplet-name": "Senarai buku"
 }

@@ -103,6 +103,8 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Libro a exportar",
 	"bs-bookshelf-droplet-pdf-template-label": "Patrono de PDF de libro",
 	"bs-bookshelf-droplet-pdf-link-label": "Etiquetta del ligamine",
+	"bs-bookshelf-search-center-result-books-label": "Parte de libro{{PLURAL:$1||s}}",
+	"bs-bookshelf-search-center-filter-books-label": "Libro",
 	"apihelp-bs-books-overview-store-summary": "Lista tote le libros includente le planca de libros, un ligamine al prime capitulo, e le actiones.",
 	"books": "Libros",
 	"bs-books-overview-page-loading-text": "Le panorama del libro se carga…",
@@ -116,6 +118,8 @@
 	"bs-books-overview-page-book-action-delete-text": "Deler",
 	"bs-books-overview-page-book-action-delete-title": "Deler le libro $1",
 	"bs-books-overview-page-book-search-placeholder": "Cercar libro",
+	"bs-books-overview-page-bookshelf-empty": "Il non ha libros disponibile",
+	"bs-books-overview-page-aria-live-filtered-rows": "({{PLURAL:$1|Un libro|$1 libros}}) trovate",
 	"bs-bookshelf-chapter-plain-text-label": "Texto del titulo del capitulo",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Adder un nove titulo de capitulo",
 	"bs-bookshelf-chapter-plain-text-input-label": "Texto",
@@ -152,5 +156,11 @@
 	"bs-bookshelf-add-to-book-summary": "Pagina $1 addite",
 	"bs-books-overview-page-book-action-metadata-text": "Modificar metadatos",
 	"bs-books-overview-page-book-action-metadata-title": "Modificar metadatos pro le libro $1",
-	"bs-bookshelf-massadd-dlg-save-action-label": "Adder"
+	"bs-bookshelf-massadd-dlg-save-action-label": "Adder",
+	"bs-bookshelf-tag-searchinbook-error": "Specifica un nomine de libro valide",
+	"bs-bookshelf-droplet-search-name": "Cercar in un libro",
+	"bs-bookshelf-droplet-search-description": "Cercar paginas in un libro",
+	"bs-bookshelf-droplet-search-book": "Libro",
+	"bs-bookshelf-droplet-search-book-help": "Nomine del libro in le qual cercar",
+	"bs-bookshelf-notification-subscription-set-book-title": "Libro"
 }

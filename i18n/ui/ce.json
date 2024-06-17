@@ -1,16 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Умар"
+			"Умар",
+			"Исмаил Садуев"
 		]
 	},
-	"bs-bookshelfui-dlg-type-label": "Хьост",
 	"bookshelfbookui": "Жайнийн редактор",
 	"bookshelfbookmanager": "Жайнашна урхалладар",
 	"bs-bookshelfui-editor-no-title-provided": "Йазйина йац жайнан бакъалла йолу цӀе",
 	"bs-bookshelfui-editor-title": "Жайнийн редактор: $1",
 	"bs-bookshelfui-widget-editor-link-text": "Таде хӀара жайна",
-	"bs-bookshelfui-new-book-title": "Кхолла керла жайна",
+	"bs-bookshelfui-new-book-title": "Керла книга кхолла",
 	"bs-bookshelfui-new-book-text": "Жайнан корта",
 	"bs-bookshelfui-delete-book-title": "ДӀадаккха жайна",
 	"bs-bookshelfui-export-selection": "Экспорт харжар",
@@ -37,6 +37,7 @@
 	"bs-bookshelfui-book-type": "Жайнан тайпа",
 	"bs-bookshelfui-empty-selection": "ХӀума хаьржина йац",
 	"bs-bookshelfui-dlg-choosecategory-label": "Категори",
+	"bs-bookshelfui-dlg-type-label": "Хьост",
 	"bs-bookshelfui-extjs-tooltip-add-mass": "Дуккха тӀетохар",
 	"bs-bookshelfui-dlg-addmass-title": "Дуккха тӀетохар",
 	"bs-bookshelfui-type-category": "Категорин йерриге агӀонаш",
