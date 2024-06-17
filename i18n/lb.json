@@ -48,6 +48,7 @@
 	"bs-bookshelf-booknav-searchbox-placeholder": "Sichen",
 	"bs-bookshelf-droplet-pdf-name": "Buch-PDF-Link",
 	"bs-bookshelf-droplet-pdf-book-label": "Buch fir z'exportéieren",
+	"bs-bookshelf-search-center-filter-books-label": "Buch",
 	"books": "Bicher",
 	"bs-books-overview-page-loading-text": "D'Buchiwwersiicht gëtt gelueden...",
 	"bs-books-overview-page-bookshelf-various-books": "Verschidde Bicher",
@@ -59,6 +60,8 @@
 	"bs-books-overview-page-book-action-edit-title": "Buch $1 änneren",
 	"bs-books-overview-page-book-action-delete-text": "Läschen",
 	"bs-books-overview-page-book-action-delete-title": "Buch $1 läschen",
+	"bs-books-overview-page-bookshelf-empty": "Et si keng Bicher verfügbar",
+	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|Ee Buch|$1 Bicher}} fonnt",
 	"bs-bookshelf-chapter-plain-text-input-label": "Text",
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Zil",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Text",
@@ -73,5 +76,9 @@
 	"bs-bookshelf-add-to-book-summary": "Säit $1 derbäigesat",
 	"bs-books-overview-page-book-action-metadata-text": "Metadonnéeën änneren",
 	"bs-books-overview-page-book-action-metadata-title": "Metadonnéeë fir d'Buch $1 änneren",
-	"bs-bookshelf-massadd-dlg-save-action-label": "Derbäisetzen"
+	"bs-bookshelf-massadd-dlg-save-action-label": "Derbäisetzen",
+	"bs-bookshelf-droplet-search-name": "An engem Buch sichen",
+	"bs-bookshelf-droplet-search-book": "Buch",
+	"bs-bookshelf-droplet-search-book-help": "Numm vum Buch, an deem gesicht gëtt",
+	"bs-bookshelf-notification-subscription-set-book-title": "Buch"
 }

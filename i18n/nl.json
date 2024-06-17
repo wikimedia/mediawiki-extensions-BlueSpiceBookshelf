@@ -106,6 +106,7 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Boek om te exporteren",
 	"bs-bookshelf-droplet-pdf-template-label": "Boek-PDF-sjabloon",
 	"bs-bookshelf-droplet-pdf-link-label": "Linklabel",
+	"bs-bookshelf-search-center-filter-books-label": "Boek",
 	"apihelp-bs-books-overview-store-summary": "Geeft een overzicht van alle boeken, inclusief boekenplank, koppeling naar het eerste hoofdstuk en handelingen.",
 	"books": "Boeken",
 	"bs-books-overview-page-loading-text": "Boekoverzicht wordt geladen…",
@@ -155,5 +156,8 @@
 	"bs-bookshelf-add-to-book-summary": "Pagina $1 toegevoegd",
 	"bs-books-overview-page-book-action-metadata-text": "Metagegevens bewerken",
 	"bs-books-overview-page-book-action-metadata-title": "Metagegevens voor boek $1 bewerken",
-	"bs-bookshelf-massadd-dlg-save-action-label": "Toevoegen"
+	"bs-bookshelf-massadd-dlg-save-action-label": "Toevoegen",
+	"bs-bookshelf-droplet-search-name": "Zoek in een boek",
+	"bs-bookshelf-droplet-search-book": "Boek",
+	"bs-bookshelf-notification-subscription-set-book-title": "Boek"
 }
