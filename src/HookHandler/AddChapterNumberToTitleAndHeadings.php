@@ -7,6 +7,7 @@ use BlueSpice\Bookshelf\ChapterInfo;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\HeadingNumberation;
 use BlueSpice\Bookshelf\TOCNumberation;
+use Config;
 use ConfigFactory;
 use OutputPage;
 use Skin;
@@ -101,7 +102,6 @@ class AddChapterNumberToTitleAndHeadings {
 			// Otherwise the internal headlines would have same numbers as child node articles
 			return true;
 		}
-
 		$headingNumberation = new HeadingNumberation();
 		$text = $headingNumberation->execute(
 			$chapterInfo->getNumber(),
@@ -153,15 +153,14 @@ class AddChapterNumberToTitleAndHeadings {
 
 	/**
 	 * @param Title $title
+	 * @param Title $activeBook
 	 * @return ChapterInfo|null
 	 */
 	private function getChapterInfo( Title $title, Title $activeBook ): ?ChapterInfo {
 		if ( $activeBook === null ) {
-			return $this->chapterInfo;
+			return null;
 		}
-		if ( $this->chapterInfo === null ) {
-			$this->chapterInfo = $this->bookChapterLookup->getChapterInfoFor( $activeBook, $title );
-		}
+		$this->chapterInfo = $this->bookChapterLookup->getChapterInfoFor( $activeBook, $title );
 		return $this->chapterInfo;
 	}
 }
