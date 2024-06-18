@@ -180,10 +180,12 @@ function createBookshelfs( items ) {
 
 	// Move various books (books without bookshelf value) to the end of the list
 	const variousBooksIndex = bookshelfsInData.findIndex( bookshelf => bookshelf.name == '' );
-	const variousBooks = bookshelfsInData[variousBooksIndex];
-	variousBooks.name = mw.message( 'bs-books-overview-page-bookshelf-various-books' ).plain();
-	bookshelfsInData.shift( ...bookshelfsInData.splice( 0, variousBooksIndex ) );
-	bookshelfsInData.push( variousBooks );
+	if ( variousBooksIndex >= 0 ) {
+		const variousBooks = bookshelfsInData[variousBooksIndex];
+		variousBooks.name = mw.message( 'bs-books-overview-page-bookshelf-various-books' ).plain();
+		bookshelfsInData.shift( ...bookshelfsInData.splice( 0, variousBooksIndex ) );
+		bookshelfsInData.push( variousBooks );
+	}
 
 	// Show only bookshelfs with visible books
 	bookshelfsInData.forEach( function( item ) {
