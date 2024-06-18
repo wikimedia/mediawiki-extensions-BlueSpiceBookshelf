@@ -34,11 +34,14 @@ class BookContextProviderFactory {
 	 * @return IBookContextProvider
 	 */
 	public function getProvider( Title $title ): IBookContextProvider {
-		$responsibleProvider = null;
 		$books = $this->bookLookup->getBooksForPage( $title );
 		$specs = $this->getSpecs();
 
 		if ( !$title->isSpecial( 'Userlogin' ) ) {
+			$responsibleProvider = $this->createProvider( $specs['forced'], null );
+			if ( $responsibleProvider !== null ) {
+				return $responsibleProvider;
+			}
 			$responsibleProvider = $this->createProvider( $specs['query'], $books );
 			if ( $responsibleProvider !== null ) {
 				return $responsibleProvider;
@@ -52,22 +55,24 @@ class BookContextProviderFactory {
 
 		// If no other provider is responsible use the default provider.
 		// This provider will return the first book available.
-		$defaultProvider = new DefaultProvider( $books, $this->titleFactory );
-
-		return $defaultProvider;
+		return new DefaultProvider( $books, $this->titleFactory );
 	}
 
 	/**
 	 * @param array $spec
-	 * @param array $books
+	 * @param array|null $books
 	 * @return IBookContextProvider|null
 	 */
-	private function createProvider( array $spec, array $books ): ?IBookContextProvider {
+	private function createProvider( array $spec, ?array $books ): ?IBookContextProvider {
 		/** @var IBookContextProvider */
 		$provider = $this->objectFactory->createObject( $spec );
-
-		if ( $provider->isResponsible() && $provider->getActiveBook() !== null ) {
-			$dbKey = $provider->getActiveBook()->getPrefixedDBkey();
+		$activeBook = $provider->getActiveBook();
+		if ( $provider->isResponsible() && $activeBook ) {
+			if ( $books === null ) {
+				// This is for cases when book page itself is being handled
+				return $provider;
+			}
+			$dbKey = $activeBook->getPrefixedDBkey();
 			if ( isset( $books[$dbKey] ) ) {
 				return $provider;
 			}
@@ -87,6 +92,10 @@ class BookContextProviderFactory {
 			],
 			'session' => [
 				'class' => 'BlueSpice\\Bookshelf\\ContextProvider\\SessionProvider',
+				'services' => [ 'TitleFactory' ]
+			],
+			'forced' => [
+				'class' => 'BlueSpice\\Bookshelf\\ContextProvider\\ForcedProvider',
 				'services' => [ 'TitleFactory' ]
 			],
 		];

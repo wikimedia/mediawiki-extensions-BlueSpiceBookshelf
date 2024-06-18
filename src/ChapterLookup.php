@@ -84,7 +84,7 @@ class ChapterLookup {
 	 */
 	public function getChapterInfoFor( Title $book, Title $title ): ?ChapterInfo {
 		$db = $this->loadBalancer->getConnection( DB_REPLICA );
-		$res = $db->select(
+		$bookID = $db->selectField(
 			'bs_books',
 			'book_id',
 			[
@@ -92,11 +92,6 @@ class ChapterLookup {
 				'book_title' => $book->getDBKey(),
 			]
 		);
-
-		$bookID = null;
-		foreach ( $res as $row ) {
-			$bookID = $row->book_id;
-		}
 
 		if ( $bookID === null ) {
 			return null;

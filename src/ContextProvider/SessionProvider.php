@@ -2,7 +2,6 @@
 
 namespace BlueSpice\Bookshelf\ContextProvider;
 
-use MediaWiki\Session\SessionManager;
 use TitleFactory;
 
 class SessionProvider extends QueryProvider {
@@ -11,8 +10,7 @@ class SessionProvider extends QueryProvider {
 	 * @param TitleFactory $titleFactory
 	 */
 	public function __construct( TitleFactory $titleFactory ) {
-		$this->titleFactory = $titleFactory;
-		$this->session = SessionManager::getGlobalSession();
+		parent::__construct( $titleFactory );
 		$this->param = $this->session->get( 'book', '' );
 	}
 
