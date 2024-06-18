@@ -117,6 +117,8 @@
 	"bs-books-overview-page-book-action-edit-title": "Edit book $1",
 	"bs-books-overview-page-book-action-delete-text": "Delete",
 	"bs-books-overview-page-book-action-delete-title": "Delete book $1",
+	"bs-books-overview-page-book-action-view-text": "Chapters",
+	"bs-books-overview-page-book-action-view-title": "View chapters of $1",
 	"bs-books-overview-page-book-search-placeholder": "Find book",
 	"bs-books-overview-page-bookshelf-empty": "There are no books available",
 	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|One book|$1 books}} found",
