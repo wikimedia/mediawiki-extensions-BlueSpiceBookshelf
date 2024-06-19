@@ -165,7 +165,6 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 				return $localUrl;
 			}
 
-
 			$chapterPage = $this->titleFactory->makeTitle(
 				$chapterDataModel->getNamespace(),
 				$chapterDataModel->getTitle()
