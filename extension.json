@@ -873,17 +873,9 @@
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\AddChapterNumberToTitleAndHeadings",
 			"services": [ "ConfigFactory", "BSBookshelfBookContextProviderFactory", "BSBookshelfBookChapterLookup" ]
 		},
-		"book-source-update": {
-			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookSave",
-			"services": [ "TitleFactory", "MWStakeWikitextParserFactory", "DBLoadBalancer", "BSBookshelfBookLookup" ]
-		},
-		"book-source-delete": {
-			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookDelete",
-			"services": [ "TitleFactory", "DBLoadBalancer", "BSBookshelfBookLookup" ]
-		},
-		"book-source-move": {
-			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookMove",
-			"services": [ "TitleFactory", "MWStakeWikitextParserFactory", "DBLoadBalancer", "BSBookshelfBookLookup" ]
+		"book-source-actions": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookActions",
+			"services": [ "TitleFactory", "MWStakeWikitextParserFactory", "DBLoadBalancer", "BSBookshelfBookLookup", "UserFactory" ]
 		},
 		"book-content-default-mode": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SetBookContentHandler"
@@ -931,9 +923,9 @@
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface",
 		"OutputPageBeforeHTML": "add-chapter-number-to-title-and-headings",
-		"MultiContentSave": "book-source-update",
-		"PageDeleteComplete": "book-source-delete",
-		"PageMoveComplete": "book-source-move",
+		"MultiContentSave": "book-source-actions",
+		"PageDeleteComplete": "book-source-actions",
+		"PageMoveComplete": "book-source-actions",
 		"NumberHeadingsBeforeApply": "add-chapter-number-to-title-and-headings"
 	},
 	"Actions": {

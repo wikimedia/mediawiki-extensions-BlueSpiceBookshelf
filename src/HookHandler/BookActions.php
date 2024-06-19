@@ -2,23 +2,32 @@
 
 namespace BlueSpice\Bookshelf\HookHandler;
 
+use BlueSpice\Bookshelf\BookInfo;
 use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\BookSourceParser;
 use BlueSpice\Bookshelf\ChapterUpdater;
 use BlueSpice\Bookshelf\Content\BookContent;
 use Exception;
 use JsonContent;
+use ManualLogEntry;
+use MediaWiki\Hook\PageMoveCompleteHook;
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\Page\Hook\PageDeleteCompleteHook;
+use MediaWiki\Page\ProperPageIdentity;
+use MediaWiki\Permissions\Authority;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Storage\Hook\MultiContentSaveHook;
+use MediaWiki\User\UserFactory;
+use Message;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Psr\Log\LoggerInterface;
 use Title;
 use TitleFactory;
+use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\LoadBalancer;
 
-class BookSave implements MultiContentSaveHook {
+class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageMoveCompleteHook {
 
 	/** @var TitleFactory */
 	private $titleFactory = null;
@@ -32,6 +41,9 @@ class BookSave implements MultiContentSaveHook {
 	/** @var BookLookup */
 	private $bookLookup = null;
 
+	/** @var UserFactory */
+	private $userFactory = null;
+
 	/** @var LoggerInterface */
 	private $logger = null;
 
@@ -40,15 +52,18 @@ class BookSave implements MultiContentSaveHook {
 	 * @param ParserFactory $parserFactory
 	 * @param LoadBalancer $loadBalancer
 	 * @param BookLookup $bookLookup
+	 * @param UserFactory $userFactory
 	 */
 	public function __construct(
 		TitleFactory $titleFactory, ParserFactory $parserFactory,
-		LoadBalancer $loadBalancer, BookLookup $bookLookup
+		LoadBalancer $loadBalancer, BookLookup $bookLookup,
+		UserFactory $userFactory
 	) {
 		$this->titleFactory = $titleFactory;
 		$this->parserFactory = $parserFactory;
 		$this->loadBalancer = $loadBalancer;
 		$this->bookLookup = $bookLookup;
+		$this->userFactory = $userFactory;
 		$this->logger = LoggerFactory::getInstance( 'BSBookshelf' );
 	}
 
@@ -66,7 +81,7 @@ class BookSave implements MultiContentSaveHook {
 			return true;
 		}
 
-		if ( $title->getNamespace() !== NS_BOOK ) {
+		if ( $title->getNamespace() !== NS_BOOK && !$this->isUserBook( $title ) ) {
 			return true;
 		}
 
@@ -79,6 +94,142 @@ class BookSave implements MultiContentSaveHook {
 			$this->doSaveBookSource( $title, $revisionRecord );
 		}
 		return true;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function onPageDeleteComplete( ProperPageIdentity $page, Authority $deleter, string $reason,
+		int $pageID, RevisionRecord $deletedRev, ManualLogEntry $logEntry, int $archivedRevisionCount
+	) {
+		$title = $this->titleFactory->castFromPageIdentity( $page );
+
+		if ( !$title ) {
+			return true;
+		}
+
+		if ( $title->getNamespace() !== NS_BOOK && !$this->isUserBook( $title ) ) {
+			return true;
+		}
+
+		$bookID = $this->bookLookup->getBookId( $title );
+
+		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
+		$db->delete(
+			'bs_book_chapters',
+			[
+				'chapter_book_id' => $bookID
+			]
+		);
+
+		$db->delete(
+			'bs_book_meta',
+			[
+				'm_book_id' => $bookID
+			]
+		);
+
+		$db->delete(
+			'bs_books',
+			[
+				'book_id' => $bookID
+			]
+		);
+
+		return true;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function onPageMoveComplete(
+		$old, $new, $userIdentity, $pageid, $redirid, $reason, $revision
+	) {
+		$oldBook = $this->titleFactory->newFromLinkTarget( $old );
+		$newBook = $this->titleFactory->newFromLinkTarget( $new );
+
+		if ( $newBook->getNamespace() !== NS_BOOK && !$this->isUserBook( $newBook ) ) {
+			return true;
+		}
+
+		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
+
+		/** @var BookInfo */
+		$oldBookInfo = $this->bookLookup->getBookInfo( $oldBook );
+		if ( !$oldBookInfo ) {
+			$this->createBook( $newBook, $revision, $db );
+		}
+
+		$this->moveBook( $oldBookInfo, $newBook, $db );
+
+		return true;
+	}
+
+	/**
+	 *
+	 * @param Title $title
+	 * @return bool
+	 */
+	private function isUserBook( $title ) {
+		if ( $title->getNamespace() !== NS_USER ) {
+			return false;
+		}
+		if ( !$title->isSubpage() ) {
+			return false;
+		}
+		$user = $this->userFactory->newFromName( $title->getRootText() );
+		if ( !$user || $user->isAnon() ) {
+			return false;
+		}
+		$prefix = Message::newFromKey(
+			'bs-bookshelf-personal-books-page-prefix',
+			$user->getName()
+		);
+		$bookTitle = $this->titleFactory->makeTitle(
+			NS_USER,
+			$prefix->inContentLanguage()->parse() . $title->getSubpageText()
+		);
+		return $bookTitle && $title->equals( $bookTitle );
+	}
+
+	/**
+	 * @param BookInfo $oldBookInfo
+	 * @param Title $newBook
+	 * @param IDatabase $db
+	 */
+	private function moveBook( BookInfo $oldBookInfo, Title $newBook, IDatabase $db ) {
+		$db->update(
+			'bs_books',
+			[
+				'book_namespace' => $newBook->getNamespace(),
+				'book_title' => $newBook->getDBkey(),
+			],
+			[
+				'book_id' => $oldBookInfo->getId()
+			]
+		);
+	}
+
+	/**
+	 * @param Title $newBook
+	 * @param RevisionRecord $revisionRecord
+	 * @param IDatabase $db
+	 */
+	private function createBook( Title $newBook, RevisionRecord $revisionRecord, $db ) {
+		$db->insert(
+			'bs_books',
+			[
+				'book_namespace' => $newBook->getNamespace(),
+				'book_title' => $newBook->getDBkey(),
+				'book_name' => $newBook->getText(),
+				'book_namespace' => 'public'
+			]
+		);
+
+		$content = $revisionRecord->getContent( SlotRecord::MAIN );
+		if ( $content instanceof BookContent ) {
+			$this->doSaveBookSource( $newBook, $revisionRecord );
+		}
 	}
 
 	/**
