@@ -268,7 +268,8 @@
 		"ApiBookshelfPageCollectionStore": "includes/api/ApiBookshelfPageCollectionStore.php",
 		"ApiBookshelfMassAddPageStore": "includes/api/ApiBookshelfMassAddPageStore.php",
 		"UserBookContentLanguage": "maintenance/UserBookContentLanguage.php",
-		"FixUserSubpageContentModel": "maintenance/FixUserSubpageContentModel.php"
+		"FixUserSubpageContentModel": "maintenance/FixUserSubpageContentModel.php",
+		"RebuildBooks": "maintenance/RebuildBooks.php"
 	},
 	"ContentHandlers": {
 		"book": "\\BlueSpice\\Bookshelf\\ContentHandler\\BookContentHandler"
@@ -897,6 +898,9 @@
 				"BSBookshelfBookContextProviderFactory", "BSBookshelfBookLookup", "BSBookshelfBookChapterLookup",
 				"TitleFactory", "ConfigFactory", "MainConfig", "RepoGroup", "HookContainer"
 			]
+		},
+		"migrateBooks": {
+			"class": "\\BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\MigrateBooks"
 		}
 	},
 	"Hooks": {
@@ -910,7 +914,8 @@
 			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddConvertContentModel::callback",
 			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBooksTable::callback",
 			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBookChaptersTable::callback",
-			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBookMetaTable::callback"
+			"BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddBookMetaTable::callback",
+			"migrateBooks"
 		],
 		"BSUEModulePDFgetPage": "ue-module-pdf",
 		"BSUEModulePDFcollectMetaData": "ue-module-pdf",
