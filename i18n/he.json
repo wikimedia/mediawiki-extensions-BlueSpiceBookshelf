@@ -119,6 +119,8 @@
 	"bs-books-overview-page-book-action-edit-title": "עריכת הספר $1",
 	"bs-books-overview-page-book-action-delete-text": "מחיקה",
 	"bs-books-overview-page-book-action-delete-title": "מחיקת הספר $1",
+	"bs-books-overview-page-book-action-view-text": "פרקים",
+	"bs-books-overview-page-book-action-view-title": "צפייה בפרקים של $1",
 	"bs-books-overview-page-book-search-placeholder": "למצוא ספר",
 	"bs-books-overview-page-bookshelf-empty": "אין ספרים זמינים",
 	"bs-books-overview-page-aria-live-filtered-rows": "({{PLURAL:$1|נמצא ספר אחד|נמצאו $1 ספרים}})",
