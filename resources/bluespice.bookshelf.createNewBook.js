@@ -1,4 +1,4 @@
-$( document ).on( 'click', '#ca-bookshelf-create-new-book', function( e ) {
+$( document ).on( 'click', '.new-book-action', function( e ) {
 	e.preventDefault();
 	require( './ui/dialog/AddNewBook.js' );
 	var modules = require( './pluginModules.json' );
