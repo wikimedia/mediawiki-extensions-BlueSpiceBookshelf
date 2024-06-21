@@ -30,10 +30,6 @@ class AddNewBook implements SkinTemplateNavigation__UniversalHook {
 	 * @return bool
 	 */
 	protected function skipProcessing( SkinTemplate $sktemplate ) {
-		$title = $sktemplate->getTitle();
-		if ( !$title->isSpecial( 'Books' ) ) {
-			return true;
-		}
 		$user = $sktemplate->getUser();
 		// Check if user can create pages in NS Book
 		$title = $this->titleFactory->newFromText( 'Dummy', NS_BOOK );
@@ -52,13 +48,23 @@ class AddNewBook implements SkinTemplateNavigation__UniversalHook {
 		if ( $this->skipProcessing( $sktemplate ) ) {
 			return;
 		}
-
-		$links['actions']['bookshelf-create-new-book'] = [
+		$title = $sktemplate->getTitle();
+		if ( $title->isSpecial( 'Books' ) ) {
+			$links['actions']['bookshelf-create-new-book'] = [
+				'text' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
+				'title' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
+				'href' => '',
+				'class' => 'new-book-action',
+				'id' => 'ca-bookshelf-create-new-book',
+				'position' => 1,
+			];
+		}
+		$links['actions']['bookshelf-create-book'] = [
 			'text' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
-			'href' => '#',
-			'class' => false,
-			'id' => 'ca-bookshelf-create-new-book',
-			'position' => 1,
+			'title' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
+			'href' => '',
+			'class' => 'new-book-action',
+			'id' => 'ca-bookshelf-create-book'
 		];
 		$sktemplate->getOutput()->addModules( 'ext.bluespice.bookshelf.createNewBook' );
 	}
