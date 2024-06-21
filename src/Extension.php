@@ -4,6 +4,7 @@ namespace BlueSpice\Bookshelf;
 
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterPlainTextProcessor;
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterWikiLinkWithAliasProcessor;
+use BlueSpice\Bookshelf\Tag\SearchInBook;
 use MWDebug;
 
 /**
@@ -46,6 +47,15 @@ class Extension extends \BlueSpice\Extension {
 		// force enable user namespace subpages, cause we need to save books in these
 		$GLOBALS['wgNamespacesWithSubpages'][NS_USER] = true;
 		static::checkLegacy();
+
+		if ( \ExtensionRegistry::getInstance()->isLoaded( 'BlueSpiceExtendedSearch' ) ) {
+			// Add tag conditionally
+			$GLOBALS['bsgExtensionAttributeRegistryOverrides']['BlueSpiceFoundationTagRegistry'] = [
+				'merge' => [
+					'searchinbook' => SearchInBook::class
+				]
+			];
+		}
 
 		mwsInitComponents();
 		$GLOBALS['mwsgWikitextNodeProcessorRegistry'] += [
