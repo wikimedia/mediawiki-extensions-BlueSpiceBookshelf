@@ -38,5 +38,6 @@
 	"bs-books-overview-page-book-action-metadata-title": "Խմբագրել $1 գրքի մետատվյալները",
 	"bs-bookshelf-massadd-dlg-save-action-label": "Ավելացնել",
 	"bs-bookshelf-droplet-search-name": "Որոնել գրքում",
-	"bs-bookshelf-droplet-search-book": "Գիրք"
+	"bs-bookshelf-droplet-search-book": "Գիրք",
+	"bs-bookshelf-notification-subscription-set-book-title": "Գիրք"
 }

@@ -166,5 +166,6 @@
 	"bs-bookshelf-droplet-search-name": "Rechercher dans un livre",
 	"bs-bookshelf-droplet-search-description": "Rechercher des pages dans un livre",
 	"bs-bookshelf-droplet-search-book": "Livre",
-	"bs-bookshelf-droplet-search-book-help": "Nom du livre dans lequel rechercher"
+	"bs-bookshelf-droplet-search-book-help": "Nom du livre dans lequel rechercher",
+	"bs-bookshelf-notification-subscription-set-book-title": "Livre"
 }
