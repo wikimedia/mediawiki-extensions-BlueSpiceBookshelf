@@ -52,6 +52,7 @@
 			api.abort();
 			api.get( {
 					"action": "bs-books-overview-store",
+					"limit": -1
 			} )
 			.done( function( response ) {
 				var modules = getModules( response.results );
