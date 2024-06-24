@@ -80,5 +80,6 @@
 	"bs-bookshelf-droplet-search-name": "An engem Buch sichen",
 	"bs-bookshelf-droplet-search-book": "Buch",
 	"bs-bookshelf-droplet-search-book-help": "Numm vum Buch, an deem gesicht gëtt",
-	"bs-bookshelf-notification-subscription-set-book-title": "Buch"
+	"bs-bookshelf-notification-subscription-set-book-title": "Buch",
+	"bs-bookshelf-newbook-dlg-error-book-exists": "D'Buch konnt net erstallt ginn, well et schonn ee Buch mat dësem Numm gëtt"
 }
