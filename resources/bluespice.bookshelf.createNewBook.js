@@ -13,7 +13,7 @@ $( document ).on( 'click', '.new-book-action', function( e ) {
 		dialog.connect( this, {
 			book_created: function ( bookTitle ) {
 				window.location.href = mw.util.getUrl(
-					mw.config.get( 'wgRelevantPageName' ),
+					'Special:Books',
 					{
 						filter: bookTitle
 					}
