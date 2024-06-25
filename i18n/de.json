@@ -160,5 +160,6 @@
 	"bs-books-overview-page-book-action-metadata-text": "Metadaten bearbeiten",
 	"bs-books-overview-page-book-action-metadata-title": "Metadaten für Buch $1 bearbeiten",
 	"bs-bookshelf-massadd-dlg-save-action-label": "Hinzufügen",
-	"bs-bookshelf-newbook-dlg-error-book-exists": "Das Buch konnte nicht erstellt werden, da bereits ein Buch mit diesem Namen existiert"
+	"bs-bookshelf-newbook-dlg-error-book-exists": "Das Buch konnte nicht erstellt werden, da bereits ein Buch mit diesem Namen existiert",
+	"bs-bookshelf-actionmenuentry-new-book": "Neues Buch"
 }

@@ -60,8 +60,8 @@ class AddNewBook implements SkinTemplateNavigation__UniversalHook {
 			];
 		}
 		$links['actions']['bookshelf-create-book'] = [
-			'text' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
-			'title' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
+			'text' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-new-book' )->text(),
+			'title' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-new-book' )->text(),
 			'href' => '',
 			'class' => 'new-book-action',
 			'id' => 'ca-bookshelf-create-book'
