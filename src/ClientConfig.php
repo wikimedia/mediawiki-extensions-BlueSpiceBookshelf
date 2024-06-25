@@ -125,7 +125,7 @@ class ClientConfig {
 	 * @param Context $context
 	 * @return array
 	 */
-	public static function makeBookViewTools( Context $context ) {
+	public static function makeBookViewConfig( Context $context ) {
 		$tools = [];
 
 		$registry = ExtensionRegistry::getInstance()->getAttribute(
@@ -157,9 +157,14 @@ class ClientConfig {
 				'selectable' => $tool->requireSelectableTree()
 			];
 		}
+
+		$config = $services->getConfigFactory()->makeConfig( 'bsg' );
+		$offset = $config->get( 'BookshelfToolbarOffset' );
+
 		return [
 			'tools' => $tools,
-			'modules' => $modules
+			'modules' => $modules,
+			'offset' => $offset
 		];
 	}
 
