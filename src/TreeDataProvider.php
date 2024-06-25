@@ -81,7 +81,12 @@ class TreeDataProvider {
 
 		$book = $activeBook->getPrefixedDBkey();
 
-		$fullId = md5( $book . $item['chapter_name'] );
+		/**
+		 * Chapter number necessary to keep book hierarchy consistent even
+		 * if same pages are multiple times in one book
+		 * ERM37464
+		 */
+		$fullId = md5( $book . $item['chapter_name'] . $item['chapter_number'] );
 		$id = $this->idPrefix;
 		$id .= substr( $fullId, 0, 6 );
 		$path .= "/$id";
