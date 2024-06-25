@@ -395,8 +395,8 @@
 			"packageFiles": [
 				"bluespice.bookshelf.view.js",
 				{
-					"name": "bookViewTools.json",
-					"callback": "BlueSpice\\Bookshelf\\ClientConfig::makeBookViewTools"
+					"name": "bookViewConfig.json",
+					"callback": "BlueSpice\\Bookshelf\\ClientConfig::makeBookViewConfig"
 				}
 			],
 			"styles": {
@@ -843,6 +843,10 @@
 			"value": true,
 			"public": true,
 			"descriptionmsg": "bs-bookshelf-config-mainlinks-bookshelf-label"
+		},
+		"BookshelfToolbarOffset": {
+			"value": 153,
+			"public": true
 		}
 	},
 	"SpecialPages": {
