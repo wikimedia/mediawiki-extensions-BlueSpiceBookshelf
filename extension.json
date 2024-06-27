@@ -898,6 +898,10 @@
 		},
 		"migrateBooks": {
 			"class": "\\BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\MigrateBooks"
+		},
+		"updateChapter": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\ChapterMove",
+			"services": [ "TitleFactory", "DBLoadBalancer" ]
 		}
 	},
 	"Hooks": {
@@ -930,7 +934,10 @@
 		"OutputPageBeforeHTML": "add-chapter-number-to-title-and-headings",
 		"MultiContentSave": "book-source-actions",
 		"PageDeleteComplete": "book-source-actions",
-		"PageMoveComplete": "book-source-actions",
+		"PageMoveComplete": [
+			"book-source-actions",
+			"updateChapter"
+		],
 		"NumberHeadingsBeforeApply": "add-chapter-number-to-title-and-headings"
 	},
 	"Actions": {
