@@ -100,5 +100,6 @@
 	"bs-books-overview-page-edit-book-anchor-aria-label": "Modifica libro $1",
 	"bs-bookshelf-add-to-book-summary": "Aggiunta pagina $1",
 	"bs-bookshelf-massadd-dlg-save-action-label": "Aggiungi",
-	"bs-bookshelf-newbook-dlg-error-book-exists": "Impossibile creare il libro perché esiste già un libro con questo nome"
+	"bs-bookshelf-newbook-dlg-error-book-exists": "Impossibile creare il libro perché esiste già un libro con questo nome",
+	"bs-bookshelf-actionmenuentry-new-book": "Nuovo libro"
 }
