@@ -30,7 +30,6 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	 */
 	protected function makeData( $sQuery = '' ) {
 		$aAllBooks = array_merge(
-			$this->fetchPersonalBooks(),
 			$this->fetchBookNamespaceBooks(),
 			$this->fetchTempBooksFromParam()
 		);
@@ -111,53 +110,6 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 				continue;
 			}
 			$oDataSet->book_type = 'ns_book';
-			$aData[] = $oDataSet;
-		}
-
-		return $aData;
-	}
-
-	/**
-	 * We fetch all pages from the NS_USER namespace that are subpages of
-	 * the current users name and contain a <bs:bookmeta /> tag
-	 * @return array
-	 */
-	public function fetchPersonalBooks() {
-		$aData = [];
-		if ( $this->getUser()->isAnon() ) {
-			return $aData;
-		}
-
-		$sUserBooksPrefix = wfMessage( 'bs-bookshelf-personal-books-page-prefix' )
-			->inContentLanguage()
-			->params( $this->getUser()->getName() )
-			->plain();
-
-		$dbr = $this->getDB();
-		$res = $dbr->select(
-			[ 'page' ],
-			'*',
-			[
-				'page_namespace' => NS_USER,
-				'page_content_model' => 'book',
-				'page_title ' . $dbr->buildLike(
-					$sUserBooksPrefix,
-					$dbr->anyString()
-				)
-			],
-			__METHOD__,
-			[ 'ORDER BY' => 'page_title' ]
-		);
-
-		foreach ( $res as $row ) {
-			$oDataSet = $this->makeDataSet( $row );
-			if ( $oDataSet === null ) {
-				continue;
-			}
-			// We need to remove the prefix from the display text
-			$oDataSet->book_displaytext =
-				str_replace( $sUserBooksPrefix, '', $oDataSet->book_displaytext );
-			$oDataSet->book_type = 'user_book';
 			$aData[] = $oDataSet;
 		}
 

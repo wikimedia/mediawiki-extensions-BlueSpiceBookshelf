@@ -15,7 +15,6 @@ class BookEditData {
 	/** @var array Type => basedOnTitle */
 	protected $bookTypes = [
 		'ns_book' => true,
-		'user_book' => true,
 		'local_storage' => false,
 	];
 
@@ -49,7 +48,7 @@ class BookEditData {
 	 * @throws MWException
 	 */
 	public static function newFromTitleAndRequest( Title $title, WebRequest $request ) {
-		if ( !in_array( $title->getNamespace(), [ NS_USER, NS_BOOK ] ) ) {
+		if ( !in_array( $title->getNamespace(), [ NS_BOOK ] ) ) {
 			throw new MWException(
 				Message::newFromKey( 'bs-bookshelf-error-type-title-mismatch' )->text()
 			);
@@ -230,17 +229,6 @@ class BookEditData {
 			$this->basedOnTitle = $title;
 			if ( $inferType ) {
 				$this->bookType = 'ns_book';
-			}
-			return;
-		}
-		if (
-			( $this->bookType === 'user_book' || $inferType ) &&
-			$title->getNamespace() === NS_USER
-		) {
-			$this->bookTitle = $title->getSubpageText();
-			$this->basedOnTitle = $title;
-			if ( $inferType ) {
-				$this->bookType = 'user_book';
 			}
 			return;
 		}

@@ -41,7 +41,9 @@ class BookLookup {
 		$results = $dbr->select(
 			'bs_books',
 			'*',
-			[],
+			[
+				'book_type' => 'public'
+			],
 			__METHOD__
 		);
 
@@ -99,7 +101,8 @@ class BookLookup {
 			'bs_books',
 			'*',
 			[
-				'book_id' => $bookIDs
+				'book_id' => $bookIDs,
+				'book_type' => 'public',
 			],
 			__METHOD__
 		);

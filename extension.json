@@ -267,9 +267,8 @@
 		"ApiBookshelfManage": "includes/api/ApiBookshelfManage.php",
 		"ApiBookshelfPageCollectionStore": "includes/api/ApiBookshelfPageCollectionStore.php",
 		"ApiBookshelfMassAddPageStore": "includes/api/ApiBookshelfMassAddPageStore.php",
-		"UserBookContentLanguage": "maintenance/UserBookContentLanguage.php",
-		"FixUserSubpageContentModel": "maintenance/FixUserSubpageContentModel.php",
-		"RebuildBooks": "maintenance/RebuildBooks.php"
+		"RebuildBooks": "maintenance/RebuildBooks.php",
+		"ConvertUserBooksToPlaintext": "maintenance/ConvertUserBooksToPlaintext.php"
 	},
 	"ContentHandlers": {
 		"book": "\\BlueSpice\\Bookshelf\\ContentHandler\\BookContentHandler"
@@ -320,13 +319,11 @@
 				"bluespice.bookshelf.storageLocation.js",
 				"storageLocation/WikiPage.js",
 				"storageLocation/BookNamespace.js",
-				"storageLocation/UserBook.js",
 				"storageLocation/LocalStorage.js",
 				"LocalBookRepo.js"
 			],
 			"messages": [
 				"bs-bookshelf-grouping-template-type-ns_book",
-				"bs-bookshelf-grouping-template-type-user_book",
 				"bs-bookshelf-grouping-template-type-local_storage"
 			],
 			"dependencies": [
@@ -924,7 +921,6 @@
 			"addEditBook",
 			"addNewBook"
 		],
-		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\Bookshelf\\Hook\\BSUsageTrackerRegisterCollectors\\NoOfUserBooks::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface",
 		"OutputPageBeforeHTML": "add-chapter-number-to-title-and-headings",

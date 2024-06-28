@@ -109,9 +109,6 @@ class PageHierarchyProviderFactory {
 	 * @throws MWException
 	 */
 	public function getBookTypeFromTitle( Title $title ) {
-		if ( $title->getNamespace() === NS_USER ) {
-			return 'user_book';
-		}
 		if ( $title->getNamespace() === NS_BOOK ) {
 			return 'ns_book';
 		}
