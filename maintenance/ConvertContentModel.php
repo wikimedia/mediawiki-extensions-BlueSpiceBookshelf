@@ -15,7 +15,7 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 		$res = $db->select(
 			'page',
 			[ 'page_id', 'page_namespace', 'page_title', 'page_content_model' ],
-			[ 'page_namespace' => [ NS_BOOK, NS_USER ] ],
+			[ 'page_namespace' => [ NS_BOOK ] ],
 			__METHOD__
 		);
 
@@ -29,12 +29,7 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 			if ( !$title ) {
 				continue;
 			}
-			if ( $this->isBook( $title ) ) {
-				$pages[(int)$row->page_id] = $title;
-			}
-			if ( $this->isUserBook( $title ) ) {
-				$pages[(int)$row->page_id] = $title;
-			}
+			$pages[(int)$row->page_id] = $title;
 		}
 
 		return $pages;
@@ -66,42 +61,6 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 			}
 		}
 		return $res;
-	}
-
-	/**
-	 * @param Title $title
-	 * @return bool
-	 */
-	private function isBook( $title ) {
-		return (int)$title->getNamespace() === NS_BOOK;
-	}
-
-	/**
-	 * @param Title $title
-	 * @return bool
-	 */
-	private function isUserBook( $title ) {
-		if ( !(int)$title->getNamespace() === NS_USER ) {
-			return false;
-		}
-		if ( !$title->isSubpage() ) {
-			return false;
-		}
-		$user = MediaWikiServices::getInstance()->getUserFactory()
-			->newFromName( $title->getRootText() );
-		if ( !$user || $user->isAnon() ) {
-			// ignore non existing/deleted users - they do not need books anymore :)
-			return false;
-		}
-		$prefix = Message::newFromKey(
-			'bs-bookshelf-personal-books-page-prefix',
-			$user->getName()
-		);
-		$bookTitle = Title::makeTitle(
-			NS_USER,
-			$prefix->inContentLanguage()->parse() . $title->getSubpageText()
-		);
-		return $bookTitle && $title->equals( $bookTitle );
 	}
 
 	/**

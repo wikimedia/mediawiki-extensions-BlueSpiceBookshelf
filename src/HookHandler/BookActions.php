@@ -19,7 +19,6 @@ use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Storage\Hook\MultiContentSaveHook;
 use MediaWiki\User\UserFactory;
-use Message;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Psr\Log\LoggerInterface;
 use Title;
@@ -81,7 +80,7 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 			return true;
 		}
 
-		if ( $title->getNamespace() !== NS_BOOK && !$this->isUserBook( $title ) ) {
+		if ( $title->getNamespace() !== NS_BOOK ) {
 			return true;
 		}
 
@@ -108,7 +107,7 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 			return true;
 		}
 
-		if ( $title->getNamespace() !== NS_BOOK && !$this->isUserBook( $title ) ) {
+		if ( $title->getNamespace() !== NS_BOOK ) {
 			return true;
 		}
 
@@ -148,7 +147,7 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 		$oldBook = $this->titleFactory->newFromLinkTarget( $old );
 		$newBook = $this->titleFactory->newFromLinkTarget( $new );
 
-		if ( $newBook->getNamespace() !== NS_BOOK && !$this->isUserBook( $newBook ) ) {
+		if ( $newBook->getNamespace() !== NS_BOOK ) {
 			return true;
 		}
 
@@ -163,33 +162,6 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 		$this->moveBook( $oldBookInfo, $newBook, $db );
 
 		return true;
-	}
-
-	/**
-	 *
-	 * @param Title $title
-	 * @return bool
-	 */
-	private function isUserBook( $title ) {
-		if ( $title->getNamespace() !== NS_USER ) {
-			return false;
-		}
-		if ( !$title->isSubpage() ) {
-			return false;
-		}
-		$user = $this->userFactory->newFromName( $title->getRootText() );
-		if ( !$user || $user->isAnon() ) {
-			return false;
-		}
-		$prefix = Message::newFromKey(
-			'bs-bookshelf-personal-books-page-prefix',
-			$user->getName()
-		);
-		$bookTitle = $this->titleFactory->makeTitle(
-			NS_USER,
-			$prefix->inContentLanguage()->parse() . $title->getSubpageText()
-		);
-		return $bookTitle && $title->equals( $bookTitle );
 	}
 
 	/**
@@ -222,7 +194,7 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 				'book_namespace' => $newBook->getNamespace(),
 				'book_title' => $newBook->getDBkey(),
 				'book_name' => $newBook->getText(),
-				'book_namespace' => 'public'
+				'book_type' => 'public'
 			]
 		);
 
@@ -328,9 +300,8 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 	private function createBookEntry( Title $book ) {
 		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
 
-		$type = 'public';
 		if ( $book->getNamespace() !== NS_BOOK ) {
-			$type = 'private';
+			return;
 		}
 
 		$status = $db->insert(
@@ -339,7 +310,7 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 				'book_namespace' => $book->getNamespace(),
 				'book_title' => $book->getDBKey(),
 				'book_name' => $book->getText(),
-				'book_type' => $type,
+				'book_type' => 'public',
 			]
 		);
 

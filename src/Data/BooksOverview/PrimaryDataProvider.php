@@ -16,10 +16,13 @@ class PrimaryDataProvider extends \BlueSpice\Data\Settings\PrimaryDataProvider {
 		$this->data = [];
 
 		$filterConds = $this->makePreFilterConds( $params->getFilter() );
+		$filterConds['book_type'] = 'public';
 
 		$res = $this->db->select(
 			[ 'b' => 'bs_books' ],
-			[ 'b.book_name', 'b.book_namespace', 'b.book_title', ]
+			[ 'b.book_name', 'b.book_namespace', 'b.book_title', ],
+			$filterConds,
+			__METHOD__
 		);
 
 		foreach ( $res as $row ) {
