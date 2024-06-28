@@ -6,5 +6,6 @@
 	},
 	"bs-bookshelf-book-grid-title": "Книги",
 	"bs-bookshelf-mainlinks-label": "Книги",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Книга",
+	"bs-bookshelf-actionmenuentry-new-book": "Нова книга"
 }
