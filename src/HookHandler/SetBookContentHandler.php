@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Bookshelf\HookHandler;
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRoleRegistry;
-use Message;
 use RequestContext;
 use Title;
 
@@ -23,24 +23,6 @@ class SetBookContentHandler {
 			$model = 'book';
 			return false;
 		}
-
-		// By naming pattern - user books
-		if ( $title->getNamespace() !== NS_USER ) {
-			return true;
-		}
-
-		$prefix = Message::newFromKey( 'bs-bookshelf-personal-books-page-prefix' )->plain();
-		$pattern = str_replace( '$1', '.*', $prefix );
-		$pattern = str_replace( '/', '\/', $pattern );
-		$pattern = "/^$pattern.*$/";
-
-		$isUserBook = preg_match( $pattern, $title->getText() );
-
-		if ( $isUserBook ) {
-			$model = 'book';
-			return false;
-		}
-
 		return true;
 	}
 
