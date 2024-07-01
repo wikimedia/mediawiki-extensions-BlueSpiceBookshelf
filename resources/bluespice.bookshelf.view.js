@@ -6,10 +6,12 @@
         var h = Vue.h;
 
 		var treeData = mw.config.get( 'bsBookshelfTreeData' );
-		var viewTools = require( './bookViewTools.json' );
+		var config = require( './bookViewConfig.json' );
+
 		var treeTools = [];
 		var isSelecable = false;
-		var registeredTreeTools = viewTools.tools;
+		var registeredTreeTools = config.tools;
+		var offset = config.offset;
 		mw.user.getRights().done( function ( rights ) {
 			for ( var index = 0; index < registeredTreeTools.length; index++ ) {
 				let tool = registeredTreeTools[index];
@@ -22,7 +24,7 @@
 				treeTools.push( tool );
 			}
 
-			mw.loader.using( viewTools.modules ).done( function () {
+			mw.loader.using( config.modules ).done( function () {
 				var vm = Vue.createMwApp( {
 					mounted: function () {
 					},
@@ -35,7 +37,8 @@
 							expanded: true,
 							nodes: treeData,
 							toolbar: true,
-							tools: treeTools
+							tools: treeTools,
+							toolbarFloatingOffset: offset
 						} );
 					}
 				} );
