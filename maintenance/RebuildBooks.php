@@ -88,10 +88,13 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 		);
 
 		if ( $res->numRows() < 1 ) {
-			return [];
+			return;
 		}
 
 		foreach ( $res as $row ) {
+			if ( (int)$row->page_namespace === NS_USER ) {
+				continue;
+			}
 			$title = $this->titleFactory->makeTitle( $row->page_namespace, $row->page_title );
 			$key = $title->getPrefixedDBkey();
 			$this->books[$key] = $title;
@@ -134,18 +137,13 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 				continue;
 			}
 
-			$type = 'public';
-			if ( $book->getNamespace() === NS_USER ) {
-				$type = 'private';
-			}
-
 			$this->db->insert(
 				'bs_books',
 				[
 					'book_namespace' => $book->getNamespace(),
 					'book_title' => $book->getDBkey(),
 					'book_name' => $book->getText(),
-					'book_type' => $type
+					'book_type' => 'public'
 				]
 			);
 			$this->output( "\033[32m  done\n\033[39m" );
