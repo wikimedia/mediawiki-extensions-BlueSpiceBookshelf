@@ -19,7 +19,6 @@
 	"bs-bookshelf-setting-path-feature": "Књига",
 	"bs-bookshelf-grouping-template-type-local_storage": "Привремене књиге",
 	"bs-bookshelf-grouping-template-type-ns_book": "Опште књиге",
-	"bs-bookshelf-grouping-template-type-user_book": "Сопствене књиге",
 	"bs-bookshelf-action-editbook": "Уреди извор",
 	"bs-bookshelf-action-editbook-create": "Уреди извор",
 	"bs-bookshelf-action-export-book": "Извези књигу",
