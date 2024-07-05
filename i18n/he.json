@@ -164,5 +164,7 @@
 	"bs-bookshelf-droplet-search-description": "חפש דפים בספר",
 	"bs-bookshelf-droplet-search-book": "ספר",
 	"bs-bookshelf-droplet-search-book-help": "שם הספר לחיפוש",
-	"bs-bookshelf-notification-subscription-set-book-title": "ספר"
+	"bs-bookshelf-notification-subscription-set-book-title": "ספר",
+	"bs-bookshelf-newbook-dlg-error-book-exists": "לא היה אפשר ליצור את הספר כי כבר קיים ספר בשם הזה",
+	"bs-bookshelf-actionmenuentry-new-book": "ספר חדש"
 }
