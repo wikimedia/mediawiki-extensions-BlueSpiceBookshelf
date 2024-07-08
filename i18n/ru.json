@@ -32,7 +32,6 @@
 	"bs-bookshelf-tag-next": "Следующая",
 	"bs-bookshelf-tag-prev": "Предыдущая",
 	"bs-bookshelf-tag-edit-book": "Редактировать книгу",
-	"bs-bookshelf-personal-books-page-prefix": "$1/Книги/",
 	"bs-bookshelf-add-to-book-label": "Добавить книгу",
 	"bs-bookshelf-add-to-book-label-book": "Книга",
 	"bs-bookshelf-add-to-book-label-alias": "Псевдоним",
@@ -44,7 +43,6 @@
 	"apihelp-query+bsbookshelf-summary": "Позволяет делать запросы ко всем книгам.",
 	"bs-bookshelf-grouping-template-type-local_storage": "Временные книги",
 	"bs-bookshelf-grouping-template-type-ns_book": "Основные книги",
-	"bs-bookshelf-grouping-template-type-user_book": "Собственные книги",
 	"bs-bookshelf-action-editbook": "Править код",
 	"bs-bookshelf-action-editbook-create": "Править код",
 	"bs-bookshelf-action-export-book": "Экспортировать книгу",
@@ -137,5 +135,6 @@
 	"bs-bookshelf-massadd-dlg-save-action-label": "Добавить",
 	"bs-bookshelf-droplet-search-name": "Искать в книге",
 	"bs-bookshelf-droplet-search-book": "Книга",
-	"bs-bookshelf-notification-subscription-set-book-title": "Книга"
+	"bs-bookshelf-notification-subscription-set-book-title": "Книга",
+	"bs-bookshelf-actionmenuentry-new-book": "Новая книга"
 }

@@ -10,7 +10,6 @@
 	},
 	"bs-bookshelf-tag-next": "পরবর্তী",
 	"bs-bookshelf-tag-prev": "পূর্ববর্তী",
-	"bs-bookshelf-personal-books-page-prefix": "$1/বই/",
 	"bs-bookshelf-action-editbook-create": "উৎস সম্পাদনা",
 	"bs-bookshelf-edit-title": "সম্পাদনা করছেন $1",
 	"bs-bookshelf-ga-editing-label": "বইসমূহ",
@@ -31,5 +30,6 @@
 	"bs-bookshelf-droplet-pdf-template-label": "বই পিডিএফ টেমপ্লেট",
 	"bs-bookshelf-droplet-pdf-link-label": "সংযোগ স্তর",
 	"bs-bookshelf-search-center-filter-books-label": "বই",
-	"bs-books-overview-page-book-action-view-text": "অধ্যায়"
+	"bs-books-overview-page-book-action-view-text": "অধ্যায়",
+	"bs-bookshelf-actionmenuentry-new-book": "নতুন বই"
 }
