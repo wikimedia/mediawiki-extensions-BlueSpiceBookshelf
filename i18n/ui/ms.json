@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Anakmalaysia",
+			"Hakimi97",
 			"Tofeiku"
 		]
 	},
+	"bs-bookshelfui-new-book-title": "Cipta sebuah buku baharu",
 	"bs-bookshelfui-prof-defaultview": "Paparan lalai",
 	"bs-bookshelfui-prof-defaultview-images": "Imej"
 }
