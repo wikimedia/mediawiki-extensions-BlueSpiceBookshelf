@@ -73,7 +73,7 @@ class AddChapterNumberToTitleAndHeadings {
 
 		$number = $chapterInfo->getNumber();
 
-		$out->setPageTitle( "$number $displayTitle" );
+		$out->setPageTitle( "<span class='bs-chapter-number'>$number</span> $displayTitle" );
 
 		return true;
 	}

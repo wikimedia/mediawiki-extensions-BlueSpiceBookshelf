@@ -216,7 +216,7 @@ class ChapterLookup {
 		}
 
 		$number = (string)$result->chapter_number;
-		$normalizedNumber = trim( $number, '.' ) . '.';
+		$normalizedNumber = trim( $number, '.' );
 
 		return new ChapterDataModel(
 			$result->chapter_namespace,
