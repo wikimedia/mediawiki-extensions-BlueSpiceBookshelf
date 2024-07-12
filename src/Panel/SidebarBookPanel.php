@@ -155,7 +155,7 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 					'items' => [
 						new Literal(
 							'n-book-panel-header-text',
-							'<h4>' . $this->getBookTitle( $activeBook ) . '</h4>'
+							'<span class="book-title">' . $this->getBookTitle( $activeBook ) . '</span>'
 						)
 					]
 				] ),

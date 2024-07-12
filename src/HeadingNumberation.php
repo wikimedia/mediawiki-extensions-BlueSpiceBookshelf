@@ -142,7 +142,7 @@ class HeadingNumberation {
 		$numberation = implode( '.', $counter );
 
 		$html = '<span class="bs-chapter-number">' . $articleNumber . '.</span>';
-		$html .= '<span class="mw-headline-number">' . $numberation . '. </span>';
+		$html .= '<span class="mw-headline-number">' . $numberation . ' </span>';
 
 		return $html;
 	}

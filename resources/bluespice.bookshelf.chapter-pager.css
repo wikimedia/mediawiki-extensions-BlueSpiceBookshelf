@@ -34,3 +34,6 @@
 #aftercontent #bs-bookshelfui-chapter-pager-bottom-top-cnt .bs-chapter-pager-toolbar a {
 	color: var(--mws-secondary-fg--hover);
 }
+.bs-chapter-pager-heading .book-title {
+	font-size: 22.4px;
+}
