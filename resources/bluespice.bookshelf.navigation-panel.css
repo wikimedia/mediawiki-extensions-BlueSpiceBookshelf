@@ -30,3 +30,6 @@
 #n-book-panel .card-header {
 	border-bottom: none;
 }
+#n-book-panel .book-title {
+	font-size: 22.4px;
+}

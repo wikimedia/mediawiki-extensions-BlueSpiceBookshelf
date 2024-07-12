@@ -229,7 +229,7 @@ class ChapterPager {
 		if ( $this->makePagerData( $title ) ) {
 			$html = Html::openElement( 'div', [ 'class' => 'bs-chapter-pager-heading' ] );
 			$html .= Html::element(
-				'h4',
+				'span',
 				[
 					'class' => 'book-title'
 				],
