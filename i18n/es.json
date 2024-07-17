@@ -4,6 +4,7 @@
 			"Adam N.",
 			"Agusbou2015",
 			"Alan Mena",
+			"AnupamM",
 			"Avengium",
 			"Danniel07",
 			"DannyS712",
@@ -128,5 +129,12 @@
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Destino",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Texto",
 	"bs-bookshelf-toolbar-tool-metadata-title": "Editar metadatos",
-	"bs-bookshelf-toolbar-tool-metadata-label": "Editar metadatos"
+	"bs-bookshelf-toolbar-tool-metadata-label": "Editar metadatos",
+	"bs-bookshelf-metadata-widget-checkbox-title": "Seleccionar propiedad $1",
+	"bs-bookshelf-metadata-dlg-title": "Editar metadatos",
+	"bs-bookshelf-metadata-dlg-action-save-label": "Guardar",
+	"bs-bookshelf-newbook-dlg-input-image-select-placeholder": ">Elige la imagen existente",
+	"bs-books-overview-page-book-action-metadata-text": "Editar metadatos",
+	"bs-books-overview-page-book-action-metadata-title": "Editar metadatos para el libro $1",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Añadir"
 }

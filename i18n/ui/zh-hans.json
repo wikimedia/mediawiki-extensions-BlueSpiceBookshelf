@@ -4,6 +4,7 @@
 			"500000000006城",
 			"A Chinese Wikipedian",
 			"AYZ04",
+			"Anterdc99",
 			"CrownedWharf566",
 			"Dimension",
 			"Hydra",
@@ -110,5 +111,7 @@
 	"bs-bookshelfui-panel-navigation-title": "返回书籍导览",
 	"bs-bookshelfui-panel-navigation-aria-label": "至书籍导览",
 	"bs-bookshelfui-intro": "在此您可以查看所有可用的书籍。要添加新的书籍，请前往[[Special:Bookmanager|书籍管理]]。",
-	"bs-bookshelfui-panel-navigation-aria-desc": "树状结构的图书导航"
+	"bs-bookshelfui-panel-navigation-aria-desc": "树状结构的图书导航",
+	"bs-bookshelfui-bookmetatag-bookshelf": "书架",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "书架图像"
 }
