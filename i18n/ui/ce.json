@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Исмаил Садуев",
 			"Умар"
 		]
 	},
@@ -10,7 +11,7 @@
 	"bs-bookshelfui-editor-no-title-provided": "Йазйина йац жайнан бакъалла йолу цӀе",
 	"bs-bookshelfui-editor-title": "Жайнийн редактор: $1",
 	"bs-bookshelfui-widget-editor-link-text": "Таде хӀара жайна",
-	"bs-bookshelfui-new-book-title": "Кхолла керла жайна",
+	"bs-bookshelfui-new-book-title": "Керла книга кхолла",
 	"bs-bookshelfui-new-book-text": "Жайнан корта",
 	"bs-bookshelfui-delete-book-title": "ДӀадаккха жайна",
 	"bs-bookshelfui-export-selection": "Экспорт харжар",

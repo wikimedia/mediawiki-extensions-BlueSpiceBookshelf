@@ -99,5 +99,7 @@
 	"bs-bookshelfui-panel-navigation-text": "Naar boeknavigatie",
 	"bs-bookshelfui-panel-navigation-title": "Terug naar boeknavigatie",
 	"bs-bookshelfui-panel-navigation-aria-label": "Naar boeknavigatie",
-	"bs-bookshelfui-panel-navigation-aria-desc": "Boeknavigatie als boomstructuur"
+	"bs-bookshelfui-panel-navigation-aria-desc": "Boeknavigatie als boomstructuur",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Boekenplank",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "Boekenplank-afbeelding"
 }

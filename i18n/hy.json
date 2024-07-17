@@ -25,5 +25,21 @@
 	"bs-books-overview-page-book-action-edit-text": "Խմբագրել",
 	"bs-books-overview-page-book-action-edit-title": "Խմբագրել $1 գիրքը",
 	"bs-books-overview-page-book-action-delete-text": "Ջնջել",
-	"bs-books-overview-page-book-action-delete-title": "Ջնջել $1 գիրքը"
+	"bs-books-overview-page-book-action-delete-title": "Ջնջել $1 գիրքը",
+	"bs-bookshelf-search-center-result-books-label": "{{PLURAL:$1|Գրքի|գրքերի}} մի մասը",
+	"bs-bookshelf-search-center-filter-books-label": "Գիրք",
+	"bs-bookshelf-actionmenuentry-create-new-book": "Ստեղծել նոր գիրք",
+	"bs-bookshelf-newbook-dlg-title": "Ստեղծել նոր գիրք",
+	"bs-bookshelf-newbook-dlg-input-title-label": "Գրքի անվանումը",
+	"bs-bookshelf-newbook-dlg-input-subtitle-label": "Ենթավերնագիր",
+	"bs-bookshelf-newbook-dlg-input-bookshelf-placeholder": "Ընտրեք գրապահարան",
+	"bs-books-overview-page-edit-book-anchor-title": "Խմբագրել $1 գիրքը",
+	"bs-books-overview-page-edit-book-anchor-aria-label": "Խմբագրել $1 գիրքը",
+	"bs-books-overview-page-book-action-metadata-text": "Խմբագրել մետատվյալները",
+	"bs-books-overview-page-book-action-metadata-title": "Խմբագրել $1 գրքի մետատվյալները",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Ավելացնել",
+	"bs-bookshelf-droplet-search-name": "Որոնել գրքում",
+	"bs-bookshelf-droplet-search-book": "Գիրք",
+	"bs-bookshelf-notification-subscription-set-book-title": "Գիրք",
+	"bs-bookshelf-actionmenuentry-new-book": "Նոր գիրք"
 }

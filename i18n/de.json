@@ -161,5 +161,20 @@
 	"bs-books-overview-page-book-action-metadata-title": "Metadaten für Buch $1 bearbeiten",
 	"bs-bookshelf-massadd-dlg-save-action-label": "Hinzufügen",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Das Buch konnte nicht erstellt werden, da bereits ein Buch mit diesem Namen existiert",
-	"bs-bookshelf-actionmenuentry-new-book": "Neues Buch"
+	"bs-bookshelf-actionmenuentry-new-book": "Neues Buch",
+	"apihelp-bs-book-chapters-store-summary": "Ermöglicht die Abfrage aller Bücher und ihrer Kapitelseiten.",
+	"bs-bookshelf-search-center-result-books-label": "Teil von {{PLURAL:$1|Buch|Bücher}}",
+	"bs-bookshelf-search-center-filter-books-label": "Buch",
+	"apihelp-bs-books-overview-store-summary": "Listet alle Bücher auf, einschließlich Bücherregal, Link zum ersten Kapitel und Aktionen.",
+	"bs-books-overview-page-book-action-view-text": "Kapitel",
+	"bs-books-overview-page-book-action-view-title": "Kapitel von $1 ansehen",
+	"bs-books-overview-page-book-search-placeholder": "Buch finden",
+	"bs-books-overview-page-bookshelf-empty": "Es sind keine Bücher verfügbar",
+	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|Ein Buch|$1 Bücher}} gefunden",
+	"bs-bookshelf-tag-searchinbook-error": "Gib einen gültigen Buchnamen an",
+	"bs-bookshelf-droplet-search-name": "In einem Buch suchen",
+	"bs-bookshelf-droplet-search-description": "Nach Seiten in einem Buch suchen",
+	"bs-bookshelf-droplet-search-book": "Buch",
+	"bs-bookshelf-droplet-search-book-help": "Name des Buches, in dem gesucht werden soll",
+	"bs-bookshelf-notification-subscription-set-book-title": "Buch"
 }
