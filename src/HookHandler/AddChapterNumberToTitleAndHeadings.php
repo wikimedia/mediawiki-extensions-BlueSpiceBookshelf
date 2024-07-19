@@ -24,9 +24,6 @@ class AddChapterNumberToTitleAndHeadings {
 	/** @var ChapterLookup */
 	private $bookChapterLookup = null;
 
-	/** @var ChapterInfo */
-	private $chapterInfo = null;
-
 	/** @var Title */
 	private $activeBook = null;
 
@@ -100,6 +97,8 @@ class AddChapterNumberToTitleAndHeadings {
 		$children = $this->bookChapterLookup->getChildren( $this->activeBook, $chapterInfo );
 		if ( !empty( $children ) ) {
 			// Otherwise the internal headlines would have same numbers as child node articles
+			$text = $this->removeHeadingNumberFromToc( $text );
+			$text = $this->removeHeadingNumberFromHeading( $text );
 			return true;
 		}
 		$headingNumberation = new HeadingNumberation();
@@ -115,6 +114,56 @@ class AddChapterNumberToTitleAndHeadings {
 		);
 
 		return true;
+	}
+
+	/**
+	 * @param string $html
+	 * @return string
+	 */
+	private function removeHeadingNumberFromToc( $html ) {
+		$regEx = '#(<span class="tocnumber">)([\d\.]*?\s*?</span>\s*?<span class="toctext">.*?</span>)#';
+
+		$matches = [];
+		$status = preg_match_all( $regEx, $html, $matches );
+		if ( !$status ) {
+			return $html;
+		}
+
+		for ( $index = 0; $index < count( $matches[0] ); $index++ ) {
+			$replacement = '<span class="tocnumber hidden">' . $matches[2][$index];
+			$html = preg_replace(
+				'#' . $matches[0][$index] . '#',
+				$replacement,
+				$html
+			);
+		}
+
+		return $html;
+	}
+
+	/**
+	 * @param string $html
+	 * @return string
+	 */
+	private function removeHeadingNumberFromHeading( $html ) {
+		$regEx = '#(<span class="mw-headline-number">)([\d\.]*?\s*?</span>)#';
+
+		$matches = [];
+		$status = preg_match_all( $regEx, $html, $matches );
+		if ( !$status ) {
+			return $html;
+		}
+
+		for ( $index = 0; $index < count( $matches[0] ); $index++ ) {
+			$replacement = '<span class="mw-headline-number hidden">' . $matches[2][$index];
+			$html = preg_replace(
+				'#' . $matches[0][$index] . '#',
+				$replacement,
+				$html
+			);
+		}
+
+		return $html;
 	}
 
 	/**
@@ -134,7 +183,11 @@ class AddChapterNumberToTitleAndHeadings {
 			return true;
 		}
 		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) === true ) {
-			$skip = true;
+			$children = $this->bookChapterLookup->getChildren( $activeBook, $chapterInfo );
+			if ( empty( $children ) ) {
+				// Skip only if chapter has no children
+				$skip = true;
+			}
 		}
 		return true;
 	}
@@ -157,10 +210,8 @@ class AddChapterNumberToTitleAndHeadings {
 	 * @return ChapterInfo|null
 	 */
 	private function getChapterInfo( Title $title, Title $activeBook ): ?ChapterInfo {
-		if ( $this->chapterInfo === null ) {
-			$this->chapterInfo = $this->bookChapterLookup->getChapterInfoFor( $activeBook, $title );
-		}
+		$chapterInfo = $this->bookChapterLookup->getChapterInfoFor( $activeBook, $title );
 
-		return $this->chapterInfo;
+		return $chapterInfo;
 	}
 }

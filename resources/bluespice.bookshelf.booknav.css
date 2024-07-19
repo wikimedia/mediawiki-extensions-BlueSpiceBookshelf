@@ -93,3 +93,8 @@
 .bs-tag-booknav ul.mws-tree .mws-tree-item a:focus-visible {
 	outline: 1px solid var(--bookshelf-content-droplet-booknav-tree-item-focus-visible);
 }
+
+.tocnumber.hidden,
+.mw-headline-number.hidden {
+	display: none;
+}
