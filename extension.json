@@ -268,7 +268,8 @@
 		"ApiBookshelfPageCollectionStore": "includes/api/ApiBookshelfPageCollectionStore.php",
 		"ApiBookshelfMassAddPageStore": "includes/api/ApiBookshelfMassAddPageStore.php",
 		"RebuildBooks": "maintenance/RebuildBooks.php",
-		"ConvertUserBooksToPlaintext": "maintenance/ConvertUserBooksToPlaintext.php"
+		"ConvertUserBooksToPlaintext": "maintenance/ConvertUserBooksToPlaintext.php",
+		"FixBookChapterTitles": "maintenance/FixBookChapterTitles.php"
 	},
 	"ContentHandlers": {
 		"book": "\\BlueSpice\\Bookshelf\\ContentHandler\\BookContentHandler"
