@@ -45,7 +45,7 @@ class ChapterMove implements PageMoveCompleteHook {
 			$db->update(
 				'bs_book_chapters',
 				[
-					'chapter_title' => $newPageName->getText(),
+					'chapter_title' => $newPageName->getDBKey(),
 					'chapter_name' => $label
 				], [
 					'chapter_id' => $chapter->chapter_id
@@ -65,7 +65,7 @@ class ChapterMove implements PageMoveCompleteHook {
 			'bs_book_chapters',
 			'*',
 			[
-				'chapter_title' => $pageName->getText()
+				'chapter_title' => $pageName->getDBKey()
 			]
 		);
 
