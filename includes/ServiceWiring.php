@@ -63,6 +63,14 @@ return [
 			$services->getTitleFactory()
 		);
 	},
+	'BSBookshelfChapterUpdater' => static function ( MediaWikiServices $services ) {
+		return new \BlueSpice\Bookshelf\ChapterUpdater(
+			$services->getDBLoadBalancer(),
+			$services->getService( 'BSBookshelfBookLookup' ),
+			$services->getHookContainer(),
+			$services->getTitleFactory()
+		);
+	},
 ];
 
 // @codeCoverageIgnoreEnd

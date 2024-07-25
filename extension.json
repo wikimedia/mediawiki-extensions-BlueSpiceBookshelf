@@ -877,7 +877,7 @@
 		},
 		"book-source-actions": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookActions",
-			"services": [ "TitleFactory", "MWStakeWikitextParserFactory", "DBLoadBalancer", "BSBookshelfBookLookup", "UserFactory" ]
+			"services": [ "TitleFactory", "MWStakeWikitextParserFactory", "DBLoadBalancer", "BSBookshelfBookLookup", "UserFactory", "BSBookshelfChapterUpdater" ]
 		},
 		"book-content-default-mode": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SetBookContentHandler"
@@ -899,6 +899,10 @@
 		"updateChapter": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\ChapterMove",
 			"services": [ "TitleFactory", "DBLoadBalancer" ]
+		},
+		"updateSearchIndex": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\UpdateSearchIndex",
+			"services": [ "JobQueueGroup" ]
 		}
 	},
 	"Hooks": {
@@ -934,7 +938,9 @@
 			"book-source-actions",
 			"updateChapter"
 		],
-		"NumberHeadingsBeforeApply": "add-chapter-number-to-title-and-headings"
+		"NumberHeadingsBeforeApply": "add-chapter-number-to-title-and-headings",
+		"BSBookshelfPageAddedToBook": "updateSearchIndex",
+		"BSBookshelfPageRemovedFromBook": "updateSearchIndex"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
