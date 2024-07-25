@@ -124,6 +124,9 @@ class Books implements
 		}, $books );
 		// remove nulls
 		$books = array_filter( $books );
+		if ( empty( $books ) ) {
+			return;
+		}
 		$msg = Message::newFromKey( 'bs-bookshelf-search-center-result-books-label', count( $books ) )->text();
 		$result['books'] = $msg . ': ' . implode( ', ', $books );
 	}
