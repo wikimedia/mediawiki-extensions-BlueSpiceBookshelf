@@ -43,6 +43,9 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 	/** @var UserFactory */
 	private $userFactory = null;
 
+	/** @var ChapterUpdater */
+	private $chapterUpdater;
+
 	/** @var LoggerInterface */
 	private $logger = null;
 
@@ -52,17 +55,19 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 	 * @param LoadBalancer $loadBalancer
 	 * @param BookLookup $bookLookup
 	 * @param UserFactory $userFactory
+	 * @param ChapterUpdater $chapterUpdater
 	 */
 	public function __construct(
 		TitleFactory $titleFactory, ParserFactory $parserFactory,
 		LoadBalancer $loadBalancer, BookLookup $bookLookup,
-		UserFactory $userFactory
+		UserFactory $userFactory, ChapterUpdater $chapterUpdater
 	) {
 		$this->titleFactory = $titleFactory;
 		$this->parserFactory = $parserFactory;
 		$this->loadBalancer = $loadBalancer;
 		$this->bookLookup = $bookLookup;
 		$this->userFactory = $userFactory;
+		$this->chapterUpdater = $chapterUpdater;
 		$this->logger = LoggerFactory::getInstance( 'BSBookshelf' );
 	}
 
@@ -217,13 +222,12 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 
 		$this->assertBook( $book );
 
-		$updater = new ChapterUpdater( $this->loadBalancer, $this->bookLookup, $this->logger );
 		$chapterData = $bookSourceParser->getChapterDataModelArray();
 		if ( empty( $chapterData ) ) {
-			$updater->delete( $book );
+			$this->chapterUpdater->delete( $book );
 			return;
 		}
-		$status = $updater->update( $book, $chapterData );
+		$status = $this->chapterUpdater->update( $book, $chapterData );
 		if ( !$status ) {
 			$this->logger->error( 'onMultiContentSave: Database update error' );
 		}
