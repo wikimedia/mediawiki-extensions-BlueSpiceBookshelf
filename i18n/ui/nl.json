@@ -5,7 +5,8 @@
 			"Mainframe98",
 			"McDutchie",
 			"Romaine",
-			"Rots61"
+			"Rots61",
+			"Siebrand"
 		]
 	},
 	"bs-bookshelfui-extension-description": "Stelt BlueSpice in staat hiërarchische verzamelingen van wikipagina's te beheren.",
@@ -21,7 +22,7 @@
 	"bs-bookshelfui-export-selection": "Selectie exporteren",
 	"bs-bookshelfui-save-and-modify": "Opslaan en boeknavigatie toevoegen aan elke wikipagina",
 	"bs-bookshelfui-edit-source": "Brontekst van wikipagina bewerken",
-	"bs-bookshelfui-open-source": "Bronwikipagina tonen",
+	"bs-bookshelfui-open-source": "Bronwikipagina weergeven",
 	"bs-bookshelfui-bookui-savingprogress-title": "Boek opslaan",
 	"bs-bookshelfui-bookui-savingprogress-text": "Wacht tot het boek op de server is opgeslagen",
 	"bs-bookshelfui-manager-title": "Titel",
@@ -87,7 +88,7 @@
 	"action-bookshelfbookmanager-viewspecialpage": "de speciale pagina [[Special:BookshelfBookManager]] te bekijken",
 	"right-bookshelfbookui-viewspecialpage": "De speciale pagina [[Special:BookshelfBookUI]] bekijken",
 	"action-bookshelfbookui-viewspecialpage": "de speciale pagina [[Special:BookshelfBookUI]] te bekijken",
-	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Aantal resultaten om te tonen",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Aantal weer te geven resultaten",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Basiswaarde voor teruggeven van pagina's",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "Type bron voor gezamenlijk toevoegen",
 	"prefs-bookshelfui": "Speciale pagina Boekenplank",
