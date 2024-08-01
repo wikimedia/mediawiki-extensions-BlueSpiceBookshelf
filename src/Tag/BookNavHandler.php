@@ -105,7 +105,7 @@ class BookNavHandler extends Handler {
 		$bookNav .= Html::closeElement( 'div' );
 
 		$bookNav .= Html::openElement( 'ul', [
-			'class' => 'mws-tree'
+			'class' => 'mws-tree root'
 		] );
 
 		$bookNav .= $html;
