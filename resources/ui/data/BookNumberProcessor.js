@@ -36,7 +36,7 @@ ext.bookshelf.ui.data.BookNumberProcessor.prototype.calculateNumberForElement = 
 
 		if ( data.level > items[ i ].level ) {
 			if ( items[ i ].items.length > 0 ) {
-				return this.calculateNumberForElement( number, items[i].items, data ) + '.' + number ;
+				return number + '.' + this.calculateNumberForElement( number, items[i].items, data );
 			}
 		}
 		number++;
