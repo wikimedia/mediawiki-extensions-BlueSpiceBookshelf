@@ -6,7 +6,7 @@ ext.bookshelf.ui.data.node.WikiLinkWithAliasNode = function ( cfg ) {
 
 OO.inheritClass( ext.bookshelf.ui.data.node.WikiLinkWithAliasNode, ext.bookshelf.ui.data.node.BookTreeNode );
 
-ext.bookshelf.ui.data.node.WikiLinkWithAliasNode.static.canHaveChildren = false;
+ext.bookshelf.ui.data.node.WikiLinkWithAliasNode.static.canHaveChildren = true;
 
 ext.bookshelf.ui.data.node.WikiLinkWithAliasNode.prototype.labelFromData = function ( data ) {
 	if ( data.label ) {
