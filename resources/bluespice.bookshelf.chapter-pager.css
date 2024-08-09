@@ -27,7 +27,7 @@
 }
 .bs-chapter-pager-toolbar a.disabled,
 .bs-chapter-pager-toolbar a:hover.disabled {
-	opacity: 0.5;
+	opacity: 0.65;
 	cursor: default;
 	background-color: var(--mws-secondary-bg);
 }
