@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class ApiQueryBookshelf extends ApiQueryBase {
 
 	/**
@@ -13,7 +15,8 @@ class ApiQueryBookshelf extends ApiQueryBase {
 
 	public function execute() {
 		$data = [];
-		$permManager = \MediaWiki\MediaWikiServices::getInstance()->getPermissionManager();
+		$services = MediaWikiServices::getInstance();
+		$permManager = $services->getPermissionManager();
 
 		if ( $permManager->userCan(
 				'read',
@@ -24,7 +27,7 @@ class ApiQueryBookshelf extends ApiQueryBase {
 			return;
 		}
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = $services->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$res = $dbr->select(
 			'page',
 			[ 'page_id', 'page_title', 'page_namespace' ],
