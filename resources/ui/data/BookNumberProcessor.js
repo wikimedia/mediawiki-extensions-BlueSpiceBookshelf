@@ -26,20 +26,29 @@ ext.bookshelf.ui.data.BookNumberProcessor.prototype.calculateNumbersFromList = f
 	return numbering;
 };
 
-ext.bookshelf.ui.data.BookNumberProcessor.prototype.calculateNumberForElement = function ( number, items, data ) {
-	number = number || 1;
+ext.bookshelf.ui.data.BookNumberProcessor.prototype.calculateNumberForElement = function ( items, item ) {
+	let result = null;
 
-	for ( var i in items ) {
-		if ( items[ i ] === data ) {
-			break;
-		}
+	function processItems( currentItems, prefix = '' ) {
+		let count = 0;
 
-		if ( data.level > items[ i ].level ) {
-			if ( items[ i ].items.length > 0 ) {
-				return number + '.' + this.calculateNumberForElement( number, items[i].items, data );
+		for ( let i = 0; i < currentItems.length; i++)  {
+			count++;
+			const currentNumber = prefix ? `${prefix}.${count}` : `${count}`;
+			const currentItem = currentItems[ i ];
+
+			if ( currentItem === item ) {
+				result = currentNumber;
+				return;
+			}
+
+			if ( currentItem.items && currentItem.items.length > 0 ) {
+				processItems( currentItem.items, currentNumber );
+				if ( result ) return; // Stop processing if the item is found
 			}
 		}
-		number++;
 	}
-	return number;
+
+	processItems( items );
+	return result;
 };
