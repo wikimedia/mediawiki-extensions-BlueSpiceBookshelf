@@ -208,7 +208,7 @@ class ChapterLookup {
 			$name = $this->makeName( $title, $title->getText(), $db );
 
 			if ( $this->config->get( 'BookshelfTitleDisplayText' )
-				&& $result->chapter_name !== $title->getSubpageText()
+				&& $result->chapter_name !== $title->getText()
 			) {
 				// reset to database value
 				$name = $result->chapter_name;
