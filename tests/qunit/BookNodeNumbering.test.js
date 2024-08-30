@@ -64,13 +64,12 @@
 
 		var processor = new ext.bookshelf.ui.data.BookNumberProcessor();
 		const actualNumbering = processor.calculateNumbersFromList( items );
-
 		assert.deepEqual( actualNumbering, expectedNumbering, 'Generated numbering matches expected numbering' );
 	} );
 
 	function getNumberForEachElement( items, processor, actualNumbering, parentNumbering = [] ) {
 		items.forEach( function ( item ) {
-			var number = processor.calculateNumberForElement( 1, items, item );
+			var number = processor.calculateNumberForElement( items, item );
 			const currentNumbering = parentNumbering.concat( [ number ] );
 			actualNumbering.push( currentNumbering.join( '.' ) );
 			if ( item.items && item.items.length > 0 ) {
@@ -132,7 +131,57 @@
 				target: 'Subtopic 2',
 				type: 'bs-bookshelf-chapter-wikilink-with-alias',
 				items: []
-			}
+			},
+			{
+				label: 'Subtopic 3',
+				level: 1,
+				name: 'menunode_67890',
+				target: 'Subtopic 3',
+				type: 'bs-bookshelf-chapter-wikilink-with-alias',
+				items: []
+			},
+			{
+				label: 'Subtopic 4',
+				level: 1,
+				name: 'menunode_12345',
+				target: 'Subtopic 4',
+				type: 'bs-bookshelf-chapter-wikilink-with-alias',
+				items: [
+					{
+						label: 'Subtopic 4.1',
+						level: 2,
+						name: 'menunode_12346',
+						target: 'Subtopic 4.1',
+						type: 'bs-bookshelf-chapter-wikilink-with-alias',
+						items: [
+							{
+								label: 'Subtopic 4.1.1',
+								level: 3,
+								name: 'menunode_12347',
+								target: 'Subtopic 4.1.1',
+								type: 'bs-bookshelf-chapter-wikilink-with-alias',
+								items: []
+							},
+							{
+								label: 'Subtopic 4.1.2',
+								level: 3,
+								name: 'menunode_12348',
+								target: 'Subtopic 4.1.2',
+								type: 'bs-bookshelf-chapter-wikilink-with-alias',
+								items: []
+							}
+						]
+					},
+					{
+						label: 'Subtopic 4.2',
+						level: 2,
+						name: 'menunode_12349',
+						target: 'Subtopic 4.2',
+						type: 'bs-bookshelf-chapter-wikilink-with-alias',
+						items: []
+					}
+				]
+			},
 		];
 
 		const expectedNumbering = [
@@ -141,11 +190,18 @@
 			'1.1.1',
 			'1.1.2',
 			'1.2',
-			'2'
+			'2',
+			'3',
+			'4',
+			'4.1',
+			'4.1.1',
+			'4.1.2',
+			'4.2',
 		];
 
 		var processor = new ext.bookshelf.ui.data.BookNumberProcessor();
 		var actualNumbering = getNumberForEachElement( items, processor, [], [] );
+
 		assert.deepEqual( actualNumbering, expectedNumbering, 'Generated numbering matches expected numbering' );
 	} );
 }() );
