@@ -192,13 +192,10 @@ class BookViewTreeDataBuilder {
 			return false;
 		}
 
-		$subStr = substr(
-			$item->getNumber(),
-			0,
-			strlen( $parent->getNumber() )
-		);
+		$chapterNumbers = explode( '.', $item->getNumber() );
+		$firstChapterNumber = $chapterNumbers[ 0 ];
 
-		if ( $subStr === $parent->getNumber() ) {
+		if ( $firstChapterNumber === $parent->getNumber() ) {
 			return true;
 		} else {
 			return false;
