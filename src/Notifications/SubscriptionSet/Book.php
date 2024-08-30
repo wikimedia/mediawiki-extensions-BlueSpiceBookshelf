@@ -3,7 +3,7 @@
 namespace BlueSpice\Bookshelf\Notifications\SubscriptionSet;
 
 use BlueSpice\Bookshelf\BookLookup;
-use MediaWiki\Extension\Notifications\SubscriberProvider\ManualProvider\ISubscriptionSet;
+use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualProvider\ISubscriptionSet;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
 use MWStake\MediaWiki\Component\Events\TitleEvent;
