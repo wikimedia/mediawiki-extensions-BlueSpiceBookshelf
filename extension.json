@@ -195,7 +195,7 @@
 				}
 			}
 		},
-		"Notifications": {
+		"NotifyMe": {
 			"ManualSubscriberProviderSets": {
 				"book": {
 					"class": "BlueSpice\\Bookshelf\\Notifications\\SubscriptionSet\\Book",
