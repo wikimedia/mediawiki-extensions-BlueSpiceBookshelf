@@ -26,7 +26,7 @@ ext.bookshelf.ui.data.node.BookTreeNode.prototype.addLabel = function () {
 };
 
 ext.bookshelf.ui.data.node.BookTreeNode.prototype.calculateChapterNumber = function () {
-	return this.numberProcessor.calculateNumberForElement( 1, this.tree.data, this.nodeData );
+	return this.numberProcessor.calculateNumberForElement( this.tree.data, this.nodeData )
 };
 
 ext.bookshelf.ui.data.node.BookTreeNode.prototype.updateNumber = function ( number ) {
