@@ -151,11 +151,11 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.getActionProcess = function (
 				dialog.save().done( function () {
 					dfd.resolve();
 				}).fail( function ( error ) {
-					dfd.reject( error );
+					dfd.reject( [ new OO.ui.Error( error, { recoverable: false } ) ]  );
 				} );
 			} ).fail( function ( error ) {
 				dialog.handleUploadErrors( error, arguments );
-				dfd.reject( error );
+				dfd.reject( [ new OO.ui.Error( error, { recoverable: false } ) ] );
 			} );
 			return dfd.promise();
 		} );
@@ -203,11 +203,11 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.save = function () {
 		}.bind( this ) )
 		.fail( function () {
 			this.popPending();
-			dfd.reject(
+			dfd.reject( [
 				new OO.ui.Error(
 					mw.message( 'bs-bookshelf-newbook-dlg-error-metadata-save' ).text(),
 					{ recoverable: false }
-			) );
+			) ] );
 		}.bind( this ) );
 	}.bind( this ) ).fail( function ( error ) {
 		this.popPending();
@@ -218,10 +218,10 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.save = function () {
 			console.error( error );
 		}
 		dfd.reject(
-			new OO.ui.Error(
+			[ new OO.ui.Error(
 				errorMsg,
 				{ recoverable: false }
-		) );
+		) ] );
 	}.bind( this ) );
 	return dfd.promise();
 };
@@ -344,7 +344,7 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.handleUploadErrors = function
 							this.handleUploadErrors( error, result );
 						} else {
 							this.popPending();
-							this.showErrors( new OO.ui.Error( error ) );
+							this.showErrors( [ new OO.ui.Error( error, { recoverable: false } ) ] );
 						}
 					}.bind( this ) );
 				} else {
@@ -354,5 +354,5 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.handleUploadErrors = function
 		return;
 	}
 	this.popPending();
-	this.showErrors( new OO.ui.Error( error ) );
+	this.showErrors( new OO.ui.Error( [ error, { recoverable: false } ] ) );
 };
