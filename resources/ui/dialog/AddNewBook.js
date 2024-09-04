@@ -140,30 +140,44 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.addCoverImageLayout = functio
 ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.getActionProcess = function ( action ) {
 	var dialog = this;
 	if ( action ) {
+		dialog.pushPending();
 		dialog.bookData = dialog.getBookData();
-		var process = new OO.ui.Process( function () {
-			var dfd = new $.Deferred();
-			dialog.pushPending();
-			var uploadDfd = dialog.uploadImage();
-			uploadDfd.done( function () {
-				dialog.save().done( function () {
-					dfd.resolve();
-				}).fail( function ( error ) {
-					dfd.reject( [ new OO.ui.Error( error, { recoverable: false } ) ]  );
-				} );
-			} ).fail( function ( error ) {
-				dialog.handleUploadErrors( error, arguments );
-				dfd.reject( [ new OO.ui.Error( error, { recoverable: false } ) ] );
-			} );
-			return dfd.promise();
-		} );
-		mw.hook( 'bs.bookshelf.newbook.actionprocess' ).fire( process, dialog );
-		return process.next( function () {
-			dialog.close( { action: 'done' } );
-			dialog.emit( 'book_created', dialog.bookTitle );
+		var uploadDfd = dialog.uploadImage();
+		uploadDfd.done( function () {
+			return dialog.makeSaveProcess();
+		} ).fail( function ( error ) {
+			var handleDfd = dialog.handleUploadErrors( error, arguments );
+			handleDfd.done( function ( result ) {
+				if ( result === 'save' ) {
+					return dialog.makeSaveProcess();
+				}
+				this.popPending();
+			}).fail( function ( error ) {
+				dialog.showErrors( new OO.ui.Error( error, { recoverable: false } ) );
+				return;
+			} )
 		} );
 	}
 	return ext.bookshelf.ui.dialog.AddNewBookDialog.super.prototype.getActionProcess.call( this, action );
+};
+
+ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.makeSaveProcess = function () {
+	var process = new OO.ui.Process( function () {
+		var dfd = new $.Deferred();
+		this.save().done( function () {
+			dfd.resolve();
+		}).fail( function ( error ) {
+			dfd.reject( );
+			this.showErrors( new OO.ui.Error( error, { recoverable: false } ) );
+		}.bind( this ) );
+		return dfd.promise();
+	}.bind( this ) );
+	mw.hook( 'bs.bookshelf.newbook.actionprocess' ).fire( process, this );
+	process.next( function () {
+		this.close( { action: 'done' } );
+		this.emit( 'book_created', this.bookTitle );
+	}.bind( this ) );
+	return process.execute();
 };
 
 ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.getBookData = function () {
@@ -212,14 +226,11 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.save = function () {
 		var errorMsg = mw.message( 'bs-bookshelf-newbook-dlg-error-book-save' ).text();
 		if ( error[ 0 ] === 'articleexists' ) {
 			errorMsg = mw.message( 'bs-bookshelf-newbook-dlg-error-book-exists' ).text();
+			this.bookTitleInput.setValidityFlag( false );
 		} else {
 			console.error( error );
 		}
-		dfd.reject(
-			[ new OO.ui.Error(
-				errorMsg,
-				{ recoverable: false }
-		) ] );
+		dfd.reject( errorMsg );
 	}.bind( this ) );
 	return dfd.promise();
 };
@@ -264,58 +275,50 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.uploadImage = function () {
 	var dfd = $.Deferred();
 	if ( !this.bookData.hasOwnProperty( 'bookshelfimage' ) || !this.uploadFile ) {
 		dfd.resolve();
-		return dfd.promise();
-	}
-	mw.loader.using( [ 'mediawiki.api' ] ).done( function () {
-		var file = this.coverImageInput.getValue();
-		const mwApi = new mw.Api();
-		var params = {
-			filename: file.name,
-			format: file.type
-		};
+	} else {
+		mw.loader.using( [ 'mediawiki.api' ] ).done( function () {
+			var file = this.coverImageInput.getValue();
+			const mwApi = new mw.Api();
+			var params = {
+				filename: file.name,
+				format: file.type,
+				ignorewarnings: false
+			};
 
-		mwApi.upload( file, params ).done( function ( resp ) {
-			dfd.resolve();
-		} ).fail( function ( error, result ) {
-				var warnings = arguments[ 1 ].upload.warnings,
-					errorMessage = mw.message( 'bs-bookshelf-newbook-dlg-upload-error-unhandled' ).plain();
-				if ( 'exists' in warnings || 'exists-normalized' in warnings ) {
-					errorMessage = 'exists';
-					if ( 'nochange' in warnings ) {
-						errorMessage = 'fileexists-no-change';
-					}
-				} else if ( 'duplicate' in warnings ) {
-					errorMessage = 'duplicate';
-				} else if ( 'duplicate-archive' in warnings ) {
-					errorMessage = mw.message( 'bs-bookshelf-newbook-dlg-upload-error-duplicate', params.filename ).plain();
-				} else if ( 'badfilename' in warnings ) {
-					errorMessage = mw.message( 'bs-bookshelf-newbook-dlg-upload-error-badfilename', params.filename ).plain();
-				}
-				dfd.reject( errorMessage, result );
-			} );
-	}.bind( this ) );
+			mwApi.upload( file, params ).done( function ( resp ) {
+				dfd.resolve();
+			} ).fail( function ( error, result ) {
+					var errorMessage = this.getErrorMsg( result );
+					dfd.reject( errorMessage, result );
+			}.bind( this ) );
+		}.bind( this ) );
+	}
+
 	return dfd.promise();
 };
 
 ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.handleUploadErrors = function ( error, arguments ) {
+	var dfd = new $.Deferred();
 	if ( error === 'fileexists-no-change' ) {
-		this.save();
-	}
-	if ( error === 'duplicate' ) {
+		dfd.resolve( 'save' );
+	} else if ( error === 'duplicate' ) {
 		var origFileName = arguments[ 1 ].upload.warnings.duplicate[ 0 ];
 		OO.ui.confirm(
 			mw.message( 'bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label' ).text() )
 			.done( function ( confirmed ) {
 				if ( confirmed ) {
 					this.bookData.bookshelfimage = origFileName;
-					this.save();
+					dfd.resolve( 'save' );
 				} else {
+					this.coverImageInput.setValue( '' );
+					delete( this.bookData[ 'bookshelfimage' ] );
+					this.saveAction.setDisabled( false );
 					this.popPending();
+					dfd.resolve( 'reset' );
 				}
 			}.bind( this ) );
-		return;
-	}
-	if ( error === 'exists' ) {
+	} else if ( error === 'exists' ) {
+		var dialog = this;
 		OO.ui.prompt(
 			mw.message( 'bs-bookshelf-newbook-dlg-upload-title-exists' ).plain(),
 			{
@@ -325,32 +328,66 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.handleUploadErrors = function
 			} )
 			.done( function ( result ) {
 				if ( result !== null ) {
-					var file = this.coverImageInput.getValue();
-					var fileFormat = file.name.substring( this.file.name.indexOf( '.' ) + 1 );
+					var file = dialog.coverImageInput.getValue();
+					var fileFormat = dialog.bookData.bookshelfimage.substring(
+						dialog.bookData.bookshelfimage.indexOf( '.' ) + 1
+					);
 					var newFileName = result + '.' + fileFormat;
 					const mwApi = new mw.Api();
 					var params = {
 						filename: newFileName,
-						format: file.type,
-						ignorewarnings: true
+						format: file.type
 					};
 					mwApi.upload( file, params ).done( function ( resp ) {
-						this.save();
-						dfd.resolve();
-					}.bind( this ) ).fail( function ( error, result ) {
-						if ( error === 'fileexists-no-change' || error === 'duplicate' || error === 'exists' ) {
-							this.handleUploadErrors( error, result );
+						dfd.resolve( 'save' );
+					} ).fail( function ( error, result ) {
+						var errorMessage = dialog.getErrorMsg( result );
+						if ( errorMessage === 'fileexists-no-change' || errorMessage === 'duplicate' || errorMessage === 'exists' ) {
+							var handledDdfd = dialog.handleUploadErrors( error, result );
+							handledDdfd.done( function () {
+								dfd.resolve( 'save' )
+							} ).fail( function ( error, result ) {
+								var errorMessage = dialog.getErrorMsg( result );
+								dialog.popPending();
+								dfd.reject( new OO.ui.Error( errorMessage, { recoverable: false } ) );
+							} );
 						} else {
-							this.popPending();
-							this.showErrors( [ new OO.ui.Error( error, { recoverable: false } ) ] );
+							dialog.popPending();
+							dfd.reject( new OO.ui.Error( error, { recoverable: false } ) );
 						}
 					}.bind( this ) );
 				} else {
 					this.popPending();
+					dfd.reject();
 				}
 			}.bind( this ) );
-		return;
+	} else {
+		this.popPending();
+		dfd.reject( new OO.ui.Error( error, { recoverable: false } ) );
 	}
-	this.popPending();
-	this.showErrors( new OO.ui.Error( [ error, { recoverable: false } ] ) );
+
+	return dfd.promise();
+};
+
+ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.getErrorMsg = function ( result ) {
+	if ( !result.hasOwnProperty( 'upload' ) ) {
+		return 'No upload property during upload';
+	}
+	var upload = result.upload;
+	if ( !upload.hasOwnProperty( 'warnings' ) ) {
+		return 'No warnings during upload';
+	}
+	var warnings = result.upload.warnings,
+		errorMessage = mw.message( 'bs-bookshelf-newbook-dlg-upload-error-unhandled' ).plain();
+	if ( 'exists' in warnings || 'exists-normalized' in warnings ) {
+		errorMessage = 'exists';
+		if ( 'nochange' in warnings ) {
+			errorMessage = 'fileexists-no-change';
+		}
+	} else if ( 'duplicate' in warnings ) {
+		errorMessage = 'duplicate';
+	} else if ( 'duplicate-archive' in warnings ) {
+		errorMessage = mw.message( 'bs-bookshelf-newbook-dlg-upload-error-duplicate', upload.filename ).plain();
+	}
+	return errorMessage;
 };
