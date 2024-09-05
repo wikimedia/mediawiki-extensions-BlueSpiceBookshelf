@@ -49,7 +49,7 @@ class BookHierarchyBuilderTest extends TestCase {
 			  'chapter_name' => 'Test chap B',
 			  'chapter_number' => '1.1',
 			  'chapter_type' => 'wikilink-with-alias',
-			  'chapter_children' => [
+			   'chapter_children' => [
 				[
 				  'chapter_namespace' => '0',
 				  'chapter_title' => 'Test_chap_C',
