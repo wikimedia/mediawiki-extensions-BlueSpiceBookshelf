@@ -192,14 +192,20 @@ class BookViewTreeDataBuilder {
 			return false;
 		}
 
-		$chapterNumbers = explode( '.', $item->getNumber() );
-		$firstChapterNumber = $chapterNumbers[ 0 ];
+		$parentChapterNumbers = explode( '.', $parent->getNumber() );
+		$childChapterNumbers = explode( '.', $item->getNumber() );
 
-		if ( $firstChapterNumber === $parent->getNumber() ) {
-			return true;
-		} else {
+		if ( count( $childChapterNumbers ) <= count( $parentChapterNumbers ) ) {
 			return false;
 		}
+
+		for ( $i = 0; $i < count( $parentChapterNumbers ); $i++ ) {
+			if ( $parentChapterNumbers[$i] !== $childChapterNumbers[$i] ) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 }
