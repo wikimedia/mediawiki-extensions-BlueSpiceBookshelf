@@ -14,5 +14,6 @@
 	"bs-bookshelf-tag-edit-book": "Mute kirje",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Sillee",
 	"bs-bookshelf-add-to-book-label": "Lasseet kiirján",
-	"bs-bookshelf-actionmenuentry-addtobook": "Lasseet kiirján"
+	"bs-bookshelf-actionmenuentry-addtobook": "Lasseet kiirján",
+	"bs-bookshelf-metadata-dlg-action-save-label": "Vuorkkii"
 }
