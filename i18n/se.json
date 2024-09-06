@@ -13,5 +13,6 @@
 	"bs-bookshelf-tag-edit-book": "Rievdat girjji",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Veršuvdna",
 	"bs-bookshelf-add-to-book-label": "Lasit girjii",
-	"bs-bookshelf-actionmenuentry-addtobook": "Lasit girjii"
+	"bs-bookshelf-actionmenuentry-addtobook": "Lasit girjii",
+	"bs-bookshelf-metadata-dlg-action-save-label": "Vurke"
 }
