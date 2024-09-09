@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\HookHandler;
 
 use MediaWiki\Hook\PageMoveCompleteHook;
+use Title;
 use TitleFactory;
 use Wikimedia\Rdbms\LoadBalancer;
 
@@ -32,7 +33,7 @@ class ChapterMove implements PageMoveCompleteHook {
 		$oldPageName = $this->titleFactory->newFromLinkTarget( $old );
 		$chapters = $this->getChapters( $oldPageName );
 		if ( empty( $chapters ) ) {
-			return true;
+			return;
 		}
 		$newPageName = $this->titleFactory->newFromLinkTarget( $new );
 		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
@@ -45,6 +46,7 @@ class ChapterMove implements PageMoveCompleteHook {
 			$db->update(
 				'bs_book_chapters',
 				[
+					'chapter_namespace' => $newPageName->getNamespace(),
 					'chapter_title' => $newPageName->getDBKey(),
 					'chapter_name' => $label
 				], [
@@ -65,6 +67,7 @@ class ChapterMove implements PageMoveCompleteHook {
 			'bs_book_chapters',
 			'*',
 			[
+				'chapter_namespace' => $pageName->getNamespace(),
 				'chapter_title' => $pageName->getDBKey()
 			]
 		);
