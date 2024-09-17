@@ -7,6 +7,7 @@ use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use Html;
 use IContextSource;
+use MediaWiki\Linker\LinkTarget;
 use MediaWiki\MediaWikiServices;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\ComponentBase;
@@ -193,7 +194,9 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 			if ( !isset( $webRequestValues['redirect'] ) || $webRequestValues['redirect'] !== 'no' ) {
 				$redirTarget = MediaWikiServices::getInstance()->getRedirectLookup()
 					->getRedirectTarget( $context->getWikiPage() );
-					$this->title  = Title::newFromLinkTarget( $redirTarget );
+				if ( $redirTarget instanceof LinkTarget ) {
+					$this->title = Title::newFromLinkTarget( $redirTarget );
+				}
 			}
 		}
 
