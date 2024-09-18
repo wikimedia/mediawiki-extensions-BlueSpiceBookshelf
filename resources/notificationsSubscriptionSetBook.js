@@ -5,7 +5,7 @@ bs.bookshelf.notifications.BookSubscriptionSet = function( cfg ) {
 	bs.bookshelf.notifications.BookSubscriptionSet.parent.apply( this, arguments );
 };
 
-OO.inheritClass( bs.bookshelf.notifications.BookSubscriptionSet, ext.notifications.ui.SubscriptionSet );
+OO.inheritClass( bs.bookshelf.notifications.BookSubscriptionSet, ext.notifyme.ui.SubscriptionSet );
 
 bs.bookshelf.notifications.BookSubscriptionSet.prototype.getLabel = function() {
 	return mw.message( 'bs-bookshelf-notification-subscription-set-book-title' ).text();
@@ -23,4 +23,4 @@ bs.bookshelf.notifications.BookSubscriptionSet.prototype.getHeaderKeyValue = fun
 	return this.value.set.book;
 };
 
-ext.notifications.subscriptionSetRegistry.register( 'book', bs.bookshelf.notifications.BookSubscriptionSet );
+ext.notifyme.subscriptionSetRegistry.register( 'book', bs.bookshelf.notifications.BookSubscriptionSet );
