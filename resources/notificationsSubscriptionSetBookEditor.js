@@ -4,7 +4,7 @@ bs.bookshelf.notifications.BookSubscriptionSetEditor = function( cfg ) {
 	bs.bookshelf.notifications.BookSubscriptionSetEditor.parent.call( this, cfg );
 };
 
-OO.inheritClass( bs.bookshelf.notifications.BookSubscriptionSetEditor, ext.notifications.ui.subscriptionset.editor.SubscriptionSetEditor );
+OO.inheritClass( bs.bookshelf.notifications.BookSubscriptionSetEditor, ext.notifyme.ui.subscriptionset.editor.SubscriptionSetEditor );
 
 bs.bookshelf.notifications.BookSubscriptionSetEditor.prototype.makeLayout = function() {
 	this.bookPicker = new mw.widgets.TitleInputWidget( {
