@@ -149,6 +149,10 @@ function createBookshelfs( items ) {
 			bookshelfNames.push( item.bookshelf );
 		}
 	} );
+	// Sort books alphabetically
+	items.sort( function( bookA, bookB ) {
+		return bookA.displaytitle.toLowerCase().localeCompare( bookB.displaytitle.toLowerCase() );
+	} )
 
 	// Make bookshelf names unique in array bookshelfNames
 	bookshelfNames = bookshelfNames.filter( ( value, index, array ) => array.indexOf( value ) === index );
