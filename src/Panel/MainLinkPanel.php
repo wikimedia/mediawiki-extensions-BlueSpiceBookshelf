@@ -35,6 +35,13 @@ class MainLinkPanel extends RestrictedTextLink {
 	}
 
 	/**
+	 * @inheritDoc
+	 */
+	public function getRole(): string {
+		return 'menuitem';
+	}
+
+	/**
 	 * @return string
 	 */
 	public function getHref(): string {
