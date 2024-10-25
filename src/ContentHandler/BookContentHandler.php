@@ -6,8 +6,8 @@ use BlueSpice\Bookshelf\Action\BookEditAction;
 use BlueSpice\Bookshelf\Action\BookEditSourceAction;
 use BlueSpice\Bookshelf\BookInfo;
 use BlueSpice\Bookshelf\BookLookup;
+use BlueSpice\Bookshelf\BookSourceParser;
 use BlueSpice\Bookshelf\BookViewTreeDataBuilder;
-use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\Content\BookContent;
 use Content;
 use Html;
@@ -72,10 +72,25 @@ class BookContentHandler extends TextContentHandler {
 			$titleFactory = $services->getTitleFactory();
 			$book = $titleFactory->castFromPageReference( $pageRef );
 
+			$revID = $cpoParams->getRevId();
+			$revLookup = $services->getRevisionLookup();
+			$revisionRecord = $revLookup->getRevisionById( $revID, 0, $book );
+			if ( !$revisionRecord ) {
+				throw new MWException();
+			}
+
+			$parserFactory = $services->get( 'MWStakeWikitextParserFactory' );
+			$bookSourceParser = new BookSourceParser(
+				$revisionRecord,
+				$parserFactory->getNodeProcessors(),
+				$titleFactory
+			);
+
+			$chapters = $bookSourceParser->getChapterDataModelArray();
+
 			$bookLookup = $services->get( 'BSBookshelfBookLookup' );
-			$bookChapterLookup = $services->get( 'BSBookshelfBookChapterLookup' );
-			if ( $bookChapterLookup instanceof ChapterLookup ) {
-				$this->setChaptersTree( $output, $book, $bookLookup, $bookChapterLookup, $titleFactory );
+			if ( $bookLookup instanceof BookLookup ) {
+				$this->setChaptersTree( $output, $book, $bookLookup, $chapters, $titleFactory );
 				$this->setHtmlFrame( $output );
 				$output->addModules( [ 'ext.bluespice.bookshelf.view' ] );
 			}
@@ -88,17 +103,16 @@ class BookContentHandler extends TextContentHandler {
 	 * @param ParserOutput $output
 	 * @param Title $book
 	 * @param BookLookup $bookLookup
-	 * @param ChapterLookup $chapterLookup
+	 * @param array $chapters
 	 * @param TitleFactory $titleFactory
 	 */
 	private function setChaptersTree(
 		ParserOutput $output,
 		Title $book,
 		BookLookup $bookLookup,
-		ChapterLookup $chapterLookup,
+		array $chapters,
 		TitleFactory $titleFactory
 	) {
-		$chapters = $chapterLookup->getChaptersOfBook( $book );
 		$bookInfo = $bookLookup->getBookInfo( $book );
 
 		$name = '';
