@@ -99,7 +99,7 @@ ext.bookshelf.ui.data.tree.BookEditorTree.prototype.buildLinks = function ( page
 		this.addSubnodeWithData( {
 			type: 'bs-bookshelf-chapter-wikilink-with-alias',
 			target: page.prefixed_text,
-			label: page.page_title
+			label: ''
 		} , '' );
 	}.bind( this ) );
 };
