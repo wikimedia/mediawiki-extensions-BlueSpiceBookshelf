@@ -63,9 +63,7 @@ class PrimaryDataProvider extends \BlueSpice\Data\Settings\PrimaryDataProvider {
 		$this->data[] = new Record( (object)[
 			Record::DISPLAYTITLE => $row->book_name,
 			Record::BOOK_NAMESPACE => $row->book_namespace,
-			Record::BOOK_TITLE => $row->book_title,
-			Record::CHAPTER_NAMESPACE => $row->chapter_namespace,
-			Record::CHAPTER_TITLE => $row->chapter_title,
+			Record::BOOK_TITLE => $row->book_title
 		] );
 	}
 }
