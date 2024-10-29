@@ -4,7 +4,8 @@
 			"Arielyurusova",
 			"Kly",
 			"Weather Top Wizard",
-			"Winston Sung"
+			"Winston Sung",
+			"沈澄心"
 		]
 	},
 	"bs-bookshelf-extension-description": "啟動 BlueSpice 來管理與匯出條目的層級集合。",
@@ -120,7 +121,7 @@
 	"bs-books-overview-page-book-action-view-title": "檢視$1的章節",
 	"bs-books-overview-page-book-search-placeholder": "查找書籍",
 	"bs-books-overview-page-bookshelf-empty": "沒有可用的書籍",
-	"bs-books-overview-page-aria-live-filtered-rows": "找到 {{PLURAL:$1|1|$1}} 本書籍",
+	"bs-books-overview-page-aria-live-filtered-rows": "找到 {{PLURAL:$1|$1}} 本書籍",
 	"bs-bookshelf-chapter-plain-text-label": "文字章節標題",
 	"bs-bookshelf-chapter-plain-text-label-edit": "添加新的章節標題",
 	"bs-bookshelf-chapter-plain-text-input-label": "文字",
