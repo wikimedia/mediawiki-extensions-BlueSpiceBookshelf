@@ -121,7 +121,7 @@ class AddChapterNumberToTitleAndHeadings {
 	 * @return string
 	 */
 	private function removeHeadingNumberFromToc( $html ) {
-		$regEx = '#(<span class="tocnumber">)([\d\.]*?\s*?</span>\s*?<span class="toctext">.*?</span>)#';
+		$regEx = '#(<span class="tocnumber">)([\d\.]*?\s*?</span>)#';
 
 		$matches = [];
 		$status = preg_match_all( $regEx, $html, $matches );
