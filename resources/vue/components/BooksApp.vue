@@ -64,6 +64,10 @@ module.exports = exports = {
 		if ( this.items.length > 0 ) {
 			// Initial bookselfs is in local scope. The bookshelfs value in return statement is global.
 			// If we use bookshelfs here for createBookshelfs the search input would not change the visible items.
+			// Sort books alphabetically
+			this.items.sort( function( bookA, bookB ) {
+				return bookA.displaytitle.toLowerCase().localeCompare( bookB.displaytitle.toLowerCase() );
+			} );
 			initialBookshelfs = createBookshelfs( this.items );
 
 			var initialSearchInputValue = '';
@@ -149,10 +153,6 @@ function createBookshelfs( items ) {
 			bookshelfNames.push( item.bookshelf );
 		}
 	} );
-	// Sort books alphabetically
-	items.sort( function( bookA, bookB ) {
-		return bookA.displaytitle.toLowerCase().localeCompare( bookB.displaytitle.toLowerCase() );
-	} )
 
 	// Make bookshelf names unique in array bookshelfNames
 	bookshelfNames = bookshelfNames.filter( ( value, index, array ) => array.indexOf( value ) === index );
