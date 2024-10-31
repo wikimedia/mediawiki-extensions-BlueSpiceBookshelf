@@ -25,6 +25,10 @@
 
 					if ( response.length > 0 ) {
 						books = response;
+						// Sort books alphabetically
+						books.sort( function( bookA, bookB ) {
+							return bookA.displaytitle.toLowerCase().localeCompare( bookB.displaytitle.toLowerCase() );
+						} );
 						searchableData = setSearchableData( books );
 					}
 
