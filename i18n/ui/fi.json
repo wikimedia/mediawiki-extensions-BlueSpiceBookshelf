@@ -12,6 +12,7 @@
 	"bs-bookshelfui-new-book-title": "Luo uusi kirja",
 	"bs-bookshelfui-new-book-text": "Kirjan otsikko",
 	"bs-bookshelfui-delete-book-title": "Poista kirja",
+	"bs-bookshelfui-open-source": "Näytä lähdewikisivu",
 	"bs-bookshelfui-bookui-savingprogress-title": "Tallennetaan kirjaa",
 	"bs-bookshelfui-manager-title": "Otsikko",
 	"bs-bookshelfui-manager-deletingprogress-text": "Poistetaan valittua kirjaa",
@@ -37,6 +38,7 @@
 	"bs-bookshelfui-flyout-title": "Luettelo kirjoista",
 	"bs-bookshelfui-book-title-link-edit": "Muokkaa kirjaa",
 	"bs-bookshelfui-book-title-link-edit-text": "Muokkaa kirjaa",
+	"bs-bookshelfui-export-book-text": "Odota, kun kirjaa luodaan.",
 	"bs-bookshelfui-bookmanager-deletion-reason": "BookManagerin poistama",
 	"bs-bookshelfui-bookmetatag-title": "Otsikko",
 	"bs-bookshelfui-bookmetatag-subtitle": "Alaotsikko",
@@ -48,7 +50,5 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Ruudukko",
 	"bs-bookshelfui-prof-defaultview-images": "Kuvat",
 	"bs-bookshelfui-chapterpager-previous": "Edellinen",
-	"bs-bookshelfui-chapterpager-next": "Seuraava",
-	"bs-bookshelfui-export-book-text": "Odota, kun kirjaa luodaan.",
-	"bs-bookshelfui-open-source": "Näytä lähdewikisivu"
+	"bs-bookshelfui-chapterpager-next": "Seuraava"
 }

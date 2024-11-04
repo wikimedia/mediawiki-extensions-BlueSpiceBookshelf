@@ -13,6 +13,7 @@
 	"bs-bookshelfui-ctxmnu-tag-edit": "Muuʹtt asetõõzzid",
 	"bs-bookshelfui-dlg-tagsettings-title": "Ǩeâlggal asetõõzz",
 	"bs-bookshelfui-dlg-copy-title": "Kopiââʹst \"$1\"",
+	"bs-bookshelfui-dlg-copy-name-addition": "(kopio)",
 	"bs-bookshelfui-dlg-choosecategory-label": "Kategoria",
 	"bs-bookshelfui-dlg-type-label": "Teâttkäivv",
 	"bs-bookshelfui-type-category": "Kategoria puk seeid",
@@ -23,6 +24,5 @@
 	"bs-bookshelfui-book-title-link-edit-text": "Muuʹtt ǩeeʹrj",
 	"bs-bookshelfui-bookmetatag-version": "Versio",
 	"bs-bookshelfui-extjs-tooltip-copy": "Kopiââʹst",
-	"bs-bookshelfui-prof-defaultview-images": "Kaart da snimldõõǥǥ",
-	"bs-bookshelfui-dlg-copy-name-addition": "(kopio)"
+	"bs-bookshelfui-prof-defaultview-images": "Kaart da snimldõõǥǥ"
 }

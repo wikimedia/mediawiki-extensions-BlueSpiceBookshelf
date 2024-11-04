@@ -6,6 +6,7 @@
 		]
 	},
 	"bs-bookshelfui-new-book-title": "Räähti uđđâ kirje",
+	"bs-bookshelfui-ctxmnu-tag-edit": "Mute asâttâsâid",
 	"bs-bookshelfui-dlg-choosecategory-label": "Luokka",
 	"bs-bookshelfui-dlg-type-label": "Käldee",
 	"bs-bookshelfui-type-category": "Luoka puoh siijđoh",
@@ -13,6 +14,5 @@
 	"bs-bookshelfui-bookmetatag-version": "Versio",
 	"bs-bookshelfui-extjs-tooltip-copy": "Kopijist",
 	"bs-bookshelfui-prof-defaultview-images": "Koveh",
-	"bs-bookshelfui-chapterpager-next": "Čuávuvâš",
-	"bs-bookshelfui-ctxmnu-tag-edit": "Mute asâttâsâid"
+	"bs-bookshelfui-chapterpager-next": "Čuávuvâš"
 }
