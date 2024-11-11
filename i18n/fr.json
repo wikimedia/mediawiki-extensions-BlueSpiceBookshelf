@@ -11,6 +11,7 @@
 			"Graineahumus",
 			"Lewis2013",
 			"MacOS Weed",
+			"Mahabarata",
 			"SleaY",
 			"Thibaut120094",
 			"Verdy p",
@@ -165,5 +166,18 @@
 	"bs-bookshelf-droplet-search-description": "Rechercher des pages dans un livre",
 	"bs-bookshelf-droplet-search-book": "Livre",
 	"bs-bookshelf-droplet-search-book-help": "Nom du livre dans lequel rechercher",
-	"bs-bookshelf-notification-subscription-set-book-title": "Livre"
+	"bs-bookshelf-notification-subscription-set-book-title": "Livre",
+	"bs-bookshelf-search-center-result-books-label": "Extrait d{{PLURAL:$1|'un livre|e livres}}",
+	"apihelp-bs-books-overview-store-summary": "Répertorie tous les livres, incluant pour chacun la bibliothèque où il se trouve, un lien vers le premier chapitre et les actions possibles.",
+	"bs-books-overview-page-book-action-view-text": "Chapitres",
+	"bs-books-overview-page-book-action-view-title": "Voir les chapitres de $1",
+	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|Un livre trouvé|$1 livres trouvés}}",
+	"bs-bookshelf-newbook-dlg-input-bookshelf-label": "Bibliothèque",
+	"bs-bookshelf-newbook-dlg-input-image-label": "Image de couverture",
+	"bs-bookshelf-newbook-dlg-input-bookshelf-placeholder": "Choisissez une bibliothèque",
+	"bs-bookshelf-newbook-dlg-cover-image-text": "ou choisissez une image déjà existante",
+	"bs-bookshelf-newbook-dlg-error-book-save": "Le livre n'a pas pu être enregistré",
+	"bs-bookshelf-newbook-dlg-upload-error-unhandled": "Une exception non gérée s'est produite.",
+	"bs-bookshelf-newbook-dlg-error-book-exists": "Le livre n'a pas pu être créé car un livre portant ce nom existe déjà",
+	"bs-bookshelf-actionmenuentry-new-book": "Nouveau livre"
 }
