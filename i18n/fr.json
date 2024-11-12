@@ -15,7 +15,8 @@
 			"Thibaut120094",
 			"Verdy p",
 			"Wladek92",
-			"Wnagxsi"
+			"Wnagxsi",
+			"Mahabarata"
 		]
 	},
 	"bs-bookshelf-extension-description": "Permet à BlueSpice de gérer et exporter des collections hiérarchiques d’articles.",
@@ -113,7 +114,9 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Livre à exporter",
 	"bs-bookshelf-droplet-pdf-template-label": "Modèle de livre PDF",
 	"bs-bookshelf-droplet-pdf-link-label": "Libellé du lien",
+	"bs-bookshelf-search-center-result-books-label": "Extrait d{{PLURAL:$1|'un livre|e livres}}",
 	"bs-bookshelf-search-center-filter-books-label": "Livre",
+	"apihelp-bs-books-overview-store-summary": "Répertorie tous les livres, incluant pour chacun la bibliothèque où il se trouve, un lien vers le premier chapitre et les actions possibles.",
 	"books": "Livres",
 	"bs-books-overview-page-loading-text": "L'aperçu du livre est en cours de chargement...",
 	"bs-books-overview-page-bookshelf-various-books": "Divers livres",
@@ -125,8 +128,11 @@
 	"bs-books-overview-page-book-action-edit-title": "Modifier le livre $1",
 	"bs-books-overview-page-book-action-delete-text": "Supprimer",
 	"bs-books-overview-page-book-action-delete-title": "Supprimer le livre $1",
+	"bs-books-overview-page-book-action-view-text": "Chapitres",
+	"bs-books-overview-page-book-action-view-title": "Voir les chapitres de $1",
 	"bs-books-overview-page-book-search-placeholder": "Trouver un livre",
 	"bs-books-overview-page-bookshelf-empty": "Il n'y a pas de livres disponibles",
+	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|Un livre trouvé|$1 livres trouvés}}",
 	"bs-bookshelf-chapter-plain-text-label": "Titre du chapitre du texte",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Ajouter un nouveau titre de chapitre",
 	"bs-bookshelf-chapter-plain-text-input-label": "Texte",
@@ -145,9 +151,15 @@
 	"bs-bookshelf-newbook-dlg-input-title-label": "Titre de livre",
 	"bs-bookshelf-newbook-dlg-input-subtitle-placeholder": "Créer un sous-titre",
 	"bs-bookshelf-newbook-dlg-input-subtitle-label": "Sous-titre",
+	"bs-bookshelf-newbook-dlg-input-bookshelf-label": "Bibliothèque",
+	"bs-bookshelf-newbook-dlg-input-image-label": "Image de couverture",
+	"bs-bookshelf-newbook-dlg-input-bookshelf-placeholder": "Choisissez une bibliothèque",
 	"bs-bookshelf-newbook-dlg-input-image-select-placeholder": "Choisissez une image existante",
+	"bs-bookshelf-newbook-dlg-cover-image-text": "ou choisissez une image déjà existante",
 	"bs-bookshelf-newbook-dlg-error-metadata-save": "Les métadonnées n'ont pas pu être enregistrées",
+	"bs-bookshelf-newbook-dlg-error-book-save": "Le livre n'a pas pu être enregistré",
 	"bs-bookshelf-newbook-dlg-book-save-summary": "Créer un livre",
+	"bs-bookshelf-newbook-dlg-upload-error-unhandled": "Une exception non gérée s'est produite.",
 	"bs-bookshelf-newbook-dlg-upload-error-duplicate": "Un fichier identique à ce fichier ($1) a été précédemment supprimé.",
 	"bs-bookshelf-newbook-dlg-upload-error-badfilename": "Le nom de fichier $1 contient des caractères invalides.",
 	"bs-bookshelf-newbook-dlg-upload-duplicate-confirm-label": "Cette image est un doublon. L'image existante doit-elle être insérée à la place ? Sinon, une nouvelle image peut être ajoutée.",
@@ -163,5 +175,7 @@
 	"bs-bookshelf-droplet-search-description": "Rechercher des pages dans un livre",
 	"bs-bookshelf-droplet-search-book": "Livre",
 	"bs-bookshelf-droplet-search-book-help": "Nom du livre dans lequel rechercher",
-	"bs-bookshelf-notification-subscription-set-book-title": "Livre"
+	"bs-bookshelf-notification-subscription-set-book-title": "Livre",
+	"bs-bookshelf-newbook-dlg-error-book-exists": "Le livre n'a pas pu être créé car un livre portant ce nom existe déjà",
+	"bs-bookshelf-actionmenuentry-new-book": "Nouveau livre"
 }
