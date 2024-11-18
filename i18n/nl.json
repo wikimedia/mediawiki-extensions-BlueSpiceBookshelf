@@ -107,6 +107,7 @@
 	"bs-bookshelf-droplet-pdf-book-label": "Boek om te exporteren",
 	"bs-bookshelf-droplet-pdf-template-label": "Boek-PDF-sjabloon",
 	"bs-bookshelf-droplet-pdf-link-label": "Linklabel",
+	"bs-bookshelf-search-center-result-books-label": "Deel van {{PLURAL:$1|een boek|boeken}}",
 	"bs-bookshelf-search-center-filter-books-label": "Boek",
 	"apihelp-bs-books-overview-store-summary": "Geeft een overzicht van alle boeken, inclusief boekenplank, koppeling naar het eerste hoofdstuk en handelingen.",
 	"books": "Boeken",
@@ -120,7 +121,11 @@
 	"bs-books-overview-page-book-action-edit-title": "Boek $1 bewerken",
 	"bs-books-overview-page-book-action-delete-text": "Verwijderen",
 	"bs-books-overview-page-book-action-delete-title": "Boek $1 verwijderen",
+	"bs-books-overview-page-book-action-view-text": "Hoofdstukken",
+	"bs-books-overview-page-book-action-view-title": "Hoofdstukken van $1 bekijken",
 	"bs-books-overview-page-book-search-placeholder": "Boek zoeken",
+	"bs-books-overview-page-bookshelf-empty": "Er zijn geen boeken beschikbaar",
+	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|Eén boek|$1 boeken}} gevonden",
 	"bs-bookshelf-chapter-plain-text-label": "Tekst hoofdstukkop",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Een nieuwe hoofdstukkop toevoegen",
 	"bs-bookshelf-chapter-plain-text-input-label": "Tekst",
@@ -158,7 +163,12 @@
 	"bs-books-overview-page-book-action-metadata-text": "Metagegevens bewerken",
 	"bs-books-overview-page-book-action-metadata-title": "Metagegevens voor boek $1 bewerken",
 	"bs-bookshelf-massadd-dlg-save-action-label": "Toevoegen",
+	"bs-bookshelf-tag-searchinbook-error": "Geef een geldige boeknaam op",
 	"bs-bookshelf-droplet-search-name": "Zoek in een boek",
+	"bs-bookshelf-droplet-search-description": "Zoeken naar pagina’s in een boek",
 	"bs-bookshelf-droplet-search-book": "Boek",
-	"bs-bookshelf-notification-subscription-set-book-title": "Boek"
+	"bs-bookshelf-droplet-search-book-help": "Naam van het boek waarin gezocht moet worden",
+	"bs-bookshelf-notification-subscription-set-book-title": "Boek",
+	"bs-bookshelf-newbook-dlg-error-book-exists": "Het boek kon niet worden aangemaakt omdat er al een boek met deze naam bestaat",
+	"bs-bookshelf-actionmenuentry-new-book": "Nieuw boek"
 }
