@@ -91,7 +91,7 @@ class ChapterPagerPanel extends Literal {
 				$title = $context->getWikiPage()->getRedirectTarget();
 			}
 		}
-		if ( empty( $this->bookLookup->getBooksForPage( $title ) ) ) {
+		if ( !$title || empty( $this->bookLookup->getBooksForPage( $title ) ) ) {
 			return false;
 		}
 
