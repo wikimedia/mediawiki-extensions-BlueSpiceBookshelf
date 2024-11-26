@@ -1,21 +1,21 @@
-( function ( mw, $, bs, d, undefined ) {
+( function ( mw ) {
 	const Vue = require( 'vue' );
-    const TreeApp = require( 'ext.vuejsplus-data-tree.vue' );
+	const TreeApp = require( 'ext.vuejsplus-data-tree.vue' );
 
 	function render() {
-        var h = Vue.h;
+		const h = Vue.h;
 
-		var treeData = mw.config.get( 'bsBookshelfTreeData' );
-		var config = require( './bookViewConfig.json' );
+		const treeData = mw.config.get( 'bsBookshelfTreeData' );
+		const config = require( './bookViewConfig.json' );
 
-		var treeTools = [];
-		var isSelecable = false;
-		var registeredTreeTools = config.tools;
-		var offset = config.offset;
+		const treeTools = [];
+		let isSelecable = false;
+		const registeredTreeTools = config.tools;
+		const offset = config.offset;
 		mw.user.getRights().done( function ( rights ) {
-			for ( var index = 0; index < registeredTreeTools.length; index++ ) {
-				let tool = registeredTreeTools[index];
-				if ( tool.permission !== '' && rights.indexOf( tool.permission ) <0 ) {
+			for ( let index = 0; index < registeredTreeTools.length; index++ ) {
+				const tool = registeredTreeTools[ index ];
+				if ( tool.permission !== '' && rights.indexOf( tool.permission ) < 0 ) {
 					continue;
 				}
 				if ( tool.selectable === true ) {
@@ -25,10 +25,10 @@
 			}
 
 			mw.loader.using( config.modules ).done( function () {
-				var vm = Vue.createMwApp( {
+				const vm = Vue.createMwApp( {
 					mounted: function () {
 					},
-					render: function() {
+					render: function () {
 						return h( TreeApp, {
 							class: '',
 							selectable: isSelecable,
@@ -50,4 +50,4 @@
 
 	render();
 
-} )( mediaWiki, jQuery, blueSpice, document );
+}( mediaWiki ) );
