@@ -389,6 +389,7 @@
 			]
 		},
 		"ext.bluespice.bookshelf.view": {
+			"es6": true,
 			"packageFiles": [
 				"bluespice.bookshelf.view.js",
 				{
