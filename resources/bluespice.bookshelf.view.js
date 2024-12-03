@@ -1,6 +1,6 @@
 ( function ( mw ) {
 	const Vue = require( 'vue' );
-	const TreeApp = require( 'ext.vuejsplus-data-tree.vue' );
+	const BookTree = require( './vue/components/BookTree.vue' );
 
 	function render() {
 		const h = Vue.h;
@@ -29,7 +29,7 @@
 					mounted: function () {
 					},
 					render: function () {
-						return h( TreeApp, {
+						return h( BookTree, {
 							class: '',
 							selectable: isSelecable,
 							selected: false,
