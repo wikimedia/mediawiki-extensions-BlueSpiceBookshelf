@@ -389,23 +389,24 @@
 			]
 		},
 		"ext.bluespice.bookshelf.view": {
-			"es6": true,
+			"class": "MediaWiki\\Extension\\VueJsPlus\\Module\\VueJsPlusModule",
+			"vueJsPlusComponents": [
+				"Tree"
+			],
 			"packageFiles": [
 				"bluespice.bookshelf.view.js",
 				{
 					"name": "bookViewConfig.json",
 					"callback": "BlueSpice\\Bookshelf\\ClientConfig::makeBookViewConfig"
-				}
+				},
+				"vue/components/BookTree.vue"
 			],
 			"styles": {
 				"bluespice.bookshelf.view.css": {}
 			},
-			"messages": [
-			],
 			"dependencies": [
 				"mediawiki.api",
-				"vue",
-				"ext.vuejsplus-data-tree.vue"
+				"vue"
 			]
 		},
 		"ext.bookshelf.booktreeexport": {
