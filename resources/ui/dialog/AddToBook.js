@@ -1,38 +1,33 @@
 ( function( mw, $, bs ) {
-	bs.util.registerNamespace( 'bs.bookshelf.dialog' );
+	bs.util.registerNamespace( 'bs.bookshelf.ui.dialog' );
 
-	bs.bookshelf.dialog.AddToBook = function( config ) {
+	bs.bookshelf.ui.dialog.AddToBook = function( config ) {
 		config.size = 'medium';
-		bs.bookshelf.dialog.AddToBook.parent.call( this, config );
+		bs.bookshelf.ui.dialog.AddToBook.parent.call( this, config );
 
 		this.pageName = config.pagename.replace( '_', ' ' );
 	};
 
-	OO.inheritClass( bs.bookshelf.dialog.AddToBook, OOJSPlus.ui.dialog.FormDialog );
+	OO.inheritClass( bs.bookshelf.ui.dialog.AddToBook, OOJSPlus.ui.dialog.FormDialog );
 
-	bs.bookshelf.dialog.AddToBook.prototype.getActions = function() {
+	bs.bookshelf.ui.dialog.AddToBook.prototype.getActions = function() {
 		return [ 'cancel', 'add' ];
 	};
 
-	bs.bookshelf.dialog.AddToBook.prototype.getTitle = function() {
+	bs.bookshelf.ui.dialog.AddToBook.prototype.getTitle = function() {
 		return mw.message( 'bs-bookshelf-add-to-book-label' ).plain();
 	};
 
-	bs.bookshelf.dialog.AddToBook.prototype.initialize = function() {
-		bs.bookshelf.dialog.AddToBook.parent.prototype.initialize.call( this );
+	bs.bookshelf.ui.dialog.AddToBook.prototype.initialize = function() {
+		bs.bookshelf.ui.dialog.AddToBook.parent.prototype.initialize.call( this );
 		this.actions.setAbilities( { add: false } );
 	};
 
-	bs.bookshelf.dialog.AddToBook.prototype.getFormItems = function() {
+	bs.bookshelf.ui.dialog.AddToBook.prototype.getFormItems = function() {
 		this.bookPicker = new OOJSPlus.ui.widget.StoreDataInputWidget( {
 			id: 'book-picker',
 			queryAction: 'bs-bookshelf-store',
 			labelField: 'book_displaytext',
-			groupBy: 'book_type',
-			groupLabelCallback: function( label, data ) {
-				var location = bs.bookshelf.storageLocationRegistry.lookup( label );
-				return location.getLabel();
-			},
 			$overlay: this.$overlay
 		} );
 		this.bookPicker.connect( this, {
@@ -67,7 +62,7 @@
 	 * @param string action
 	 * @returns OO.ui.Process|null if not handling
 	 */
-	bs.bookshelf.dialog.AddToBook.prototype.onAction = function( action ) {
+	bs.bookshelf.ui.dialog.AddToBook.prototype.onAction = function( action ) {
 		if ( action === 'add' ) {
 			var dfd = $.Deferred();
 			var selectedBook = this.bookPicker.getSelectedItemData();
@@ -106,7 +101,7 @@
 			return dfd.promise();
 		}
 
-		return bs.bookshelf.dialog.AddToBook.parent.prototype.onAction.call( this, action );
+		return bs.bookshelf.ui.dialog.AddToBook.parent.prototype.onAction.call( this, action );
 	};
 
 } ) ( mediaWiki, jQuery, blueSpice );

@@ -10,6 +10,7 @@ use BlueSpice\Bookshelf\BookSourceParser;
 use BlueSpice\Bookshelf\BookViewTreeDataBuilder;
 use BlueSpice\Bookshelf\Content\BookContent;
 use Content;
+use Exception;
 use Html;
 use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\MediaWikiServices;
@@ -94,8 +95,8 @@ class BookContentHandler extends TextContentHandler {
 				$this->setHtmlFrame( $output );
 				$output->addModules( [ 'ext.bluespice.bookshelf.view' ] );
 			}
-		} catch ( MWException $e ) {
-			$output->addWarningMsg( "bs-bookshelf-warning", $e->getText() );
+		} catch ( Exception $e ) {
+			$output->addWarningMsg( "bs-bookshelf-warning", $e->getMessage() );
 		}
 	}
 
