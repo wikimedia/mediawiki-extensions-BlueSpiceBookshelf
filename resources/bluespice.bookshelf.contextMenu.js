@@ -9,10 +9,8 @@
 			items.push({
 				iconCls: 'icon-book2',
 				text: mw.message('bs-bookshelfui-widget-editor-link-text').plain(),
-				href: mw.util.getUrl(
-					'Special:BookshelfBookEditor/' + title.getPrefixedText()
-				)
-			});
+				href: title.getUrl( { action: 'edit' } )
+			} );
 		}
 	});
 })( mediaWiki, jQuery, document );

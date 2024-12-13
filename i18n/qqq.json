@@ -42,7 +42,6 @@
 	"apihelp-bs-bookshelf-store-summary": "{{doc-apihelp-summary|bs-bookshelf-store}}",
 	"apihelp-query+bsbookshelf-summary": "{{doc-apihelp-summary|query+bsbookshelf}}",
 	"bs-bookshelf-pref-titledisplaytext-help": "Description for config variable \"BookshelfTitleDisplayText\"",
-	"bs-bookshelf-grouping-template-type-local_storage": "Label for book type \"local_storage\"",
 	"bs-bookshelf-grouping-template-type-ns_book": "Short label for the option \"namespace\" in the group selection combobox.\n{{Identical|General books}}",
 	"bs-bookshelf-action-editbook": "Label for action edit book.\n{{Identical|Edit source}}",
 	"bs-bookshelf-action-editbook-create": "Label for action edit book\n{{Identical|Edit source}}",
@@ -171,5 +170,7 @@
 	"bs-bookshelf-droplet-search-book-help": "Tag inspector field help in VisualEditor",
 	"bs-bookshelf-notification-subscription-set-book-title": "Label for the Notifications subscription set",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Error text in create new book dialog if book with this name already exists",
-	"bs-bookshelf-actionmenuentry-new-book": "Label for action menu entry to create a new book"
+	"bs-bookshelf-actionmenuentry-new-book": "Label for action menu entry to create a new book",
+	"bs-bookshelf-add-mass-tool-title": "Title for button which allows to add multiple pages to a book",
+	"bs-bookshelf-add-mass-tool-label": "Label for button which allows to add multiple pages to a book"
 }

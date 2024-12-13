@@ -33,7 +33,6 @@
 	"apihelp-bs-bookshelf-store-summary": "Lists all books. Allows sorting, filtering and pagination. Implements ExtJS Store parameters.",
 	"apihelp-query+bsbookshelf-summary": "Allows querying in all books.",
 	"bs-bookshelf-pref-titledisplaytext-help": "Shows the title from the book navigation as page title instead of the page name.",
-	"bs-bookshelf-grouping-template-type-local_storage": "Temporary books",
 	"bs-bookshelf-grouping-template-type-ns_book": "General books",
 	"bs-bookshelf-action-editbook": "Edit source",
 	"bs-bookshelf-action-editbook-create": "Edit source",
@@ -162,5 +161,7 @@
 	"bs-bookshelf-droplet-search-book-help": "Name of the book to search in",
 	"bs-bookshelf-notification-subscription-set-book-title": "Book",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "The book could not be created because a book with this name already exists",
-	"bs-bookshelf-actionmenuentry-new-book": "New book"
+	"bs-bookshelf-actionmenuentry-new-book": "New book",
+	"bs-bookshelf-add-mass-tool-title": "Add multiple pages",
+	"bs-bookshelf-add-mass-tool-label": "Add multiple pages to the book at once"
 }

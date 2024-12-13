@@ -7,8 +7,8 @@ ext.bookshelf.ui.tools.MassAddTool = function () {
 OO.inheritClass( ext.bookshelf.ui.tools.MassAddTool, OO.ui.Tool );
 ext.bookshelf.ui.tools.MassAddTool.static.name = 'massAdd';
 ext.bookshelf.ui.tools.MassAddTool.static.icon = 'articles';
-ext.bookshelf.ui.tools.MassAddTool.static.title = mw.message( 'bs-bookshelfui-extjs-tooltip-add-mass' ).text();
-ext.bookshelf.ui.tools.MassAddTool.static.label = mw.message( 'bs-bookshelfui-extjs-tooltip-add-mass' ).text();
+ext.bookshelf.ui.tools.MassAddTool.static.title = mw.message( 'bs-bookshelf-add-mass-tool-title' ).text();
+ext.bookshelf.ui.tools.MassAddTool.static.label = mw.message( 'bs-bookshelf-add-mass-tool-label' ).text();
 ext.bookshelf.ui.tools.MassAddTool.static.flags = [];
 ext.bookshelf.ui.tools.MassAddTool.static.displayBothIconAndLabel = true;
 
