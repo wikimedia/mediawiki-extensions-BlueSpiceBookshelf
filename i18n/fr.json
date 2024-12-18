@@ -48,7 +48,6 @@
 	"apihelp-bs-bookshelf-store-summary": "Liste tous les livres. Permet le tri, le filtrage et la pagination. Met en œuvre les paramètres <em>ExtJS Store</em>.",
 	"apihelp-query+bsbookshelf-summary": "Permet de requêter dans tous les livres.",
 	"bs-bookshelf-pref-titledisplaytext-help": "Affiche le titre de la navigation du livre comme titre de la page, plutôt que le nom de la page.",
-	"bs-bookshelf-grouping-template-type-local_storage": "Livres temporaires",
 	"bs-bookshelf-grouping-template-type-ns_book": "Livres généraux",
 	"bs-bookshelf-action-editbook": "Modifier la source",
 	"bs-bookshelf-action-editbook-create": "Modifier la source",
@@ -177,5 +176,7 @@
 	"bs-bookshelf-droplet-search-book-help": "Nom du livre dans lequel rechercher",
 	"bs-bookshelf-notification-subscription-set-book-title": "Livre",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Le livre n'a pas pu être créé car un livre portant ce nom existe déjà",
-	"bs-bookshelf-actionmenuentry-new-book": "Nouveau livre"
+	"bs-bookshelf-actionmenuentry-new-book": "Nouveau livre",
+	"bs-bookshelf-add-mass-tool-title": "Ajouter plusieurs pages",
+	"bs-bookshelf-add-mass-tool-label": "Ajouter plusieurs pages en même temps au livre"
 }

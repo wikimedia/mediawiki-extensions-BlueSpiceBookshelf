@@ -24,7 +24,6 @@
 	"bs-bookshelf-empty-selection": "선택된 항목 없음",
 	"apihelp-bs-bookshelf-store-summary": "모든 책을 나열합니다. 정렬, 필터링, 페이지 매기기를 허용합니다. ExtJS 스토어 변수들을 구현합니다.",
 	"apihelp-query+bsbookshelf-summary": "모든 책의 조회를 허용합니다.",
-	"bs-bookshelf-grouping-template-type-local_storage": "임시 책",
 	"bs-bookshelf-grouping-template-type-ns_book": "일반 책",
 	"bs-bookshelf-action-editbook": "원본 편집",
 	"bs-bookshelf-action-editbook-create": "원본 편집",
@@ -72,5 +71,6 @@
 	"bs-bookshelf-newbook-dlg-title": "새 책 만들기",
 	"bs-books-overview-page-edit-book-anchor-title": "책 $1 편집",
 	"bs-books-overview-page-edit-book-anchor-aria-label": "책 $1 편집",
-	"bs-bookshelf-massadd-dlg-save-action-label": "추가"
+	"bs-bookshelf-massadd-dlg-save-action-label": "추가",
+	"bs-bookshelf-add-mass-tool-title": "여러 문서 추가"
 }

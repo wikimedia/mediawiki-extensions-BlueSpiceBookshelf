@@ -16,7 +16,6 @@
 	"bs-bookshelf-empty-selection": "Ништо не е одбрано",
 	"apihelp-bs-bookshelf-store-summary": "Ги наведува сите книги. Овозможува подредување, филтрирање и страничење. Применува параметри за ExtJS Store.",
 	"apihelp-query+bsbookshelf-summary": "Овозможува барање во сите книги.",
-	"bs-bookshelf-grouping-template-type-local_storage": "Привремени книги",
 	"bs-bookshelf-grouping-template-type-ns_book": "Општи книги",
 	"bs-bookshelf-action-editbook": "Уреди извор",
 	"bs-bookshelf-action-editbook-create": "Уреди извор",

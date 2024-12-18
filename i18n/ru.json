@@ -42,7 +42,6 @@
 	"bs-bookshelf-setting-path-feature": "Книга",
 	"bs-bookshelf-empty-selection": "Ничего не выбрано",
 	"apihelp-query+bsbookshelf-summary": "Позволяет делать запросы ко всем книгам.",
-	"bs-bookshelf-grouping-template-type-local_storage": "Временные книги",
 	"bs-bookshelf-grouping-template-type-ns_book": "Основные книги",
 	"bs-bookshelf-action-editbook": "Править код",
 	"bs-bookshelf-action-editbook-create": "Править код",

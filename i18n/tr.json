@@ -40,7 +40,6 @@
 	"apihelp-bs-bookshelf-store-summary": "Tüm kitapları listeler. Sıralama, filtreleme ve sayfalandırmaya izin verir. ExtJS Store parametrelerini uygular.",
 	"apihelp-query+bsbookshelf-summary": "Tüm kitaplarda sorgulamaya izin verir.",
 	"bs-bookshelf-pref-titledisplaytext-help": "Kitap gezinme sayfasındaki başlığı sayfa adı yerine sayfa başlığı olarak gösterir.",
-	"bs-bookshelf-grouping-template-type-local_storage": "Geçici kitaplar",
 	"bs-bookshelf-grouping-template-type-ns_book": "Genel kitaplar",
 	"bs-bookshelf-action-editbook": "Kaynağı değiştir",
 	"bs-bookshelf-action-editbook-create": "Kaynağı değiştir",

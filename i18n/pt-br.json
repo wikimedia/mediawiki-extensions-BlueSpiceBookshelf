@@ -43,7 +43,6 @@
 	"apihelp-bs-bookshelf-store-summary": "Lista todos os livros. Permite classificação, filtragem e paginação. Implementa os parâmetros do ExtJS Store.",
 	"apihelp-query+bsbookshelf-summary": "Permite consultar em todos os livros.",
 	"bs-bookshelf-pref-titledisplaytext-help": "Mostra o título da navegação do livro como título da página, em vez do nome da página.",
-	"bs-bookshelf-grouping-template-type-local_storage": "Livros temporários",
 	"bs-bookshelf-grouping-template-type-ns_book": "Livros gerais",
 	"bs-bookshelf-action-editbook": "Editar fonte do livro",
 	"bs-bookshelf-action-editbook-create": "Editar fonte do livro",

@@ -37,7 +37,6 @@
 	"apihelp-bs-bookshelf-store-summary": "列出所有書籍。允許排序、篩選，以及分頁。執行 ExtJS 所儲存的變數。",
 	"apihelp-query+bsbookshelf-summary": "允許在所有書籍裡查詢。",
 	"bs-bookshelf-pref-titledisplaytext-help": "把來自書籍導航的標題顯示為頁面標題，而非頁面名稱。",
-	"bs-bookshelf-grouping-template-type-local_storage": "臨時書籍",
 	"bs-bookshelf-grouping-template-type-ns_book": "一般書籍",
 	"bs-bookshelf-action-editbook": "編輯書籍來源",
 	"bs-bookshelf-action-editbook-create": "建立書籍來源",

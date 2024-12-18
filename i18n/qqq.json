@@ -4,6 +4,7 @@
 			"Ajeje Brazorf",
 			"Amire80",
 			"BaRaN6161 TURK",
+			"Mahabarata",
 			"McDutchie",
 			"MuratTheTurkish",
 			"Raymond",
@@ -172,5 +173,5 @@
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Error text in create new book dialog if book with this name already exists",
 	"bs-bookshelf-actionmenuentry-new-book": "Label for action menu entry to create a new book",
 	"bs-bookshelf-add-mass-tool-title": "Title for button which allows to add multiple pages to a book",
-	"bs-bookshelf-add-mass-tool-label": "Label for button which allows to add multiple pages to a book"
+	"bs-bookshelf-add-mass-tool-label": "Description for button which allows to add multiple pages to a book"
 }
