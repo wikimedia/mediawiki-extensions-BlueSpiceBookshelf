@@ -1,11 +1,13 @@
 .bs-bookshelfui-chapter-pager-default-pnl {
-	padding: 15px 10px;
+	padding: 1rem;
 	margin: 0.5rem 0;
-	color: #333333;
-	background-color: rgba( 0, 0, 0, 0.05 );
+	color: #252525;
+	background-color: #f1f3f9;
+	border-radius: 0.375rem;
 }
 .bs-bookshelfui-chapter-pager-default-pnl .bs-chapter-pager-heading {
 	text-align: center;
+	margin: 0 15px;
 	border-bottom: 1px solid currentColor;
 }
 .bs-bookshelfui-chapter-pager-default-pnl .bs-chapter-pager-heading {
