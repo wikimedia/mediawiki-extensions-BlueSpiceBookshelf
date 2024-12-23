@@ -6,5 +6,7 @@
 	},
 	"bs-bookshelf-action-export-book": "ਕਿਤਾਬ ਬਰਾਮਦ ਕਰੋ",
 	"bs-books-overview-page-edit-book-anchor-title": "$1 ਕਿਤਾਬ ਦਾ ਸੋਧ ਕਰੋ",
-	"bs-books-overview-page-edit-book-anchor-aria-label": "$1 ਕਿਤਾਬ ਦਾ ਸੋਧ ਕਰੋ"
+	"bs-books-overview-page-edit-book-anchor-aria-label": "$1 ਕਿਤਾਬ ਦਾ ਸੋਧ ਕਰੋ",
+	"bs-bookshelf-add-mass-tool-title": "ਕਈ ਸਫ਼ੇ  ਜੋੜੋ",
+	"bs-bookshelf-add-mass-tool-label": "ਇੱਕੋ ਵਾਰ ਕਿਤਾਬ ਵਿੱਚ ਕਈ ਵਰਕੇ ਜੋੜੋ"
 }

@@ -72,5 +72,6 @@
 	"bs-books-overview-page-edit-book-anchor-title": "책 $1 편집",
 	"bs-books-overview-page-edit-book-anchor-aria-label": "책 $1 편집",
 	"bs-bookshelf-massadd-dlg-save-action-label": "추가",
-	"bs-bookshelf-add-mass-tool-title": "여러 문서 추가"
+	"bs-bookshelf-add-mass-tool-title": "여러 문서 추가",
+	"bs-bookshelf-add-mass-tool-label": "한 번에 여러 문서를 책에 추가합니다"
 }
