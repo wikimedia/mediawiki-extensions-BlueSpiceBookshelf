@@ -22,7 +22,6 @@
 	"bs-bookshelf-add-to-book-added": "\"$1\" könyvhöz hozzáadtad a lapot.",
 	"bs-bookshelf-setting-path-feature": "Könyv",
 	"bs-bookshelf-empty-selection": "Nincs kijelölés",
-	"bs-bookshelf-grouping-template-type-local_storage": "Ideiglenes könyvek",
 	"bs-bookshelf-action-editbook": "Forrás szerkesztése",
 	"bs-bookshelf-action-editbook-create": "Forrás szerkesztése",
 	"bs-bookshelf-action-export-book": "Könyv exportálása",

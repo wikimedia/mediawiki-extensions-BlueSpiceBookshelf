@@ -37,7 +37,6 @@
 	"apihelp-bs-bookshelf-store-summary": "רושמת את כל הספרים. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
 	"apihelp-query+bsbookshelf-summary": "אפשרות לשלוח שאילתה בכל הספרים.",
 	"bs-bookshelf-pref-titledisplaytext-help": "הצגת הכותרת מהניווט בספר ככותרת הדף במקום שם הדף.",
-	"bs-bookshelf-grouping-template-type-local_storage": "ספרים זמניים",
 	"bs-bookshelf-grouping-template-type-ns_book": "ספרים כללים",
 	"bs-bookshelf-action-editbook": "עריכת קוד מקור",
 	"bs-bookshelf-action-editbook-create": "עריכת קוד מקור",

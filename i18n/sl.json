@@ -34,7 +34,6 @@
 	"apihelp-bs-bookshelf-store-summary": "Navede vse knjige. Omogoča razvrščanje, filtriranje in paginacijo. Uvede parametre ExtJS Store.",
 	"apihelp-query+bsbookshelf-summary": "Omogoča poizvedovanje v vseh knjigah.",
 	"bs-bookshelf-pref-titledisplaytext-help": "Kot naslov strani namesto imena strani prikaže naslov iz navigacije knjige.",
-	"bs-bookshelf-grouping-template-type-local_storage": "Začasne knjige",
 	"bs-bookshelf-grouping-template-type-ns_book": "Splošne knjige",
 	"bs-bookshelf-action-editbook": "Uredi vir",
 	"bs-bookshelf-action-editbook-create": "Uredi vir",

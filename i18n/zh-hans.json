@@ -60,7 +60,6 @@
 	"apihelp-bs-bookshelf-store-summary": "列举所有书籍。允许排序、过滤和分页。执行ExtJS存储的参数。",
 	"apihelp-query+bsbookshelf-summary": "允许在所有书籍中进行查询。",
 	"bs-bookshelf-pref-titledisplaytext-help": "将书籍导航中的标题显示为页面标题，而非页面名称。",
-	"bs-bookshelf-grouping-template-type-local_storage": "临时的书籍",
 	"bs-bookshelf-grouping-template-type-ns_book": "通用图书",
 	"bs-bookshelf-action-editbook": "编辑源代码",
 	"bs-bookshelf-action-editbook-create": "编辑源代码",

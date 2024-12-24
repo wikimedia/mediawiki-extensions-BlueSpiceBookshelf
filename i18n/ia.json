@@ -33,7 +33,6 @@
 	"apihelp-bs-bookshelf-store-summary": "Lista tote le libros. Permitte ordinar, filtrar e paginar. Implementa parametros ExtJS Store.",
 	"apihelp-query+bsbookshelf-summary": "Permitte exequer consultas in tote le libros.",
 	"bs-bookshelf-pref-titledisplaytext-help": "Monstra le titulo de navigation del libro como le titulo del pagina in vice del nomine del pagina.",
-	"bs-bookshelf-grouping-template-type-local_storage": "Libros temporari",
 	"bs-bookshelf-grouping-template-type-ns_book": "Libros general",
 	"bs-bookshelf-action-editbook": "Modificar fonte",
 	"bs-bookshelf-action-editbook-create": "Modificar fonte",

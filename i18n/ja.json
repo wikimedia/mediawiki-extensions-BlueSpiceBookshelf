@@ -43,7 +43,6 @@
 	"apihelp-bs-bookshelf-store-summary": "すべてのカテゴリを一覧表示します。並べ替え、フィルターおよびページ区切りができます。ExtJS Store パラメーターを実装します。",
 	"apihelp-query+bsbookshelf-summary": "すべてのブックでクエリを実行できます。",
 	"bs-bookshelf-pref-titledisplaytext-help": "ページ名ではなく、ブックナビゲーションのタイトルをページタイトルとして表示します。",
-	"bs-bookshelf-grouping-template-type-local_storage": "一時トークン",
 	"bs-bookshelf-grouping-template-type-ns_book": "一般書籍",
 	"bs-bookshelf-action-editbook": "ソースを編集",
 	"bs-bookshelf-action-editbook-create": "ソースを編集",

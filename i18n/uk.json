@@ -38,7 +38,6 @@
 	"apihelp-bs-bookshelf-store-summary": "Перелічує всі книги. Дає можливість сортування, фільтрування та пагінації. Реалізовує параметри ExtJS Store.",
 	"apihelp-query+bsbookshelf-summary": "Дозволяє надсилання запитів у всіх книгах.",
 	"bs-bookshelf-pref-titledisplaytext-help": "Показує заголовок з навігації книгою як заголовок сторінки замість назви сторінки.",
-	"bs-bookshelf-grouping-template-type-local_storage": "Тимчасові книжки",
 	"bs-bookshelf-grouping-template-type-ns_book": "Загальні книжки",
 	"bs-bookshelf-action-editbook": "Редагувати код",
 	"bs-bookshelf-action-editbook-create": "Редагувати код",
