@@ -85,13 +85,19 @@ class ChapterPagerPanel extends Literal {
 	 */
 	public function shouldRender( $context ): bool {
 		$title = $context->getTitle();
+		$webRequestValues = $context->getRequest()->getValues();
 		if ( $title->isRedirect() ) {
-			$webRequestValues = $context->getRequest()->getValues();
 			if ( !isset( $webRequestValues['redirect'] ) || $webRequestValues['redirect'] !== 'no' ) {
 				$title = $context->getWikiPage()->getRedirectTarget();
 			}
 		}
 		if ( !$title || empty( $this->bookLookup->getBooksForPage( $title ) ) ) {
+			return false;
+		}
+		if ( isset( $webRequestValues['action'] ) && $webRequestValues['action'] !== 'view' ) {
+			return false;
+		}
+		if ( isset( $webRequestValues['diff'] ) ) {
 			return false;
 		}
 
