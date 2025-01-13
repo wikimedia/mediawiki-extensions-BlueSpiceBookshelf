@@ -172,14 +172,16 @@ class ChapterLookup {
 				$result->chapter_title
 			);
 
-			// Check if page property displaytitle is set
-			$name = $this->makeName( $title, $title->getText(), $db );
+			if ( $title->canExist() ) {
+				// Check if page property displaytitle is set
+				$name = $this->makeName( $title, $title->getText(), $db );
 
-			if ( $this->config->get( 'BookshelfTitleDisplayText' )
-				&& $result->chapter_name !== $title->getSubpageText()
-			) {
-				// reset to database value
-				$name = $result->chapter_name;
+				if ( $this->config->get( 'BookshelfTitleDisplayText' )
+					&& $result->chapter_name !== $title->getSubpageText()
+				) {
+					// reset to database value
+					$name = $result->chapter_name;
+				}
 			}
 		}
 
@@ -204,14 +206,16 @@ class ChapterLookup {
 				$result->chapter_title
 			);
 
-			// Check if page property displaytitle is set
-			$name = $this->makeName( $title, $title->getText(), $db );
+			if ( $title->canExist() ) {
+				// Check if page property displaytitle is set
+				$name = $this->makeName( $title, $title->getText(), $db );
 
-			if ( $this->config->get( 'BookshelfTitleDisplayText' )
-				&& $result->chapter_name !== $title->getText()
-			) {
-				// reset to database value
-				$name = $result->chapter_name;
+				if ( $this->config->get( 'BookshelfTitleDisplayText' )
+					&& $result->chapter_name !== $title->getText()
+				) {
+					// reset to database value
+					$name = $result->chapter_name;
+				}
 			}
 		}
 
