@@ -186,6 +186,31 @@
 					"services": [ "BSBookshelfBookLookup", "TitleFactory" ]
 				}
 			}
+		},
+		"PDFCreator": {
+			"ExportModeConfig": {
+				"book": {
+					"class": "BlueSpice\\Bookshelf\\Integration\\PDFCreator\\ExportMode\\Book",
+					"services": [
+						"BSBookshelfBookLookup",
+						"TitleFactory",
+						"BSBookshelfBookChapterLookup",
+						"BSBookshelfBookContextProviderFactory"
+					]
+				}
+			},
+			"ModuleProvider": {
+				"book": {
+					"class": "BlueSpice\\Bookshelf\\Integration\\PDFCreator\\Module\\Book",
+					"services": [
+						"PDFCreator.ExportPageFactory", "PDFCreator.TemplateProviderFactory",
+						"PDFCreator.BackendFactory", "PDFCreator.TargetFactory", "PDFCreator.MetaDataFactory",
+						"PDFCreator.ExportHtmlBuilder", "PDFCreator.PreProcessorFactory", "PDFCreator.ProcessorFactory",
+						"PDFCreator.PostProcessorFactory", "PDFCreator.ExportResourcesFactory",
+						"MainConfig", "TitleFactory", "PageProps"
+					]
+				}
+			}
 		}
 	},
 	"GroupPermissions": {
@@ -668,6 +693,11 @@
 			],
 			"dependencies": [
 				"ext.notifyme.subscription.set.bootstrap"
+			]
+		},
+		"ext.bluespice.bookshelf.book.plugin": {
+			"scripts": [
+				"bluespice.bookshelf.pdfcreator.plugin.js"
 			]
 		}
 	},

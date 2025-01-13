@@ -174,5 +174,6 @@
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Das Buch konnte nicht erstellt werden, da bereits ein Buch mit diesem Namen existiert",
 	"bs-bookshelf-actionmenuentry-new-book": "Neues Buch",
 	"bs-bookshelf-add-mass-tool-title": "Mehrere Seiten hinzufügen",
-	"bs-bookshelf-add-mass-tool-label": "Mehrere Seiten gleichzeitig zum Buch hinzufügen"
+	"bs-bookshelf-add-mass-tool-label": "Mehrere Seiten gleichzeitig zum Buch hinzufügen",
+	"bs-bookshelf-export-mode-book-label": "Buch"
 }
