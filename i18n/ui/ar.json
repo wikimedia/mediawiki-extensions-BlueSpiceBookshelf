@@ -98,5 +98,7 @@
 	"bs-bookshelfui-panel-navigation-text": "لحجز الملاحة",
 	"bs-bookshelfui-panel-navigation-title": "العودة إلى كتاب الملاحة",
 	"bs-bookshelfui-panel-navigation-aria-label": "لحجز الملاحة",
-	"bs-bookshelfui-panel-navigation-aria-desc": "التنقل في الكتاب كهيكل شجرة"
+	"bs-bookshelfui-panel-navigation-aria-desc": "التنقل في الكتاب كهيكل شجرة",
+	"bs-bookshelfui-bookmetatag-bookshelf": "رف الكتب",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "صورة رف الكتب"
 }
