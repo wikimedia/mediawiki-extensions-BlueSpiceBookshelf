@@ -295,6 +295,9 @@
 			"messages": [
 				"bs-bookshelfui-widget-editor-link-text",
 				"bs-bookshelf-grouping-template-type-ns_book"
+			],
+			"dependencies": [
+				"oojs-ui.styles.icons-editing-citation"
 			]
 		},
 		"ext.bluespice.bookshelf.view": {

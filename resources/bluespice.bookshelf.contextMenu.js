@@ -1,16 +1,14 @@
-(function( mw, $, d ){
-	$(d).on('BSContextMenuBeforeCreate', function( e, $anchor, items ) {
-		var bsTitle = $anchor.data('bs-title');
-		if( !bsTitle ) {
-			return;
-		}
-		var title = new mw.Title( bsTitle );
-		if( title.getNamespaceId() === bs.ns.NS_BOOK ) {
-			items.push({
-				iconCls: 'icon-book2',
-				text: mw.message('bs-bookshelfui-widget-editor-link-text').plain(),
-				href: title.getUrl( { action: 'edit' } )
-			} );
-		}
-	});
-})( mediaWiki, jQuery, document );
+$( document ).on( 'BSContextMenuGetItems', function( e, $element, items, forTitle ) {
+	var title = new mw.Title( forTitle );
+	if( title.getNamespaceId() === bs.ns.NS_BOOK ) {
+		items.push( {
+			id: 'bs-bookshelfui-widget-editor-link',
+			href: title.getUrl( { action: 'edit' } ),
+			label: mw.message( 'bs-bookshelfui-widget-editor-link-text' ).plain(),
+			icon: 'book',
+			primary: true,
+			overrides: 'bs-cm-item-edit',
+			flags: [ 'progressive' ]
+		} );
+	}
+} );
