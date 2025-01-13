@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Bookshelf\Tests;
 
-use ApiTestCase;
+use MediaWiki\Tests\Api\ApiTestCase;
 
 /**
  * @group Broken
