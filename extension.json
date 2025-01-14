@@ -820,7 +820,6 @@
 		"BSUEModulePDFgetPage": "ue-module-pdf",
 		"BSUEModulePDFcollectMetaData": "ue-module-pdf",
 		"BSUEModulePDFAfterFindFiles": "ue-module-pdf",
-		"BSBookshelfGetBookData": "\\BlueSpice\\Bookshelf\\Hook\\BSBookshelfGetBookData\\RunLegacyHook::callback",
 		"GetPreferences": "\\BlueSpice\\Bookshelf\\Hook\\GetPreferences\\BookshelfDefaultView::callback",
 		"SkinTemplateNavigation::Universal": [
 			"addAddToBookEntry",
