@@ -125,9 +125,6 @@
 				"booknav": {
 					"class": "\\BlueSpice\\Bookshelf\\ContentDroplets\\BookNavDroplet"
 				},
-				"bookpdf": {
-					"class": "\\BlueSpice\\Bookshelf\\ContentDroplets\\BookPDFDroplet"
-				},
 				"search_in_book": {
 					"class": "BlueSpice\\Bookshelf\\ContentDroplets\\SearchInBook"
 				}
@@ -413,26 +410,6 @@
 			],
 			"dependencies": [
 				"oojs-ui-core"
-			]
-		},
-		"ext.bluespice.bookshelf.droplet-bookpdf": {
-			"packageFiles": [
-				"object/BookPDFDroplet.js",
-				{
-					"name": "object/config.json",
-					"callback": "BlueSpice\\Bookshelf\\ClientConfig::makeConfigJson"
-				}
-			],
-			"styles": [
-				"bluespice.book-pdf.droplet.css"
-			],
-			"messages": [
-				"bs-bookshelf-droplet-pdf-book-label",
-				"bs-bookshelf-droplet-pdf-template-label",
-				"bs-bookshelf-droplet-pdf-link-label"
-			],
-			"dependencies": [
-				"ext.contentdroplets.bootstrap"
 			]
 		},
 		"ext.bluespice.books.special.vue": {
