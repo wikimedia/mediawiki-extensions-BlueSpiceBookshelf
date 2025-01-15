@@ -167,5 +167,17 @@
 	"bs-bookshelf-massadd-dlg-save-action-label": "Toevoegen",
 	"bs-bookshelf-droplet-search-name": "Zoek in een boek",
 	"bs-bookshelf-droplet-search-book": "Boek",
-	"bs-bookshelf-notification-subscription-set-book-title": "Boek"
+	"bs-bookshelf-notification-subscription-set-book-title": "Boek",
+	"bs-bookshelf-search-center-result-books-label": "Deel van {{PLURAL:$1|een boek|boeken}}",
+	"bs-books-overview-page-book-action-view-text": "Hoofdstukken",
+	"bs-books-overview-page-book-action-view-title": "Hoofdstukken van $1 bekijken",
+	"bs-books-overview-page-bookshelf-empty": "Er zijn geen boeken beschikbaar",
+	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|Eén boek|$1 boeken}} gevonden",
+	"bs-bookshelf-tag-searchinbook-error": "Geef een geldige boeknaam op",
+	"bs-bookshelf-droplet-search-description": "Zoeken naar pagina’s in een boek",
+	"bs-bookshelf-droplet-search-book-help": "Naam van het boek waarin gezocht moet worden",
+	"bs-bookshelf-newbook-dlg-error-book-exists": "Het boek kon niet worden aangemaakt omdat er al een boek met deze naam bestaat",
+	"bs-bookshelf-actionmenuentry-new-book": "Nieuw boek",
+	"bs-bookshelf-add-mass-tool-title": "Meerdere pagina’s toevoegen",
+	"bs-bookshelf-add-mass-tool-label": "Meerdere pagina’s tegelijk aan het boek toevoegen"
 }

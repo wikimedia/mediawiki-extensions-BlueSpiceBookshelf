@@ -8,7 +8,8 @@
 			"Rapsar",
 			"RuzDD",
 			"Sqances",
-			"ToprakM"
+			"ToprakM",
+			"Vito Genovese"
 		]
 	},
 	"bs-bookshelf-extension-description": "BlueSpice'in hiyerarşik madde koleksiyonlarını yönetmesini ve dışa aktarmasını sağlar.",
@@ -46,8 +47,8 @@
 	"bs-bookshelf-grouping-template-type-local_storage": "Geçici kitaplar",
 	"bs-bookshelf-grouping-template-type-ns_book": "Genel kitaplar",
 	"bs-bookshelf-grouping-template-type-user_book": "Sahip kitaplar",
-	"bs-bookshelf-action-editbook": "Kaynağı değiştir",
-	"bs-bookshelf-action-editbook-create": "Kaynağı değiştir",
+	"bs-bookshelf-action-editbook": "Kaynağı düzenle",
+	"bs-bookshelf-action-editbook-create": "Kaynağı düzenle",
 	"bs-bookshelf-action-export-book": "Kitabı dışa aktar",
 	"bs-bookshelf-edit-title": "\"$1\" sayfasını değiştirmektesiniz",
 	"bs-bookshelf-error-invalid-type": "Belirtilen kitap türü geçersiz",

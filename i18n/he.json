@@ -170,5 +170,7 @@
 	"bs-bookshelf-droplet-search-book-help": "שם הספר לחיפוש",
 	"bs-bookshelf-notification-subscription-set-book-title": "ספר",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "לא היה אפשר ליצור את הספר כי כבר קיים ספר בשם הזה",
-	"bs-bookshelf-actionmenuentry-new-book": "ספר חדש"
+	"bs-bookshelf-actionmenuentry-new-book": "ספר חדש",
+	"bs-bookshelf-add-mass-tool-title": "הוספה של כמה דפים",
+	"bs-bookshelf-add-mass-tool-label": "הוספה של כמה דפים בפעם אחת"
 }

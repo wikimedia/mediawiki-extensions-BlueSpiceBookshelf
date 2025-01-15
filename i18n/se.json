@@ -14,5 +14,13 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Veršuvdna",
 	"bs-bookshelf-add-to-book-label": "Lasit girjii",
 	"bs-bookshelf-actionmenuentry-addtobook": "Lasit girjii",
-	"bs-bookshelf-metadata-dlg-action-save-label": "Vurke"
+	"bs-bookshelf-metadata-dlg-action-save-label": "Vurke",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Girji",
+	"bs-bookshelf-booknav-book-label": "Girji",
+	"bs-bookshelf-search-center-filter-books-label": "Girji",
+	"bs-bookshelf-actionmenuentry-create-new-book": "Ráhkat ođđa girjji",
+	"bs-bookshelf-newbook-dlg-title": "Ráhkat ođđa girjji",
+	"bs-bookshelf-droplet-search-name": "Oza girjjis",
+	"bs-bookshelf-droplet-search-book": "Girji",
+	"bs-bookshelf-notification-subscription-set-book-title": "Girji"
 }
