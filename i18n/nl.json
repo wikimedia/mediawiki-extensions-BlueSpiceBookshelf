@@ -170,5 +170,7 @@
 	"bs-bookshelf-droplet-search-book-help": "Naam van het boek waarin gezocht moet worden",
 	"bs-bookshelf-notification-subscription-set-book-title": "Boek",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Het boek kon niet worden aangemaakt omdat er al een boek met deze naam bestaat",
-	"bs-bookshelf-actionmenuentry-new-book": "Nieuw boek"
+	"bs-bookshelf-actionmenuentry-new-book": "Nieuw boek",
+	"bs-bookshelf-add-mass-tool-title": "Meerdere pagina’s toevoegen",
+	"bs-bookshelf-add-mass-tool-label": "Meerdere pagina’s tegelijk aan het boek toevoegen"
 }

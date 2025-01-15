@@ -176,5 +176,7 @@
 	"bs-bookshelf-droplet-search-book-help": "Name des Buches, in dem gesucht werden soll",
 	"bs-bookshelf-notification-subscription-set-book-title": "Buch",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Das Buch konnte nicht erstellt werden, da bereits ein Buch mit diesem Namen existiert",
-	"bs-bookshelf-actionmenuentry-new-book": "Neues Buch"
+	"bs-bookshelf-actionmenuentry-new-book": "Neues Buch",
+	"bs-bookshelf-add-mass-tool-title": "Mehrere Seiten hinzufügen",
+	"bs-bookshelf-add-mass-tool-label": "Mehrere Seiten gleichzeitig zum Buch hinzufügen"
 }
