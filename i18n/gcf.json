@@ -11,8 +11,5 @@
 	"bs-bookshelf-booknav-chapter-help": "Chwazi on chapit pou vwè-y",
 	"bs-bookshelf-booknav-book-not-exist": "Liv $1 pa ka égzisté",
 	"bs-bookshelf-booknav-chapter-not-exist": "Chapit $1 pa ka égzisté",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Chèché",
-	"bs-bookshelf-droplet-pdf-name": "Lyen PDF a liv-la",
-	"bs-bookshelf-droplet-pdf-description": "Lyen ka téléchajé on Book kon PDF",
-	"bs-bookshelf-droplet-pdf-template-label": "Modèl PDF pou liv"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Chèché"
 }

@@ -41,8 +41,5 @@
 	"bs-bookshelf-action-editbook-create": "Sửa mã nguồn",
 	"bs-bookshelf-action-export-book": "Xuất cuốn sách",
 	"bs-bookshelf-edit-title": "Sửa đổi $1",
-	"bs-bookshelf-mainlinks-label": "Sách",
-	"bs-bookshelf-droplet-pdf-name": "Liên kết sách PDF",
-	"bs-bookshelf-droplet-pdf-description": "Liên kết tải sách dưới dạng PDF",
-	"bs-bookshelf-droplet-pdf-link-label": "Nhãn liên kết"
+	"bs-bookshelf-mainlinks-label": "Sách"
 }

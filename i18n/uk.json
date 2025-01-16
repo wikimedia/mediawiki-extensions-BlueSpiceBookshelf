@@ -96,10 +96,5 @@
 	"bs-bookshelf-booknav-chapter-help": "Виберіть розділ для показу",
 	"bs-bookshelf-booknav-book-not-exist": "Книга $1 не існує",
 	"bs-bookshelf-booknav-chapter-not-exist": "Розділ $1 не існує",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Пошук",
-	"bs-bookshelf-droplet-pdf-name": "Посилання на книгу PDF",
-	"bs-bookshelf-droplet-pdf-description": "Посилання для завантаження книги у форматі PDF",
-	"bs-bookshelf-droplet-pdf-book-label": "Книга для експорту",
-	"bs-bookshelf-droplet-pdf-template-label": "PDF шаблон книги",
-	"bs-bookshelf-droplet-pdf-link-label": "Текст посилання"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Пошук"
 }

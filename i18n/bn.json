@@ -25,10 +25,6 @@
 	"bs-bookshelf-booknav-book-not-exist": "বই $1 বিদ্যমান নেই",
 	"bs-bookshelf-booknav-chapter-not-exist": "অধ্যায় $1 বিদ্যমান নেই",
 	"bs-bookshelf-booknav-searchbox-placeholder": "অনুসন্ধান",
-	"bs-bookshelf-droplet-pdf-name": "বইয়ের পিডিএফ লিঙ্ক",
-	"bs-bookshelf-droplet-pdf-book-label": "রপ্তানির বই",
-	"bs-bookshelf-droplet-pdf-template-label": "বই পিডিএফ টেমপ্লেট",
-	"bs-bookshelf-droplet-pdf-link-label": "সংযোগ স্তর",
 	"bs-bookshelf-search-center-filter-books-label": "বই",
 	"bs-books-overview-page-book-action-view-text": "অধ্যায়",
 	"bs-bookshelf-actionmenuentry-new-book": "নতুন বই"
