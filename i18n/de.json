@@ -196,5 +196,7 @@
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Zeigt den Untertitel des Buches",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Zeigt den Dokumententyp",
 	"bs-bookshelf-export-pageparam-desc-version": "Zeigt die Version des Buches",
-	"bs-bookshelf-export-pdf-notification-done": "PDF-Export abgeschlossen"
+	"bs-bookshelf-export-pdf-notification-done": "PDF-Export abgeschlossen",
+	"bs-bookshelf-pref-prependpage-toc-numbers-label": "Kapitelnummern zu Inhaltsverzeichnissen und Überschriften hinzufügen",
+	"bs-bookshelf-pref-prependpage-toc-numbers-help": "Zeigt die Kapitelnummern des Buches im Inhaltsverzeichnis und für alle Überschriften der Seite an"
 }
