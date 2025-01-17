@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\MenuEditor\Node;
 
 use MediaWiki\Extension\MenuEditor\Node\MenuNode;
+use MediaWiki\Title\Title;
 
 class ChapterWikiLinkWithAlias extends MenuNode {
 	/** @var \TitleFactory */
@@ -96,7 +97,7 @@ class ChapterWikiLinkWithAlias extends MenuNode {
 	 */
 	protected function isValidPageName( $target ) {
 		$title = $this->titleFactory->newFromText( $target );
-		return $title instanceof \Title;
+		return $title instanceof Title;
 	}
 
 	/**

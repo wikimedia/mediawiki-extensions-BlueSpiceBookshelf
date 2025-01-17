@@ -14,10 +14,10 @@ use Exception;
 use Html;
 use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use MWException;
 use ParserOutput;
 use TextContentHandler;
-use Title;
 use TitleFactory;
 
 class BookContentHandler extends TextContentHandler {

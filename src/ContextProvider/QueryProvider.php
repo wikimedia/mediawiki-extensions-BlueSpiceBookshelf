@@ -5,7 +5,7 @@ namespace BlueSpice\Bookshelf\ContextProvider;
 use BlueSpice\Bookshelf\IBookContextProvider;
 use MediaWiki\Session\Session;
 use MediaWiki\Session\SessionManager;
-use Title;
+use MediaWiki\Title\Title;
 use TitleFactory;
 use WebRequest;
 

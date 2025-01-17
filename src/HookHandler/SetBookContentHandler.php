@@ -4,8 +4,8 @@ namespace BlueSpice\Bookshelf\HookHandler;
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRoleRegistry;
+use MediaWiki\Title\Title;
 use RequestContext;
-use Title;
 
 class SetBookContentHandler {
 

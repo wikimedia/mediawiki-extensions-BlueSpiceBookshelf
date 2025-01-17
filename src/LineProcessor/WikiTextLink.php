@@ -5,7 +5,7 @@ namespace BlueSpice\Bookshelf\LineProcessor;
 use BlueSpice\Bookshelf\ILineProcessor;
 use BlueSpice\Bookshelf\TreeNode;
 use MediaWiki\MediaWikiServices;
-use Title;
+use MediaWiki\Title\Title;
 
 class WikiTextLink extends LineProcessorBase implements ILineProcessor {
 	/**

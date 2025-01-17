@@ -3,8 +3,8 @@
 namespace BlueSpice\Bookshelf\BooksOverviewActions;
 
 use BlueSpice\Bookshelf\IBooksOverviewAction;
+use MediaWiki\Title\Title;
 use Message;
-use Title;
 
 class Delete implements IBooksOverviewAction {
 

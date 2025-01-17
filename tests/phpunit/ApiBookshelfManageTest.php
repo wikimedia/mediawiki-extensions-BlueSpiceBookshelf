@@ -3,7 +3,7 @@
 namespace BlueSpice\Bookshelf\Tests;
 
 use BlueSpice\Tests\BSApiTasksTestBase;
-use Title;
+use MediaWiki\Title\Title;
 
 /**
  * @group medium

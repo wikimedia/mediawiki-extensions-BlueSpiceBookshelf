@@ -2,9 +2,9 @@
 
 namespace BlueSpice\Bookshelf\Tests;
 
+use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
 use PageHierarchyProvider;
-use Title;
 
 /**
  * @group BlueSpice

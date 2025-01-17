@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Bookshelf;
 
-use Title;
+use MediaWiki\Title\Title;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\LoadBalancer;
 

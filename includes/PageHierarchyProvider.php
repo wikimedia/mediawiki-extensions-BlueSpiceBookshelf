@@ -3,6 +3,7 @@
 use BlueSpice\Bookshelf\ILineProcessor;
 use BlueSpice\ExtensionAttributeBasedRegistry;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 
 /**
  * Provide book hierarchy for a page
@@ -324,7 +325,7 @@ class PageHierarchyProvider {
 	 */
 	public function getNumberFor( $sArticleTitle, $recurseFlag = false ) {
 		$cacheKey = $this->getCacheKey(
-			\Title::newFromText( $sArticleTitle ),
+			Title::newFromText( $sArticleTitle ),
 			__METHOD__
 		);
 		$number = $this->cache->get( $cacheKey );
@@ -582,7 +583,7 @@ class PageHierarchyProvider {
 
 	/**
 	 *
-	 * @param \Title $title
+	 * @param Title $title
 	 * @param string $method
 	 * @param array $aParams
 	 * @return string

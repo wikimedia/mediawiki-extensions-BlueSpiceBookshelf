@@ -3,7 +3,7 @@
 namespace BlueSpice\Bookshelf;
 
 use MediaWiki\HookContainer\HookContainer;
-use Title;
+use MediaWiki\Title\Title;
 use TitleFactory;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\ILoadBalancer;

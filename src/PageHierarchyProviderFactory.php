@@ -6,9 +6,9 @@ use BsPageContentProvider;
 use BsTagFinder;
 use DynamicPageHierarchyProvider;
 use InvalidArgumentException;
+use MediaWiki\Title\Title;
 use MWException;
 use PageHierarchyProvider;
-use Title;
 
 class PageHierarchyProviderFactory {
 	/** @var array */

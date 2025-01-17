@@ -3,7 +3,7 @@
 namespace BlueSpice\Bookshelf\HookHandler;
 
 use MediaWiki\Hook\PageMoveCompleteHook;
-use Title;
+use MediaWiki\Title\Title;
 use TitleFactory;
 use Wikimedia\Rdbms\LoadBalancer;
 

@@ -4,11 +4,11 @@ namespace BlueSpice\Bookshelf;
 
 use Exception;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use Message;
 use MWException;
 use RequestContext;
 use stdClass;
-use Title;
 use WebRequest;
 
 class BookEditData {
