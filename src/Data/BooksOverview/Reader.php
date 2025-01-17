@@ -8,11 +8,11 @@ use Config;
 use IContextSource;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\DataStore\ReaderParams;
 use RepoGroup;
 use RequestContext;
 use TitleFactory;
-use User;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
