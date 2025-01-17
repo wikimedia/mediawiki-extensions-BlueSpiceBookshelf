@@ -3,7 +3,7 @@
 namespace BlueSpice\Bookshelf;
 
 use Html;
-use Title;
+use MediaWiki\Title\Title;
 use TitleFactory;
 
 class ChapterPager {

@@ -10,9 +10,9 @@ use ConfigFactory;
 use DOMElement;
 use DOMXPath;
 use MediaWiki\HookContainer\HookContainer;
+use MediaWiki\Title\Title;
 use PDFFileResolver;
 use RepoGroup;
-use Title;
 use TitleFactory;
 
 class UEModulePDF {

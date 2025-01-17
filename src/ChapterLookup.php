@@ -3,8 +3,8 @@
 namespace BlueSpice\Bookshelf;
 
 use ConfigFactory;
+use MediaWiki\Title\Title;
 use stdClass;
-use Title;
 use TitleFactory;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\LoadBalancer;

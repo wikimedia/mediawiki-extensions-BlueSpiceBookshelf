@@ -7,8 +7,8 @@ use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\ChapterPager;
 use Html;
+use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
-use Title;
 use TitleFactory;
 
 class ChapterPagerPanel extends Literal {

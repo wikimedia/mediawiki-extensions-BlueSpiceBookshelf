@@ -1,6 +1,7 @@
 <?php
 
 use BlueSpice\Api\Response\Standard;
+use MediaWiki\Title\Title;
 
 class ApiBookshelfManage extends BSApiTasksBase {
 

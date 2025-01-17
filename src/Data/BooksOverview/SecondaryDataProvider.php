@@ -13,8 +13,8 @@ use BlueSpice\Bookshelf\IBooksOverviewAction;
 use Config;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Title\Title;
 use RepoGroup;
-use Title;
 use TitleFactory;
 use User;
 

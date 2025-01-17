@@ -3,7 +3,7 @@
 namespace BlueSpice\Bookshelf;
 
 use BlueSpice\Bookshelf\ContextProvider\DefaultProvider;
-use Title;
+use MediaWiki\Title\Title;
 use TitleFactory;
 use Wikimedia\ObjectFactory\ObjectFactory;
 

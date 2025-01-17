@@ -5,8 +5,8 @@ namespace BlueSpice\Bookshelf\Action;
 use BlueSpice\Bookshelf\BookEditData;
 use EditAction;
 use Html;
+use MediaWiki\Title\Title;
 use Message;
-use Title;
 
 class BookEditAction extends EditAction {
 	/** @var string|bool */
