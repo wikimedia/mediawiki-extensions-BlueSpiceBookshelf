@@ -103,11 +103,6 @@
 	"bs-bookshelf-booknav-book-not-exist": "書籍「$1」は存在しません",
 	"bs-bookshelf-booknav-chapter-not-exist": "章「$1」は存在しません",
 	"bs-bookshelf-booknav-searchbox-placeholder": "検索",
-	"bs-bookshelf-droplet-pdf-name": "書籍のPDFリンク",
-	"bs-bookshelf-droplet-pdf-description": "書籍を PDF としてダウンロードするリンク",
-	"bs-bookshelf-droplet-pdf-book-label": "エクスポートする本",
-	"bs-bookshelf-droplet-pdf-template-label": "書籍の PDF テンプレート",
-	"bs-bookshelf-droplet-pdf-link-label": "リンクラベル",
 	"bs-books-overview-page-book-action-edit-text": "編集",
 	"bs-books-overview-page-book-action-delete-text": "削除"
 }
