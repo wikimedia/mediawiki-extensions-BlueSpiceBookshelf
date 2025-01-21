@@ -10,9 +10,9 @@ use BlueSpice\Bookshelf\Panel\MainLinkPanel;
 use BlueSpice\Bookshelf\Panel\SidebarBookPanel;
 use ConfigFactory;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\Hook\MWStakeCommonUIRegisterSkinSlotComponents;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
-use TitleFactory;
 
 class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 

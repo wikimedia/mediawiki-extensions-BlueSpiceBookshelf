@@ -12,7 +12,7 @@ use MediaWiki\Extension\MenuEditor\Node\MenuNode;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Storage\PageUpdater;
-use TitleFactory;
+use MediaWiki\Title\TitleFactory;
 
 class BookSourceParser extends WikitextMenuParser {
 

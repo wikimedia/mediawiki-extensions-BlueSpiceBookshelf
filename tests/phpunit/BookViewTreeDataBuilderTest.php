@@ -5,8 +5,8 @@ namespace BlueSpice\Bookshelf\Tests;
 use BlueSpice\Bookshelf\BookViewTreeDataBuilder;
 use BlueSpice\Bookshelf\ChapterDataModel;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\TitleFactory;
 use PHPUnit\Framework\TestCase;
-use TitleFactory;
 
 /**
  * @group BlueSpice

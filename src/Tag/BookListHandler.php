@@ -7,9 +7,9 @@ use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Tag\Handler;
 use Html;
 use MediaWiki\Linker\LinkRenderer;
+use MediaWiki\Title\TitleFactory;
 use Parser;
 use PPFrame;
-use TitleFactory;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class BookListHandler extends Handler {

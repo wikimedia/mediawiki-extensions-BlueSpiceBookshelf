@@ -3,7 +3,7 @@
 namespace BlueSpice\Bookshelf;
 
 use MediaWiki\Title\Title;
-use TitleFactory;
+use MediaWiki\Title\TitleFactory;
 
 class TreeDataProvider {
 

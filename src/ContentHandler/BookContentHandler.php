@@ -15,10 +15,10 @@ use Html;
 use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 use MWException;
 use ParserOutput;
 use TextContentHandler;
-use TitleFactory;
 
 class BookContentHandler extends TextContentHandler {
 

@@ -10,9 +10,9 @@ use MediaWiki\Extension\MenuEditor\ParsableMenu;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 use MWException;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
-use TitleFactory;
 
 class BookEditor extends GenericMenu implements ParsableMenu, EditPermissionProvider {
 

@@ -11,9 +11,9 @@ use DOMElement;
 use DOMXPath;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 use PDFFileResolver;
 use RepoGroup;
-use TitleFactory;
 
 class UEModulePDF {
 
