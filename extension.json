@@ -800,7 +800,6 @@
 		"BSUEModulePDFgetPage": "ue-module-pdf",
 		"BSUEModulePDFcollectMetaData": "ue-module-pdf",
 		"BSUEModulePDFAfterFindFiles": "ue-module-pdf",
-		"GetPreferences": "\\BlueSpice\\Bookshelf\\Hook\\GetPreferences\\BookshelfDefaultView::callback",
 		"SkinTemplateNavigation::Universal": [
 			"addAddToBookEntry",
 			"addEditBook",
