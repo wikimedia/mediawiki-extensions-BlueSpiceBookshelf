@@ -1,6 +1,6 @@
 {
 	"name": "BlueSpiceBookshelf",
-	"version": "4.5",
+	"version": "5.0.0",
 	"license-name": "GPL-3.0-only",
 	"url": "https://en.wiki.bluespice.com/wiki/Reference:BlueSpiceBookshelf",
 	"author": [
@@ -12,7 +12,7 @@
 	"requires": {
 		"MediaWiki": ">= 1.43.0",
 		"extensions": {
-			"BlueSpiceFoundation": ">= 4.5",
+			"BlueSpiceFoundation": ">= 5.0.0",
 			"MenuEditor": ">= 3.0.0",
 			"VueJsPlus": ">=1.0.0"
 		}
