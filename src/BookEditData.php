@@ -5,9 +5,9 @@ namespace BlueSpice\Bookshelf;
 use Exception;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\Title\Title;
-use Message;
 use MWException;
 use stdClass;
 

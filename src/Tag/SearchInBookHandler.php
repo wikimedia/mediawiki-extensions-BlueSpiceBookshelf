@@ -7,7 +7,7 @@ use BS\ExtendedSearch\Lookup;
 use BS\ExtendedSearch\Tag\TagSearchHandler;
 use Config;
 use Exception;
-use Message;
+use MediaWiki\Message\Message;
 use Parser;
 use PPFrame;
 

@@ -9,7 +9,7 @@ use BlueSpice\Tag\IHandler;
 use BS\ExtendedSearch\Tag\TagSearch;
 use ConfigException;
 use MediaWiki\MediaWikiServices;
-use Message;
+use MediaWiki\Message\Message;
 use Parser;
 use PPFrame;
 
