@@ -9,9 +9,9 @@ use BlueSpice\Bookshelf\Panel\ChapterPagerPanel;
 use BlueSpice\Bookshelf\Panel\MainLinkPanel;
 use BlueSpice\Bookshelf\Panel\SidebarBookPanel;
 use ConfigFactory;
+use MediaWiki\Context\RequestContext;
 use MWStake\MediaWiki\Component\CommonUserInterface\Hook\MWStakeCommonUIRegisterSkinSlotComponents;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
-use RequestContext;
 use TitleFactory;
 
 class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {

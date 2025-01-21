@@ -2,10 +2,10 @@
 
 namespace BlueSpice\Bookshelf\HookHandler;
 
+use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRoleRegistry;
 use MediaWiki\Title\Title;
-use RequestContext;
 
 class SetBookContentHandler {
 
