@@ -8,10 +8,10 @@ use Config;
 use IContextSource;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\DataStore\IStore;
 use MWStake\MediaWiki\Component\DataStore\NoWriterException;
 use RepoGroup;
-use TitleFactory;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class Store implements IStore {

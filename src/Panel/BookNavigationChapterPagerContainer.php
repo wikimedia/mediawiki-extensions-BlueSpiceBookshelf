@@ -6,8 +6,8 @@ use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\ChapterPager;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
-use TitleFactory;
 
 class BookNavigationChapterPagerContainer extends Literal {
 

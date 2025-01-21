@@ -7,7 +7,7 @@ use MediaWiki\Request\WebRequest;
 use MediaWiki\Session\Session;
 use MediaWiki\Session\SessionManager;
 use MediaWiki\Title\Title;
-use TitleFactory;
+use MediaWiki\Title\TitleFactory;
 
 class QueryProvider implements IBookContextProvider {
 

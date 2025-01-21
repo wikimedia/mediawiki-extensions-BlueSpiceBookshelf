@@ -22,8 +22,8 @@ use BS\ExtendedSearch\Source\WikiPages;
 use IContextSource;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Page\PageIdentity;
+use MediaWiki\Title\TitleFactory;
 use Message;
-use TitleFactory;
 use WikiPage;
 
 class Books implements

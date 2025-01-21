@@ -10,7 +10,7 @@ use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Rest\SimpleHandler;
 use MediaWiki\Rest\Validator\JsonBodyValidator;
 use MediaWiki\Revision\SlotRecord;
-use TitleFactory;
+use MediaWiki\Title\TitleFactory;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class PostBookMetadata extends SimpleHandler {

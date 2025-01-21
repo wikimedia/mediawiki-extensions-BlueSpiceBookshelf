@@ -4,7 +4,7 @@ namespace BlueSpice\Bookshelf\HookHandler;
 
 use MediaWiki\Hook\PageMoveCompleteHook;
 use MediaWiki\Title\Title;
-use TitleFactory;
+use MediaWiki\Title\TitleFactory;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class ChapterMove implements PageMoveCompleteHook {

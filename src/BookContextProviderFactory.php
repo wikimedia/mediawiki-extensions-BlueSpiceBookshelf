@@ -4,7 +4,7 @@ namespace BlueSpice\Bookshelf;
 
 use BlueSpice\Bookshelf\ContextProvider\DefaultProvider;
 use MediaWiki\Title\Title;
-use TitleFactory;
+use MediaWiki\Title\TitleFactory;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
 class BookContextProviderFactory {

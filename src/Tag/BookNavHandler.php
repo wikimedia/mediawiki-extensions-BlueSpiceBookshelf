@@ -8,11 +8,11 @@ use BlueSpice\Bookshelf\Panel\BookNavigationTreeContainer;
 use BlueSpice\Bookshelf\Renderer\ComponentRenderer;
 use BlueSpice\Tag\Handler;
 use Html;
+use MediaWiki\Title\TitleFactory;
 use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
 use Parser;
 use PPFrame;
-use TitleFactory;
 
 class BookNavHandler extends Handler {
 

@@ -4,7 +4,7 @@ namespace BlueSpice\Bookshelf;
 
 use Html;
 use MediaWiki\Title\Title;
-use TitleFactory;
+use MediaWiki\Title\TitleFactory;
 
 class ChapterPager {
 	/** @var Title */
