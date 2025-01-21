@@ -5,11 +5,11 @@ namespace BlueSpice\Bookshelf\Rest;
 use CommentStoreComment;
 use FormatJson;
 use JsonContent;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Rest\SimpleHandler;
 use MediaWiki\Rest\Validator\JsonBodyValidator;
 use MediaWiki\Revision\SlotRecord;
-use RequestContext;
 use TitleFactory;
 use Wikimedia\ParamValidator\ParamValidator;
 

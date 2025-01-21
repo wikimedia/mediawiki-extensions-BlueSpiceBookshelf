@@ -6,12 +6,12 @@ use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use Config;
 use IContextSource;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\DataStore\ReaderParams;
 use RepoGroup;
-use RequestContext;
 use TitleFactory;
 use Wikimedia\Rdbms\LoadBalancer;
 
