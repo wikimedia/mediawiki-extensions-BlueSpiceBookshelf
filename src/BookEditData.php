@@ -5,11 +5,11 @@ namespace BlueSpice\Bookshelf;
 use Exception;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Request\WebRequest;
 use MediaWiki\Title\Title;
 use Message;
 use MWException;
 use stdClass;
-use WebRequest;
 
 class BookEditData {
 	/** @var array Type => basedOnTitle */
