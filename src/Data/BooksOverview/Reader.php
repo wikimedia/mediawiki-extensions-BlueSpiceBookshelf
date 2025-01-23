@@ -4,8 +4,8 @@ namespace BlueSpice\Bookshelf\Data\BooksOverview;
 
 use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
-use Config;
 use IContextSource;
+use MediaWiki\Config\Config;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;

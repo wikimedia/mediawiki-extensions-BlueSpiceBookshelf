@@ -3,7 +3,7 @@
 namespace BlueSpice\Bookshelf\Tag;
 
 use BlueSpice\Tag\Handler;
-use Config;
+use MediaWiki\Config\Config;
 use Parser;
 use PPFrame;
 

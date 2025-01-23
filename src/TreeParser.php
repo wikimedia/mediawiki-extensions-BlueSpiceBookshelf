@@ -3,8 +3,8 @@
 namespace BlueSpice\Bookshelf;
 
 use BlueSpice\ExtensionAttributeBasedRegistry;
-use Config;
 use FormatJson;
+use MediaWiki\Config\Config;
 
 class TreeParser {
 

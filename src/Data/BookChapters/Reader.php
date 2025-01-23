@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Bookshelf\Data\BookChapters;
 
-use Config;
 use IContextSource;
+use MediaWiki\Config\Config;
 use MediaWiki\MediaWikiServices;
 use MWStake\MediaWiki\Component\DataStore\ReaderParams;
 use Wikimedia\Rdbms\LoadBalancer;

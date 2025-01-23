@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf;
 
 use ConfigFactory;
+use MediaWiki\Config\Config;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use stdClass;

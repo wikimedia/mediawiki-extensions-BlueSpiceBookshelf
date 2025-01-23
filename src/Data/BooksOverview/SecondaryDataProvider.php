@@ -10,7 +10,7 @@ use BlueSpice\Bookshelf\BooksOverviewActions\View;
 use BlueSpice\Bookshelf\ChapterDataModel;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\IBooksOverviewAction;
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;

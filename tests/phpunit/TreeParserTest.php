@@ -4,6 +4,7 @@ namespace BlueSpice\Bookshelf\Tests;
 
 use BlueSpice\Bookshelf\TreeParser;
 use FormatJson;
+use MediaWiki\Config\Config;
 use MediaWiki\MediaWikiServices;
 use PHPUnit\Framework\TestCase;
 
@@ -21,7 +22,7 @@ class TreeParserTest extends TestCase {
 	 * @covers \BlueSpice\Bookshelf\TreeParser::__construct
 	 */
 	public function testContructor() {
-		$mockConfig = $this->createMock( 'Config' );
+		$mockConfig = $this->createMock( Config::class );
 		$mockRegistry = $this->createMock( '\BlueSpice\ExtensionAttributeBasedRegistry' );
 		$mockRegistry->expects( $this->any() )
 			->method( 'getAllValues' )
