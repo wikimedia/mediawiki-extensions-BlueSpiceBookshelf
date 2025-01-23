@@ -4,8 +4,8 @@ namespace BlueSpice\Bookshelf\Data\BooksOverview;
 
 use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
-use IContextSource;
 use MediaWiki\Config\Config;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\TitleFactory;
@@ -16,7 +16,7 @@ use Wikimedia\Rdbms\LoadBalancer;
 
 class Store implements IStore {
 
-	/** @var \IContextSource */
+	/** @var IContextSource */
 	protected $context = null;
 
 	/** @var Config */

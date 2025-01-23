@@ -19,7 +19,7 @@ use BS\ExtendedSearch\Plugin\ISearchPlugin;
 use BS\ExtendedSearch\SearchResult;
 use BS\ExtendedSearch\Source\DocumentProvider\WikiPage as WikiPageProvider;
 use BS\ExtendedSearch\Source\WikiPages;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Message\Message;
 use MediaWiki\Page\PageIdentity;
