@@ -7,7 +7,7 @@ use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\Panel\BookNavigationTreeContainer;
 use BlueSpice\Bookshelf\Renderer\ComponentRenderer;
 use BlueSpice\Tag\Handler;
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
