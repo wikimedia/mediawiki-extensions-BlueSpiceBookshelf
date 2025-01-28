@@ -6,7 +6,7 @@ use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\ChapterPager;
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;

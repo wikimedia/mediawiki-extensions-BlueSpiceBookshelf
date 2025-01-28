@@ -4,7 +4,7 @@ namespace BlueSpice\Bookshelf\Action;
 
 use BlueSpice\Bookshelf\BookEditData;
 use EditAction;
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
 
