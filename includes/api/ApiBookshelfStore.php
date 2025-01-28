@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Api\ApiMain;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Title\Title;
 use Wikimedia\ParamValidator\ParamValidator;
@@ -14,7 +15,7 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 
 	/**
 	 *
-	 * @param \ApiMain $mainModule
+	 * @param ApiMain $mainModule
 	 * @param string $moduleName
 	 * @param string $modulePrefix
 	 */
