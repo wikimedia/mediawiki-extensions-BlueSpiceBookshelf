@@ -12,13 +12,13 @@ use BlueSpice\Bookshelf\Content\BookContent;
 use Content;
 use Exception;
 use MediaWiki\Content\Renderer\ContentParseParams;
+use MediaWiki\Content\TextContentHandler;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MWException;
-use TextContentHandler;
 
 class BookContentHandler extends TextContentHandler {
 
