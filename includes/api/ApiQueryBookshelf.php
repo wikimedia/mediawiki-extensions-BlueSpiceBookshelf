@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Api\ApiQueryBase;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 
