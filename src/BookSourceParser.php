@@ -6,7 +6,7 @@ use BlueSpice\Bookshelf\Content\BookContent;
 use BlueSpice\Bookshelf\MenuEditor\Node\ChapterPlainText;
 use BlueSpice\Bookshelf\MenuEditor\Node\ChapterWikiLinkWithAlias;
 use Content;
-use JsonContent;
+use MediaWiki\Content\JsonContent;
 use MediaWiki\Extension\MenuEditor\Node\MenuNode;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Json\FormatJson;
