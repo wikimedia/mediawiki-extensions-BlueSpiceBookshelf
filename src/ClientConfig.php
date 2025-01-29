@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Bookshelf;
 
-use ExtensionRegistry;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\ResourceLoader\Context;
 use MWStake\MediaWiki\Component\ManifestRegistry\ManifestAttributeBasedRegistry;
 use stdClass;
@@ -36,7 +36,7 @@ class ClientConfig {
 			];
 			$modules = array_merge( $modules, $object->getRLModules() );
 		}
-		array_unique( $modules );
+		$modules = array_unique( $modules );
 		return [
 			'modules' => $modules,
 			'pages' => $pages
@@ -147,5 +147,32 @@ class ClientConfig {
 		$pages = array_values( $pages );
 
 		return $pages;
+	}
+
+	/**
+	 * @return array
+	 */
+	public static function getPDFTemplates() {
+		if ( !ExtensionRegistry::getInstance()->isLoaded( 'PDFCreator' ) ) {
+			return [];
+		}
+		$services = MediaWikiServices::getInstance();
+		$configFactory = $services->getConfigFactory();
+		$titleFactory = $services->getTitleFactory();
+		$pdfcreatorUtil = $services->getService( 'PDFCreator.Util' );
+		$templates = $pdfcreatorUtil->getAllWikiTemplates();
+		$bsgConfig = $configFactory->makeConfig( 'bsg' );
+		$template = $bsgConfig->get( 'BookshelfDefaultBookTemplate' );
+		$templateTitle = $titleFactory->newFromText( 'MediaWiki:PDFCreator/' . $template );
+		if ( !$templateTitle->exists() ) {
+			return [
+				'default' => '',
+				'templates' => $templates
+			];
+		}
+		return [
+			'default' => $templateTitle->getSubpageText(),
+			'templates' => $templates
+		];
 	}
 }

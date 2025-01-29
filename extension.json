@@ -33,7 +33,8 @@
 				"BookshelfSupressBookNS": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\SupressBookNS::getInstance",
 				"BookshelfTitleDisplayText": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\TitleDisplayText::getInstance",
 				"BookshelfPrependPageTOCNumbers": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\PrependPageTOCNumbers::getInstance",
-				"BookshelfMainLinksBookshelf": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\MainLinksBookshelf::getInstance"
+				"BookshelfMainLinksBookshelf": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\MainLinksBookshelf::getInstance",
+				"BookshelfDefaultBookTemplate": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\DefaultBookPDFTemplate::getInstance"
 			},
 			"SettingPathRegistry": {
 				"book": "bs-bookshelf-setting-path-feature"
@@ -103,10 +104,17 @@
 				},
 				"version": {
 					"class": "BlueSpice\\Bookshelf\\MetaData\\Version"
+				},
+				"pdftemplate": {
+					"class": "BlueSpice\\Bookshelf\\MetaData\\PDFTemplate"
 				}
 			},
 			"CreateNewBookModules": [],
-			"BookViewTools": {}
+			"BookViewTools": {
+				"export": {
+					"class": "BlueSpice\\Bookshelf\\BookViewTool\\ExportBook"
+				}
+			}
 		},
 		"BlueSpiceVisualEditorConnector": {
 			"TagDefinitions": [
@@ -195,7 +203,8 @@
 						"BSBookshelfBookLookup",
 						"TitleFactory",
 						"BSBookshelfBookChapterLookup",
-						"BSBookshelfBookContextProviderFactory"
+						"BSBookshelfBookContextProviderFactory",
+						"ConfigFactory"
 					]
 				}
 			},
@@ -606,6 +615,11 @@
 				{
 					"name": "ui/pages/bookshelfdata.json",
 					"callback": "BlueSpice\\Bookshelf\\ClientConfig::getBookshelfData"
+				},
+				"ui/pages/PDFTemplateMeta.js",
+				{
+					"name": "ui/pages/pdftemplates.json",
+					"callback": "BlueSpice\\Bookshelf\\ClientConfig::getPDFTemplates"
 				}
 			],
 			"messages": [
@@ -618,7 +632,8 @@
 				"bs-bookshelfui-bookmetatag-docummenttype",
 				"bs-bookshelfui-bookmetatag-department",
 				"bs-bookshelfui-bookmetatag-version",
-				"bs-bookshelfui-bookmetatag-bookshelfimage"
+				"bs-bookshelfui-bookmetatag-bookshelfimage",
+				"bs-bookshelfui-bookmetatag-pdftemplate"
 			],
 			"dependencies": [
 				"oojs",
@@ -699,6 +714,31 @@
 			"scripts": [
 				"bluespice.bookshelf.pdfcreator.plugin.js"
 			]
+		},
+		"bs.bookshelf.action.export": {
+			"scripts": [
+				"bluespice.bookshelf.export.js"
+			]
+		},
+		"ext.bluespice.object.bookpdf": {
+			"packageFiles": [
+				"object/BookPDFDroplet.js",
+				{
+					"name": "object/config.json",
+					"callback": "BlueSpice\\Bookshelf\\ClientConfig::getPDFTemplates"
+				}
+			],
+			"styles": [
+				"bluespice.book-pdf.droplet.css"
+			],
+			"messages": [
+				"bs-bookshelf-droplet-bookpdf-book-label",
+				"bs-bookshelf-droplet-bookpdf-template-label",
+				"bs-bookshelf-droplet-bookpdf-link-label"
+			],
+			"dependencies": [
+				"ext.contentdroplets.bootstrap"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -752,6 +792,10 @@
 		},
 		"BookshelfToolbarOffset": {
 			"value": 153,
+			"public": true
+		},
+		"BookshelfDefaultBookTemplate": {
+			"value": "StandardBookPDF",
 			"public": true
 		}
 	},
@@ -811,6 +855,9 @@
 		"updateSearchIndex": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\UpdateSearchIndex",
 			"services": [ "JobQueueGroup" ]
+		},
+		"addExportAction": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\AddBookActionExport"
 		}
 	},
 	"Hooks": {
@@ -847,7 +894,8 @@
 		],
 		"NumberHeadingsBeforeApply": "add-chapter-number-to-title-and-headings",
 		"BSBookshelfPageAddedToBook": "updateSearchIndex",
-		"BSBookshelfPageRemovedFromBook": "updateSearchIndex"
+		"BSBookshelfPageRemovedFromBook": "updateSearchIndex",
+		"BSBookshelfBooksOverviewBeforeSetBookActions": "addExportAction"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
@@ -861,6 +909,12 @@
 			"path": "/bookshelf/metadata/{booktitle}",
 			"class": "\\BlueSpice\\Bookshelf\\Rest\\GetBookMetadata",
 			"services": [ "TitleFactory", "BSBookshelfBookMetaLookup" ]
+		},
+		{
+			"method": "GET",
+			"path": "/bookshelf/template/{booktitle}",
+			"class": "\\BlueSpice\\Bookshelf\\Rest\\GetTemplateForBook",
+			"services": [ "TitleFactory", "BSBookshelfBookMetaLookup", "ConfigFactory" ]
 		},
 		{
 			"method": "POST",
