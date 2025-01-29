@@ -3,9 +3,9 @@
 namespace BlueSpice\Bookshelf\Rest;
 
 use CommentStoreComment;
-use FormatJson;
 use JsonContent;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Rest\SimpleHandler;
 use MediaWiki\Rest\Validator\JsonBodyValidator;

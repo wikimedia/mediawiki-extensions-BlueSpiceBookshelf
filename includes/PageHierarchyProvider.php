@@ -2,6 +2,7 @@
 
 use BlueSpice\Bookshelf\ILineProcessor;
 use BlueSpice\ExtensionAttributeBasedRegistry;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 
