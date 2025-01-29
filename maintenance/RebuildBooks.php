@@ -2,6 +2,7 @@
 
 use BlueSpice\Bookshelf\BookSourceParser;
 use BlueSpice\Bookshelf\ChapterDataModel;
+use MediaWiki\Content\TextContent;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Revision\RevisionLookup;
