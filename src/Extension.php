@@ -5,6 +5,7 @@ namespace BlueSpice\Bookshelf;
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterPlainTextProcessor;
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterWikiLinkWithAliasProcessor;
 use BlueSpice\Bookshelf\Tag\SearchInBook;
+use MediaWiki\Registration\ExtensionRegistry;
 use MWDebug;
 
 /**
@@ -48,7 +49,7 @@ class Extension extends \BlueSpice\Extension {
 		$GLOBALS['wgNamespacesWithSubpages'][NS_USER] = true;
 		static::checkLegacy();
 
-		if ( \ExtensionRegistry::getInstance()->isLoaded( 'BlueSpiceExtendedSearch' ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'BlueSpiceExtendedSearch' ) ) {
 			// Add tag conditionally
 			$GLOBALS['bsgExtensionAttributeRegistryOverrides']['BlueSpiceFoundationTagRegistry'] = [
 				'merge' => [
@@ -68,6 +69,12 @@ class Extension extends \BlueSpice\Extension {
 				'services' => [ 'TitleFactory' ]
 			]
 		];
+
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'PDFCreator' ) ) {
+			$GLOBALS['wgContentDropletsDroplets']['bookpdf'] = [
+				"class" => "\\BlueSpice\\Bookshelf\\ContentDroplets\\BookPDFDroplet"
+			];
+		}
 	}
 
 	/**

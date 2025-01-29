@@ -83,7 +83,8 @@ ext.bookshelf.ui.dialog.MetaDataDialog.prototype.getPagesFromConfig = function (
 		var page =  new classname( key, {
 			active: active,
 			value: value,
-			key: key
+			key: key,
+			$overlay: this.$overlay
 		} );
 		page.toggle( active );
 		pages.push( page );

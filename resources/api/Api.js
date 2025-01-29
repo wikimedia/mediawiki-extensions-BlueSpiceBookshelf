@@ -55,3 +55,7 @@ ext.bookshelf.api.Api.prototype.getBookMetadata = function ( bookTitle ) {
 ext.bookshelf.api.Api.prototype.saveBookMetadata = function ( bookTitle, data ) {
 	return this.post( 'metadata/' + encodeURIComponent( bookTitle ), data );
 };
+
+ext.bookshelf.api.Api.prototype.getBookTemplateForBook = function ( bookTitle ) {
+	return this.get( 'template/' + encodeURIComponent( bookTitle ) );
+};

@@ -11,5 +11,6 @@
 	require( './TypeMeta.js' );
 	require( './VersionMeta.js' );
 	require( './BookshelfMeta.js' );
+	require( './PDFTemplateMeta.js' );
 
 } )( mediaWiki, jQuery, blueSpice );

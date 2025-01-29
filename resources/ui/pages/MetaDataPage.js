@@ -9,6 +9,7 @@
 		this.active = cfg.active || false;
 		this.value = cfg.value || '';
 		this.key = cfg.key || '';
+		this.$overlay = cfg.$overlay || true;
 
 		this.setup();
 	};
