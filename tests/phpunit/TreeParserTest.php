@@ -3,8 +3,8 @@
 namespace BlueSpice\Bookshelf\Tests;
 
 use BlueSpice\Bookshelf\TreeParser;
-use FormatJson;
 use MediaWiki\Config\Config;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
 use PHPUnit\Framework\TestCase;
 

@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Api\ApiMain;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Title\Title;
 use Wikimedia\ParamValidator\ParamValidator;
