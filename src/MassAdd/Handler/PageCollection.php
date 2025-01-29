@@ -1,9 +1,9 @@
 <?php
 namespace BlueSpice\Bookshelf\MassAdd\Handler;
 
+use MediaWiki\Content\TextContent;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
-use TextContent;
 
 class PageCollection implements \BlueSpice\Bookshelf\MassAdd\IHandler {
 	/**
