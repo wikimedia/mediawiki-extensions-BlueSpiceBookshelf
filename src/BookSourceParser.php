@@ -5,7 +5,7 @@ namespace BlueSpice\Bookshelf;
 use BlueSpice\Bookshelf\Content\BookContent;
 use BlueSpice\Bookshelf\MenuEditor\Node\ChapterPlainText;
 use BlueSpice\Bookshelf\MenuEditor\Node\ChapterWikiLinkWithAlias;
-use Content;
+use MediaWiki\Content\Content;
 use MediaWiki\Content\JsonContent;
 use MediaWiki\Extension\MenuEditor\Node\MenuNode;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
