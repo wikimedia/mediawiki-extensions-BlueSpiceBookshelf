@@ -166,5 +166,6 @@
 	"bs-bookshelf-newbook-dlg-error-book-exists": "The book could not be created because a book with this name already exists",
 	"bs-bookshelf-actionmenuentry-new-book": "New book",
 	"bs-bookshelf-add-mass-tool-title": "Add multiple pages",
-	"bs-bookshelf-add-mass-tool-label": "Add multiple pages to the book at once"
+	"bs-bookshelf-add-mass-tool-label": "Add multiple pages to the book at once",
+	"bs-bookshelf-export-mode-book-label": "Book"
 }

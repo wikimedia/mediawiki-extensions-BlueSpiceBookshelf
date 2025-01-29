@@ -176,5 +176,6 @@
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Error text in create new book dialog if book with this name already exists",
 	"bs-bookshelf-actionmenuentry-new-book": "Label for action menu entry to create a new book",
 	"bs-bookshelf-add-mass-tool-title": "Title for button which allows to add multiple pages to a book",
-	"bs-bookshelf-add-mass-tool-label": "Description for button which allows to add multiple pages to a book"
+	"bs-bookshelf-add-mass-tool-label": "Description for button which allows to add multiple pages to a book",
+	"bs-bookshelf-export-mode-book-label": "Label for export mode option"
 }
