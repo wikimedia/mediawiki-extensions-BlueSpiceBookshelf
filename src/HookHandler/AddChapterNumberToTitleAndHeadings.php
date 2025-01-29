@@ -9,8 +9,8 @@ use BlueSpice\Bookshelf\HeadingNumberation;
 use BlueSpice\Bookshelf\TOCNumberation;
 use ConfigFactory;
 use MediaWiki\Config\Config;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\Title\Title;
-use OutputPage;
 use Skin;
 
 class AddChapterNumberToTitleAndHeadings {
