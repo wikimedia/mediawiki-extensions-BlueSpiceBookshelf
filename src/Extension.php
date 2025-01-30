@@ -2,9 +2,10 @@
 
 namespace BlueSpice\Bookshelf;
 
+use BlueSpice\Bookshelf\ContentDroplets\SearchInBook as SearchInBookContentDroplet;
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterPlainTextProcessor;
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterWikiLinkWithAliasProcessor;
-use BlueSpice\Bookshelf\Tag\SearchInBook;
+use BlueSpice\Bookshelf\Tag\SearchInBook as SearchInBookTag;
 use MediaWiki\Registration\ExtensionRegistry;
 use MWDebug;
 
@@ -53,8 +54,12 @@ class Extension extends \BlueSpice\Extension {
 			// Add tag conditionally
 			$GLOBALS['bsgExtensionAttributeRegistryOverrides']['BlueSpiceFoundationTagRegistry'] = [
 				'merge' => [
-					'searchinbook' => SearchInBook::class
+					'searchinbook' => SearchInBookTag::class
 				]
+			];
+			// Add droplet conditionally
+			$GLOBALS['wgContentDropletsDroplets']['search_in_book'] = [
+				'class' => SearchInBookContentDroplet::class
 			];
 		}
 
