@@ -10,6 +10,13 @@ use MediaWiki\Extension\PDFCreator\Utility\ExportContext;
 class Book extends Batch {
 
 	/**
+	 * @return string
+	 */
+	public function getName(): string {
+		return 'book';
+	}
+
+	/**
 	 * @param array &$pages
 	 * @param ExportContext $context
 	 * @param bool $embedPageToc
