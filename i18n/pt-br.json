@@ -8,6 +8,7 @@
 			"Glaucia Japui Gonçalves",
 			"Juan90264",
 			"Juwan",
+			"Lc97",
 			"Re demz",
 			"Svjatysberega",
 			"TheEduGobi",
@@ -102,5 +103,6 @@
 	"bs-bookshelf-booknav-chapter-help": "Selecionar um capítulo para mostrar",
 	"bs-bookshelf-booknav-book-not-exist": "O livro $1 não existe",
 	"bs-bookshelf-booknav-chapter-not-exist": "O capítulo $1 não existe",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Pesquisar"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Pesquisar",
+	"bs-bookshelf-export-mode-book-label": "Livro"
 }
