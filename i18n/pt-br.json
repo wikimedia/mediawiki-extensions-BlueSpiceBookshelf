@@ -8,6 +8,7 @@
 			"Glaucia Japui Gonçalves",
 			"Juan90264",
 			"Juwan",
+			"Lc97",
 			"Re demz",
 			"Svjatysberega",
 			"TheEduGobi",
@@ -110,5 +111,6 @@
 	"bs-bookshelf-droplet-pdf-description": "Link que transfere um livro como PDF",
 	"bs-bookshelf-droplet-pdf-book-label": "Livros para exportar",
 	"bs-bookshelf-droplet-pdf-template-label": "Predefinição de PDF de livro",
-	"bs-bookshelf-droplet-pdf-link-label": "Título do link"
+	"bs-bookshelf-droplet-pdf-link-label": "Título do link",
+	"bs-bookshelf-export-mode-book-label": "Livro"
 }
