@@ -7,7 +7,7 @@ use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\ChapterDataModel;
 use BlueSpice\Bookshelf\ChapterLookup;
 use MediaWiki\Config\ConfigFactory;
-use MediaWiki\Extension\PDFCreator\Interface\IExportMode;
+use MediaWiki\Extension\PDFCreator\IExportMode;
 use MediaWiki\Title\TitleFactory;
 
 class Book implements IExportMode {
