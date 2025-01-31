@@ -77,5 +77,6 @@
 	"bs-books-overview-page-book-action-delete-text": "삭제",
 	"bs-bookshelf-massadd-dlg-save-action-label": "추가",
 	"bs-bookshelf-add-mass-tool-title": "여러 문서 추가",
-	"bs-bookshelf-add-mass-tool-label": "한 번에 여러 문서를 책에 추가합니다"
+	"bs-bookshelf-add-mass-tool-label": "한 번에 여러 문서를 책에 추가합니다",
+	"bs-bookshelf-export-mode-book-label": "책"
 }
