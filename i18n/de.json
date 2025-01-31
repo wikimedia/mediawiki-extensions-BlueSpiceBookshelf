@@ -169,5 +169,16 @@
 	"bs-bookshelf-actionmenuentry-new-book": "Neues Buch",
 	"bs-bookshelf-add-mass-tool-title": "Mehrere Seiten hinzufügen",
 	"bs-bookshelf-add-mass-tool-label": "Mehrere Seiten gleichzeitig zum Buch hinzufügen",
-	"bs-bookshelf-export-mode-book-label": "Buch"
+	"bs-bookshelf-export-mode-book-label": "Buch",
+	"bs-bookshelf-books-overview-page-book-action-export-book-title": "Buch $1 exportieren",
+	"bs-bookshelf-books-overview-page-book-action-export-book-text": "Exportieren",
+	"bs-bookshelf-book-page-book-action-export-book": "Exportieren",
+	"bs-bookshelf-config-default-book-pdf-template": "Standard-Exportvorlage für Bücher",
+	"bs-bookshelf-config-default-book-pdf-template-help": "Legt die Standardvorlage für Buchexporte fest, sofern keine andere Vorlage in den Metadaten des Buches definiert ist. Die Vorlage muss als Unterseite von MediaWiki:PDFCreator vorhanden sein",
+	"bs-bookshelf-droplet-bookpdf-book-label": "Buch für Export",
+	"bs-bookshelf-droplet-bookpdf-template-label": "Exportvorlage",
+	"bs-bookshelf-droplet-bookpdf-link-label": "Text für Exportlink",
+	"bs-bookshelf-droplet-bookpdf-name": "Buch PDF-Link",
+	"bs-bookshelf-droplet-bookpdf-desc": "Fügt einen Link hinzu, um ein ausgewähltes Buch als PDF zu exportieren",
+	"bs-bookshelfui-bookmetatag-pdftemplate": "PDF Exportvorlage"
 }
