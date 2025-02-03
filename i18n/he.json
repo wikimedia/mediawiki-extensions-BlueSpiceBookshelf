@@ -167,5 +167,6 @@
 	"bs-bookshelf-newbook-dlg-error-book-exists": "לא היה אפשר ליצור את הספר כי כבר קיים ספר בשם הזה",
 	"bs-bookshelf-actionmenuentry-new-book": "ספר חדש",
 	"bs-bookshelf-add-mass-tool-title": "הוספה של כמה דפים",
-	"bs-bookshelf-add-mass-tool-label": "הוספה של כמה דפים בפעם אחת"
+	"bs-bookshelf-add-mass-tool-label": "הוספה של כמה דפים בפעם אחת",
+	"bs-bookshelf-export-mode-book-label": "ספר"
 }
