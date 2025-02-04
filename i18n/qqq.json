@@ -177,5 +177,16 @@
 	"bs-bookshelf-actionmenuentry-new-book": "Label for action menu entry to create a new book",
 	"bs-bookshelf-add-mass-tool-title": "Title for button which allows to add multiple pages to a book",
 	"bs-bookshelf-add-mass-tool-label": "Description for button which allows to add multiple pages to a book",
-	"bs-bookshelf-export-mode-book-label": "Label for export mode option"
+	"bs-bookshelf-export-mode-book-label": "Label for export mode option",
+	"bs-bookshelf-books-overview-page-book-action-export-book-title": "Title for button to export book",
+	"bs-bookshelf-books-overview-page-book-action-export-book-text": "Label for button to export book",
+	"bs-bookshelf-book-page-book-action-export-book": "Label for button to export book",
+	"bs-bookshelf-config-default-book-pdf-template": "Label for input field to set config variable for default export template",
+	"bs-bookshelf-config-default-book-pdf-template-help": "Help text for input field where config variable for default export template can be set",
+	"bs-bookshelf-droplet-bookpdf-book-label": "Label for input field to select book title",
+	"bs-bookshelf-droplet-bookpdf-template-label": "Label for input field to select template for export",
+	"bs-bookshelf-droplet-bookpdf-link-label": "Label for input field to define label for the export link",
+	"bs-bookshelf-droplet-bookpdf-name": "Content droplet name",
+	"bs-bookshelf-droplet-bookpdf-desc": "Content droplet description",
+	"bs-bookshelfui-bookmetatag-pdftemplate": "Label for input field to select PDF export template for a book"
 }
