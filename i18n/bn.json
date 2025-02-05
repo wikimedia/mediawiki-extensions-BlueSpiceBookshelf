@@ -13,7 +13,6 @@
 	"bs-bookshelf-action-editbook-create": "উৎস সম্পাদনা",
 	"bs-bookshelf-edit-title": "সম্পাদনা করছেন $1",
 	"bs-bookshelf-ga-editing-label": "বইসমূহ",
-	"bs-bookshelf-prof-defaultview": "পূর্বনির্ধারিত প্রদর্শন",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "শিরোনাম",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "লেখক",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "সংস্করণ",
@@ -27,5 +26,6 @@
 	"bs-bookshelf-booknav-searchbox-placeholder": "অনুসন্ধান",
 	"bs-bookshelf-search-center-filter-books-label": "বই",
 	"bs-books-overview-page-book-action-view-text": "অধ্যায়",
-	"bs-bookshelf-actionmenuentry-new-book": "নতুন বই"
+	"bs-bookshelf-actionmenuentry-new-book": "নতুন বই",
+	"bs-bookshelf-export-mode-book-label": "বই"
 }
