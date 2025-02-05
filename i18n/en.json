@@ -124,7 +124,7 @@
 	"bs-bookshelf-chapter-plain-text-label-edit": "Add a new chapter heading",
 	"bs-bookshelf-chapter-plain-text-input-label": "Text",
 	"bs-bookshelf-chapter-wikilink-with-alias-label": "Wiki page chapter",
-	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "Add a new wiki page chapter",
+	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "Add a wiki page as new chapter",
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Target",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Text",
 	"bs-bookshelf-toolbar-tool-metadata-title": "Edit meta data",
