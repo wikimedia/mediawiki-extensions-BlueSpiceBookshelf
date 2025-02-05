@@ -8,7 +8,6 @@ use MediaWiki\Context\RequestContext;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Rest\SimpleHandler;
-use MediaWiki\Rest\Validator\JsonBodyValidator;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\TitleFactory;
 use Wikimedia\ParamValidator\ParamValidator;
@@ -82,21 +81,15 @@ class PostBookMetadata extends SimpleHandler {
 		];
 	}
 
-	/**
-	 * @param string $contentType
-	 *
-	 * @return JsonBodyValidator
-	 */
-	public function getBodyValidator( $contentType ) {
-		if ( $contentType !== 'application/json' ) {
-			return null;
-		}
-		return new JsonBodyValidator( [
+	/** @inheritDoc */
+	public function getBodyParamSettings(): array {
+		return [
 			'meta' => [
+				static::PARAM_SOURCE => 'body',
 				ParamValidator::PARAM_TYPE => 'string',
 				ParamValidator::PARAM_REQUIRED => false,
 				ParamValidator::PARAM_DEFAULT => ''
 			],
-		] );
+		];
 	}
 }
