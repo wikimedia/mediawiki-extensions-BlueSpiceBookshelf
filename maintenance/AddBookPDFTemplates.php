@@ -18,7 +18,7 @@ class AddBookPDFTemplates extends LoggedUpdateMaintenance {
 	 * @return string
 	 */
 	protected function getUpdateKey() {
-		return 'bs-bookshelf-default-bookpdf-test-1';
+		return 'bs-bookshelf-default-bookpdf';
 	}
 
 	/**
