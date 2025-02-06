@@ -215,7 +215,9 @@
 						"PDFCreator.ExportPageFactory", "PDFCreator.TemplateProviderFactory",
 						"PDFCreator.BackendFactory", "PDFCreator.TargetFactory", "PDFCreator.MetaDataFactory",
 						"PDFCreator.ExportHtmlBuilder", "PDFCreator.PreProcessorFactory", "PDFCreator.ProcessorFactory",
-						"PDFCreator.PostProcessorFactory", "PDFCreator.ExportResourcesFactory",
+						"PDFCreator.PostProcessorFactory",
+						"PDFCreator.StylesheetsFactory", "PDFCreator.StyleBlocksFactory",
+						"PDFCreator.MediaWikiCommonCssProvider",
 						"MainConfig", "TitleFactory", "PageProps"
 					]
 				}
