@@ -224,6 +224,18 @@
 					"class": "BlueSpice\\Bookshelf\\Integration\\PDFCreator\\Processor\\Coverbackground",
 					"services": [ "TitleFactory", "BSBookshelfBookMetaLookup", "RepoGroup", "ConfigFactory" ]
 				}
+			},
+			"MetaDataProvider": {
+				"author": {
+					"class": "BlueSpice\\Bookshelf\\Integration\\PDFCreator\\MetaDataProvider\\Author",
+					"services": [ "BSBookshelfBookMetaLookup", "TitleFactory" ]
+				}
+			},
+			"PageParamsProvider": {
+				"book": {
+					"class": "BlueSpice\\Bookshelf\\Integration\\PDFCreator\\PageParams\\BookParams",
+					"services": [ "TitleFactory", "BSBookshelfBookMetaLookup", "ObjectFactory" ]
+				}
 			}
 		}
 	},
