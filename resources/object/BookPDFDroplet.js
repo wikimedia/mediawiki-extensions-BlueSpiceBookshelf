@@ -83,6 +83,12 @@
 						template.params[ key ] = bookTitle.getPrefixedText();
 					}
 				}
+				if ( typeof newData[ key ] === 'string' && newData[ key].length > 0 ) {
+					let bookTitle = mw.Title.newFromText( newData[ key ], bs.ns.NS_BOOK );
+					if ( bookTitle ) {
+						newData[ key ] = bookTitle.getPrefixedText();
+					}
+				}
 			}
 			if ( typeof template.params[ key ] === 'string' ) {
 				template.params[ key ] = { wt: template.params[ key ] };
