@@ -9,7 +9,7 @@ use Exception;
 use MediaWiki\Config\Config;
 use MediaWiki\Message\Message;
 use MediaWiki\Parser\Parser;
-use PPFrame;
+use MediaWiki\Parser\PPFrame;
 
 class SearchInBookHandler extends TagSearchHandler {
 

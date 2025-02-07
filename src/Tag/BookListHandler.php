@@ -8,8 +8,8 @@ use BlueSpice\Tag\Handler;
 use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\PPFrame;
 use MediaWiki\Title\TitleFactory;
-use PPFrame;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class BookListHandler extends Handler {

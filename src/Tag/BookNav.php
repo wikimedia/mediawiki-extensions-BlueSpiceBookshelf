@@ -9,8 +9,8 @@ use BlueSpice\ParamProcessor\ParamType;
 use BlueSpice\Tag\Tag;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\PPFrame;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
-use PPFrame;
 
 class BookNav extends Tag {
 
