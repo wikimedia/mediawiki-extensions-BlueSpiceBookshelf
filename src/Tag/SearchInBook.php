@@ -10,7 +10,7 @@ use BS\ExtendedSearch\Tag\TagSearch;
 use ConfigException;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
-use Parser;
+use MediaWiki\Parser\Parser;
 use PPFrame;
 
 class SearchInBook extends TagSearch {
