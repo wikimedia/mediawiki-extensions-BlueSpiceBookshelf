@@ -116,7 +116,7 @@
 	"bs-bookshelf-chapter-plain-text-label-edit": "Adder un nove titulo de capitulo",
 	"bs-bookshelf-chapter-plain-text-input-label": "Texto",
 	"bs-bookshelf-chapter-wikilink-with-alias-label": "Capitulo de pagina wiki",
-	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "Adder un nove capitulo de pagina wiki",
+	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "Adder un pagina wiki como nove capitulo",
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Destination",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Texto",
 	"bs-bookshelf-toolbar-tool-metadata-title": "Modificar metadatos",

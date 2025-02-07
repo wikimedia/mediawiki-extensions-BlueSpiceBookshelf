@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"Gmelfi"
 		]
 	},
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Pi favuri, usa <i>left</i> o <i>right</i>.",
@@ -29,5 +30,10 @@
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "Mposta l'auturi dû libbru",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Virsioni",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Mposta la virsioni dû libbru",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libbru"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libbru",
+	"bs-bookshelf-books-overview-page-book-action-export-book-title": "Esporta libbru $1",
+	"bs-bookshelf-book-page-book-action-export-book": "Esporta",
+	"bs-bookshelf-config-default-book-pdf-template": "Mudellu di esportazzioni di basi pî libbra",
+	"bs-bookshelf-config-default-book-pdf-template-help": "Imposta lu mudellu di basi pi l'esportazzioni di libbra a menucchì nun è spicificatu n'autru mudellu ntê metadati dô libbru. Lu template havi a esistiri comu na suttapàggina di MediaWiki:PDFCreator",
+	"bs-bookshelf-droplet-bookpdf-desc": "Jiunci nu link pi espurtari nu libbru scigghiutu comu PDF"
 }

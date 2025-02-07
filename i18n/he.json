@@ -168,5 +168,16 @@
 	"bs-bookshelf-actionmenuentry-new-book": "ספר חדש",
 	"bs-bookshelf-add-mass-tool-title": "הוספה של כמה דפים",
 	"bs-bookshelf-add-mass-tool-label": "הוספה של כמה דפים בפעם אחת",
-	"bs-bookshelf-export-mode-book-label": "ספר"
+	"bs-bookshelf-export-mode-book-label": "ספר",
+	"bs-bookshelf-books-overview-page-book-action-export-book-title": "לייצא את הספר $1",
+	"bs-bookshelf-books-overview-page-book-action-export-book-text": "יצוא",
+	"bs-bookshelf-book-page-book-action-export-book": "יצוא",
+	"bs-bookshelf-config-default-book-pdf-template": "תבנית ברירת מחדל ליצוא עבור ספרים",
+	"bs-bookshelf-config-default-book-pdf-template-help": "הגדרת תבנית ברירת המחדל ליצוא ספרים שתשמש אם לא צוינה תבנית אחרת במטא־נתונים של הספר. התבנית חייבת להתקיים כדף־משנה של MediaWiki:PDFCreator",
+	"bs-bookshelf-droplet-bookpdf-book-label": "איזה ספר לייצא",
+	"bs-bookshelf-droplet-bookpdf-template-label": "תבנית יצוא",
+	"bs-bookshelf-droplet-bookpdf-link-label": "טקסט לקישור היצוא",
+	"bs-bookshelf-droplet-bookpdf-name": "קישור ל־PDF של הספר",
+	"bs-bookshelf-droplet-bookpdf-desc": "הוספת קישור ליצוא ספר נבחר כקובץ PDF",
+	"bs-bookshelfui-bookmetatag-pdftemplate": "תבנית יצוא PDF"
 }

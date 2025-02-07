@@ -99,5 +99,9 @@
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Impossibile creare il libro perché esiste già un libro con questo nome",
 	"bs-bookshelf-actionmenuentry-new-book": "Nuovo libro",
 	"bs-bookshelf-add-mass-tool-title": "Aggiungi più pagine",
-	"bs-bookshelf-add-mass-tool-label": "Aggiungi più pagine al libro contemporaneamente"
+	"bs-bookshelf-add-mass-tool-label": "Aggiungi più pagine al libro contemporaneamente",
+	"bs-bookshelf-books-overview-page-book-action-export-book-title": "Esporta libro $1",
+	"bs-bookshelf-books-overview-page-book-action-export-book-text": "Esporta",
+	"bs-bookshelf-book-page-book-action-export-book": "Esporta",
+	"bs-bookshelf-droplet-bookpdf-desc": "Aggiunge un collegamento per esportare un libro selezionato in formato PDF"
 }
