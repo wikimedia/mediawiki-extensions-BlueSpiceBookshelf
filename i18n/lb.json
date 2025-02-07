@@ -81,5 +81,13 @@
 	"bs-bookshelf-notification-subscription-set-book-title": "Buch",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "D'Buch konnt net erstallt ginn, well et schonn ee Buch mat dësem Numm gëtt",
 	"bs-bookshelf-actionmenuentry-new-book": "Neit Buch",
-	"bs-bookshelf-export-mode-book-label": "Buch"
+	"bs-bookshelf-export-mode-book-label": "Buch",
+	"bs-bookshelf-books-overview-page-book-action-export-book-title": "Buch $1 exportéieren",
+	"bs-bookshelf-books-overview-page-book-action-export-book-text": "Exportéieren",
+	"bs-bookshelf-book-page-book-action-export-book": "Exportéieren",
+	"bs-bookshelf-config-default-book-pdf-template": "Standard-Exportschabloun fir Bicher",
+	"bs-bookshelf-droplet-bookpdf-book-label": "Buch fir den Export",
+	"bs-bookshelf-droplet-bookpdf-template-label": "Exportschabloun",
+	"bs-bookshelf-droplet-bookpdf-link-label": "Text fir den Exportlink",
+	"bs-bookshelfui-bookmetatag-pdftemplate": "PDF-Exportschabloun"
 }
