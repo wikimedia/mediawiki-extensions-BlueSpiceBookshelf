@@ -132,9 +132,6 @@
 				},
 				"booknav": {
 					"class": "\\BlueSpice\\Bookshelf\\ContentDroplets\\BookNavDroplet"
-				},
-				"search_in_book": {
-					"class": "BlueSpice\\Bookshelf\\ContentDroplets\\SearchInBook"
 				}
 			}
 		},
