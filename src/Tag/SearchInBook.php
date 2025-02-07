@@ -11,7 +11,7 @@ use ConfigException;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Parser\Parser;
-use PPFrame;
+use MediaWiki\Parser\PPFrame;
 
 class SearchInBook extends TagSearch {
 

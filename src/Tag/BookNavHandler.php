@@ -10,9 +10,9 @@ use BlueSpice\Tag\Handler;
 use MediaWiki\Html\Html;
 use MediaWiki\Message\Message;
 use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\PPFrame;
 use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
-use PPFrame;
 
 class BookNavHandler extends Handler {
 
