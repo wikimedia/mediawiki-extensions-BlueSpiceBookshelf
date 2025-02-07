@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Hanna Tardos",
+			"Karmantomi",
 			"Krisztina"
 		]
 	},
@@ -53,5 +54,8 @@
 	"bs-bookshelf-pref-prepend-tocnumber-help": "A könyv fejezetszámainak hozzáadása a tartalomjegyzékhez és az összes címsorhoz a lapon",
 	"bs-bookshelf-droplet-name": "Könyvlista",
 	"bs-bookshelf-droplet-description": "A Könyv névtér lapjainak listája",
-	"bs-bookshelf-booknav-book-label": "Könyv"
+	"bs-bookshelf-booknav-book-label": "Könyv",
+	"bs-bookshelf-book-page-book-action-export-book": "Exportálás",
+	"bs-bookshelf-config-default-book-pdf-template-help": "A könyv kivitelére vonatkozó alapértelmezett mintát állítja, kivéve, ha a könyv metadataiban más mintát jelölnek. A mintát a MediaWiki:PDFCreator allaplapjának kell lennie",
+	"bs-bookshelf-droplet-bookpdf-desc": "Hozzáad egy hivatkozást a kiválasztott könyv PDF formátumban történő exportálásához"
 }
