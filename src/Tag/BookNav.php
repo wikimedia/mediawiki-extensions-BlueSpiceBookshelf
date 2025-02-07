@@ -8,8 +8,8 @@ use BlueSpice\ParamProcessor\ParamDefinition;
 use BlueSpice\ParamProcessor\ParamType;
 use BlueSpice\Tag\Tag;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Parser\Parser;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
-use Parser;
 use PPFrame;
 
 class BookNav extends Tag {

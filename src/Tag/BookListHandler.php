@@ -7,8 +7,8 @@ use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Tag\Handler;
 use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
+use MediaWiki\Parser\Parser;
 use MediaWiki\Title\TitleFactory;
-use Parser;
 use PPFrame;
 use Wikimedia\Rdbms\LoadBalancer;
 

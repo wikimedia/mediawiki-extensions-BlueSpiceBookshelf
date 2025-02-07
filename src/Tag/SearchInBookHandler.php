@@ -8,7 +8,7 @@ use BS\ExtendedSearch\Tag\TagSearchHandler;
 use Exception;
 use MediaWiki\Config\Config;
 use MediaWiki\Message\Message;
-use Parser;
+use MediaWiki\Parser\Parser;
 use PPFrame;
 
 class SearchInBookHandler extends TagSearchHandler {

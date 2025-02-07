@@ -9,9 +9,9 @@ use BlueSpice\Bookshelf\Renderer\ComponentRenderer;
 use BlueSpice\Tag\Handler;
 use MediaWiki\Html\Html;
 use MediaWiki\Message\Message;
+use MediaWiki\Parser\Parser;
 use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
-use Parser;
 use PPFrame;
 
 class BookNavHandler extends Handler {
