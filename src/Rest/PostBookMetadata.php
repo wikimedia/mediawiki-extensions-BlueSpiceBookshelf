@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Bookshelf\Rest;
 
-use CommentStoreComment;
+use MediaWiki\CommentStore\CommentStoreComment;
 use MediaWiki\Content\JsonContent;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Json\FormatJson;
