@@ -7,7 +7,7 @@ use BlueSpice\ParamProcessor\ParamDefinition;
 use BlueSpice\ParamProcessor\ParamType;
 use BlueSpice\Tag\IHandler;
 use BS\ExtendedSearch\Tag\TagSearch;
-use ConfigException;
+use MediaWiki\Config\ConfigException;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Parser\Parser;
