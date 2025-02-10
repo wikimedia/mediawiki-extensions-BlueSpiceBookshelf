@@ -186,5 +186,14 @@
 	"bs-bookshelf-droplet-bookpdf-link-label": "Text für Exportlink",
 	"bs-bookshelf-droplet-bookpdf-name": "Buch PDF-Link",
 	"bs-bookshelf-droplet-bookpdf-desc": "Fügt einen Link hinzu, um ein ausgewähltes Buch als PDF zu exportieren",
-	"bs-bookshelfui-bookmetatag-pdftemplate": "PDF Exportvorlage"
+	"bs-bookshelfui-bookmetatag-pdftemplate": "PDF Exportvorlage",
+	"bs-bookshelf-export-pageparam-desc-title": "Zeigt den Buchtitel",
+	"bs-bookshelf-export-pageparam-desc-author1": "Zeigt den Autor, der im Buchmeta Autor 1 definiert ist",
+	"bs-bookshelf-export-pageparam-desc-author2": "Zeigt den Autor, der im Buchmeta Autor 2 definiert ist",
+	"bs-bookshelf-export-pageparam-desc-bookshelf": "Zeigt das Bücherregal des Buches",
+	"bs-bookshelf-export-pageparam-desc-department": "Zeigt die Abteilung des Buches",
+	"bs-bookshelf-export-pageparam-desc-docummentidentifier": "Zeigt die Dokumenten-ID",
+	"bs-bookshelf-export-pageparam-desc-subtitle": "Zeigt den Untertitel des Buches",
+	"bs-bookshelf-export-pageparam-desc-docummenttype": "Zeigt den Dokumententyp",
+	"bs-bookshelf-export-pageparam-desc-version": "Zeigt die Version des Buches"
 }
