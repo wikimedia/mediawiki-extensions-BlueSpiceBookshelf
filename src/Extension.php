@@ -6,8 +6,8 @@ use BlueSpice\Bookshelf\ContentDroplets\SearchInBook as SearchInBookContentDropl
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterPlainTextProcessor;
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterWikiLinkWithAliasProcessor;
 use BlueSpice\Bookshelf\Tag\SearchInBook as SearchInBookTag;
+use MediaWiki\Debug\MWDebug;
 use MediaWiki\Registration\ExtensionRegistry;
-use MWDebug;
 
 /**
  * Bookshelf extension for BlueSpice
