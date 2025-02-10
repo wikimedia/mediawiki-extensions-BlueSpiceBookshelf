@@ -5,8 +5,8 @@ namespace BlueSpice\Bookshelf\HookHandler;
 use BlueSpice\Bookshelf\Hook\BSBookshelfPageAddedToBookHook;
 use BlueSpice\Bookshelf\Hook\BSBookshelfPageRemovedFromBookHook;
 use BS\ExtendedSearch\Source\Job\UpdateWikiPage;
-use ExtensionRegistry;
 use JobQueueGroup;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Title\Title;
 
 class UpdateSearchIndex implements BSBookshelfPageAddedToBookHook, BSBookshelfPageRemovedFromBookHook {
