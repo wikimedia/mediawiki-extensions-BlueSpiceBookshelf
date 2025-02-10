@@ -112,7 +112,7 @@ class Extension extends \BlueSpice\Extension {
 				$GLOBALS['BookShelfUIShowChapterNavigationPagerAfterContent'];
 		}
 
-		$registy = \ExtensionRegistry::getInstance()->getAttribute(
+		$registy = ExtensionRegistry::getInstance()->getAttribute(
 			'BlueSpiceBookshelfUIMassAddHandlerRegistry'
 		);
 		if ( !empty( $registy ) ) {

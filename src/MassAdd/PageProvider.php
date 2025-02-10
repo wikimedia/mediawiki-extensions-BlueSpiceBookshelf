@@ -2,6 +2,8 @@
 
 namespace BlueSpice\Bookshelf\MassAdd;
 
+use MediaWiki\Registration\ExtensionRegistry;
+
 class PageProvider {
 	/** @var PageProvider */
 	private static $instance;
@@ -58,7 +60,7 @@ class PageProvider {
 	 */
 	public function getData() {
 		$pages = [];
-		$registy = \ExtensionRegistry::getInstance()->getAttribute(
+		$registy = ExtensionRegistry::getInstance()->getAttribute(
 			'BlueSpiceBookshelfMassAddHandlerRegistry'
 		);
 		foreach ( $registy as $handlerType => $factoryCallback ) {
