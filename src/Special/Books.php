@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Bookshelf\Special;
 
+use MediaWiki\Html\TemplateParser;
 use MediaWiki\SpecialPage\SpecialPage;
-use TemplateParser;
 
 class Books extends SpecialPage {
 
