@@ -141,4 +141,11 @@ class Coverbackground implements IProcessor {
 
 		$introElement->setAttribute( 'style', trim( $style ) );
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getPosition(): int {
+		return 11;
+	}
 }
