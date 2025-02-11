@@ -220,7 +220,7 @@
 				}
 			},
 			"Processors": {
-				"coverbackground": {
+				"bookcoverbackground": {
 					"class": "BlueSpice\\Bookshelf\\Integration\\PDFCreator\\Processor\\Coverbackground",
 					"services": [ "TitleFactory", "BSBookshelfBookMetaLookup", "RepoGroup", "ConfigFactory" ]
 				}
