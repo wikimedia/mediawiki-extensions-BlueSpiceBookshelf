@@ -6,6 +6,7 @@ use MediaWiki\Config\ConfigException;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use Wikimedia\ObjectCache\BagOStuff;
 
 /**
  * Provide book hierarchy for a page
