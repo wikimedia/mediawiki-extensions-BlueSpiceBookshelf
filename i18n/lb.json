@@ -92,5 +92,10 @@
 	"bs-bookshelf-droplet-bookpdf-template-label": "Exportschabloun",
 	"bs-bookshelf-droplet-bookpdf-link-label": "Text fir den Exportlink",
 	"bs-bookshelfui-bookmetatag-pdftemplate": "PDF-Exportschabloun",
-	"bs-bookshelf-droplet-bookpdf-name": "Buch-PDF-Link"
+	"bs-bookshelf-droplet-bookpdf-name": "Buch-PDF-Link",
+	"bs-bookshelf-export-pageparam-desc-title": "Weist de Buchtitel",
+	"bs-bookshelf-export-pageparam-desc-bookshelf": "Weist d'Regal vum Buch",
+	"bs-bookshelf-export-pageparam-desc-subtitle": "Weist den Ënnertitel vum Buch",
+	"bs-bookshelf-export-pageparam-desc-docummenttype": "Weist den Dokumententyp",
+	"bs-bookshelf-export-pageparam-desc-version": "Weist d'Versioun vum Buch"
 }
