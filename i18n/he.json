@@ -128,7 +128,7 @@
 	"bs-bookshelf-chapter-plain-text-label-edit": "הוספת כותרת פרק חדשה",
 	"bs-bookshelf-chapter-plain-text-input-label": "טקסט",
 	"bs-bookshelf-chapter-wikilink-with-alias-label": "פרק דף ויקי",
-	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "הוסף פרק דף ויקי חדש",
+	"bs-bookshelf-chapter-wikilink-with-alias-label-edit": "הוספת דף ויקי בתור פרק חדש",
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "יעד",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "טקסט",
 	"bs-bookshelf-toolbar-tool-metadata-title": "עריכת מטא־נתונים",
@@ -182,5 +182,14 @@
 	"bs-bookshelf-droplet-bookpdf-link-label": "טקסט לקישור היצוא",
 	"bs-bookshelf-droplet-bookpdf-name": "קישור ל־PDF של הספר",
 	"bs-bookshelf-droplet-bookpdf-desc": "הוספת קישור ליצוא ספר נבחר כקובץ PDF",
-	"bs-bookshelfui-bookmetatag-pdftemplate": "תבנית יצוא PDF"
+	"bs-bookshelfui-bookmetatag-pdftemplate": "תבנית יצוא PDF",
+	"bs-bookshelf-export-pageparam-desc-title": "הצגת שם הספר",
+	"bs-bookshelf-export-pageparam-desc-author1": "הצגת המחבר המוגדר ב־book meta author 1",
+	"bs-bookshelf-export-pageparam-desc-author2": "הצגת המחבר המוגדר ב־book meta author 2",
+	"bs-bookshelf-export-pageparam-desc-bookshelf": "הצגת מדף הספרים של הספר",
+	"bs-bookshelf-export-pageparam-desc-department": "מראה המחלקה (department) של הספר",
+	"bs-bookshelf-export-pageparam-desc-docummentidentifier": "הצגת מזהה מסמך",
+	"bs-bookshelf-export-pageparam-desc-subtitle": "הצגת כותרת־המשנה של הספר",
+	"bs-bookshelf-export-pageparam-desc-docummenttype": "הצגת סוג המסמך",
+	"bs-bookshelf-export-pageparam-desc-version": "הצגת גרסת הספר"
 }

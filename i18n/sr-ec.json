@@ -82,5 +82,8 @@
 	"bs-bookshelf-notification-subscription-set-book-title": "Књига",
 	"bs-bookshelf-actionmenuentry-new-book": "Нова књига",
 	"bs-bookshelf-export-mode-book-label": "Књига",
-	"bs-bookshelf-book-page-book-action-export-book": "Извоз"
+	"bs-bookshelf-book-page-book-action-export-book": "Извоз",
+	"bs-bookshelf-export-pageparam-desc-title": "Прикажи наслов књиге",
+	"bs-bookshelf-export-pageparam-desc-docummenttype": "Прикажи тип документа",
+	"bs-bookshelf-export-pageparam-desc-version": "Прикажи верзију књиге"
 }
