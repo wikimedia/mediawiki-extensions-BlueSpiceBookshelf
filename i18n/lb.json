@@ -25,7 +25,6 @@
 	"prefs-bookshelf": "Bicherregal Spezialsäit",
 	"bs-bookshelf-mainlinks-label": "Bicher",
 	"bs-bookshelf-ga-editing-label": "Bicher",
-	"bs-bookshelf-prof-defaultview-images": "Biller",
 	"bs-bookshelf-ve-booklistinspector-title": "Bicherlëscht",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
 	"bs-bookshelf-ve-bookmetainspector-title": "Bookmeta",
@@ -86,6 +85,6 @@
 	"bs-bookshelf-droplet-bookpdf-book-label": "Buch fir den Export",
 	"bs-bookshelf-droplet-bookpdf-template-label": "Exportschabloun",
 	"bs-bookshelf-droplet-bookpdf-link-label": "Text fir den Exportlink",
-	"bs-bookshelfui-bookmetatag-pdftemplate": "PDF-Exportschabloun",
-	"bs-bookshelf-droplet-bookpdf-name": "Buch-PDF-Link"
+	"bs-bookshelf-droplet-bookpdf-name": "Buch-PDF-Link",
+	"bs-bookshelfui-bookmetatag-pdftemplate": "PDF-Exportschabloun"
 }
