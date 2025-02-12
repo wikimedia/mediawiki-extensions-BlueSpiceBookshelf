@@ -3,6 +3,7 @@
 		"authors": [
 			"Adam N.",
 			"Fraxinus.cs",
+			"Jrobicek",
 			"Kareyac"
 		]
 	},
@@ -10,5 +11,10 @@
 	"bs-bookshelf-book-grid-title": "Knihy",
 	"bs-bookshelf-ga-manager-label": "Knihy",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kniha",
-	"bs-bookshelf-mainlinks-label": "Knihy"
+	"bs-bookshelf-mainlinks-label": "Knihy",
+	"bs-books-overview-page-book-action-edit-text": "Upravit",
+	"bs-books-overview-page-book-action-delete-text": "Smazat",
+	"bs-books-overview-page-book-action-view-text": "Kapitoly",
+	"bs-books-overview-page-book-search-placeholder": "Najít knihu",
+	"bs-bookshelf-books-overview-page-book-action-export-book-text": "Exportovat"
 }
