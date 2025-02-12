@@ -52,7 +52,7 @@ class Delete implements IBooksOverviewAction {
 	 * @return array
 	 */
 	public function getIconClasses(): array {
-		return [ 'icon-delete' ];
+		return [ 'bi-trash' ];
 	}
 
 	/**
