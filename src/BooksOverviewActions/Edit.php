@@ -52,7 +52,7 @@ class Edit implements IBooksOverviewAction {
 	 * @return array
 	 */
 	public function getIconClasses(): array {
-		return [ 'icon-edit' ];
+		return [ 'bi-pencil-fill' ];
 	}
 
 	/**
