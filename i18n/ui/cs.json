@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jrobicek"
+		]
+	},
+	"bookshelfbookui": "Knižní editor",
+	"bs-bookshelfui-editor-no-title-provided": "Nebyl uveden žádný platný název knihy",
+	"bs-bookshelfui-widget-editor-link-text": "Upravit tuto knihu",
+	"bs-bookshelfui-edit-source": "Upravit zdrojovou wikistránku",
+	"bs-bookshelfui-dlg-choosecategory-label": "Kategorie",
+	"bs-bookshelfui-dlg-type-label": "Zdroj",
+	"bs-bookshelfui-dlg-addmass-title": "Hromadné přidání",
+	"bs-bookshelfui-type-category": "Všechny stránky kategorie",
+	"bs-bookshelfui-book-title-link-edit": "Upravit knihu",
+	"bs-bookshelfui-book-title-link-edit-text": "Upravit knihu",
+	"bs-bookshelfui-chapterpager-previous": "Předchozí",
+	"bs-bookshelfui-chapterpager-next": "Další",
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navigace v knize jako stromová struktura",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Knihovna"
+}
