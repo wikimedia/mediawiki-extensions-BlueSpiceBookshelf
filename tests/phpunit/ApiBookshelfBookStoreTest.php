@@ -16,8 +16,6 @@ use MediaWiki\Tests\Api\ApiTestCase;
  * @covers ApiBookshelfBookStore
  */
 class ApiBookshelfBookStoreTest extends ApiTestCase {
-	protected $tablesUsed = [ 'page' ];
-
 	protected $dummyBookContent = <<<HERE
 * [[A|a]]
 ** [[A/A|aa]]
