@@ -736,6 +736,9 @@
 		"bs.bookshelf.action.export": {
 			"scripts": [
 				"bluespice.bookshelf.export.js"
+			],
+			"messages": [
+				"bs-bookshelf-export-pdf-notification-done"
 			]
 		},
 		"ext.bluespice.object.bookpdf": {

@@ -99,12 +99,16 @@ class Book implements IExportMode {
 		if ( isset( $data[ 'book' ] ) ) {
 			$bookTitle = $this->titleFactory->newFromText( $data['book'] );
 		} else {
-			$bookOptions = $this->bookLookup->getBooksForPage( $title );
-			if ( empty( $bookOptions ) ) {
-				return [];
+			if ( $title->getNamespace() !== NS_BOOK ) {
+				$bookOptions = $this->bookLookup->getBooksForPage( $title );
+				if ( empty( $bookOptions ) ) {
+					return [];
+				}
+				$bookContextProvider = $this->bookContextProviderFactory->getProvider( $title );
+				$bookTitle = $bookContextProvider->getActiveBook();
+			} else {
+				$bookTitle = $title;
 			}
-			$bookContextProvider = $this->bookContextProviderFactory->getProvider( $title );
-			$bookTitle = $bookContextProvider->getActiveBook();
 		}
 		if ( !$bookTitle ) {
 			return [];

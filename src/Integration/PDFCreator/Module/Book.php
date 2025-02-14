@@ -23,7 +23,7 @@ class Book extends Batch {
 	 * @return void
 	 */
 	protected function addTocPage( array &$pages, ExportContext $context, bool $embedPageToc = false ): void {
-		$tocPageBuilder = new TocBuilder();
+		$tocPageBuilder = new TocBuilder( $this->titleFactory );
 		$pages = $tocPageBuilder->execute( $pages, $embedPageToc );
 	}
 
