@@ -23,7 +23,7 @@ class TocBuilder extends DefaultTocBuilder {
 		$body = $dom->getElementsByTagName( 'body' )->item( 0 );
 
 		$container = $dom->createElement( 'div' );
-		$container->setAttribute( 'class', 'pdfcreator-page pdfcrator-type-toc bs-bookshelf-toc' );
+		$container->setAttribute( 'class', 'pdfcreator-page pdfcreator-type-toc bs-bookshelf-toc' );
 
 		$heading = $dom->createElement( 'h1' );
 		$heading->setAttribute( 'class', 'firstHeading' );
@@ -83,6 +83,10 @@ class TocBuilder extends DefaultTocBuilder {
 
 		$li = $ul->ownerDocument->createElement( 'li' );
 		$li->setAttribute( 'class', 'toclevel-' . $level );
+
+		if ( $page->getPrefixedDBKey() ) {
+			$this->setNewClass( $li, $page->getPrefixedDBKey() );
+		}
 
 		$this->createLink( $li, $number, $label, $page->getUniqueId() );
 
