@@ -46,7 +46,11 @@ class PostBookMetadata extends SimpleHandler {
 
 		$user = RequestContext::getMain()->getUser();
 
-		$content = new JsonContent( FormatJson::encode( $body['meta'] ) );
+		$meta = $body['meta'];
+		if ( !$meta ) {
+			return $this->getResponseFactory()->createHttpError( 404, [ 'No valid meta data' ] );
+		}
+		$content = new JsonContent( FormatJSON::encode( $meta ) );
 
 		$wikiPage = $this->wikiPageFactory->newFromTitle( $bookTitle );
 		$pageUpdater = $wikiPage->newPageUpdater( $user );
@@ -59,7 +63,7 @@ class PostBookMetadata extends SimpleHandler {
 		$revisionRecord = $pageUpdater->saveRevision( $comment );
 
 		$status = 'error';
-		if ( $pageUpdater->getStatus() ) {
+		if ( $revisionRecord ) {
 			$status = 'success';
 		}
 
@@ -85,10 +89,9 @@ class PostBookMetadata extends SimpleHandler {
 	public function getBodyParamSettings(): array {
 		return [
 			'meta' => [
-				static::PARAM_SOURCE => 'body',
-				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_TYPE => 'array',
 				ParamValidator::PARAM_REQUIRED => false,
-				ParamValidator::PARAM_DEFAULT => ''
+				ParamValidator::PARAM_DEFAULT => []
 			],
 		];
 	}
