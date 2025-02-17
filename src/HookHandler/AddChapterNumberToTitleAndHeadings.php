@@ -5,8 +5,8 @@ namespace BlueSpice\Bookshelf\HookHandler;
 use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\ChapterInfo;
 use BlueSpice\Bookshelf\ChapterLookup;
-use BlueSpice\Bookshelf\HeadingNumberation;
-use BlueSpice\Bookshelf\TOCNumberation;
+use BlueSpice\Bookshelf\NumberHeadings;
+use BlueSpice\Bookshelf\NumberTOC;
 use MediaWiki\Config\Config;
 use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Output\OutputPage;
@@ -101,14 +101,14 @@ class AddChapterNumberToTitleAndHeadings {
 			$text = $this->removeHeadingNumberFromHeading( $text );
 			return true;
 		}
-		$headingNumberation = new HeadingNumberation();
-		$text = $headingNumberation->execute(
+		$numberHeadings = new NumberHeadings();
+		$text = $numberHeadings->execute(
 			$chapterInfo->getNumber(),
 			$text
 		);
 
-		$tocNumberation = new TOCNumberation();
-		$text = $tocNumberation->execute(
+		$numberToc = new NumberTOC();
+		$text = $numberToc->execute(
 			$chapterInfo->getNumber(),
 			$text
 		);

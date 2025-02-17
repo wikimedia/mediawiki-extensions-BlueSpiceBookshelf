@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Bookshelf;
 
-class HeadingNumberation {
+class NumberHeadings {
 
 	/** @var array */
 	private $headingCounter = [ 0, 0, 0, 0, 0, 0, 0 ];
@@ -68,7 +68,7 @@ class HeadingNumberation {
 
 			$this->increaseHeadingCounter( $level );
 			$this->resetHeadingCounter( $level + 1 );
-			$numberation = $this->getHeadingNumberation( $articleNumber );
+			$numberation = $this->getNumberHeadings( $articleNumber );
 
 			$html = preg_replace(
 				$this->getReplacementRegEx( $headings[$index] ),
@@ -137,7 +137,7 @@ class HeadingNumberation {
 	 * @param string $articleNumber
 	 * @return string
 	 */
-	private function getHeadingNumberation( string $articleNumber ): string {
+	private function getNumberHeadings( string $articleNumber ): string {
 		$counter = $this->clearHeadingCounter();
 		$numberation = implode( '.', $counter );
 

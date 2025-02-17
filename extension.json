@@ -838,7 +838,7 @@
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SkinTemplateNavigation\\AddEditBook"
 		},
 		"heading-numberation": {
-			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\HeadingNumberationHandler",
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\NumberHeadingsHandler",
 			"services": [ "ConfigFactory" ]
 		},
 		"add-chapter-number-to-title-and-headings": {

@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Bookshelf;
 
-class TOCNumberation {
+class NumberTOC {
 
 	/**
 	 * @param string $articleNumber
