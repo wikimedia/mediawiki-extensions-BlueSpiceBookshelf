@@ -113,5 +113,10 @@
 	"bs-bookshelf-droplet-bookpdf-book-label": "Kniha pro export",
 	"bs-bookshelf-droplet-bookpdf-template-label": "Export šablony",
 	"bs-bookshelf-droplet-bookpdf-name": "Odkaz na PDF knihu",
-	"bs-bookshelfui-bookmetatag-pdftemplate": "Šablona exportu do PDF"
+	"bs-bookshelfui-bookmetatag-pdftemplate": "Šablona exportu do PDF",
+	"bs-bookshelf-add-to-book-mod-bstag": "Štítek \"knihovna\" na stránce byl změněn. Stránka bude znovu načtena.",
+	"bs-bookshelf-tag-bookshelf-box-desc": "Vloží navigaci kapitol knihy na stránku, která není součástí knihy. Číslování je automaticky vytvořeno podle obsahu",
+	"bs-bookshelf-pref-prepend-tocnumber-help": "Přidejte čísla kapitol knihy do obsahu a všech nadpisů na stránce",
+	"apihelp-bs-books-overview-store-summary": "Uvádí všechny knihy včetně poličky, odkazu na první kapitolu a akcí.",
+	"bs-bookshelf-droplet-bookpdf-link-label": "Text pro odkaz na export"
 }
