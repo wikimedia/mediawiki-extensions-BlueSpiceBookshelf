@@ -15,8 +15,6 @@ use MediaWikiIntegrationTestCase;
  * @group Database
  */
 class BookSourceParserTest extends MediaWikiIntegrationTestCase {
-	protected $tablesUsed = [ 'page' ];
-
 	protected $dummyBookContent = <<<HERE
 * [[A|]]
 ** [[A/A|aa]]
