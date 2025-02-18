@@ -186,5 +186,6 @@
 	"bs-bookshelf-export-pageparam-desc-docummentidentifier": "Description for page param \"docummentidentifier\"",
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Description for page param \"subtitle\"",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "SDescription for page param \"docummenttype\"",
-	"bs-bookshelf-export-pageparam-desc-version": "Description for page param \"version\""
+	"bs-bookshelf-export-pageparam-desc-version": "Description for page param \"version\"",
+	"bs-bookshelf-export-pdf-notification-done": "Label for notification that PDF export is completed"
 }

@@ -195,5 +195,6 @@
 	"bs-bookshelf-export-pageparam-desc-docummentidentifier": "Zeigt die Dokumenten-ID",
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Zeigt den Untertitel des Buches",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Zeigt den Dokumententyp",
-	"bs-bookshelf-export-pageparam-desc-version": "Zeigt die Version des Buches"
+	"bs-bookshelf-export-pageparam-desc-version": "Zeigt die Version des Buches",
+	"bs-bookshelf-export-pdf-notification-done": "PDF-Export abgeschlossen"
 }

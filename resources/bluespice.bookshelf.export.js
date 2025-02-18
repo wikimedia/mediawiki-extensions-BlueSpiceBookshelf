@@ -39,7 +39,7 @@
 
 				const pdfApi = new ext.pdfcreator.api.Api();
 				pdfApi.export( pageId, data ).done( () => {
-					mw.notify( 'PDF erstellt' );
+					mw.notify( mw.message( 'bs-bookshelf-export-pdf-notification-done' ).text() );
 				} )
 				.fail( ( error ) => {
 					console.log( error );
