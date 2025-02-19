@@ -91,5 +91,6 @@
 	"bs-bookshelf-export-pageparam-desc-bookshelf": "Weist d'Regal vum Buch",
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Weist den Ënnertitel vum Buch",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Weist den Dokumententyp",
-	"bs-bookshelf-export-pageparam-desc-version": "Weist d'Versioun vum Buch"
+	"bs-bookshelf-export-pageparam-desc-version": "Weist d'Versioun vum Buch",
+	"bs-bookshelf-export-pdf-notification-done": "PDF-Export fäerdeg"
 }

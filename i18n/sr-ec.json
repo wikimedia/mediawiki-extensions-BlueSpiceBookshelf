@@ -81,5 +81,6 @@
 	"bs-bookshelf-book-page-book-action-export-book": "Извоз",
 	"bs-bookshelf-export-pageparam-desc-title": "Прикажи наслов књиге",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Прикажи тип документа",
-	"bs-bookshelf-export-pageparam-desc-version": "Прикажи верзију књиге"
+	"bs-bookshelf-export-pageparam-desc-version": "Прикажи верзију књиге",
+	"bs-bookshelf-export-pdf-notification-done": "Извоз PDF завршен"
 }
