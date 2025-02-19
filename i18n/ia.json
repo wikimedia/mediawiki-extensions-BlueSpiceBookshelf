@@ -189,5 +189,6 @@
 	"bs-bookshelf-export-pageparam-desc-docummentidentifier": "Monstra le identificator del documento",
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Monstra le subtitulo del libro",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Monstra le typo del documento",
-	"bs-bookshelf-export-pageparam-desc-version": "Monstra le version del libro"
+	"bs-bookshelf-export-pageparam-desc-version": "Monstra le version del libro",
+	"bs-bookshelf-export-pdf-notification-done": "Exportation in PDF terminate"
 }
