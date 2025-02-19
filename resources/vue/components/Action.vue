@@ -20,7 +20,7 @@ module.exports = {
 .bs-card-actions > li > a {
 	display: inline-block;
 	height: 100%;
-	padding: 3px 10px;
+	padding: 15px 15px;
 	color: #666 !important;
 }
 .bs-card-actions > li > a:focus-visible {
@@ -28,6 +28,6 @@ module.exports = {
 }
 .bs-card-actions > li > a i {
 	display: inline-block;
-	width: 32px;
+	margin-right: 15px;
 }
 </style>
