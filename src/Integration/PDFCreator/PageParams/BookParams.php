@@ -9,6 +9,7 @@ use MediaWiki\Extension\PDFCreator\Utility\ParamDesc;
 use MediaWiki\Message\Message;
 use MediaWiki\Page\PageIdentity;
 use MediaWiki\Title\TitleFactory;
+use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\ManifestRegistry\ManifestAttributeBasedRegistry;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
@@ -45,7 +46,7 @@ class BookParams implements IPageParamsProvider {
 	/**
 	 * @inheritDoc
 	 */
-	public function execute( ?PageIdentity $pageIdentity ): array {
+	public function execute( ?PageIdentity $pageIdentity, ?UserIdentity $userIdentity ): array {
 		if ( $pageIdentity === null ) {
 			return [];
 		}
