@@ -5,6 +5,7 @@
 	bs.bookshelf.ui.pages.BookshelfMeta = function( name, config ) {
 		config = config || {};
 		bs.bookshelf.ui.pages.BookshelfMeta.super.call( this, name, config );
+		this.$overlay = config.$overlay || true;
 	};
 
 	OO.inheritClass( bs.bookshelf.ui.pages.BookshelfMeta, bs.bookshelf.ui.pages.MetaDataPage );
@@ -25,7 +26,7 @@
 		}
 		this.inputWidget = new OO.ui.ComboBoxInputWidget( {
 			options: options,
-			$overlay: true,
+			$overlay: this.$overlay,
 			value: this.value
 		} );
 
