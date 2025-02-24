@@ -47,7 +47,6 @@ module.exports = {
 }
 .bs-card-actions .dropdown .dropdown-toggle {
 	display: inline-block;
-	padding: 3px 10px;
 	color: #666 !important;
 }
 .bs-card-actions .dropdown .dropdown-toggle::before {
