@@ -191,5 +191,6 @@
 	"bs-bookshelf-export-pageparam-desc-docummentidentifier": "הצגת מזהה מסמך",
 	"bs-bookshelf-export-pageparam-desc-subtitle": "הצגת כותרת־המשנה של הספר",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "הצגת סוג המסמך",
-	"bs-bookshelf-export-pageparam-desc-version": "הצגת גרסת הספר"
+	"bs-bookshelf-export-pageparam-desc-version": "הצגת גרסת הספר",
+	"bs-bookshelf-export-pdf-notification-done": "יצוא PDF הושלם"
 }
