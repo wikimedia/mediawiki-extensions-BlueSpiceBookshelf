@@ -51,7 +51,6 @@
 	"bs-bookshelf-ve-bookshelfinspector-title": "Könyvespolc",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Könyv",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Meghatározza, hogy a lapok melyik könyvhöz tartoznak",
-	"bs-bookshelf-pref-prepend-tocnumber-help": "A könyv fejezetszámainak hozzáadása a tartalomjegyzékhez és az összes címsorhoz a lapon",
 	"bs-bookshelf-droplet-name": "Könyvlista",
 	"bs-bookshelf-droplet-description": "A Könyv névtér lapjainak listája",
 	"bs-bookshelf-booknav-book-label": "Könyv",
