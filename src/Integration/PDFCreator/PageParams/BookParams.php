@@ -55,6 +55,9 @@ class BookParams implements IPageParamsProvider {
 
 		$params = [];
 		foreach ( $bookMeta as $key => $item ) {
+			if ( $key === 'docummenttype' ) {
+				$key = 'documenttype';
+			}
 			$params['book-' . $key ] = $item;
 		}
 		return $params;
@@ -79,8 +82,13 @@ class BookParams implements IPageParamsProvider {
 				continue;
 			}
 
+			$key = 'book-' . $object->getKey();
+			if ( $object->getKey() === 'docummenttype' ) {
+				$key = 'book-documenttype';
+			}
+
 			$desc[] = new ParamDesc(
-				'book-' . $object->getKey(),
+				$key,
 				Message::newFromKey( 'bs-bookshelf-export-pageparam-desc-' . $object->getKey() )
 			);
 		}
