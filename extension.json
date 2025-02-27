@@ -30,7 +30,6 @@
 			"ConfigDefinitionRegistry": {
 				"BookShelfShowChapterNavigationPagerAfterContent": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\ChapterPagerAfterContent::getInstance",
 				"BookShelfShowChapterNavigationPagerBeforeContent": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\ChapterPagerBeforeContent::getInstance",
-				"BookshelfSupressBookNS": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\SupressBookNS::getInstance",
 				"BookshelfTitleDisplayText": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\TitleDisplayText::getInstance",
 				"BookshelfPrependPageTOCNumbers": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\PrependPageTOCNumbers::getInstance",
 				"BookshelfMainLinksBookshelf": "\\BlueSpice\\Bookshelf\\ConfigDefinition\\MainLinksBookshelf::getInstance",
@@ -793,11 +792,6 @@
 	],
 	"config_prefix": "bsg",
 	"config": {
-		"BookshelfSupressBookNS": {
-			"value": true,
-			"descriptionmsg": "bs-bookshelf-pref-SupressBookNS",
-			"public": true
-		},
 		"BookshelfTitleDisplayText": {
 			"value": true,
 			"descriptionmsg": "bs-bookshelf-pref-TitleDisplayText",
