@@ -4,6 +4,8 @@ namespace BlueSpice\Bookshelf\Integration\PDFCreator\PageParams;
 
 use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\IMetaDataDescription;
+use MediaWiki\Config\Config;
+use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Extension\PDFCreator\IPageParamsProvider;
 use MediaWiki\Extension\PDFCreator\Utility\ParamDesc;
 use MediaWiki\Message\Message;
@@ -31,13 +33,14 @@ class BookParams implements IPageParamsProvider {
 	];
 
 	/**
-	 *
 	 * @param TitleFactory $titleFactory
 	 * @param BookMetaLookup $bookMetaLookup
 	 * @param ObjectFactory $objectFactory
 	 */
-	public function __construct( TitleFactory $titleFactory,
-		BookMetaLookup $bookMetaLookup, ObjectFactory $objectFactory ) {
+	public function __construct(
+		TitleFactory $titleFactory,	BookMetaLookup $bookMetaLookup,
+		ObjectFactory $objectFactory
+	) {
 		$this->titleFactory = $titleFactory;
 		$this->bookMetaLookup = $bookMetaLookup;
 		$this->objectFactory = $objectFactory;
@@ -51,6 +54,9 @@ class BookParams implements IPageParamsProvider {
 			return [];
 		}
 		$title = $this->titleFactory->newFromPageIdentity( $pageIdentity );
+		if ( $title->getNamespace() !== NS_BOOK ) {
+			return [];
+		}
 		$bookMeta = $this->bookMetaLookup->getMetaForBook( $title );
 
 		$params = [];
@@ -60,6 +66,7 @@ class BookParams implements IPageParamsProvider {
 			}
 			$params['book-' . $key ] = $item;
 		}
+
 		return $params;
 	}
 
