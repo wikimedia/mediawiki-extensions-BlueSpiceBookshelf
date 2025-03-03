@@ -55,7 +55,6 @@
 	"right-bookshelf-viewspecialpage": "Accede alla pagina speciale [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "accedere alla pagina speciale [[Special:Bookshelf]]",
 	"bs-bookshelf-action-save-to-local-storage": "Sto salvando su disco locale",
-	"bs-bookshelf-pref-supressbookns-help": "Il namespace dei nomi di pagina è nascosto nell'output PDF.",
 	"bs-bookshelf-warning": "Eccezione PHP: $1",
 	"bs-bookshelf-ve-booklistinspector-title": "Elenco di libri",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtro",
