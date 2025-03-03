@@ -139,7 +139,7 @@ class TreeDataProvider {
 			'namespace' => $item['chapter_namespace'],
 			'title' => $item['chapter_title'],
 			'name' => $item['chapter_name'],
-			'text' => $item['chapter_number'] . ' ' . $item['chapter_name'],
+			'text' => '<span class="bs-chapter-number">' . $item['chapter_number'] . '</span> ' . $item['chapter_name'],
 			'path' => trim( $path, '/' ),
 			'items' => []
 		];
