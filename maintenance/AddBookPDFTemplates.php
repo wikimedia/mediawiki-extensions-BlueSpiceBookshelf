@@ -2,6 +2,7 @@
 
 use MediaWiki\CommentStore\CommentStoreComment;
 use MediaWiki\Content\CssContent;
+use MediaWiki\Content\JsonContent;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\PDFCreator\MediaWiki\Content\PDFCreatorTemplate;
 use MediaWiki\Maintenance\LoggedUpdateMaintenance;
@@ -18,7 +19,7 @@ class AddBookPDFTemplates extends LoggedUpdateMaintenance {
 	 * @return string
 	 */
 	protected function getUpdateKey() {
-		return 'bs-bookshelf-default-bookpdf';
+		return 'bs-bookshelf-default-bookpdf-creation';
 	}
 
 	/**
@@ -50,6 +51,9 @@ class AddBookPDFTemplates extends LoggedUpdateMaintenance {
 			],
 			'pdfcreator_template_styles' => [
 				'file' => $baseDir . '/Styles.css',
+			],
+			'pdfcreator_template_options' => [
+				'file' => $baseDir . '/Options.json',
 			]
 		];
 
@@ -65,6 +69,8 @@ class AddBookPDFTemplates extends LoggedUpdateMaintenance {
 			$content = file_get_contents( $template['file'] );
 			if ( $slotKey === 'pdfcreator_template_styles' ) {
 				$content = new CssContent( $content );
+			} elseif ( $slotKey === 'pdfcreator_template_options' ) {
+				$content = new JsonContent( $content );
 			} else {
 				$content = new PDFCreatorTemplate( $content );
 			}
