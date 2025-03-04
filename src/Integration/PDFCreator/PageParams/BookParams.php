@@ -4,8 +4,6 @@ namespace BlueSpice\Bookshelf\Integration\PDFCreator\PageParams;
 
 use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\IMetaDataDescription;
-use MediaWiki\Config\Config;
-use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Extension\PDFCreator\IPageParamsProvider;
 use MediaWiki\Extension\PDFCreator\Utility\ParamDesc;
 use MediaWiki\Message\Message;
