@@ -185,5 +185,6 @@
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Zeigt den Untertitel des Buches",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Zeigt den Dokumententyp",
 	"bs-bookshelf-export-pageparam-desc-version": "Zeigt die Version des Buches",
-	"bs-bookshelf-export-pdf-notification-done": "PDF-Export abgeschlossen"
+	"bs-bookshelf-export-pdf-notification-done": "PDF-Export abgeschlossen",
+	"bs-books-overview-page-bookshelf-empty-text": "Aktuell gibt es keine Bücher. Erstelle jetzt das erste!"
 }
