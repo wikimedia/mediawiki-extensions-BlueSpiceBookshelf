@@ -15,7 +15,6 @@
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Vui lòng sử dụng <i>left</i> hoặc <i>right</i> .",
 	"bs-bookshelf-specialpage-title": "Sách",
 	"bs-bookshelf-specialpage-allpages-ns-book-text": "Thư viện",
-	"bs-bookshelf-pref-SupressBookNS": "Bỏ tiền tố không gian tên của các bài viết trong sách ở đầu ra",
 	"bs-bookshelf-pref-TitleDisplayText": "Sử dụng tiêu đề hiển thị từ nguồn sách trên bài viết",
 	"bs-bookshelf-tag-next": "Sau",
 	"bs-bookshelf-tag-prev": "Trước",
