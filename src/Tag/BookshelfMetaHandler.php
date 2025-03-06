@@ -23,7 +23,7 @@ class BookshelfMetaHandler implements ITagHandler {
 			'bs-universalexport-meta',
 			FormatJson::encode( $params )
 		);
-		$parser->getOutput()->setPageProperty( 'bs-tag-universalexport-meta', 1 );
+		$parser->getOutput()->setPageProperty( 'bs-tag-universalexport-meta', '1' );
 
 		$attribs = [
 			'class' => 'bs-universalexport-meta'
