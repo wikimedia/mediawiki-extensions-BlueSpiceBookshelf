@@ -103,7 +103,6 @@
 	"bs-books-overview-page-book-action-view-text": "Capitulos",
 	"bs-books-overview-page-book-action-view-title": "Vider capitulos de $1",
 	"bs-books-overview-page-book-search-placeholder": "Cercar libro",
-	"bs-books-overview-page-bookshelf-empty": "Il non ha libros disponibile",
 	"bs-books-overview-page-aria-live-filtered-rows": "({{PLURAL:$1|Un libro|$1 libros}}) trovate",
 	"bs-bookshelf-chapter-plain-text-label": "Texto del titulo del capitulo",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Adder un nove titulo de capitulo",

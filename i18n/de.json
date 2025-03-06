@@ -115,7 +115,7 @@
 	"bs-books-overview-page-book-action-view-text": "Kapitel",
 	"bs-books-overview-page-book-action-view-title": "Kapitel von $1 ansehen",
 	"bs-books-overview-page-book-search-placeholder": "Buch finden",
-	"bs-books-overview-page-bookshelf-empty": "Es sind keine Bücher verfügbar",
+	"bs-books-overview-page-bookshelf-empty-text": "Aktuell gibt es keine Bücher. Erstelle jetzt das erste!",
 	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|Ein Buch|$1 Bücher}} gefunden",
 	"bs-bookshelf-chapter-plain-text-label": "Text-Kapitelüberschrift",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Eine neue Kapitelüberschrift hinzufügen",
@@ -185,6 +185,5 @@
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Zeigt den Untertitel des Buches",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Zeigt den Dokumententyp",
 	"bs-bookshelf-export-pageparam-desc-version": "Zeigt die Version des Buches",
-	"bs-bookshelf-export-pdf-notification-done": "PDF-Export abgeschlossen",
-	"bs-books-overview-page-bookshelf-empty-text": "Aktuell gibt es keine Bücher. Erstelle jetzt das erste!"
+	"bs-bookshelf-export-pdf-notification-done": "PDF-Export abgeschlossen"
 }

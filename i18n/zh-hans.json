@@ -129,7 +129,6 @@
 	"bs-books-overview-page-book-action-view-text": "章节",
 	"bs-books-overview-page-book-action-view-title": "查看$1的章节",
 	"bs-books-overview-page-book-search-placeholder": "查找图书",
-	"bs-books-overview-page-bookshelf-empty": "没有可用的书籍",
 	"bs-books-overview-page-aria-live-filtered-rows": "找到{{PLURAL:$1|$1}}本书籍",
 	"bs-bookshelf-chapter-plain-text-label": "文本章节标题",
 	"bs-bookshelf-chapter-plain-text-label-edit": "添加新章节标题",

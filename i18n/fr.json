@@ -119,7 +119,6 @@
 	"bs-books-overview-page-book-action-view-text": "Chapitres",
 	"bs-books-overview-page-book-action-view-title": "Voir les chapitres de $1",
 	"bs-books-overview-page-book-search-placeholder": "Trouver un livre",
-	"bs-books-overview-page-bookshelf-empty": "Il n'y a pas de livres disponibles",
 	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|Un livre trouvé|$1 livres trouvés}}",
 	"bs-bookshelf-chapter-plain-text-label": "Titre du chapitre du texte",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Ajouter un nouveau titre de chapitre",
