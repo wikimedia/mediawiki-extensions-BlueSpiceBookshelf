@@ -109,6 +109,7 @@
 	"bs-books-overview-page-book-action-view-text": "פרקים",
 	"bs-books-overview-page-book-action-view-title": "צפייה בפרקים של $1",
 	"bs-books-overview-page-book-search-placeholder": "למצוא ספר",
+	"bs-books-overview-page-bookshelf-empty-text": "כרגע אין ספרים. אפשר ליצור את הראשון עכשיו!",
 	"bs-books-overview-page-aria-live-filtered-rows": "({{PLURAL:$1|נמצא ספר אחד|נמצאו $1 ספרים}})",
 	"bs-bookshelf-chapter-plain-text-label": "כותרת פרק טקסט",
 	"bs-bookshelf-chapter-plain-text-label-edit": "הוספת כותרת פרק חדשה",
