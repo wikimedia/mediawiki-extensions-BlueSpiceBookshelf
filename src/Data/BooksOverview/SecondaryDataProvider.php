@@ -256,7 +256,7 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 
 			$fileTitle = $this->titleFactory->newFromText( $basename );
 			if ( !$fileTitle->exists() || $fileTitle->getNamespace() !== NS_FILE ) {
-				$fileTitle = $this->titleFactory->newFromText( $basename, NS_FILE );
+				$fileTitle = $this->titleFactory->makeTitle( NS_FILE, $basename );
 			}
 
 			$localFile = $this->repoGroup->findFile( $fileTitle );
