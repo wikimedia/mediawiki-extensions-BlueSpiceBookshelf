@@ -16,7 +16,8 @@
 			"Thibaut120094",
 			"Verdy p",
 			"Wladek92",
-			"Wnagxsi"
+			"Wnagxsi",
+			"JLTRY"
 		]
 	},
 	"bs-bookshelf-extension-description": "Permet à BlueSpice de gérer et exporter des collections hiérarchiques d’articles.",
@@ -64,7 +65,7 @@
 	"action-bookshelf-viewspecialpage": "accéder à la page spéciale [[Special:Bookshelf]]",
 	"bs-bookshelf-action-save-to-local-storage": "Enregistrement dans le stockage local",
 	"bs-bookshelf-pref-chapterpagerbeforecontent": "Afficher la navigation par chapitre du livre avant le contenu",
-	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Ajoute une navigation par chapitre en haut de la page.",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Ajoute une navigation par chapitre en haut de page.",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Ajouter la navigation par chapitre du livre après le contenu",
 	"bs-bookshelf-pref-chapterpageraftercontent-help": "Ajoute une navigation par chapitre en bas de page.",
 	"bs-bookshelf-warning": "Exception PHP : $1",
@@ -118,7 +119,6 @@
 	"bs-books-overview-page-book-action-view-text": "Chapitres",
 	"bs-books-overview-page-book-action-view-title": "Voir les chapitres de $1",
 	"bs-books-overview-page-book-search-placeholder": "Trouver un livre",
-	"bs-books-overview-page-bookshelf-empty": "Il n'y a pas de livres disponibles",
 	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|Un livre trouvé|$1 livres trouvés}}",
 	"bs-bookshelf-chapter-plain-text-label": "Titre du chapitre du texte",
 	"bs-bookshelf-chapter-plain-text-label-edit": "Ajouter un nouveau titre de chapitre",

@@ -54,7 +54,6 @@
 	"bs-books-overview-page-book-action-edit-title": "Buch $1 änneren",
 	"bs-books-overview-page-book-action-delete-text": "Läschen",
 	"bs-books-overview-page-book-action-delete-title": "Buch $1 läschen",
-	"bs-books-overview-page-bookshelf-empty": "Et si keng Bicher verfügbar",
 	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|Ee Buch|$1 Bicher}} fonnt",
 	"bs-bookshelf-chapter-plain-text-input-label": "Text",
 	"bs-bookshelf-chapter-wikilink-with-alias-target-input-label": "Zil",
