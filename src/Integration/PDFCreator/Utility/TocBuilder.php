@@ -199,7 +199,9 @@ class TocBuilder extends DefaultTocBuilder {
 		);
 		$tocNumber->setAttribute( 'class', 'tocnumber' );
 		$number = trim( $number, '.' );
-		$tocNumber->appendChild( $tocNumber->ownerDocument->createTextNode( $number . '.' ) );
+		if ( $number !== '' ) {
+			$tocNumber->appendChild( $tocNumber->ownerDocument->createTextNode( $number . '.' ) );
+		}
 
 		$tocText = $a->appendChild(
 			$a->ownerDocument->createElement( 'span' )

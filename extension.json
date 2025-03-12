@@ -220,13 +220,13 @@
 				"book": {
 					"class": "BlueSpice\\Bookshelf\\Integration\\PDFCreator\\Module\\Book",
 					"services": [
-						"PDFCreator.ExportPageFactory", "PDFCreator.TemplateProviderFactory",
+						"PDFCreator.PageSpecFactory", "PDFCreator.ExportPageFactory", "PDFCreator.TemplateProviderFactory",
 						"PDFCreator.BackendFactory", "PDFCreator.TargetFactory", "PDFCreator.MetaDataFactory",
 						"PDFCreator.ExportHtmlBuilder", "PDFCreator.PreProcessorFactory", "PDFCreator.ProcessorFactory",
 						"PDFCreator.PostProcessorFactory",
 						"PDFCreator.StylesheetsFactory", "PDFCreator.StyleBlocksFactory",
 						"PDFCreator.MediaWikiCommonCssProvider",
-						"MainConfig", "TitleFactory", "PageProps"
+						"MainConfig", "TitleFactory", "RedirectLookup"
 					]
 				}
 			},
