@@ -191,5 +191,6 @@
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Label for button to clear chapter selection",
 	"bs-bookshelf-sesp-books": "SemanticExtraSpecialProperties \"Books\" property label",
 	"bs-bookshelf-sesp-books-desc": "SemanticExtraSpecialProperties \"Books\" property description",
-	"bs-bookshelf-actionmenuentry-create-new-book": "Label for action menu entry to create a new book"
+	"bs-bookshelf-actionmenuentry-create-new-book": "Label for action menu entry to create a new book",
+	"bs-bookshelf-search-center-context-books-label": "Label for the search context field.\n$1 - number of books to search in, $2 - book names"
 }
