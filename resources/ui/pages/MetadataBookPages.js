@@ -1,4 +1,4 @@
-( function ( mw, $, bs ) {
+( function () {
 
 	require( './MetaDataPage.js' );
 	require( './BookTitleMeta.js' );
@@ -13,4 +13,4 @@
 	require( './BookshelfMeta.js' );
 	require( './PDFTemplateMeta.js' );
 
-} )( mediaWiki, jQuery, blueSpice );
+}() );

@@ -6,10 +6,18 @@
 		"wikimedia/mediawiki"
 	],
 	"globals": {
+		"blueSpice": "readonly",
+		"bs": "readonly",
+		"ext": "readonly",
 		"jQuery": "readonly",
-		"mediaWiki": "readonly"
+		"mediaWiki": "readonly",
+		"OOJSPlus": "readonly",
+		"QUnit": "readonly",
+		"ve": "readonly"
 	},
 	"rules": {
-		"max-len": "off"
+		"max-len": "off",
+		"no-jquery/variable-pattern": "off",
+		"no-prototype-builtins": "off"
 	}
 }

@@ -8,11 +8,11 @@
 
 		let filter = '';
 		const query = window.location.search;
-		const queryParams = new URLSearchParams( query ); // eslint-disable-line compat/compat
+		const queryParams = new URLSearchParams( query );
 		if ( queryParams.has( 'filter' ) ) {
 			filter = queryParams.get( 'filter' );
 		}
-		dfdList.done( function ( response ) {
+		dfdList.done( ( response ) => {
 			const h = Vue.h;
 
 			const vm = Vue.createMwApp( {
@@ -26,9 +26,7 @@
 					if ( response.length > 0 ) {
 						books = response;
 						// Sort books alphabetically
-						books.sort( function ( bookA, bookB ) {
-							return bookA.displaytitle.toLowerCase().localeCompare( bookB.displaytitle.toLowerCase() );
-						} );
+						books.sort( ( bookA, bookB ) => bookA.displaytitle.toLowerCase().localeCompare( bookB.displaytitle.toLowerCase() ) );
 						searchableData = setSearchableData( books );
 					}
 
@@ -51,19 +49,19 @@
 	function getStoreData() {
 		const dfd = $.Deferred();
 
-		mw.loader.using( 'mediawiki.api' ).done( function () {
+		mw.loader.using( 'mediawiki.api' ).done( () => {
 			const api = new mw.Api();
 			api.abort();
 			api.get( {
 				action: 'bs-books-overview-store',
 				limit: -1
 			} )
-				.done( function ( response ) {
+				.done( ( response ) => {
 					const modules = getModules( response.results );
-					mw.loader.using( modules ).done( function () {
+					mw.loader.using( modules ).done( () => {
 						dfd.resolve( response.results );
 					} );
-				} ).fail( function () {
+				} ).fail( () => {
 					console.log( 'fail' ); // eslint-disable-line no-console
 					dfd.reject();
 				} );
@@ -80,7 +78,7 @@
 	 */
 	function setSearchableData( items ) {
 		const data = [];
-		items.forEach( function ( item ) {
+		items.forEach( ( item ) => {
 			const title = mw.Title.makeTitle( item.book_namespace, item.book_title );
 			let prefText = '';
 			if ( title !== null ) {
@@ -101,16 +99,14 @@
 
 	function getModules( results ) {
 		let allModules = [];
-		results.forEach( function ( result ) {
+		results.forEach( ( result ) => {
 			if ( result.modules.length <= 0 ) {
 				return;
 			}
 			allModules = allModules.concat( result.modules );
 		} );
 
-		const modules = allModules.filter( function ( v, i, self ) {
-			return i == self.indexOf( v ); // eslint-disable-line eqeqeq
-		} );
+		const modules = allModules.filter( ( v, i, self ) => i == self.indexOf( v ) ); // eslint-disable-line eqeqeq
 		return modules;
 	}
 

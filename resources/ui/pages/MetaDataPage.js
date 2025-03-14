@@ -2,7 +2,7 @@
 
 	bs.util.registerNamespace( 'bs.bookshelf.ui.pages' );
 
-	bs.bookshelf.ui.pages.MetaDataPage = function( name, cfg ) {
+	bs.bookshelf.ui.pages.MetaDataPage = function ( name, cfg ) {
 		cfg = cfg || {};
 		cfg.padded = true;
 		bs.bookshelf.ui.pages.MetaDataPage.super.call( this, name, cfg );
@@ -29,7 +29,7 @@
 	};
 
 	bs.bookshelf.ui.pages.MetaDataPage.prototype.setup = function () {
-		//STUB
+		// STUB
 	};
 
 	bs.bookshelf.ui.pages.MetaDataPage.prototype.getValue = function () {
@@ -37,8 +37,7 @@
 	};
 
 	bs.bookshelf.ui.pages.MetaDataPage.prototype.setValue = function () {
-		//STUB;
+		// STUB;
 	};
 
-
-} )( mediaWiki, jQuery, blueSpice );
+}( mediaWiki, jQuery, blueSpice ) );

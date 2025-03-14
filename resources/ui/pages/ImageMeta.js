@@ -2,7 +2,7 @@
 
 	bs.util.registerNamespace( 'bs.bookshelf.ui.pages' );
 
-	bs.bookshelf.ui.pages.ImageMeta = function( name, config ) {
+	bs.bookshelf.ui.pages.ImageMeta = function ( name, config ) {
 		config = config || {};
 		bs.bookshelf.ui.pages.ImageMeta.super.call( this, name, config );
 	};
@@ -19,7 +19,7 @@
 			value: this.value
 		} );
 
-		var fieldLayout = new OO.ui.FieldLayout( this.inputWidget, {
+		const fieldLayout = new OO.ui.FieldLayout( this.inputWidget, {
 			align: 'top',
 			label: mw.message( 'bs-bookshelfui-bookmetatag-bookshelfimage' ).text()
 		} );
@@ -35,4 +35,4 @@
 		this.inputWidget.setValue( value );
 	};
 
-} )( mediaWiki, jQuery, blueSpice );
+}( mediaWiki, jQuery, blueSpice ) );

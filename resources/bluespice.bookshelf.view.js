@@ -12,7 +12,7 @@
 		let isSelecable = false;
 		const registeredTreeTools = config.tools;
 		const offset = config.offset;
-		mw.user.getRights().done( function ( rights ) {
+		mw.user.getRights().done( ( rights ) => {
 			for ( let index = 0; index < registeredTreeTools.length; index++ ) {
 				const tool = registeredTreeTools[ index ];
 				if ( tool.permission !== '' && rights.indexOf( tool.permission ) < 0 ) {
@@ -24,7 +24,7 @@
 				treeTools.push( tool );
 			}
 
-			mw.loader.using( config.modules ).done( function () {
+			mw.loader.using( config.modules ).done( () => {
 				const vm = Vue.createMwApp( {
 					mounted: function () {
 					},

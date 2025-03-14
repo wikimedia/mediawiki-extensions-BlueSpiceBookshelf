@@ -2,7 +2,7 @@
 
 	bs.util.registerNamespace( 'bs.bookshelf.ui.pages' );
 
-	bs.bookshelf.ui.pages.PDFTemplateMeta = function( name, config ) {
+	bs.bookshelf.ui.pages.PDFTemplateMeta = function ( name, config ) {
 		config = config || {};
 		bs.bookshelf.ui.pages.PDFTemplateMeta.super.call( this, name, config );
 		this.$overlay = config.$overlay || true;
@@ -15,13 +15,13 @@
 	};
 
 	bs.bookshelf.ui.pages.PDFTemplateMeta.prototype.setup = function () {
-		var pdfTemplates = require( './pdftemplates.json' );
+		const pdfTemplates = require( './pdftemplates.json' );
 
-		var allTemplates = pdfTemplates.templates;
-		var options = [];
+		const allTemplates = pdfTemplates.templates;
+		const options = [];
 		if ( allTemplates.length > 0 ) {
-			allTemplates.forEach( function ( template ) {
-				var item = new OO.ui.MenuOptionWidget( {
+			allTemplates.forEach( ( template ) => {
+				const item = new OO.ui.MenuOptionWidget( {
 					data: template,
 					label: template
 				} );
@@ -42,7 +42,7 @@
 			this.setValue( this.value );
 		}
 
-		var fieldLayout = new OO.ui.FieldLayout( this.dropdownWidget, {
+		const fieldLayout = new OO.ui.FieldLayout( this.dropdownWidget, {
 			align: 'top',
 			label: mw.message( 'bs-bookshelfui-bookmetatag-pdftemplate' ).text()
 		} );
@@ -51,7 +51,7 @@
 	};
 
 	bs.bookshelf.ui.pages.PDFTemplateMeta.prototype.getValue = function () {
-		var selected = this.dropdownWidget.getMenu().findSelectedItem();
+		const selected = this.dropdownWidget.getMenu().findSelectedItem();
 		if ( !selected ) {
 			return '';
 		}
@@ -62,4 +62,4 @@
 		this.dropdownWidget.getMenu().selectItemByData( value );
 	};
 
-} )( mediaWiki, jQuery, blueSpice );
+}( mediaWiki, jQuery, blueSpice ) );
