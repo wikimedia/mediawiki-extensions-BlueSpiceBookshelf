@@ -417,6 +417,9 @@
 				"bs-bookshelf-ve-bookmeta-attr-author-help",
 				"bs-bookshelf-ve-bookmeta-attr-version-label",
 				"bs-bookshelf-ve-bookmeta-attr-version-help"
+			],
+			"dependencies": [
+				"ext.bluespice.visualEditorConnector.tags.classes"
 			]
 		},
 		"ext.bluespice.bookshelf.visualEditorTagDefinition": {
@@ -428,6 +431,9 @@
 				"bs-bookshelf-ve-bookshelfinspector-title",
 				"bs-bookshelf-ve-bookshelf-attr-book-label",
 				"bs-bookshelf-ve-bookshelf-attr-book-help"
+			],
+			"dependencies": [
+				"ext.bluespice.visualEditorConnector.tags.classes"
 			]
 		},
 		"ext.bluespice.booknav.visualEditorTagDefinition": {
