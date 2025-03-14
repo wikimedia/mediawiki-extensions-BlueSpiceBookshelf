@@ -1,7 +1,7 @@
 ( function () {
 	QUnit.module( 'bluespice.bookshelf.processor.chapternumber.test', QUnit.newMwEnvironment() );
 
-	QUnit.test( 'generateBookChapterNumbering list test', function( assert ) {
+	QUnit.test( 'generateBookChapterNumbering list test', ( assert ) => {
 		const items = [
 			{ level: 1 },
 			{ level: 2 },
@@ -62,14 +62,14 @@
 			'6.2.2.'
 		];
 
-		var processor = new ext.bookshelf.ui.data.BookNumberProcessor();
+		const processor = new ext.bookshelf.ui.data.BookNumberProcessor();
 		const actualNumbering = processor.calculateNumbersFromList( items );
 		assert.deepEqual( actualNumbering, expectedNumbering, 'Generated numbering matches expected numbering' );
 	} );
 
 	function getNumberForEachElement( items, processor, actualNumbering, parentNumbering = [] ) {
-		items.forEach( function ( item ) {
-			var number = processor.calculateNumberForElement( items, item );
+		items.forEach( ( item ) => {
+			const number = processor.calculateNumberForElement( items, item );
 			const currentNumbering = parentNumbering.concat( [ number ] );
 			actualNumbering.push( currentNumbering.join( '.' ) );
 			if ( item.items && item.items.length > 0 ) {
@@ -80,7 +80,7 @@
 		return actualNumbering;
 	}
 
-	QUnit.test( 'generateBookChapterNumbering element test', function( assert ) {
+	QUnit.test( 'generateBookChapterNumbering element test', ( assert ) => {
 		const items = [
 			{
 				label: 'Subtopic 1',
@@ -181,7 +181,7 @@
 						items: []
 					}
 				]
-			},
+			}
 		];
 
 		const expectedNumbering = [
@@ -196,11 +196,11 @@
 			'4.1',
 			'4.1.1',
 			'4.1.2',
-			'4.2',
+			'4.2'
 		];
 
-		var processor = new ext.bookshelf.ui.data.BookNumberProcessor();
-		var actualNumbering = getNumberForEachElement( items, processor, [], [] );
+		const processor = new ext.bookshelf.ui.data.BookNumberProcessor();
+		const actualNumbering = getNumberForEachElement( items, processor, [], [] );
 
 		assert.deepEqual( actualNumbering, expectedNumbering, 'Generated numbering matches expected numbering' );
 	} );

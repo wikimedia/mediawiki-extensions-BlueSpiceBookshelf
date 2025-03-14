@@ -4,12 +4,13 @@
 	opacity: 0.2;
 	min-height: 40px;
 }
+
 .bs-book-tree-chapter-number {
 	margin-left: 6px;
 	min-height: 40px;
 }
 
-#menuEditor-container .bs-book-tree  .oojsplus-data-tree-label {
+#menuEditor-container .bs-book-tree .oojsplus-data-tree-label {
 	min-height: 40px;
 	margin-left: 2px;
 }

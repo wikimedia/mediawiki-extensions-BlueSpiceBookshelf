@@ -1,6 +1,6 @@
-$( document ).on( 'BSContextMenuGetItems', function( e, $element, items, forTitle ) {
-	var title = new mw.Title( forTitle );
-	if( title.getNamespaceId() === bs.ns.NS_BOOK ) {
+$( document ).on( 'BSContextMenuGetItems', ( e, $element, items, forTitle ) => {
+	const title = new mw.Title( forTitle );
+	if ( title.getNamespaceId() === bs.ns.NS_BOOK ) {
 		items.push( {
 			id: 'bs-bookshelfui-widget-editor-link',
 			href: title.getUrl( { action: 'edit' } ),

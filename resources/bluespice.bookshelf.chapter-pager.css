@@ -4,32 +4,37 @@
 	justify-content: space-between;
 	width: 100%;
 }
+
 .bs-chapter-pager-toolbar a,
 .bs-chapter-pager-toolbar a:visited {
 	cursor: pointer;
 	display: inline-block;
-	color: var(--link-fg);
+	color: var( --link-fg );
 	padding: 0 0.75rem;
-	font-size: 15px;
-	font-weight: 400;
+	font-size: 15px; /* stylelint-disable-line declaration-property-unit-disallowed-list */
+	font-weight: normal;
 	line-height: 1.5;
 	user-select: none;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
 .bs-chapter-pager-toolbar a.disabled,
 .bs-chapter-pager-toolbar a:hover.disabled {
 	opacity: 0.65;
 	text-decoration: none;
 	pointer-events: none;
 }
+
 #aftercontent #bs-bookshelfui-chapter-pager-bottom-top-cnt .bs-chapter-pager-toolbar a {
-	color: var(--mws-secondary-fg--hover);
+	color: var( --mws-secondary-fg--hover );
 }
+
 .bs-chapter-pager-heading .book-title {
-	font-size: 22.4px;
+	font-size: 22.4px; /* stylelint-disable-line declaration-property-unit-disallowed-list */
 }
+
 .previous-chapter::before {
-	content: "\F284";
+	content: '\F284';
 	font-family: 'bootstrap-icons';
 	font-style: normal;
 	font-weight: normal !important;
@@ -37,8 +42,9 @@
 	text-transform: none;
 	vertical-align: bottom;
 }
+
 .next-chapter::after {
-	content: "\F285";
+	content: '\F285';
 	font-family: 'bootstrap-icons';
 	font-style: normal;
 	font-weight: normal !important;
@@ -46,6 +52,7 @@
 	text-transform: none;
 	vertical-align: bottom;
 }
+
 #n-book-panel .bs-chapter-pager-toolbar {
 	padding-bottom: 10px;
 }
