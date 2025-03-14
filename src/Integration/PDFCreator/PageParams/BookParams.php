@@ -62,6 +62,9 @@ class BookParams implements IPageParamsProvider {
 			if ( $key === 'docummenttype' ) {
 				$key = 'documenttype';
 			}
+			if ( $key === 'identifier' ) {
+				$key = 'documentidentifier';
+			}
 			$params['book-' . $key ] = $item;
 		}
 
@@ -90,6 +93,9 @@ class BookParams implements IPageParamsProvider {
 			$key = 'book-' . $object->getKey();
 			if ( $object->getKey() === 'docummenttype' ) {
 				$key = 'book-documenttype';
+			}
+			if ( $object->getKey() === 'docummentidentifier' ) {
+				$key = 'book-documentidentifier';
 			}
 
 			$desc[] = new ParamDesc(
