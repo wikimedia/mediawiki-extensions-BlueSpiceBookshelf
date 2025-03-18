@@ -91,7 +91,8 @@ class ChapterLookup {
 			[
 				'book_namespace' => $book->getNamespace(),
 				'book_title' => $book->getDBKey(),
-			]
+			],
+			__METHOD__
 		);
 
 		if ( $bookID === null ) {
