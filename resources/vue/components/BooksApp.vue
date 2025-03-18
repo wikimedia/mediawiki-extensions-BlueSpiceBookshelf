@@ -22,8 +22,10 @@
 		>{{ ariaLiveInitial }}</div>
 	</div>
 	<div class="bs-books-bookshelfs-empty" v-else>
-		<span class="bs-books-empty-image" ></span>
-		<span class="bs-books-empty-label">{{ emptyMsg }}</span>
+		<a href="" class="new-book-action">
+			<span class="bs-books-empty-image" ></span>
+			<span class="bs-books-empty-label">{{ emptyMsg }}</span>
+		</a>
 	</div>
 </template>
 
