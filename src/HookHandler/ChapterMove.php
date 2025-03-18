@@ -69,7 +69,8 @@ class ChapterMove implements PageMoveCompleteHook {
 			[
 				'chapter_namespace' => $pageName->getNamespace(),
 				'chapter_title' => $pageName->getDBKey()
-			]
+			],
+			__METHOD__
 		);
 
 		$chapters = [];

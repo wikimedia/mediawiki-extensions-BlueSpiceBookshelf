@@ -58,7 +58,9 @@ class FixBookChapterTitles extends LoggedUpdateMaintenance {
 	private function fetchChapters() {
 		$res = $this->db->select(
 			'bs_book_chapters',
-			'*'
+			'*',
+			'',
+			__METHOD__
 		);
 
 		if ( $res->numRows() < 1 ) {

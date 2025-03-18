@@ -69,6 +69,7 @@ class ChapterLookup {
 			[
 				'chapter_book_id' => $bookID
 			],
+			__METHOD__
 		);
 
 		foreach ( $results as $result ) {
@@ -106,7 +107,8 @@ class ChapterLookup {
 				'chapter_book_id' => $bookID,
 				'chapter_namespace' => $title->getNamespace(),
 				'chapter_title' => $title->getDBKey(),
-			]
+			],
+			__METHOD__
 		);
 
 		$chapterInfo = null;
@@ -130,7 +132,8 @@ class ChapterLookup {
 			[
 				'book_namespace' => $book->getNamespace(),
 				'book_title' => $book->getDBKey(),
-			]
+			],
+			__METHOD__
 		);
 
 		$bookID = null;
@@ -149,7 +152,8 @@ class ChapterLookup {
 				'chapter_book_id=' . $bookID,
 				'chapter_number like "' . $chapterInfo->getNumber() . '%"',
 				'NOT chapter_number="' . $chapterInfo->getNumber() . '"',
-			]
+			],
+			__METHOD__
 		);
 
 		$children = [];
@@ -246,7 +250,8 @@ class ChapterLookup {
 			[
 				'pp_page' => $title->getId(),
 				'pp_propname' => 'displaytitle'
-			]
+			],
+			__METHOD__
 		);
 
 		foreach ( $res as $row ) {

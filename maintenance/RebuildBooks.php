@@ -109,6 +109,8 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 		$res = $this->db->select(
 			'bs_books',
 			[ 'book_id', 'book_namespace', 'book_title' ],
+			'',
+			__METHOD__
 		);
 
 		foreach ( $res as $row ) {
@@ -181,7 +183,8 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 				[
 					'book_namespace' => $book->getNamespace(),
 					'book_title' => $book->getDBkey()
-				]
+				],
+				__METHOD__
 			);
 
 			$bookId = null;
@@ -275,7 +278,8 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 				[
 					'book_namespace' => $book->getNamespace(),
 					'book_title' => $book->getDBkey()
-				]
+				],
+				__METHOD__
 			);
 
 			$bookId = null;

@@ -21,7 +21,8 @@ class ApiBookshelfPageCollectionStore extends BSApiExtJSStoreBase {
 			[
 				"page_namespace" => NS_MEDIAWIKI,
 				"page_title" . $dbr->buildLike( $pageCollectionPrefix . $sQuery, $dbr->anyString() )
-			]
+			],
+			__METHOD__
 		);
 
 		foreach ( $res as $row ) {
