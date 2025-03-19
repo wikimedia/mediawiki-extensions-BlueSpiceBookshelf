@@ -236,12 +236,9 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 					// Update book name
 					$this->db->update(
 						'bs_books',
-						[
-							'book_name' => $value
-						],
-						[
-							'book_id' => $bookId
-						]
+						[ 'book_name' => $value ],
+						[ 'book_id' => $bookId ],
+						__METHOD__
 					);
 				}
 				$this->output( "\033[32m  done\n\033[39m" );

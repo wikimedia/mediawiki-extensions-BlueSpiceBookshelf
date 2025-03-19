@@ -181,9 +181,8 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 				'book_namespace' => $newBook->getNamespace(),
 				'book_title' => $newBook->getDBkey(),
 			],
-			[
-				'book_id' => $oldBookInfo->getId()
-			]
+			[ 'book_id' => $oldBookInfo->getId() ],
+			__METHOD__
 		);
 	}
 
@@ -261,11 +260,9 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 		if ( isset( $meta['title'] ) && $meta['title'] !== $bookInfo->getName() ) {
 			$db->update(
 				'bs_books',
-				[
-					'book_name' => $meta['title']
-				], [
-					'book_id' => $bookInfo->getId()
-				]
+				[ 'book_name' => $meta['title'] ],
+				[ 'book_id' => $bookInfo->getId() ],
+				__METHOD__
 			);
 		}
 
