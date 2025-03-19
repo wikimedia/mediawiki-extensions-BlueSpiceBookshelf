@@ -200,7 +200,8 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 				'book_title' => $newBook->getDBkey(),
 				'book_name' => $newBook->getText(),
 				'book_type' => 'public'
-			]
+			],
+			__METHOD__
 		);
 
 		$content = $revisionRecord->getContent( SlotRecord::MAIN );
@@ -283,7 +284,8 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 					'm_book_id' => $bookInfo->getId(),
 					'm_key' => trim( $key ),
 					'm_value' => trim( $value )
-				]
+				],
+				__METHOD__
 			);
 		}
 	}
@@ -315,7 +317,8 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 				'book_title' => $book->getDBKey(),
 				'book_name' => $book->getText(),
 				'book_type' => 'public',
-			]
+			],
+			__METHOD__
 		);
 
 		if ( !$status ) {
