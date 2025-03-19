@@ -128,9 +128,8 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 			$this->output( "Cleaning table 'bs_books' ..." );
 			$this->db->delete(
 				'bs_books',
-				[
-					'book_id' => $this->invalidBookIDs
-				]
+				[ 'book_id' => $this->invalidBookIDs ],
+				__METHOD__
 			);
 			$this->output( "\033[32m  done\n\033[39m" );
 		}
@@ -163,9 +162,8 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 			$this->output( "Cleaning table 'bs_book_meta' ..." );
 			$this->db->delete(
 				'bs_book_meta',
-				[
-					'm_book_id' => $this->invalidBookIDs
-				]
+				[ 'm_book_id' => $this->invalidBookIDs ],
+				__METHOD__
 			);
 			$this->output( "\033[32m  done\n\033[39m" );
 		}
@@ -252,9 +250,8 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 			$this->output( "Cleaning table 'bs_book_chapters' ..." );
 			$this->db->delete(
 				'bs_book_chapters',
-				[
-					'chapter_book_id' => $this->invalidBookIDs
-				]
+				[ 'chapter_book_id' => $this->invalidBookIDs ],
+				__METHOD__
 			);
 			$this->output( "\033[32m  done\n\033[39m" );
 		}
