@@ -87,7 +87,8 @@ class ChapterUpdater {
 					'chapter_number' => $chapter->getNumber(),
 					'chapter_type' => $chapter->getType(),
 					'chapter_book_id' => $bookId
-				]
+				],
+				__METHOD__
 			);
 
 			if ( !$res ) {

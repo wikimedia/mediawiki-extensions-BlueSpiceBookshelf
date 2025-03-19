@@ -150,7 +150,8 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 					'book_title' => $book->getDBkey(),
 					'book_name' => $book->getText(),
 					'book_type' => 'public'
-				]
+				],
+				__METHOD__
 			);
 			$this->output( "\033[32m  done\n\033[39m" );
 		}
@@ -228,7 +229,8 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 						'm_book_id' => $bookId,
 						'm_key' => trim( $key ),
 						'm_value' => trim( $value )
-					]
+					],
+					__METHOD__
 				);
 				if ( $key === 'title' ) {
 					// Update book name
@@ -299,7 +301,8 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 							'chapter_name' => $chapter->getName(),
 							'chapter_number' => $chapter->getNumber(),
 							'chapter_type' => $chapter->getType()
-						]
+						],
+						__METHOD__
 					);
 					$this->output( "\033[32m  done\n\033[39m" );
 				}
