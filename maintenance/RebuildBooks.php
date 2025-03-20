@@ -259,6 +259,10 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 		// Add new book chapters
 		foreach ( $this->books as $book ) {
 			$revisionRecord = $this->revisionLookup->getRevisionByTitle( $book );
+			if ( !$revisionRecord ) {
+				$this->output( "\033[31mNo valid revision for " . $book->getPrefixedDBKey() . "\n\033[39m" );
+				continue;
+			}
 			$bookSourceParser = new BookSourceParser(
 				$revisionRecord,
 				$this->parserFactory->getNodeProcessors(),
