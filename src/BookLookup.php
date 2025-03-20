@@ -4,29 +4,36 @@ namespace BlueSpice\Bookshelf;
 
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
-use Wikimedia\Rdbms\LoadBalancer;
+use ObjectCacheFactory;
+use Wikimedia\Rdbms\IConnectionProvider;
 
 class BookLookup {
 
 	/** @var TitleFactory */
-	private $titleFactory = null;
+	private $titleFactory;
 
-	/** @var LoadBalancer */
-	private $loadBalancer = null;
+	/** @var IConnectionProvider */
+	private $connectionProvider;
+
+	/** @var ObjectCacheFactory */
+	private $objectCacheFactory;
 
 	/** @var ChapterLookup */
-	private $chapterLookup = null;
+	private $chapterLookup;
 
 	/**
 	 * @param TitleFactory $titleFactory
-	 * @param LoadBalancer $loadBalancer
+	 * @param IConnectionProvider $connectionProvider
+	 * @param ObjectCacheFactory $objectCacheFactory
 	 * @param ChapterLookup $chapterLookup
 	 */
 	public function __construct(
-		TitleFactory $titleFactory, LoadBalancer $loadBalancer,	ChapterLookup $chapterLookup
+		TitleFactory $titleFactory, IConnectionProvider $connectionProvider,
+		ObjectCacheFactory $objectCacheFactory, ChapterLookup $chapterLookup
 	) {
 		$this->titleFactory = $titleFactory;
-		$this->loadBalancer = $loadBalancer;
+		$this->connectionProvider = $connectionProvider;
+		$this->objectCacheFactory = $objectCacheFactory;
 		$this->chapterLookup = $chapterLookup;
 	}
 
@@ -36,7 +43,7 @@ class BookLookup {
 	public function getBooks(): array {
 		$books = [];
 
-		$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
+		$dbr = $this->connectionProvider->getReplicaDatabase();
 
 		$results = $dbr->select(
 			'bs_books',
@@ -73,25 +80,33 @@ class BookLookup {
 	 * @return BookDataModel[]
 	 */
 	public function getBooksForPage( Title $title ): array {
-		$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
+		$dbr = $this->connectionProvider->getReplicaDatabase();
+		$objectCache = $this->objectCacheFactory->getLocalServerInstance();
+		$fname = __METHOD__;
 
-		$res = $dbr->select(
-			'bs_book_chapters',
-			'chapter_book_id',
-			[
-				'chapter_namespace' => $title->getNamespace(),
-				'chapter_title' => $title->getDBKey()
-			],
-			__METHOD__,
-			[
-				 'ORDER BY' => 'chapter_number'
-			]
+		$bookIDs = $objectCache->getWithSetCallback(
+			$objectCache->makeKey( 'bluespicebookshelf-getbooksforpage', $title->getNamespace(), $title->getDBKey() ),
+			$objectCache::TTL_PROC_SHORT,
+			static function () use ( $title, $dbr, $fname ) {
+				$res = $dbr->newSelectQueryBuilder()
+					->table( 'bs_book_chapters' )
+					->field( 'chapter_book_id' )
+					->where( [
+						'chapter_namespace' => $title->getNamespace(),
+						'chapter_title' => $title->getDBKey()
+					] )
+					->orderBy( 'chapter_number' )
+					->caller( $fname )
+					->fetchResultSet();
+
+				$bookIDs = [];
+				foreach ( $res as $row ) {
+					$bookIDs[] = $row->chapter_book_id;
+				}
+
+				return $bookIDs;
+			}
 		);
-
-		$bookIDs = [];
-		foreach ( $res as $row ) {
-			$bookIDs[] = $row->chapter_book_id;
-		}
 
 		if ( empty( $bookIDs ) ) {
 			return [];
@@ -134,7 +149,7 @@ class BookLookup {
 	 * @return int|null
 	 */
 	public function getBookId( Title $title ): ?int {
-		$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
+		$dbr = $this->connectionProvider->getReplicaDatabase();
 
 		$result = $dbr->select(
 			'bs_books',
@@ -197,7 +212,7 @@ class BookLookup {
 	 * @return BookInfo|null
 	 */
 	private function bookInfoFromConds( array $conds ): ?BookInfo {
-		$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
+		$dbr = $this->connectionProvider->getReplicaDatabase();
 
 		$result = $dbr->selectRow(
 			'bs_books',
