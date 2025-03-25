@@ -59,6 +59,7 @@
 	"bs-bookshelf-droplet-name": "책 목록",
 	"bs-bookshelf-droplet-description": "책 이름공간의 문서 목록",
 	"bs-books-overview-page-book-action-delete-text": "삭제",
+	"bs-books-overview-page-bookshelf-empty-text": "현재 책이 없습니다. 지금 첫 번째 책을 만드세요!",
 	"bs-bookshelf-toolbar-tool-metadata-title": "메타 데이터 편집",
 	"bs-bookshelf-toolbar-tool-metadata-label": "메타 데이터 편집",
 	"bs-bookshelf-metadata-widget-checkbox-title": "$1 속성 선택",
