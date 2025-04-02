@@ -49,23 +49,22 @@ class AddNewBook implements SkinTemplateNavigation__UniversalHook {
 			return;
 		}
 		$title = $sktemplate->getTitle();
-		if ( $title->isSpecial( 'Books' ) ) {
-			$links['actions']['bookshelf-create-new-book'] = [
-				'text' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
-				'title' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
-				'href' => '',
-				'class' => 'new-book-action',
-				'id' => 'ca-bookshelf-create-new-book',
-				'position' => 1,
-			];
-		}
-		$links['actions']['bookshelf-create-book'] = [
+		$newBookAction = [
 			'text' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-new-book' )->text(),
 			'title' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-new-book' )->text(),
-			'href' => '',
-			'class' => 'new-book-action',
-			'id' => 'ca-bookshelf-create-book'
+			'href' => ''
 		];
+		if ( $title->isSpecial( 'Books' ) ) {
+			// actions_primary
+			$links['actions']['bookshelf-new-book'] = $newBookAction;
+			$links['actions']['bookshelf-new-book']['id'] = 'ca-bookshelf-actions-primary-new-book';
+			$links['actions']['bookshelf-new-book']['position'] = 1;
+		} else {
+			// panel/create
+			$links['actions']['bookshelf-new-book'] = $newBookAction;
+			$links['actions']['bookshelf-new-book']['id'] = 'ca-bookshelf-panel-create-new-book';
+		}
+
 		$sktemplate->getOutput()->addModules( 'ext.bluespice.bookshelf.createNewBook' );
 	}
 }

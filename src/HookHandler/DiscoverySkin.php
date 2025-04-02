@@ -17,8 +17,8 @@ class DiscoverySkin implements BlueSpiceDiscoveryTemplateDataProviderAfterInit {
 		$registry->register( 'actions_primary', 'ca-bookshelf-add-to-book' );
 		$registry->register( 'panel/edit', 'ca-editbooksource' );
 
-		$registry->register( 'actions_primary', 'ca-bookshelf-create-new-book' );
-		$registry->register( 'panel/create', 'ca-bookshelf-create-book' );
+		$registry->register( 'actions_primary', 'ca-bookshelf-actions-primary-new-book' );
+		$registry->register( 'panel/create', 'ca-bookshelf-panel-create-new-book' );
 	}
 
 }
