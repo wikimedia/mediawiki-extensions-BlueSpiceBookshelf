@@ -248,6 +248,10 @@ class TreeParser {
 		$this->tree = FormatJson::decode( $this->jsonStringBuffer, true );
 	}
 
+	/**
+	 * @param int $lineNo
+	 * @return int
+	 */
 	private function getNextLevel( $lineNo ) {
 		$hasNextLevel =
 			$lineNo < count( $this->extendedTOC )

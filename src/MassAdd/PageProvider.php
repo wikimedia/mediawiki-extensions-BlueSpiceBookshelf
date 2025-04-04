@@ -7,9 +7,12 @@ use MediaWiki\Registration\ExtensionRegistry;
 class PageProvider {
 	/** @var PageProvider */
 	private static $instance;
+	/** @var mixed */
 	protected $root;
+	/** @var string */
 	protected $type;
 
+	/** @var string[] */
 	protected $requiredKeys = [
 		'page_id',
 		'page_title',
