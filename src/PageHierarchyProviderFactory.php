@@ -117,6 +117,10 @@ class PageHierarchyProviderFactory {
 		throw new MWException( 'Book type cannot be determined for given title' );
 	}
 
+	/**
+	 * @param array $params
+	 * @return PageHierarchyProvider
+	 */
 	private function getClassForParams( array $params ) {
 		if ( isset( $params['book_type'] ) && $params['book_type'] === 'local_storage' ) {
 			return DynamicPageHierarchyProvider::class;
