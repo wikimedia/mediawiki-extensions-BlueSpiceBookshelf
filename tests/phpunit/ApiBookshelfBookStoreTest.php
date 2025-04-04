@@ -16,6 +16,8 @@ use MediaWiki\Tests\Api\ApiTestCase;
  * @covers ApiBookshelfBookStore
  */
 class ApiBookshelfBookStoreTest extends ApiTestCase {
+
+	/** @var string */
 	protected $dummyBookContent = <<<HERE
 * [[A|a]]
 ** [[A/A|aa]]

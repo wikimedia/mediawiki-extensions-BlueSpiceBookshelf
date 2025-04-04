@@ -76,6 +76,11 @@ class ApiBookshelfBookStore extends BSApiExtJSStoreBase {
 		];
 	}
 
+	/**
+	 * @param stdClass $oNode
+	 * @param string[] $aPath
+	 * @return stdClass
+	 */
 	private function findNodeByPath( $oNode, $aPath ) {
 		$iIndex = (int)array_shift( $aPath ) - 1;
 		if ( isset( $oNode->children ) ) {

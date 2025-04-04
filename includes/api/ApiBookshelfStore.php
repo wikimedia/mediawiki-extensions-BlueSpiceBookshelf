@@ -193,6 +193,11 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 		return $data;
 	}
 
+	/**
+	 * @param string $name
+	 * @param mixed $content
+	 * @return stdClass
+	 */
 	private function makeDataSetForTemp( $name, $content ) {
 		$php = DynamicPageHierarchyProvider::getInstanceFor( $name, [ 'content' => $content ] );
 		$toc = $php->getExtendedTOCArray();
