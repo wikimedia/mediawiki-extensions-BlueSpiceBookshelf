@@ -36,7 +36,7 @@ class BookParams implements IPageParamsProvider {
 	 * @param ObjectFactory $objectFactory
 	 */
 	public function __construct(
-		TitleFactory $titleFactory,	BookMetaLookup $bookMetaLookup,
+		TitleFactory $titleFactory, BookMetaLookup $bookMetaLookup,
 		ObjectFactory $objectFactory
 	) {
 		$this->titleFactory = $titleFactory;
@@ -74,7 +74,7 @@ class BookParams implements IPageParamsProvider {
 	/**
 	 * @inheritDoc
 	 */
-	public function getParamsDescription(): array {
+	public function getParamsDescription( $languageCode ): array {
 		$registry = new ManifestAttributeBasedRegistry(
 			'BlueSpiceBookshelfMetaData'
 		);
@@ -100,9 +100,60 @@ class BookParams implements IPageParamsProvider {
 
 			$desc[] = new ParamDesc(
 				$key,
-				Message::newFromKey( 'bs-bookshelf-export-pageparam-desc-' . $object->getKey() )
+				Message::newFromKey( 'bs-bookshelf-export-pageparam-desc-' . $object->getKey() ),
+				$this->getParamsExample( $key, $languageCode )
 			);
 		}
 		return $desc;
+	}
+
+	/**
+	 * @param string $key
+	 * @param string $languageCode
+	 * @return string
+	 */
+	private function getParamsExample( $key, $languageCode ) {
+		$examples = [
+			'book-title' => [
+				'en' => 'Manual',
+				'de' => 'Handbuch',
+			],
+			 'book-subtitle' => [
+				'en' => 'Subtitle',
+				'de' => 'Untertitel',
+			],
+			'book-author1' => [
+				'en' => 'John Doe',
+				'de' => 'Max Mustermann',
+			],
+			'book-author2' => [
+				'en' => 'John Doe',
+				'de' => 'Max Mustermann',
+			],
+			'book-department' => [
+				'en' => 'Technical',
+				'de' => 'Interne ',
+			],
+			'book-bookshelf' => [
+				'en' => 'Instructions',
+				'de' => 'Anweisungen',
+			],
+			'book-documenttype' => [
+				'en' => 'pdf',
+				'de' => 'pdf'
+			],
+			'book-documentidentifier' => [
+				'en' => 'M-123'
+			],
+			'book-version' => [
+				'en' => '2.0.0'
+			]
+		];
+		if ( $languageCode === 'de' || $languageCode === 'de_formal' ) {
+			if ( isset( $examples[$key]['de'] ) ) {
+				return $examples[$key]['de'];
+			}
+		}
+		return $examples[$key]['en'];
 	}
 }
