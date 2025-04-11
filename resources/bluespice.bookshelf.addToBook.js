@@ -5,10 +5,8 @@ $( document ).on( 'click', '#ca-bookshelf-add-to-book', ( e ) => {
 	const dialog = new bs.bookshelf.ui.dialog.AddToBook( {
 		pagename: mw.config.get( 'wgPageName' )
 	} );
-	dialog.show().closed.then( ( data ) => {
-		if ( data.needsReload ) {
-			window.location.reload();
-		}
+	dialog.show().closed.then( () => {
+		window.location.reload();
 	} );
 
 	return false;

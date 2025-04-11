@@ -1,6 +1,8 @@
 ( function ( mw, $, bs ) {
 	bs.util.registerNamespace( 'bs.bookshelf.ui.dialog' );
 
+	require( './../widget/ChapterPanel.js' );
+
 	bs.bookshelf.ui.dialog.AddToBook = function ( config ) {
 		config.size = 'medium';
 		bs.bookshelf.ui.dialog.AddToBook.parent.call( this, config );
@@ -30,19 +32,29 @@
 			labelField: 'book_displaytext',
 			$overlay: this.$overlay
 		} );
+		this.chapterPicker = new ext.bookshelf.ui.widget.ChapterPanel( {
+			id: 'chapter-picker',
+			$overlay: this.$overlay,
+			disabled: true
+		} );
+
 		this.bookPicker.connect( this, {
 			change: function () {
+				this.chapterPicker.setDisabled( true );
+				this.actions.setAbilities( { add: true } );
 				const data = this.bookPicker.getSelectedItemData();
 				if ( typeof data === 'object' && data !== null ) {
-					this.actions.setAbilities( { add: true } );
+					this.chapterPicker.setChapters( data.book_id );
 				} else {
-					this.actions.setAbilities( { add: false } );
+					this.chapterPicker.setFirstChapter();
 				}
 			}.bind( this )
 		} );
-		this.alias = new OO.ui.TextInputWidget( {
-			value: this.pageName,
-			id: 'page-alias'
+
+		this.chapterPicker.connect( this, {
+			updateUI: function () {
+				this.updateSize();
+			}
 		} );
 
 		return [
@@ -50,8 +62,8 @@
 				label: mw.message( 'bs-bookshelf-add-to-book-label-book' ).plain(),
 				align: 'top'
 			} ),
-			new OO.ui.FieldLayout( this.alias, {
-				label: mw.message( 'bs-bookshelf-add-to-book-label-alias' ).plain(),
+			new OO.ui.FieldLayout( this.chapterPicker, {
+				label: mw.message( 'bs-bookshelf-add-to-book-label-chapter' ).plain(),
 				align: 'top'
 			} )
 		];
@@ -65,36 +77,31 @@
 		if ( action === 'add' ) {
 			const dfd = $.Deferred();
 			const selectedBook = this.bookPicker.getSelectedItemData();
+			let bookName = '';
 			if ( selectedBook === null ) {
-				// Sanity
-				dfd.reject( new OO.ui.Error() );
+				bookName = 'Book:' + this.bookPicker.getValue();
+			} else {
+				bookName = selectedBook.book_prefixedtext;
 			}
-			const alias = this.alias.getValue(),
-				messageTitle = mw.message( 'bs-bookshelf-add-to-book-label' ).plain();
 
-			const wikiText = '\n* [[{0}|{1}]]'.format(
-				this.pageName,
-				alias
-			);
+			const chapters = this.chapterPicker.getChapters();
+			const data = {
+				nodes: chapters
+			};
 
-			mw.loader.using( 'mediawiki.api' ).done( () => {
-				const mwApi = new mw.Api();
-				mwApi.postWithToken( 'csrf', {
-					action: 'edit',
-					title: selectedBook.book_prefixedtext,
-					appendtext: wikiText,
-					summary: mw.message( 'bs-bookshelf-add-to-book-summary', this.pageName ).text()
+			mw.loader.using( 'ext.menuEditor.api' ).done( () => {
+				const api = new ext.menueditor.api.Api();
+				const bookTitle = mw.util.rawurlencode( mw.util.rawurlencode( bookName ) );
+				api.post( bookTitle, data ).done( () => {
+					mw.notify(
+						mw.message( 'bs-bookshelf-add-to-book-added', this.bookPicker.getValue() ).plain(),
+						{ title: mw.message( 'bs-bookshelf-add-to-book-label' ).plain() }
+					);
+					this.close( { action: action } );
+					dfd.resolve();
 				} ).fail( ( error ) => {
 					dfd.reject( new OO.ui.Error( error ) );
-				} )
-					.done( () => {
-						mw.notify(
-							mw.message( 'bs-bookshelf-add-to-book-added', selectedBook.book_displaytext ).plain(),
-							{ title: messageTitle }
-						);
-						this.close( { action: action } );
-						dfd.resolve();
-					} );
+				} );
 			} );
 
 			return dfd.promise();

@@ -324,7 +324,12 @@
 		"ext.bluespice.bookshelf.addToBook": {
 			"packageFiles": [
 				"bluespice.bookshelf.addToBook.js",
-				"ui/dialog/AddToBook.js"
+				"ui/dialog/AddToBook.js",
+				"ui/widget/ChapterPanel.js",
+				"ui/widget/ChapterInsertionWidget.js"
+			],
+			"styles": [
+				"ui/widget/chapterpanel.styles.css"
 			],
 			"messages": [
 				"bs-bookshelf-add-to-book-label",
@@ -334,7 +339,11 @@
 				"bs-bookshelf-add-to-book-added",
 				"bs-bookshelf-add-to-book-mod-bstag",
 				"bs-bookshelf-empty-selection",
-				"bs-bookshelf-add-to-book-summary"
+				"bs-bookshelf-add-to-book-summary",
+				"bs-bookshelf-add-to-book-label-chapter",
+				"bs-bookshelf-chapter-insertion-btn-move-up",
+				"bs-bookshelf-chapter-insertion-btn-move-down",
+				"bs-bookshelf-chapter-insertion-clear-btn-label"
 			],
 			"dependencies": [
 				"ext.bluespice",
