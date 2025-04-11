@@ -100,11 +100,17 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 
 		$dbr = $this->getDB();
 		$res = $dbr->select(
-			'page',
-			[ 'page_id', 'page_title', 'page_namespace' ],
+			[ 'page', 'bs_books' ],
+			[ 'page_id', 'page_title', 'page_namespace', 'book_id' ],
 			[ 'page_namespace' => NS_BOOK ],
 			__METHOD__,
-			[ 'ORDER BY' => 'page_title' ]
+			[ 'ORDER BY' => 'page_title' ],
+			[
+				'bs_books' => [
+					'INNER JOIN',
+					'book_title = page_title'
+				]
+			]
 		);
 
 		foreach ( $res as $row ) {
@@ -149,6 +155,7 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 		$oBook->book_prefixedtext = $oTitle->getPrefixedText();
 		$oBook->book_displaytext = $oTitle->getText();
 		$oBook->book_meta = $oPHP->getBookMeta();
+		$oBook->book_id = (int)$row->book_id;
 
 		// maybe for future or optional? Include full book tree in response. Very expensive!
 		// $oBook->book_tree = $oPHP->getExtendedTOCJSON();
