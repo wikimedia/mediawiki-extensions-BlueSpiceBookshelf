@@ -32,7 +32,6 @@ class SearchInBook extends TagSearch {
 		$config = MediaWikiServices::getInstance()
 			->getConfigFactory()
 			->makeConfig( 'bsg' );
-		$this->tagCounter++;
 
 		return new SearchInBookHandler(
 			$processedInput,
@@ -40,7 +39,7 @@ class SearchInBook extends TagSearch {
 			$parser,
 			$frame,
 			$config,
-			$this->tagCounter,
+			$this->nextTagId(),
 			MediaWikiServices::getInstance()->getService( 'BSBookshelfBookLookup' )
 		);
 	}
