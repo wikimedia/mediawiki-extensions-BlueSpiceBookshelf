@@ -248,6 +248,11 @@
 					"services": [ "TitleFactory", "BSBookshelfBookMetaLookup", "ObjectFactory" ]
 				}
 			}
+		},
+		"BlueSpiceSMWConnector": {
+			"ExtraPropertyRegistry": {
+				"bsbookshelfbooks": "BlueSpice\\Bookshelf\\Property\\BooksPropertyValueProvider::factory"
+			}
 		}
 	},
 	"GroupPermissions": {
@@ -885,8 +890,8 @@
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\ChapterMove",
 			"services": [ "TitleFactory", "DBLoadBalancer" ]
 		},
-		"updateSearchIndex": {
-			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\UpdateSearchIndex",
+		"queueJobs": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\QueueJobs",
 			"services": [ "JobQueueGroup" ]
 		},
 		"addExportAction": {
@@ -929,8 +934,8 @@
 			"updateChapter"
 		],
 		"NumberHeadingsBeforeApply": "add-chapter-number-to-title-and-headings",
-		"BSBookshelfPageAddedToBook": "updateSearchIndex",
-		"BSBookshelfPageRemovedFromBook": "updateSearchIndex",
+		"BSBookshelfPageAddedToBook": "queueJobs",
+		"BSBookshelfPageRemovedFromBook": "queueJobs",
 		"BSBookshelfBooksOverviewBeforeSetBookActions": "addExportAction"
 	},
 	"Actions": {
