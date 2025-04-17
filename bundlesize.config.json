@@ -1,0 +1,10 @@
+[
+	{
+		"resourceModule": "ext.bluespice.bookshelf.chapter-pager.styles",
+		"maxSize": "0.7 kB"
+	},
+	{
+		"resourceModule": "ext.bluespice.bookshelf.booknav.styles",
+		"maxSize": "0.8 kB"
+	}
+]
