@@ -174,5 +174,9 @@
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Monstra le subtitulo del libro",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Monstra le typo del documento",
 	"bs-bookshelf-export-pageparam-desc-version": "Monstra le version del libro",
-	"bs-bookshelf-export-pdf-notification-done": "Exportation in PDF terminate"
+	"bs-bookshelf-export-pdf-notification-done": "Exportation in PDF terminate",
+	"bs-bookshelf-add-to-book-label-chapter": "Inserer in capitulo existente",
+	"bs-bookshelf-chapter-insertion-btn-move-up": "Displaciar capitulo in alto",
+	"bs-bookshelf-chapter-insertion-btn-move-down": "Displaciar capitulo in basso",
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remover le selection de capitulos"
 }
