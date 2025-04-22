@@ -190,5 +190,9 @@
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Affiche le sous-titre du livre",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Affiche le type de document",
 	"bs-bookshelf-export-pageparam-desc-version": "Affiche la version du livre",
-	"bs-bookshelf-export-pdf-notification-done": "Exportation PDF terminée"
+	"bs-bookshelf-export-pdf-notification-done": "Exportation PDF terminée",
+	"bs-bookshelf-add-to-book-label-chapter": "Insérer dans un chapitre existant",
+	"bs-bookshelf-chapter-insertion-btn-move-up": "Déplacer le chapitre vers le haut",
+	"bs-bookshelf-chapter-insertion-btn-move-down": "Déplacer le chapitre vers le bas",
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Supprimer la sélection de chapitre"
 }
