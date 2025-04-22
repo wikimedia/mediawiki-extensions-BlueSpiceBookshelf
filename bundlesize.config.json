@@ -6,5 +6,9 @@
 	{
 		"resourceModule": "ext.bluespice.bookshelf.booknav.styles",
 		"maxSize": "0.8 kB"
+	},
+	{
+		"resourceModule": "ext.bluespice.bookshelf.navigationTab",
+		"maxSize": "0.4 kB"
 	}
 ]
