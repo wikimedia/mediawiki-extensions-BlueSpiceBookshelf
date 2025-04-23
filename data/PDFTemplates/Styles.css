@@ -153,15 +153,24 @@
 	background-repeat: no-repeat;
 }
 
-.pdfcreator-intro-title {
+.pdfcreator-intro-cover-cnt {
 	position: absolute;
-	top: 17.5cm;
+	top: 12.5cm;
 	left: 1.75cm;
 	width: 17.5cm;
 	max-height: 6.5cm;
 	overflow: hidden;
+}
+
+.pdfcreator-intro-title {
 	font-size: 40px;
 	color: #3E5389;
 	font-weight: 900;
+	line-height: 1.3em;
+}
+
+.pdfcreator-intro-text {
+	font-size: 30px;
+	font-weight: 700;
 	line-height: 1.3em;
 }
