@@ -198,5 +198,12 @@
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Description for page param \"subtitle\"",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "SDescription for page param \"docummenttype\"",
 	"bs-bookshelf-export-pageparam-desc-version": "Description for page param \"version\"",
-	"bs-bookshelf-export-pdf-notification-done": "Label for notification that PDF export is completed"
+	"bs-bookshelf-export-pdf-notification-done": "Label for notification that PDF export is completed",
+	"bs-bookshelf-pref-prependpage-toc-numbers-label": "Label for config variable \"BookShelfBookshelfPrependPageTOCNumbers\" at [[Special:BlueSpiceConfigManager]]",
+	"bs-bookshelf-pref-prependpage-toc-numbers-help": "Description for config variable \"BookShelfBookshelfPrependPageTOCNumbers\"",
+	"bs-books-overview-page-bookshelf-empty-text": "Note for the user that no books are available",
+	"bs-bookshelf-add-to-book-label-chapter": "Label for dropdown widget to select a chapter",
+	"bs-bookshelf-chapter-insertion-btn-move-up": "Label for button to move chapter up",
+	"bs-bookshelf-chapter-insertion-btn-move-down": "Label for button to move chapter down",
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Label for button to clear chapter selection"
 }

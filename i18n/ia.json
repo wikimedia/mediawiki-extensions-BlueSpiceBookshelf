@@ -58,10 +58,10 @@
 	"right-bookshelf-viewspecialpage": "Accesso al pagina special [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "acceder al pagina special [[Special:Bookshelf]]",
 	"bs-bookshelf-action-save-to-local-storage": "Salveguarda in immagazinage local",
-	"bs-bookshelf-pref-chapterpagerbeforecontent": "Monstrar le navigation per capitulo del libro ante le contento",
-	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Inserer un navigation per capitulo al initio del pagina.",
-	"bs-bookshelf-pref-chapterpageraftercontent": "Monstrar le navigation per capitulo del libro post le contento",
-	"bs-bookshelf-pref-chapterpageraftercontent-help": "Inserer un navigation per capitulo al fin del pagina.",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Monstrar le navigation per capitulo ante le contento",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Insere un navigation per capitulo al initio del pagina",
+	"bs-bookshelf-pref-chapterpageraftercontent": "Monstrar le navigation per capitulo post le contento",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Insere un navigation per capitulo al fin del pagina",
 	"bs-bookshelf-pref-supressbookns-help": "Non monstrar le spatio de nomines quando se indica nomines de paginas in files PDF generate.",
 	"bs-bookshelf-warning": "Exception PHP: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Adder al libro",
@@ -190,5 +190,12 @@
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Monstra le subtitulo del libro",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Monstra le typo del documento",
 	"bs-bookshelf-export-pageparam-desc-version": "Monstra le version del libro",
-	"bs-bookshelf-export-pdf-notification-done": "Exportation in PDF terminate"
+	"bs-bookshelf-export-pdf-notification-done": "Exportation in PDF terminate",
+	"bs-bookshelf-pref-prependpage-toc-numbers-label": "Monstrar numeros de capitulo del libro in le tabula de contento e in le titulos",
+	"bs-bookshelf-pref-prependpage-toc-numbers-help": "Adde le numeros de capitulo del libro al tabula de contento e a tote le titulos de pagina",
+	"bs-books-overview-page-bookshelf-empty-text": "Il non ha actualmente alcun libro. Crea le prime ora!",
+	"bs-bookshelf-add-to-book-label-chapter": "Inserer in capitulo existente",
+	"bs-bookshelf-chapter-insertion-btn-move-up": "Displaciar capitulo in alto",
+	"bs-bookshelf-chapter-insertion-btn-move-down": "Displaciar capitulo in basso",
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remover le selection de capitulos"
 }

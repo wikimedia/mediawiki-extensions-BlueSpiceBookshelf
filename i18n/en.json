@@ -56,10 +56,10 @@
 	"right-bookshelf-viewspecialpage": "Access the special page [[Special:Bookshelf]]",
 	"action-bookshelf-viewspecialpage": "access the special page [[Special:Bookshelf]]",
 	"bs-bookshelf-action-save-to-local-storage": "Saving to local storage",
-	"bs-bookshelf-pref-chapterpagerbeforecontent": "Show book chapter pager before content",
-	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Add a chapter pager at the top of the page.",
-	"bs-bookshelf-pref-chapterpageraftercontent": "Show book chapter pager after content",
-	"bs-bookshelf-pref-chapterpageraftercontent-help": "Add a chapter pager at the bottom of the page.",
+	"bs-bookshelf-pref-chapterpagerbeforecontent": "Show chapter pager before content",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Adds a chapter pager at the top of the page",
+	"bs-bookshelf-pref-chapterpageraftercontent": "Show chapter pager after content",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Adds a chapter pager at the bottom of the page",
 	"bs-bookshelf-pref-supressbookns-help": "The namespace of page names is hidden in the PDF output.",
 	"bs-bookshelf-warning": "PHP exception: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Add to book",
@@ -188,5 +188,12 @@
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Shows subtitle of book",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Shows document type",
 	"bs-bookshelf-export-pageparam-desc-version": "Shows version of book",
-	"bs-bookshelf-export-pdf-notification-done": "PDF export completed"
+	"bs-bookshelf-export-pdf-notification-done": "PDF export completed",
+	"bs-bookshelf-pref-prependpage-toc-numbers-label": "Show book chapter numbers in table of contents and headlines",
+	"bs-bookshelf-pref-prependpage-toc-numbers-help": "Adds the chapter numbers from the book to the table of contents and to all page headings",
+	"bs-books-overview-page-bookshelf-empty-text": "There are currently no books. Create the first one now!",
+	"bs-bookshelf-add-to-book-label-chapter": "Insert in existing chapter",
+	"bs-bookshelf-chapter-insertion-btn-move-up": "Move chapter up",
+	"bs-bookshelf-chapter-insertion-btn-move-down": "Move chapter down",
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remove chapter selection"
 }
