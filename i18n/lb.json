@@ -91,5 +91,8 @@
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Weist den Ënnertitel vum Buch",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Weist den Dokumententyp",
 	"bs-bookshelf-export-pageparam-desc-version": "Weist d'Versioun vum Buch",
-	"bs-bookshelf-export-pdf-notification-done": "PDF-Export fäerdeg"
+	"bs-bookshelf-export-pdf-notification-done": "PDF-Export fäerdeg",
+	"bs-bookshelf-chapter-insertion-btn-move-up": "Kapitel no uewe réckelen",
+	"bs-bookshelf-chapter-insertion-btn-move-down": "Kapitel no ënne réckelen",
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Kapitelauswiel ewechhuelen"
 }
