@@ -180,5 +180,11 @@
 	"bs-bookshelf-export-pageparam-desc-subtitle": "Geeft de ondertitel van boek weer",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Geeft het documenttype weer",
 	"bs-bookshelf-export-pageparam-desc-version": "Geeft de versie van het boek weer",
-	"bs-bookshelf-export-pdf-notification-done": "PDF-export voltooid"
+	"bs-bookshelf-export-pdf-notification-done": "PDF-export voltooid",
+	"bs-bookshelf-add-to-book-label-chapter": "Invoegen in bestaand hoofdstuk",
+	"bs-bookshelf-chapter-insertion-btn-move-up": "Hoofdstuk omhoog verplaatsen",
+	"bs-bookshelf-chapter-insertion-btn-move-down": "Hoofdstuk omlaag verplaatsen",
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Hoofdstukselectie verwijderen`",
+	"bs-bookshelf-sesp-books": "Boeken",
+	"bs-bookshelf-sesp-books-desc": "De boeken waarvan deze pagina deel uitmaakt"
 }
