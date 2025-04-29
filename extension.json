@@ -876,7 +876,8 @@
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\DiscoverySkin"
 		},
 		"addAddToBookEntry": {
-			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SkinTemplateNavigation\\AddAddToBookEntry"
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SkinTemplateNavigation\\AddAddToBookEntry",
+			"services": [ "PermissionManager" ]
 		},
 		"addEditBook": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SkinTemplateNavigation\\AddEditBook"

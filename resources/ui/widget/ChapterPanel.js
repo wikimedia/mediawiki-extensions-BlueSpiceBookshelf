@@ -15,7 +15,8 @@ OO.inheritClass( ext.bookshelf.ui.widget.ChapterPanel, OO.ui.Widget );
 
 ext.bookshelf.ui.widget.ChapterPanel.prototype.initialize = function () {
 	this.chapterPicker = new OO.ui.DropdownWidget( {
-		$overlay: this.$overlay || true
+		$overlay: this.$overlay || true,
+		disabled: true
 	} );
 	this.chapterPicker.getMenu().connect( this, {
 		select: 'updateInsertion'
@@ -54,23 +55,29 @@ ext.bookshelf.ui.widget.ChapterPanel.prototype.setChapters = function ( bookId )
 		} ] )
 	} ).done( ( result ) => {
 		this.chapters = [];
-		for ( const chapter of result.results ) {
-			this.chapters.push(
-				new OO.ui.MenuOptionWidget( {
-					data: {
-						id: chapter.chapter_id,
-						number: chapter.chapter_number,
-						text: chapter.chapter_name,
-						namespace: chapter.chapter_namespace,
-						title: chapter.chapter_title,
-						type: chapter.chapter_type
-					},
-					label: chapter.chapter_number + ' ' + chapter.chapter_name
-				} )
-			);
+		this.chapterPicker.getMenu().removeItems( this.chapterPicker.getMenu().getItems() );
+		if ( result.results.length > 0 ) {
+			for ( const chapter of result.results ) {
+				this.chapters.push(
+					new OO.ui.MenuOptionWidget( {
+						data: {
+							id: chapter.chapter_id,
+							number: chapter.chapter_number,
+							text: chapter.chapter_name,
+							namespace: chapter.chapter_namespace,
+							title: chapter.chapter_title,
+							type: chapter.chapter_type
+						},
+						label: chapter.chapter_number + ' ' + chapter.chapter_name
+					} )
+				);
+			}
+			this.chapterPicker.getMenu().addItems( this.chapters );
+			this.chapterPicker.setDisabled( false );
+		} else {
+			this.clearChapterPicker();
 		}
 
-		this.chapterPicker.getMenu().addItems( this.chapters );
 		this.initializeChapterWidgets();
 		this.addAsLastChapter();
 		this.emit( 'updateUI' );
@@ -109,6 +116,14 @@ ext.bookshelf.ui.widget.ChapterPanel.prototype.updateInsertion = function ( sele
 	this.chapterPickerClear.toggle( true );
 };
 
+ext.bookshelf.ui.widget.ChapterPanel.prototype.clearChapterPicker = function () {
+	const selectedItem = this.chapterPicker.getMenu().findSelectedItem();
+	if ( selectedItem ) {
+		this.chapterPicker.getMenu().unselectItem( selectedItem );
+	}
+	this.chapterPicker.setDisabled( true );
+};
+
 ext.bookshelf.ui.widget.ChapterPanel.prototype.parseChapterNumber = function ( number ) {
 	const parts = number.split( '.' );
 	const lastIndex = parts.length - 1;
@@ -117,6 +132,7 @@ ext.bookshelf.ui.widget.ChapterPanel.prototype.parseChapterNumber = function ( n
 };
 
 ext.bookshelf.ui.widget.ChapterPanel.prototype.setFirstChapter = function () {
+	this.clearChapterPicker();
 	this.initializeChapterWidgets();
 
 	this.updateChapterNavigation( {
@@ -297,6 +313,7 @@ ext.bookshelf.ui.widget.ChapterPanel.prototype.initializeChapterWidgets = functi
 		} );
 		this.$insertionDetails.append( this.insertionChapterWidget.$element );
 	}
+	this.insertionChapterWidget.toggle( true );
 
 	if ( !this.nextChapterWidget ) {
 		this.nextChapterWidget = new ext.bookshelf.ui.widget.ChapterInsertionWidget();
@@ -366,4 +383,28 @@ ext.bookshelf.ui.widget.ChapterPanel.prototype.getChapters = function () {
 ext.bookshelf.ui.widget.ChapterPanel.prototype.calculateLevel = function ( number ) {
 	const parts = number.split( '.' );
 	return parts.length;
+};
+
+ext.bookshelf.ui.widget.ChapterPanel.prototype.clear = function () {
+	this.chapterPicker.setDisabled( true );
+	if ( this.chapterPicker.getMenu().findSelectedItem() ) {
+		this.chapterPicker.getMenu().unselectItem( this.chapterPicker.getMenu().findSelectedItem() );
+	}
+	if ( this.previousChapterWidget ) {
+		this.previousChapterWidget.toggle( false );
+	}
+	if ( this.nextChapterWidget ) {
+		this.nextChapterWidget.toggle( false );
+	}
+	if ( this.insertionChapterWidget ) {
+		this.insertionChapterWidget.toggle( false );
+	}
+	this.emit( 'updateUI' );
+};
+
+ext.bookshelf.ui.widget.ChapterPanel.prototype.setDisabled = function ( state ) {
+	ext.bookshelf.ui.widget.ChapterPanel.parent.prototype.setDisabled.call( this, state );
+	if ( this.chapterPicker ) {
+		this.chapterPicker.setDisabled( state );
+	}
 };

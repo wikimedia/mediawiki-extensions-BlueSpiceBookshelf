@@ -40,13 +40,29 @@
 
 		this.bookPicker.connect( this, {
 			change: function () {
-				this.chapterPicker.setDisabled( true );
-				this.actions.setAbilities( { add: true } );
-				const data = this.bookPicker.getSelectedItemData();
-				if ( typeof data === 'object' && data !== null ) {
-					this.chapterPicker.setChapters( data.book_id );
+				const value = this.bookPicker.getValue();
+				if ( value.length > 0 ) {
+					this.bookPicker.setIndicator( 'clear' );
+					this.bookPicker.$indicator.attr( {
+						tabindex: -1,
+						role: 'button'
+					} );
+					this.bookPicker.$indicator.on( 'click', () => {
+						this.bookPicker.setValue( '' );
+						return false;
+					} );
+					this.chapterPicker.setDisabled( false );
+					this.actions.setAbilities( { add: true } );
+					const data = this.bookPicker.getSelectedItemData();
+					if ( typeof data === 'object' && data !== null ) {
+						this.chapterPicker.setChapters( data.book_id );
+					} else {
+						this.chapterPicker.setFirstChapter();
+					}
 				} else {
-					this.chapterPicker.setFirstChapter();
+					this.bookPicker.setIndicator( null );
+					this.bookPicker.closeLookupMenu();
+					this.chapterPicker.clear();
 				}
 			}.bind( this )
 		} );
@@ -54,6 +70,9 @@
 		this.chapterPicker.connect( this, {
 			updateUI: function () {
 				this.updateSize();
+				setTimeout( () => {
+					this.bookPicker.closeLookupMenu();
+				}, 100 );
 			}
 		} );
 
@@ -97,7 +116,7 @@
 						mw.message( 'bs-bookshelf-add-to-book-added', this.bookPicker.getValue() ).plain(),
 						{ title: mw.message( 'bs-bookshelf-add-to-book-label' ).plain() }
 					);
-					this.close( { action: action } );
+					this.close( { action: action, book: bookName } );
 					dfd.resolve();
 				} ).fail( ( error ) => {
 					dfd.reject( new OO.ui.Error( error ) );
