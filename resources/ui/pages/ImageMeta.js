@@ -16,7 +16,8 @@
 	bs.bookshelf.ui.pages.ImageMeta.prototype.setup = function () {
 		this.inputWidget = new OOJSPlus.ui.widget.FileSearchWidget( {
 			extensions: [ 'png', 'jpg' ],
-			value: this.value
+			value: this.value,
+			$overlay: this.$overlay
 		} );
 
 		const fieldLayout = new OO.ui.FieldLayout( this.inputWidget, {
