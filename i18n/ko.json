@@ -4,7 +4,8 @@
 			"Gongsoonyee",
 			"Namoroka",
 			"Ykhwong",
-			"Yunbj"
+			"Yunbj",
+			"22258"
 		]
 	},
 	"bs-bookshelf-tagerror-article-title-not-valid": "지정된 원본 문서(&quot;$1&quot;)가 존재하지 않습니다.",
@@ -78,5 +79,6 @@
 	"bs-bookshelf-droplet-bookpdf-link-label": "내보내기 링크의 텍스트",
 	"bs-bookshelf-droplet-bookpdf-name": "책 PDF 링크",
 	"bs-bookshelfui-bookmetatag-pdftemplate": "PDF 내보내기 틀",
-	"bs-bookshelf-export-pdf-notification-done": "PDF 내보내기 완료"
+	"bs-bookshelf-export-pdf-notification-done": "PDF 내보내기 완료",
+	"bs-bookshelf-sesp-books": "책"
 }
