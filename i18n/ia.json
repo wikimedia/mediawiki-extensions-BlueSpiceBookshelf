@@ -178,5 +178,7 @@
 	"bs-bookshelf-add-to-book-label-chapter": "Inserer in capitulo existente",
 	"bs-bookshelf-chapter-insertion-btn-move-up": "Displaciar capitulo in alto",
 	"bs-bookshelf-chapter-insertion-btn-move-down": "Displaciar capitulo in basso",
-	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remover le selection de capitulos"
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remover le selection de capitulos",
+	"bs-bookshelf-sesp-books": "Libros",
+	"bs-bookshelf-sesp-books-desc": "Le libros del quales iste pagina face parte"
 }
