@@ -190,5 +190,6 @@
 	"bs-bookshelf-chapter-insertion-btn-move-down": "Kapitel nach unten verschieben",
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Kapitelauswahl entfernen",
 	"bs-bookshelf-sesp-books": "Bücher",
-	"bs-bookshelf-sesp-books-desc": "Die Bücher, zu denen diese Seite gehört"
+	"bs-bookshelf-sesp-books-desc": "Die Bücher, zu denen diese Seite gehört",
+	"bs-bookshelf-actionmenuentry-create-new-book": "Neues Buch erstellen"
 }
