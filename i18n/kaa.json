@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajiniyaz Nurniyazov"
+			"Ajiniyaz Nurniyazov",
+			"Maxset"
 		]
 	},
 	"bs-bookshelf-add-to-book-added": "Bet \" $1\" kitabına qosıldı."
