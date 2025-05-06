@@ -188,5 +188,7 @@
 	"bs-bookshelf-add-to-book-label-chapter": "In bestehendes Kapitel einfügen",
 	"bs-bookshelf-chapter-insertion-btn-move-up": "Kapitel nach oben verschieben",
 	"bs-bookshelf-chapter-insertion-btn-move-down": "Kapitel nach unten verschieben",
-	"bs-bookshelf-chapter-insertion-clear-btn-label": "Kapitelauswahl entfernen"
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Kapitelauswahl entfernen",
+	"bs-bookshelf-sesp-books": "Bücher",
+	"bs-bookshelf-sesp-books-desc": "Die Bücher, zu denen diese Seite gehört"
 }
