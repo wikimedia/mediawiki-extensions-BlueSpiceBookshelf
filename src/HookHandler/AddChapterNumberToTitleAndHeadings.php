@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\HookHandler;
 
 use BlueSpice\Bookshelf\BookContextProviderFactory;
+use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\ChapterInfo;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\NumberHeadings;
@@ -24,6 +25,9 @@ class AddChapterNumberToTitleAndHeadings {
 	/** @var ChapterLookup */
 	private $bookChapterLookup = null;
 
+	/** @var BookLookup */
+	private $bookLookup = null;
+
 	/** @var Title */
 	private $activeBook = null;
 
@@ -34,11 +38,12 @@ class AddChapterNumberToTitleAndHeadings {
 	 */
 	public function __construct(
 		ConfigFactory $configFactory, BookContextProviderFactory $bookContextProviderFactory,
-		ChapterLookup $bookChapterLookup
+		ChapterLookup $bookChapterLookup, BookLookup $bookLookup
 	) {
 		$this->config = $configFactory->makeConfig( 'bsg' );
 		$this->bookContextProviderFactory = $bookContextProviderFactory;
 		$this->bookChapterLookup = $bookChapterLookup;
+		$this->bookLookup = $bookLookup;
 	}
 
 	/**
@@ -71,7 +76,9 @@ class AddChapterNumberToTitleAndHeadings {
 		$number = $chapterInfo->getNumber();
 
 		$out->setPageTitle( "<span class='bs-chapter-number'>$number</span> $displayTitle" );
-
+		$bookID = $this->bookLookup->getBookId( $activeBook );
+		$out->addJsConfigVars( 'bsActiveBookId', $bookID );
+		$out->addJsConfigVars( 'bsActiveChapterNumber', $number );
 		return true;
 	}
 

@@ -163,10 +163,7 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 				new BookNavigationChapterPagerContainer(
 					$this->title, $this->titleFactory, $this->bookContextProviderFactory, $this->chapterLookup
 				),
-				new BookNavigationTreeContainer(
-					$this->title, $this->titleFactory, $this->bookContextProviderFactory,
-					$this->bookLookup, $this->treeDataGenerator
-				),
+				new AsyncBookNavigationTreeContainer( $activeBook ),
 				new SimpleCardFooter( [
 					'id' => 'n-book-panel-footer',
 					'classes' => [ 'bg-transp' ],

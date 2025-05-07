@@ -175,6 +175,35 @@ class BookLookup {
 	}
 
 	/**
+	 * @param int $id
+	 * @return Title|null
+	 */
+	public function getBookTitleFromID( $id ): ?Title {
+		$dbr = $this->connectionProvider->getReplicaDatabase();
+
+		$result = $dbr->select(
+			'bs_books',
+			'*',
+			[
+				'book_id' => $id
+			],
+			__METHOD__,
+			[]
+		);
+
+		if ( !$result ) {
+			return null;
+		}
+
+		$title = null;
+		foreach ( $result as $res ) {
+			$title = $this->titleFactory->newFromText( $res->book_title, $res->book_namespace );
+		}
+
+		return $title;
+	}
+
+	/**
 	 * @param Title $title
 	 * @return BookInfo|null
 	 */
