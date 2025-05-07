@@ -120,6 +120,32 @@ class ChapterLookup {
 	}
 
 	/**
+	 * @param int $bookID
+	 * @param string $chapterNumber
+	 * @return ChapterInfo|null
+	 */
+	public function getChapterInfoForNumber( int $bookID, string $chapterNumber ): ?ChapterInfo {
+		$db = $this->loadBalancer->getConnection( DB_REPLICA );
+
+		$results = $db->select(
+			'bs_book_chapters',
+			'*',
+			[
+				'chapter_book_id' => $bookID,
+				'chapter_number' => $chapterNumber,
+			],
+			__METHOD__
+		);
+
+		$chapterInfo = null;
+		foreach ( $results as $result ) {
+			$chapterInfo = $this->makeChapterInfo( $result, $db );
+		}
+
+		return $chapterInfo;
+	}
+
+	/**
 	 * @param Title $book
 	 * @param ChapterInfo $chapterInfo
 	 * @return ChapterInfo[]
@@ -258,5 +284,54 @@ class ChapterLookup {
 			$name = $row->pp_value;
 		}
 		return $name;
+	}
+
+	/**
+	 * @param int $bookId
+	 * @return ChapterDataModel[]
+	 */
+	public function getFirstChapterForBookId( $bookId ) {
+		$db = $this->loadBalancer->getConnection( DB_REPLICA );
+		$results = $db->select(
+			'bs_book_chapters',
+			'*',
+			[
+				'chapter_book_id' => $bookId,
+				'chapter_number NOT LIKE \'%.%\''
+			],
+			__METHOD__
+		);
+
+		foreach ( $results as $result ) {
+			$pages[] = $this->makeChapter( $result, $db );
+		}
+
+		return $pages;
+	}
+
+	/**
+	 * @param int $bookId
+	 * @param ChapterDataModel $chapterInfo
+	 * @return array
+	 */
+	public function getChapterChildrenForBookId( $bookId, $chapterInfo ) {
+		$db = $this->loadBalancer->getConnection( DB_REPLICA );
+		$results = $db->select(
+			'bs_book_chapters',
+			'*',
+			[
+				'chapter_book_id=' . $bookId,
+				'chapter_number LIKE \'' . $chapterInfo->getNumber() . '.%\'',
+				'chapter_number NOT LIKE \'' . $chapterInfo->getNumber() . '.%.%\''
+			],
+			__METHOD__
+		);
+
+		$children = [];
+		foreach ( $results as $result ) {
+			$children[] = $this->makeChapter( $result, $db );
+		}
+
+		return $children;
 	}
 }

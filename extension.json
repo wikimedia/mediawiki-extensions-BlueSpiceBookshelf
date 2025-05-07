@@ -791,6 +791,21 @@
 			"dependencies": [
 				"ext.contentdroplets.bootstrap"
 			]
+		},
+		"ext.bluespice.async.navigation": {
+			"packageFiles": [
+				"bluespice.bookshelf.bookpanel.js",
+				"ui/panel/BookNavigationTreePanel.js",
+				"data/BookNavigationTreeStore.js",
+				"ui/data/tree/BookNavigationTree.js",
+				"ui/data/tree/BookNavigationTreeItem.js"
+			],
+			"styles": [
+				"bluespice.book.navigation.css"
+			],
+			"dependencies": [
+				"ext.oojsplus.navigation.treePanel"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -872,7 +887,7 @@
 		},
 		"add-chapter-number-to-title-and-headings": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\AddChapterNumberToTitleAndHeadings",
-			"services": [ "ConfigFactory", "BSBookshelfBookContextProviderFactory", "BSBookshelfBookChapterLookup" ]
+			"services": [ "ConfigFactory", "BSBookshelfBookContextProviderFactory", "BSBookshelfBookChapterLookup", "BSBookshelfBookLookup" ]
 		},
 		"book-source-actions": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookActions",
@@ -971,6 +986,12 @@
 			"path": "/bookshelf/metadata/{booktitle}",
 			"class": "\\BlueSpice\\Bookshelf\\Rest\\PostBookMetadata",
 			"services": [ "TitleFactory", "WikiPageFactory", "BSBookshelfBookLookup", "BSBookshelfBookMetaLookup" ]
+		},
+		{
+			"method": "GET",
+			"path": "/bookshelf/navigation",
+			"class": "\\BlueSpice\\Bookshelf\\Rest\\GetBookChapters",
+			"services": [ "BSBookshelfBookLookup", "BSBookshelfBookChapterLookup", "TitleFactory" ]
 		}
 	],
 	"load_composer_autoloader": true,
