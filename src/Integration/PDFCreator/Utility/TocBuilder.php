@@ -18,18 +18,43 @@ class TocBuilder extends DefaultTocBuilder {
 	public function execute( array $pages, bool $embedPageToc = false ): array {
 		$tocLabel = $this->getPageLabelMsg();
 
+		$container = $this->getTocDOMContainer( $pages, $embedPageToc );
+		$dom = $container->ownerDocument;
+		$body = $dom->getElementsByTagName( 'body' )->item( 0 );
+		$body->appendChild( $container );
+
+		$tocPage = new ExportPage(
+			'toc',
+			$dom,
+			$tocLabel->text()
+		);
+		array_unshift( $pages, $tocPage );
+
+		return $pages;
+	}
+
+	/**
+	 * @param array $pages
+	 * @param bool $embedPageToc
+	 * @return string
+	 */
+	public function getHtml( array $pages, bool $embedPageToc = false ): string {
+		$container = $this->getTocDOMContainer( $pages, $embedPageToc );
+		return $container->ownerDocument->saveHTML( $container );
+	}
+
+	/**
+	 * @param array $pages
+	 * @param bool $embedPageToc
+	 * @return DOMElement
+	 */
+	private function getTocDOMContainer( array $pages, bool $embedPageToc = false ): DOMElement {
 		$dom = new DOMDocument();
 		$dom->loadXML( PDFCreator::HTML_STUB );
 		$body = $dom->getElementsByTagName( 'body' )->item( 0 );
 
 		$container = $dom->createElement( 'div' );
 		$container->setAttribute( 'class', 'pdfcreator-page pdfcreator-type-toc bs-bookshelf-toc' );
-
-		$heading = $dom->createElement( 'h1' );
-		$heading->setAttribute( 'class', 'firstHeading' );
-		$heading->setAttribute( 'id', 'firstHeading' );
-		$heading->nodeValue = $tocLabel;
-		$container->appendChild( $heading );
 
 		$ul = $dom->createElement( 'ul' );
 		$ul->setAttribute( 'class', 'toc' );
@@ -39,15 +64,8 @@ class TocBuilder extends DefaultTocBuilder {
 		}
 
 		$container->appendChild( $ul );
-		$body->appendChild( $container );
-		$tocPage = new ExportPage(
-			'toc',
-			$dom,
-			$tocLabel->text()
-		);
-		array_unshift( $pages, $tocPage );
 
-		return $pages;
+		return $container;
 	}
 
 	/**

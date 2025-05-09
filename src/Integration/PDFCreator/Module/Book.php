@@ -6,6 +6,8 @@ use BlueSpice\Bookshelf\Integration\PDFCreator\Utility\BookmarksXMLBuilder;
 use BlueSpice\Bookshelf\Integration\PDFCreator\Utility\TocBuilder;
 use MediaWiki\Extension\PDFCreator\Module\Batch;
 use MediaWiki\Extension\PDFCreator\Utility\ExportContext;
+use MediaWiki\Extension\PDFCreator\Utility\PageSpec;
+use MediaWiki\Message\Message;
 
 class Book extends Batch {
 
@@ -24,7 +26,13 @@ class Book extends Batch {
 	 */
 	protected function addTocPage( array &$pages, ExportContext $context, bool $embedPageToc = false ): void {
 		$tocPageBuilder = new TocBuilder( $this->titleFactory );
-		$pages = $tocPageBuilder->execute( $pages, $embedPageToc );
+		$html = $tocPageBuilder->getHtml( $pages, $embedPageToc, $this->docTitle );
+		$labelMsg = Message::newFromKey( 'pdfcreator-toc-page-label' );
+		$pageSpec = new PageSpec( 'raw', $labelMsg->text(), '', null, [
+			'content' => $html
+		] );
+		$page = $this->exportPageFactory->getPageFromSpec( $pageSpec, $this->template, $context, $this->workspace );
+		array_unshift( $pages, $page );
 	}
 
 	/**
