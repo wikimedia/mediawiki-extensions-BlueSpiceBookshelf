@@ -161,7 +161,7 @@ class ClientConfig {
 		$configFactory = $services->getConfigFactory();
 		$titleFactory = $services->getTitleFactory();
 		$pdfcreatorUtil = $services->getService( 'PDFCreator.Util' );
-		$templates = $pdfcreatorUtil->getAllWikiTemplates();
+		$templates = $pdfcreatorUtil->getAvailableTemplateNames();
 		$bsgConfig = $configFactory->makeConfig( 'bsg' );
 		$template = $bsgConfig->get( 'BookshelfDefaultBookTemplate' );
 		$templateTitle = $titleFactory->newFromText( 'MediaWiki:PDFCreator/' . $template );
