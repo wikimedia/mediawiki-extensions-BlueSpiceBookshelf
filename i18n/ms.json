@@ -14,5 +14,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Pengarang",
 	"bs-bookshelf-droplet-name": "Senarai buku",
 	"bs-bookshelf-newbook-dlg-title": "Cipta buku baharu",
-	"bs-bookshelf-newbook-dlg-input-title-placeholder": "Cipta tajuk buku"
+	"bs-bookshelf-newbook-dlg-input-title-placeholder": "Cipta tajuk buku",
+	"bs-bookshelf-actionmenuentry-create-new-book": "Cipta buku baharu"
 }

@@ -194,5 +194,6 @@
 	"bs-bookshelf-add-to-book-label-chapter": "Insérer dans un chapitre existant",
 	"bs-bookshelf-chapter-insertion-btn-move-up": "Déplacer le chapitre vers le haut",
 	"bs-bookshelf-chapter-insertion-btn-move-down": "Déplacer le chapitre vers le bas",
-	"bs-bookshelf-chapter-insertion-clear-btn-label": "Supprimer la sélection de chapitre"
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Supprimer la sélection de chapitre",
+	"bs-bookshelf-actionmenuentry-create-new-book": "Créer un nouveau livre"
 }

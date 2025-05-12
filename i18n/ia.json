@@ -180,5 +180,6 @@
 	"bs-bookshelf-chapter-insertion-btn-move-down": "Displaciar capitulo in basso",
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remover le selection de capitulos",
 	"bs-bookshelf-sesp-books": "Libros",
-	"bs-bookshelf-sesp-books-desc": "Le libros del quales iste pagina face parte"
+	"bs-bookshelf-sesp-books-desc": "Le libros del quales iste pagina face parte",
+	"bs-bookshelf-actionmenuentry-create-new-book": "Crear un nove libro"
 }
