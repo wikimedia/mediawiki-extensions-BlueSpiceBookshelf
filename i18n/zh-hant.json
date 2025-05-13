@@ -151,5 +151,6 @@
 	"bs-bookshelf-droplet-search-book-help": "要搜群的書名",
 	"bs-bookshelf-notification-subscription-set-book-title": "書籍",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "書籍無法建立，因為已存在同名的書籍",
-	"bs-bookshelf-actionmenuentry-new-book": "新書籍"
+	"bs-bookshelf-actionmenuentry-new-book": "新書籍",
+	"bs-bookshelf-actionmenuentry-create-new-book": "建立新書籍"
 }

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"McDutchie"
+			"McDutchie",
+			"Istwalezanti"
 		]
 	},
 	"bs-bookshelf-booknav-desc": "Lis dé tout oben chapit ou séléksyonné dé on liv",
@@ -11,5 +12,6 @@
 	"bs-bookshelf-booknav-chapter-help": "Chwazi on chapit pou vwè-y",
 	"bs-bookshelf-booknav-book-not-exist": "Liv $1 pa ka égzisté",
 	"bs-bookshelf-booknav-chapter-not-exist": "Chapit $1 pa ka égzisté",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Chèché"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Chèché",
+	"bs-bookshelf-sesp-books": "Liv"
 }

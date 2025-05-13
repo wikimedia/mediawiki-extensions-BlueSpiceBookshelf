@@ -13,5 +13,6 @@
 	"bs-bookshelf-newbook-dlg-input-subtitle-placeholder": "Create subtitle",
 	"bs-bookshelf-newbook-dlg-input-image-label": "კაბრაშ სურათი",
 	"bs-bookshelf-newbook-dlg-input-image-select-placeholder": "რინელი სურათიშ გიშაგორუა",
-	"bs-bookshelf-newbook-dlg-book-save-summary": "გოჭყაფილი კჷრიბი"
+	"bs-bookshelf-newbook-dlg-book-save-summary": "გოჭყაფილი კჷრიბი",
+	"bs-bookshelf-actionmenuentry-create-new-book": "ახალი კჷრიბიშ გოჭყაფა"
 }
