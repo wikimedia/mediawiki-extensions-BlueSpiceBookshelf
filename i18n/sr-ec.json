@@ -4,7 +4,8 @@
 			"BadDog",
 			"Kizule",
 			"Milicevic01",
-			"Вукан Ц"
+			"Вукан Ц",
+			"Aca"
 		]
 	},
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Користите <i>left</i> или <i>right</i>.",
@@ -81,5 +82,6 @@
 	"bs-bookshelf-export-pageparam-desc-title": "Прикажи наслов књиге",
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Прикажи тип документа",
 	"bs-bookshelf-export-pageparam-desc-version": "Прикажи верзију књиге",
-	"bs-bookshelf-export-pdf-notification-done": "Извоз PDF завршен"
+	"bs-bookshelf-export-pdf-notification-done": "Извоз PDF завршен",
+	"bs-bookshelf-sesp-books": "Књиге"
 }
