@@ -176,8 +176,8 @@ class ChapterLookup {
 			'*',
 			[
 				'chapter_book_id=' . $bookID,
-				'chapter_number like "' . $chapterInfo->getNumber() . '%"',
-				'NOT chapter_number="' . $chapterInfo->getNumber() . '"',
+				'chapter_number LIKE "' . $chapterInfo->getNumber() . '.%"',
+				'chapter_number NOT LIKE "' . $chapterInfo->getNumber() . '.%.%"'
 			],
 			__METHOD__
 		);
