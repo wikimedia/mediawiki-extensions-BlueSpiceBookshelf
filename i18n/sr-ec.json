@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aca",
 			"BadDog",
 			"Kizule",
 			"Milicevic01",
-			"Вукан Ц",
-			"Aca"
+			"Вукан Ц"
 		]
 	},
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Користите <i>left</i> или <i>right</i>.",
