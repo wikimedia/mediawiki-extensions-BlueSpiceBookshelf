@@ -190,5 +190,6 @@
 	"bs-bookshelf-chapter-insertion-btn-move-down": "Label for button to move chapter down",
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Label for button to clear chapter selection",
 	"bs-bookshelf-sesp-books": "SemanticExtraSpecialProperties \"Books\" property label",
-	"bs-bookshelf-sesp-books-desc": "SemanticExtraSpecialProperties \"Books\" property description"
+	"bs-bookshelf-sesp-books-desc": "SemanticExtraSpecialProperties \"Books\" property description",
+	"bs-bookshelf-actionmenuentry-create-new-book": "Label for action menu entry to create a new book"
 }

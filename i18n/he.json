@@ -183,5 +183,7 @@
 	"bs-bookshelf-add-to-book-label-chapter": "להכינס לתוך פרק קיים",
 	"bs-bookshelf-chapter-insertion-btn-move-up": "להזיז פרק למעלה",
 	"bs-bookshelf-chapter-insertion-btn-move-down": "להזיז פרק למטה",
-	"bs-bookshelf-chapter-insertion-clear-btn-label": "להסיר בחירת פרק"
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "להסיר בחירת פרק",
+	"bs-bookshelf-sesp-books": "ספרים",
+	"bs-bookshelf-sesp-books-desc": "הספרים שהדף הזה הוא חלק מהם"
 }
