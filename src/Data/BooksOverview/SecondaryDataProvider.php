@@ -262,7 +262,7 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 			$localFile = $this->repoGroup->findFile( $fileTitle );
 			if ( $localFile !== false ) {
 				$thumb = $localFile->transform( [
-					'width' => 300
+					'width' => 350
 				] );
 				$path = $thumb->getURL();
 			}
