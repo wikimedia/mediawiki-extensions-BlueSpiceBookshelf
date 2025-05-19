@@ -26,6 +26,7 @@
 	"bs-books-overview-page-book-action-edit-title": "Խմբագրել $1 գիրքը",
 	"bs-books-overview-page-book-action-delete-text": "Ջնջել",
 	"bs-books-overview-page-book-action-delete-title": "Ջնջել $1 գիրքը",
+	"bs-bookshelf-actionmenuentry-create-new-book": "Ստեղծել նոր գիրք",
 	"bs-bookshelf-newbook-dlg-title": "Ստեղծել նոր գիրք",
 	"bs-bookshelf-newbook-dlg-input-title-label": "Գրքի անվանումը",
 	"bs-bookshelf-newbook-dlg-input-subtitle-label": "Ենթավերնագիր",

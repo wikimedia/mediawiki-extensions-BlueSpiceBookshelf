@@ -136,6 +136,7 @@
 	"bs-bookshelf-metadata-widget-checkbox-title": "選擇屬性「$1」",
 	"bs-bookshelf-metadata-dlg-title": "編輯詮釋資料",
 	"bs-bookshelf-metadata-dlg-action-save-label": "儲存",
+	"bs-bookshelf-actionmenuentry-create-new-book": "建立新書籍",
 	"bs-bookshelf-newbook-dlg-title": "建立新書籍",
 	"bs-bookshelf-newbook-dlg-input-title-placeholder": "建立書籍標題",
 	"bs-bookshelf-newbook-dlg-input-title-label": "書籍標題",
