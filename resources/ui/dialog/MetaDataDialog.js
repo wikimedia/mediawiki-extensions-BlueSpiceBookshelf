@@ -22,8 +22,8 @@ ext.bookshelf.ui.dialog.MetaDataDialog.static.actions = [
 		flags: [ 'primary', 'progressive' ]
 	},
 	{
-		label: mw.message( 'cancel' ).text(),
-		flags: 'safe'
+		title: mw.message( 'cancel' ).text(),
+		flags: [ 'safe', 'close' ]
 	}
 ];
 

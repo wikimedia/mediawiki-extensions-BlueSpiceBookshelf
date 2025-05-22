@@ -726,7 +726,7 @@
 			"messages": [
 				"cancel",
 				"bs-bookshelf-newbook-dlg-title",
-				"bs-bookshelf-metadata-dlg-action-save-label",
+				"bs-bookshelf-newbook-dlg-action-create-label",
 				"bs-bookshelf-newbook-dlg-input-title-placeholder",
 				"bs-bookshelf-newbook-dlg-input-title-label",
 				"bs-bookshelf-newbook-dlg-input-subtitle-placeholder",

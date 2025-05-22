@@ -14,12 +14,12 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.static.size = 'large';
 ext.bookshelf.ui.dialog.AddNewBookDialog.static.actions = [
 	{
 		action: 'save',
-		label: mw.message( 'bs-bookshelf-metadata-dlg-action-save-label' ).text(),
+		label: mw.message( 'bs-bookshelf-newbook-dlg-action-create-label' ).text(),
 		flags: [ 'primary', 'progressive' ]
 	},
 	{
-		label: mw.message( 'cancel' ).text(),
-		flags: 'safe'
+		title: mw.message( 'cancel' ).text(),
+		flags: [ 'safe', 'close' ]
 	}
 ];
 
