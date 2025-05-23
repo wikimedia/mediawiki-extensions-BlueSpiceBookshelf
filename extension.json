@@ -38,12 +38,6 @@
 			"SettingPathRegistry": {
 				"book": "bs-bookshelf-setting-path-feature"
 			},
-			"TagRegistry": {
-				"bookmeta": "\\BlueSpice\\Bookshelf\\Tag\\BookshelfMeta",
-				"bookshelf": "\\BlueSpice\\Bookshelf\\Tag\\Bookshelf",
-				"booklist": "\\BlueSpice\\Bookshelf\\Tag\\BookList",
-				"booknav": "\\BlueSpice\\Bookshelf\\Tag\\BookNav"
-			},
 			"DynamicFileRegistry": {
 				"bookshelfimage": "\\BlueSpice\\Bookshelf\\DynamicFileDispatcher\\BookshelfImage"
 			},
@@ -117,11 +111,8 @@
 		},
 		"BlueSpiceVisualEditorConnector": {
 			"TagDefinitions": [
-				"ext.bluespice.booklist.visualEditorTagDefinition",
 				"ext.bluespice.bookmeta.visualEditorTagDefinition",
-				"ext.bluespice.bookshelf.visualEditorTagDefinition",
-				"ext.bluespice.booknav.visualEditorTagDefinition",
-				"ext.bluespice.searchinbook.visualEditorTagDefinition"
+				"ext.bluespice.bookshelf.visualEditorTagDefinition"
 			]
 		},
 		"ContentDroplets": {
@@ -406,20 +397,8 @@
 				"bluespice.bookshelf.book-select-widgets.css"
 			]
 		},
-		"ext.bluespice.booklist.visualEditorTagDefinition": {
-			"scripts": [
-				"bs.bookshelf/util/tag/BooklistDefinition.js"
-			],
-			"styles": "bluespice.booklist.droplet.css",
-			"messages": [
-				"bs-bookshelf-tag-booklist-description",
-				"bs-bookshelf-ve-booklistinspector-title",
-				"bs-bookshelf-ve-booklist-attr-filter-label",
-				"bs-bookshelf-ve-booklist-attr-filter-help"
-			],
-			"dependencies": [
-				"ext.bluespice.visualEditorConnector.tags.classes"
-			]
+		"ext.bluespice.booklist.droplet": {
+			"styles": "bluespice.booklist.droplet.css"
 		},
 		"ext.bluespice.bookmeta.visualEditorTagDefinition": {
 			"scripts": [
@@ -455,42 +434,8 @@
 				"ext.bluespice.visualEditorConnector.tags.classes"
 			]
 		},
-		"ext.bluespice.booknav.visualEditorTagDefinition": {
-			"scripts": [
-				"nodes/bs.bookshelf.ce.BookNavNode.js",
-				"nodes/bs.bookshelf.dm.BookNavNode.js",
-				"nodes/bs.bookshelf.ui.BookNavInspector.js",
-				"nodes/bs.bookshelf.ui.BookNavInspectorTool.js"
-			],
-			"styles": "bluespice.booknav.droplet.css",
-			"messages": [
-				"bs-bookshelf-booknav-title",
-				"bs-bookshelf-booknav-desc",
-				"bs-bookshelf-booknav-book-label",
-				"bs-bookshelf-booknav-book-help",
-				"bs-bookshelf-booknav-chapter-label",
-				"bs-bookshelf-booknav-chapter-help"
-			],
-			"dependencies": [
-				"ext.bluespice.bookshelf.booknav.styles",
-				"ext.visualEditor.mwcore",
-				"mediawiki.widgets"
-			]
-		},
-		"ext.bluespice.searchinbook.visualEditorTagDefinition": {
-			"scripts": [
-				"ui/widget/BookInputWidget.js",
-				"ext.bluespice.bookshelf.SearchInBook.js"
-			],
-			"messages": [
-				"bs-bookshelf-droplet-search-name",
-				"bs-bookshelf-droplet-search-description",
-				"bs-bookshelf-droplet-search-book",
-				"bs-bookshelf-droplet-search-book-help"
-			],
-			"dependencies": [
-				"ext.bluespice.tagsearch.visualEditor"
-			]
+		"ext.bluespice.booknav.droplet": {
+			"styles": "bluespice.booknav.droplet.css"
 		},
 		"ext.bluespice.bookshelf.booknav.styles": {
 			"styles": "bluespice.bookshelf.booknav.css"
@@ -811,6 +756,19 @@
 			"dependencies": [
 				"ext.oojsplus.navigation.treePanel"
 			]
+		},
+		"bs.bookshelf.formElement.bookInput": {
+			"scripts": [
+				"ui/widget/BookInputWidget.js",
+				"formelement/BookInputWidgetElement.js"
+			],
+			"messages": [
+				"bs-bookshelf-formelement-book-input",
+				"bs-bookshelf-formelement-book-input-return-value-label"
+			],
+			"dependencies": [
+				"ext.forms.formelements.bootstrap"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -929,6 +887,9 @@
 		},
 		"addPDFTemplates": {
 			"class": "\\BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddPDFTemplates"
+		},
+		"registerTags": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\RegisterTags"
 		}
 	},
 	"Hooks": {
@@ -966,7 +927,8 @@
 		"NumberHeadingsBeforeApply": "add-chapter-number-to-title-and-headings",
 		"BSBookshelfPageAddedToBook": "queueJobs",
 		"BSBookshelfPageRemovedFromBook": "queueJobs",
-		"BSBookshelfBooksOverviewBeforeSetBookActions": "addExportAction"
+		"BSBookshelfBooksOverviewBeforeSetBookActions": "addExportAction",
+		"MWStakeGenericTagHandlerInitTags": "registerTags"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"

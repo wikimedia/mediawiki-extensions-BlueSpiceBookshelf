@@ -32,7 +32,7 @@ class BookNavDroplet extends TagDroplet {
 	 * @inheritDoc
 	 */
 	public function getRLModules(): array {
-		return [ 'ext.bluespice.booknav.visualEditorTagDefinition' ];
+		return [ 'ext.bluespice.booknav.droplet' ];
 	}
 
 	/**

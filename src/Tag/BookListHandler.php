@@ -4,66 +4,31 @@ namespace BlueSpice\Bookshelf\Tag;
 
 use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\BookMetaLookup;
-use BlueSpice\Tag\Handler;
 use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\PPFrame;
 use MediaWiki\Title\TitleFactory;
-use Wikimedia\Rdbms\LoadBalancer;
+use MWStake\MediaWiki\Component\GenericTagHandler\ITagHandler;
 
-class BookListHandler extends Handler {
-	/**
-	 * @var TitleFactory
-	 */
-	protected $titleFactory = null;
+class BookListHandler implements ITagHandler {
 
 	/**
-	 * @var LoadBalancer
-	 */
-	protected $lb = null;
-
-	/**
-	 * @var LinkRenderer
-	 */
-	protected $linkRenderer = null;
-
-	/** @var BookLookup */
-	private $bookLookup = null;
-
-	/** @var BookMetaLookup */
-	private $bookMetaLookup = null;
-
-	/**
-	 * @param string $processedInput
-	 * @param array $processedArgs
-	 * @param Parser $parser
-	 * @param PPFrame $frame
 	 * @param TitleFactory $titleFactory
-	 * @param LoadBalancer $lb
 	 * @param LinkRenderer $linkRenderer
 	 * @param BookLookup $bookLookup
 	 * @param BookMetaLookup $bookMetaLookup
 	 */
 	public function __construct(
-		$processedInput, array $processedArgs, Parser $parser,
-		PPFrame $frame, TitleFactory $titleFactory, LoadBalancer $lb,
-		LinkRenderer $linkRenderer, BookLookup $bookLookup, BookMetaLookup $bookMetaLookup
+		private readonly TitleFactory $titleFactory,
+		private readonly LinkRenderer $linkRenderer,
+		private readonly BookLookup $bookLookup,
+		private readonly BookMetaLookup $bookMetaLookup
 	) {
-		parent::__construct( $processedInput, $processedArgs, $parser, $frame );
-		$this->titleFactory = $titleFactory;
-		$this->lb = $lb;
-		$this->linkRenderer = $linkRenderer;
-		$this->bookLookup = $bookLookup;
-		$this->bookMetaLookup = $bookMetaLookup;
 	}
 
-	/**
-	 *
-	 * @return string
-	 */
-	public function handle() {
-		$filters = explode( '|', trim( $this->processedArgs[BookList::PARAM_FILTER] ) );
+	public function getRenderedContent( string $input, array $params, Parser $parser, PPFrame $frame ): string {
+		$filters = explode( '|', trim( $params['filter'] ) );
 		$parsedFilters = [];
 		foreach ( $filters as $keyValuePair ) {
 			$parts = explode( ':', trim( $keyValuePair ), 2 );

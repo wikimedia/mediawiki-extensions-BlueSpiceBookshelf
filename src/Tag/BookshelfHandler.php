@@ -2,30 +2,16 @@
 
 namespace BlueSpice\Bookshelf\Tag;
 
-use BlueSpice\Tag\Handler;
-use MediaWiki\Config\Config;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\PPFrame;
+use MWStake\MediaWiki\Component\GenericTagHandler\ITagHandler;
 
-class BookshelfHandler extends Handler {
-
-	/**
-	 * @param string $processedInput
-	 * @param array $processedArgs
-	 * @param Parser $parser
-	 * @param PPFrame $frame
-	 * @param Config $config
-	 */
-	public function __construct( $processedInput, array $processedArgs, Parser $parser,
-		PPFrame $frame, Config $config ) {
-		parent::__construct( $processedInput, $processedArgs, $parser, $frame );
-	}
+class BookshelfHandler implements ITagHandler {
 
 	/**
-	 * @return string
+	 * @inheritDoc
 	 */
-	public function handle() {
+	public function getRenderedContent( string $input, array $params, Parser $parser, PPFrame $frame ): string {
 		return '';
 	}
-
 }

@@ -2,70 +2,38 @@
 
 namespace BlueSpice\Bookshelf\Tag;
 
-use BlueSpice\ParamProcessor\IParamDefinition;
-use BlueSpice\ParamProcessor\ParamDefinition;
-use BlueSpice\ParamProcessor\ParamType;
-use BlueSpice\Tag\MarkerType;
-use BlueSpice\Tag\MarkerType\NoWiki;
-use BlueSpice\Tag\Tag;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Parser\Parser;
-use MediaWiki\Parser\PPFrame;
+use MediaWiki\Message\Message;
+use MWStake\MediaWiki\Component\FormEngine\StandaloneFormSpecification;
+use MWStake\MediaWiki\Component\GenericTagHandler\ClientTagSpecification;
+use MWStake\MediaWiki\Component\GenericTagHandler\GenericTag;
+use MWStake\MediaWiki\Component\GenericTagHandler\ITagHandler;
+use MWStake\MediaWiki\Component\GenericTagHandler\MarkerType;
+use MWStake\MediaWiki\Component\GenericTagHandler\MarkerType\NoWiki;
+use MWStake\MediaWiki\Component\InputProcessor\Processor\StringValue;
 
-class BookList extends Tag {
-
-	public const PARAM_FILTER = 'filter';
+class BookList extends GenericTag {
 
 	/**
-	 *
-	 * @return bool
+	 * @inheritDoc
 	 */
-	public function needsDisabledParserCache() {
-		return true;
+	public function getTagNames(): array {
+		return [ 'booklist', 'bs:booklist' ];
 	}
 
 	/**
-	 *
-	 * @return bool
+	 * @inheritDoc
 	 */
-	public function needsParsedInput() {
+	public function hasContent(): bool {
 		return false;
 	}
 
 	/**
-	 *
-	 * @return bool
+	 * @inheritDoc
 	 */
-	public function needsParseArgs() {
-		return false;
-	}
-
-	/**
-	 *
-	 * @return MarkerType
-	 */
-	public function getMarkerType() {
-		return new NoWiki();
-	}
-
-	/**
-	 *
-	 * @param string $processedInput
-	 * @param array $processedArgs
-	 * @param Parser $parser
-	 * @param PPFrame $frame
-	 * @return PageBreakHandler
-	 */
-	public function getHandler( $processedInput, array $processedArgs, Parser $parser,
-		PPFrame $frame ) {
-		$services = MediaWikiServices::getInstance();
+	public function getHandler( MediaWikiServices $services ): ITagHandler {
 		return new BookListHandler(
-			$processedInput,
-			$processedArgs,
-			$parser,
-			$frame,
 			$services->getTitleFactory(),
-			$services->getDBLoadBalancer(),
 			$services->getLinkRenderer(),
 			$services->getService( 'BSBookshelfBookLookup' ),
 			$services->getService( 'BSBookshelfBookMetaLookup' )
@@ -73,26 +41,41 @@ class BookList extends Tag {
 	}
 
 	/**
-	 *
-	 * @return string[]
+	 * @inheritDoc
 	 */
-	public function getTagNames() {
-		return [
-			'booklist',
-			'bs:booklist',
-		];
+	public function getMarkerType(): MarkerType {
+		return new NoWiki();
 	}
 
 	/**
-	 * @return IParamDefinition[]
+	 * @inheritDoc
 	 */
-	public function getArgsDefinitions() {
-		$filter = new ParamDefinition(
-			ParamType::STRING,
-			static::PARAM_FILTER,
-			''
+	public function getParamDefinition(): ?array {
+		$filter = new StringValue();
+		$filter->setRequired( false );
+
+		return [ 'filter' => $filter ];
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getClientTagSpecification(): ClientTagSpecification|null {
+		$formSpec = new StandaloneFormSpecification();
+		$formSpec->setItems( [
+			[
+				'type' => 'text',
+				'name' => 'filter',
+				'label' => Message::newFromKey( 'bs-bookshelf-ve-booklist-attr-filter-label' )->text(),
+				'help' => Message::newFromKey( 'bs-bookshelf-ve-booklist-attr-filter-help' )->text(),
+			],
+		] );
+
+		return new ClientTagSpecification(
+			'Booklist',
+			Message::newFromKey( 'bs-bookshelf-tag-booklist-description' ),
+			$formSpec,
+			Message::newFromKey( 'bs-bookshelf-ve-booklistinspector-title' )
 		);
-		$filter->setArrayValues( [ 'hastoexist' => true ] );
-		return [ $filter ];
 	}
 }
