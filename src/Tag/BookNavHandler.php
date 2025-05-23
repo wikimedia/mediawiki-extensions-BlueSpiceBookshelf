@@ -6,81 +6,45 @@ use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\Panel\BookNavigationTreeContainer;
 use BlueSpice\Bookshelf\Renderer\ComponentRenderer;
-use BlueSpice\Tag\Handler;
 use MediaWiki\Html\Html;
 use MediaWiki\Message\Message;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\PPFrame;
 use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
+use MWStake\MediaWiki\Component\GenericTagHandler\ITagHandler;
 
-class BookNavHandler extends Handler {
-
-	public const ATTR_BOOK = 'book';
-	public const ATTR_CHAPTER = 'chapter';
-
-	/** @var string */
-	private $bookInput = '';
-
-	/** @var string */
-	private $chapterInput = '';
-
-	/** @var TitleFactory */
-	private $titleFactory = null;
-
-	/** @var ComponentRenderer */
-	private $componentRenderer = null;
-
-	/** @var BookContextProviderFactory */
-	private $bookContxtProviderFactory = null;
-
-	/** @var BookLookup */
-	private $bookLookup = null;
-
-	/** @var TreeDataGenerator */
-	private $treeDataGenerator = null;
+class BookNavHandler implements ITagHandler {
 
 	/**
-	 * @param string $processedInput
-	 * @param array $processedArgs
-	 * @param Parser $parser
-	 * @param PPFrame $frame
 	 * @param TitleFactory $titleFactory
 	 * @param ComponentRenderer $componentRenderer
-	 * @param BookContextProviderFactory $bookContxtProviderFactory
+	 * @param BookContextProviderFactory $bookContextProviderFactory
 	 * @param BookLookup $bookLookup
 	 * @param TreeDataGenerator $treeDataGenerator
 	 */
 	public function __construct(
-		$processedInput, array $processedArgs, Parser $parser,
-		PPFrame $frame, TitleFactory $titleFactory, ComponentRenderer $componentRenderer,
-		BookContextProviderFactory $bookContxtProviderFactory,
-		BookLookup $bookLookup, TreeDataGenerator $treeDataGenerator
-	 ) {
-		parent::__construct( $processedInput, $processedArgs, $parser, $frame );
-		$this->bookInput = $this->processedArgs[self::ATTR_BOOK];
-		$this->chapterInput = $this->processedArgs[self::ATTR_CHAPTER];
-		$this->titleFactory = $titleFactory;
-		$this->componentRenderer = $componentRenderer;
-		$this->bookContxtProviderFactory = $bookContxtProviderFactory;
-		$this->bookLookup = $bookLookup;
-		$this->treeDataGenerator = $treeDataGenerator;
+		private readonly TitleFactory $titleFactory,
+		private readonly ComponentRenderer $componentRenderer,
+		private readonly BookContextProviderFactory $bookContextProviderFactory,
+		private readonly BookLookup $bookLookup,
+		private readonly TreeDataGenerator $treeDataGenerator
+	) {
 	}
 
 	/**
-	 * @return string $bookNav
+	 * @inheritDoc
 	 */
-	public function handle(): string {
-		$bookTitle = $this->titleFactory->newFromText( $this->bookInput, NS_BOOK );
-
-		if ( !$bookTitle || !$bookTitle->exists() ) {
-			return Message::newFromKey( 'bs-bookshelf-booknav-book-not-exist', $this->bookInput )->plain();
+	public function getRenderedContent( string $input, array $params, Parser $parser, PPFrame $frame ): string {
+		$bookTitle = $params['book'] ?? '';
+		if ( $bookTitle->getNamespace() === 0 ) {
+			// if only book name, without prefix is specified
+			$bookTitle = $this->titleFactory->makeTitle( NS_BOOK, $bookTitle->getPrefixedDbKey() );
 		}
-
 		$bookNavTreeContainer = new BookNavigationTreeContainer(
 			$bookTitle,
 			$this->titleFactory,
-			$this->bookContxtProviderFactory,
+			$this->bookContextProviderFactory,
 			$this->bookLookup,
 			$this->treeDataGenerator,
 			$bookTitle,
@@ -88,10 +52,10 @@ class BookNavHandler extends Handler {
 		);
 		$subComponents = $bookNavTreeContainer->getSubComponents();
 		$html = '';
-		if ( $this->chapterInput === '' ) {
+		if ( ( $params['chapter'] ?? '' ) === '' ) {
 			$this->buildSubComponentsHtml( $subComponents, $html );
 		} else {
-			$this->buildSubComponentsSegmentHtml( $subComponents, $html );
+			$this->buildSubComponentsSegmentHtml( $subComponents, $html, $params['chapter'] );
 		}
 
 		$bookNav = Html::openElement( 'div', [
@@ -112,13 +76,6 @@ class BookNavHandler extends Handler {
 
 		$bookNav .= $html;
 		$bookNav .= Html::closeElement( 'ul' );
-
-		$parserOutput = $this->parser->getOutput();
-		$parserOutput->addModules( [
-			'ext.bluespice.bookshelf.bookNavFilter',
-			'mwstake.component.commonui.tree-component'
-		] );
-		$parserOutput->addModuleStyles( [ 'ext.bluespice.bookshelf.booknav.styles' ] );
 
 		return $bookNav;
 	}
@@ -160,7 +117,7 @@ class BookNavHandler extends Handler {
 	/**
 	 * @param array $subComponents
 	 * @param string &$html
-	 * @return array
+	 * @return void
 	 */
 	private function buildSubComponentsHtml( array $subComponents, string &$html ): void {
 		foreach ( $subComponents as $subComponent ) {
@@ -171,13 +128,14 @@ class BookNavHandler extends Handler {
 	/**
 	 * @param array $subComponents
 	 * @param string &$html
-	 * @return array
+	 * @param string $chapter
+	 * @return void
 	 */
-	private function buildSubComponentsSegmentHtml( array $subComponents, string &$html ): void {
+	private function buildSubComponentsSegmentHtml( array $subComponents, string &$html, string $chapter ): void {
 		foreach ( $subComponents as $subComponent ) {
 			$label = $subComponent->getText()->plain();
 
-			if ( strpos( $label, $this->chapterInput ) === 0 ) {
+			if ( str_starts_with( $label, $chapter ) ) {
 				$html .= $this->componentRenderer->getComponentHtml( $subComponent );
 			}
 		}

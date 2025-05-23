@@ -2,65 +2,87 @@
 
 namespace BlueSpice\Bookshelf\Tag;
 
-use BlueSpice\ParamProcessor\IParamDefinition;
-use BlueSpice\ParamProcessor\ParamDefinition;
-use BlueSpice\ParamProcessor\ParamType;
-use BlueSpice\Tag\IHandler;
-use BS\ExtendedSearch\Tag\TagSearch;
-use MediaWiki\Config\ConfigException;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
-use MediaWiki\Parser\Parser;
-use MediaWiki\Parser\PPFrame;
+use MWStake\MediaWiki\Component\FormEngine\StandaloneFormSpecification;
+use MWStake\MediaWiki\Component\GenericTagHandler\ClientTagSpecification;
+use MWStake\MediaWiki\Component\GenericTagHandler\GenericTag;
+use MWStake\MediaWiki\Component\GenericTagHandler\ITagHandler;
+use MWStake\MediaWiki\Component\InputProcessor\Processor\StringValue;
 
-class SearchInBook extends TagSearch {
+class SearchInBook extends GenericTag {
+
+	/** @var int */
+	private int $idCounter = 0;
 
 	/**
-	 * @param mixed $processedInput
-	 * @param array $processedArgs
-	 * @param Parser $parser
-	 * @param PPFrame $frame
-	 * @return IHandler
-	 * @throws ConfigException
+	 * @inheritDoc
 	 */
-	public function getHandler(
-		$processedInput,
-		array $processedArgs,
-		Parser $parser,
-		PPFrame $frame
-	) {
-		$config = MediaWikiServices::getInstance()
-			->getConfigFactory()
-			->makeConfig( 'bsg' );
+	public function getTagNames(): array {
+		return [ 'searchinbook', 'bs:searchinbook' ];
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function hasContent(): bool {
+		return false;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getHandler( MediaWikiServices $services ): ITagHandler {
+		$id = $this->idCounter++;
 
 		return new SearchInBookHandler(
-			$processedInput,
-			$processedArgs,
-			$parser,
-			$frame,
-			$config,
-			$this->nextTagId(),
-			MediaWikiServices::getInstance()->getService( 'BSBookshelfBookLookup' )
+			$services->getConfigFactory()->makeConfig( 'bsg' ),
+			$services->getService( 'BSBookshelfBookLookup' ),
+			$id
 		);
 	}
 
 	/**
-	 * @return array|string[]
+	 * @inheritDoc
 	 */
-	public function getTagNames() {
-		return [ 'bs:searchinbook' ];
+	public function getParamDefinition(): ?array {
+		return [
+			'placeholder' => ( new StringValue() )->setDefaultValue(
+				Message::newFromKey( 'bs-extendedsearch-tagsearch-ve-tagsearch-tb-placeholder' )->text()
+			),
+			'book' => ( new StringValue() )->setRequired( true ),
+		];
 	}
 
 	/**
-	 * @return IParamDefinition[]
+	 * @inheritDoc
 	 */
-	public function getArgsDefinitions() {
-		$params = parent::getArgsDefinitions();
-		$params[] = new ParamDefinition(
-			ParamType::STRING,
-			'book',
-			Message::newFromKey( 'bs-bookshelf-tag-search-in-books-book' )->plain()
+	public function getClientTagSpecification(): ClientTagSpecification|null {
+		$formSpec = new StandaloneFormSpecification();
+		$formSpec->setItems( [
+			[
+				'type' => 'text',
+				'name' => 'placeholder',
+				'label' => Message::newFromKey( 'bs-extendedsearch-tagsearch-ve-tagsearch-tb-placeholder' )->text(),
+				'help' => Message::newFromKey( 'bs-extendedsearch-tagsearch-ve-tagsearch-tb-placeholder-help' )->text(),
+				'widget_placeholder' => Message::newFromKey(
+					'bs-extendedsearch-tagsearch-ve-tagsearch-tb-placeholder-placeholder'
+				)->text(),
+			],
+			[
+				'type' => 'book',
+				'name' => 'book',
+				'required' => true,
+				'label' => Message::newFromKey( 'bs-bookshelf-droplet-search-book' )->text(),
+				'help' => Message::newFromKey( 'bs-bookshelf-droplet-search-book-help' )->text(),
+			],
+		] );
+
+		return new ClientTagSpecification(
+			'SearchInBook',
+			Message::newFromKey( 'bs-bookshelf-droplet-search-description' ),
+			$formSpec,
+			Message::newFromKey( 'bs-bookshelf-droplet-search-name' )
 		);
-		return $params;
 	}
 }

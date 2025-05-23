@@ -2,83 +2,97 @@
 
 namespace BlueSpice\Bookshelf\Tag;
 
-use BlueSpice\Bookshelf\BookContextProviderFactory;
-use BlueSpice\Bookshelf\BookLookup;
-use BlueSpice\ParamProcessor\ParamDefinition;
-use BlueSpice\ParamProcessor\ParamType;
-use BlueSpice\Tag\Tag;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Parser\Parser;
-use MediaWiki\Parser\PPFrame;
-use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
+use MediaWiki\Message\Message;
+use MWStake\MediaWiki\Component\FormEngine\StandaloneFormSpecification;
+use MWStake\MediaWiki\Component\GenericTagHandler\ClientTagSpecification;
+use MWStake\MediaWiki\Component\GenericTagHandler\GenericTag;
+use MWStake\MediaWiki\Component\GenericTagHandler\ITagHandler;
+use MWStake\MediaWiki\Component\InputProcessor\Processor\StringValue;
 
-class BookNav extends Tag {
+class BookNav extends GenericTag {
 
-	public const ATTR_BOOK = 'book';
-	public const ATTR_CHAPTER = 'chapter';
-
-	/** @var MediaWikiServices */
-	private $services;
-
-	public function __construct() {
-		$this->services = MediaWikiServices::getInstance();
+	/**
+	 * @inheritDoc
+	 */
+	public function getTagNames(): array {
+		return [ 'booknav' ];
 	}
 
 	/**
-	 * @param string $processedInput
-	 * @param array $processedArgs
-	 * @param Parser $parser
-	 * @param PPFrame $frame
-	 * @return PageBreakHandler
+	 * @inheritDoc
 	 */
-	public function getHandler( $processedInput, array $processedArgs, Parser $parser, PPFrame $frame ) {
-		$titleFactory = $this->services->getTitleFactory();
-		$componentRenderer = $this->services->getService( 'BSBookshelfComponentRenderer' );
+	public function hasContent(): bool {
+		return false;
+	}
 
-		/** @var BookContextProviderFactory */
-		$bookContxtProviderFactory = $this->services->getService( 'BSBookshelfBookContextProviderFactory' );
-		/** @var BookLookup */
-		$bookLookup = $this->services->getService( 'BSBookshelfBookLookup' );
-		/** @var TreeDataGenerator */
-		$treeDataGenerator = $this->services->getService( 'MWStakeCommonUITreeDataGenerator' );
-
+	/**
+	 * @inheritDoc
+	 */
+	public function getHandler( MediaWikiServices $services ): ITagHandler {
 		return new BookNavHandler(
-			$processedInput,
-			$processedArgs,
-			$parser,
-			$frame,
-			$titleFactory,
-			$componentRenderer,
-			$bookContxtProviderFactory,
-			$bookLookup,
-			$treeDataGenerator
+			$services->getTitleFactory(),
+			$services->getService( 'BSBookshelfComponentRenderer' ),
+			$services->getService( 'BSBookshelfBookContextProviderFactory' ),
+			$services->getService( 'BSBookshelfBookLookup' ),
+			$services->getService( 'MWStakeCommonUITreeDataGenerator' )
 		);
 	}
 
 	/**
-	 * @return string[]
+	 * @inheritDoc
 	 */
-	public function getTagNames() {
+	public function getParamDefinition(): ?array {
 		return [
-			'booknav'
+			'book' => [
+				'type' => 'title',
+				// We have to allow both NS_MAIN and NS_BOOK, in case specified name has no NS prefix
+				'allowedNamespaces' => [ NS_MAIN, NS_BOOK ],
+				'required' => true,
+			],
+			'chapter' => new StringValue(),
 		];
 	}
 
 	/**
-	 * @return IParamDefinition[]
+	 * @inheritDoc
 	 */
-	public function getArgsDefinitions() {
+	public function getClientTagSpecification(): ClientTagSpecification|null {
+		$formSpec = new StandaloneFormSpecification();
+		$formSpec->setItems( [
+			[
+				'type' => 'title',
+				'name' => 'book',
+				'required' => true,
+				'label' => Message::newFromKey( 'bs-bookshelf-booknav-book-label' )->text(),
+				'help' => Message::newFromKey( 'bs-bookshelf-booknav-book-help' )->text(),
+				'widget_namespace' => NS_BOOK,
+				'widget_$overlay' => true
+			],
+			[
+				'type' => 'text',
+				'name' => 'chapter',
+				'label' => Message::newFromKey( 'bs-bookshelf-booknav-chapter-label' )->text(),
+				'help' => Message::newFromKey( 'bs-bookshelf-booknav-chapter-help' )->text(),
+			],
+		] );
+
+		return new ClientTagSpecification(
+			'Booknav',
+			Message::newFromKey( 'bs-bookshelf-booknav-desc' ),
+			$formSpec,
+			Message::newFromKey( 'bs-bookshelf-booknav-title' )
+		);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getResourceLoaderModules(): ?array {
 		return [
-			new ParamDefinition(
-			ParamType::STRING,
-			static::ATTR_BOOK,
-			''
-			),
-		new ParamDefinition(
-			ParamType::STRING,
-			static::ATTR_CHAPTER,
-			''
-			)
+			'ext.bluespice.bookshelf.bookNavFilter',
+			'mwstake.component.commonui.tree-component',
+			'ext.bluespice.bookshelf.booknav.styles'
 		];
 	}
 }

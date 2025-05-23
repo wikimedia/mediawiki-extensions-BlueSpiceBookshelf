@@ -5,32 +5,36 @@ namespace BlueSpice\Bookshelf\Tag;
 use BlueSpice\Bookshelf\BookLookup;
 use BS\ExtendedSearch\Lookup;
 use BS\ExtendedSearch\Tag\TagSearchHandler;
+use Config;
 use Exception;
-use MediaWiki\Config\Config;
 use MediaWiki\Message\Message;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\PPFrame;
 
 class SearchInBookHandler extends TagSearchHandler {
 
-	/** @var BookLookup */
-	private $bookLookup;
+	/** @var string|null */
+	private ?string $book = null;
 
 	/**
-	 * @param string $processedInput
-	 * @param array $processedArgs
-	 * @param Parser $parser
-	 * @param PPFrame $frame
 	 * @param Config $config
-	 * @param int $tagIdNumber
 	 * @param BookLookup $bookLookup
+	 * @param int $tagId
 	 */
 	public function __construct(
-		$processedInput, array $processedArgs, $parser, PPFrame $frame,
-		Config $config, $tagIdNumber, BookLookup $bookLookup
+		Config $config,
+		private readonly BookLookup $bookLookup,
+		int $tagId,
 	) {
-		parent::__construct( $processedInput, $processedArgs, $parser, $frame, $config, $tagIdNumber );
-		$this->bookLookup = $bookLookup;
+		parent::__construct( $config, $tagId );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getRenderedContent( string $input, array $params, Parser $parser, PPFrame $frame ): string {
+		$this->book = $params['book'] ?? null;
+		return parent::getRenderedContent( $input, $params, $parser, $frame );
 	}
 
 	/**
@@ -39,10 +43,10 @@ class SearchInBookHandler extends TagSearchHandler {
 	 * @throws Exception
 	 */
 	protected function modifyLookup( Lookup $lookup ) {
-		$bookPrefixed = $this->getBookFilterValue( $this->processedArgs['book'] );
+		$bookPrefixed = $this->getBookFilterValue( $this->book );
 		if ( !$bookPrefixed ) {
 			throw new Exception(
-				Message::newFromKey( 'bs-bookshelf-tag-searchinbook-error', $this->processedArgs['book'] )->text()
+				Message::newFromKey( 'bs-bookshelf-tag-searchinbook-error', $this->book )->text()
 			);
 		}
 		$lookup->addTermsFilter( 'books', [ $bookPrefixed ] );
@@ -63,5 +67,4 @@ class SearchInBookHandler extends TagSearchHandler {
 		}
 		return $title->getPrefixedDBkey();
 	}
-
 }

@@ -4,7 +4,6 @@ namespace BlueSpice\Bookshelf;
 
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterPlainTextProcessor;
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterWikiLinkWithAliasProcessor;
-use BlueSpice\Bookshelf\Tag\SearchInBook as SearchInBookTag;
 use MediaWiki\Debug\MWDebug;
 use MediaWiki\Registration\ExtensionRegistry;
 
@@ -49,15 +48,6 @@ class Extension extends \BlueSpice\Extension {
 		$GLOBALS['wgNamespacesWithSubpages'][NS_USER] = true;
 		static::checkLegacy();
 
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'BlueSpiceExtendedSearch' ) ) {
-			// Add tag conditionally
-			$GLOBALS['bsgExtensionAttributeRegistryOverrides']['BlueSpiceFoundationTagRegistry'] = [
-				'merge' => [
-					'searchinbook' => SearchInBookTag::class
-				]
-			];
-		}
-
 		mwsInitComponents();
 		$GLOBALS['mwsgWikitextNodeProcessorRegistry'] += [
 			'bs-bookshelf-chapter-plain-text' => [
@@ -69,6 +59,7 @@ class Extension extends \BlueSpice\Extension {
 				'services' => [ 'TitleFactory' ]
 			]
 		];
+		$GLOBALS['mwsgFormEngineElementModules'][] = 'bs.bookshelf.formElement.bookInput';
 	}
 
 	/**

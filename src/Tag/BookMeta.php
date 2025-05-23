@@ -6,19 +6,16 @@ use MediaWiki\MediaWikiServices;
 use MWStake\MediaWiki\Component\GenericTagHandler\ClientTagSpecification;
 use MWStake\MediaWiki\Component\GenericTagHandler\GenericTag;
 use MWStake\MediaWiki\Component\GenericTagHandler\ITagHandler;
+use MWStake\MediaWiki\Component\GenericTagHandler\MarkerType;
+use MWStake\MediaWiki\Component\GenericTagHandler\MarkerType\NoWiki;
 
-class Bookshelf extends GenericTag {
+class BookMeta extends GenericTag {
 
 	/**
 	 * @inheritDoc
 	 */
 	public function getTagNames(): array {
-		return [
-			'bs:bookshelf',
-			'bookshelf',
-			'htoc',
-			'hierachicaltoc',
-		];
+		return [ 'bookmeta', 'bs:bookmeta' ];
 	}
 
 	/**
@@ -32,7 +29,19 @@ class Bookshelf extends GenericTag {
 	 * @inheritDoc
 	 */
 	public function getHandler( MediaWikiServices $services ): ITagHandler {
-		return new BookshelfHandler();
+		return new BookListHandler(
+			$services->getTitleFactory(),
+			$services->getLinkRenderer(),
+			$services->getService( 'BSBookshelfBookLookup' ),
+			$services->getService( 'BSBookshelfBookMetaLookup' )
+		);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getMarkerType(): MarkerType {
+		return new NoWiki();
 	}
 
 	/**
