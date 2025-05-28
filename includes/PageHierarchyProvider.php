@@ -45,7 +45,7 @@ class PageHierarchyProvider {
 			);
 		}
 
-		$this->cache = ObjectCache::getLocalClusterInstance();
+		$this->cache = MediaWikiServices::getInstance()->getObjectCacheFactory()->getLocalClusterInstance();
 		$cacheKey = $this->getCacheKey(
 			$this->oSourceArticleTitle,
 			__METHOD__,
