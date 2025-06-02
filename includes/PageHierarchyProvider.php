@@ -498,10 +498,7 @@ class PageHierarchyProvider {
 				] );
 				$sLink = $linkHelper->getWikitext();
 
-				// Make sure that changes to the 'display-title' are shown on
-				// next page load. This should already be done by
-				// 'BsCore::addTemplateLinkDependencyByText'
-				// in 'Bookshelf:onBookshelfTag' but there it doesn't work :(
+				// Make sure that changes to the 'display-title' are shown on next page load.
 				$wikiPageFactory->newFromTitle( $oArticleTitle )->doPurge();
 			}
 
