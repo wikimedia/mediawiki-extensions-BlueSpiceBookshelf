@@ -12,7 +12,6 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
-use MWException;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 
 class BookEditor extends GenericMenu implements ParsableMenu, EditPermissionProvider {
@@ -91,7 +90,6 @@ class BookEditor extends GenericMenu implements ParsableMenu, EditPermissionProv
 	 * @param RevisionRecord|null $revision
 	 *
 	 * @return IMenuParser
-	 * @throws MWException
 	 */
 	public function getParser( Title $title, ?RevisionRecord $revision = null ): IMenuParser {
 		if ( !$revision ) {

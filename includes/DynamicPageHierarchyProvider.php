@@ -7,7 +7,7 @@ class DynamicPageHierarchyProvider extends PageHierarchyProvider {
 	/**
 	 * @param string $title
 	 * @param array $params
-	 * @throws MWException
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct( $title, $params ) {
 		$this->sSourceArticleTitle  = $title;
@@ -15,7 +15,7 @@ class DynamicPageHierarchyProvider extends PageHierarchyProvider {
 
 		$this->cache = MediaWikiServices::getInstance()->getObjectCacheFactory()->getLocalClusterInstance();
 		if ( !isset( $params['content'] ) ) {
-			throw new MWException( 'Parameter \"content\" is required"' );
+			throw new InvalidArgumentException( 'Parameter \"content\" is required"' );
 		}
 		$this->sSourceContent = $params['content'];
 

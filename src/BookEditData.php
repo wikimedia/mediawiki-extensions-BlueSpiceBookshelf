@@ -3,12 +3,13 @@
 namespace BlueSpice\Bookshelf;
 
 use Exception;
+use InvalidArgumentException;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\Title\Title;
-use MWException;
+use RuntimeException;
 use stdClass;
 
 class BookEditData {
@@ -32,7 +33,6 @@ class BookEditData {
 	/**
 	 * @param string $name
 	 * @param WebRequest $request
-	 * @throws MWException
 	 */
 	protected function __construct( $name, WebRequest $request ) {
 		$this->bookTitle = $name;
@@ -45,11 +45,11 @@ class BookEditData {
 	 * @param Title $title
 	 * @param WebRequest $request
 	 * @return static
-	 * @throws MWException
+	 * @throws InvalidArgumentException
 	 */
 	public static function newFromTitleAndRequest( Title $title, WebRequest $request ) {
 		if ( !in_array( $title->getNamespace(), [ NS_BOOK ] ) ) {
-			throw new MWException(
+			throw new InvalidArgumentException(
 				Message::newFromKey( 'bs-bookshelf-error-type-title-mismatch' )->text()
 			);
 		}
@@ -62,14 +62,14 @@ class BookEditData {
 	 * @param string $name
 	 * @param WebRequest $request
 	 * @return static
-	 * @throws MWException
+	 * @throws InvalidArgumentException
 	 */
 	public static function newFromNameRequest( $name, WebRequest $request ) {
 		if ( empty( $name ) ) {
 			$name = $request->getVal( 'book', '' );
 		}
 		if ( empty( $name ) ) {
-			throw new MWException(
+			throw new InvalidArgumentException(
 				Message::newFromKey( 'bs-bookshelf-editor-no-title-provided' )->text()
 			);
 		}
@@ -106,7 +106,7 @@ class BookEditData {
 	}
 
 	/**
-	 * @throws MWException
+	 * @throws RuntimeException
 	 */
 	protected function execute() {
 		$this->parseBookType();
@@ -132,7 +132,7 @@ class BookEditData {
 			$tree = $php->getExtendedTOCJSON( [ 'suppress-number-in-text' => true, 'no-cache' => true ] );
 			$meta = (object)$php->getBookMeta();
 			if ( $tree === null ) {
-				throw new Exception();
+				throw new RuntimeException( '$tree is null' );
 			}
 			$tree->text = $this->bookTitle;
 		} catch ( Exception $ex ) {
@@ -192,6 +192,7 @@ class BookEditData {
 
 	/**
 	 * Set the book type
+	 * @throws RuntimeException
 	 */
 	private function parseBookType() {
 		$type = $this->request->getVal( 'type', false );
@@ -205,14 +206,14 @@ class BookEditData {
 			return;
 		}
 
-		throw new MWException(
+		throw new RuntimeException(
 			Message::newFromKey( 'bs-bookshelf-error-invalid-type' )->text()
 		);
 	}
 
 	/**
 	 * Set the Title object, if book is based on a title
-	 * @throws MWException
+	 * @throws RuntimeException
 	 */
 	private function setTitle() {
 		$inferType = $this->bookType === '';
@@ -238,7 +239,7 @@ class BookEditData {
 			return;
 		}
 
-		throw new MWException(
+		throw new RuntimeException(
 			Message::newFromKey( 'bs-bookshelf-error-type-title-mismatch' )->text()
 		);
 	}
