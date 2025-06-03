@@ -24,7 +24,6 @@ class AddBookPDFTemplates extends LoggedUpdateMaintenance {
 
 	/**
 	 * @return bool|void
-	 * @throws MWException
 	 */
 	protected function doDBUpdates() {
 		if ( !ExtensionRegistry::getInstance()->isLoaded( 'PDFCreator' ) ) {

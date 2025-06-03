@@ -18,7 +18,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
-use MWException;
+use RuntimeException;
 
 class BookContentHandler extends TextContentHandler {
 
@@ -50,6 +50,7 @@ class BookContentHandler extends TextContentHandler {
 	 * @param Content $content
 	 * @param ContentParseParams $cpoParams
 	 * @param ParserOutput &$output The output object to fill (reference).
+	 * @throws RuntimeException
 	 */
 	protected function fillParserOutput(
 		Content $content,
@@ -77,7 +78,7 @@ class BookContentHandler extends TextContentHandler {
 			$revLookup = $services->getRevisionLookup();
 			$revisionRecord = $revLookup->getRevisionById( $revID, 0, $book );
 			if ( !$revisionRecord ) {
-				throw new MWException();
+				throw new RuntimeException( 'no such revision can be found' );
 			}
 
 			$parserFactory = $services->get( 'MWStakeWikitextParserFactory' );

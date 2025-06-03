@@ -210,7 +210,6 @@ class UEModulePDF {
 	 * @param DOMXPath $DOMXPath
 	 * @return bool
 	 * @throws FatalError
-	 * @throws MWException
 	 */
 	public function onBSUEModulePDFAfterFindFiles( $sender, $html, &$files, $params, $DOMXPath ) {
 		// Find all files for attaching and merging...
