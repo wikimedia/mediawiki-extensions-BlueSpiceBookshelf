@@ -143,7 +143,7 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 	/**
 	 * @param bool $hadCreated
 	 * @return int
-	 * @throws MWException
+	 * @throws RuntimeException
 	 */
 	private function getBookContentModelId( bool $hadCreated = false ) {
 		$res = $this->getDB( DB_REPLICA )->selectRow(
@@ -154,7 +154,7 @@ class ConvertContentModel extends LoggedUpdateMaintenance {
 		);
 		if ( !$res ) {
 			if ( $hadCreated ) {
-				throw new MWException( "Content model 'book' not found and couldnt be created" );
+				throw new RuntimeException( "Content model 'book' not found and couldnt be created" );
 			}
 			$this->getDB( DB_PRIMARY )->insert(
 				'content_models',

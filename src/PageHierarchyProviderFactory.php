@@ -7,7 +7,6 @@ use BsTagFinder;
 use DynamicPageHierarchyProvider;
 use InvalidArgumentException;
 use MediaWiki\Title\Title;
-use MWException;
 use PageHierarchyProvider;
 
 class PageHierarchyProviderFactory {
@@ -43,6 +42,7 @@ class PageHierarchyProviderFactory {
 	 * @param array $aParams The parameters used for processing.
 	 * @return PageHierarchyProvider Instance of the PageHierarchyProvider if source article exists,
 	 * null otherwise.
+	 * @throws InvalidArgumentException
 	 */
 	public function getInstanceForArticle( $sArticleTitle, $aParams = [] ) {
 		$aParams = [ 'indent-char' => '*' ] + $aParams;
@@ -107,14 +107,14 @@ class PageHierarchyProviderFactory {
 	 *
 	 * @param Title $title
 	 * @return string
-	 * @throws MWException
+	 * @throws InvalidArgumentException
 	 */
 	public function getBookTypeFromTitle( Title $title ) {
 		if ( $title->getNamespace() === NS_BOOK ) {
 			return 'ns_book';
 		}
 
-		throw new MWException( 'Book type cannot be determined for given title' );
+		throw new InvalidArgumentException( 'Book type cannot be determined for given title' );
 	}
 
 	/**
