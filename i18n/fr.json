@@ -17,7 +17,8 @@
 			"Thibaut120094",
 			"Verdy p",
 			"Wladek92",
-			"Wnagxsi"
+			"Wnagxsi",
+			"Derugon"
 		]
 	},
 	"bs-bookshelf-extension-description": "Permet à BlueSpice de gérer et exporter des collections hiérarchiques d’articles.",
@@ -195,5 +196,7 @@
 	"bs-bookshelf-chapter-insertion-btn-move-up": "Déplacer le chapitre vers le haut",
 	"bs-bookshelf-chapter-insertion-btn-move-down": "Déplacer le chapitre vers le bas",
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Supprimer la sélection de chapitre",
+	"bs-bookshelf-sesp-books": "Livres",
+	"bs-bookshelf-sesp-books-desc": "Les livres dont cette page fait partie",
 	"bs-bookshelf-actionmenuentry-create-new-book": "Créer un nouveau livre"
 }
