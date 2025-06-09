@@ -3,7 +3,8 @@
 		"authors": [
 			"Hanna Tardos",
 			"Karmantomi",
-			"Krisztina"
+			"Krisztina",
+			"Tacsipacsi"
 		]
 	},
 	"bs-bookshelf-extension-description": "Lehetővé teszi a BlueSpice számára a hierarchikus lapgyűjtemények kezelését és exportálását.",
@@ -23,7 +24,7 @@
 	"bs-bookshelf-add-to-book-label-book": "Könyv",
 	"bs-bookshelf-add-to-book-label-alias": "Más néven",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "A „könyvespolc” címke módosítása a lapon (új verzió)",
-	"bs-bookshelf-add-to-book-added": "\"$1\" könyvhöz hozzáadtad a lapot.",
+	"bs-bookshelf-add-to-book-added": "A lap hozzáadva a(z) „$1” könyvhöz.",
 	"bs-bookshelf-add-to-book-mod-bstag": "A lap „könyvespolc” címkéje megváltozott. A lap újra betölt.",
 	"bs-bookshelf-setting-path-feature": "Könyv",
 	"bs-bookshelf-empty-selection": "Nincs kijelölés",
