@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Krisztina"
+			"Krisztina",
+			"Tacsipacsi"
 		]
 	},
 	"bs-bookshelfui-extension-description": "Lehetővé teszi a BlueSpice számára a wikilapok hierarchikus gyűjteményeinek kezelését.",
@@ -23,7 +24,7 @@
 	"bs-bookshelfui-manager-deletionfailure-title": "Hiba a törlés során!",
 	"bs-bookshelfui-manager-deletionfailure-text": "A következő hiba történt a könyv törlése közben: $1",
 	"bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel": "wikilap",
-	"bs-bookshelfui-dlg-copy-title": "\"$1\" másolás",
+	"bs-bookshelfui-dlg-copy-title": "„$1” másolása",
 	"bs-bookshelfui-dlg-copy-name-addition": "(másolat)",
 	"bs-bookshelfui-dlg-copy-target-name-label": "Célnév",
 	"bs-bookshelfui-dlg-copy-target-namespace-qtip": "A könyv összes oldala ebbe a névtérbe lesz másolva. A linkek adaptálva lesznek.",

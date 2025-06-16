@@ -178,7 +178,7 @@
 	"bs-bookshelf-droplet-bookpdf-link-label": "Texto pro ligamine de exportation",
 	"bs-bookshelf-droplet-bookpdf-name": "Ligamine a PDF de libro",
 	"bs-bookshelf-droplet-bookpdf-desc": "Adder un ligamine pro exportar un libro seligite in formato PDF",
-	"bs-bookshelfui-bookmetatag-pdftemplate": "Patrono de exportation in PDF",
+	"bs-bookshelfui-bookmetatag-pdftemplate": "Patrono de exportation PDF",
 	"bs-bookshelf-export-pageparam-desc-title": "Monstra le titulo del libro",
 	"bs-bookshelf-export-pageparam-desc-author1": "Monstra le autor definite como autor 1 in le metadatos del libro",
 	"bs-bookshelf-export-pageparam-desc-author2": "Monstra le autor definite como autor 2 in le metadatos del libro",
