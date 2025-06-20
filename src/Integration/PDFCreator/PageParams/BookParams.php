@@ -154,6 +154,9 @@ class BookParams implements IPageParamsProvider {
 				return $examples[$key]['de'];
 			}
 		}
-		return $examples[$key]['en'];
+		if ( isset( $examples[$key]['en'] ) ) {
+			return $examples[$key]['en'];
+		}
+		return '';
 	}
 }
