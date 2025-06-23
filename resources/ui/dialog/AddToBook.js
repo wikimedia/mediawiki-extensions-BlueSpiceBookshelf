@@ -108,18 +108,25 @@
 				nodes: chapters
 			};
 
-			mw.loader.using( 'ext.menuEditor.api' ).done( () => {
-				const api = new ext.menueditor.api.Api();
-				const bookTitle = mw.util.rawurlencode( mw.util.rawurlencode( bookName ) );
-				api.post( bookTitle, data ).done( () => {
-					mw.notify(
-						mw.message( 'bs-bookshelf-add-to-book-added', this.bookPicker.getValue() ).plain(),
-						{ title: mw.message( 'bs-bookshelf-add-to-book-label' ).plain() }
-					);
-					this.close( { action: action, book: bookName } );
-					dfd.resolve();
-				} ).fail( ( error ) => {
-					dfd.reject( new OO.ui.Error( error ) );
+			mw.loader.using( 'bluespice.bookshelf.api' ).done( () => {
+				const bookApi = new ext.bookshelf.api.Api();
+				bookApi.getBookMetadata( bookName ).done( ( meta ) => {
+					data.metadata = meta;
+					mw.loader.using( 'ext.menuEditor.api' ).done( () => {
+						const api = new ext.menueditor.api.Api();
+						const bookTitle = mw.util.rawurlencode( mw.util.rawurlencode( bookName ) );
+
+						api.post( bookTitle, data ).done( () => {
+							mw.notify(
+								mw.message( 'bs-bookshelf-add-to-book-added', this.bookPicker.getValue() ).plain(),
+								{ title: mw.message( 'bs-bookshelf-add-to-book-label' ).plain() }
+							);
+							this.close( { action: action, book: bookName } );
+							dfd.resolve();
+						} ).fail( ( error ) => {
+							dfd.reject( new OO.ui.Error( error ) );
+						} );
+					} );
 				} );
 			} );
 
