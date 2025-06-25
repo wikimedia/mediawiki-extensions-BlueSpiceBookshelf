@@ -30,7 +30,9 @@ ext.bookshelf.ui.dialog.MetaDataDialog.static.actions = [
 ext.bookshelf.ui.dialog.MetaDataDialog.prototype.initialize = function () {
 	ext.bookshelf.ui.dialog.MetaDataDialog.super.prototype.initialize.apply( this, arguments );
 	const data = require( './metadata.json' );
-	const modules = data.modules;
+
+	// eslint-disable-next-line
+	const modules = Object.values( data.modules );
 
 	mw.loader.using( modules ).done( () => {
 		const pages = this.getPagesFromConfig( data.pages );
