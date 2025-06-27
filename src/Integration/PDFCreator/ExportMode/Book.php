@@ -4,7 +4,6 @@ namespace BlueSpice\Bookshelf\Integration\PDFCreator\ExportMode;
 
 use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
-use BlueSpice\Bookshelf\ChapterDataModel;
 use BlueSpice\Bookshelf\ChapterLookup;
 use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Extension\PDFCreator\IExportMode;
@@ -114,22 +113,23 @@ class Book implements IExportMode {
 			return [];
 		}
 
-		if ( !isset( $data['chapters'] ) || empty( $data['chapters'] ) ) {
-			$chapters = $this->chapterLookup->getChaptersOfBook( $bookTitle );
-			if ( empty( $chapters ) ) {
-				return [];
-			}
-		} else {
-			$chapterModels = $data['chapters'];
+		$chapters = $this->chapterLookup->getChaptersOfBook( $bookTitle );
+		if ( empty( $chapters ) ) {
+			return [];
+		}
+		// Reorder chapter models to match the requested order from $data['chapters']
+		if ( isset( $data['chapters'] ) && !empty( $data['chapters'] ) ) {
+			$chapterNumbers = $data['chapters'];
+			$chapterModels = $chapters;
 			$chapters = [];
-			foreach ( $chapterModels as $model ) {
-				$chapters[] = new ChapterDataModel(
-					$model['namespace'],
-					$model['title'],
-					$model['name'],
-					$model['number'],
-					$model['type']
-				);
+			foreach ( $chapterNumbers as $number ) {
+				foreach ( $chapterModels as $model ) {
+					if ( $model->getNumber() !== $number ) {
+						continue;
+					}
+					$chapters[] = $model;
+					break;
+				}
 			}
 		}
 
