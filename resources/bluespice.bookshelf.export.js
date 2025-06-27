@@ -16,7 +16,7 @@
 
 		const chapters = [];
 		for ( let index = 0; index < selectedItems.length; index++ ) {
-			chapters.push( selectedItems[ index ] );
+			chapters.push( selectedItems[ index ].number );
 		}
 		exportBook( currentBook, chapters );
 	};
