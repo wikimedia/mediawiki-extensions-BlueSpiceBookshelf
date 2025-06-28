@@ -120,28 +120,34 @@ module.exports = {
 	border: 1px solid #d7d7d7;
 	margin: 20px 20px;
 }
+
 .bs-card.new {
-	outline: var(--bs-books-overview-page-book-new) solid 3px;
+	outline: var( --bs-books-overview-page-book-new ) solid 3px;
 }
-.bs-card.new .bs-card-anchor {
-	pointer-events: none;
-  	cursor: default;
-}
+
 .bs-card-anchor {
 	display: block;
 	width: 100%;
-	height: calc(100% - 47px);
+	height: calc( 100% - 47px );
 	text-decoration: none !important;
 }
-.bs-card:focus-within {
-	outline: var(--bs-books-overview-page-focus-visible-color) solid 3px;
+
+.bs-card.new .bs-card-anchor {
+	pointer-events: none;
+	cursor: default;
 }
+
+.bs-card:focus-within {
+	outline: var( --bs-books-overview-page-focus-visible-color ) solid 3px;
+}
+
 .bs-card-image {
 	width: 100%;
 	height: 220px;
 	background-size: cover;
-  	background-repeat: no-repeat;
+	background-repeat: no-repeat;
 }
+
 .bs-card-body {
 	height: 163px;
 	text-align: center;
@@ -149,16 +155,19 @@ module.exports = {
 	overflow: hidden;
 	color: black !important;
 }
+
 .bs-card-title {
 	width: 100%;
 	font-weight: bold;
 	font-size: 1.4em;
 	margin-bottom: 5px;
 }
+
 .bs-card-subtitle {
 	width: 100%;
 	font-size: 1.1em;
 }
+
 .bs-card-footer {
 	position: absolute;
 	bottom: 0;
@@ -166,14 +175,16 @@ module.exports = {
 	width: 100%;
 	padding: 0;
 }
+
 .bs-card-actions {
 	display: flex;
-  	justify-content: space-between;
+	justify-content: space-between;
 	list-style: none;
 	margin: 0;
 	flex-wrap: wrap;
 	padding: 15px 0;
 }
+
 .bs-card-actions > li {
 	margin: 0;
 }
