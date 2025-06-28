@@ -23,9 +23,11 @@ module.exports = {
 	padding: 0 15px;
 	color: #666 !important;
 }
+
 .bs-card-actions > li > a:focus-visible {
-	outline: var(--bs-books-overview-page-focus-visible-color) solid 1px;
+	outline: var( --bs-books-overview-page-focus-visible-color ) solid 1px;
 }
+
 .bs-card-actions > li > a i {
 	display: inline-block;
 	margin-right: 15px;
