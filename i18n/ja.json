@@ -33,7 +33,7 @@
 	"bs-bookshelf-add-to-book-label-alias": "別名",
 	"bs-bookshelf-add-to-book-label-mod-bstag": "ページ内の「bookshelf」タグを修正（新版）",
 	"bs-bookshelf-add-to-book-added": "ページが書籍「$1」に追加されました。",
-	"bs-bookshelf-add-to-book-mod-bstag": "ページの「本棚」タグを変更しました。ページがリロードされます。",
+	"bs-bookshelf-add-to-book-mod-bstag": "ページの「本棚」タグを変更しました。ページが再読み込みされます。",
 	"apihelp-bs-bookshelf-store-description": "すべてのカテゴリを一覧表示します。並べ替え、フィルターおよびページ区切りができます。ExtJS Store パラメーターを実装します。",
 	"apihelp-bs-bookshelf-store-param-tempBooks": "店舗の応答に含める必要がある、クライアントのローカルストアにある書籍のリスト",
 	"apihelp-bs-bookshelf-bookstore-description": "すべてのカテゴリを一覧表示します。並べ替え、フィルターおよびページ区切りができます。ExtJS Store パラメーターを実装します。",
