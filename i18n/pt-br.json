@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"EGobi",
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Felipe L. Ewald",
@@ -12,8 +13,7 @@
 			"Re demz",
 			"Svjatysberega",
 			"TheEduGobi",
-			"Wiiformii",
-			"EGobi"
+			"Wiiformii"
 		]
 	},
 	"bs-bookshelf-extension-description": "Permite que o BlueSpice gerencie e exporte coleções hierárquicas de artigos.",
