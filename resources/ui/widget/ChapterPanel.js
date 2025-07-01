@@ -47,6 +47,7 @@ ext.bookshelf.ui.widget.ChapterPanel.prototype.initialize = function () {
 ext.bookshelf.ui.widget.ChapterPanel.prototype.setChapters = function ( bookId ) {
 	new mw.Api().get( {
 		action: 'bs-book-chapters-store',
+		limit: 9999,
 		filter: JSON.stringify( [ {
 			value: bookId,
 			property: 'chapter_book_id',
