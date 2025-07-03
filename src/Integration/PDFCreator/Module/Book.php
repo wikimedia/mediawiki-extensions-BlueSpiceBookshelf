@@ -2,7 +2,6 @@
 
 namespace BlueSpice\Bookshelf\Integration\PDFCreator\Module;
 
-use BlueSpice\Bookshelf\Integration\PDFCreator\Utility\BookmarksXMLBuilder;
 use BlueSpice\Bookshelf\Integration\PDFCreator\Utility\TocBuilder;
 use MediaWiki\Extension\PDFCreator\Module\Batch;
 use MediaWiki\Extension\PDFCreator\Utility\ExportContext;
@@ -33,15 +32,5 @@ class Book extends Batch {
 		] );
 		$page = $this->exportPageFactory->getPageFromSpec( $pageSpec, $this->template, $context, $this->workspace );
 		array_unshift( $pages, $page );
-	}
-
-	/**
-	 * @param array $pages
-	 * @param ExportContext $context
-	 * @return string
-	 */
-	protected function getBookmarksXML( array $pages, ExportContext $context ): string {
-		$xmlBuilder = new BookmarksXMLBuilder();
-		return $xmlBuilder->execute( $pages );
 	}
 }
