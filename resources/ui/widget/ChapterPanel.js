@@ -326,7 +326,17 @@ ext.bookshelf.ui.widget.ChapterPanel.prototype.getChapters = function () {
 	let index = -1;
 
 	if ( this.previousChapterWidget.isVisible() ) {
-		index = this.chapters.findIndex( ( obj ) => obj.data.number === this.previousChapterWidget.getNumber() );
+		const chapterindex = this.chapters.findIndex( ( obj ) => obj.data.number === this.previousChapterWidget.getNumber() );
+		const chapterLevel = this.calculateLevel( this.chapters[ chapterindex ].data.number );
+		index = chapterindex;
+		for ( let i = chapterindex + 1; i < this.chapters.length; i++ ) {
+			const chapterData = this.chapters[ i ].data;
+			if ( this.calculateLevel( chapterData.number ) > chapterLevel ) {
+				index++;
+				continue;
+			}
+			break;
+		}
 	}
 	if ( this.chapterPicker.getMenu().findSelectedItem() && index < 0 ) {
 		const id = this.chapterPicker.getMenu().findSelectedItem().data.id;
