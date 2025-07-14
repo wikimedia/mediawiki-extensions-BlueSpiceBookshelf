@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Naitsa",
 			"Saederup92",
 			"Zakawer2"
 		]
@@ -30,5 +31,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Version",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Boghylde",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Bog",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Søg"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Søg",
+	"bs-bookshelf-search-center-context-books-label": "i {{PLURAL:$1|bog|bøger}} '''$2'''"
 }

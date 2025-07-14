@@ -85,5 +85,19 @@
 	"bs-bookshelf-book-page-book-action-export-book": "Экспорт",
 	"bs-bookshelf-export-pdf-notification-done": "PDF экспорт чекхйаьлла",
 	"bs-bookshelf-sesp-books": "Жайнаш",
-	"bs-bookshelf-actionmenuentry-create-new-book": "Керла жайна кхолла"
+	"bs-bookshelf-actionmenuentry-create-new-book": "Керла жайна кхолла",
+	"bs-bookshelf-action-save-to-local-storage": "Локалан лармин чохь Ӏалашйар",
+	"bs-bookshelf-booknav-book-help": "Лело жайна харжа",
+	"apihelp-bs-books-overview-store-summary": "Дерриге а жайнаш гойту, шайна йукъахь жайнаш дӀайуьйш йолу полка а, хьалхара декъан хьажоргаша а, ардамаш а долуш.",
+	"bs-books-overview-page-loading-text": "Жайнан хаам чуболуш бу...",
+	"bs-books-overview-page-book-actions-dropdown-menu-aria-label": "ХӀокху могӀамна лерина кхин а ардамаш",
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "ХӀокху жайнан лерина кхин а ардамаш",
+	"bs-books-overview-page-book-anchor-title": "Жайнан хьалхара агӀо схьайелла $1",
+	"bs-books-overview-page-book-anchor-aria-label": "Жайнан хьалхара агӀо схьайелла $1",
+	"bs-bookshelf-newbook-dlg-input-title-placeholder": "Жайнан цӀе кхоллар",
+	"bs-bookshelf-newbook-dlg-input-image-label": "ТӀехьара сурт",
+	"bs-bookshelf-add-mass-tool-title": "Масех агӀо тӀетоха",
+	"bs-bookshelf-books-overview-page-book-action-export-book-title": "Жайна экспортде $1",
+	"bs-bookshelf-droplet-bookpdf-template-label": "Кеп экспорт йе",
+	"bs-bookshelf-droplet-bookpdf-name": "PDF жайнан тӀе хьажорг"
 }
