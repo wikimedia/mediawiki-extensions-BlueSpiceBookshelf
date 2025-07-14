@@ -52,5 +52,6 @@
 	"bs-bookshelfui-chapterpager-next": "РогӀера",
 	"bs-bookshelfui-manager-deletingprogress-text": "Хаьржина жайна дӀадаккхар",
 	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Цхьаъ жайна|$1 жайна}})",
-	"bs-bookshelfui-bookmetatag-bookshelf": "Жайнийн терхи"
+	"bs-bookshelfui-bookmetatag-bookshelf": "Жайнийн терхи",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Йухадерзочу жамӀийн дукхалла."
 }
