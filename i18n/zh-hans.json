@@ -5,6 +5,7 @@
 			"A Chinese Wikipedian",
 			"AYZ04",
 			"Anterdc99",
+			"Aoum",
 			"Dimension",
 			"Evesiesta",
 			"Googology",
@@ -170,5 +171,6 @@
 	"bs-bookshelf-droplet-search-book-help": "要搜索的书名",
 	"bs-bookshelf-notification-subscription-set-book-title": "书籍",
 	"bs-bookshelf-actionmenuentry-new-book": "新书籍",
-	"bs-bookshelf-actionmenuentry-create-new-book": "创建新书籍"
+	"bs-bookshelf-actionmenuentry-create-new-book": "创建新书籍",
+	"bs-bookshelf-search-center-context-books-label": "在{{PLURAL:$1| book|books}} ''' $2 '''"
 }

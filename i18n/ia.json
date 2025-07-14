@@ -181,5 +181,6 @@
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remover le selection de capitulos",
 	"bs-bookshelf-sesp-books": "Libros",
 	"bs-bookshelf-sesp-books-desc": "Le libros del quales iste pagina face parte",
-	"bs-bookshelf-actionmenuentry-create-new-book": "Crear un nove libro"
+	"bs-bookshelf-actionmenuentry-create-new-book": "Crear un nove libro",
+	"bs-bookshelf-search-center-context-books-label": "in le libro{{PLURAL:$1||s}} '''$2'''"
 }
