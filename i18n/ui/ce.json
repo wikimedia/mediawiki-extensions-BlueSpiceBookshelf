@@ -15,6 +15,7 @@
 	"bs-bookshelfui-edit-source": "Йуьхьанцара вики-агӀо тайе",
 	"bs-bookshelfui-open-source": "Йуьхьанцара вики-агӀо гайта",
 	"bs-bookshelfui-manager-title": "Корта",
+	"bs-bookshelfui-manager-deletingprogress-text": "Хаьржина жайна дӀадаккхар",
 	"bs-bookshelfui-manager-deletingprogress-title": "ДӀайоккхуш йу...",
 	"bs-bookshelfui-manager-deletionsuccess-title": "Кхиамца дӀайаьккхина!",
 	"bs-bookshelfui-manager-deletionsuccess-text": "Жайна кхиамца дӀадаьккхина.",
@@ -23,6 +24,7 @@
 	"bs-bookshelfui-dlg-copy-title": "Копийан \"$1\"",
 	"bs-bookshelfui-dlg-copy-name-addition": "(копи)",
 	"bs-bookshelfui-dlg-copy-target-name-label": "Ӏалашонан цӀе",
+	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Цхьаъ жайна|$1 жайна}})",
 	"bs-bookshelfui-book-type": "Жайнан тайпа",
 	"bs-bookshelfui-dlg-choosecategory-label": "Категори",
 	"bs-bookshelfui-dlg-type-label": "Хьост",
@@ -44,14 +46,12 @@
 	"bs-bookshelfui-bookmetatag-docummenttype": "Документан тайпа",
 	"bs-bookshelfui-bookmetatag-department": "Дакъа",
 	"bs-bookshelfui-bookmetatag-version": "Верси",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Йухадерзочу жамӀийн дукхалла.",
 	"prefs-bookshelfui": "Жайнийн терхин леррина агӀо",
 	"bs-bookshelfui-prof-defaultview": "Гар Ӏадйитаран кепаца",
 	"bs-bookshelfui-prof-defaultview-grid": "Бой",
 	"bs-bookshelfui-prof-defaultview-images": "Суьрташ",
 	"bs-bookshelfui-chapterpager-previous": "Хьалхара",
 	"bs-bookshelfui-chapterpager-next": "РогӀера",
-	"bs-bookshelfui-manager-deletingprogress-text": "Хаьржина жайна дӀадаккхар",
-	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Цхьаъ жайна|$1 жайна}})",
-	"bs-bookshelfui-bookmetatag-bookshelf": "Жайнийн терхи",
-	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Йухадерзочу жамӀийн дукхалла."
+	"bs-bookshelfui-bookmetatag-bookshelf": "Жайнийн терхи"
 }
