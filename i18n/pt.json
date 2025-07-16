@@ -89,5 +89,6 @@
 	"bs-bookshelf-booknav-chapter-help": "Selecionar um capítulo para mostrar",
 	"bs-bookshelf-booknav-book-not-exist": "O livro $1 não existe",
 	"bs-bookshelf-booknav-chapter-not-exist": "O capítulo $1 não existe",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Pesquisar"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Pesquisar",
+	"bs-bookshelf-search-center-context-books-label": "em {{PLURAL:$1| livro|livros}} '''$2'''"
 }
