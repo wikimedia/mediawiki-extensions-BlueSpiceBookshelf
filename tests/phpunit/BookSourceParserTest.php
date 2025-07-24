@@ -4,7 +4,6 @@ namespace BlueSpice\Bookshelf\Tests;
 
 use BlueSpice\Bookshelf\BookSourceParser;
 use BlueSpice\Bookshelf\ChapterDataModel;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use MediaWikiIntegrationTestCase;
 
@@ -44,7 +43,7 @@ HERE;
 	public function testGetChapterDataModelArray() {
 		$expected = $this->getExpecedOutput();
 
-		$services = MediaWikiServices::getInstance();
+		$services = $this->getServiceContainer();
 		$revisionLookup = $services->getRevisionLookup();
 		$parserFactory = $services->get( 'MWStakeWikitextParserFactory' );
 		$titleFactory = $services->getTitleFactory();
