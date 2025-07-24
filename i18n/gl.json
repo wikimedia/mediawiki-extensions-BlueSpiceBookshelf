@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Toliño",
 			"Xosecalvo"
 		]
 	},
 	"bs-bookshelf-tag-next": "Seguinte",
 	"bs-bookshelf-tag-prev": "Anterior",
-	"bs-bookshelf-tag-edit-book": "Editar libro",
+	"bs-bookshelf-tag-edit-book": "Editar o libro",
 	"bs-bookshelf-add-to-book-label": "Engadir a un libro",
 	"bs-bookshelf-add-to-book-label-book": "Libro",
 	"bs-bookshelf-setting-path-feature": "Libro"
