@@ -9,5 +9,6 @@
 	"bs-bookshelf-mainlinks-label": "Libri",
 	"bs-bookshelf-prof-defaultview-images": "Imaji",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titulo",
-	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autoro"
+	"bs-bookshelf-ve-bookmeta-attr-author-label": "Autoro",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Libro"
 }
