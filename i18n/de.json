@@ -69,9 +69,9 @@
 	"action-bookshelf-viewspecialpage": "die Spezialseite [[Special:Bookshelf|Bücherregal]] aufzurufen",
 	"bs-bookshelf-action-save-to-local-storage": "Lokal speichern",
 	"bs-bookshelf-pref-chapterpagerbeforecontent": "Kapitel-Blätterfunktion vor dem Inhalt anzeigen",
-	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Fügt eine Kapitel-Blätterfunktion am Anfang der Seite ein.",
+	"bs-bookshelf-pref-chapterpagerbeforecontent-help": "Fügt eine Kapitel-Blätterfunktion am Anfang der Seite ein",
 	"bs-bookshelf-pref-chapterpageraftercontent": "Eine Blätterfunktion für Bücher nach dem Inhalt anzeigen",
-	"bs-bookshelf-pref-chapterpageraftercontent-help": "Fügt eine Kapitel-Blätterfunktion am Ende der Seite ein.",
+	"bs-bookshelf-pref-chapterpageraftercontent-help": "Fügt eine Kapitel-Blätterfunktion am Ende der Seite ein",
 	"bs-bookshelf-pref-supressbookns-help": "Der Namensraum wird bei der Anzeige des Seitennamens im PDF unterdrückt.",
 	"bs-bookshelf-warning": "PHP Exception: $1",
 	"bs-bookshelf-actionmenuentry-addtobook": "Zu einem Buch hinzufügen",
@@ -207,5 +207,8 @@
 	"bs-bookshelf-add-to-book-label-chapter": "In bestehendes Kapitel einfügen",
 	"bs-bookshelf-chapter-insertion-btn-move-up": "Kapitel nach oben verschieben",
 	"bs-bookshelf-chapter-insertion-btn-move-down": "Kapitel nach unten verschieben",
-	"bs-bookshelf-chapter-insertion-clear-btn-label": "Kapitelauswahl entfernen"
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Kapitelauswahl entfernen",
+	"bs-bookshelf-sesp-books": "Bücher",
+	"bs-bookshelf-sesp-books-desc": "Die Bücher, zu denen diese Seite gehört",
+	"bs-bookshelf-search-center-context-books-label": "{{PLURAL:$1|im Buch|in Bücher}} '''$2'''"
 }

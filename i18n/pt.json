@@ -110,5 +110,6 @@
 	"bs-bookshelf-droplet-pdf-description": "Hiperligação que descarrega um livro como PDF",
 	"bs-bookshelf-droplet-pdf-book-label": "Livro a exportar",
 	"bs-bookshelf-droplet-pdf-template-label": "Modelo do livro em PDF",
-	"bs-bookshelf-droplet-pdf-link-label": "Etiqueta da hiperligação"
+	"bs-bookshelf-droplet-pdf-link-label": "Etiqueta da hiperligação",
+	"bs-bookshelf-search-center-context-books-label": "em {{PLURAL:$1| livro|livros}} '''$2'''"
 }

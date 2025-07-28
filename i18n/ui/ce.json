@@ -64,5 +64,9 @@
 	"bs-bookshelfui-prof-defaultview-grid": "Бой",
 	"bs-bookshelfui-prof-defaultview-images": "Суьрташ",
 	"bs-bookshelfui-chapterpager-previous": "Хьалхара",
-	"bs-bookshelfui-chapterpager-next": "РогӀера"
+	"bs-bookshelfui-chapterpager-next": "РогӀера",
+	"bs-bookshelfui-manager-deletingprogress-text": "Хаьржина жайна дӀадаккхар",
+	"bs-bookshelfui-grouping-template-books": "({{PLURAL:$1|Цхьаъ жайна|$1 жайна}})",
+	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "Йухадерзочу жамӀийн дукхалла.",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Жайнийн терхи"
 }

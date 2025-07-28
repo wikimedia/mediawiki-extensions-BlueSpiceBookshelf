@@ -180,7 +180,7 @@
 	"bs-bookshelf-droplet-bookpdf-link-label": "Texto pro ligamine de exportation",
 	"bs-bookshelf-droplet-bookpdf-name": "Ligamine a PDF de libro",
 	"bs-bookshelf-droplet-bookpdf-desc": "Adder un ligamine pro exportar un libro seligite in formato PDF",
-	"bs-bookshelfui-bookmetatag-pdftemplate": "Patrono de exportation in PDF",
+	"bs-bookshelfui-bookmetatag-pdftemplate": "Patrono de exportation PDF",
 	"bs-bookshelf-export-pageparam-desc-title": "Monstra le titulo del libro",
 	"bs-bookshelf-export-pageparam-desc-author1": "Monstra le autor definite como autor 1 in le metadatos del libro",
 	"bs-bookshelf-export-pageparam-desc-author2": "Monstra le autor definite como autor 2 in le metadatos del libro",
@@ -197,5 +197,8 @@
 	"bs-bookshelf-add-to-book-label-chapter": "Inserer in capitulo existente",
 	"bs-bookshelf-chapter-insertion-btn-move-up": "Displaciar capitulo in alto",
 	"bs-bookshelf-chapter-insertion-btn-move-down": "Displaciar capitulo in basso",
-	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remover le selection de capitulos"
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remover le selection de capitulos",
+	"bs-bookshelf-sesp-books": "Libros",
+	"bs-bookshelf-sesp-books-desc": "Le libros del quales iste pagina face parte",
+	"bs-bookshelf-search-center-context-books-label": "in le libro{{PLURAL:$1||s}} '''$2'''"
 }

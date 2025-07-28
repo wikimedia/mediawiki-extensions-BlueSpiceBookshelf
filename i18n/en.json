@@ -195,5 +195,8 @@
 	"bs-bookshelf-add-to-book-label-chapter": "Insert in existing chapter",
 	"bs-bookshelf-chapter-insertion-btn-move-up": "Move chapter up",
 	"bs-bookshelf-chapter-insertion-btn-move-down": "Move chapter down",
-	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remove chapter selection"
+	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remove chapter selection",
+	"bs-bookshelf-sesp-books": "Books",
+	"bs-bookshelf-sesp-books-desc": "The books this page is a part of",
+	"bs-bookshelf-search-center-context-books-label": "in {{PLURAL:$1|book|books}} '''$2'''"
 }
