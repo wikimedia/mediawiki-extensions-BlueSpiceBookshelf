@@ -187,5 +187,6 @@
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Hoofdstukselectie verwijderen`",
 	"bs-bookshelf-sesp-books": "Boeken",
 	"bs-bookshelf-sesp-books-desc": "De boeken waarvan deze pagina deel uitmaakt",
-	"bs-bookshelf-actionmenuentry-create-new-book": "Nieuw boek aanmaken"
+	"bs-bookshelf-actionmenuentry-create-new-book": "Nieuw boek aanmaken",
+	"bs-bookshelf-search-center-context-books-label": "in {{PLURAL:$1|het boek|de boeken}} '''$2'''"
 }
