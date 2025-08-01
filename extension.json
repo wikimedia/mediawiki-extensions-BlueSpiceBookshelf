@@ -230,6 +230,11 @@
 					]
 				}
 			},
+			"PreProcessors": {
+				"excludeBookshelfTag": {
+					"class": "BlueSpice\\Bookshelf\\Integration\\PDFCreator\\PreProcessor\\ExcludeLegacyBookshelfTags"
+				}
+			},
 			"Processors": {
 				"bookcoverbackground": {
 					"class": "BlueSpice\\Bookshelf\\Integration\\PDFCreator\\Processor\\Coverbackground",
