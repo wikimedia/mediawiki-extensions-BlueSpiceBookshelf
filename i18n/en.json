@@ -198,5 +198,6 @@
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Remove chapter selection",
 	"bs-bookshelf-sesp-books": "Books",
 	"bs-bookshelf-sesp-books-desc": "The books this page is a part of",
-	"bs-bookshelf-search-center-context-books-label": "in {{PLURAL:$1|book|books}} '''$2'''"
+	"bs-bookshelf-search-center-context-books-label": "in {{PLURAL:$1|book|books}} '''$2'''",
+	"bs-bookshelf-newbook-dlg-action-create-label": "Create"
 }

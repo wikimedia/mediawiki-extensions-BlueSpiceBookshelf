@@ -210,5 +210,6 @@
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Kapitelauswahl entfernen",
 	"bs-bookshelf-sesp-books": "Bücher",
 	"bs-bookshelf-sesp-books-desc": "Die Bücher, zu denen diese Seite gehört",
-	"bs-bookshelf-search-center-context-books-label": "{{PLURAL:$1|im Buch|in Bücher}} '''$2'''"
+	"bs-bookshelf-search-center-context-books-label": "{{PLURAL:$1|im Buch|in Bücher}} '''$2'''",
+	"bs-bookshelf-newbook-dlg-action-create-label": "Erstellen"
 }
