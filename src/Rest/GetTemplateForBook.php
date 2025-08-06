@@ -41,21 +41,44 @@ class GetTemplateForBook extends SimpleHandler {
 		if ( !$bookTitle ) {
 			return $this->getResponseFactory()->createHttpError( 404, [ 'No valid book title' ] );
 		}
+
 		$template = $this->lookup->getMetaValueForBook( $bookTitle, 'pdftemplate' );
-		if ( $template ) {
+		if ( $this->templateExists( $template ) ) {
 			return $this->getResponseFactory()->createJson( [
 				'template' => $template,
 				'pageid' => $bookTitle->getArticleID()
 			] );
 		}
+
 		$template = $this->getTemplateFromConfig();
-		if ( $template ) {
+		if ( $this->templateExists( $template ) ) {
 			return $this->getResponseFactory()->createJson( [
 				'template' => $template,
 				'pageid' => $bookTitle->getArticleID()
 			] );
 		}
+
 		return $this->getResponseFactory()->createHttpError( 404, [ 'No default template for book found' ] );
+	}
+
+	/**
+	 * Check if template page exists.
+	 *
+	 * @param string $template
+	 *
+	 * @return bool
+	 */
+	private function templateExists( string $template ): bool {
+		if ( !$template ) {
+			return false;
+		}
+
+		$templateTitle = $this->titleFactory->newFromText( 'MediaWiki:PDFCreator/' . $template );
+		if ( !$templateTitle->exists() ) {
+			return false;
+		}
+
+		return true;
 	}
 
 	/**
