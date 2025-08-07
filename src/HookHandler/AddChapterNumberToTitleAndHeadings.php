@@ -102,17 +102,18 @@ class AddChapterNumberToTitleAndHeadings {
 		}
 
 		$children = $this->bookChapterLookup->getChildren( $this->activeBook, $chapterInfo );
-		if ( !empty( $children ) ) {
-			// Otherwise the internal headlines would have same numbers as child node articles
-			$text = $this->removeHeadingNumberFromToc( $text );
-			$text = $this->removeHeadingNumberFromHeading( $text );
-			return true;
-		}
 		$numberHeadings = new NumberHeadings();
 		$text = $numberHeadings->execute(
 			$chapterInfo->getNumber(),
 			$text
 		);
+		if ( !empty( $children ) ) {
+			// Otherwise the internal headlines would have same numbers as child node articles
+			$text = $this->removeHeadingNumberFromToc( $text );
+			$text = $this->removeHeadingNumberFromHeading( $text );
+			$text = $this->removeChapterNumberFromHeading( $text );
+			return true;
+		}
 
 		$numberToc = new NumberTOC();
 		$text = $numberToc->execute(
@@ -138,6 +139,31 @@ class AddChapterNumberToTitleAndHeadings {
 
 		for ( $index = 0; $index < count( $matches[0] ); $index++ ) {
 			$replacement = '<span class="tocnumber hidden">' . $matches[2][$index];
+			$html = preg_replace(
+				'#' . $matches[0][$index] . '#',
+				$replacement,
+				$html
+			);
+		}
+
+		return $html;
+	}
+
+	/**
+	 * @param string $html
+	 * @return string
+	 */
+	private function removeChapterNumberFromHeading( $html ) {
+		$regEx = '#(<span class="bs-chapter-number">)([\d\.]*?\s*?</span>)#';
+
+		$matches = [];
+		$status = preg_match_all( $regEx, $html, $matches );
+		if ( !$status ) {
+			return $html;
+		}
+
+		for ( $index = 0; $index < count( $matches[0] ); $index++ ) {
+			$replacement = '<span class="bs-chapter-number hidden">' . $matches[2][$index];
 			$html = preg_replace(
 				'#' . $matches[0][$index] . '#',
 				$replacement,

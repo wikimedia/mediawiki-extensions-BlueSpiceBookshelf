@@ -108,6 +108,7 @@
 }
 
 .tocnumber.hidden,
-.mw-headline-number.hidden {
+.mw-headline-number.hidden,
+.bs-chapter-number.hidden {
 	display: none;
 }
