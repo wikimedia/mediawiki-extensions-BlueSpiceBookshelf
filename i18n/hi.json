@@ -15,5 +15,6 @@
 	"bs-bookshelf-massadd-dlg-save-action-label": "जोड़ें",
 	"bs-bookshelf-droplet-search-book": "पुस्तक",
 	"bs-bookshelf-notification-subscription-set-book-title": "पुस्तक",
-	"bs-bookshelf-actionmenuentry-new-book": "नई पुस्तक"
+	"bs-bookshelf-actionmenuentry-new-book": "नई पुस्तक",
+	"bs-bookshelf-newbook-dlg-action-create-label": "बनाएँ"
 }
