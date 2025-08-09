@@ -80,5 +80,6 @@
 	"bs-bookshelf-droplet-bookpdf-name": "책 PDF 링크",
 	"bs-bookshelfui-bookmetatag-pdftemplate": "PDF 내보내기 틀",
 	"bs-bookshelf-export-pdf-notification-done": "PDF 내보내기 완료",
-	"bs-bookshelf-sesp-books": "책"
+	"bs-bookshelf-sesp-books": "책",
+	"bs-bookshelf-newbook-dlg-action-create-label": "만들기"
 }

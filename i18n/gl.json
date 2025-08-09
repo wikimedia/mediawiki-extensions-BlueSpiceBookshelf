@@ -183,5 +183,6 @@
 	"bs-bookshelf-sesp-books": "Libros",
 	"bs-bookshelf-sesp-books-desc": "Os libros dos que forma parte esta páxina",
 	"bs-bookshelf-actionmenuentry-create-new-book": "Crear un libro novo",
-	"bs-bookshelf-search-center-context-books-label": "{{PLURAL:$1|no libro|nos libros}} '''$2'''"
+	"bs-bookshelf-search-center-context-books-label": "{{PLURAL:$1|no libro|nos libros}} '''$2'''",
+	"bs-bookshelf-newbook-dlg-action-create-label": "Crear"
 }
