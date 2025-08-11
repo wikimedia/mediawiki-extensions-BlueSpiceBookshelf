@@ -14,6 +14,7 @@
 			"Lewis2013",
 			"MacOS Weed",
 			"Mahabarata",
+			"McDutchie",
 			"SleaY",
 			"Thibaut120094",
 			"Verdy p",
@@ -200,5 +201,7 @@
 	"bs-bookshelf-sesp-books": "Livres",
 	"bs-bookshelf-sesp-books-desc": "Les livres dont cette page fait partie",
 	"bs-bookshelf-search-center-context-books-label": "dans {{PLURAL:$1| livre|livres}} '''$2'''",
-	"bs-bookshelf-newbook-dlg-action-create-label": "Créer"
+	"bs-bookshelf-newbook-dlg-action-create-label": "Créer",
+	"bs-bookshelf-formelement-book-input": "Book",
+	"bs-bookshelf-formelement-book-input-return-value-label": "Return property"
 }
