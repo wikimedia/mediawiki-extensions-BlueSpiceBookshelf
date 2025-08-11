@@ -6,6 +6,7 @@
 			"Justman10000",
 			"Laurinm",
 			"Mglaser",
+			"MoritzMT20",
 			"Mschlindwein",
 			"Schmackes",
 			"SehrGuterCode",
@@ -211,5 +212,6 @@
 	"bs-bookshelf-sesp-books": "Bücher",
 	"bs-bookshelf-sesp-books-desc": "Die Bücher, zu denen diese Seite gehört",
 	"bs-bookshelf-search-center-context-books-label": "{{PLURAL:$1|im Buch|in Bücher}} '''$2'''",
-	"bs-bookshelf-newbook-dlg-action-create-label": "Erstellen"
+	"bs-bookshelf-newbook-dlg-action-create-label": "Erstellen",
+	"bs-bookshelf-formelement-book-input": "Buch"
 }
