@@ -11,7 +11,8 @@
 			"SehrGuterCode",
 			"Stephan Muggli <muggli@hallowelt.biz>",
 			"TomatoCake",
-			"Wdwd translator"
+			"Wdwd translator",
+			"MoritzMT20"
 		]
 	},
 	"bs-bookshelf-extension-description": "Ermöglicht das Zusammenstellen von hierarchisch gegliederten Artikelsammlungen.",
@@ -193,5 +194,6 @@
 	"bs-bookshelf-sesp-books-desc": "Die Bücher, zu denen diese Seite gehört",
 	"bs-bookshelf-actionmenuentry-create-new-book": "Neues Buch erstellen",
 	"bs-bookshelf-search-center-context-books-label": "{{PLURAL:$1|im Buch|in Bücher}} '''$2'''",
-	"bs-bookshelf-newbook-dlg-action-create-label": "Erstellen"
+	"bs-bookshelf-newbook-dlg-action-create-label": "Erstellen",
+	"bs-bookshelf-formelement-book-input": "Buch"
 }
