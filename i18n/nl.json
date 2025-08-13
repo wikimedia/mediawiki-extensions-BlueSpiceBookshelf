@@ -211,5 +211,8 @@
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Hoofdstukselectie verwijderen`",
 	"bs-bookshelf-sesp-books": "Boeken",
 	"bs-bookshelf-sesp-books-desc": "De boeken waarvan deze pagina deel uitmaakt",
-	"bs-bookshelf-search-center-context-books-label": "in {{PLURAL:$1|het boek|de boeken}} '''$2'''"
+	"bs-bookshelf-search-center-context-books-label": "in {{PLURAL:$1|het boek|de boeken}} '''$2'''",
+	"bs-bookshelf-newbook-dlg-action-create-label": "Aanmaken",
+	"bs-bookshelf-formelement-book-input": "Boek",
+	"bs-bookshelf-formelement-book-input-return-value-label": "Retoureigenchap"
 }
