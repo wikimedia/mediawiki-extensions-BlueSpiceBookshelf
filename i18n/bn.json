@@ -27,5 +27,6 @@
 	"bs-bookshelf-search-center-filter-books-label": "বই",
 	"bs-books-overview-page-book-action-view-text": "অধ্যায়",
 	"bs-bookshelf-actionmenuentry-new-book": "নতুন বই",
-	"bs-bookshelf-export-mode-book-label": "বই"
+	"bs-bookshelf-export-mode-book-label": "বই",
+	"bs-bookshelf-formelement-book-input": "বই"
 }
