@@ -15,5 +15,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Sername",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "Nuştekar",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Versiyon",
-	"bs-bookshelf-sesp-books": "Kıtabi"
+	"bs-bookshelf-sesp-books": "Kıtabi",
+	"bs-bookshelf-newbook-dlg-action-create-label": "Vıraze",
+	"bs-bookshelf-formelement-book-input": "Kıtab"
 }
