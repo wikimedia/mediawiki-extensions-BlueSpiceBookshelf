@@ -97,5 +97,6 @@
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Kapitelauswiel ewechhuelen",
 	"bs-bookshelf-sesp-books": "Bicher",
 	"bs-bookshelf-search-center-context-books-label": "{{PLURAL:$1|am Buch|an de Bicher}} '''$2'''",
-	"bs-bookshelf-newbook-dlg-action-create-label": "Uleeën"
+	"bs-bookshelf-newbook-dlg-action-create-label": "Uleeën",
+	"bs-bookshelf-formelement-book-input": "Buch"
 }
