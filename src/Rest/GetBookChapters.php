@@ -3,7 +3,10 @@
 namespace BlueSpice\Bookshelf\Rest;
 
 use BlueSpice\Bookshelf\BookLookup;
+use BlueSpice\Bookshelf\ChapterDataModel;
+use BlueSpice\Bookshelf\ChapterInfo;
 use BlueSpice\Bookshelf\ChapterLookup;
+use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Rest\SimpleHandler;
 use MediaWiki\Title\TitleFactory;
 use Wikimedia\ParamValidator\ParamValidator;
@@ -99,7 +102,9 @@ class GetBookChapters extends SimpleHandler {
 			} else {
 				$chapterTitle = $this->titleFactory->newFromText( $chapter->getTitle(), $chapter->getNamespace() );
 				$node = [
-					'id' => $chapter->getTitle(),
+					'id' => Sanitizer::escapeIdForAttribute(
+						"{$chapter->getNumber()}_{$chapterTitle->getPrefixedDBkey()}"
+					),
 					'number' => $chapter->getNumber(),
 					'title' => $chapterTitle->getPrefixedDBkey(),
 					'prefixed' => $chapterTitle->getPrefixedText(),
