@@ -4,6 +4,7 @@
 			"Caiofernandes",
 			"Fúlvio",
 			"Hamilton Abreu",
+			"ItsaMeSandy",
 			"Mansil alfalb",
 			"Pedro Henrique"
 		]
@@ -90,5 +91,7 @@
 	"bs-bookshelf-booknav-book-not-exist": "O livro $1 não existe",
 	"bs-bookshelf-booknav-chapter-not-exist": "O capítulo $1 não existe",
 	"bs-bookshelf-booknav-searchbox-placeholder": "Pesquisar",
-	"bs-bookshelf-search-center-context-books-label": "em {{PLURAL:$1| livro|livros}} '''$2'''"
+	"bs-bookshelf-search-center-context-books-label": "em {{PLURAL:$1| livro|livros}} '''$2'''",
+	"bs-bookshelf-formelement-book-input": "Livro",
+	"bs-bookshelf-formelement-book-input-return-value-label": "Propriedade de retorno"
 }
