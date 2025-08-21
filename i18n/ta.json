@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"ElangoRamanujam",
 			"Fahimrazick",
 			"Sridhar G"
 		]
@@ -8,5 +9,6 @@
 	"bs-bookshelf-droplet-name": "புத்தகப் பட்டியல்",
 	"bs-bookshelf-droplet-description": "பெயர்வெளிப் புத்தகத்தில் உள்ள பக்கங்களின் பட்டியல்",
 	"bs-bookshelf-grouping-template-type-ns_book": "பொது நூல்கள்",
-	"bookshelf-summary": "பொது நூல்கள்"
+	"bookshelf-summary": "பொது நூல்கள்",
+	"bs-bookshelf-newbook-dlg-action-create-label": "உருவாக்கு"
 }
