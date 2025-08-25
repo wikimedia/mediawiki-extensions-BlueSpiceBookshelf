@@ -17,6 +17,8 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Girji",
 	"bs-bookshelf-booknav-book-label": "Girji",
 	"bs-bookshelf-search-center-filter-books-label": "Girji",
+	"bs-bookshelf-chapter-plain-text-input-label": "Teaksta",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Teaksta",
 	"bs-bookshelf-metadata-dlg-action-save-label": "Vurke",
 	"bs-bookshelf-newbook-dlg-title": "Ráhkat ođđa girjji",
 	"bs-bookshelf-droplet-search-name": "Oza girjjis",
