@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"Yupik"
 		]
 	},
 	"bs-bookshelf-tagerror-attribute-float-not-valid": "Feu servir <i>left</i> o <i>right</i>.",
@@ -15,5 +16,7 @@
 	"bs-bookshelf-grouping-template-type-ns_book": "Llibres generals",
 	"bs-bookshelf-grouping-template-type-user_book": "Llibres propis",
 	"bookshelf": "Prestatgeria",
-	"bookshelf-summary": "Llibres generals"
+	"bookshelf-summary": "Llibres generals",
+	"bs-bookshelf-chapter-plain-text-input-label": "Text",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Text"
 }

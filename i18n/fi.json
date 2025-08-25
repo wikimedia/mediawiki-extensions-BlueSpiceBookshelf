@@ -46,5 +46,7 @@
 	"bs-bookshelf-warning": "PHP-poikkeus: $1",
 	"bs-bookshelf-empty-selection": "Ei mitään valittu",
 	"bs-bookshelf-droplet-name": "Kirjalista",
-	"bs-bookshelf-mainlinks-label": "Kirjat"
+	"bs-bookshelf-mainlinks-label": "Kirjat",
+	"bs-bookshelf-chapter-plain-text-input-label": "Teksti",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Teksti"
 }

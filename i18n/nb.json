@@ -3,7 +3,8 @@
 		"authors": [
 			"Abuluntu",
 			"EdoAug",
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"Yupik"
 		]
 	},
 	"bs-bookshelf-extension-description": "Lar BlueSpice behandle og eksportere hierarkiske samlinger av artikler.",
@@ -102,5 +103,7 @@
 	"bs-books-overview-page-book-action-edit-text": "Rediger",
 	"bs-books-overview-page-book-action-edit-title": "Rediger boka $1",
 	"bs-books-overview-page-book-action-delete-text": "Slett",
-	"bs-books-overview-page-book-action-delete-title": "Slett boka $1"
+	"bs-books-overview-page-book-action-delete-title": "Slett boka $1",
+	"bs-bookshelf-chapter-plain-text-input-label": "Tekst",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Tekst"
 }
