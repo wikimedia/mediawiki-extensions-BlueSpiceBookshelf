@@ -6,7 +6,8 @@
 			"Mjälten",
 			"Sabelöga",
 			"Technic2",
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Yupik"
 		]
 	},
 	"bs-bookshelf-positive-integer-validation-not-approved": "Enbart positiva heltal tillåts.",
@@ -56,5 +57,7 @@
 	"bs-bookshelf-booknav-book-help": "Välj en bok att använda",
 	"bs-bookshelf-booknav-chapter-label": "Kapitel",
 	"bs-bookshelf-booknav-chapter-help": "Välj ett kapitel att visa",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Sök"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Sök",
+	"bs-bookshelf-chapter-plain-text-input-label": "Text",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Text"
 }

@@ -40,5 +40,7 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Asettaa kirjan version",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Kirjahylly",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kirja",
-	"bs-bookshelf-droplet-name": "Kirjalista"
+	"bs-bookshelf-droplet-name": "Kirjalista",
+	"bs-bookshelf-chapter-plain-text-input-label": "Teksti",
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Teksti"
 }
