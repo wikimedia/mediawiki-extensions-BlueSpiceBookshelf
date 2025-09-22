@@ -98,5 +98,7 @@
 	"bs-bookshelfui-panel-navigation-text": "至書籍導覽",
 	"bs-bookshelfui-panel-navigation-title": "返回書籍導覽",
 	"bs-bookshelfui-panel-navigation-aria-label": "至書籍導覽",
-	"bs-bookshelfui-panel-navigation-aria-desc": "樹狀架構書籍導覽"
+	"bs-bookshelfui-panel-navigation-aria-desc": "樹狀架構書籍導覽",
+	"bs-bookshelfui-bookmetatag-bookshelf": "書架",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "書架圖片"
 }
