@@ -3,6 +3,7 @@
 		"authors": [
 			"Alshamiri1",
 			"FiberAhmed",
+			"Hubaishan",
 			"Meno25",
 			"أَحمد",
 			"ديفيد",
@@ -82,7 +83,7 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "يحدد الكتاب الذي تنتمي إليه الصفحات",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "أضف أرقام فصول الكتاب إلى جدول المحتويات وجميع العناوين الرئيسية في الصفحة",
 	"bs-bookshelf-droplet-name": "قائمة الكتب",
-	"bs-bookshelf-droplet-description": "قائمة الصفحات في كتاب مساحة الاسم",
+	"bs-bookshelf-droplet-description": "قائمة الصفحات في كتاب النطاق",
 	"bs-bookshelf-ve-bookmeta-attr-title-help": "تعيين عنوان الكتاب",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "تعيين العنوان الفرعي للكتاب",
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "تعيين مؤلف الكتاب",
