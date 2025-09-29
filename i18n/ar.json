@@ -6,7 +6,8 @@
 			"Meno25",
 			"أَحمد",
 			"ديفيد",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Hubaishan"
 		]
 	},
 	"bs-bookshelf-extension-description": "يمكن BlueSpice لإدارة وتصدير مجموعات المقالات هرميا.",
@@ -90,7 +91,7 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "يحدد الكتاب الذي تنتمي إليه الصفحات",
 	"bs-bookshelf-pref-prepend-tocnumber-help": "أضف أرقام فصول الكتاب إلى جدول المحتويات وجميع العناوين الرئيسية في الصفحة",
 	"bs-bookshelf-droplet-name": "قائمة الكتب",
-	"bs-bookshelf-droplet-description": "قائمة الصفحات في كتاب مساحة الاسم",
+	"bs-bookshelf-droplet-description": "قائمة الصفحات في كتاب النطاق",
 	"bs-bookshelf-booknav-title": "جدول محتويات الكتاب",
 	"bs-bookshelf-booknav-desc": "قائمة بجميع الفصول المختارة من كتاب",
 	"bs-bookshelf-booknav-book-label": "كتاب",
