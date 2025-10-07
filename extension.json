@@ -810,6 +810,9 @@
 		"BookShelfShowChapterNavigationPagerAfterContent": {
 			"value": false
 		},
+		"BookshelfSupressBookNS": {
+			"value": false
+		},
 		"BookshelfMainLinksBookshelf": {
 			"value": true,
 			"public": true,
