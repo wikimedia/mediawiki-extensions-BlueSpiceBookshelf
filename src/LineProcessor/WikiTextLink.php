@@ -30,7 +30,7 @@ class WikiTextLink extends LineProcessorBase implements ILineProcessor {
 		$link = $this->getLink( $line );
 		$this->parseLink( $link );
 		$this->parseTitle();
-		if ( !$this->title instanceof Title ) {
+		if ( !( $this->title instanceof Title ) ) {
 			$this->result['type'] = 'plain-text';
 			return $this->result;
 		}
@@ -96,18 +96,24 @@ class WikiTextLink extends LineProcessorBase implements ILineProcessor {
 		$this->title = Title::newFromText( $this->result['title'] );
 	}
 
-	/**
-	 *
-	 */
 	protected function handleRedirect() {
 		$this->result['is-redirect'] = $this->title->isRedirect();
-		if ( $this->title->isRedirect() ) {
-			$targetTitle = MediaWikiServices::getInstance()->getRedirectLookUp()
-				->getRedirectTarget( $this->title );
-			if ( $targetTitle instanceof Title ) {
-				$this->result['redirected-from'] = $this->title->getPrefixedText();
-				$this->title = $targetTitle;
-			}
+		if ( !$this->title->isRedirect() ) {
+			return;
 		}
+
+		$redirectTarget = MediaWikiServices::getInstance()->getRedirectLookUp()
+			->getRedirectTarget( $this->title );
+		if ( !$redirectTarget ) {
+			return;
+		}
+
+		$targetTitle = Title::castFromLinkTarget( $redirectTarget );
+		if ( !$targetTitle ) {
+			return;
+		}
+
+		$this->result['redirected-from'] = $this->title->getPrefixedText();
+		$this->title = $targetTitle;
 	}
 }

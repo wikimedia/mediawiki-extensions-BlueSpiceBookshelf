@@ -28,7 +28,9 @@ class BookListHandler implements ITagHandler {
 	}
 
 	public function getRenderedContent( string $input, array $params, Parser $parser, PPFrame $frame ): string {
-		$filters = explode( '|', trim( $params['filter'] ) );
+		$filters = isset( $params['filter'] )
+			? explode( '|', trim( $params['filter'] ) )
+			: [];
 		$parsedFilters = [];
 		foreach ( $filters as $keyValuePair ) {
 			$parts = explode( ':', trim( $keyValuePair ), 2 );
