@@ -3,6 +3,7 @@
 		"authors": [
 			"Alshamiri1",
 			"FiberAhmed",
+			"Hubaishan",
 			"Meno25",
 			"أَحمد",
 			"ديفيد",
@@ -80,7 +81,7 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "كتاب",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "يحدد الكتاب الذي تنتمي إليه الصفحات",
 	"bs-bookshelf-droplet-name": "قائمة الكتب",
-	"bs-bookshelf-droplet-description": "قائمة الصفحات في كتاب مساحة الاسم",
+	"bs-bookshelf-droplet-description": "قائمة الصفحات في كتاب النطاق",
 	"bs-bookshelf-booknav-title": "جدول محتويات الكتاب",
 	"bs-bookshelf-booknav-desc": "قائمة بجميع الفصول المختارة من كتاب",
 	"bs-bookshelf-booknav-book-label": "كتاب",
