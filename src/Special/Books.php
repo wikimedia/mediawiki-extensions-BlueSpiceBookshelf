@@ -32,7 +32,7 @@ class Books extends SpecialPage {
 		$out = $this->getOutput();
 		$out->addModules( "ext.bluespice.books.special.vue" );
 		$out->addModuleStyles( "ext.bluespice.books.special.styles" );
-		$out->setPageTitle( $this->msg( 'books' )->plain() );
+		$out->setPageTitle( $this->msg( 'books' )->text() );
 
 		$html = $this->templateParser->processTemplate(
 			'books.vue',

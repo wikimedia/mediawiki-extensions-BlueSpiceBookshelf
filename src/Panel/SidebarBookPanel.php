@@ -240,11 +240,11 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 			[
 				'id' => 'book-panel-edit-book',
 				'href' => $activeBook->getFullURL( [ 'action' => 'edit' ] ),
-				'title' => wfMessage( 'bs-bookshelfui-book-title-link-edit' )->plain()
+				'title' => wfMessage( 'bs-bookshelfui-book-title-link-edit' )->text()
 			]
 		);
 		$bookEditorLink .=
-			wfMessage( 'bs-bookshelfui-book-title-link-edit-text' )->plain();
+			wfMessage( 'bs-bookshelfui-book-title-link-edit-text' )->text();
 
 		$bookEditorLink .= Html::closeElement( 'a' );
 

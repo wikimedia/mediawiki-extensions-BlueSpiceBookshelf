@@ -175,7 +175,7 @@ class BookNavHandler extends Handler {
 	 */
 	private function buildSubComponentsSegmentHtml( array $subComponents, string &$html ): void {
 		foreach ( $subComponents as $subComponent ) {
-			$label = $subComponent->getText()->plain();
+			$label = $subComponent->getText()->text();
 
 			if ( strpos( $label, $this->chapterInput ) === 0 ) {
 				$html .= $this->componentRenderer->getComponentHtml( $subComponent );

@@ -94,7 +94,7 @@ class ClientConfig {
 
 			$tools[] = [
 				'type' => $tool->getType(),
-				'label' => $context->msg( $tool->getLabelMsgKey() )->plain(),
+				'label' => $context->msg( $tool->getLabelMsgKey() )->text(),
 				'class' => implode( ' ', $tool->getClasses() ),
 				'callback' => $tool->getCallback(),
 				'slot' => $tool->getSlot(),
@@ -123,7 +123,7 @@ class ClientConfig {
 		$services = MediaWikiServices::getInstance();
 		$dbr = $services->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
-		$pageCollectionPrefix = wfMessage( 'bs-pagecollection-prefix' )->inContentLanguage()->plain();
+		$pageCollectionPrefix = wfMessage( 'bs-pagecollection-prefix' )->inContentLanguage()->text();
 		$pageCollectionPrefix = str_replace( ' ', '_', $pageCollectionPrefix );
 		$pageCollectionPrefix .= "/";
 
