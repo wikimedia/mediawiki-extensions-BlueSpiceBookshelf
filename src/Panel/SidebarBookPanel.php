@@ -6,6 +6,7 @@ use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use MediaWiki\Context\IContextSource;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkTarget;
 use MediaWiki\MediaWikiServices;
@@ -231,7 +232,13 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 * @return string
 	 */
 	protected function getBookEditLink( $activeBook ): string {
-		if ( $activeBook instanceof Title === false ) {
+		if ( !$activeBook ) {
+			return '';
+		}
+
+		$user = RequestContext::getMain()->getUser();
+		$permissionManager = MediaWikiServices::getInstance()->getPermissionManager();
+		if ( !$permissionManager->userCan( 'edit', $user, $activeBook ) ) {
 			return '';
 		}
 
