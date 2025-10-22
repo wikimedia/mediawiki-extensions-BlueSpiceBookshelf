@@ -311,8 +311,8 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 					$actionData = [
 						'iconClass' => implode( ' ', $actionItem->getIconClasses() ),
 						'class' => implode( ' ', $actionItem->getClasses() ),
-						'text' => $actionItem->getText()->plain(),
-						'title' => $actionItem->getTitle()->plain(),
+						'text' => $actionItem->getText()->text(),
+						'title' => $actionItem->getTitle()->text(),
 						'href' => $actionItem->getHref(),
 						'book' => $book->getPrefixedDBkey(),
 					];

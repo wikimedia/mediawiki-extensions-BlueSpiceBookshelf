@@ -133,7 +133,7 @@ class BookNavHandler implements ITagHandler {
 	 */
 	private function buildSubComponentsSegmentHtml( array $subComponents, string &$html, string $chapter ): void {
 		foreach ( $subComponents as $subComponent ) {
-			$label = $subComponent->getText()->plain();
+			$label = $subComponent->getText()->text();
 
 			if ( str_starts_with( $label, $chapter ) ) {
 				$html .= $this->componentRenderer->getComponentHtml( $subComponent );

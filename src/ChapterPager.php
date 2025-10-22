@@ -212,7 +212,7 @@ class ChapterPager {
 		$html .= Html::element(
 			   'span',
 			   [],
-			   wfMessage( "bs-bookshelfui-chapterpager-$type" )->plain()
+			   wfMessage( "bs-bookshelfui-chapterpager-$type" )->text()
 		   );
 		$html .= Html::closeElement( 'a' );
 
