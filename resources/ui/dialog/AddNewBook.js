@@ -320,7 +320,7 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.handleUploadErrors = function
 	} else if ( error === 'exists' ) {
 		const dialog = this;
 		OO.ui.prompt(
-			mw.message( 'bs-bookshelf-newbook-dlg-upload-title-exists' ).plain(),
+			mw.message( 'bs-bookshelf-newbook-dlg-upload-title-exists' ).text(),
 			{
 				textInput: {
 					value: 'Cover-' + this.bookData.title
@@ -378,7 +378,7 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.getErrorMsg = function ( resu
 		return 'No warnings during upload';
 	}
 	const warnings = result.upload.warnings;
-	let errorMessage = mw.message( 'bs-bookshelf-newbook-dlg-upload-error-unhandled' ).plain();
+	let errorMessage = mw.message( 'bs-bookshelf-newbook-dlg-upload-error-unhandled' ).text();
 	if ( 'exists' in warnings || 'exists-normalized' in warnings ) {
 		errorMessage = 'exists';
 		if ( 'nochange' in warnings ) {
@@ -387,7 +387,7 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.getErrorMsg = function ( resu
 	} else if ( 'duplicate' in warnings ) {
 		errorMessage = 'duplicate';
 	} else if ( 'duplicate-archive' in warnings ) {
-		errorMessage = mw.message( 'bs-bookshelf-newbook-dlg-upload-error-duplicate', upload.filename ).plain();
+		errorMessage = mw.message( 'bs-bookshelf-newbook-dlg-upload-error-duplicate', upload.filename ).text();
 	}
 	return errorMessage;
 };

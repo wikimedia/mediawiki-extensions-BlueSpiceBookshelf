@@ -33,7 +33,7 @@
 					return h( BooksApp, {
 						items: books,
 						searchableData: searchableData,
-						searchPlaceholderLabel: mw.message( 'bs-books-overview-page-book-search-placeholder' ).plain(),
+						searchPlaceholderLabel: mw.message( 'bs-books-overview-page-book-search-placeholder' ).text(),
 						filter: filter
 					} );
 				}

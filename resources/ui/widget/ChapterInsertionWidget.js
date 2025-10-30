@@ -25,14 +25,14 @@ ext.bookshelf.ui.widget.ChapterInsertionWidget.prototype.initialize = function (
 		} );
 		this.moveUpButton = new OO.ui.ButtonWidget( {
 			icon: 'collapse',
-			label: mw.message( 'bs-bookshelf-chapter-insertion-btn-move-up' ).plain(),
+			label: mw.message( 'bs-bookshelf-chapter-insertion-btn-move-up' ).text(),
 			framed: false,
 			invisibleLabel: true,
 			classes: [ 'bs-bookshelf-chapter-insertion-move-btn' ]
 		} );
 		this.moveDownButton = new OO.ui.ButtonWidget( {
 			icon: 'expand',
-			label: mw.message( 'bs-bookshelf-chapter-insertion-btn-move-down' ).plain(),
+			label: mw.message( 'bs-bookshelf-chapter-insertion-btn-move-down' ).text(),
 			framed: false,
 			invisibleLabel: true,
 			classes: [ 'bs-bookshelf-chapter-insertion-move-btn' ]
