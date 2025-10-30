@@ -111,5 +111,6 @@
 	"bs-bookshelf-toolbar-tool-metadata-label": "Urejanje metapodatkov",
 	"bs-bookshelf-metadata-widget-checkbox-title": "Izbira lastnosti $1",
 	"bs-bookshelf-metadata-dlg-title": "Urejanje metapodatkov",
-	"bs-bookshelf-metadata-dlg-action-save-label": "Shrani"
+	"bs-bookshelf-metadata-dlg-action-save-label": "Shrani",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Dodaj"
 }
