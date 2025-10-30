@@ -42,15 +42,15 @@ ext.bookshelf.ui.dialog.MassAddDialog.prototype.initialize = function () {
 			items: [
 				new OO.ui.MenuOptionWidget( {
 					data: 'category',
-					label: mw.message( 'bs-bookshelfui-type-category' ).plain()
+					label: mw.message( 'bs-bookshelfui-type-category' ).text()
 				} ),
 				new OO.ui.MenuOptionWidget( {
 					data: 'subpages',
-					label: mw.message( 'bs-bookshelfui-type-subpages' ).plain()
+					label: mw.message( 'bs-bookshelfui-type-subpages' ).text()
 				} ),
 				new OO.ui.MenuOptionWidget( {
 					data: 'pagecollection',
-					label: mw.message( 'bs-bookshelfui-type-pagecollection' ).plain(),
+					label: mw.message( 'bs-bookshelfui-type-pagecollection' ).text(),
 					disabled: !this.pageCollections
 				} )
 			]
@@ -76,7 +76,7 @@ ext.bookshelf.ui.dialog.MassAddDialog.prototype.initialize = function () {
 	} );
 
 	this.subpageTitleField = new OO.ui.FieldLayout( this.subpageTitleInput, {
-		label: mw.message( 'bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel' ).plain(),
+		label: mw.message( 'bs-bookshelfui-dlg-choosewikipage-cbxArticleLabel' ).text(),
 		align: 'left',
 		data: 'subpages'
 	} );
@@ -94,7 +94,7 @@ ext.bookshelf.ui.dialog.MassAddDialog.prototype.initialize = function () {
 	} );
 
 	this.categoryTitleField = new OO.ui.FieldLayout( this.categoryInput, {
-		label: mw.message( 'bs-bookshelfui-dlg-choosecategory-label' ).plain(),
+		label: mw.message( 'bs-bookshelfui-dlg-choosecategory-label' ).text(),
 		align: 'left',
 		data: 'category'
 	} );
@@ -113,7 +113,7 @@ ext.bookshelf.ui.dialog.MassAddDialog.prototype.initialize = function () {
 	this.pageCollecionInput.setOptions( options );
 
 	this.pageCollecionField = new OO.ui.FieldLayout( this.pageCollecionInput, {
-		label: mw.message( 'bs-bookshelfui-dlg-choosepc-label' ).plain(),
+		label: mw.message( 'bs-bookshelfui-dlg-choosepc-label' ).text(),
 		align: 'left',
 		data: 'pagecollection'
 	} );

@@ -56,12 +56,12 @@ module.exports = {
 			cardClass = "bs-card new disabled";
 			ariaDisabled = true;
 		}
-		var cardAnchorTitle = mw.message( 'bs-books-overview-page-book-anchor-title', this.title ).plain();
-		var cardAnchorAriaLabel = mw.message( 'bs-books-overview-page-book-anchor-aria-label', this.title ).plain();
+		var cardAnchorTitle = mw.message( 'bs-books-overview-page-book-anchor-title', this.title ).text();
+		var cardAnchorAriaLabel = mw.message( 'bs-books-overview-page-book-anchor-aria-label', this.title ).text();
 
 		if ( this.book_edit_url !== '' ) {
-			cardAnchorTitle = mw.message( 'bs-books-overview-page-edit-book-anchor-title', this.title ).plain();
-			cardAnchorAriaLabel = mw.message( 'bs-books-overview-page-edit-book-anchor-aria-label', this.title ).plain();
+			cardAnchorTitle = mw.message( 'bs-books-overview-page-edit-book-anchor-title', this.title ).text();
+			cardAnchorAriaLabel = mw.message( 'bs-books-overview-page-edit-book-anchor-aria-label', this.title ).text();
 			href = this.book_edit_url;
 		}
 
@@ -92,8 +92,8 @@ module.exports = {
 			// Nesting the menu in a array. If no menu is available the array is empty
 			// and the component won't be rendered. This will prevent us from a empty dropdown menu.
 			var menu = {};
-			menu.label = mw.message( 'bs-books-overview-page-book-actions-dropdown-menu-aria-label' ).plain();
-			menu.title = mw.message( 'bs-books-overview-page-book-actions-dropdown-menu-title' ).plain();
+			menu.label = mw.message( 'bs-books-overview-page-book-actions-dropdown-menu-aria-label' ).text();
+			menu.title = mw.message( 'bs-books-overview-page-book-actions-dropdown-menu-title' ).text();
 			menu.actions = menuActions;
 
 			actionsMenu.push( menu );
