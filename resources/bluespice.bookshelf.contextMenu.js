@@ -4,7 +4,7 @@ $( document ).on( 'BSContextMenuGetItems', ( e, $element, items, forTitle ) => {
 		items.push( {
 			id: 'bs-bookshelfui-widget-editor-link',
 			href: title.getUrl( { action: 'edit' } ),
-			label: mw.message( 'bs-bookshelfui-widget-editor-link-text' ).plain(),
+			label: mw.message( 'bs-bookshelfui-widget-editor-link-text' ).text(),
 			icon: 'book',
 			primary: true,
 			overrides: 'bs-cm-item-edit',

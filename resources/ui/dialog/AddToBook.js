@@ -17,7 +17,7 @@
 	};
 
 	bs.bookshelf.ui.dialog.AddToBook.prototype.getTitle = function () {
-		return mw.message( 'bs-bookshelf-add-to-book-label' ).plain();
+		return mw.message( 'bs-bookshelf-add-to-book-label' ).text();
 	};
 
 	bs.bookshelf.ui.dialog.AddToBook.prototype.initialize = function () {
@@ -78,11 +78,11 @@
 
 		return [
 			new OO.ui.FieldLayout( this.bookPicker, {
-				label: mw.message( 'bs-bookshelf-add-to-book-label-book' ).plain(),
+				label: mw.message( 'bs-bookshelf-add-to-book-label-book' ).text(),
 				align: 'top'
 			} ),
 			new OO.ui.FieldLayout( this.chapterPicker, {
-				label: mw.message( 'bs-bookshelf-add-to-book-label-chapter' ).plain(),
+				label: mw.message( 'bs-bookshelf-add-to-book-label-chapter' ).text(),
 				align: 'top'
 			} )
 		];
@@ -118,8 +118,8 @@
 
 						api.post( bookTitle, data ).done( () => {
 							mw.notify(
-								mw.message( 'bs-bookshelf-add-to-book-added', this.bookPicker.getValue() ).plain(),
-								{ title: mw.message( 'bs-bookshelf-add-to-book-label' ).plain() }
+								mw.message( 'bs-bookshelf-add-to-book-added', this.bookPicker.getValue() ).text(),
+								{ title: mw.message( 'bs-bookshelf-add-to-book-label' ).text() }
 							);
 							this.close( { action: action, book: bookName } );
 							dfd.resolve();

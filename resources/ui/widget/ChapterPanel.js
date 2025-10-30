@@ -24,7 +24,7 @@ ext.bookshelf.ui.widget.ChapterPanel.prototype.initialize = function () {
 	this.chapterPickerClear = new OO.ui.ButtonWidget( {
 		icon: 'close',
 		framed: false,
-		label: mw.message( 'bs-bookshelf-chapter-insertion-clear-btn-label' ).plain(),
+		label: mw.message( 'bs-bookshelf-chapter-insertion-clear-btn-label' ).text(),
 		invisibleLabel: true
 	} );
 	this.chapterPickerClear.connect( this, {

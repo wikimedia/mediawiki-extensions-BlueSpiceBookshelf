@@ -39,13 +39,13 @@
 		return [
 			{
 				name: 'book',
-				label: mw.message( 'bs-bookshelf-droplet-bookpdf-book-label' ).plain(),
+				label: mw.message( 'bs-bookshelf-droplet-bookpdf-book-label' ).text(),
 				type: 'title',
 				namespace: 1504
 			},
 			{
 				name: 'template',
-				label: mw.message( 'bs-bookshelf-droplet-bookpdf-template-label' ).plain(),
+				label: mw.message( 'bs-bookshelf-droplet-bookpdf-template-label' ).text(),
 				type: 'dropdown',
 				default: config.default,
 				options: templates,
@@ -53,7 +53,7 @@
 			},
 			{
 				name: 'label',
-				label: mw.message( 'bs-bookshelf-droplet-bookpdf-link-label' ).plain(),
+				label: mw.message( 'bs-bookshelf-droplet-bookpdf-link-label' ).text(),
 				type: 'text'
 			}
 		];

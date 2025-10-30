@@ -78,7 +78,7 @@ module.exports = exports = {
 			}
 		} else {
 			hasData = false;
-			emtyMsg = mw.message( 'bs-books-overview-page-bookshelf-empty-text' ).plain();
+			emtyMsg = mw.message( 'bs-books-overview-page-bookshelf-empty-text' ).text();
 		}
 
 		let visibleItems = this.items.filter( obj => { return obj.isVisible === true } );
@@ -187,7 +187,7 @@ function createBookshelfs( items ) {
 	const variousBooksIndex = bookshelfsInData.findIndex( bookshelf => bookshelf.name == '' );
 	if ( variousBooksIndex >= 0 ) {
 		const variousBooks = bookshelfsInData[variousBooksIndex];
-		variousBooks.name = mw.message( 'bs-books-overview-page-bookshelf-various-books' ).plain();
+		variousBooks.name = mw.message( 'bs-books-overview-page-bookshelf-various-books' ).text();
 		bookshelfsInData.shift( ...bookshelfsInData.splice( 0, variousBooksIndex ) );
 		bookshelfsInData.push( variousBooks );
 	}
