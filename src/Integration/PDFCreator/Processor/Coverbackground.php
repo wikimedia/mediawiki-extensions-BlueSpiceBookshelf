@@ -76,7 +76,10 @@ class Coverbackground implements IProcessor {
 		$filename = '';
 		$absFileSystemPath = '';
 
-		$fileTitle = $this->titleFactory->makeTitle( NS_FILE, $bookshelfImage );
+		$fileTitle = $this->titleFactory->newFromText( $bookshelfImage );
+		if ( $fileTitle->getNamespace() !== NS_FILE ) {
+			$fileTitle = $this->titleFactory->makeTitle( NS_FILE, $bookshelfImage );
+		}
 		if ( $fileTitle->exists() ) {
 			$file = $this->repoGroup->findFile( $fileTitle );
 			if ( $file && $file->getLocalRefPath() ) {
