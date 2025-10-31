@@ -173,7 +173,7 @@
 	"bs-books-overview-page-book-search-placeholder": "Buch finden",
 	"bs-books-overview-page-bookshelf-empty": "Es sind keine Bücher verfügbar",
 	"bs-books-overview-page-aria-live-filtered-rows": "{{PLURAL:$1|Ein Buch|$1 Bücher}} gefunden",
-	"bs-bookshelf-tag-searchinbook-error": "Gib einen gültigen Buchnamen an",
+	"bs-bookshelf-tag-searchinbook-error": "{{#FORMAL:Gib|Geben Sie}} einen gültigen Buchnamen an",
 	"bs-bookshelf-droplet-search-name": "In einem Buch suchen",
 	"bs-bookshelf-droplet-search-description": "Nach Seiten in einem Buch suchen",
 	"bs-bookshelf-droplet-search-book": "Buch",
