@@ -74,5 +74,6 @@
 	"bs-bookshelf-booknav-chapter-label": "فصل",
 	"bs-bookshelf-booknav-chapter-help": "یک فصل را برای نمایش انتخاب کنید",
 	"bs-bookshelf-booknav-book-not-exist": "کتاب $1 وجود ندارد",
-	"bs-bookshelf-booknav-chapter-not-exist": "فصل $1 وجود ندارد"
+	"bs-bookshelf-booknav-chapter-not-exist": "فصل $1 وجود ندارد",
+	"bs-bookshelf-toolbar-tool-metadata-label": "ویرایش فراداده"
 }
