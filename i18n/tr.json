@@ -7,6 +7,7 @@
 			"MuratTheTurkish",
 			"Rapsar",
 			"RuzDD",
+			"Sakblue",
 			"Sqances",
 			"ToprakM",
 			"Vito Genovese"
@@ -82,5 +83,8 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Sürüm",
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Kitabın sürümünü belirler",
 	"bs-bookshelf-ve-bookshelfinspector-title": "Kitaplık",
-	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kitap"
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kitap",
+	"bs-bookshelf-toolbar-tool-metadata-title": "Meta verileri düzenle",
+	"bs-bookshelf-toolbar-tool-metadata-label": "Meta verileri düzenle",
+	"bs-bookshelf-metadata-dlg-title": "Meta verileri düzenle"
 }
