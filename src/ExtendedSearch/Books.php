@@ -283,6 +283,6 @@ class Books implements
 	 * @inheritDoc
 	 */
 	public function getContextPriority(): int {
-		return 20;
+		return 91;
 	}
 }
