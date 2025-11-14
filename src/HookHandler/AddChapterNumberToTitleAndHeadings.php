@@ -185,10 +185,11 @@ class AddChapterNumberToTitleAndHeadings {
 			return $html;
 		}
 
-		for ( $index = 0; $index < count( $matches[0] ); $index++ ) {
+		foreach ( $matches[0] as $index => $match ) {
 			$replacement = '<span class="tocnumber hidden">' . $matches[2][$index];
+			$pattern = '#' . preg_quote( $match, '#' ) . '#';
 			$html = preg_replace(
-				'#' . $matches[0][$index] . '#',
+				$pattern,
 				$replacement,
 				$html
 			);
@@ -210,10 +211,11 @@ class AddChapterNumberToTitleAndHeadings {
 			return $html;
 		}
 
-		for ( $index = 0; $index < count( $matches[0] ); $index++ ) {
+		foreach ( $matches[0] as $index => $match ) {
 			$replacement = '<span class="bs-chapter-number hidden">' . $matches[2][$index];
+			$pattern = '#' . preg_quote( $match, '#' ) . '#';
 			$html = preg_replace(
-				'#' . $matches[0][$index] . '#',
+				$pattern,
 				$replacement,
 				$html
 			);
@@ -235,10 +237,11 @@ class AddChapterNumberToTitleAndHeadings {
 			return $html;
 		}
 
-		for ( $index = 0; $index < count( $matches[0] ); $index++ ) {
+		foreach ( $matches[0] as $index => $match ) {
 			$replacement = '<span class="mw-headline-number hidden">' . $matches[2][$index];
+			$pattern = '#' . preg_quote( $match, '#' ) . '#';
 			$html = preg_replace(
-				'#' . $matches[0][$index] . '#',
+				$pattern,
 				$replacement,
 				$html
 			);
