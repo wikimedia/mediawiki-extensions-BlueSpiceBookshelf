@@ -156,7 +156,6 @@
 	"bs-bookshelf-tag-searchinbook-error": "Error message when search in book failed.\n$1 - book name specified",
 	"bs-bookshelf-droplet-search-name": "Content droplet name",
 	"bs-bookshelf-droplet-search-description": "Content droplet description",
-	"bs-bookshelf-droplet-search-book": "Tag inspector field label in VisualEditor",
 	"bs-bookshelf-droplet-search-book-help": "Tag inspector field help in VisualEditor",
 	"bs-bookshelf-notification-subscription-set-book-title": "Label for the Notifications subscription set",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Error text in create new book dialog if book with this name already exists",
@@ -195,5 +194,9 @@
 	"bs-bookshelf-search-center-context-books-label": "Label for the search context field.\n$1 - number of books to search in, $2 - book names",
 	"bs-bookshelf-newbook-dlg-action-create-label": "Label for dialog action button to create dialog.\n{{Identical|Create}}",
 	"bs-bookshelf-formelement-book-input": "Form element label",
-	"bs-bookshelf-formelement-book-input-return-value-label": "Configuration item label for form element"
+	"bs-bookshelf-formelement-book-input-return-value-label": "Configuration item label for form element",
+	"bs-bookshelf-searchbook-ve-placeholder-label": "Label for input field to set placeholder label",
+	"bs-bookshelf-searchbook-ve-placeholder-help": "Help text for input field to set placeholder label",
+	"bs-bookshelf-searchbook-ve-placeholder-text": "Placeholder text for input field",
+	"bs-bookshelf-droplet-search-book-label": "Label for input field to select book to search in"
 }

@@ -61,21 +61,21 @@ class SearchInBook extends GenericTag {
 		$formSpec = new StandaloneFormSpecification();
 		$formSpec->setItems( [
 			[
-				'type' => 'text',
-				'name' => 'placeholder',
-				'label' => Message::newFromKey( 'bs-extendedsearch-tagsearch-ve-tagsearch-tb-placeholder' )->text(),
-				'help' => Message::newFromKey( 'bs-extendedsearch-tagsearch-ve-tagsearch-tb-placeholder-help' )->text(),
-				'widget_placeholder' => Message::newFromKey(
-					'bs-extendedsearch-tagsearch-ve-tagsearch-tb-placeholder-placeholder'
-				)->text(),
-			],
-			[
 				'type' => 'book',
 				'name' => 'book',
 				'required' => true,
-				'label' => Message::newFromKey( 'bs-bookshelf-droplet-search-book' )->text(),
+				'label' => Message::newFromKey( 'bs-bookshelf-droplet-search-book-label' )->text(),
 				'help' => Message::newFromKey( 'bs-bookshelf-droplet-search-book-help' )->text(),
 			],
+			[
+				'type' => 'text',
+				'name' => 'placeholder',
+				'label' => Message::newFromKey( 'bs-bookshelf-searchbook-ve-placeholder-label' )->text(),
+				'help' => Message::newFromKey( 'bs-bookshelf-searchbook-ve-placeholder-help' )->text(),
+				'widget_placeholder' => Message::newFromKey(
+					'bs-bookshelf-searchbook-ve-placeholder-text'
+				)->text(),
+			]
 		] );
 
 		return new ClientTagSpecification(
