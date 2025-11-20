@@ -10,7 +10,9 @@ use BlueSpice\Bookshelf\NumberHeadings;
 use BlueSpice\Bookshelf\NumberTOC;
 use MediaWiki\Config\Config;
 use MediaWiki\Config\ConfigFactory;
+use MediaWiki\Content\Content;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Title\Title;
 use Skin;
 
@@ -49,15 +51,66 @@ class AddChapterNumberToTitleAndHeadings {
 	/**
 	 * @param OutputPage $out
 	 * @param Skin $skin
+	 * @return void
+	 */
+	public function onBeforePageDisplay( OutputPage $out, Skin $skin ) {
+		if ( !$out->getTitle() ) {
+			return true;
+		}
+		$activeBook = $this->getActiveBook( $out->getTitle() );
+		if ( !$activeBook ) {
+			return true;
+		}
+		$bookID = $this->bookLookup->getBookId( $activeBook );
+
+		$chapterInfo = $this->getChapterInfo( $out->getTitle(), $activeBook );
+		if ( $chapterInfo instanceof ChapterInfo === false ) {
+			return true;
+		}
+		$number = $chapterInfo->getNumber();
+
+		$out->addJsConfigVars( 'bsActiveBookId', $bookID );
+		$out->addJsConfigVars( 'bsActiveChapterNumber', $number );
+	}
+
+	/**
+	 * @param bool &$skip
+	 * @param string &$prefix
+	 * @param Title $title
+	 * @param string $html
 	 * @return bool
 	 */
-	public function onBeforePageDisplay( $out, $skin ) {
-		$title = $out->getTitle();
+	public function onNumberHeadingsBeforeApply( &$skip, &$prefix, $title, $html ) {
+		$activeBook = $this->getActiveBook( $title );
+		if ( !$activeBook ) {
+			return true;
+		}
+		$chapterInfo = $this->getChapterInfo( $title, $activeBook );
+		if ( $chapterInfo instanceof ChapterInfo === false ) {
+			return true;
+		}
+		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) === true ) {
+			$skip = true;
+		}
+		return true;
+	}
+
+	/**
+	 * @param Content $content
+	 * @param Title $title
+	 * @param ParserOutput &$output
+	 * @return void
+	 */
+	public function onContentAlterParserOutput( Content $content, Title $title, ParserOutput &$output ) {
+		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) === false ) {
+			return true;
+		}
+
 		if ( !$title ) {
 			return true;
 		}
 
-		$activeBook = $this->getActiveBook( $out->getTitle() );
+		$activeBook = $this->getActiveBook( $title );
 		if ( !$activeBook ) {
 			return true;
 		}
@@ -66,54 +119,35 @@ class AddChapterNumberToTitleAndHeadings {
 			return true;
 		}
 
-		$displayTitle = $out->getPageTitle();
-		// If a title text is set in the book source it should be used instead of title
-		// and even instead of DISPLAYTITLE
-		if ( $this->config->get( 'BookshelfTitleDisplayText' ) ) {
-			$displayTitle = $chapterInfo->getName();
-		}
+		$this->setChapterNumberInFirstHeading( $activeBook, $chapterInfo, $output );
+		$this->setChapterNumberInContent( $activeBook, $chapterInfo, $output );
 
-		$number = $chapterInfo->getNumber();
-
-		$out->setPageTitle( "<span class='bs-chapter-number'>$number</span> $displayTitle" );
-		$bookID = $this->bookLookup->getBookId( $activeBook );
-		$out->addJsConfigVars( 'bsActiveBookId', $bookID );
-		$out->addJsConfigVars( 'bsActiveChapterNumber', $number );
 		return true;
 	}
 
 	/**
-	 * @param OutputPage $out
-	 * @param string &$text
-	 * @return bool
+	 * @param Title $activeBook
+	 * @param ChapterInfo $chapterInfo
+	 * @param ParserOutput $output
+	 * @return void
 	 */
-	public function onOutputPageBeforeHTML( OutputPage $out, &$text ) {
-		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) === false ) {
-			return true;
-		}
+	private function setChapterNumberInFirstHeading(
+		Title $activeBook, ChapterInfo $chapterInfo, ParserOutput $output
+	) {
+		$number = $chapterInfo->getNumber();
+		$output->setTitleText( "<span class='bs-chapter-number'>$number</span> {$chapterInfo->getName()}" );
+	}
 
-		$activeBook = $this->getActiveBook( $out->getTitle() );
-		if ( !$activeBook ) {
-			return true;
-		}
-		$chapterInfo = $this->getChapterInfo( $out->getTitle(), $activeBook );
-		if ( $chapterInfo instanceof ChapterInfo === false ) {
-			return true;
-		}
-
-		$children = $this->bookChapterLookup->getChildren( $this->activeBook, $chapterInfo );
-		$numberHeadings = new NumberHeadings();
-		$text = $numberHeadings->execute(
-			$chapterInfo->getNumber(),
-			$text
-		);
-		if ( !empty( $children ) ) {
-			// Otherwise the internal headlines would have same numbers as child node articles
-			$text = $this->removeHeadingNumberFromToc( $text );
-			$text = $this->removeHeadingNumberFromHeading( $text );
-			$text = $this->removeChapterNumberFromHeading( $text );
-			return true;
-		}
+	/**
+	 * @param Title $activeBook
+	 * @param ChapterInfo $chapterInfo
+	 * @param ParserOutput $output
+	 * @return void
+	 */
+	private function setChapterNumberInContent(
+		Title $activeBook, ChapterInfo $chapterInfo, ParserOutput $output
+	) {
+		$text = $output->getText();
 
 		$numberToc = new NumberTOC();
 		$text = $numberToc->execute(
@@ -121,14 +155,28 @@ class AddChapterNumberToTitleAndHeadings {
 			$text
 		);
 
-		return true;
+		$numberHeadings = new NumberHeadings();
+		$text = $numberHeadings->execute(
+			$chapterInfo->getNumber(),
+			$text
+		);
+
+		$children = $this->bookChapterLookup->getChildren( $this->activeBook, $chapterInfo );
+		if ( !empty( $children ) ) {
+			// Otherwise the internal headlines would have same numbers as child node articles
+			$text = $this->hideHeadingNumberInToc( $text );
+			$text = $this->hideChapterNumberInContent( $text );
+			$text = $this->hideHeadingNumberInContent( $text );
+		}
+
+		$output->setText( $text );
 	}
 
 	/**
 	 * @param string $html
 	 * @return string
 	 */
-	private function removeHeadingNumberFromToc( $html ) {
+	private function hideHeadingNumberInToc( $html ) {
 		$regEx = '#(<span class="tocnumber">)([\d\.]*?\s*?</span>)#';
 
 		$matches = [];
@@ -154,7 +202,7 @@ class AddChapterNumberToTitleAndHeadings {
 	 * @param string $html
 	 * @return string
 	 */
-	private function removeChapterNumberFromHeading( $html ) {
+	private function hideChapterNumberInContent( $html ) {
 		$regEx = '#(<span class="bs-chapter-number">)([\d\.]*?\s*?</span>)#';
 
 		$matches = [];
@@ -180,7 +228,7 @@ class AddChapterNumberToTitleAndHeadings {
 	 * @param string $html
 	 * @return string
 	 */
-	private function removeHeadingNumberFromHeading( $html ) {
+	private function hideHeadingNumberInContent( $html ) {
 		$regEx = '#(<span class="mw-headline-number">)([\d\.]*?\s*?</span>)#';
 
 		$matches = [];
@@ -200,32 +248,6 @@ class AddChapterNumberToTitleAndHeadings {
 		}
 
 		return $html;
-	}
-
-	/**
-	 * @param bool &$skip
-	 * @param string &$prefix
-	 * @param Title $title
-	 * @param string $html
-	 * @return bool
-	 */
-	public function onNumberHeadingsBeforeApply( &$skip, &$prefix, $title, $html ) {
-		$activeBook = $this->getActiveBook( $title );
-		if ( !$activeBook ) {
-			return true;
-		}
-		$chapterInfo = $this->getChapterInfo( $title, $activeBook );
-		if ( $chapterInfo instanceof ChapterInfo === false ) {
-			return true;
-		}
-		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) === true ) {
-			$children = $this->bookChapterLookup->getChildren( $activeBook, $chapterInfo );
-			if ( empty( $children ) ) {
-				// Skip only if chapter has no children
-				$skip = true;
-			}
-		}
-		return true;
 	}
 
 	/**

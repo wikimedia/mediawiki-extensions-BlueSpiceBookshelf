@@ -19,12 +19,12 @@ class NumberTOC {
 		}
 
 		for ( $index = 0; $index < count( $matches[0] ); $index++ ) {
-			$numberation = $matches[1][$index];
+			$tocNumber = $matches[1][$index];
 			$text = $matches[2][$index];
 
 			$html = preg_replace(
-				$this->getReplacementRegEx( $numberation, $text ),
-				$this->getReplacementHtml( $articleNumber, $numberation, $text ),
+				$this->getReplacementRegEx( $tocNumber, $text ),
+				$this->getReplacementHtml( $articleNumber, $tocNumber, $text ),
 				$html
 			);
 		}
@@ -33,12 +33,12 @@ class NumberTOC {
 	}
 
 	/**
-	 * @param string $numberation
+	 * @param string $tocNumber
 	 * @param string $text
 	 * @return string
 	 */
-	private function getReplacementRegEx( string $numberation, string $text ): string {
-		$regEx = '#<span class="tocnumber">' . preg_quote( $numberation, '#' );
+	private function getReplacementRegEx( string $tocNumber, string $text ): string {
+		$regEx = '#<span class="tocnumber">' . preg_quote( $tocNumber, '#' );
 		$regEx .= '</span> <span class="toctext">' . preg_quote( $text, '#' ) . '</span>#';
 
 		return $regEx;
@@ -46,13 +46,13 @@ class NumberTOC {
 
 	/**
 	 * @param string $articleNumber
-	 * @param string $numberation
+	 * @param string $tocNumber
 	 * @param string $text
 	 * @return string
 	 */
-	private function getReplacementHtml( string $articleNumber, string $numberation, string $text ): string {
+	private function getReplacementHtml( string $articleNumber, string $tocNumber, string $text ): string {
 		$html = '<span class="tocnumber">';
-		$html .= $articleNumber . '.' . $numberation;
+		$html .= $articleNumber . '.' . $tocNumber;
 		$html .= '</span> <span class="toctext">' . $text . '</span>';
 
 		return $html;
