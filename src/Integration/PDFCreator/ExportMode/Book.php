@@ -138,10 +138,8 @@ class Book implements IExportMode {
 			if ( $chapter->getType() === 'plain-text' ) {
 				$chapterPages[] = [
 					'type' => 'raw',
-					'label' => $chapter->getNumber() . ' ' . $chapter->getName(),
 					'params' => [
 						'tocnumber' => $chapter->getNumber(),
-						'toctext' => $chapter->getName()
 					]
 				];
 				continue;
@@ -150,10 +148,8 @@ class Book implements IExportMode {
 			$chapterPages[] = [
 				'type' => 'page',
 				'target' => $chapterTitle->getPrefixedDBkey(),
-				'label' => $chapter->getNumber() . ' ' . $chapter->getName(),
 				'params' => [
 					'tocnumber' => $chapter->getNumber(),
-					'toctext' => $chapter->getName()
 				]
 			];
 		}
