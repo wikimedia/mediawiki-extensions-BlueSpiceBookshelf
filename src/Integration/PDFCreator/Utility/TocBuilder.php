@@ -51,7 +51,6 @@ class TocBuilder extends DefaultTocBuilder {
 	private function getTocDOMContainer( array $pages, bool $embedPageToc = false ): DOMElement {
 		$dom = new DOMDocument();
 		$dom->loadXML( PDFCreator::HTML_STUB );
-		$body = $dom->getElementsByTagName( 'body' )->item( 0 );
 
 		$container = $dom->createElement( 'div' );
 		$container->setAttribute( 'class', 'pdfcreator-page pdfcreator-type-toc bs-bookshelf-toc' );
@@ -60,6 +59,10 @@ class TocBuilder extends DefaultTocBuilder {
 		$ul->setAttribute( 'class', 'toc' );
 
 		for ( $index = 0; $index < count( $pages ); $index++ ) {
+			$page = $pages[$index];
+			if ( $page->getType() === 'intro' || $page->getType() === 'outro' ) {
+				continue;
+			}
 			$index = $this->buildListItem( $ul, $pages, $embedPageToc, $index );
 		}
 
