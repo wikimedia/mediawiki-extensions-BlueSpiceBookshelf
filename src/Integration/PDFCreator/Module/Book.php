@@ -32,7 +32,16 @@ class Book extends Batch {
 			'content' => $html
 		] );
 		$page = $this->exportPageFactory->getPageFromSpec( $pageSpec, $this->template, $context, $this->workspace );
-		array_unshift( $pages, $page );
+
+		// Toc page should be placed after intro page if it exists.
+		$firstPage = array_shift( $pages );
+		if ( $firstPage->getType() === 'intro' ) {
+			array_unshift( $pages, $page );
+			array_unshift( $pages, $firstPage );
+		} else {
+			array_unshift( $pages, $firstPage );
+			array_unshift( $pages, $page );
+		}
 	}
 
 	/**

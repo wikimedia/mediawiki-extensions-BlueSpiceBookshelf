@@ -36,3 +36,7 @@
 #n-book-panel .book-title {
 	font-size: 22.4px; /* stylelint-disable-line declaration-property-unit-disallowed-list */
 }
+
+#book-panel-tree .bs-chapter-number {
+	margin-right: 0.3em;
+}

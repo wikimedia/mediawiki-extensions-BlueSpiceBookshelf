@@ -252,6 +252,11 @@
 					"class": "BlueSpice\\Bookshelf\\Integration\\PDFCreator\\PageParams\\BookParams",
 					"services": [ "TitleFactory", "BSBookshelfBookMetaLookup", "ObjectFactory" ]
 				}
+			},
+			"StyleBlocksProvider": {
+				"BookshelfStyleBlocks": {
+					"class": "BlueSpice\\Bookshelf\\Integration\\PDFCreator\\StyleBlockProvider\\StyleBlocks"
+				}
 			}
 		},
 		"BlueSpiceSMWConnector": {
@@ -805,9 +810,6 @@
 				"ui/data/tree/BookNavigationTree.js",
 				"ui/data/tree/BookNavigationTreeItem.js"
 			],
-			"styles": [
-				"bluespice.book.navigation.css"
-			],
 			"dependencies": [
 				"ext.oojsplus.navigation.treePanel"
 			]
@@ -890,10 +892,6 @@
 		"addEditBook": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SkinTemplateNavigation\\AddEditBook"
 		},
-		"heading-numberation": {
-			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\NumberHeadingsHandler",
-			"services": [ "ConfigFactory" ]
-		},
 		"add-chapter-number-to-title-and-headings": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\AddChapterNumberToTitleAndHeadings",
 			"services": [ "ConfigFactory", "BSBookshelfBookContextProviderFactory", "BSBookshelfBookChapterLookup", "BSBookshelfBookLookup" ]
@@ -959,7 +957,7 @@
 		],
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface",
-		"OutputPageBeforeHTML": "add-chapter-number-to-title-and-headings",
+		"ContentAlterParserOutput": "add-chapter-number-to-title-and-headings",
 		"MultiContentSave": "book-source-actions",
 		"PageDeleteComplete": "book-source-actions",
 		"PageMoveComplete": [
