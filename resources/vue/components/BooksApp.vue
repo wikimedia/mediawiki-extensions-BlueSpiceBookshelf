@@ -19,6 +19,7 @@
 		<div
 			id="bs-books-aria-lve"
 			aria-live="polite"
+			class="visually-hidden"
 		>{{ ariaLiveInitial }}</div>
 	</div>
 	<div class="bs-books-bookshelfs-empty" v-else>
