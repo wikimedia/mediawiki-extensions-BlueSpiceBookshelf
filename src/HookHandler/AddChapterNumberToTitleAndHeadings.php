@@ -19,6 +19,8 @@ use Skin;
 
 class AddChapterNumberToTitleAndHeadings {
 
+	public const ALREADY_PROCESSED = 'bluespicebookshelf-already-processed';
+
 	/** @var Config */
 	private $config;
 
@@ -111,6 +113,10 @@ class AddChapterNumberToTitleAndHeadings {
 			return true;
 		}
 
+		if ( $output->getExtensionData( self::ALREADY_PROCESSED ) !== null ) {
+			return true;
+		}
+
 		if ( !$title ) {
 			return true;
 		}
@@ -126,6 +132,7 @@ class AddChapterNumberToTitleAndHeadings {
 
 		$this->setChapterNumberInFirstHeading( $activeBook, $chapterInfo, $output );
 		$this->setChapterNumberInContent( $activeBook, $chapterInfo, $output );
+		$output->setExtensionData( self::ALREADY_PROCESSED, true );
 
 		return true;
 	}
