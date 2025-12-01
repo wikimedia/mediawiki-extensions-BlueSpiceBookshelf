@@ -16,6 +16,7 @@ use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Parser\Parsoid\PageBundleParserOutputConverter;
 use MediaWiki\Title\Title;
 use Skin;
+use TextContent;
 
 class AddChapterNumberToTitleAndHeadings {
 
@@ -106,6 +107,13 @@ class AddChapterNumberToTitleAndHeadings {
 	 */
 	public function onContentAlterParserOutput( Content $content, Title $title, ParserOutput &$output ) {
 		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) === false ) {
+			return true;
+		}
+
+		if ( !$output->hasText() ) {
+			return true;
+		}
+		if ( !( $content instanceof TextContent ) ) {
 			return true;
 		}
 
