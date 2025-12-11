@@ -12,7 +12,7 @@ class AddEditBook implements SkinTemplateNavigation__UniversalHook {
 	 * @param SkinTemplate $sktemplate
 	 * @return bool
 	 */
-	protected function skipProcessing( SkinTemplate $sktemplate ) {
+	protected function shouldSkipProcessing( SkinTemplate $sktemplate ) {
 		$title = $sktemplate->getTitle();
 		if ( !$title ) {
 			return true;
@@ -35,7 +35,7 @@ class AddEditBook implements SkinTemplateNavigation__UniversalHook {
 	 * @inheritDoc
 	 */
 	public function onSkinTemplateNavigation__Universal( $sktemplate, &$links ): void {
-		if ( $this->skipProcessing( $sktemplate ) ) {
+		if ( $this->shouldSkipProcessing( $sktemplate ) ) {
 			return;
 		}
 
@@ -47,11 +47,11 @@ class AddEditBook implements SkinTemplateNavigation__UniversalHook {
 		] );
 
 		// Add real "Edit source"
-		$links['views']['menueditsource'] = $links['views']['edit'];
-		$links['views']['menueditsource']['id'] = 'ca-editbooksource';
-		$links['views']['menueditsource']['text']
+		$links['views']['editbooksource'] = $links['views']['edit'];
+		$links['views']['editbooksource']['id'] = 'ca-editbooksource';
+		$links['views']['editbooksource']['text']
 			= $sktemplate->msg( 'bs-bookshelf-action-editbook' )->text();
-		$links['views']['menueditsource']['href'] = $sktemplate->getTitle()->getLinkURL( [
+		$links['views']['editbooksource']['href'] = $sktemplate->getTitle()->getLinkURL( [
 			'action' => 'editbooksource'
 		] );
 	}
