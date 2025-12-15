@@ -65,7 +65,7 @@ class BookParams implements IPageParamsProvider {
 			if ( $key === 'identifier' ) {
 				$key = 'documentidentifier';
 			}
-			$params['book-' . $key ] = $item;
+			$params['book-' . $key ] = htmlspecialchars( $item );
 		}
 
 		return $params;
