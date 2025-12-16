@@ -68,6 +68,10 @@ class BookParams implements IPageParamsProvider {
 			$params['book-' . $key ] = htmlspecialchars( $item );
 		}
 
+		if ( !isset( $params['book-title'] ) ) {
+			$params['book-title'] = $title->getText();
+		}
+
 		return $params;
 	}
 
