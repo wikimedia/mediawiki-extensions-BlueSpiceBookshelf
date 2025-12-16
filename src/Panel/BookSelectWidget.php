@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\Panel;
 
 use BlueSpice\Bookshelf\BookLookup;
+use BlueSpice\Bookshelf\BookMetaLookup;
 use MediaWiki\Language\RawMessage;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
@@ -21,25 +22,29 @@ class BookSelectWidget extends SimpleDropdown {
 	/** @var BookLookup */
 	private $bookLookup = null;
 
+	/** @var BookMetaLookup */
+	private $bookMetaLookup = null;
+
 	/** @var TitleFactory */
 	private $titleFactory;
 
 	/**
-	 *
 	 * @param array $options
 	 * @param Title $activeBook
 	 * @param Title $title
 	 * @param BookLookup $bookLookup
+	 * @param BookMetaLookup $bookMetaLookup
 	 * @param TitleFactory $titleFactory
 	 */
 	public function __construct( $options, Title $activeBook, Title $title,
-		BookLookup $bookLookup, TitleFactory $titleFactory
+		BookLookup $bookLookup, BookMetaLookup $bookMetaLookup, TitleFactory $titleFactory
 	) {
 		parent::__construct( $options );
 
 		$this->activeBook = $activeBook;
 		$this->title = $title;
 		$this->bookLookup = $bookLookup;
+		$this->bookMetaLookup = $bookMetaLookup;
 		$this->titleFactory = $titleFactory;
 	}
 
@@ -47,7 +52,11 @@ class BookSelectWidget extends SimpleDropdown {
 	 * @return Message
 	 */
 	public function getText(): Message {
-		return new RawMessage( $this->getBookTitle( $this->activeBook ) );
+		$bookTitle = $this->bookMetaLookup->getMetaValueForBook( $this->activeBook, 'title' );
+		if ( $bookTitle === '' ) {
+			$bookTitle = $this->getBookTitle( $this->activeBook );
+		}
+		return new RawMessage( $bookTitle );
 	}
 
 	/**
@@ -62,7 +71,12 @@ class BookSelectWidget extends SimpleDropdown {
 			$href = $this->title->getLocalURL( "book=$text" );
 			$links[] = [
 				'href' => $href,
-				'text' => $book->getName()
+				'text' => $book->getName(),
+				'title' => $book->getName(),
+				'aria' => [
+					'label' => $book->getName()
+				]
+
 			];
 		}
 		return [
