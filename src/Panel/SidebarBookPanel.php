@@ -4,6 +4,7 @@ namespace BlueSpice\Bookshelf\Panel;
 
 use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
+use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
@@ -38,6 +39,9 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	/** @var ChapterLookup */
 	private $chapterLookup = null;
 
+	/** @var BookMetaLookup */
+	private $bookMetaLookup = null;
+
 	/** @var TreeDataGenerator */
 	private $treeDataGenerator = null;
 
@@ -47,17 +51,20 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 * @param BookContextProviderFactory $bookContextProviderFactory
 	 * @param BookLookup $bookLookup
 	 * @param ChapterLookup $chapterLookup
+	 * @param BookMetaLookup $bookMetaLookup
 	 * @param TreeDataGenerator $treeDataGenerator
 	 */
 	public function __construct(
 		Title $title, TitleFactory $titleFactory, BookContextProviderFactory $bookContextProviderFactory,
-		BookLookup $bookLookup, ChapterLookup $chapterLookup, TreeDataGenerator $treeDataGenerator
+		BookLookup $bookLookup, ChapterLookup $chapterLookup, BookMetaLookup $bookMetaLookup,
+		 TreeDataGenerator $treeDataGenerator
 	) {
 		$this->title = $title;
 		$this->titleFactory = $titleFactory;
 		$this->bookContextProviderFactory = $bookContextProviderFactory;
 		$this->bookLookup = $bookLookup;
 		$this->chapterLookup = $chapterLookup;
+		$this->bookMetaLookup = $bookMetaLookup;
 		$this->treeDataGenerator = $treeDataGenerator;
 	}
 
@@ -143,6 +150,7 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 				$activeBook,
 				$this->title,
 				$this->bookLookup,
+				$this->bookMetaLookup,
 				$this->titleFactory
 			);
 		}

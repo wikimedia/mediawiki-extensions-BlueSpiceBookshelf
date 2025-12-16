@@ -4,6 +4,7 @@ namespace BlueSpice\Bookshelf\HookHandler;
 
 use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
+use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\Panel\ChapterPagerPanel;
 use BlueSpice\Bookshelf\Panel\MainLinkPanel;
@@ -31,6 +32,9 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 	/** @var ChapterLookup */
 	private $chapterLookup = null;
 
+	/** @var BookMetaLookup */
+	private $bookMetaLookup;
+
 	/** @var TreeDataGenerator */
 	private $treeDataGenerator = null;
 
@@ -40,18 +44,21 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 	 * @param BookContextProviderFactory $bookContextProviderFactory
 	 * @param BookLookup $bookLookup
 	 * @param ChapterLookup $chapterLookup
+	 * @param BookMetaLookup $bookMetaLookup
 	 * @param TreeDataGenerator $treeDataGenerator
 	 */
 	public function __construct(
 		ConfigFactory $configFactory, TitleFactory $titleFactory,
 		BookContextProviderFactory $bookContextProviderFactory,	BookLookup $bookLookup,
-		ChapterLookup $chapterLookup, TreeDataGenerator $treeDataGenerator
+		ChapterLookup $chapterLookup, BookMetaLookup $bookMetaLookup,
+		TreeDataGenerator $treeDataGenerator
 	) {
 		$this->configFactory = $configFactory;
 		$this->titleFactory = $titleFactory;
 		$this->bookContextProviderFactory = $bookContextProviderFactory;
 		$this->bookLookup = $bookLookup;
 		$this->chapterLookup = $chapterLookup;
+		$this->bookMetaLookup = $bookMetaLookup;
 		$this->treeDataGenerator = $treeDataGenerator;
 	}
 
@@ -84,6 +91,7 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 		$bookLookup = $this->bookLookup;
 		$chapterLookup = $this->chapterLookup;
 		$treeDataGenerator = $this->treeDataGenerator;
+		$bookMetaLookup = $this->bookMetaLookup;
 
 		$registry->register(
 			"SidebarPrimaryTabPanels",
@@ -91,11 +99,11 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 				'book' => [
 					'factory' => static function () use (
 						$title, $titleFactory, $bookContextProviderFactory,
-						$bookLookup, $chapterLookup, $treeDataGenerator
+						$bookLookup, $chapterLookup, $bookMetaLookup, $treeDataGenerator
 					) {
 						return new SidebarBookPanel(
 							$title, $titleFactory, $bookContextProviderFactory, $bookLookup,
-							$chapterLookup, $treeDataGenerator
+							$chapterLookup, $bookMetaLookup, $treeDataGenerator
 						);
 					}
 				]

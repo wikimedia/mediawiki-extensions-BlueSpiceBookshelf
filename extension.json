@@ -837,7 +837,8 @@
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\CommonUserInterface",
 			"services": [
 				"ConfigFactory", "TitleFactory", "BSBookshelfBookContextProviderFactory",
-				"BSBookshelfBookLookup", "BSBookshelfBookChapterLookup", "MWStakeCommonUITreeDataGenerator"
+				"BSBookshelfBookLookup", "BSBookshelfBookChapterLookup",
+				"BSBookshelfBookMetaLookup", "MWStakeCommonUITreeDataGenerator"
 			]
 		},
 		"discovery-skin": {
