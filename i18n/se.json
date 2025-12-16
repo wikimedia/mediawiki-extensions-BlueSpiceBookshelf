@@ -16,15 +16,15 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "Veršuvdna",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Girji",
 	"bs-bookshelf-booknav-book-label": "Girji",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Oza",
 	"bs-bookshelf-search-center-filter-books-label": "Girji",
 	"bs-bookshelf-chapter-plain-text-input-label": "Teaksta",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Teaksta",
 	"bs-bookshelf-metadata-dlg-action-save-label": "Vurke",
 	"bs-bookshelf-newbook-dlg-title": "Ráhkat ođđa girjji",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Lasit",
 	"bs-bookshelf-droplet-search-name": "Oza girjjis",
 	"bs-bookshelf-droplet-search-book": "Girji",
 	"bs-bookshelf-notification-subscription-set-book-title": "Girji",
-	"bs-bookshelf-actionmenuentry-create-new-book": "Ráhkat ođđa girjji",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Oza",
-	"bs-bookshelf-massadd-dlg-save-action-label": "Lasit"
+	"bs-bookshelf-actionmenuentry-create-new-book": "Ráhkat ođđa girjji"
 }

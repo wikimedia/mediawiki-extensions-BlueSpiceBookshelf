@@ -16,15 +16,15 @@
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Sillee",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kirje",
 	"bs-bookshelf-booknav-book-label": "Kirje",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Uusâ",
 	"bs-bookshelf-search-center-filter-books-label": "Kirje",
 	"bs-bookshelf-chapter-plain-text-input-label": "Tekstâ",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Tekstâ",
 	"bs-bookshelf-metadata-dlg-action-save-label": "Vuorkkii",
 	"bs-bookshelf-newbook-dlg-title": "Räähti uđđâ kirje",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Lasseet",
 	"bs-bookshelf-droplet-search-name": "Uusâ kirjeest",
 	"bs-bookshelf-droplet-search-book": "Kirje",
 	"bs-bookshelf-notification-subscription-set-book-title": "Kirje",
-	"bs-bookshelf-actionmenuentry-create-new-book": "Räähti uđđâ kirje",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Uusâ",
-	"bs-bookshelf-massadd-dlg-save-action-label": "Lasseet"
+	"bs-bookshelf-actionmenuentry-create-new-book": "Räähti uđđâ kirje"
 }
