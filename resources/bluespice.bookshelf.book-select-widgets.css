@@ -11,6 +11,7 @@
 	border-radius: 5px;
 	position: relative;
 	text-decoration: none;
+	text-wrap: auto;
 	color: #252525;
 }
 
@@ -20,4 +21,10 @@
 
 .book-select-widget .dropdown-menu {
 	width: calc( 100% - 30px );
+}
+
+.book-select-widget .dropdown-menu .dropdown-item {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
