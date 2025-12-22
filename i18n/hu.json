@@ -123,7 +123,6 @@
 	"bs-bookshelf-tag-searchinbook-error": "Adj meg egy érvényes könyvnevet",
 	"bs-bookshelf-droplet-search-name": "Keresés egy könyvben",
 	"bs-bookshelf-droplet-search-description": "Lapok keresése egy könyvben",
-	"bs-bookshelf-droplet-search-book": "Könyv",
 	"bs-bookshelf-droplet-search-book-help": "A könyv neve, amelyben keresel",
 	"bs-bookshelf-notification-subscription-set-book-title": "Könyv",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "A könyvet nem lehetett létrehozni, mert egy ilyen nevű könyv már létezik.",

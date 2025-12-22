@@ -147,7 +147,6 @@
 	"bs-bookshelf-tag-searchinbook-error": "Especifica un nome de libro válido",
 	"bs-bookshelf-droplet-search-name": "Procurar nun libro",
 	"bs-bookshelf-droplet-search-description": "Procurar páxinas nun libro",
-	"bs-bookshelf-droplet-search-book": "Libro",
 	"bs-bookshelf-droplet-search-book-help": "Nome do libro no que se vai buscar",
 	"bs-bookshelf-notification-subscription-set-book-title": "Libro",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Non se puido crear o libro porque xa existe un libro con mesmo nome",
@@ -186,5 +185,9 @@
 	"bs-bookshelf-search-center-context-books-label": "{{PLURAL:$1|no libro|nos libros}} '''$2'''",
 	"bs-bookshelf-newbook-dlg-action-create-label": "Crear",
 	"bs-bookshelf-formelement-book-input": "Libro",
-	"bs-bookshelf-formelement-book-input-return-value-label": "Propiedade de retorno"
+	"bs-bookshelf-formelement-book-input-return-value-label": "Propiedade de retorno",
+	"bs-bookshelf-searchbook-ve-placeholder-label": "Texto de marcador de posición para o campo de busca",
+	"bs-bookshelf-searchbook-ve-placeholder-help": "O texto que aparece aquí móstrase como un marcador de posición no campo de busca",
+	"bs-bookshelf-searchbook-ve-placeholder-text": "Escribe para procurar...",
+	"bs-bookshelf-droplet-search-book-label": "Selecciona un libro para a procura"
 }
