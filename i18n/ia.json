@@ -146,7 +146,6 @@
 	"bs-bookshelf-tag-searchinbook-error": "Specifica un nomine de libro valide",
 	"bs-bookshelf-droplet-search-name": "Cercar in un libro",
 	"bs-bookshelf-droplet-search-description": "Cercar paginas in un libro",
-	"bs-bookshelf-droplet-search-book": "Libro",
 	"bs-bookshelf-droplet-search-book-help": "Nomine del libro in le qual cercar",
 	"bs-bookshelf-notification-subscription-set-book-title": "Libro",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Le libro non poteva esser create perque existe ja un libro con iste nomine",

@@ -98,7 +98,6 @@
 	"bs-bookshelf-tag-searchinbook-error": "Zadejte platný název knihy",
 	"bs-bookshelf-droplet-search-name": "Hledejte v knize",
 	"bs-bookshelf-droplet-search-description": "Vyhledejte stránky v knize",
-	"bs-bookshelf-droplet-search-book": "Kniha",
 	"bs-bookshelf-droplet-search-book-help": "Název knihy, ve které se má hledat",
 	"bs-bookshelf-notification-subscription-set-book-title": "Kniha",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Knihu nebylo možné vytvořit, protože kniha s tímto názvem již existuje",

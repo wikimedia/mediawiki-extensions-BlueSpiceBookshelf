@@ -164,7 +164,6 @@
 	"bs-bookshelf-tag-searchinbook-error": "Spécifiez un nom de livre valide",
 	"bs-bookshelf-droplet-search-name": "Rechercher dans un livre",
 	"bs-bookshelf-droplet-search-description": "Rechercher des pages dans un livre",
-	"bs-bookshelf-droplet-search-book": "Livre",
 	"bs-bookshelf-droplet-search-book-help": "Nom du livre dans lequel rechercher",
 	"bs-bookshelf-notification-subscription-set-book-title": "Livre",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Le livre n'a pas pu être créé car un livre portant ce nom existe déjà",

@@ -152,7 +152,6 @@
 	"bs-bookshelf-tag-searchinbook-error": "Geef een geldige boeknaam op",
 	"bs-bookshelf-droplet-search-name": "Zoek in een boek",
 	"bs-bookshelf-droplet-search-description": "Zoeken naar pagina’s in een boek",
-	"bs-bookshelf-droplet-search-book": "Boek",
 	"bs-bookshelf-droplet-search-book-help": "Naam van het boek waarin gezocht moet worden",
 	"bs-bookshelf-notification-subscription-set-book-title": "Boek",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Het boek kon niet worden aangemaakt omdat er al een boek met deze naam bestaat",
