@@ -214,5 +214,9 @@
 	"bs-bookshelf-sesp-books-desc": "书籍此页是所属",
 	"bs-bookshelf-newbook-dlg-action-create-label": "创建",
 	"bs-bookshelf-formelement-book-input": "书籍",
-	"bs-bookshelf-formelement-book-input-return-value-label": "返回属性"
+	"bs-bookshelf-formelement-book-input-return-value-label": "返回属性",
+	"bs-bookshelf-searchbook-ve-placeholder-label": "搜索框中的占位符文本",
+	"bs-bookshelf-searchbook-ve-placeholder-help": "此处显示的文本作为搜索字段中的占位符",
+	"bs-bookshelf-searchbook-ve-placeholder-text": "输入什么就能搜索了……",
+	"bs-bookshelf-droplet-search-book-label": "选择书籍进行搜索"
 }

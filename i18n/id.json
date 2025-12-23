@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Fafau06",
 			"Rebeccayoga",
 			"Syman51",
 			"Veracious"
@@ -21,5 +22,6 @@
 	"bs-bookshelf-ve-bookmeta-attr-version-help": "Atur versi buku",
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Buku",
 	"bs-bookshelf-ve-bookshelf-attr-book-help": "Pertahankan buku kepada",
-	"bs-bookshelf-actionmenuentry-new-book": "Buku baru"
+	"bs-bookshelf-actionmenuentry-new-book": "Buku baru",
+	"bs-bookshelf-searchbook-ve-placeholder-text": "Ketik untuk mencari..."
 }
