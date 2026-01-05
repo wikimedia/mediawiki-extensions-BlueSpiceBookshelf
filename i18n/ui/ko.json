@@ -3,7 +3,8 @@
 		"authors": [
 			"Gongsoonyee",
 			"SeoJeongHo",
-			"Ykhwong"
+			"Ykhwong",
+			"YeBoy371"
 		]
 	},
 	"bookshelfbookui": "책 편집기",
@@ -68,9 +69,15 @@
 	"bs-bookshelfui-bookmetatag-author2": "저자 2",
 	"bs-bookshelfui-bookmetatag-docummentidentifier": "문서 ID",
 	"bs-bookshelfui-bookmetatag-docummenttype": "문서 유형",
+	"bs-bookshelfui-bookmetatag-department": "부서",
 	"bs-bookshelfui-bookmetatag-version": "버전",
 	"bs-bookshelfui-extjs-tooltip-copy": "복사",
+	"right-bookshelfbookmanager-viewspecialpage": "[[Special:BookshelfBookManager]] 특수 문서로 접근",
+	"action-bookshelfbookmanager-viewspecialpage": "[[Special:BookshelfBookManager]] 특수 문서로 접근",
+	"right-bookshelfbookui-viewspecialpage": "[[Special:BookshelfBookUI]] 특수 문서로 접근",
+	"action-bookshelfbookui-viewspecialpage": "[[Special:BookshelfBookUI]] 특수 문서로 접근",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-limit": "반환할 결과 수",
+	"prefs-bookshelfui": "책장 특수 문서",
 	"bs-bookshelfui-prof-defaultview": "기본 뷰",
 	"bs-bookshelfui-prof-defaultview-grid": "그리드",
 	"bs-bookshelfui-prof-defaultview-images": "이미지",
@@ -78,5 +85,7 @@
 	"bs-bookshelfui-chapterpager-next": "다음",
 	"bs-bookshelfui-panel-navigation-text": "책 둘러보기로",
 	"bs-bookshelfui-panel-navigation-title": "책 둘러보기로 돌아가기",
-	"bs-bookshelfui-panel-navigation-aria-label": "책 둘러보기로"
+	"bs-bookshelfui-panel-navigation-aria-label": "책 둘러보기로",
+	"bs-bookshelfui-bookmetatag-bookshelf": "책장",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "책장 이미지"
 }
