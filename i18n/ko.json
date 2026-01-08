@@ -89,5 +89,7 @@
 	"bs-books-overview-page-bookshelf-empty-text": "현재 책이 없습니다. 지금 첫 번째 책을 만드세요!",
 	"bs-bookshelf-export-pdf-notification-done": "PDF 내보내기 완료",
 	"bs-bookshelf-sesp-books": "책",
-	"bs-bookshelf-newbook-dlg-action-create-label": "만들기"
+	"bs-bookshelf-newbook-dlg-action-create-label": "만들기",
+	"bs-bookshelf-searchbook-ve-placeholder-text": "검색하려면 입력하세요...",
+	"bs-bookshelf-droplet-search-book-label": "검색할 책 선택"
 }
