@@ -73,6 +73,7 @@ class AddChapterNumberToTitleAndHeadings {
 		}
 		$number = $chapterInfo->getNumber();
 
+		$out->addJsConfigVars( 'bsActiveBook', $activeBook->getPrefixedDBkey() );
 		$out->addJsConfigVars( 'bsActiveBookId', $bookID );
 		$out->addJsConfigVars( 'bsActiveChapterNumber', $number );
 	}
