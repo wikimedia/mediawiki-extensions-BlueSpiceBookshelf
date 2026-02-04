@@ -48,7 +48,7 @@ class SearchInBook extends GenericTag {
 	public function getParamDefinition(): ?array {
 		return [
 			'placeholder' => ( new StringValue() )->setDefaultValue(
-				Message::newFromKey( 'bs-extendedsearch-tagsearch-ve-tagsearch-tb-placeholder' )->text()
+				Message::newFromKey( 'bs-bookshelf-searchbook-ve-placeholder-text' )->text()
 			),
 			'book' => ( new StringValue() )->setRequired( true ),
 		];
