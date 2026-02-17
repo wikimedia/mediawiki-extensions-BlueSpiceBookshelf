@@ -24,5 +24,7 @@
 	"bs-bookshelf-droplet-search-name": "Uusâ kirjeest",
 	"bs-bookshelf-droplet-search-book": "Kirje",
 	"bs-bookshelf-notification-subscription-set-book-title": "Kirje",
-	"bs-bookshelf-actionmenuentry-create-new-book": "Räähti uđđâ kirje"
+	"bs-bookshelf-actionmenuentry-create-new-book": "Räähti uđđâ kirje",
+	"bs-bookshelf-booknav-searchbox-placeholder": "Uusâ",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Lasseet"
 }

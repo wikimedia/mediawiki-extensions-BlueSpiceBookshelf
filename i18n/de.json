@@ -155,7 +155,7 @@
 	"bs-books-overview-page-book-action-metadata-text": "Metadaten bearbeiten",
 	"bs-books-overview-page-book-action-metadata-title": "Metadaten für Buch $1 bearbeiten",
 	"bs-bookshelf-massadd-dlg-save-action-label": "Hinzufügen",
-	"bs-bookshelf-tag-searchinbook-error": "Gib einen gültigen Buchnamen an",
+	"bs-bookshelf-tag-searchinbook-error": "{{#FORMAL:Gib|Geben Sie}} einen gültigen Buchnamen an",
 	"bs-bookshelf-droplet-search-name": "In einem Buch suchen",
 	"bs-bookshelf-droplet-search-description": "Nach Seiten in einem Buch suchen",
 	"bs-bookshelf-droplet-search-book": "Buch",

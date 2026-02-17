@@ -58,7 +58,7 @@
 	"bs-bookshelfui-bookmanager-deletion-reason": "Eliminado por BookManager",
 	"bs-bookshelfui-bookmanager-deletion-error-pageid": "No se pudo encontrar el artículo indicado.",
 	"bs-bookshelfui-bookmanager-deletion-error-permission": "Careces de permisos suficientes para ejecutar esta acción.",
-	"bs-bookshelfui-bookmanager-deletion-error-unkown": "Se produjo un error desconocido. Ponte en contacto con el personal técnico.",
+	"bs-bookshelfui-bookmanager-deletion-error-unkown": "Se produjo un error desconocido. {{#FORMAL:Ponte|Póngase}} en contacto con el personal técnico.",
 	"bs-bookshelfui-bookmetatag-title": "Título",
 	"bs-bookshelfui-bookmetatag-subtitle": "Subtítulo",
 	"bs-bookshelfui-bookmetatag-author1": "Autor 1",
