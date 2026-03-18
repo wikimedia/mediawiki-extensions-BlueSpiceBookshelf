@@ -188,5 +188,7 @@
 	"bs-bookshelf-searchbook-ve-placeholder-label": "Placeholder text for search field",
 	"bs-bookshelf-searchbook-ve-placeholder-help": "The text shown here is displayed as a placeholder in the search field",
 	"bs-bookshelf-searchbook-ve-placeholder-text": "Type to search...",
-	"bs-bookshelf-droplet-search-book-label": "Select book for search"
+	"bs-bookshelf-droplet-search-book-label": "Select book for search",
+	"bs-bookshelf-entrypoint-action-book-aria-label": "Create book",
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Create book"
 }

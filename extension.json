@@ -838,7 +838,7 @@
 			"services": [
 				"ConfigFactory", "TitleFactory", "BSBookshelfBookContextProviderFactory",
 				"BSBookshelfBookLookup", "BSBookshelfBookChapterLookup",
-				"BSBookshelfBookMetaLookup", "MWStakeCommonUITreeDataGenerator"
+				"BSBookshelfBookMetaLookup", "MWStakeCommonUITreeDataGenerator", "PermissionManager"
 			]
 		},
 		"discovery-skin": {
