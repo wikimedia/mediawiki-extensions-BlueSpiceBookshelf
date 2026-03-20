@@ -6,8 +6,7 @@ class AddResources extends \BlueSpice\Hook\BeforePageDisplay {
 
 	protected function doProcess() {
 		$this->out->addModules( [
-			'ext.bluespice.bookshelf.navigationTab',
-			'mwstake.component.commonui.tree-component'
+			'ext.bluespice.bookshelf.navigationTab'
 		] );
 
 		$this->out->addModuleStyles( [

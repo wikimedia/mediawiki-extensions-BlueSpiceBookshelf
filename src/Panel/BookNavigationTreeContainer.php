@@ -170,11 +170,4 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 	public function getRequiredRLStyles(): array {
 		return [];
 	}
-
-	/**
-	 * @return array
-	 */
-	public function getRequiredRLModules(): array {
-		return [ 'mwstake.component.commonui.tree-component' ];
-	}
 }
