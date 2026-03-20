@@ -91,7 +91,7 @@ class BookNav extends GenericTag {
 	public function getResourceLoaderModules(): ?array {
 		return [
 			'ext.bluespice.bookshelf.bookNavFilter',
-			'mwstake.component.commonui.tree-component',
+			'mwstake.component.commonui.component',
 			'ext.bluespice.bookshelf.booknav.styles'
 		];
 	}
