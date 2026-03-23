@@ -80,6 +80,69 @@ class ChapterLookup {
 	}
 
 	/**
+	 * Get first valid chapter title for a book, ignoring chapters with invalid titles
+	 *
+	 * @param Title $bookTitle
+	 * @param array $ignoreChapters
+	 *
+	 * @return Title|null if no valid chapter title is found
+	 */
+	public function getFirstChapterTitle( Title $bookTitle, array $ignoreChapters = [] ): ?Title {
+		$db = $this->loadBalancer->getConnection( DB_REPLICA );
+		$query = $db->newSelectQueryBuilder()
+			->select( [ 'chapter_id', 'chapter_namespace', 'chapter_title' ] )
+			->from( 'bs_books', 'b' )
+			->from( 'bs_book_chapters', 'bc' )
+			->join( 'bs_book_chapters', 'bc', [ 'b.book_id = bc.chapter_book_id' ] )
+			->where( [
+				'b.book_namespace' => $bookTitle->getNamespace(),
+				'b.book_title' => $bookTitle->getDBKey(),
+				'bc.chapter_namespace IS NOT NULL'
+			] )
+			->orderBy( [ 'bc.chapter_number' ], 'ASC' )
+			->limit( 1 );
+
+		if ( !empty( $ignoreChapters ) ) {
+			// Mechanism to retry query if chapter title is invalid, ignoring previously found invalid chapter ids
+			$query->where( 'bc.chapter_id NOT IN (' . $db->makeList( $ignoreChapters ) . ')' );
+		}
+		$res = $query->fetchRow();
+
+		if ( !$res ) {
+			return null;
+		}
+		$title = $this->titleFactory->makeTitleSafe(
+			$res->chapter_namespace,
+			$res->chapter_title
+		);
+		if ( !$title ) {
+			return $this->getFirstChapterTitle( $bookTitle, array_merge( $ignoreChapters, [ $res->chapter_id ] ) );
+		}
+		return $title;
+	}
+
+	/**
+	 * @param Title $bookTitle
+	 * @return int
+	 */
+	public function countChapters( Title $bookTitle ): int {
+		$count = $this->loadBalancer->getConnection( DB_REPLICA )->newSelectQueryBuilder()
+			->select( [ 'COUNT(*) as chapter_count' ] )
+			->table( 'bs_books', 'b' )
+			->table( 'bs_book_chapters', 'bc' )
+			->where( [
+				'b.book_namespace' => $bookTitle->getNamespace(),
+				'b.book_title' => $bookTitle->getDBKey(),
+			] )
+			->join( 'bs_book_chapters', 'bc', [ 'b.book_id = bc.chapter_book_id' ] )
+			->fetchField();
+		if ( !$count ) {
+			return 0;
+		}
+		return (int)$count;
+	}
+
+	/**
 	 * @param Title $book
 	 * @param Title $title
 	 * @return ChapterInfo|null
