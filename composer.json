@@ -15,7 +15,8 @@
 	},
 	"require": {
 		"composer/installers": "~1.0|~2",
-		"mwstake/mediawiki-component-wikitext": "~7"
+		"mwstake/mediawiki-component-wikitext": "~7",
+		"mwstake/mediawiki-component-commonuserinterface": "~8"
 	},
 	"autoload": {
 		"psr-4": {
