@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"bs-bookshelfui-widget-editor-link-text": "Dëst Buch änneren",
@@ -38,5 +39,6 @@
 	"bs-bookshelfui-prof-defaultview-images": "Biller",
 	"bs-bookshelfui-chapterpager-previous": "Vireg",
 	"bs-bookshelfui-chapterpager-next": "Nächst",
-	"bookshelfbookmanager": "Bichermanager"
+	"bookshelfbookmanager": "Bichermanager",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Bicherregal"
 }

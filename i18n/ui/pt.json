@@ -98,5 +98,7 @@
 	"bs-bookshelfui-panel-navigation-text": "Para navegação do livro",
 	"bs-bookshelfui-panel-navigation-title": "Voltar à navegação do livro",
 	"bs-bookshelfui-panel-navigation-aria-label": "Para navegação do livro",
-	"bs-bookshelfui-panel-navigation-aria-desc": "Navegação do livro em estrutura de árvore"
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navegação do livro em estrutura de árvore",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Estante",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "Imagem da estante"
 }

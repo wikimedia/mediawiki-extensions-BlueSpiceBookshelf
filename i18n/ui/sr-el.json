@@ -59,5 +59,6 @@
 	"bs-bookshelfui-bookmetatag-docummentidentifier": "ID dokumenta",
 	"bs-bookshelfui-bookmetatag-docummenttype": "Vrsta dokumenta",
 	"bs-bookshelfui-prof-defaultview": "Podrazumevani prikaz",
-	"bs-bookshelfui-prof-defaultview-images": "Slike"
+	"bs-bookshelfui-prof-defaultview-images": "Slike",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Polica sa knjigama"
 }

@@ -95,5 +95,7 @@
 	"bs-bookshelfui-panel-navigation-text": "Verso navigation in libro",
 	"bs-bookshelfui-panel-navigation-title": "Retornar al navigation in libro",
 	"bs-bookshelfui-panel-navigation-aria-label": "Verso navigation in libro",
-	"bs-bookshelfui-panel-navigation-aria-desc": "Navigation in libro como structura arborescente"
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navigation in libro como structura arborescente",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Planca de libros",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "Imagine del planca de libros"
 }

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dr Lotus Black"
+			"Dr Lotus Black",
+			"MM abc.xyz"
 		]
 	},
 	"bs-bookshelfui-manager-title": "ခေါင်းစဉ်",
@@ -17,5 +18,6 @@
 	"bs-bookshelfui-extjs-tooltip-copy": "မိတ္တူကူး",
 	"bs-bookshelfui-prof-defaultview-images": "ရုပ်ပုံများ",
 	"bs-bookshelfui-chapterpager-previous": "ယခင်",
-	"bs-bookshelfui-chapterpager-next": "ရှေ့"
+	"bs-bookshelfui-chapterpager-next": "ရှေ့",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "စာအုပ်စင်ပုံ"
 }

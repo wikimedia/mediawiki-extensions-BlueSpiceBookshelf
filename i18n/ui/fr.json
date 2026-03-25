@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Aaribaud",
+			"Alien333",
 			"Eihel",
 			"Gomoko",
 			"Thibaut120094",
@@ -100,5 +101,7 @@
 	"bs-bookshelfui-panel-navigation-text": "Vers la navigation dans le livre",
 	"bs-bookshelfui-panel-navigation-title": "Retour à la navigation dans le livre",
 	"bs-bookshelfui-panel-navigation-aria-label": "Vers la navigation dans le livre",
-	"bs-bookshelfui-panel-navigation-aria-desc": "Navigation dans le livre par une structure arborescente"
+	"bs-bookshelfui-panel-navigation-aria-desc": "Navigation dans le livre par une structure arborescente",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Étagère",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "Image de l'étagère"
 }

@@ -7,5 +7,9 @@
 	"bs-bookshelf-book-grid-title": "Գիրքեր",
 	"bs-bookshelf-prof-defaultview-images": "Պատկերներ",
 	"bs-bookshelf-ga-manager-label": "Գիրքեր",
-	"bs-bookshelf-mainlinks-label": "Գիրքեր"
+	"bs-bookshelf-mainlinks-label": "Գիրքեր",
+	"bs-bookshelf-ve-bookshelf-attr-book-label": "Գիրք",
+	"bs-bookshelf-search-center-filter-books-label": "Գիրք",
+	"bs-bookshelf-massadd-dlg-save-action-label": "Աւելցնել",
+	"bs-bookshelf-notification-subscription-set-book-title": "Գիրք"
 }

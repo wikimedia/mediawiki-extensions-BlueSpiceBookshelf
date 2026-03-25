@@ -99,5 +99,7 @@
 	"apihelp-bs-bookshelf-mass-add-page-store-param-type": "סוג המקור להוספה המונית",
 	"bs-bookshelfui-panel-navigation-aria-desc": "ניווט בספר כמבנה עץ",
 	"apihelp-bs-bookshelf-page-collection-store-summary": "אספקת אוסף של דפים שניתן להוסיף באצווה לספר.",
-	"apihelp-bs-bookshelf-mass-add-page-store-summary": "אספקת דפים שניתן להוסיף באצווה לספר."
+	"apihelp-bs-bookshelf-mass-add-page-store-summary": "אספקת דפים שניתן להוסיף באצווה לספר.",
+	"bs-bookshelfui-bookmetatag-bookshelf": "מדף ספרים",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "תמונת מדף ספרים"
 }

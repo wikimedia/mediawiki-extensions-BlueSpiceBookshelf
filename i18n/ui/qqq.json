@@ -100,5 +100,7 @@
 	"bs-bookshelfui-panel-navigation-text": "Label for navigation tab panel",
 	"bs-bookshelfui-panel-navigation-title": "Title for navigation tab panel",
 	"bs-bookshelfui-panel-navigation-aria-label": "Aria label for navigation tab panel",
-	"bs-bookshelfui-panel-navigation-aria-desc": "Aria description of book navigation"
+	"bs-bookshelfui-panel-navigation-aria-desc": "Aria description of book navigation",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Display text for the metadata key \"bookshelf\"",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "Display text for the metadata key \"bookshelfimage\""
 }

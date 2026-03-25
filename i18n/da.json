@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Naitsa",
 			"Saederup92",
 			"Zakawer2"
 		]
@@ -36,5 +37,6 @@
 	"bs-bookshelf-action-editbook-create": "Rediger kilde",
 	"bs-bookshelf-ve-booklistinspector-title": "Bogliste",
 	"bs-bookshelf-mainlinks-label": "Bøger",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Søg"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Søg",
+	"bs-bookshelf-search-center-context-books-label": "i {{PLURAL:$1|bog|bøger}} '''$2'''"
 }

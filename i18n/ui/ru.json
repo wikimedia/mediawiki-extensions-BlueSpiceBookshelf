@@ -13,7 +13,8 @@
 			"Merrahtar",
 			"Okras",
 			"Pacha Tchernof",
-			"WindEwriX"
+			"WindEwriX",
+			"Yurina Tatiana"
 		]
 	},
 	"bookshelfbookui": "Редактор книг",
@@ -96,5 +97,6 @@
 	"right-bookshelfbookui-viewspecialpage": "Доступ к специальной странице [[Special:BookshelfBookUI]]",
 	"action-bookshelfbookui-viewspecialpage": "доступ к специальной странице [[Special:BookshelfBookUI]]",
 	"apihelp-bs-bookshelf-mass-add-page-store-param-root": "Главное значение, на основе которого следует вернуть страницы",
-	"prefs-bookshelfui": "Специальная страница книжной полки"
+	"prefs-bookshelfui": "Специальная страница книжной полки",
+	"bs-bookshelfui-bookmetatag-bookshelf": "Книжная полка"
 }
