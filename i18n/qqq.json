@@ -215,5 +215,7 @@
 	"bs-bookshelf-searchbook-ve-placeholder-label": "Label for input field to set placeholder label",
 	"bs-bookshelf-searchbook-ve-placeholder-help": "Help text for input field to set placeholder label",
 	"bs-bookshelf-searchbook-ve-placeholder-text": "Placeholder text for input field",
-	"bs-bookshelf-droplet-search-book-label": "Label for input field to select book to search in"
+	"bs-bookshelf-droplet-search-book-label": "Label for input field to select book to search in",
+	"bs-bookshelf-entrypoint-action-book-aria-label": "Aria label for entrypoint action to create a new book",
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Title for entrypoint action to create a new book"
 }
