@@ -191,5 +191,7 @@
 	"bs-bookshelf-searchbook-ve-placeholder-label": "Texto de marcador de posición para o campo de busca",
 	"bs-bookshelf-searchbook-ve-placeholder-help": "O texto que aparece aquí móstrase como un marcador de posición no campo de busca",
 	"bs-bookshelf-searchbook-ve-placeholder-text": "Escribe para procurar...",
-	"bs-bookshelf-droplet-search-book-label": "Selecciona un libro para a procura"
+	"bs-bookshelf-droplet-search-book-label": "Selecciona un libro para a procura",
+	"bs-bookshelf-entrypoint-action-book-aria-label": "Crear un libro",
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Crear un libro"
 }
