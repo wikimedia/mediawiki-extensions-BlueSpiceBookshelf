@@ -49,7 +49,8 @@ class AddNewBook implements SkinTemplateNavigation__UniversalHook {
 			return;
 		}
 		$title = $sktemplate->getTitle();
-		if ( $title->isSpecial( 'Books' ) ) {
+		$skin = $sktemplate->getSkin();
+		if ( $title->isSpecial( 'Books' ) && is_a( $skin, 'SkinBlueSpiceDiscoverySkin', true ) ) {
 			$createBookAction = [
 				'text' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
 				'title' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
