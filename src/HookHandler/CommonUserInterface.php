@@ -6,6 +6,7 @@ use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
+use BlueSpice\Bookshelf\Component\CreateBookButton;
 use BlueSpice\Bookshelf\Panel\ActionEntrypoint;
 use BlueSpice\Bookshelf\Panel\ChapterPagerPanel;
 use BlueSpice\Bookshelf\Panel\MainLinkPanel;
@@ -75,8 +76,8 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 	public function onMWStakeCommonUIRegisterSkinSlotComponents( $registry ): void {
 		$config = $this->configFactory->makeConfig( 'bsg' );
 		$context = RequestContext::getMain();
+		$skin = $context->getSkin();
 		if ( $config->get( 'BookshelfMainLinksBookshelf' ) ) {
-			$skin = $context->getSkin();
 			$registry->register( 'MainLinksPanel', [
 				'bs-special-bookshelf' => [
 					'factory' => function () use ( $skin ) {
@@ -147,6 +148,18 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 							);
 						},
 						'position' => 1
+					]
+				]
+			);
+		}
+
+		if ( $title->isSpecial( 'Books' ) && is_a( $skin, 'SkinBlueSpiceEclipseSkin', true ) ) {
+			$registry->register(
+				'TitleActions', [
+					'create-book' => [
+						'factory' => function () {
+							return new CreateBookButton( $this->titleFactory, $this->permissionManager );
+						}
 					]
 				]
 			);
