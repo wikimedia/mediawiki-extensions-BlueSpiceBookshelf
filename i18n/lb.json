@@ -111,5 +111,7 @@
 	"bs-bookshelf-newbook-dlg-input-title-placeholder": "Buchtitel uleeën",
 	"bs-bookshelf-newbook-dlg-input-subtitle-placeholder": "Ënnertitel uleeën",
 	"bs-bookshelf-tag-searchinbook-error": "Gitt e gültege Buchnumm un",
-	"bs-bookshelf-actionmenuentry-create-new-book": "Neit Buch uleeën"
+	"bs-bookshelf-actionmenuentry-create-new-book": "Neit Buch uleeën",
+	"bs-bookshelf-entrypoint-action-book-aria-label": "Buch uleeën",
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Buch uleeën"
 }
