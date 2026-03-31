@@ -103,5 +103,7 @@
 	"bs-bookshelf-actionmenuentry-create-new-book": "Neit Buch uleeën",
 	"bs-bookshelf-search-center-context-books-label": "{{PLURAL:$1|am Buch|an de Bicher}} '''$2'''",
 	"bs-bookshelf-newbook-dlg-action-create-label": "Uleeën",
-	"bs-bookshelf-formelement-book-input": "Buch"
+	"bs-bookshelf-formelement-book-input": "Buch",
+	"bs-bookshelf-entrypoint-action-book-aria-label": "Buch uleeën",
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Buch uleeën"
 }
