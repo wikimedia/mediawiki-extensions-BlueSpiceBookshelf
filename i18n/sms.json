@@ -31,5 +31,7 @@
 	"bs-bookshelf-newbook-dlg-title": "Raaj ođđ ǩeeʹrj",
 	"bs-bookshelf-chapter-plain-text-input-label": "Teʹkstt",
 	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Teʹkstt",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Ooʒʒ"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Ooʒʒ",
+	"bs-bookshelf-entrypoint-action-book-aria-label": "Raaj ǩeeʹrj",
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Raaj ǩeeʹrj"
 }
