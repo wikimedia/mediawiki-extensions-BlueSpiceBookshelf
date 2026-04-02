@@ -3,6 +3,7 @@
 		"authors": [
 			"Gongsoonyee",
 			"SeoJeongHo",
+			"YeBoy371",
 			"Ykhwong"
 		]
 	},
@@ -58,5 +59,13 @@
 	"bs-bookshelfui-chapterpager-next": "다음",
 	"bs-bookshelfui-panel-navigation-text": "책 둘러보기로",
 	"bs-bookshelfui-panel-navigation-title": "책 둘러보기로 돌아가기",
-	"bs-bookshelfui-panel-navigation-aria-label": "책 둘러보기로"
+	"bs-bookshelfui-panel-navigation-aria-label": "책 둘러보기로",
+	"bs-bookshelfui-bookmetatag-department": "부서",
+	"right-bookshelfbookmanager-viewspecialpage": "[[Special:BookshelfBookManager]] 특수 문서로 접근",
+	"action-bookshelfbookmanager-viewspecialpage": "[[Special:BookshelfBookManager]] 특수 문서로 접근",
+	"right-bookshelfbookui-viewspecialpage": "[[Special:BookshelfBookUI]] 특수 문서로 접근",
+	"action-bookshelfbookui-viewspecialpage": "[[Special:BookshelfBookUI]] 특수 문서로 접근",
+	"prefs-bookshelfui": "책장 특수 문서",
+	"bs-bookshelfui-bookmetatag-bookshelf": "책장",
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "책장 이미지"
 }
