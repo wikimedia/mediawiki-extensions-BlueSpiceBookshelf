@@ -29,5 +29,7 @@
 	"bs-bookshelf-droplet-search-book": "Ǩeʹrjj",
 	"bs-bookshelf-notification-subscription-set-book-title": "Ǩeʹrjj",
 	"bs-bookshelf-actionmenuentry-create-new-book": "Raaj ođđ ǩeeʹrj",
-	"bs-bookshelf-booknav-searchbox-placeholder": "Ooʒʒ"
+	"bs-bookshelf-booknav-searchbox-placeholder": "Ooʒʒ",
+	"bs-bookshelf-entrypoint-action-book-aria-label": "Raaj ǩeeʹrj",
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Raaj ǩeeʹrj"
 }
