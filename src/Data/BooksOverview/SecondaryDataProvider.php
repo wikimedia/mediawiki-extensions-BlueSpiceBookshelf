@@ -126,7 +126,7 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 		if ( !$book->isKnown() ) {
 			return '';
 		}
-		if ( $this->bookChapterLookup->countChapters( $book ) === 0 ) {
+		if ( $this->bookChapterLookup->countChapters( $book ) > 0 ) {
 			return '';
 		}
 		return $book->getEditURL();
