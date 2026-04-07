@@ -4,8 +4,9 @@ namespace BlueSpice\Bookshelf\Tests;
 
 use BlueSpice\Bookshelf\BookSourceParser;
 use BlueSpice\Bookshelf\ChapterDataModel;
+use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterPlainTextProcessor;
+use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterWikiLinkWithAliasProcessor;
 use MediaWikiIntegrationTestCase;
-use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 
 /**
  * @group BlueSpice
@@ -40,10 +41,11 @@ HERE;
 
 		$services = $this->getServiceContainer();
 		$revisionLookup = $services->getRevisionLookup();
-		/** @var ParserFactory */
-		$parserFactory = $services->get( 'MWStakeWikitextParserFactory' );
-		$nodeProcessors = $parserFactory->getNodeProcessors();
 		$titleFactory = $services->getTitleFactory();
+		$nodeProcessors = [
+			new ChapterPlainTextProcessor(),
+			new ChapterWikiLinkWithAliasProcessor( $titleFactory ),
+		];
 		$revisionRecord = $revisionLookup->getRevisionByTitle( $title );
 
 		$parser = new BookSourceParser(
