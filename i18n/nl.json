@@ -195,5 +195,7 @@
 	"bs-bookshelf-searchbook-ve-placeholder-label": "Tijdelijke tekst voor zoekveld",
 	"bs-bookshelf-searchbook-ve-placeholder-help": "De tekst die hier wordt weergegeven, dient als tijdelijke tekst voor het zoekveld.",
 	"bs-bookshelf-searchbook-ve-placeholder-text": "Invoeren om te zoeken...",
-	"bs-bookshelf-droplet-search-book-label": "Selecteer een boek om in te zoeken"
+	"bs-bookshelf-droplet-search-book-label": "Selecteer een boek om in te zoeken",
+	"bs-bookshelf-entrypoint-action-book-aria-label": "Boek maken",
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Boek maken"
 }
