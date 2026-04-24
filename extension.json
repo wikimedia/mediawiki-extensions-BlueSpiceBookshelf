@@ -930,12 +930,17 @@
 		},
 		"addPDFTemplates": {
 			"class": "\\BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\AddPDFTemplates"
+		},
+		"set-book-name": {
+			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SetBookName",
+			"services": [ "BSBookshelfBookLookup" ]
 		}
 	},
 	"Hooks": {
 		"BeforePageDisplay": [
 			"\\BlueSpice\\Bookshelf\\Hook\\BeforePageDisplay\\AddResources::callback",
-			"add-chapter-number-to-title-and-headings"
+			"add-chapter-number-to-title-and-headings",
+			"set-book-name"
 		],
 		"ContentHandlerDefaultModelFor": "book-content-default-mode",
 		"MediaWikiServices": "book-content-default-mode",
