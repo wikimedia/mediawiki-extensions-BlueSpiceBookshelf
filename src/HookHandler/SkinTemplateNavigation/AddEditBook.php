@@ -39,20 +39,26 @@ class AddEditBook implements SkinTemplateNavigation__UniversalHook {
 			return;
 		}
 
+		$editQuery = [ 'action' => 'edit' ];
+		$editSourceQuery = [ 'action' => 'editbooksource' ];
+		$oldid = $sktemplate->getRequest()->getVal( 'oldid' );
+		if ( $oldid !== null ) {
+			$editQuery['oldid'] = $oldid;
+			$editSourceQuery['oldid'] = $oldid;
+		}
+
 		// In case VisualEditor overrides with "Edit source"
 		$links['views']['edit']['text'] = $sktemplate->msg( 'edit' )->text();
 		$links['views']['edit']['title'] = $sktemplate->msg( 'edit' )->text();
-		$links['views']['edit']['href'] = $sktemplate->getTitle()->getLocalURL( [
-			'action' => 'edit',
-		] );
+		$links['views']['edit']['href'] = $sktemplate->getTitle()->getLocalURL( $editQuery );
 
 		// Add real "Edit source"
 		$links['views']['editbooksource'] = $links['views']['edit'];
 		$links['views']['editbooksource']['id'] = 'ca-editbooksource';
 		$links['views']['editbooksource']['text']
 			= $sktemplate->msg( 'bs-bookshelf-action-editbook' )->text();
-		$links['views']['editbooksource']['href'] = $sktemplate->getTitle()->getLinkURL( [
-			'action' => 'editbooksource'
-		] );
+		$links['views']['editbooksource']['href'] = $sktemplate->getTitle()->getLinkURL(
+			$editSourceQuery
+		);
 	}
 }
