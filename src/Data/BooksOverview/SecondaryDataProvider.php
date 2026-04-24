@@ -224,7 +224,7 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 			$basename = basename( $meta['bookshelfimage'] );
 
 			$fileTitle = $this->titleFactory->newFromText( $basename );
-			if ( !$fileTitle->exists() || $fileTitle->getNamespace() !== NS_FILE ) {
+			if ( !$fileTitle || !$fileTitle->exists() || $fileTitle->getNamespace() !== NS_FILE ) {
 				$fileTitle = $this->titleFactory->makeTitle( NS_FILE, $basename );
 			}
 
