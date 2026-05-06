@@ -192,7 +192,7 @@ class AddChapterNumberToTitleAndHeadings {
 			$text = $this->hideHeadingNumberInContent( $text );
 		}
 
-		$output->setRawText( $text );
+		$output->setContentHolderText( $text );
 	}
 
 	/**

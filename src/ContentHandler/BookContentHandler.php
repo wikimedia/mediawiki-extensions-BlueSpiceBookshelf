@@ -134,6 +134,6 @@ class BookContentHandler extends TextContentHandler {
 	private function setHtmlFrame( ParserOutput $output ) {
 		$html = Html::element( 'div', [ 'id' => 'bs-bookshelf-view' ] );
 
-		$output->setRawText( $html );
+		$output->setContentHolderText( $html );
 	}
 }
