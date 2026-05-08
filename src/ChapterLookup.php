@@ -6,6 +6,8 @@ use MediaWiki\Config\Config;
 use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
+use MWStake\MediaWiki\Component\Utils\DisplayTitleHelper;
+use MWStake\MediaWiki\Component\Utils\UtilityFactory;
 use stdClass;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\LoadBalancer;
@@ -23,17 +25,23 @@ class ChapterLookup {
 	/** @var Config */
 	private $config = null;
 
+	/** @var DisplayTitleHelper|DisplayTitleHelper */
+	private DisplayTitleHelper $displayTitleHelper;
+
 	/**
 	 * @param LoadBalancer $loadBalancer
 	 * @param TitleFactory $titleFactory
 	 * @param ConfigFactory $configFactory
+	 * @param UtilityFactory $utilityFactory
 	 */
 	public function __construct(
-		LoadBalancer $loadBalancer, TitleFactory $titleFactory, ConfigFactory $configFactory
+		LoadBalancer $loadBalancer, TitleFactory $titleFactory,
+		ConfigFactory $configFactory, UtilityFactory $utilityFactory
 	) {
 		$this->loadBalancer = $loadBalancer;
 		$this->titleFactory = $titleFactory;
 		$this->config = $configFactory->makeConfig( 'bsg' );
+		$this->displayTitleHelper = $utilityFactory->getDisplayTitleHelper();
 	}
 
 	/**
@@ -269,7 +277,7 @@ class ChapterLookup {
 
 			if ( $title->canExist() ) {
 				// Check if page property displaytitle is set
-				$name = $this->makeName( $title, $title->getText(), $db );
+				$name = $this->makeName( $title, $title->getText() );
 
 				if ( $this->config->get( 'BookshelfTitleDisplayText' )
 					&& $result->chapter_name !== $title->getSubpageText()
@@ -329,24 +337,11 @@ class ChapterLookup {
 	/**
 	 * @param Title $title
 	 * @param string $name
-	 * @param IDatabase $db
 	 * @return string
 	 */
-	private function makeName( Title $title, string $name, IDatabase $db ): string {
-		$res = $db->select(
-			'page_props',
-			[ '*' ],
-			[
-				'pp_page' => $title->getId(),
-				'pp_propname' => 'displaytitle'
-			],
-			__METHOD__
-		);
-
-		foreach ( $res as $row ) {
-			$name = $row->pp_value;
-		}
-		return $name;
+	private function makeName( Title $title, string $name ): string {
+		$display = $this->displayTitleHelper->getDisplayTitle( $title );
+		return $display ?? $name;
 	}
 
 	/**
