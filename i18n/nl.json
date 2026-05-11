@@ -44,7 +44,7 @@
 	"bs-bookshelf-action-editbook-create": "Bron bewerken",
 	"bs-bookshelf-action-export-book": "Boek exporteren",
 	"bs-bookshelf-edit-title": "Bewerken van $1",
-	"bs-bookshelf-error-invalid-type": "Het opgegeven boektype is ongeldig",
+	"bs-bookshelf-error-invalid-type": "Het opgegeven boektype is onjuist",
 	"bs-bookshelf-error-type-title-mismatch": "De opgegeven titel komt niet overeen met het gegeven boektype",
 	"bs-bookshelf-editor-no-title-provided": "Geen geldige boektitel opgegeven",
 	"bs-bookshelf-book-grid-title": "Boeken",
