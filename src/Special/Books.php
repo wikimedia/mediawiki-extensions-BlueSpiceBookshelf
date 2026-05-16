@@ -14,11 +14,16 @@ class Books extends SpecialPage {
 	 *
 	 */
 	public function __construct() {
-		parent::__construct( 'Books', 'bookshelf-viewspecialpage' );
+		parent::__construct( 'Books' );
 
 		$this->templateParser = new TemplateParser(
 			dirname( __DIR__, 2 ) . '/resources/templates'
 		);
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'bookshelf-viewspecialpage';
 	}
 
 	/**

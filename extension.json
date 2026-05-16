@@ -10,7 +10,7 @@
 	"descriptionmsg": "bs-bookshelf-extension-description",
 	"type": "bluespice",
 	"requires": {
-		"MediaWiki": ">= 1.43.0",
+		"MediaWiki": ">= 1.46.0",
 		"extensions": {
 			"BlueSpiceFoundation": ">= 5.0.0",
 			"MenuEditor": ">= 3.0.0",
