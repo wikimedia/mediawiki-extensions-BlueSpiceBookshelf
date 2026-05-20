@@ -3,10 +3,12 @@
 		"authors": [
 			"Gongsoonyee",
 			"SeoJeongHo",
+			"Tensama0415",
 			"YeBoy371",
 			"Ykhwong"
 		]
 	},
+	"bs-bookshelfui-extension-description": "블루스파이스가 위키문서의 계층적 모음집을 관리할 수 있도록 합니다.",
 	"bookshelfbookui": "책 편집기",
 	"bookshelfbookmanager": "책 관리자",
 	"bs-bookshelfui-editor-no-title-provided": "유효한 책 제목이 지정되지 않았습니다",
