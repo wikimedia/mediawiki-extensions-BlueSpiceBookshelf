@@ -3,6 +3,7 @@
 		"authors": [
 			"Gongsoonyee",
 			"SeoJeongHo",
+			"Tensama0415",
 			"YeBoy371",
 			"Ykhwong"
 		]
@@ -67,5 +68,6 @@
 	"action-bookshelfbookui-viewspecialpage": "[[Special:BookshelfBookUI]] 특수 문서로 접근",
 	"prefs-bookshelfui": "책장 특수 문서",
 	"bs-bookshelfui-bookmetatag-bookshelf": "책장",
-	"bs-bookshelfui-bookmetatag-bookshelfimage": "책장 이미지"
+	"bs-bookshelfui-bookmetatag-bookshelfimage": "책장 이미지",
+	"bs-bookshelfui-extension-description": "블루스파이스가 위키문서의 계층적 모음집을 관리할 수 있도록 합니다."
 }
