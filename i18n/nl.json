@@ -38,7 +38,7 @@
 	"apihelp-bs-bookshelf-bookstore-summary": "Geeft een overzicht van alle hoofdstukken van een gegeven boek. Maakt sorteren, filteren en pagineren mogelijk. Implementeert ExtJS Store-parameters.",
 	"apihelp-bs-bookshelf-store-summary": "Geeft een overzicht van alle boeken. Maakt sorteren, filteren en pagineren mogelijk. Implementeert ExtJS Store-parameters.",
 	"apihelp-query+bsbookshelf-summary": "Maakt het mogelijk om in alle boeken te zoeken.",
-	"bs-bookshelf-pref-titledisplaytext-help": "Toont de titel uit de boeknavigatie als paginatitel in plaats van de paginanaam.",
+	"bs-bookshelf-pref-titledisplaytext-help": "Geeft de titel weer uit de boeknavigatie als paginatitel in plaats van de paginanaam.",
 	"bs-bookshelf-grouping-template-type-ns_book": "Algemene boeken",
 	"bs-bookshelf-action-editbook": "Bron bewerken",
 	"bs-bookshelf-action-editbook-create": "Bron bewerken",
