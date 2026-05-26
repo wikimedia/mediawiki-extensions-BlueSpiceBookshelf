@@ -9,6 +9,7 @@ use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\Utils\DisplayTitleHelper;
 use MWStake\MediaWiki\Component\Utils\UtilityFactory;
 use stdClass;
+use WANObjectCache;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\LoadBalancer;
 
@@ -28,20 +29,26 @@ class ChapterLookup {
 	/** @var DisplayTitleHelper|DisplayTitleHelper */
 	private DisplayTitleHelper $displayTitleHelper;
 
+	/** @var WANObjectCache */
+	private $wanCache = null;
+
 	/**
 	 * @param LoadBalancer $loadBalancer
 	 * @param TitleFactory $titleFactory
 	 * @param ConfigFactory $configFactory
 	 * @param UtilityFactory $utilityFactory
+	 * @param WANObjectCache $wanCache
 	 */
 	public function __construct(
 		LoadBalancer $loadBalancer, TitleFactory $titleFactory,
-		ConfigFactory $configFactory, UtilityFactory $utilityFactory
+		ConfigFactory $configFactory, UtilityFactory $utilityFactory,
+		WANObjectCache $wanCache
 	) {
 		$this->loadBalancer = $loadBalancer;
 		$this->titleFactory = $titleFactory;
 		$this->config = $configFactory->makeConfig( 'bsg' );
 		$this->displayTitleHelper = $utilityFactory->getDisplayTitleHelper();
+		$this->wanCache = $wanCache;
 	}
 
 	/**
@@ -49,6 +56,48 @@ class ChapterLookup {
 	 * @return array
 	 */
 	public function getChaptersOfBook( Title $title ): array {
+		$cacheKey = $this->wanCache->makeGlobalKey(
+			'bsBookshelf', 'chapters',
+			(string)$title->getNamespace(), $title->getDBKey()
+		);
+		$checkKey = $this->makeChaptersCheckKey( $title );
+
+		return $this->wanCache->getWithSetCallback(
+			$cacheKey,
+			WANObjectCache::TTL_DAY,
+			function () use ( $title ) {
+				return $this->doGetChaptersOfBook( $title );
+			},
+			[ 'checkKeys' => [ $checkKey ] ]
+		);
+	}
+
+	/**
+	 * Invalidate the chapters cache for a book page. Call this whenever the NS_BOOK
+	 * page is saved, deleted, or moved so the next request repopulates the cache.
+	 *
+	 * @param Title $book
+	 */
+	public function invalidateChaptersOfBookCache( Title $book ): void {
+		$this->wanCache->touchCheckKey( $this->makeChaptersCheckKey( $book ) );
+	}
+
+	/**
+	 * @param Title $book
+	 * @return string
+	 */
+	private function makeChaptersCheckKey( Title $book ): string {
+		return $this->wanCache->makeGlobalKey(
+			'bsBookshelf', 'chapters-check',
+			(string)$book->getNamespace(), $book->getDBKey()
+		);
+	}
+
+	/**
+	 * @param Title $title
+	 * @return array
+	 */
+	private function doGetChaptersOfBook( Title $title ): array {
 		$pages = [];
 
 		$db = $this->loadBalancer->getConnection( DB_REPLICA );

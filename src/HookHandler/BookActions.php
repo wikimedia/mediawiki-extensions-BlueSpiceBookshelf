@@ -5,6 +5,7 @@ namespace BlueSpice\Bookshelf\HookHandler;
 use BlueSpice\Bookshelf\BookInfo;
 use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\BookSourceParser;
+use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\ChapterUpdater;
 use BlueSpice\Bookshelf\Content\BookContent;
 use Exception;
@@ -46,6 +47,9 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 	/** @var ChapterUpdater */
 	private $chapterUpdater;
 
+	/** @var ChapterLookup */
+	private $chapterLookup;
+
 	/** @var LoggerInterface */
 	private $logger = null;
 
@@ -56,11 +60,13 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 	 * @param BookLookup $bookLookup
 	 * @param UserFactory $userFactory
 	 * @param ChapterUpdater $chapterUpdater
+	 * @param ChapterLookup $chapterLookup
 	 */
 	public function __construct(
 		TitleFactory $titleFactory, ParserFactory $parserFactory,
 		LoadBalancer $loadBalancer, BookLookup $bookLookup,
-		UserFactory $userFactory, ChapterUpdater $chapterUpdater
+		UserFactory $userFactory, ChapterUpdater $chapterUpdater,
+		ChapterLookup $chapterLookup
 	) {
 		$this->titleFactory = $titleFactory;
 		$this->parserFactory = $parserFactory;
@@ -68,6 +74,7 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 		$this->bookLookup = $bookLookup;
 		$this->userFactory = $userFactory;
 		$this->chapterUpdater = $chapterUpdater;
+		$this->chapterLookup = $chapterLookup;
 		$this->logger = LoggerFactory::getInstance( 'BSBookshelf' );
 	}
 
@@ -97,6 +104,7 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 		if ( $content instanceof BookContent || $content->isEmpty() ) {
 			$this->doSaveBookSource( $title, $revisionRecord );
 		}
+		$this->chapterLookup->invalidateChaptersOfBookCache( $title );
 		return true;
 	}
 
@@ -137,6 +145,7 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 			__METHOD__
 		);
 
+		$this->chapterLookup->invalidateChaptersOfBookCache( $title );
 		return true;
 	}
 
@@ -163,6 +172,8 @@ class BookActions implements MultiContentSaveHook, PageDeleteCompleteHook, PageM
 
 		$this->moveBook( $oldBookInfo, $newBook, $db );
 
+		$this->chapterLookup->invalidateChaptersOfBookCache( $oldBook );
+		$this->chapterLookup->invalidateChaptersOfBookCache( $newBook );
 		return true;
 	}
 
