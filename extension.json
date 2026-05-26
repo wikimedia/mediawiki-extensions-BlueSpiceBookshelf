@@ -349,7 +349,8 @@
 				"bs-bookshelf-add-to-book-label-chapter",
 				"bs-bookshelf-chapter-insertion-btn-move-up",
 				"bs-bookshelf-chapter-insertion-btn-move-down",
-				"bs-bookshelf-chapter-insertion-clear-btn-label"
+				"bs-bookshelf-chapter-insertion-clear-btn-label",
+				"bs-bookshelf-add-to-book-warning-new-book"
 			],
 			"dependencies": [
 				"ext.bluespice",
@@ -948,7 +949,13 @@
 			"method": "GET",
 			"path": "/bookshelf/metadata/{booktitle}",
 			"class": "\\BlueSpice\\Bookshelf\\Rest\\GetBookMetadata",
-			"services": [ "TitleFactory", "BSBookshelfBookMetaLookup" ]
+			"services": [ "TitleFactory", "BSBookshelfBookLookup", "BSBookshelfBookMetaLookup" ]
+		},
+		{
+			"method": "GET",
+			"path": "/bookshelf/info/{booktitle}",
+			"class": "\\BlueSpice\\Bookshelf\\Rest\\GetBookInfo",
+			"services": [ "TitleFactory", "BSBookshelfBookLookup", "BSBookshelfBookMetaLookup" ]
 		},
 		{
 			"method": "GET",
