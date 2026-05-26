@@ -47,7 +47,8 @@ return [
 			$services->getDBLoadBalancer(),
 			$services->getTitleFactory(),
 			$services->getConfigFactory(),
-			$services->getService( 'MWStakeCommonUtilsFactory' )
+			$services->getService( 'MWStakeCommonUtilsFactory' ),
+			$services->getMainWANObjectCache()
 		);
 		return $provider;
 	},

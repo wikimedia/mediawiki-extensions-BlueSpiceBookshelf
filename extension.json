@@ -899,7 +899,7 @@
 		},
 		"book-source-actions": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\BookActions",
-			"services": [ "TitleFactory", "MWStakeWikitextParserFactory", "DBLoadBalancer", "BSBookshelfBookLookup", "UserFactory", "BSBookshelfChapterUpdater" ]
+			"services": [ "TitleFactory", "MWStakeWikitextParserFactory", "DBLoadBalancer", "BSBookshelfBookLookup", "UserFactory", "BSBookshelfChapterUpdater", "BSBookshelfBookChapterLookup" ]
 		},
 		"book-content-default-mode": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SetBookContentHandler"
