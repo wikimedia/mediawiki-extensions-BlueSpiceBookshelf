@@ -207,5 +207,6 @@
 	"bs-bookshelf-searchbook-ve-placeholder-text": "Type to search...",
 	"bs-bookshelf-droplet-search-book-label": "Select book for search",
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Create book",
-	"bs-bookshelf-entrypoint-action-book-aria-title": "Create book"
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Create book",
+	"bs-bookshelf-add-to-book-warning-new-book": "Selected book does not exist yet. It will be created when you add pages to it."
 }
