@@ -197,5 +197,6 @@
 	"bs-bookshelf-searchbook-ve-placeholder-text": "Invoeren om te zoeken...",
 	"bs-bookshelf-droplet-search-book-label": "Selecteer een boek om in te zoeken",
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Boek maken",
-	"bs-bookshelf-entrypoint-action-book-aria-title": "Boek maken"
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Boek maken",
+	"bs-bookshelf-add-to-book-warning-new-book": "Het geselecteerde boek bestaat nog niet. Het wordt aangemaakt zodra u er pagina's aan toevoegt."
 }
