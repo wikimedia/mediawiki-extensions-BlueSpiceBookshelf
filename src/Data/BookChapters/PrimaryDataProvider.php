@@ -2,11 +2,29 @@
 
 namespace BlueSpice\Bookshelf\Data\BookChapters;
 
+use MWStake\MediaWiki\Component\DataStore\Filter;
+use MWStake\MediaWiki\Component\DataStore\FilterFinder;
 use MWStake\MediaWiki\Component\DataStore\PrimaryDatabaseDataProvider;
 use MWStake\MediaWiki\Component\DataStore\ReaderParams;
+use MWStake\MediaWiki\Component\DataStore\Schema;
 use stdClass;
+use WANObjectCache;
+use Wikimedia\Rdbms\IDatabase;
 
 class PrimaryDataProvider extends PrimaryDatabaseDataProvider {
+
+	/** @var WANObjectCache */
+	private $wanCache;
+
+	/**
+	 * @param IDatabase $db
+	 * @param Schema $schema
+	 * @param WANObjectCache $wanCache
+	 */
+	public function __construct( IDatabase $db, Schema $schema, WANObjectCache $wanCache ) {
+		parent::__construct( $db, $schema );
+		$this->wanCache = $wanCache;
+	}
 
 	/**
 	 * @return string[]
@@ -20,6 +38,28 @@ class PrimaryDataProvider extends PrimaryDatabaseDataProvider {
 	 * @return Record[]
 	 */
 	public function makeData( $params ) {
+		$filterFinder = new FilterFinder( $params->getFilter() );
+		$bookIdFilter = $filterFinder->findByField( 'chapter_book_id' );
+		$bookId = ( $bookIdFilter instanceof Filter ) ? $bookIdFilter->getValue() : 'all';
+
+		$cacheKey = $this->wanCache->makeKey( 'bs-bookshelf', 'book-chapters', $bookId );
+		$checkKey = self::makeCheckKey( $this->wanCache, $bookId );
+
+		return $this->wanCache->getWithSetCallback(
+			$cacheKey,
+			WANObjectCache::TTL_DAY,
+			function () use ( $params ) {
+				return $this->fetchData( $params );
+			},
+			[ 'checkKeys' => [ $checkKey ] ]
+		);
+	}
+
+	/**
+	 * @param ReaderParams $params
+	 * @return Record[]
+	 */
+	private function fetchData( ReaderParams $params ) {
 		$this->data = [];
 
 		$res = $this->db->select(
@@ -65,5 +105,23 @@ class PrimaryDataProvider extends PrimaryDatabaseDataProvider {
 			Record::CHAPTER_NUMBER => $row->{Record::CHAPTER_NUMBER},
 			Record::CHAPTER_TYPE => $row->{Record::CHAPTER_TYPE},
 		] );
+	}
+
+	/**
+	 * @param WANObjectCache $wanCache
+	 * @param string|int $bookId
+	 * @return string
+	 */
+	public static function makeCheckKey( WANObjectCache $wanCache, $bookId ): string {
+		return $wanCache->makeKey( 'bs-bookshelf', 'book-chapters-check', (string)$bookId );
+	}
+
+	/**
+	 * @param WANObjectCache $wanCache
+	 * @param string|int $bookId
+	 */
+	public static function invalidateCache( WANObjectCache $wanCache, $bookId ): void {
+		$wanCache->touchCheckKey( self::makeCheckKey( $wanCache, $bookId ) );
+		$wanCache->touchCheckKey( self::makeCheckKey( $wanCache, 'all' ) );
 	}
 }
