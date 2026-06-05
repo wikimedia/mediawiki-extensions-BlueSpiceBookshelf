@@ -2,29 +2,32 @@
 
 namespace BlueSpice\Bookshelf\Data\BookChapters;
 
-use MWStake\MediaWiki\Component\DataStore\Filter;
-use MWStake\MediaWiki\Component\DataStore\FilterFinder;
+use MWStake\MediaWiki\Component\DataStore\PrimaryDatabaseDataProvider;
+use MWStake\MediaWiki\Component\DataStore\ReaderParams;
+use stdClass;
 
-class PrimaryDataProvider extends \BlueSpice\Data\Settings\PrimaryDataProvider {
+class PrimaryDataProvider extends PrimaryDatabaseDataProvider {
 
 	/**
-	 *
+	 * @return string[]
+	 */
+	protected function getTableNames() {
+		return [ 'bs_book_chapters' ];
+	}
+
+	/**
 	 * @param ReaderParams $params
 	 * @return Record[]
 	 */
 	public function makeData( $params ) {
 		$this->data = [];
 
-		$filterConds = $this->makePreFilterConds( $params->getFilter() );
-
 		$res = $this->db->select(
-			'bs_book_chapters',
-			'*',
-			$filterConds,
+			$this->getTableNames(),
+			$this->getFields(),
+			$this->makePreFilterConds( $params ),
 			__METHOD__,
-			[
-				'ORDER BY' => 'chapter_number'
-			]
+			[ 'ORDER BY' => 'chapter_number' ]
 		);
 
 		$chapters = iterator_to_array( $res );
@@ -50,45 +53,9 @@ class PrimaryDataProvider extends \BlueSpice\Data\Settings\PrimaryDataProvider {
 	}
 
 	/**
-	 *
-	 * @param Filter[] $preFilters
-	 * @return array
+	 * @param stdClass $row
 	 */
-	protected function makePreFilterConds( $preFilters ) {
-		$conds = [];
-
-		$filterFinder = new FilterFinder( $preFilters );
-
-		$bookID = $filterFinder->findByField( 'chapter_book_id' );
-		$chapterNamespace = $filterFinder->findByField( 'chapter_namespace' );
-		$chapterTitle = $filterFinder->findByField( 'chapter_title' );
-		$chapterName = $filterFinder->findByField( 'chapter_name' );
-		$chapterType = $filterFinder->findByField( 'chapter_type' );
-
-		if ( $bookID instanceof Filter ) {
-			$conds['chapter_book_id'] = $bookID->getValue();
-		}
-		if ( $chapterNamespace instanceof Filter ) {
-			$conds['chapter_namespace'] = $chapterNamespace->getValue();
-		}
-		if ( $chapterTitle instanceof Filter ) {
-			$conds['chapter_title'] = $chapterTitle->getValue();
-		}
-		if ( $chapterName instanceof Filter ) {
-			$conds['chapter_name'] = $chapterName->getValue();
-		}
-		if ( $chapterType instanceof Filter ) {
-			$conds['chapter_type'] = $chapterType->getValue();
-		}
-
-		return $conds;
-	}
-
-	/**
-	 *
-	 * @param \stdClass $row
-	 */
-	protected function appendRowToData( \stdClass $row ) {
+	protected function appendRowToData( stdClass $row ) {
 		$this->data[] = new Record( (object)[
 			Record::CHAPTER_ID => $row->{Record::CHAPTER_ID},
 			Record::CHAPTER_BOOK_ID => $row->{Record::CHAPTER_BOOK_ID},

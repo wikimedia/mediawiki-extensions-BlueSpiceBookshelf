@@ -92,7 +92,7 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 	 */
 	protected function makePrimaryDataProvider( $params ) {
 		$db = $this->loadBalancer->getConnection( DB_REPLICA );
-		return new PrimaryDataProvider( $db );
+		return new PrimaryDataProvider( $db, $this->getSchema() );
 	}
 
 	/**
