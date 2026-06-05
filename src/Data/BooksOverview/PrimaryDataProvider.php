@@ -4,62 +4,61 @@ namespace BlueSpice\Bookshelf\Data\BooksOverview;
 
 use MWStake\MediaWiki\Component\DataStore\Filter;
 use MWStake\MediaWiki\Component\DataStore\FilterFinder;
+use MWStake\MediaWiki\Component\DataStore\PrimaryDatabaseDataProvider;
+use MWStake\MediaWiki\Component\DataStore\ReaderParams;
+use stdClass;
 
-class PrimaryDataProvider extends \BlueSpice\Data\Settings\PrimaryDataProvider {
+class PrimaryDataProvider extends PrimaryDatabaseDataProvider {
 
 	/**
-	 *
-	 * @param ReaderParams $params
-	 * @return Record[]
+	 * @return string[]
 	 */
-	public function makeData( $params ) {
-		$this->data = [];
-
-		$filterConds = $this->makePreFilterConds( $params->getFilter() );
-		$filterConds['book_type'] = 'public';
-
-		$res = $this->db->select(
-			[ 'b' => 'bs_books' ],
-			[ 'b.book_name', 'b.book_namespace', 'b.book_title', ],
-			$filterConds,
-			__METHOD__
-		);
-
-		foreach ( $res as $row ) {
-			$this->appendRowToData( $row );
-		}
-
-		return $this->data;
+	protected function getTableNames() {
+		return [ 'b' => 'bs_books' ];
 	}
 
 	/**
-	 *
-	 * @param Filter[] $preFilters
+	 * @return string[]
+	 */
+	protected function getFields() {
+		return [ 'b.book_name', 'b.book_namespace', 'b.book_title' ];
+	}
+
+	/**
 	 * @return array
 	 */
-	protected function makePreFilterConds( $preFilters ) {
-		$conds = [];
+	protected function getDefaultConds() {
+		return [ 'book_type' => 'public' ];
+	}
 
-		$filterFinder = new FilterFinder( $preFilters );
+	/**
+	 * @param ReaderParams $params
+	 * @return array
+	 */
+	protected function makePreFilterConds( ReaderParams $params ) {
+		$conds = $this->getDefaultConds();
+
+		$filterFinder = new FilterFinder( $params->getFilter() );
 
 		$bookNamespace = $filterFinder->findByField( 'page_namespace' );
 		$bookTitle = $filterFinder->findByField( 'page_title' );
 
 		if ( $bookNamespace instanceof Filter ) {
 			$conds['page_namespace'] = $bookNamespace->getValue();
+			$bookNamespace->setApplied();
 		}
 		if ( $bookTitle instanceof Filter ) {
 			$conds['page_title'] = $bookTitle->getValue();
+			$bookTitle->setApplied();
 		}
 
 		return $conds;
 	}
 
 	/**
-	 *
-	 * @param \stdClass $row
+	 * @param stdClass $row
 	 */
-	protected function appendRowToData( \stdClass $row ) {
+	protected function appendRowToData( stdClass $row ) {
 		$this->data[] = new Record( (object)[
 			Record::DISPLAYTITLE => $row->book_name,
 			Record::BOOK_NAMESPACE => $row->book_namespace,
