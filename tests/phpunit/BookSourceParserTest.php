@@ -6,6 +6,8 @@ use BlueSpice\Bookshelf\BookSourceParser;
 use BlueSpice\Bookshelf\ChapterDataModel;
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterPlainTextProcessor;
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterWikiLinkWithAliasProcessor;
+use MediaWiki\Content\JsonContent;
+use MediaWiki\Json\FormatJson;
 use MediaWikiIntegrationTestCase;
 
 /**
@@ -38,25 +40,81 @@ HERE;
 		$title = $this->insertPage( 'BookPage', $this->dummyBookContent )['title'];
 
 		$expected = $this->getExpecedOutput();
-
-		$services = $this->getServiceContainer();
-		$revisionLookup = $services->getRevisionLookup();
-		$titleFactory = $services->getTitleFactory();
-		$nodeProcessors = [
-			new ChapterPlainTextProcessor(),
-			new ChapterWikiLinkWithAliasProcessor( $titleFactory ),
-		];
-		$revisionRecord = $revisionLookup->getRevisionByTitle( $title );
-
-		$parser = new BookSourceParser(
-			$revisionRecord,
-			$nodeProcessors,
-			$titleFactory
-		);
+		$parser = $this->newParserForTitle( $title );
 
 		$actual = $parser->getChapterDataModelArray();
 
 		$this->assertEquals( $expected, $actual );
+	}
+
+	/**
+	 * @covers \BlueSpice\Bookshelf\BookSourceParser::addNodeAfter
+	 */
+	public function testAddNodeAfterByChapterNumber() {
+		$title = $this->insertPage( 'BookPageInsert', "* [[A|A]]\n* [[B|B]]\n* [[C|C]]" )['title'];
+		$parser = $this->newParserForTitle( $title );
+		$node = $parser->getNodeFromData( [
+			'type' => 'bs-bookshelf-chapter-wikilink-with-alias',
+			'label' => 'D',
+			'level' => 1,
+			'target' => 'D',
+		] );
+
+		$this->assertNotNull( $node );
+		$parser->addNodeAfter( $node, '2' );
+		$actual = $parser->getChapterDataModelArray();
+
+		$this->assertSame( [ 'A', 'B', 'D', 'C' ], array_map(
+			static function ( ChapterDataModel $chapter ) {
+				return $chapter->getName();
+			},
+			$actual
+		) );
+		$this->assertSame( [ '1', '2', '3', '4' ], array_map(
+			static function ( ChapterDataModel $chapter ) {
+				return $chapter->getNumber();
+			},
+			$actual
+		) );
+	}
+
+	/**
+	 * @covers \BlueSpice\Bookshelf\BookSourceParser::setUpdaterSlotsOnSave
+	 */
+	public function testSaveRevisionWithoutMetadataSetsDefaultMetaSlot() {
+		$title = $this->insertPage( 'BookPageNoMeta', '* [[A|A]]' )['title'];
+		$parser = $this->newParserForTitle( $title );
+		$node = $parser->getNodeFromData( [
+			'type' => 'bs-bookshelf-chapter-wikilink-with-alias',
+			'label' => 'B',
+			'level' => 1,
+			'target' => 'B',
+		] );
+
+		$this->assertNotNull( $node );
+		$parser->addNodeAfter( $node, null );
+		$newRevision = $parser->saveRevision( $this->getTestSysop()->getUser() );
+
+		$this->assertNotNull( $newRevision );
+		$this->assertTrue( $newRevision->hasSlot( 'book_meta' ) );
+		$metaSlot = $newRevision->getContent( 'book_meta' );
+		$this->assertInstanceOf( JsonContent::class, $metaSlot );
+		$this->assertSame( [], FormatJson::decode( $metaSlot->getText(), true ) );
+	}
+
+	private function newParserForTitle( $title ): BookSourceParser {
+		$services = $this->getServiceContainer();
+		$titleFactory = $services->getTitleFactory();
+		$revisionRecord = $services->getRevisionLookup()->getRevisionByTitle( $title );
+
+		return new BookSourceParser(
+			$revisionRecord,
+			[
+				new ChapterPlainTextProcessor(),
+				new ChapterWikiLinkWithAliasProcessor( $titleFactory ),
+			],
+			$titleFactory
+		);
 	}
 
 	private function getExpecedOutput(): array {
