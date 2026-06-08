@@ -151,17 +151,17 @@
 				return dfd.reject().promise();
 			}
 
-			const chapters = this.chapterPicker.getChapters();
+			const [ prev, toInsert ] = this.chapterPicker.getChapterToInsert();
 			const data = {
-				nodes: chapters
+				nodes: [ toInsert ],
+				after: prev || null
 			};
 
 			data.metadata = this.selectedBook.meta;
 			mw.loader.using( 'ext.menuEditor.api' ).done( () => {
 				const api = new ext.menueditor.api.Api();
 				const bookTitle = mw.util.rawurlencode( mw.util.rawurlencode( this.selectedBook.name ) );
-
-				api.post( bookTitle, data ).done( () => {
+				api.post( `append/${ bookTitle }`, data ).done( () => {
 					mw.notify(
 						mw.message( 'bs-bookshelf-add-to-book-added', this.bookPicker.getValue() ).text(),
 						{ title: mw.message( 'bs-bookshelf-add-to-book-label' ).text() }
