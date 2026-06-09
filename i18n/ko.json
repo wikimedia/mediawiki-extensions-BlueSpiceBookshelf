@@ -195,5 +195,6 @@
 	"bs-bookshelf-searchbook-ve-placeholder-text": "검색하려면 입력하세요...",
 	"bs-bookshelf-droplet-search-book-label": "검색할 책 선택",
 	"bs-bookshelf-entrypoint-action-book-aria-label": "책 만들기",
-	"bs-bookshelf-entrypoint-action-book-aria-title": "책 만들기"
+	"bs-bookshelf-entrypoint-action-book-aria-title": "책 만들기",
+	"bs-bookshelf-add-to-book-warning-new-book": "선택하신 책은 아직 존재하지 않습니다. 페이지를 추가하면 생성됩니다."
 }
