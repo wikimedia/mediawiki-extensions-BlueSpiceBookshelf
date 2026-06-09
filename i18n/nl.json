@@ -78,7 +78,7 @@
 	"bs-bookshelf-tag-booklist-description": "Genereert lijsten met artikelen uit de naamruimte \"book\" en kan worden gefilterd. De aanduiding van het filter is verplicht.",
 	"bs-bookshelf-ve-booklistinspector-title": "Boekenlijst",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filter",
-	"bs-bookshelf-ve-booklist-attr-filter-help": "Filter op metadata in de indeling sleutel:waarde, bijv. titel:handboek",
+	"bs-bookshelf-ve-booklist-attr-filter-help": "Filter op metagegevens in de indeling sleutel:waarde, bijv. titel:handboek",
 	"bs-bookshelf-tag-bookmeta-description": "Tag voor het opslaan van verscheidene metagegevens over boekpagina's. Deze worden in het boek opgenomen. De attributen van deze tag moeten overeenkomen met de metagegevens van de boekpagina.",
 	"bs-bookshelf-ve-bookmetainspector-title": "Boekmeta",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "Titel",
