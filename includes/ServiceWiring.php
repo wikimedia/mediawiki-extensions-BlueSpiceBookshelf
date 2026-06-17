@@ -26,12 +26,13 @@ return [
 		return new \BlueSpice\Bookshelf\PageHierarchyProviderFactory();
 	},
 	'BSBookshelfComponentRenderer' => static function ( MediaWikiServices $services ) {
-		$renderer = new ComponentRenderer(
-			$services->getService( 'MWStakeCommonUIComponentManager' ),
+		return new ComponentRenderer(
+			static function () use ( $services ) {
+				return $services->getService( 'MWStakeCommonUIComponentManager' );
+			},
 			$services->getService( 'MWStakeCommonUIRendererDataTreeBuilder' ),
 			$services->getService( 'MWStakeCommonUIRendererDataTreeRenderer' )
 		);
-		return $renderer;
 	},
 	'BSBookshelfBookLookup' => static function ( MediaWikiServices $services ) {
 		$provider = new BookLookup(
