@@ -77,21 +77,29 @@
 	 * @return {Array}
 	 */
 	function setSearchableData( items ) {
+		const canonicalBookNamespaceName = 'Book';
+
 		const data = [];
 		items.forEach( ( item ) => {
+			const searchableData = [
+				item.bookshelf,
+				item.book_title,
+				item.displaytitle,
+				item.subtitle
+			];
+
 			const title = mw.Title.makeTitle( item.book_namespace, item.book_title );
-			let prefText = '';
 			if ( title !== null ) {
-				prefText = title.getPrefixedDb();
+				searchableData.push( title.getPrefixedDb() );
+				searchableData.push(
+					canonicalBookNamespaceName + ':' + title.getMain()
+				);
 			}
 
-			data.push(
-				prefText.toLowerCase() + ' ' +
-				item.bookshelf.toLowerCase() + ' ' +
-				item.book_title.toLowerCase() + ' ' +
-				item.displaytitle.toLowerCase() + ' ' +
-				item.subtitle.toLowerCase()
-			);
+			data.push( searchableData
+				.filter( Boolean )
+				.map( ( str ) => str.toLowerCase() )
+				.join( ' ' ) );
 		} );
 
 		return data;
