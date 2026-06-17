@@ -3,30 +3,23 @@
 namespace BlueSpice\Bookshelf;
 
 use MediaWiki\Title\Title;
-use Wikimedia\Rdbms\IDatabase;
-use Wikimedia\Rdbms\LoadBalancer;
+use Wikimedia\Rdbms\IConnectionProvider;
 
 class BookMetaLookup {
 
-	/**
-	 * @var LoadBalancer
-	 */
-	private $loadBalancer = null;
+	/** @var IConnectionProvider */
+	private $connectionProvider;
 
 	/** @var BookLookup */
 	private $bookLookup = null;
 
-	/** @var IDatabase */
-	private $db = null;
-
 	/**
-	 * @param LoadBalancer $loadBalancer
+	 * @param IConnectionProvider $connectionProvider
 	 * @param BookLookup $bookLookup
 	 */
-	public function __construct( LoadBalancer $loadBalancer, BookLookup $bookLookup	) {
-		$this->loadBalancer = $loadBalancer;
+	public function __construct( IConnectionProvider $connectionProvider, BookLookup $bookLookup ) {
+		$this->connectionProvider = $connectionProvider;
 		$this->bookLookup = $bookLookup;
-		$this->db = $this->loadBalancer->getConnection( DB_REPLICA );
 	}
 
 	/**
@@ -38,7 +31,7 @@ class BookMetaLookup {
 
 		$bookID = $this->bookLookup->getBookId( $book );
 
-		$results = $this->db->select(
+		$results = $this->connectionProvider->getReplicaDatabase()->select(
 			'bs_book_meta',
 			'*',
 			[
@@ -65,7 +58,7 @@ class BookMetaLookup {
 
 		$bookID = $this->bookLookup->getBookId( $book );
 
-		$results = $this->db->select(
+		$results = $this->connectionProvider->getReplicaDatabase()->select(
 			'bs_book_meta',
 			'm_value',
 			[
@@ -89,7 +82,7 @@ class BookMetaLookup {
 	public function getAllMetaValuesForKey( string $key ): array {
 		$values = [];
 
-		$results = $this->db->select(
+		$results = $this->connectionProvider->getReplicaDatabase()->select(
 			'bs_book_meta',
 			'm_value',
 			[
