@@ -11,14 +11,13 @@ use MediaWiki\Extension\MenuEditor\Node\MenuNode;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\Revision\RevisionRecord;
-use MediaWiki\Storage\PageUpdater;
 use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Lib\Nodes\INode;
 
 class BookSourceParser extends WikitextMenuParser {
 
 	/** @var TitleFactory */
-	private $titleFactory = null;
+	private TitleFactory $titleFactory;
 
 	/**
 	 * @param RevisionRecord $revision
@@ -27,6 +26,7 @@ class BookSourceParser extends WikitextMenuParser {
 	 */
 	public function __construct( RevisionRecord $revision, array $nodeProcessors, TitleFactory $titleFactory ) {
 		$this->titleFactory = $titleFactory;
+
 		parent::__construct( $revision, $nodeProcessors );
 	}
 
@@ -35,7 +35,7 @@ class BookSourceParser extends WikitextMenuParser {
 	 * @param bool $replace
 	 * @return void
 	 */
-	public function addNodesFromData( array $nodes, bool $replace = false ) {
+	public function addNodesFromData( array $nodes, bool $replace = false ): void {
 		parent::addNodesFromData( $nodes['nodes'], $replace );
 		$meta = $nodes['metadata'] ?? [];
 		$content = new JsonContent( FormatJson::encode( $meta ) );
@@ -64,17 +64,6 @@ class BookSourceParser extends WikitextMenuParser {
 				return;
 			}
 		}
-	}
-
-	/**
-	 * @param PageUpdater $updater
-	 * @return void
-	 */
-	protected function setUpdaterSlotsOnSave( PageUpdater $updater ) {
-		parent::setUpdaterSlotsOnSave( $updater );
-		$metaSlot = $this->revision->hasSlot( 'book_meta' ) ?
-			$this->revision->getContent( 'book_meta' ) : new JsonContent( FormatJson::encode( [] ) );
-		$updater->setContent( 'book_meta', $metaSlot );
 	}
 
 	/**

@@ -6,8 +6,6 @@ use BlueSpice\Bookshelf\BookSourceParser;
 use BlueSpice\Bookshelf\ChapterDataModel;
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterPlainTextProcessor;
 use BlueSpice\Bookshelf\MenuEditor\NodeProcessor\ChapterWikiLinkWithAliasProcessor;
-use MediaWiki\Content\JsonContent;
-use MediaWiki\Json\FormatJson;
 use MediaWikiIntegrationTestCase;
 
 /**
@@ -76,30 +74,6 @@ HERE;
 			},
 			$actual
 		) );
-	}
-
-	/**
-	 * @covers \BlueSpice\Bookshelf\BookSourceParser::setUpdaterSlotsOnSave
-	 */
-	public function testSaveRevisionWithoutMetadataSetsDefaultMetaSlot() {
-		$title = $this->insertPage( 'BookPageNoMeta', '* [[A|A]]' )['title'];
-		$parser = $this->newParserForTitle( $title );
-		$node = $parser->getNodeFromData( [
-			'type' => 'bs-bookshelf-chapter-wikilink-with-alias',
-			'label' => 'B',
-			'level' => 1,
-			'target' => 'B',
-		] );
-
-		$this->assertNotNull( $node );
-		$parser->addNodeAfter( $node, null );
-		$newRevision = $parser->saveRevision( $this->getTestSysop()->getUser() );
-
-		$this->assertNotNull( $newRevision );
-		$this->assertTrue( $newRevision->hasSlot( 'book_meta' ) );
-		$metaSlot = $newRevision->getContent( 'book_meta' );
-		$this->assertInstanceOf( JsonContent::class, $metaSlot );
-		$this->assertSame( [], FormatJson::decode( $metaSlot->getText(), true ) );
 	}
 
 	private function newParserForTitle( $title ): BookSourceParser {
