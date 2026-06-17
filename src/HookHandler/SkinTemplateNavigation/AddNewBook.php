@@ -49,14 +49,14 @@ class AddNewBook implements SkinTemplateNavigation__UniversalHook {
 		}
 		$title = $sktemplate->getTitle();
 		$skin = $sktemplate->getSkin();
-		if ( $title->isSpecial( 'Books' ) && is_a( $skin, 'SkinBlueSpiceDiscoverySkin', true ) ) {
+		// show create new book action in left sidebar
+		if ( $title->isSpecial( 'Books' ) && is_a( $skin, 'BlueSpice\Discovery\Skin', true ) ) {
 			$createBookAction = [
 				'text' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
 				'title' => $sktemplate->msg( 'bs-bookshelf-actionmenuentry-create-new-book' )->text(),
 				'class' => 'new-book-action',
 				'href' => ''
 			];
-			// actions_primary
 			$links['actions']['bookshelf-create-new-book'] = $createBookAction;
 			$links['actions']['bookshelf-create-new-book']['id'] = 'ca-bookshelf-actions-primary-new-book';
 			$links['actions']['bookshelf-create-new-book']['position'] = 1;
