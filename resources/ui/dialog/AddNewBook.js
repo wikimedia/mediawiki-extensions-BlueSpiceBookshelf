@@ -175,7 +175,7 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.makeSaveProcess = function ()
 	mw.hook( 'bs.bookshelf.newbook.actionprocess' ).fire( process, this );
 	process.next( () => {
 		this.close( { action: 'done' } );
-		this.emit( 'book_created', this.bookTitle );
+		this.emit( 'book_created', this.bookData.title );
 	} );
 	return process.execute();
 };
