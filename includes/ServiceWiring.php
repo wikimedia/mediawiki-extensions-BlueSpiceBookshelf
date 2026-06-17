@@ -55,7 +55,7 @@ return [
 	},
 	'BSBookshelfBookMetaLookup' => static function ( MediaWikiServices $services ) {
 		$provider = new BookMetaLookup(
-			$services->getDBLoadBalancer(),
+			$services->getConnectionProvider(),
 			$services->getService( 'BSBookshelfBookLookup' )
 		);
 		return $provider;
