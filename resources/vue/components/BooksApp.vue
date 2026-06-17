@@ -104,6 +104,14 @@ module.exports = exports = {
 
 			let visibleItems = this.items.filter( obj => { return obj.isVisible === true } );
 			updateAriaLiveSection( visibleItems.length );
+
+			const url = new URL( window.location.href );
+			if ( search ) {
+				url.searchParams.set( 'filter', search );
+			} else {
+				url.searchParams.delete( 'filter' );
+			}
+			history.replaceState( null, '', url.toString() );
 		}
 	}
 };
