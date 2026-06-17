@@ -8,8 +8,11 @@ use MWStake\MediaWiki\Component\CommonUserInterface\RendererDataTreeRenderer;
 
 class ComponentRenderer {
 
-	/** @var ComponentManager */
-	private $componentManager = null;
+	/** @var callable */
+	private $componentManagerCallback;
+
+	/** @var ComponentManager|null */
+	private ?ComponentManager $componentManager = null;
 
 	/** @var RendererDataTreeBuilder */
 	private $rendererDataTreeBuilder = null;
@@ -18,17 +21,24 @@ class ComponentRenderer {
 	private $rendererDataTreeRenderer = null;
 
 	/**
-	 * @param ComponentManager $componentManager
+	 * @param callable $componentManagerCallback
 	 * @param RendererDataTreeBuilder $rendererDataTreeBuilder
 	 * @param RendererDataTreeRenderer $rendererDataTreeRenderer
 	 */
 	public function __construct(
-		ComponentManager $componentManager,
+		callable $componentManagerCallback,
 		RendererDataTreeBuilder $rendererDataTreeBuilder,
 		RendererDataTreeRenderer $rendererDataTreeRenderer ) {
-		$this->componentManager = $componentManager;
+		$this->componentManagerCallback = $componentManagerCallback;
 		$this->rendererDataTreeBuilder = $rendererDataTreeBuilder;
 		$this->rendererDataTreeRenderer = $rendererDataTreeRenderer;
+	}
+
+	private function getComponentManager(): ComponentManager {
+		if ( $this->componentManager === null ) {
+			$this->componentManager = ( $this->componentManagerCallback )();
+		}
+		return $this->componentManager;
 	}
 
 	/**
@@ -37,7 +47,7 @@ class ComponentRenderer {
 	 * @return string
 	 */
 	public function getComponentHtml( $component, $componentProcessData = [] ): string {
-		$componentTree = $this->componentManager->getCustomComponentTree(
+		$componentTree = $this->getComponentManager()->getCustomComponentTree(
 			$component,
 			$componentProcessData
 		);
