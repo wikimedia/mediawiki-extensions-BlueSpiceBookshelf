@@ -31,14 +31,14 @@ class BookMetaLookup {
 
 		$bookID = $this->bookLookup->getBookId( $book );
 
-		$results = $this->connectionProvider->getReplicaDatabase()->select(
-			'bs_book_meta',
-			'*',
-			[
+		$results = $this->connectionProvider->getReplicaDatabase()->newSelectQueryBuilder()
+			->table( 'bs_book_meta' )
+			->fields( '*' )
+			->where( [
 				'm_book_id' => $bookID
-			],
-			__METHOD__
-		);
+			] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
 
 		foreach ( $results as $result ) {
 			$key = $result->m_key;
@@ -58,15 +58,15 @@ class BookMetaLookup {
 
 		$bookID = $this->bookLookup->getBookId( $book );
 
-		$results = $this->connectionProvider->getReplicaDatabase()->select(
-			'bs_book_meta',
-			'm_value',
-			[
+		$results = $this->connectionProvider->getReplicaDatabase()->newSelectQueryBuilder()
+			->table( 'bs_book_meta' )
+			->field( 'm_value' )
+			->where( [
 				'm_book_id' => $bookID,
 				'm_key' => $key
-			],
-			__METHOD__
-		);
+			] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
 
 		foreach ( $results as $result ) {
 			$value = $result->m_value;
@@ -82,14 +82,14 @@ class BookMetaLookup {
 	public function getAllMetaValuesForKey( string $key ): array {
 		$values = [];
 
-		$results = $this->connectionProvider->getReplicaDatabase()->select(
-			'bs_book_meta',
-			'm_value',
-			[
+		$results = $this->connectionProvider->getReplicaDatabase()->newSelectQueryBuilder()
+			->table( 'bs_book_meta' )
+			->field( 'm_value' )
+			->where( [
 				'm_key' => $key
-			],
-			__METHOD__
-		);
+			] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
 
 		foreach ( $results as $result ) {
 			$values[] = $result->m_value;
