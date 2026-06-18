@@ -19,7 +19,7 @@
 	},
 	{
 		"resourceModule": "ext.bluespice.bookshelf.createNewBook",
-		"maxSize": "2 kB"
+		"maxSize": "4 kB"
 	},
 	{
 		"resourceModule": "bs.bookshelf.formElement.bookInput",
