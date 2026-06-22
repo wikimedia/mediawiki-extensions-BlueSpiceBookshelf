@@ -350,7 +350,8 @@
 				"bs-bookshelf-chapter-insertion-btn-move-up",
 				"bs-bookshelf-chapter-insertion-btn-move-down",
 				"bs-bookshelf-chapter-insertion-clear-btn-label",
-				"bs-bookshelf-add-to-book-warning-new-book"
+				"bs-bookshelf-add-to-book-warning-new-book",
+				"bs-bookshelf-add-to-book-error"
 			],
 			"dependencies": [
 				"ext.bluespice",
