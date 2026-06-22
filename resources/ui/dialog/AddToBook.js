@@ -168,8 +168,8 @@
 					);
 					this.close( { action: action, book: this.selectedBook.name } );
 					dfd.resolve();
-				} ).fail( ( error ) => {
-					dfd.reject( new OO.ui.Error( error ) );
+				} ).fail( () => {
+					dfd.reject( new OO.ui.Error( mw.msg( 'bs-bookshelf-add-to-book-error' ) ) );
 				} );
 			} );
 
