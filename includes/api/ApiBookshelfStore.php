@@ -132,6 +132,28 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	 */
 	public function makeDataSet( $row ) {
 		$oTitle = Title::newFromID( $row->page_id );
+		$wanCache = $this->services->getMainWANObjectCache();
+		$cacheKey = $wanCache->makeKey(
+			'bs-bookshelf', 'api-bookshelf-store', 'dataset',
+			(int)$row->page_id,
+			$oTitle->getLatestRevID()
+		);
+
+		return $wanCache->getWithSetCallback(
+			$cacheKey,
+			5 * 60,
+			function () use ( $row ) {
+				return $this->wrappedMakeDataSet( $row );
+			}
+		);
+	}
+
+	/**
+	 * @param stdClass $row
+	 * @return stdClass
+	 */
+	private function wrappedMakeDataSet( $row ) {
+		$oTitle = Title::newFromID( $row->page_id );
 		$oPHP = PageHierarchyProvider::getInstanceFor( $oTitle->getPrefixedText() );
 		$aTOC = $oPHP->getExtendedTOCArray();
 
