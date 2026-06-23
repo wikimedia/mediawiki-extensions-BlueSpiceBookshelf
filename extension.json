@@ -18,6 +18,18 @@
 		}
 	},
 	"attributes": {
+		"EnhancedStandardUIs": {
+			"WatchlistItemProviders": {
+				"books": {
+					"class": "\\BlueSpice\\Bookshelf\\Watchlist\\BookProvider",
+					"services": [
+						"WatchedItemStore",
+						"TitleFactory",
+						"NamespaceInfo"
+					]
+				}
+			}
+		},
 		"BlueSpiceFoundation": {
 			"Extensions": {
 				"BlueSpiceBookshelf": {
