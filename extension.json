@@ -186,14 +186,6 @@
 				}
 			}
 		},
-		"NotifyMe": {
-			"ManualSubscriberProviderSets": {
-				"book": {
-					"class": "BlueSpice\\Bookshelf\\Notifications\\SubscriptionSet\\Book",
-					"services": [ "BSBookshelfBookLookup", "TitleFactory" ]
-				}
-			}
-		},
 		"PDFCreator": {
 			"ExportModeConfig": {
 				"book": {
@@ -704,18 +696,6 @@
 				"bluespice.bookshelf.editmetadata.js"
 			]
 		},
-		"ext.bluespice.bookshelf.notificationsSubscriptionSet": {
-			"scripts": [
-				"notificationsSubscriptionSetBook.js",
-				"notificationsSubscriptionSetBookEditor.js"
-			],
-			"messages": [
-				"bs-bookshelf-notification-subscription-set-book-title"
-			],
-			"dependencies": [
-				"ext.notifyme.subscription.set.bootstrap"
-			]
-		},
 		"ext.bluespice.bookshelf.book.plugin": {
 			"scripts": [
 				"bluespice.bookshelf.pdfcreator.plugin.js"
@@ -898,6 +878,10 @@
 		"set-book-name": {
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SetBookName",
 			"services": [ "BSBookshelfBookLookup" ]
+		},
+		"notifyMeResolveBookWatchers": {
+			"class": "BlueSpice\\Bookshelf\\HookHandler\\NotifyMeResolveBookWatchers",
+			"services": [ "BSBookshelfBookLookup", "DBLoadBalancer", "UserFactory" ]
 		}
 	},
 	"Hooks": {
@@ -937,7 +921,9 @@
 		"BSBookshelfPageAddedToBook": "queueJobs",
 		"BSBookshelfPageRemovedFromBook": "queueJobs",
 		"BSBookshelfBooksOverviewBeforeSetBookActions": "addExportAction",
-		"MWStakeGenericTagHandlerInitTags": "registerTags"
+		"MWStakeGenericTagHandlerInitTags": "registerTags",
+		"NotifyMeWatchlistProviderGetWatchSource": "notifyMeResolveBookWatchers",
+		"NotifyMeWatchlistProviderGetWatchers": "notifyMeResolveBookWatchers"
 	},
 	"Actions": {
 		"editbooksource": "\\BlueSpice\\Bookshelf\\Action\\BookEditSourceAction"
