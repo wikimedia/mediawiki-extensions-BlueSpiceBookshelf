@@ -8,7 +8,9 @@ use MediaWiki\Config\Config;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\TitleFactory;
+use MediaWiki\Watchlist\WatchedItemStore;
 use MWStake\MediaWiki\Component\DataStore\IStore;
 use MWStake\MediaWiki\Component\DataStore\NoWriterException;
 use RepoGroup;
@@ -46,6 +48,11 @@ class Store implements IStore {
 
 	/** @var WANObjectCache */
 	private $wanCache;
+	/** @var NamespaceInfo */
+	private $namespaceInfo = null;
+
+	/** @var WatchedItemStore */
+	private $watchedItemStore = null;
 
 	/**
 	 * @param IContextSource $context
@@ -58,11 +65,14 @@ class Store implements IStore {
 	 * @param HookContainer $hookContainer
 	 * @param RepoGroup $repoGroup
 	 * @param WANObjectCache $wanCache
+	 * @param NamespaceInfo $namespaceInfo
+	 * @param WatchedItemStore $watchedItemStore
 	 */
 	public function __construct(
 		IContextSource $context, Config $config, LoadBalancer $loadBalancer, ChapterLookup $bookChapterLookup,
 		BookMetaLookup $bookMetaLookup, TitleFactory $titleFactory, PermissionManager $permissionManager,
-		HookContainer $hookContainer, RepoGroup $repoGroup, WANObjectCache $wanCache
+		HookContainer $hookContainer, RepoGroup $repoGroup, WANObjectCache $wanCache,
+		NamespaceInfo $namespaceInfo, WatchedItemStore $watchedItemStore
 	) {
 		$this->context = $context;
 		$this->config = $config;
@@ -74,6 +84,8 @@ class Store implements IStore {
 		$this->hookRunner = $hookContainer;
 		$this->repoGroup = $repoGroup;
 		$this->wanCache = $wanCache;
+		$this->namespaceInfo = $namespaceInfo;
+		$this->watchedItemStore = $watchedItemStore;
 	}
 
 	/**
@@ -90,6 +102,8 @@ class Store implements IStore {
 			$this->repoGroup,
 			$this->bookChapterLookup,
 			$this->bookMetaLookup,
+			$this->namespaceInfo,
+			$this->watchedItemStore,
 			$this->wanCache
 		);
 	}

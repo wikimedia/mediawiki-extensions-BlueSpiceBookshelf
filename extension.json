@@ -710,6 +710,19 @@
 				"bs-bookshelf-export-pdf-notification-done"
 			]
 		},
+		"bs.bookshelf.action.watch": {
+			"scripts": [
+				"bluespice.bookshelf.watch.js"
+			],
+			"messages": [
+				"bs-bookshelf-books-overview-page-book-action-watch-title",
+				"bs-bookshelf-books-overview-page-book-action-unwatch-title",
+				"bs-bookshelf-books-overview-page-book-action-watch-text",
+				"bs-bookshelf-books-overview-page-book-action-unwatch-text",
+				"bs-bookshelf-books-overview-page-book-watched",
+				"bs-bookshelf-books-overview-page-book-unwatched"
+			]
+		},
 		"ext.bluespice.object.bookpdf": {
 			"packageFiles": [
 				"object/BookPDFDroplet.js",
