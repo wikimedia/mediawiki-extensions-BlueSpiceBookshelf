@@ -10,8 +10,10 @@ use MediaWiki\Context\RequestContext;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\User;
+use MediaWiki\Watchlist\WatchedItemStore;
 use MWStake\MediaWiki\Component\DataStore\ReaderParams;
 use RepoGroup;
 use WANObjectCache;
@@ -57,6 +59,11 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 
 	/** @var WANObjectCache */
 	private $wanCache;
+	/** @var NamespaceInfo */
+	private $namespaceInfo = null;
+
+	/** @var WatchedItemStore */
+	private $watchedItemStore = null;
 
 	/**
 	 * @param IContextSource $context
@@ -68,13 +75,16 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 	 * @param RepoGroup $repoGroup
 	 * @param ChapterLookup $bookChapterLookup
 	 * @param BookMetaLookup $bookMetaLookup
+	 * @param NamespaceInfo $namespaceInfo
+	 * @param WatchedItemStore $watchedItemStore
 	 * @param WANObjectCache|null $wanCache
 	 */
 	public function __construct(
 		IContextSource $context, Config $config, LoadBalancer $loadBalancer,
 		TitleFactory $titleFactory, PermissionManager $permissionManager,
 		HookContainer $hookRunner, RepoGroup $repoGroup, ChapterLookup $bookChapterLookup,
-		BookMetaLookup $bookMetaLookup, ?WANObjectCache $wanCache = null
+		BookMetaLookup $bookMetaLookup, NamespaceInfo $namespaceInfo, WatchedItemStore $watchedItemStore,
+		?WANObjectCache $wanCache = null
 	) {
 		$context = RequestContext::getMain();
 		$this->config = $config;
@@ -92,6 +102,8 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 		if ( $this->wanCache === null ) {
 			$this->wanCache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		}
+		$this->namespaceInfo = $namespaceInfo;
+		$this->watchedItemStore = $watchedItemStore;
 	}
 
 	/**
@@ -110,7 +122,7 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 		return new SecondaryDataProvider(
 			$this->titleFactory, $this->permissionManager, $this->hookRunner,
 			$this->user, $this->repoGroup, $this->config, $this->bookChapterLookup,
-			$this->bookMetaLookup
+			$this->bookMetaLookup, $this->namespaceInfo, $this->watchedItemStore
 		);
 	}
 

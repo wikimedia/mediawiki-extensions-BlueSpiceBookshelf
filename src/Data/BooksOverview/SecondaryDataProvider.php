@@ -7,14 +7,17 @@ use BlueSpice\Bookshelf\BooksOverviewActions\BookMetaData;
 use BlueSpice\Bookshelf\BooksOverviewActions\Delete;
 use BlueSpice\Bookshelf\BooksOverviewActions\Edit;
 use BlueSpice\Bookshelf\BooksOverviewActions\View;
+use BlueSpice\Bookshelf\BooksOverviewActions\Watch;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\IBooksOverviewAction;
 use MediaWiki\Config\Config;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\User;
+use MediaWiki\Watchlist\WatchedItemStore;
 use RepoGroup;
 
 class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\SecondaryDataProvider {
@@ -43,6 +46,12 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 	/** @var BookMetaLookup */
 	private $bookMetaLookup = null;
 
+	/** @var NamespaceInfo */
+	private $namespaceInfo = null;
+
+	/** @var WatchedItemStore */
+	private $watchedItemStore = null;
+
 	/**
 	 * Array with stock images for bookshelf image if not set in book meta data
 	 * @var array
@@ -68,11 +77,13 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 	 * @param Config $config
 	 * @param ChapterLookup $bookChapterLookup
 	 * @param BookMetaLookup $bookMetaLookup
+	 * @param NamespaceInfo $namespaceInfo
+	 * @param WatchedItemStore $watchedItemStore
 	 */
 	public function __construct(
 		TitleFactory $titleFactory, PermissionManager $permissionManager,
 		HookContainer $hookRunner, User $user, RepoGroup $repoGroup, Config $config, ChapterLookup $bookChapterLookup,
-		BookMetaLookup $bookMetaLookup
+		BookMetaLookup $bookMetaLookup, NamespaceInfo $namespaceInfo, WatchedItemStore $watchedItemStore
 	) {
 		$this->titleFactory = $titleFactory;
 		$this->permissionManager = $permissionManager;
@@ -82,6 +93,8 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 		$this->config = $config;
 		$this->bookChapterLookup = $bookChapterLookup;
 		$this->bookMetaLookup = $bookMetaLookup;
+		$this->namespaceInfo = $namespaceInfo;
+		$this->watchedItemStore = $watchedItemStore;
 	}
 
 	/**
@@ -333,6 +346,30 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 		$actions['edit'] = new Edit( $book, $displayTitle );
 
 		$actions['metadata' ] = new BookMetaData( $book, $displayTitle );
+
+		$watchAction = $this->makeWatchAction( $book, $displayTitle );
+		if ( $watchAction !== null ) {
+			$actions['watch'] = $watchAction;
+		}
+	}
+
+	/**
+	 * Watching a book means watching its book page. Only offered to registered users on
+	 * watchable pages; returns `null` otherwise, which hides the action.
+	 *
+	 * @param Title $book
+	 * @param string $displayTitle
+	 * @return Watch|null
+	 */
+	private function makeWatchAction( Title $book, string $displayTitle ): ?Watch {
+		if ( !$this->user instanceof User || $this->user->isAnon() ) {
+			return null;
+		}
+		if ( !$this->namespaceInfo->isWatchable( $book->getNamespace() ) ) {
+			return null;
+		}
+		$watched = $this->watchedItemStore->isWatched( $this->user, $book );
+		return new Watch( $book, $displayTitle, $watched );
 	}
 
 	/**
