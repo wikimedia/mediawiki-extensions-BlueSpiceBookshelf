@@ -68,7 +68,7 @@
 	"bs-bookshelf-actionmenuentry-addtobook": "Adicionar ao livro",
 	"bs-bookshelf-config-mainlinks-bookshelf-label": "Mostrar ponto de entrada \"Livros\"",
 	"bs-bookshelf-config-mainlinks-bookshelf-help": "Mostrar o link \"Livros\" do ponto de entrada na navegação à esquerda",
-	"bs-bookshelf-tag-booklist-description": "Gera listas de páginas do namespace \"livro\" e podem ser filtradas. A indicação do filtro é obrigatória",
+	"bs-bookshelf-tag-booklist-description": "Gera listas de páginas a partir do espaço nominal “Livro”, as quais podem ser filtradas. A indicação do filtro é obrigatória",
 	"bs-bookshelf-ve-booklistinspector-title": "Lista de livro",
 	"bs-bookshelf-ve-booklist-attr-filter-label": "Filtro",
 	"bs-bookshelf-ve-booklist-attr-filter-help": "Filtre por metadados no formato chave:valor, por exemplo título: manual",
