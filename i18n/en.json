@@ -192,5 +192,6 @@
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Create book",
 	"bs-bookshelf-entrypoint-action-book-aria-title": "Create book",
 	"bs-bookshelf-add-to-book-warning-new-book": "Selected book does not exist yet. It will be created when you add pages to it.",
-	"bs-bookshelf-add-to-book-error": "An error occurred while adding the page to the book. Please try again."
+	"bs-bookshelf-add-to-book-error": "An error occurred while adding the page to the book. Please try again.",
+	"bs-bookshelf-notifyme-subscription-reason": "This page belongs to a book you are watching"
 }

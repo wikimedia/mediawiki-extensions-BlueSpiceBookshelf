@@ -202,5 +202,6 @@
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Aria label for entrypoint action to create a new book",
 	"bs-bookshelf-entrypoint-action-book-aria-title": "Title for entrypoint action to create a new book",
 	"bs-bookshelf-add-to-book-warning-new-book": "Warning message when adding a page to a book that has not been created yet.",
-	"bs-bookshelf-add-to-book-error": "Error message when adding a page to a book fails"
+	"bs-bookshelf-add-to-book-error": "Error message when adding a page to a book fails",
+	"bs-bookshelf-notifyme-subscription-reason": "Label for subscription reason in notification email"
 }
