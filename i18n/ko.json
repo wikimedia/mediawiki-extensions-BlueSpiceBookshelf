@@ -152,7 +152,6 @@
 	"bs-bookshelf-droplet-search-name": "책에서 검색",
 	"bs-bookshelf-droplet-search-description": "책에서 페이지를 검색",
 	"bs-bookshelf-droplet-search-book-help": "검색할 책의 이름",
-	"bs-bookshelf-notification-subscription-set-book-title": "책",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "이미 같은 이름의 책이 존재하기 때문에 이 책을 만들 수 없습니다.",
 	"bs-bookshelf-actionmenuentry-new-book": "새 책",
 	"bs-bookshelf-add-mass-tool-title": "여러 문서 추가",

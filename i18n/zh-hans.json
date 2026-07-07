@@ -177,7 +177,6 @@
 	"bs-bookshelf-droplet-search-name": "在书籍中搜索",
 	"bs-bookshelf-droplet-search-description": "搜索书籍页面",
 	"bs-bookshelf-droplet-search-book-help": "要搜索的书名",
-	"bs-bookshelf-notification-subscription-set-book-title": "书籍",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "书籍无法创建，因为已存在同名的书籍",
 	"bs-bookshelf-actionmenuentry-new-book": "新书籍",
 	"bs-bookshelf-add-mass-tool-title": "添加多个页面",

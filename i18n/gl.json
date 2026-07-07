@@ -148,7 +148,6 @@
 	"bs-bookshelf-droplet-search-name": "Procurar nun libro",
 	"bs-bookshelf-droplet-search-description": "Procurar páxinas nun libro",
 	"bs-bookshelf-droplet-search-book-help": "Nome do libro no que se vai buscar",
-	"bs-bookshelf-notification-subscription-set-book-title": "Libro",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Non se puido crear o libro porque xa existe un libro con mesmo nome",
 	"bs-bookshelf-actionmenuentry-new-book": "Libro novo",
 	"bs-bookshelf-add-mass-tool-title": "Engadir varias páxinas",
