@@ -18,6 +18,11 @@
 	color: var( --sidebar-primary-fg );
 }
 
+#n-book-panel-header {
+	display: flex;
+	justify-content: space-between;
+}
+
 #n-book-panel:hover .card-footer #book-panel-edit-book {
 	visibility: visible;
 }
@@ -32,4 +37,13 @@
 
 #book-panel-tree .bs-chapter-number {
 	margin-right: 0.3em;
+}
+
+.bs-bookshelf-create-chapter-layout > div {
+	width: 80%;
+}
+
+.oo-ui-horizontalLayout > .oo-ui-widget.bs-bookshelf-create-chapter-number-label {
+	align-self: flex-end;
+	padding: 0 8px 4px;
 }

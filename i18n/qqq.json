@@ -209,5 +209,15 @@
 	"bs-bookshelf-add-to-book-warning-new-book": "Warning message when adding a page to a book that has not been created yet.",
 	"bs-bookshelf-notifyme-subscription-reason": "Label for subscription reason in notification email",
 	"bs-bookshelf-add-to-book-error": "Error message when adding a page to a book fails",
-	"bs-extendedsearch-search-center-filter-document-type-book-label": "Label for the document_type option for the \"book\" content model"
+	"bs-extendedsearch-search-center-filter-document-type-book-label": "Label for the document_type option for the \"book\" content model",
+	"bs-bookshelf-create-chapter-book-title": "Title for dialog to create a new chapter",
+	"bs-bookshelf-create-chapter-action-next-label": "Label for action button in dialog\n{{Identical|Next}}",
+	"bs-bookshelf-create-chapter-action-back-label": "Label for action button\n{{Identical|Back}}",
+	"bs-bookshelf-create-chapter-error": "Error message when creating a chapter fails",
+	"bs-bookshelf-create-chapter-invalid-page-name": "Error message shown when the entered page name is invalid",
+	"bs-bookshelf-create-chapter-page-exists": "Warning message shown when a page with the entered name already exists",
+	"bs-bookshelf-create-chapter-page-intro-label": "Intro label for page creation dialog page",
+	"bs-bookshelf-create-chapter-page-name-input-label": "Input label to specify page name",
+	"bs-bookshelf-create-chapter-page-name-input-help": "Input help label to specify page name",
+	"bs-bookshelf-create-chapter-input-chapter-name": "Label for input widget to specify chapter title"
 }

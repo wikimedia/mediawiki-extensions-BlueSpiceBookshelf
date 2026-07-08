@@ -2,8 +2,10 @@ bs.util.registerNamespace( 'ext.bookshelf.ui.panel' );
 
 require( './../../data/BookNavigationTreeStore.js' );
 require( './../data/tree/BookNavigationTree.js' );
+require( './../data/tree/AddChapterTreeAction.js' );
 
 ext.bookshelf.ui.panel.BookNavigationTreePanel = function ( cfg ) {
+	this.itemActions = [ new ext.bookshelf.ui.data.tree.AddChapterAction() ];
 	cfg.store = new ext.bookshelf.data.BookNavigationTreeStore( {
 		path: 'bookshelf/navigation'
 	} );
@@ -48,5 +50,7 @@ ext.bookshelf.ui.panel.BookNavigationTreePanel.prototype.updatePages = function 
 		store: this.store,
 		includeRedirect: false
 	} );
+	pageTree.setItemActions( this.itemActions );
+	this.pageTree = pageTree;
 	this.$treeCnt.append( pageTree.$element );
 };

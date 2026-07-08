@@ -202,5 +202,14 @@
 	"bs-bookshelf-droplet-search-book-label": "Buch für die Suche auswählen",
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Buch erstellen",
 	"bs-bookshelf-entrypoint-action-book-aria-title": "Buch erstellen",
-	"bs-extendedsearch-search-center-filter-document-type-book-label": "Buch"
+	"bs-extendedsearch-search-center-filter-document-type-book-label": "Buch",
+	"bs-bookshelf-create-chapter-action-next-label": "Weiter",
+	"bs-bookshelf-create-chapter-action-back-label": "Zurück",
+	"bs-bookshelf-create-chapter-error": "Beim Erstellen des Kapitels ist ein Fehler aufgetreten. Bitte {{#FORMAL:versuche|versuchen Sie}} es erneut..",
+	"bs-bookshelf-create-chapter-invalid-page-name": "Bitte {{#FORMAL:gib|geben Sie}} einen gültigen Seitennamen an.",
+	"bs-bookshelf-create-chapter-page-exists": "Es existiert bereits eine Seite mit diesem Namen.",
+	"bs-bookshelf-create-chapter-page-intro-label": "{{#FORMAL:Erstelle|Erstellen Sie}} eine Wiki-Seite für das neue Kapitel.",
+	"bs-bookshelf-create-chapter-page-name-input-label": "Seitenname",
+	"bs-bookshelf-create-chapter-page-name-input-help": "{{#FORMAL:Gib|Geben Sie}} einen Seitennamen ein. Im nächsten Schritt kann die Kapitelüberschrift überprüft und bearbeitet werden.",
+	"bs-bookshelf-create-chapter-input-chapter-name": "Kapitelüberschrift"
 }

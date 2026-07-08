@@ -7,6 +7,9 @@ ext.bookshelf.ui.data.tree.BookNavigationTreeItem = function ( cfg ) {
 	if ( cfg.number && cfg.number === activeNumber ) {
 		this.$element.addClass( 'active' );
 	}
+	if ( cfg.number ) {
+		this.$element.attr( 'data-number', cfg.number );
+	}
 };
 
 OO.inheritClass( ext.bookshelf.ui.data.tree.BookNavigationTreeItem, OOJSPlus.ui.data.tree.NavigationTreeItem );

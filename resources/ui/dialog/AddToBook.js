@@ -156,7 +156,6 @@
 				nodes: [ toInsert ],
 				after: prev || null
 			};
-
 			data.metadata = this.selectedBook.meta;
 			mw.loader.using( 'ext.menuEditor.api' ).done( () => {
 				const api = new ext.menueditor.api.Api();
