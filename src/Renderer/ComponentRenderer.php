@@ -5,6 +5,7 @@ namespace BlueSpice\Bookshelf\Renderer;
 use MWStake\MediaWiki\Component\CommonUserInterface\ComponentManager;
 use MWStake\MediaWiki\Component\CommonUserInterface\RendererDataTreeBuilder;
 use MWStake\MediaWiki\Component\CommonUserInterface\RendererDataTreeRenderer;
+use Wikimedia\Services\RecursiveServiceDependencyException;
 
 class ComponentRenderer {
 
@@ -34,9 +35,13 @@ class ComponentRenderer {
 		$this->rendererDataTreeRenderer = $rendererDataTreeRenderer;
 	}
 
-	private function getComponentManager(): ComponentManager {
+	private function getComponentManager(): ?ComponentManager {
 		if ( $this->componentManager === null ) {
-			$this->componentManager = ( $this->componentManagerCallback )();
+			try {
+				$this->componentManager = ( $this->componentManagerCallback )();
+			} catch ( RecursiveServiceDependencyException $e ) {
+				return null;
+			}
 		}
 		return $this->componentManager;
 	}
@@ -47,7 +52,12 @@ class ComponentRenderer {
 	 * @return string
 	 */
 	public function getComponentHtml( $component, $componentProcessData = [] ): string {
-		$componentTree = $this->getComponentManager()->getCustomComponentTree(
+		$componentManager = $this->getComponentManager();
+		if ( $componentManager === null ) {
+			return '';
+		}
+
+		$componentTree = $componentManager->getCustomComponentTree(
 			$component,
 			$componentProcessData
 		);
