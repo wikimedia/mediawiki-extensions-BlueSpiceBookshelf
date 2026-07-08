@@ -148,7 +148,6 @@
 	"bs-bookshelf-droplet-search-name": "Procurar nun libro",
 	"bs-bookshelf-droplet-search-description": "Procurar páxinas nun libro",
 	"bs-bookshelf-droplet-search-book-help": "Nome do libro no que se vai buscar",
-	"bs-bookshelf-notification-subscription-set-book-title": "Libro",
 	"bs-bookshelf-newbook-dlg-error-book-exists": "Non se puido crear o libro porque xa existe un libro con mesmo nome",
 	"bs-bookshelf-actionmenuentry-new-book": "Libro novo",
 	"bs-bookshelf-add-mass-tool-title": "Engadir varias páxinas",
@@ -192,5 +191,7 @@
 	"bs-bookshelf-droplet-search-book-label": "Selecciona un libro para a procura",
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Crear un libro",
 	"bs-bookshelf-entrypoint-action-book-aria-title": "Crear un libro",
-	"bs-bookshelf-add-to-book-warning-new-book": "O libro seleccionado aínda non existe. Crearase cando lle engadas páxinas."
+	"bs-bookshelf-add-to-book-warning-new-book": "O libro seleccionado aínda non existe. Crearase cando lle engadas páxinas.",
+	"bs-bookshelf-notifyme-subscription-reason": "Esta páxina pertence a un libro que estás a vixiar",
+	"bs-bookshelf-add-to-book-error": "Produciuse un erro ao engadir a páxina ao libro. Inténtao de novo."
 }
