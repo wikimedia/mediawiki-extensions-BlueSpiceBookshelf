@@ -190,5 +190,6 @@
 	"bs-bookshelf-formelement-book-input": "ספר",
 	"bs-bookshelf-formelement-book-input-return-value-label": "מאפיין מוחזר",
 	"bs-bookshelf-searchbook-ve-placeholder-text": "נא להקליד לחיפוש...",
-	"bs-bookshelf-droplet-search-book-label": "נא לבחור ספר לחיפוש"
+	"bs-bookshelf-droplet-search-book-label": "נא לבחור ספר לחיפוש",
+	"bs-bookshelf-notification-subscription-set-book-title": "ספר"
 }

@@ -153,5 +153,6 @@
 	"bs-bookshelf-chapter-insertion-btn-move-down": "Fejezet lejjebb mozgatása",
 	"bs-bookshelf-chapter-insertion-clear-btn-label": "Fejezetkijelölés eltávolítása",
 	"bs-bookshelf-sesp-books": "Könyvek",
-	"bs-bookshelf-actionmenuentry-create-new-book": "Új könyv létrehozása"
+	"bs-bookshelf-actionmenuentry-create-new-book": "Új könyv létrehozása",
+	"bs-bookshelf-notification-subscription-set-book-title": "Könyv"
 }

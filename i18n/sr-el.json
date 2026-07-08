@@ -75,5 +75,6 @@
 	"bs-bookshelf-export-pageparam-desc-docummenttype": "Prikaži tip dokumenta",
 	"bs-bookshelf-export-pageparam-desc-version": "Prikaži verziju knjige",
 	"bs-bookshelf-export-pdf-notification-done": "Izvoz PDF završen",
-	"bs-bookshelf-sesp-books": "Knjige"
+	"bs-bookshelf-sesp-books": "Knjige",
+	"bs-bookshelf-notification-subscription-set-book-title": "Knjiga"
 }

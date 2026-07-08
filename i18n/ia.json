@@ -190,5 +190,6 @@
 	"bs-bookshelf-droplet-search-book-label": "Selige le libro in le qual cercar",
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Crear libro",
 	"bs-bookshelf-entrypoint-action-book-aria-title": "Crear libro",
-	"bs-bookshelf-add-to-book-warning-new-book": "Le libro seligite non existe ancora. Illo essera create quando tu adde paginas a illo."
+	"bs-bookshelf-add-to-book-warning-new-book": "Le libro seligite non existe ancora. Illo essera create quando tu adde paginas a illo.",
+	"bs-bookshelf-notification-subscription-set-book-title": "Libro"
 }
