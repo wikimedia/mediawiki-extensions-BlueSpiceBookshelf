@@ -199,5 +199,15 @@
 	"bs-bookshelf-add-to-book-warning-new-book": "Selected book does not exist yet. It will be created when you add pages to it.",
 	"bs-bookshelf-notifyme-subscription-reason": "This page belongs to a book you are watching",
 	"bs-bookshelf-add-to-book-error": "An error occurred while adding the page to the book. Please try again.",
-	"bs-extendedsearch-search-center-filter-document-type-book-label": "Book"
+	"bs-extendedsearch-search-center-filter-document-type-book-label": "Book",
+	"bs-bookshelf-create-chapter-book-title": "New chapter",
+	"bs-bookshelf-create-chapter-action-next-label": "Next",
+	"bs-bookshelf-create-chapter-action-back-label": "Back",
+	"bs-bookshelf-create-chapter-error": "An error occurred while creating the chapter. Please try again.",
+	"bs-bookshelf-create-chapter-invalid-page-name": "Please provide a valid page name.",
+	"bs-bookshelf-create-chapter-page-exists": "A page with this name already exists.",
+	"bs-bookshelf-create-chapter-page-intro-label": "Create a wiki page for the new chapter.",
+	"bs-bookshelf-create-chapter-page-name-input-label": "Page name",
+	"bs-bookshelf-create-chapter-page-name-input-help": "Enter a page name. In the next step, the chapter title can be reviewed and edited.",
+	"bs-bookshelf-create-chapter-input-chapter-name": "Chapter title"
 }

@@ -158,7 +158,7 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 					'items' => [
 						new Literal(
 							'n-book-panel-header-text',
-							'<span class="book-title">' . $this->getBookTitle( $activeBook ) . '</span>'
+							$this->getBookHeading( $activeBook )
 						)
 					]
 				] ),
@@ -219,6 +219,26 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 * @param Title|null $activeBook
 	 * @return string
 	 */
+	private function getBookHeading( $activeBook ): string {
+		$heading = Html::element( 'span', [
+			'class' => 'book-title'
+		], $this->getBookTitle( $activeBook ) );
+		if ( !$this->userCanEditBook( $activeBook ) ) {
+			return $heading;
+		}
+		$heading .= Html::element( 'button', [
+			'class' => [ 'book-chapter-create', 'btn bi-bs-create-page', 'ca-new-chapter' ],
+			'data-title' => $activeBook->getText(),
+			'aria-label' => 'Create new chapter',
+			'title' => 'Create new chapter'
+		] );
+		return $heading;
+	}
+
+	/**
+	 * @param Title|null $activeBook
+	 * @return string
+	 */
 	private function getBookTitle( $activeBook ): string {
 		if ( !$activeBook instanceof Title ) {
 			return '';
@@ -239,9 +259,7 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 			return '';
 		}
 
-		$user = RequestContext::getMain()->getUser();
-		$permissionManager = MediaWikiServices::getInstance()->getPermissionManager();
-		if ( !$permissionManager->userCan( 'edit', $user, $activeBook ) ) {
+		if ( !$this->userCanEditBook( $activeBook ) ) {
 			return '';
 		}
 
@@ -259,5 +277,18 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 		$bookEditorLink .= Html::closeElement( 'a' );
 
 		return $bookEditorLink;
+	}
+
+	/**
+	 * @param Title $activeBook
+	 * @return void
+	 */
+	protected function userCanEditBook( $activeBook ) {
+		$user = RequestContext::getMain()->getUser();
+		$permissionManager = MediaWikiServices::getInstance()->getPermissionManager();
+		if ( $permissionManager->userCan( 'edit', $user, $activeBook ) ) {
+			return true;
+		}
+		return false;
 	}
 }

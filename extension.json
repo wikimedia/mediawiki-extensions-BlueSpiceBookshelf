@@ -760,10 +760,28 @@
 				"ui/panel/BookNavigationTreePanel.js",
 				"data/BookNavigationTreeStore.js",
 				"ui/data/tree/BookNavigationTree.js",
-				"ui/data/tree/BookNavigationTreeItem.js"
+				"ui/data/tree/BookNavigationTreeItem.js",
+				"ui/data/tree/AddChapterTreeAction.js",
+				"ui/dialog/CreateChapter.js",
+				"ui/pages/CreateChapterPage.js",
+				"ui/pages/CreateChapterDetails.js"
+			],
+			"messages": [
+				"bs-bookshelf-create-chapter-book-title",
+				"bs-bookshelf-create-chapter-action-next-label",
+				"bs-bookshelf-create-chapter-action-back-label",
+				"bs-bookshelf-create-chapter-error",
+				"bs-bookshelf-create-chapter-invalid-page-name",
+				"bs-bookshelf-create-chapter-page-exists",
+				"bs-bookshelf-create-chapter-page-intro-label",
+				"bs-bookshelf-create-chapter-page-name-input-label",
+				"bs-bookshelf-create-chapter-page-name-input-help",
+				"bs-bookshelf-create-chapter-input-chapter-name"
 			],
 			"dependencies": [
-				"ext.oojsplus.navigation.treePanel"
+				"ext.oojsplus.navigation.treePanel",
+				"ext.oOJSPlus.dialogs",
+				"ext.oOJSPlus.widgets"
 			]
 		},
 		"bs.bookshelf.formElement.bookInput": {
