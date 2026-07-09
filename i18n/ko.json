@@ -196,5 +196,7 @@
 	"bs-bookshelf-entrypoint-action-book-aria-label": "책 만들기",
 	"bs-bookshelf-entrypoint-action-book-aria-title": "책 만들기",
 	"bs-bookshelf-add-to-book-warning-new-book": "선택하신 책은 아직 존재하지 않습니다. 페이지를 추가하면 생성됩니다.",
-	"bs-bookshelf-notification-subscription-set-book-title": "책"
+	"bs-bookshelf-notification-subscription-set-book-title": "책",
+	"bs-bookshelf-notifyme-subscription-reason": "이 문서는 현재 열람중인 책에 속합니다",
+	"bs-bookshelf-add-to-book-error": "책에 페이지를 추가하는 동안 오류가 발생했습니다. 다시 시도해 주세요."
 }
