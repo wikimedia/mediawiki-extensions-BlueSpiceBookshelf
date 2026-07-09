@@ -7,6 +7,7 @@
 			"Mediawikitranslator",
 			"Pyscowicz",
 			"Silvonen",
+			"Wikipeedikko",
 			"Yupik"
 		]
 	},
@@ -42,5 +43,6 @@
 	"bs-bookshelf-ve-bookshelf-attr-book-label": "Kirja",
 	"bs-bookshelf-droplet-name": "Kirjalista",
 	"bs-bookshelf-chapter-plain-text-input-label": "Teksti",
-	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Teksti"
+	"bs-bookshelf-chapter-wikilink-with-alias-text-input-label": "Teksti",
+	"bs-bookshelf-add-to-book-error": "Sivua kirjaan lisättäessä tapahtui virhe. Yritä uudelleen."
 }

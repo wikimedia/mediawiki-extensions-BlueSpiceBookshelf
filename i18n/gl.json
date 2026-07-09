@@ -193,5 +193,7 @@
 	"bs-bookshelf-droplet-search-book-label": "Selecciona un libro para a procura",
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Crear un libro",
 	"bs-bookshelf-entrypoint-action-book-aria-title": "Crear un libro",
-	"bs-bookshelf-add-to-book-warning-new-book": "O libro seleccionado aínda non existe. Crearase cando lle engadas páxinas."
+	"bs-bookshelf-add-to-book-warning-new-book": "O libro seleccionado aínda non existe. Crearase cando lle engadas páxinas.",
+	"bs-bookshelf-notifyme-subscription-reason": "Esta páxina pertence a un libro que estás a vixiar",
+	"bs-bookshelf-add-to-book-error": "Produciuse un erro ao engadir a páxina ao libro. Inténtao de novo."
 }
