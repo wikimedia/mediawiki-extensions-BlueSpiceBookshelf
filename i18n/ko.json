@@ -196,5 +196,7 @@
 	"bs-bookshelf-export-pageparam-desc-author2": "책 메타데이터 저자 2에 정의된 저자를 보여줍니다",
 	"bs-bookshelf-export-pageparam-desc-department": "책의 부분을 보여줍니다",
 	"bs-bookshelf-sesp-books-desc": "이 페이지가 속한 책",
-	"bs-bookshelf-add-to-book-warning-new-book": "선택하신 책은 아직 존재하지 않습니다. 페이지를 추가하면 생성됩니다."
+	"bs-bookshelf-add-to-book-warning-new-book": "선택하신 책은 아직 존재하지 않습니다. 페이지를 추가하면 생성됩니다.",
+	"bs-bookshelf-notifyme-subscription-reason": "이 문서는 현재 열람중인 책에 속합니다",
+	"bs-bookshelf-add-to-book-error": "책에 페이지를 추가하는 동안 오류가 발생했습니다. 다시 시도해 주세요."
 }
