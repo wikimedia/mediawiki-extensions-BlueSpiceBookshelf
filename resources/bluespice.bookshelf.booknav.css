@@ -103,7 +103,7 @@
 	margin-left: var( --bookshelf-content-droplet-booknav-tree-expander-width );
 }
 
-.bs-tag-booknav ul.mws-tree .mws-tree-item a:focus-visible {
+.bs-tag-booknav ul.mws-tree .mws-tree-item a:focus-visible { /* stylelint-disable-line plugin/no-unsupported-browser-features */
 	outline: 1px solid var( --bookshelf-content-droplet-booknav-tree-item-focus-visible );
 }
 
