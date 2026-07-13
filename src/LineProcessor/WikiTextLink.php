@@ -57,7 +57,6 @@ class WikiTextLink extends LineProcessorBase implements ILineProcessor {
 	}
 
 	/**
-	 *
 	 * @param string $line
 	 * @return bool
 	 */
@@ -75,7 +74,6 @@ class WikiTextLink extends LineProcessorBase implements ILineProcessor {
 	}
 
 	/**
-	 *
 	 * @param string $link
 	 */
 	protected function parseLink( $link ) {

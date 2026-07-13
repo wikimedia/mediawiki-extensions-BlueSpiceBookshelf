@@ -8,7 +8,6 @@ use BlueSpice\ConfigDefinition\BooleanSetting;
 class ChapterPagerAfterContent extends BooleanSetting implements ISettingPaths {
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	public function getPaths() {
@@ -20,7 +19,6 @@ class ChapterPagerAfterContent extends BooleanSetting implements ISettingPaths {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getLabelMessageKey() {
@@ -28,7 +26,6 @@ class ChapterPagerAfterContent extends BooleanSetting implements ISettingPaths {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getHelpMessageKey() {

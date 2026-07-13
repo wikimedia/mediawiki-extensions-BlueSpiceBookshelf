@@ -7,7 +7,6 @@ use MediaWiki\Title\Title;
 interface BSBookshelfBooksOverviewBeforeSetBookActions {
 
 	/**
-	 *
 	 * @param array &$actions
 	 * @param Title $book
 	 * @param string $displayTitle

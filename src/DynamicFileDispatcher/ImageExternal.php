@@ -7,13 +7,11 @@ use BlueSpice\DynamicFileDispatcher\Module;
 class ImageExternal extends \BlueSpice\DynamicFileDispatcher\File {
 
 	/**
-	 *
 	 * @var string
 	 */
 	protected $src = '';
 
 	/**
-	 *
 	 * @param Module $dfd
 	 * @param sring $src
 	 */
@@ -35,7 +33,6 @@ class ImageExternal extends \BlueSpice\DynamicFileDispatcher\File {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getMimeType() {

@@ -6,7 +6,6 @@ use Wikimedia\ParamValidator\ParamValidator;
 class ApiQueryBookshelfBookNode extends ApiQueryBase {
 
 	/**
-	 *
 	 * @param string $query
 	 * @param string $moduleName
 	 */
@@ -15,7 +14,6 @@ class ApiQueryBookshelfBookNode extends ApiQueryBase {
 	}
 
 	/**
-	 *
 	 * @throws Exception
 	 */
 	public function execute() {
@@ -28,7 +26,6 @@ class ApiQueryBookshelfBookNode extends ApiQueryBase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	protected function getAllowedParams() {

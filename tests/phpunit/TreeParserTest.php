@@ -43,7 +43,6 @@ class TreeParserTest extends TestCase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function provideParseWikiTextListData() {

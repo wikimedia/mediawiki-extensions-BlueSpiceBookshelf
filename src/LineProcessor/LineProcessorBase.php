@@ -6,6 +6,9 @@ use BlueSpice\Bookshelf\ILineProcessor;
 
 abstract class LineProcessorBase implements ILineProcessor {
 
+	/**
+	 * @return static
+	 */
 	public static function factory() {
 		return new static();
 	}

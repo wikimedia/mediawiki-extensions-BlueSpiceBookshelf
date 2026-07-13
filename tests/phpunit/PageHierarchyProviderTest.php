@@ -17,7 +17,6 @@ use PageHierarchyProvider;
 class PageHierarchyProviderTest extends MediaWikiIntegrationTestCase {
 
 	/**
-	 *
 	 * @return Title
 	 */
 	private function getTestBookTitle() {
@@ -25,7 +24,6 @@ class PageHierarchyProviderTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 *
 	 * @var PageHierarchyProvider
 	 */
 	protected $oPHP = null;

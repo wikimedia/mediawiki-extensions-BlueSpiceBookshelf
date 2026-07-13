@@ -60,7 +60,6 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 	];
 
 	/**
-	 *
 	 * @param TitleFactory $titleFactory
 	 * @param PermissionManager $permissionManager
 	 * @param HookContainer $hookRunner
@@ -86,7 +85,6 @@ class SecondaryDataProvider extends \MWStake\MediaWiki\Component\DataStore\Secon
 	}
 
 	/**
-	 *
 	 * @param Record &$dataSet
 	 */
 	protected function doExtend( &$dataSet ) {

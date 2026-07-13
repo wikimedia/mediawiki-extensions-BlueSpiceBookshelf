@@ -26,9 +26,6 @@ class FixBookChapterTitles extends LoggedUpdateMaintenance {
 		return 'bookshelf-update-book-chapters';
 	}
 
-	/**
-	 *
-	 */
 	public function __construct() {
 		parent::__construct();
 
