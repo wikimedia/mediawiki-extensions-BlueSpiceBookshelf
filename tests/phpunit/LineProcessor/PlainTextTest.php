@@ -26,7 +26,6 @@ class PlainTextTest extends TestCase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function provideTestAppliesData() {
@@ -38,7 +37,6 @@ class PlainTextTest extends TestCase {
 	}
 
 	/**
-	 *
 	 * @param string $line
 	 * @covers \BlueSpice\Bookshelf\LineProcessor\PlainText::process
 	 * @dataProvider provideTestProcessData
@@ -53,7 +51,6 @@ class PlainTextTest extends TestCase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function provideTestProcessData() {

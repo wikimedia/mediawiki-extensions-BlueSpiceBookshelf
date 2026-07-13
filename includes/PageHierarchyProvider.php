@@ -125,7 +125,6 @@ class PageHierarchyProvider {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getExtendedTOCArray() {
@@ -281,7 +280,6 @@ class PageHierarchyProvider {
 	}
 
 	/**
-	 *
 	 * @param string $sArticleTitle
 	 * @param array $aParams
 	 * @return stdClass
@@ -292,7 +290,6 @@ class PageHierarchyProvider {
 	}
 
 	/**
-	 *
 	 * @param string $sArticleTitle
 	 * @param stdClass[] $aEntries
 	 * @return stdClass
@@ -517,7 +514,6 @@ class PageHierarchyProvider {
 	}
 
 	/**
-	 *
 	 * @param Title $title
 	 * @param string $method
 	 * @param array $aParams
@@ -560,7 +556,6 @@ class PageHierarchyProvider {
 	}
 
 	/**
-	 *
 	 * @param string $line
 	 * @return array
 	 */

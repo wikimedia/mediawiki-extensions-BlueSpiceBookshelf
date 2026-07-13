@@ -19,43 +19,36 @@ class TreeParser {
 	protected $lineProcessors = [];
 
 	/**
-	 *
 	 * @var string
 	 */
 	protected $wikiText = '';
 
 	/**
-	 *
 	 * @var string[]
 	 */
 	protected $lines = [];
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $simpleTOC = [];
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $extendedTOC = [];
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $tree = [];
 
 	/**
-	 *
 	 * @var string
 	 */
 	protected $jsonStringBuffer = '';
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $defaultParams = [
@@ -64,13 +57,11 @@ class TreeParser {
 	];
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $params = [];
 
 	/**
-	 *
 	 * @param Config $config
 	 * @param ExtensionAttributeBasedRegistry $lineParserRegistry
 	 */
@@ -177,7 +168,6 @@ class TreeParser {
 	}
 
 	/**
-	 *
 	 * @param string $line
 	 * @return array
 	 */

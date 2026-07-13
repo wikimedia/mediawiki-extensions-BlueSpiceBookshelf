@@ -5,7 +5,6 @@ use Wikimedia\ParamValidator\ParamValidator;
 class ApiBookshelfMassAddPageStore extends BSApiExtJSStoreBase {
 
 	/**
-	 *
 	 * @param string $sQuery
 	 * @return array
 	 */
@@ -25,7 +24,6 @@ class ApiBookshelfMassAddPageStore extends BSApiExtJSStoreBase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getAllowedParams() {
@@ -50,7 +48,6 @@ class ApiBookshelfMassAddPageStore extends BSApiExtJSStoreBase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getParamDescription() {

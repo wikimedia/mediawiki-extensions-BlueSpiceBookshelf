@@ -7,7 +7,6 @@ use BlueSpice\DynamicFileDispatcher\AbstractStaticFile;
 class StaticCoverImage extends AbstractStaticFile {
 
 	/**
-	 *
 	 * @return string
 	 */
 	protected function getAbsolutePath() {

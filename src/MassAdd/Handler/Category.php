@@ -13,7 +13,6 @@ class Category implements \BlueSpice\Bookshelf\MassAdd\IHandler {
 	protected $root;
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getData() {
@@ -47,7 +46,6 @@ class Category implements \BlueSpice\Bookshelf\MassAdd\IHandler {
 	}
 
 	/**
-	 *
 	 * @param string $root
 	 */
 	protected function __construct( $root ) {

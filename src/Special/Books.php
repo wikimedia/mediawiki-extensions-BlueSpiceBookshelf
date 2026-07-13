@@ -10,9 +10,6 @@ class Books extends SpecialPage {
 	/** @var TemplateParser */
 	private $templateParser;
 
-	/**
-	 *
-	 */
 	public function __construct() {
 		parent::__construct( 'Books', 'bookshelf-viewspecialpage' );
 
@@ -22,7 +19,6 @@ class Books extends SpecialPage {
 	}
 
 	/**
-	 *
 	 * @param string $subPage
 	 * @return void
 	 */

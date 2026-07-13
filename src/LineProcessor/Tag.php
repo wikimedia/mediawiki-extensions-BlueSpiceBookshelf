@@ -48,7 +48,6 @@ class Tag extends LineProcessorBase implements ILineProcessor {
 	}
 
 	/**
-	 *
 	 * @param DOMElement $el
 	 * @return DOMElement|null
 	 */

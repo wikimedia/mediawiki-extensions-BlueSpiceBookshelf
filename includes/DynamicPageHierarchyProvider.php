@@ -56,7 +56,6 @@ class DynamicPageHierarchyProvider extends PageHierarchyProvider {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	protected function getCacheKey( $title, $method, $aParams = [] ) {

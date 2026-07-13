@@ -15,7 +15,6 @@ class Export implements IBooksOverviewAction {
 	private $displayTitle = '';
 
 	/**
-	 *
 	 * @param Title $book
 	 * @param string $displayTitle
 	 */

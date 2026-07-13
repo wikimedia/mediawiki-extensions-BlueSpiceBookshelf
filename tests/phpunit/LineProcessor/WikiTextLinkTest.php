@@ -35,7 +35,6 @@ class WikiTextLinkTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function provideTestAppliesData() {
@@ -49,7 +48,6 @@ class WikiTextLinkTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 *
 	 * @param string $line
 	 * @param array $expectedValues
 	 * @covers BlueSpice\Bookshelf\LineProcessor\WikiTextLink::process
@@ -70,7 +68,6 @@ class WikiTextLinkTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function provideTestProcessData() {

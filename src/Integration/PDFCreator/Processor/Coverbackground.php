@@ -29,7 +29,6 @@ class Coverbackground implements IProcessor {
 	private $configFactory;
 
 	/**
-	 *
 	 * @param TitleFactory $titleFactory
 	 */
 	public function __construct(

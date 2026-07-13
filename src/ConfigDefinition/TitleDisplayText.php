@@ -7,7 +7,6 @@ use BlueSpice\ConfigDefinition\BooleanSetting;
 class TitleDisplayText extends BooleanSetting implements \BlueSpice\Bookshelf\ISettingPaths {
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	public function getPaths() {
@@ -19,7 +18,6 @@ class TitleDisplayText extends BooleanSetting implements \BlueSpice\Bookshelf\IS
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getLabelMessageKey() {
@@ -27,7 +25,6 @@ class TitleDisplayText extends BooleanSetting implements \BlueSpice\Bookshelf\IS
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getHelpMessageKey() {

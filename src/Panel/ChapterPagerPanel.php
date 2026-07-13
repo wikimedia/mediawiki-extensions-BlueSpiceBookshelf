@@ -54,7 +54,6 @@ class ChapterPagerPanel extends Literal {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getId(): string {
@@ -62,7 +61,6 @@ class ChapterPagerPanel extends Literal {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getHtml(): string {
@@ -79,7 +77,6 @@ class ChapterPagerPanel extends Literal {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @return bool
 	 */
@@ -105,7 +102,6 @@ class ChapterPagerPanel extends Literal {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getRequiredRLStyles(): array {

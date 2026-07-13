@@ -17,7 +17,6 @@ class AddBookMetaTable extends LoadExtensionSchemaUpdates {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	protected function getExtensionPath() {

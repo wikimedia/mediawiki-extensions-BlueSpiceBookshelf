@@ -13,7 +13,6 @@ use Wikimedia\ParamValidator\ParamValidator;
 class GetBookInfo extends SimpleHandler {
 
 	/**
-	 *
 	 * @param TitleFactory $titleFactory
 	 * @param BookLookup $bookLookup
 	 * @param BookMetaLookup $bookMetaLookup

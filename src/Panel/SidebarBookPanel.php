@@ -69,7 +69,6 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getId(): string {
@@ -84,7 +83,6 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getRequiredRLStyles(): array {
@@ -94,7 +92,6 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	}
 
 	/**
-	 *
 	 * @return Message
 	 */
 	public function getText(): Message {
@@ -102,7 +99,6 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	}
 
 	/**
-	 *
 	 * @return Message
 	 */
 	public function getTitle(): Message {
@@ -110,7 +106,6 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	}
 
 	/**
-	 *
 	 * @return Message
 	 */
 	public function getAriaLabel(): Message {
@@ -118,7 +113,6 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	}
 
 	/**
-	 *
 	 * @return Message
 	 */
 	public function getAriaDesc(): Message {
@@ -126,7 +120,6 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	}
 
 	/**
-	 *
 	 * @return IComponent[]
 	 */
 	public function getSubComponents(): array {
@@ -190,7 +183,6 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @return bool
 	 */
@@ -216,7 +208,6 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @return bool
 	 */
