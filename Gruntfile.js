@@ -16,11 +16,13 @@ module.exports = function ( grunt ) {
 			all: '.'
 		},
 		stylelint: {
+			options: {
+				cache: true
+			},
 			all: [
-				'**/*.{css,less,vue}',
+				'**/*.{css,less}',
 				'!node_modules/**',
-				'!vendor/**',
-				'!data/PDFTemplates/**'
+				'!vendor/**'
 			]
 		},
 		banana: Object.assign(

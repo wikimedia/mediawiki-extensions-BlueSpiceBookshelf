@@ -1,7 +1,7 @@
 :root {
 	--bookshelf-content-droplet-booknav-tree-expander-width: 22.87px;
 	--bookshelf-content-droplet-booknav-tree-item-min-height: 35px;
-	--bookshelf-content-droplet-booknav-tree-item-focus-visible: ; /* stylelint-disable-line @stylistic/declaration-block-semicolon-newline-before, @stylistic/declaration-block-semicolon-space-before, @stylistic/declaration-colon-space-after */
+	--bookshelf-content-droplet-booknav-tree-item-focus-visible: ; /* stylelint-disable-line @stylistic/declaration-block-semicolon-newline-before, @stylistic/declaration-colon-space-after */
 	--bookshelf-content-droplet-booknav-marker--active: #3e5389;
 	--bookshelf-content-droplet-booknav-marker--hover: transparent;
 	--bookshelf-content-droplet-booknav-fg: #252525;
@@ -103,7 +103,7 @@
 	margin-left: var( --bookshelf-content-droplet-booknav-tree-expander-width );
 }
 
-.mwstake-components-generictaghandler-tag-booknav ul.mws-tree .mws-tree-item a:focus-visible {
+.mwstake-components-generictaghandler-tag-booknav ul.mws-tree .mws-tree-item a:focus-visible { /* stylelint-disable-line plugin/no-unsupported-browser-features */
 	outline: 1px solid var( --bookshelf-content-droplet-booknav-tree-item-focus-visible );
 }
 

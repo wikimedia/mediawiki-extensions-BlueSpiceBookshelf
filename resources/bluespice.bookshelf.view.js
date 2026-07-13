@@ -15,7 +15,7 @@
 		mw.user.getRights().done( ( rights ) => {
 			for ( let index = 0; index < registeredTreeTools.length; index++ ) {
 				const tool = registeredTreeTools[ index ];
-				if ( tool.permission !== '' && rights.indexOf( tool.permission ) < 0 ) {
+				if ( tool.permission !== '' && rights.indexOf( tool.permission ) < 0 ) { // eslint-disable-line unicorn/prefer-includes
 					continue;
 				}
 				if ( tool.selectable === true ) {

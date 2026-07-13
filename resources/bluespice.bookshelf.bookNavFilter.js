@@ -13,7 +13,7 @@ $( '.container-filter-search' ).each( function () { // eslint-disable-line no-jq
 		$elementsToFilter.each( function () {
 			const $element = $( this ),
 				elementText = $element.text().toLowerCase();
-			if ( elementText.indexOf( normalValue ) !== -1 ) {
+			if ( elementText.indexOf( normalValue ) !== -1 ) { // eslint-disable-line unicorn/prefer-includes
 				$element.fadeIn(); // eslint-disable-line no-jquery/no-fade
 			} else {
 				$element.fadeOut(); // eslint-disable-line no-jquery/no-fade
