@@ -98,7 +98,6 @@ class BookNavigationTreeContainer extends SimpleTreeContainer {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function shouldRender( IContextSource $context ): bool {

@@ -11,7 +11,6 @@ use stdClass;
 class ClientConfig {
 
 	/**
-	 *
 	 * @return array
 	 */
 	public static function getRegisteredMetadata() {
@@ -44,7 +43,6 @@ class ClientConfig {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public static function getBookshelfData() {
@@ -57,7 +55,6 @@ class ClientConfig {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public static function getCreateNewBookPlugins() {

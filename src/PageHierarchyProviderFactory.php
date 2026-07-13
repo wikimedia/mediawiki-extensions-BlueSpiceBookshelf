@@ -74,7 +74,6 @@ class PageHierarchyProviderFactory {
 	}
 
 	/**
-	 *
 	 * @param array $aTags
 	 * @return string The prefixed text of the source title or an empty string if nothing suitable was
 	 * found

@@ -21,7 +21,6 @@ class PostBookMetadata extends SimpleHandler {
 	private $wikiPageFactory;
 
 	/**
-	 *
 	 * @param TitleFactory $titleFactory
 	 * @param WikiPageFactory $wikiPageFactory
 	 */

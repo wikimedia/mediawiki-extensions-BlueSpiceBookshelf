@@ -33,13 +33,11 @@ use MediaWiki\Context\IContextSource;
 abstract class BSBookshelfBookStoreMakeData extends Hook {
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $result = null;
 
 	/**
-	 *
 	 * @param array &$result
 	 * @return bool
 	 */
@@ -54,7 +52,6 @@ abstract class BSBookshelfBookStoreMakeData extends Hook {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param array &$result

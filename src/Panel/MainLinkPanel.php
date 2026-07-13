@@ -8,15 +8,11 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink
 
 class MainLinkPanel extends RestrictedTextLink {
 
-	/**
-	 *
-	 */
 	public function __construct() {
 		parent::__construct( [] );
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getId(): string {
@@ -24,7 +20,6 @@ class MainLinkPanel extends RestrictedTextLink {
 	}
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	public function getPermissions(): array {
@@ -64,7 +59,6 @@ class MainLinkPanel extends RestrictedTextLink {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getRequiredRLStyles(): array {

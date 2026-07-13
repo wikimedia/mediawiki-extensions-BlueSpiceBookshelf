@@ -9,13 +9,11 @@ use Wikimedia\ParamValidator\ParamValidator;
 class ApiBookshelfStore extends BSApiExtJSStoreBase {
 
 	/**
-	 *
 	 * @var LinkRenderer
 	 */
 	protected $linkRenderer = null;
 
 	/**
-	 *
 	 * @param ApiMain $mainModule
 	 * @param string $moduleName
 	 * @param string $modulePrefix
@@ -27,7 +25,6 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	}
 
 	/**
-	 *
 	 * @param string $sQuery
 	 * @return stdClass[]
 	 */
@@ -50,7 +47,6 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	protected function getDescription() {
@@ -58,7 +54,6 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getAllowedParams() {
@@ -73,7 +68,6 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getParamDescription() {
@@ -82,7 +76,6 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function fetchBookNamespaceBooks() {
@@ -126,7 +119,6 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 	}
 
 	/**
-	 *
 	 * @param stdClass $row
 	 * @return stdClass|null
 	 */
@@ -195,6 +187,9 @@ class ApiBookshelfStore extends BSApiExtJSStoreBase {
 		return $oBook;
 	}
 
+	/**
+	 * @return array
+	 */
 	private function fetchTempBooksFromParam() {
 		$value = $this->getParameter( 'tempBooks' );
 

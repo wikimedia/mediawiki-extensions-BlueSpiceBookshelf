@@ -20,7 +20,6 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 	private $wanCache;
 
 	/**
-	 *
 	 * @param IContextSource|null $context
 	 * @param Config|null $config
 	 * @param LoadBalancer|null $loadBalancer
@@ -43,7 +42,6 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 	}
 
 	/**
-	 *
 	 * @param ReaderParams $params
 	 * @return PrimaryDataProvider
 	 */
@@ -53,7 +51,6 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 	}
 
 	/**
-	 *
 	 * @return null
 	 */
 	protected function makeSecondaryDataProvider() {
@@ -61,7 +58,6 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 	}
 
 	/**
-	 *
 	 * @return Schema
 	 */
 	public function getSchema() {

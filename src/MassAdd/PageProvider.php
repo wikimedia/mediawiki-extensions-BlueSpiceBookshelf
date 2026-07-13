@@ -32,6 +32,9 @@ class PageProvider {
 		return self::$instance;
 	}
 
+	/**
+	 * @return PageProvider
+	 */
 	protected static function createInstance() {
 		return new self();
 	}
@@ -49,7 +52,6 @@ class PageProvider {
 	}
 
 	/**
-	 *
 	 * @param mixed $root
 	 */
 	public function setRoot( $root ) {
@@ -92,7 +94,6 @@ class PageProvider {
 	}
 
 	/**
-	 *
 	 * @param array &$pages
 	 * @return array|null
 	 */
@@ -114,7 +115,6 @@ class PageProvider {
 	}
 
 	/**
-	 *
 	 * @param array $page
 	 * @return bool
 	 */

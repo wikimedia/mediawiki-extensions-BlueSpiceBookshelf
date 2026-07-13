@@ -11,6 +11,9 @@ class TreeNode extends ArrayObject {
 		$this->init();
 	}
 
+	/**
+	 * @return array
+	 */
 	public function toArray() {
 		return (array)$this;
 	}

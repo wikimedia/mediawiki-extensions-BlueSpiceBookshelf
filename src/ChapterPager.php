@@ -101,7 +101,6 @@ class ChapterPager {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function getBookTitle() {
@@ -109,7 +108,6 @@ class ChapterPager {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	private function getNextPageData() {
@@ -117,7 +115,6 @@ class ChapterPager {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function getNextPageButton() {
@@ -125,7 +122,6 @@ class ChapterPager {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	private function getCurrentPageData() {
@@ -133,7 +129,6 @@ class ChapterPager {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	private function getPreviousPageData() {
@@ -141,7 +136,6 @@ class ChapterPager {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function getPreviousPageButton() {

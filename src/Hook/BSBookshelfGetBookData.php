@@ -35,19 +35,16 @@ use stdClass;
 abstract class BSBookshelfGetBookData extends Hook {
 
 	/**
-	 *
 	 * @var BookEditData
 	 */
 	protected $editDataProvider = null;
 
 	/**
-	 *
 	 * @var stdClass
 	 */
 	protected $bookData = null;
 
 	/**
-	 *
 	 * @param BookEditData $editData
 	 * @param stdClass &$bookData
 	 * @return bool
@@ -64,7 +61,6 @@ abstract class BSBookshelfGetBookData extends Hook {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param BookEditData $editData

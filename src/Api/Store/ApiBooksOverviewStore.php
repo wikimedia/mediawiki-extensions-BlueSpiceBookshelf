@@ -13,7 +13,6 @@ use MediaWiki\Context\RequestContext;
 class ApiBooksOverviewStore extends \BlueSpice\Api\Store {
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	protected function getRequiredPermissions() {
@@ -21,7 +20,6 @@ class ApiBooksOverviewStore extends \BlueSpice\Api\Store {
 	}
 
 	/**
-	 *
 	 * @return Store
 	 */
 	protected function makeDataStore() {

@@ -21,7 +21,6 @@ class WikiTextLinkNoRedirectTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 *
 	 * @covers BlueSpice\Bookshelf\LineProcessor\WikiTextLinkNoRedirect::process
 	 */
 	public function testProcess() {

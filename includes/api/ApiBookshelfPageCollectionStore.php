@@ -3,7 +3,6 @@
 class ApiBookshelfPageCollectionStore extends BSApiExtJSStoreBase {
 
 	/**
-	 *
 	 * @param string $sQuery
 	 * @return array
 	 */
