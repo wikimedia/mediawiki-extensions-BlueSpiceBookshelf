@@ -47,7 +47,6 @@ class AsyncBookNavigationTreeContainer extends Literal {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function shouldRender( IContextSource $context ): bool {

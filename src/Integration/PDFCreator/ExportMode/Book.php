@@ -27,7 +27,6 @@ class Book implements IExportMode {
 	private $configFactory;
 
 	/**
-	 *
 	 * @param BookLookup $bookLookup
 	 * @param TitleFactory $titleFactory
 	 * @param ChapterLookup $chapterLookup
@@ -45,7 +44,6 @@ class Book implements IExportMode {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getKey(): string {
@@ -53,7 +51,6 @@ class Book implements IExportMode {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getLabel(): string {
@@ -61,7 +58,6 @@ class Book implements IExportMode {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getRLModules(): array {
@@ -69,7 +65,6 @@ class Book implements IExportMode {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function applies( $format ): bool {
@@ -77,7 +72,6 @@ class Book implements IExportMode {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getDefaultTemplate(): string {
@@ -91,7 +85,6 @@ class Book implements IExportMode {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getExportPages( $title, $data ): array {
@@ -162,7 +155,6 @@ class Book implements IExportMode {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function isRelevantExportMode( $title ): bool {

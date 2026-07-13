@@ -7,7 +7,6 @@ use MediaWiki\Title\Title;
 class ApiQueryBookshelf extends ApiQueryBase {
 
 	/**
-	 *
 	 * @param string $query
 	 * @param string $moduleName
 	 */

@@ -6,7 +6,6 @@ use MediaWiki\Title\Title;
 class ApiBookshelfManage extends BSApiTasksBase {
 
 	/**
-	 *
 	 * @var string[]
 	 */
 	protected $aTasks = [
@@ -14,7 +13,6 @@ class ApiBookshelfManage extends BSApiTasksBase {
 	];
 
 	/**
-	 *
 	 * @return array
 	 */
 	protected function getRequiredTaskPermissions() {
@@ -24,7 +22,6 @@ class ApiBookshelfManage extends BSApiTasksBase {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getDescription() {
@@ -32,7 +29,6 @@ class ApiBookshelfManage extends BSApiTasksBase {
 	}
 
 	/**
-	 *
 	 * @param \stdClass $aTaskData
 	 * @param array $aParams
 	 * @return Standard

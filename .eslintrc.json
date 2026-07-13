@@ -20,7 +20,6 @@
 	},
 	"rules": {
 		"max-len": "off",
-		"mediawiki/no-unlabeled-buttonwidget": "off",
 		"no-jquery/variable-pattern": "off",
 		"no-prototype-builtins": "off",
 		"no-jquery/no-done-fail": "warn"

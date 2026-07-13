@@ -57,7 +57,6 @@ class ChapterMove implements PageMoveCompleteHook {
 	}
 
 	/**
-	 *
 	 * @param Title $pageName
 	 * @return array
 	 */

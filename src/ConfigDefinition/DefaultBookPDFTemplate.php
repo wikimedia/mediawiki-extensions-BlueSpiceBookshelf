@@ -8,7 +8,6 @@ use MediaWiki\Registration\ExtensionRegistry;
 class DefaultBookPDFTemplate extends StringSetting implements \BlueSpice\Bookshelf\ISettingPaths {
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getPaths() {
@@ -23,7 +22,6 @@ class DefaultBookPDFTemplate extends StringSetting implements \BlueSpice\Bookshe
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getLabelMessageKey() {
@@ -31,7 +29,6 @@ class DefaultBookPDFTemplate extends StringSetting implements \BlueSpice\Bookshe
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getHelpMessageKey() {

@@ -20,7 +20,6 @@ class GetTemplateForBook extends SimpleHandler {
 	private $configFactory;
 
 	/**
-	 *
 	 * @param TitleFactory $titleFactory
 	 * @param BookMetaLookup $lookup
 	 * @param ConfigFactory $configFactory

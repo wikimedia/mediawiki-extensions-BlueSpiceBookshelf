@@ -24,6 +24,9 @@ class BooksPropertyValueProvider extends PropertyValueProvider {
 		$this->lookup = $lookup;
 	}
 
+	/**
+	 * @return array
+	 */
 	public static function factory() {
 		return [ new static( MediaWikiServices::getInstance()->getService( 'BSBookshelfBookLookup' ) ) ];
 	}

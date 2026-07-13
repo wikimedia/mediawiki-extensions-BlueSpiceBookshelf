@@ -5,13 +5,11 @@ use Wikimedia\ParamValidator\ParamValidator;
 class ApiBookshelfBookStore extends BSApiExtJSStoreBase {
 
 	/**
-	 *
 	 * @var string
 	 */
 	protected $root = 'children';
 
 	/**
-	 *
 	 * @param string $sQuery
 	 * @return stdClass[]
 	 */
@@ -51,7 +49,6 @@ class ApiBookshelfBookStore extends BSApiExtJSStoreBase {
 	}
 
 	/**
-	 *
 	 * @param stdClass[] $aProcessedData
 	 * @return stdClass[]
 	 */
@@ -62,7 +59,6 @@ class ApiBookshelfBookStore extends BSApiExtJSStoreBase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getAllowedParams() {

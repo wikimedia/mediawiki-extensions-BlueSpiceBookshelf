@@ -63,7 +63,6 @@ class BookNavigationChapterPagerContainer extends Literal {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	public function getRequiredRLStyles(): array {

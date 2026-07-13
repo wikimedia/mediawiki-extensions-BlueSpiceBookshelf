@@ -19,7 +19,6 @@ class BookshelfImage extends ArticlePreviewImage {
 	protected $pageHierarchyProvider = null;
 
 	/**
-	 *
 	 * @return StaticCoverImage|ImageExternal
 	 */
 	public function getFile() {

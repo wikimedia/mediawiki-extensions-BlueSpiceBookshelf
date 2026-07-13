@@ -47,9 +47,6 @@ class RebuildBooks extends LoggedUpdateMaintenance {
 		return 'bookshelf-rebuild-books';
 	}
 
-	/**
-	 *
-	 */
 	public function __construct() {
 		parent::__construct();
 

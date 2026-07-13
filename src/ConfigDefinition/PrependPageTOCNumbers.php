@@ -7,7 +7,6 @@ use BlueSpice\ConfigDefinition\BooleanSetting;
 class PrependPageTOCNumbers extends BooleanSetting implements \BlueSpice\Bookshelf\ISettingPaths {
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	public function getPaths() {
@@ -19,7 +18,6 @@ class PrependPageTOCNumbers extends BooleanSetting implements \BlueSpice\Bookshe
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getLabelMessageKey() {
@@ -34,7 +32,6 @@ class PrependPageTOCNumbers extends BooleanSetting implements \BlueSpice\Bookshe
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getHelpMessageKey() {

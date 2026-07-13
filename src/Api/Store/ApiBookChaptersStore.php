@@ -9,7 +9,6 @@ use MediaWiki\Context\RequestContext;
 class ApiBookChaptersStore extends \BlueSpice\Api\Store {
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	protected function getRequiredPermissions() {
@@ -17,7 +16,6 @@ class ApiBookChaptersStore extends \BlueSpice\Api\Store {
 	}
 
 	/**
-	 *
 	 * @return Store
 	 */
 	protected function makeDataStore() {
