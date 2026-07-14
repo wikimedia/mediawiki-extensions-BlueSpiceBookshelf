@@ -217,6 +217,5 @@
 	"bs-bookshelf-searchbook-ve-placeholder-label": "搜索框中的占位符文本",
 	"bs-bookshelf-searchbook-ve-placeholder-help": "此处显示的文本作为搜索字段中的占位符",
 	"bs-bookshelf-searchbook-ve-placeholder-text": "输入什么就能搜索了……",
-	"bs-bookshelf-droplet-search-book-label": "选择书籍进行搜索",
-	"bs-bookshelf-notification-subscription-set-book-title": "书籍"
+	"bs-bookshelf-droplet-search-book-label": "选择书籍进行搜索"
 }

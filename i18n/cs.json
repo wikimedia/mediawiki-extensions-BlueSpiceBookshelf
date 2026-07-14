@@ -112,6 +112,5 @@
 	"bs-bookshelf-droplet-bookpdf-link-label": "Text pro odkaz na export",
 	"bs-bookshelf-droplet-bookpdf-name": "Odkaz na PDF knihu",
 	"bs-bookshelfui-bookmetatag-pdftemplate": "Šablona exportu do PDF",
-	"bs-bookshelf-actionmenuentry-create-new-book": "Vytvořit novou knihu",
-	"bs-bookshelf-notification-subscription-set-book-title": "Kniha"
+	"bs-bookshelf-actionmenuentry-create-new-book": "Vytvořit novou knihu"
 }

@@ -201,6 +201,5 @@
 	"bs-bookshelf-searchbook-ve-placeholder-text": "Zum Suchen tippen...",
 	"bs-bookshelf-droplet-search-book-label": "Buch für die Suche auswählen",
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Buch erstellen",
-	"bs-bookshelf-entrypoint-action-book-aria-title": "Buch erstellen",
-	"bs-bookshelf-notification-subscription-set-book-title": "Buch"
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Buch erstellen"
 }
