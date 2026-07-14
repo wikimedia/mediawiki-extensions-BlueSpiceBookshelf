@@ -4,12 +4,6 @@
 	font-weight: var( --content-h4-font-weight );
 }
 
-.oojsplus-data-navigation-tree .oojs-ui-data-tree-item.active > div:first-child {
-	border-color: var( --sidebar-primary-marker--hover ) !important;
-	background-color: var( --sidebar-primary-bg--hover ) !important;
-	color: var( --sidebar-primary-fg--hover ) !important;
-}
-
 #n-book-panel .card-footer {
 	border-top: none; /* stylelint-disable-line declaration-property-value-disallowed-list */
 	text-align: right;
