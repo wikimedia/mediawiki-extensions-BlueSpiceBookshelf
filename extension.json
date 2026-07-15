@@ -212,7 +212,8 @@
 						"TitleFactory",
 						"BSBookshelfBookChapterLookup",
 						"BSBookshelfBookContextProviderFactory",
-						"ConfigFactory"
+						"ConfigFactory",
+						"PermissionManager"
 					]
 				}
 			},

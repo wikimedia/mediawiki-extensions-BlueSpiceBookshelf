@@ -6,10 +6,15 @@ use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use MediaWiki\Config\ConfigFactory;
+use MediaWiki\Context\IContextSource;
+use MediaWiki\Extension\PDFCreator\IContextSourceAware;
 use MediaWiki\Extension\PDFCreator\IExportMode;
+use MediaWiki\MediaWikiServices;
+use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 
-class Book implements IExportMode {
+class Book implements IExportMode, IContextSourceAware {
 
 	/** @var BookLookup */
 	private $bookLookup;
@@ -26,21 +31,40 @@ class Book implements IExportMode {
 	/** @var ConfigFactory */
 	private $configFactory;
 
+	/** @var PermissionManager */
+	private $permissionManager;
+
+	/** @var IContextSource */
+	private $context;
+
 	/**
 	 * @param BookLookup $bookLookup
 	 * @param TitleFactory $titleFactory
 	 * @param ChapterLookup $chapterLookup
 	 * @param BookContextProviderFactory $bookContextProviderFactory
 	 * @param ConfigFactory $configFactory
+	 * @param PermissionManager|null $permissionManager
 	 */
 	public function __construct( BookLookup $bookLookup, TitleFactory $titleFactory,
 		ChapterLookup $chapterLookup, BookContextProviderFactory $bookContextProviderFactory,
-		ConfigFactory $configFactory ) {
+		ConfigFactory $configFactory, ?PermissionManager $permissionManager ) {
 		$this->bookLookup = $bookLookup;
 		$this->titleFactory = $titleFactory;
 		$this->chapterLookup = $chapterLookup;
 		$this->bookContextProviderFactory = $bookContextProviderFactory;
 		$this->configFactory = $configFactory;
+		if ( !$permissionManager ) {
+			$permissionManager = MediaWikiServices::getInstance()->getPermissionManager();
+		}
+		$this->permissionManager = $permissionManager;
+	}
+
+	/**
+	 * @param IContextSource $context
+	 * @return void
+	 */
+	public function setContext( IContextSource $context ): void {
+		$this->context = $context;
 	}
 
 	/**
@@ -140,6 +164,9 @@ class Book implements IExportMode {
 				continue;
 			}
 			$chapterTitle = $this->titleFactory->makeTitle( $chapter->getNamespace(), $chapter->getTitle() );
+			if ( !$this->userCanReadPage( $chapterTitle ) ) {
+				continue;
+			}
 			$chapterPages[] = [
 				'type' => 'page',
 				'target' => $chapterTitle->getPrefixedDBkey(),
@@ -166,5 +193,17 @@ class Book implements IExportMode {
 			return false;
 		}
 		return true;
+	}
+
+	/**
+	 * @param Title $title
+	 * @return bool
+	 */
+	protected function userCanReadPage( $title ) {
+		$user = $this->context->getUser();
+		if ( $this->permissionManager->userCan( 'read', $user, $title ) ) {
+			return true;
+		}
+		return false;
 	}
 }
