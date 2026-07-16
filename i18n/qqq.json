@@ -204,5 +204,11 @@
 	"bs-bookshelf-entrypoint-action-book-aria-title": "Title for entrypoint action to create a new book",
 	"bs-bookshelf-add-to-book-warning-new-book": "Warning message when adding a page to a book that has not been created yet.",
 	"bs-bookshelf-add-to-book-error": "Error message when adding a page to a book fails",
-	"bs-bookshelf-notifyme-subscription-reason": "Label for subscription reason in notification email"
+	"bs-bookshelf-notifyme-subscription-reason": "Label for subscription reason in notification email",
+	"bs-bookshelf-books-overview-page-book-action-watch-title": "Title/aria-label of the eye action in a book card's actions menu that adds the book to the watchlist\nParameters:\n* $1 - name of the book",
+	"bs-bookshelf-books-overview-page-book-action-unwatch-title": "Title/aria-label of the eye action in a book card's actions menu that removes the book from the watchlist\nParameters:\n* $1 - name of the book",
+	"bs-bookshelf-books-overview-page-book-action-watch-text": "Label of the watch action in a book card's actions menu that adds the book to the watchlist. Used on special page [[Special:Book]].",
+	"bs-bookshelf-books-overview-page-book-action-unwatch-text": "Label of the unwatch action in a book card's actions menu that removes the book from the watchlist. Used on special page [[Special:Book]].",
+	"bs-bookshelf-books-overview-page-book-watched": "Notification shown after a book was added to the watchlist\nParameters:\n* $1 - name of the book",
+	"bs-bookshelf-books-overview-page-book-unwatched": "Notification shown after a book was removed from the watchlist\nParameters:\n* $1 - name of the book"
 }
