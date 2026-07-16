@@ -193,5 +193,11 @@
 	"bs-bookshelf-entrypoint-action-book-aria-title": "Create book",
 	"bs-bookshelf-add-to-book-warning-new-book": "Selected book does not exist yet. It will be created when you add pages to it.",
 	"bs-bookshelf-add-to-book-error": "An error occurred while adding the page to the book. Please try again.",
-	"bs-bookshelf-notifyme-subscription-reason": "This page belongs to a book you are watching"
+	"bs-bookshelf-notifyme-subscription-reason": "This page belongs to a book you are watching",
+	"bs-bookshelf-books-overview-page-book-action-watch-title": "Watch book $1",
+	"bs-bookshelf-books-overview-page-book-action-unwatch-title": "Unwatch book $1",
+	"bs-bookshelf-books-overview-page-book-action-watch-text": "Watch",
+	"bs-bookshelf-books-overview-page-book-action-unwatch-text": "Unwatch",
+	"bs-bookshelf-books-overview-page-book-watched": "Added book \"$1\" to your watchlist",
+	"bs-bookshelf-books-overview-page-book-unwatched": "Removed book \"$1\" from your watchlist"
 }
