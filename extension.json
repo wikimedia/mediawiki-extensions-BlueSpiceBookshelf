@@ -512,7 +512,6 @@
 			]
 		},
 		"ext.bluespice.books.special.vue": {
-			"es6": true,
 			"dependencies": [
 				"mediawiki.api",
 				"vue",
