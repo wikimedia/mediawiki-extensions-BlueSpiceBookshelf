@@ -199,5 +199,11 @@
 	"bs-bookshelf-add-to-book-warning-new-book": "Het geselecteerde boek bestaat nog niet. Het wordt aangemaakt zodra u er pagina's aan toevoegt.",
 	"bs-bookshelf-notification-subscription-set-book-title": "Boek",
 	"bs-bookshelf-add-to-book-error": "Er is een fout opgetreden tijdens het toevoegen van de pagina aan het boek. Probeer het opnieuw.",
-	"bs-bookshelf-notifyme-subscription-reason": "Deze pagina hoort bij een boek dat u aan het bekijken bent"
+	"bs-bookshelf-notifyme-subscription-reason": "Deze pagina hoort bij een boek dat u aan het bekijken bent",
+	"bs-bookshelf-books-overview-page-book-action-watch-title": "Boek $1 volgen",
+	"bs-bookshelf-books-overview-page-book-action-unwatch-title": "Boek $1 niet langer volgen",
+	"bs-bookshelf-books-overview-page-book-action-watch-text": "Volgen",
+	"bs-bookshelf-books-overview-page-book-action-unwatch-text": "Niet meer volgen",
+	"bs-bookshelf-books-overview-page-book-watched": "Boek \"$1\" is toegevoegd aan uw volglijst",
+	"bs-bookshelf-books-overview-page-book-unwatched": "Boek \"$1\" is verwijderd van uw volglijst"
 }
