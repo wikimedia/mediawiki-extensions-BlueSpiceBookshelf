@@ -18,7 +18,7 @@ ext.bookshelf.ui.data.tree.BookEditorTree = function ( cfg ) {
 		} );
 		menuToolbar.toolbar.connect( this, {
 			metadataset: function ( metadata ) {
-				this.metadataManager.setData( metadata );
+				this.metadataManager.save( metadata );
 				menuToolbar.toolbar.data = metadata;
 			},
 			mass_add_pages: function ( pages ) { // eslint-disable-line camelcase
