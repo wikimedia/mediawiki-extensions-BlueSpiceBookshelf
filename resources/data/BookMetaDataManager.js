@@ -24,10 +24,6 @@ ext.bookshelf.data.BookMetaDataManager.prototype.load = function () {
 	return dfd.promise();
 };
 
-ext.bookshelf.data.BookMetaDataManager.prototype.setData = function ( data ) {
-	this.data = data;
-};
-
 ext.bookshelf.data.BookMetaDataManager.prototype.getData = function () {
 	return this.data;
 };
