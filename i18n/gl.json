@@ -194,5 +194,11 @@
 	"bs-bookshelf-add-to-book-warning-new-book": "O libro seleccionado aínda non existe. Crearase cando lle engadas páxinas.",
 	"bs-bookshelf-notification-subscription-set-book-title": "Libro",
 	"bs-bookshelf-notifyme-subscription-reason": "Esta páxina pertence a un libro que estás a vixiar",
-	"bs-bookshelf-add-to-book-error": "Produciuse un erro ao engadir a páxina ao libro. Inténtao de novo."
+	"bs-bookshelf-add-to-book-error": "Produciuse un erro ao engadir a páxina ao libro. Inténtao de novo.",
+	"bs-bookshelf-books-overview-page-book-action-watch-title": "Vixiar o libro «$1»",
+	"bs-bookshelf-books-overview-page-book-action-unwatch-title": "Deixar de vixiar o libro «$1»",
+	"bs-bookshelf-books-overview-page-book-action-watch-text": "Vixiar",
+	"bs-bookshelf-books-overview-page-book-action-unwatch-text": "Deixar de vixiar",
+	"bs-bookshelf-books-overview-page-book-watched": "O libro «$1» engadiuse á túa lista de vixilancia",
+	"bs-bookshelf-books-overview-page-book-unwatched": "O libro «$1» eliminouse da túa lista de vixilancia"
 }
