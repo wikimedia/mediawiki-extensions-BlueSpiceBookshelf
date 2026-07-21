@@ -104,5 +104,7 @@
 	"bs-bookshelf-newbook-dlg-action-create-label": "Uleeën",
 	"bs-bookshelf-formelement-book-input": "Buch",
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Buch uleeën",
-	"bs-bookshelf-entrypoint-action-book-aria-title": "Buch uleeën"
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Buch uleeën",
+	"bs-bookshelf-books-overview-page-book-action-watch-text": "Iwwerwaachen",
+	"bs-bookshelf-books-overview-page-book-action-unwatch-text": "Net méi iwwerwaachen"
 }
