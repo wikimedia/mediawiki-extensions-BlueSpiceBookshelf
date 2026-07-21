@@ -106,5 +106,7 @@
 	"bs-bookshelf-tag-searchinbook-error": "Gitt e gültege Buchnumm un",
 	"bs-bookshelf-actionmenuentry-create-new-book": "Neit Buch uleeën",
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Buch uleeën",
-	"bs-bookshelf-entrypoint-action-book-aria-title": "Buch uleeën"
+	"bs-bookshelf-entrypoint-action-book-aria-title": "Buch uleeën",
+	"bs-bookshelf-books-overview-page-book-action-watch-text": "Iwwerwaachen",
+	"bs-bookshelf-books-overview-page-book-action-unwatch-text": "Net méi iwwerwaachen"
 }
