@@ -21,6 +21,7 @@ use BS\ExtendedSearch\SearchResult;
 use BS\ExtendedSearch\Source\DocumentProvider\WikiPage as WikiPageProvider;
 use BS\ExtendedSearch\Source\WikiPages;
 use MediaWiki\Context\IContextSource;
+use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Language\Language;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Message\Message;
@@ -46,18 +47,27 @@ class Books implements
 	private $linkRenderer;
 	/** @var BookLookup */
 	private $bookLookup;
+	/** @var HookContainer */
+	private $hookContainer;
 	/** @var array */
 	private $bookTitles = [];
+	/** @var array Interwiki prefixes, keyed by wiki ID */
+	private $interwikiPrefixes = [];
 
 	/**
 	 * @param TitleFactory $titleFactory
 	 * @param LinkRenderer $linkRenderer
 	 * @param BookLookup $bookLookup
+	 * @param HookContainer $hookContainer
 	 */
-	public function __construct( TitleFactory $titleFactory, LinkRenderer $linkRenderer, BookLookup $bookLookup ) {
+	public function __construct(
+		TitleFactory $titleFactory, LinkRenderer $linkRenderer, BookLookup $bookLookup,
+		HookContainer $hookContainer
+	) {
 		$this->titleFactory = $titleFactory;
 		$this->linkRenderer = $linkRenderer;
 		$this->bookLookup = $bookLookup;
+		$this->hookContainer = $hookContainer;
 	}
 
 	/**
@@ -118,15 +128,21 @@ class Books implements
 		}
 
 		$books = $resultObject->getSourceParam( 'books' ) ?? [];
-		$books = array_map( function ( $book ) {
-			$this->assertBookTitle( $book );
-			$bookInfo = $this->getBookInfo( $this->bookTitles[$book] );
-			if ( !$bookInfo ) {
-				return null;
-			}
-			// Show display name of the book
-			return $this->linkRenderer->makeLink( $this->bookTitles[$book], $bookInfo->getName() );
-		}, $books );
+		if ( $result['_is_foreign'] ?? false ) {
+			$books = array_map( function ( $book ) use ( $result ) {
+				return $this->formatForeignBook( $book, $result['wiki_id'] );
+			}, $books );
+		} else {
+			$books = array_map( function ( $book ) {
+				$this->assertBookTitle( $book );
+				$bookInfo = $this->getBookInfo( $this->bookTitles[$book] );
+				if ( !$bookInfo ) {
+					return null;
+				}
+				// Show display name of the book
+				return $this->linkRenderer->makeLink( $this->bookTitles[$book], $bookInfo->getName() );
+			}, $books );
+		}
 		// remove nulls
 		$books = array_filter( $books );
 		if ( empty( $books ) ) {
@@ -179,6 +195,47 @@ class Books implements
 		$books = $this->bookLookup->getBooksForPage( $documentProviderSource->getTitle() );
 		// Book prefixed db keys
 		return array_keys( $books );
+	}
+
+	/**
+	 * Books of foreign results cannot be looked up locally, so the book page name
+	 * is used instead of the book display name, and linked via interwiki, if possible
+	 *
+	 * @param string $book Prefixed DB key of the book page on the foreign wiki
+	 * @param string $wikiId
+	 *
+	 * @return string|null
+	 */
+	private function formatForeignBook( string $book, string $wikiId ): ?string {
+		$interwiki = $this->getInterwikiPrefix( $wikiId );
+		if ( $interwiki ) {
+			$foreignTitle = $this->titleFactory->newFromText( $interwiki . ':' . $book );
+			if ( $foreignTitle ) {
+				return $this->linkRenderer->makeKnownLink( $foreignTitle, $foreignTitle->getText() );
+			}
+		}
+		$this->assertBookTitle( $book );
+		if ( !isset( $this->bookTitles[$book] ) ) {
+			return null;
+		}
+		return $this->bookTitles[$book]->getText();
+	}
+
+	/**
+	 * Interwiki prefix pointing to the wiki the result originates from,
+	 * empty string if there is none
+	 *
+	 * @param string $wikiId
+	 *
+	 * @return string
+	 */
+	private function getInterwikiPrefix( string $wikiId ): string {
+		if ( !isset( $this->interwikiPrefixes[$wikiId] ) ) {
+			$prefix = '';
+			$this->hookContainer->run( 'GetInterwikiPrefixFromWikiId', [ $wikiId, &$prefix ] );
+			$this->interwikiPrefixes[$wikiId] = $prefix;
+		}
+		return $this->interwikiPrefixes[$wikiId];
 	}
 
 	/**
