@@ -34,5 +34,6 @@
 	"bs-bookshelfui-chapterpager-previous": "Vireg",
 	"bs-bookshelfui-chapterpager-next": "Nächst",
 	"bs-bookshelfui-bookmetatag-bookshelf": "Bicherregal",
-	"bs-bookshelfui-dlg-copy-title": "„$1“ kopéieren"
+	"bs-bookshelfui-dlg-copy-title": "„$1“ kopéieren",
+	"bs-bookshelfui-bookmanager-deletion-error-permission": "Dir hutt net genuch Rechter, fir dës Aktioun duerchzeféieren."
 }
