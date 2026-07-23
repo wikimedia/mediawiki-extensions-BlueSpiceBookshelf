@@ -34,5 +34,6 @@
 	"bs-bookshelfui-prof-defaultview-images": "Biller",
 	"bs-bookshelfui-chapterpager-previous": "Vireg",
 	"bs-bookshelfui-chapterpager-next": "Nächst",
-	"bs-bookshelfui-bookmetatag-bookshelf": "Bicherregal"
+	"bs-bookshelfui-bookmetatag-bookshelf": "Bicherregal",
+	"bs-bookshelfui-bookmanager-deletion-error-permission": "Dir hutt net genuch Rechter, fir dës Aktioun duerchzeféieren."
 }
