@@ -210,5 +210,6 @@
 	"bs-bookshelf-books-overview-page-book-action-watch-text": "Label of the watch action in a book card's actions menu that adds the book to the watchlist. Used on special page [[Special:Book]].",
 	"bs-bookshelf-books-overview-page-book-action-unwatch-text": "Label of the unwatch action in a book card's actions menu that removes the book from the watchlist. Used on special page [[Special:Book]].",
 	"bs-bookshelf-books-overview-page-book-watched": "Notification shown after a book was added to the watchlist\nParameters:\n* $1 - name of the book",
-	"bs-bookshelf-books-overview-page-book-unwatched": "Notification shown after a book was removed from the watchlist\nParameters:\n* $1 - name of the book"
+	"bs-bookshelf-books-overview-page-book-unwatched": "Notification shown after a book was removed from the watchlist\nParameters:\n* $1 - name of the book",
+	"bs-extendedsearch-search-center-filter-document-type-book-label": "Label for the document_type option for the \"book\" content model"
 }
