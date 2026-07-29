@@ -219,5 +219,11 @@
 	"bs-bookshelf-create-chapter-page-intro-label": "Intro label for page creation dialog page",
 	"bs-bookshelf-create-chapter-page-name-input-label": "Input label to specify page name",
 	"bs-bookshelf-create-chapter-page-name-input-help": "Input help label to specify page name",
-	"bs-bookshelf-create-chapter-input-chapter-name": "Label for input widget to specify chapter title"
+	"bs-bookshelf-create-chapter-input-chapter-name": "Label for input widget to specify chapter title",
+	"bs-bookshelf-create-chapter-btn-title": "Button title to create new chapter",
+	"bs-bookshelf-create-chapter-btn-aria-label": "Aria label for button to create new chapter",
+	"bs-bookshelf-panel-book-navigation-text": "Label for navigation tab panel",
+	"bs-bookshelf-panel-book-navigation-title": "Title for navigation tab panel",
+	"bs-bookshelf-panel-book-navigation-aria-label": "Aria label for navigation tab panel",
+	"bs-bookshelf-panel-book-navigation-aria-desc": "Aria description of book navigation"
 }

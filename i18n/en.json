@@ -209,5 +209,11 @@
 	"bs-bookshelf-create-chapter-page-intro-label": "Create a wiki page for the new chapter.",
 	"bs-bookshelf-create-chapter-page-name-input-label": "Page name",
 	"bs-bookshelf-create-chapter-page-name-input-help": "Enter a page name. In the next step, the chapter title can be reviewed and edited.",
-	"bs-bookshelf-create-chapter-input-chapter-name": "Chapter title"
+	"bs-bookshelf-create-chapter-input-chapter-name": "Chapter title",
+	"bs-bookshelf-create-chapter-btn-title": "Create new chapter",
+	"bs-bookshelf-create-chapter-btn-aria-label": "Create a new chapter",
+	"bs-bookshelf-panel-book-navigation-text": "Book navigation",
+	"bs-bookshelf-panel-book-navigation-title": "Back to book navigation",
+	"bs-bookshelf-panel-book-navigation-aria-label": "Back book navigation",
+	"bs-bookshelf-panel-book-navigation-aria-desc": "Book navigation with book chapters"
 }

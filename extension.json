@@ -862,8 +862,7 @@
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\CommonUserInterface",
 			"services": [
 				"ConfigFactory", "TitleFactory", "BSBookshelfBookContextProviderFactory",
-				"BSBookshelfBookLookup", "BSBookshelfBookChapterLookup",
-				"BSBookshelfBookMetaLookup", "MWStakeCommonUITreeDataGenerator", "PermissionManager"
+				"BSBookshelfBookLookup", "BSBookshelfBookChapterLookup", "PermissionManager"
 			]
 		},
 		"discovery-skin": {
