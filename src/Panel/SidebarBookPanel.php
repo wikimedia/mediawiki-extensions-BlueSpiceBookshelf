@@ -4,7 +4,6 @@ namespace BlueSpice\Bookshelf\Panel;
 
 use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
-use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
@@ -16,11 +15,12 @@ use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\ComponentBase;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
+use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleButton;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardFooter;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardHeader;
 use MWStake\MediaWiki\Component\CommonUserInterface\ITabPanel;
-use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
+use RawMessage;
 
 class SidebarBookPanel extends ComponentBase implements ITabPanel {
 
@@ -39,33 +39,22 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	/** @var ChapterLookup */
 	private $chapterLookup = null;
 
-	/** @var BookMetaLookup */
-	private $bookMetaLookup = null;
-
-	/** @var TreeDataGenerator */
-	private $treeDataGenerator = null;
-
 	/**
 	 * @param Title $title
 	 * @param TitleFactory $titleFactory
 	 * @param BookContextProviderFactory $bookContextProviderFactory
 	 * @param BookLookup $bookLookup
 	 * @param ChapterLookup $chapterLookup
-	 * @param BookMetaLookup $bookMetaLookup
-	 * @param TreeDataGenerator $treeDataGenerator
 	 */
 	public function __construct(
 		Title $title, TitleFactory $titleFactory, BookContextProviderFactory $bookContextProviderFactory,
-		BookLookup $bookLookup, ChapterLookup $chapterLookup, BookMetaLookup $bookMetaLookup,
-		 TreeDataGenerator $treeDataGenerator
+		BookLookup $bookLookup, ChapterLookup $chapterLookup
 	) {
 		$this->title = $title;
 		$this->titleFactory = $titleFactory;
 		$this->bookContextProviderFactory = $bookContextProviderFactory;
 		$this->bookLookup = $bookLookup;
 		$this->chapterLookup = $chapterLookup;
-		$this->bookMetaLookup = $bookMetaLookup;
-		$this->treeDataGenerator = $treeDataGenerator;
 	}
 
 	/**
@@ -95,28 +84,28 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 	 * @return Message
 	 */
 	public function getText(): Message {
-		return Message::newFromKey( 'bs-bookshelfui-panel-navigation-text' );
+		return Message::newFromKey( 'bs-bookshelf-panel-book-navigation-text' );
 	}
 
 	/**
 	 * @return Message
 	 */
 	public function getTitle(): Message {
-		return Message::newFromKey( 'bs-bookshelfui-panel-navigation-title' );
+		return Message::newFromKey( 'bs-bookshelf-panel-book-navigation-title' );
 	}
 
 	/**
 	 * @return Message
 	 */
 	public function getAriaLabel(): Message {
-		return Message::newFromKey( 'bs-bookshelfui-panel-navigation-aria-label' );
+		return Message::newFromKey( 'bs-bookshelf-panel-book-navigation-aria-label' );
 	}
 
 	/**
 	 * @return Message
 	 */
 	public function getAriaDesc(): Message {
-		return Message::newFromKey( 'bs-bookshelfui-panel-navigation-aria-desc' );
+		return Message::newFromKey( 'bs-bookshelf-panel-book-navigation-aria-desc' );
 	}
 
 	/**
@@ -132,18 +121,28 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 
 		$items = [];
 
+		$headerItems = [];
+		if ( $this->userCanEditBook( $activeBook ) ) {
+			$headerItems[] = new SimpleButton( [
+				'id' => 'ca-chapter-create',
+				'classes' => [ 'book-chapter-create', 'bi-bs-create-page', 'ca-new-chapter' ],
+				'data-title' => $activeBook->getText(),
+				'aria-label' => new Message( 'bs-bookshelf-create-chapter-btn-aria-label' ),
+				'title' => new Message( 'bs-bookshelf-create-chapter-btn-title' ),
+				'text' => new RawMessage( '' )
+			] );
+		}
+
 		$allBooks = $this->bookLookup->getBooksForPage( $this->title );
 		if ( count( $allBooks ) > 1 ) {
-			$items[] = new BookSelectWidget( [
+			$headerItems[] = new BookSelectWidget( [
 					'id' => 'book-nav-pri-book-selector',
 					'container-classes' => [],
-					'button-classes' => [],
+					'button-classes' => [ 'btn' ],
 					'menu-classes' => []
 				],
-				$activeBook,
 				$this->title,
 				$this->bookLookup,
-				$this->bookMetaLookup,
 				$this->titleFactory
 			);
 		}
@@ -159,7 +158,12 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 						new Literal(
 							'n-book-panel-header-text',
 							$this->getBookHeading( $activeBook )
-						)
+						),
+						new SimpleCard( [
+							'id' => 'n-book-panel-header-actions',
+							'classes' => [ 'bg-transp' ],
+							'items' => $headerItems
+						] )
 					]
 				] ),
 				new BookNavigationChapterPagerContainer(
@@ -223,15 +227,7 @@ class SidebarBookPanel extends ComponentBase implements ITabPanel {
 		$heading = Html::element( 'span', [
 			'class' => 'book-title'
 		], $this->getBookTitle( $activeBook ) );
-		if ( !$this->userCanEditBook( $activeBook ) ) {
-			return $heading;
-		}
-		$heading .= Html::element( 'button', [
-			'class' => [ 'book-chapter-create', 'btn bi-bs-create-page', 'ca-new-chapter' ],
-			'data-title' => $activeBook->getText(),
-			'aria-label' => 'Create new chapter',
-			'title' => 'Create new chapter'
-		] );
+
 		return $heading;
 	}
 

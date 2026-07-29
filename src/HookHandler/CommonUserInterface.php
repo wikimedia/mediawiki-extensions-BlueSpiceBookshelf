@@ -4,7 +4,6 @@ namespace BlueSpice\Bookshelf\HookHandler;
 
 use BlueSpice\Bookshelf\BookContextProviderFactory;
 use BlueSpice\Bookshelf\BookLookup;
-use BlueSpice\Bookshelf\BookMetaLookup;
 use BlueSpice\Bookshelf\ChapterLookup;
 use BlueSpice\Bookshelf\Component\CreateBookButton;
 use BlueSpice\Bookshelf\Panel\ActionEntrypoint;
@@ -16,7 +15,6 @@ use MediaWiki\Context\RequestContext;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\CommonUserInterface\Hook\MWStakeCommonUIRegisterSkinSlotComponents;
-use MWStake\MediaWiki\Component\CommonUserInterface\TreeDataGenerator;
 
 class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 
@@ -35,12 +33,6 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 	/** @var ChapterLookup */
 	private $chapterLookup = null;
 
-	/** @var BookMetaLookup */
-	private $bookMetaLookup;
-
-	/** @var TreeDataGenerator */
-	private $treeDataGenerator = null;
-
 	/** @var PermissionManager */
 	private $permissionManager = null;
 
@@ -50,23 +42,18 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 	 * @param BookContextProviderFactory $bookContextProviderFactory
 	 * @param BookLookup $bookLookup
 	 * @param ChapterLookup $chapterLookup
-	 * @param BookMetaLookup $bookMetaLookup
-	 * @param TreeDataGenerator $treeDataGenerator
 	 * @param PermissionManager $permissionManager
 	 */
 	public function __construct(
 		ConfigFactory $configFactory, TitleFactory $titleFactory,
 		BookContextProviderFactory $bookContextProviderFactory,	BookLookup $bookLookup,
-		ChapterLookup $chapterLookup, BookMetaLookup $bookMetaLookup,
-		TreeDataGenerator $treeDataGenerator, PermissionManager $permissionManager
+		ChapterLookup $chapterLookup, PermissionManager $permissionManager
 	) {
 		$this->configFactory = $configFactory;
 		$this->titleFactory = $titleFactory;
 		$this->bookContextProviderFactory = $bookContextProviderFactory;
 		$this->bookLookup = $bookLookup;
 		$this->chapterLookup = $chapterLookup;
-		$this->bookMetaLookup = $bookMetaLookup;
-		$this->treeDataGenerator = $treeDataGenerator;
 		$this->permissionManager = $permissionManager;
 	}
 
@@ -99,8 +86,6 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 		$bookContextProviderFactory = $this->bookContextProviderFactory;
 		$bookLookup = $this->bookLookup;
 		$chapterLookup = $this->chapterLookup;
-		$treeDataGenerator = $this->treeDataGenerator;
-		$bookMetaLookup = $this->bookMetaLookup;
 
 		$registry->register(
 			"SidebarPrimaryTabPanels",
@@ -108,11 +93,11 @@ class CommonUserInterface implements MWStakeCommonUIRegisterSkinSlotComponents {
 				'book' => [
 					'factory' => static function () use (
 						$title, $titleFactory, $bookContextProviderFactory,
-						$bookLookup, $chapterLookup, $bookMetaLookup, $treeDataGenerator
+						$bookLookup, $chapterLookup
 					) {
 						return new SidebarBookPanel(
 							$title, $titleFactory, $bookContextProviderFactory, $bookLookup,
-							$chapterLookup, $bookMetaLookup, $treeDataGenerator
+							$chapterLookup
 						);
 					}
 				]

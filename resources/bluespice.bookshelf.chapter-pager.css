@@ -34,25 +34,39 @@
 }
 
 .previous-chapter::before {
-	content: '\F284';
+	content: '\F12F';
 	font-family: 'bootstrap-icons';
 	font-style: normal;
 	font-weight: normal !important;
 	font-variant: normal;
 	text-transform: none;
 	vertical-align: bottom;
+	margin-right: 0.5rem;
 }
 
 .next-chapter::after {
-	content: '\F285';
+	content: '\F138';
 	font-family: 'bootstrap-icons';
 	font-style: normal;
 	font-weight: normal !important;
 	font-variant: normal;
 	text-transform: none;
 	vertical-align: bottom;
+	margin-left: 0.5rem;
 }
 
 #n-book-panel .bs-chapter-pager-toolbar {
-	padding-bottom: 10px;
+	padding: 0 1rem 12px 2rem;
+}
+
+#n-book-panel .bs-chapter-pager-toolbar a {
+	padding: 0;
+}
+
+#n-book-panel .bs-chapter-pager-toolbar > .disabled:has( + .disabled ) {
+	display: none;
+}
+
+#n-book-panel .bs-chapter-pager-toolbar > .disabled + .disabled {
+	display: none;
 }

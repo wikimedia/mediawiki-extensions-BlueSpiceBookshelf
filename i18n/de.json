@@ -211,5 +211,11 @@
 	"bs-bookshelf-create-chapter-page-intro-label": "{{#FORMAL:Erstelle|Erstellen Sie}} eine Wiki-Seite für das neue Kapitel.",
 	"bs-bookshelf-create-chapter-page-name-input-label": "Seitenname",
 	"bs-bookshelf-create-chapter-page-name-input-help": "{{#FORMAL:Gib|Geben Sie}} einen Seitennamen ein. Im nächsten Schritt kann die Kapitelüberschrift überprüft und bearbeitet werden.",
-	"bs-bookshelf-create-chapter-input-chapter-name": "Kapitelüberschrift"
+	"bs-bookshelf-create-chapter-input-chapter-name": "Kapitelüberschrift",
+	"bs-bookshelf-create-chapter-btn-title": "Neues Kapitel erstellen",
+	"bs-bookshelf-create-chapter-btn-aria-label": "Ein neues Kapitel erstellen",
+	"bs-bookshelf-panel-book-navigation-text": "Buchnavigation",
+	"bs-bookshelf-panel-book-navigation-title": "Zurück zur Buchnavigation",
+	"bs-bookshelf-panel-book-navigation-aria-label": "Zurück zur Buchnavigation",
+	"bs-bookshelf-panel-book-navigation-aria-desc": "Buchnavigation mit Buchkapiteln"
 }

@@ -1,9 +1,3 @@
-/* book title in book nav */
-#n-book-panel-header h4 {
-	font-size: var( --content-h4-font-size );
-	font-weight: var( --content-h4-font-weight );
-}
-
 #n-book-panel .card-footer {
 	border-top: none; /* stylelint-disable-line declaration-property-value-disallowed-list */
 	text-align: right;
@@ -29,10 +23,27 @@
 
 #n-book-panel .card-header {
 	border-bottom: none; /* stylelint-disable-line declaration-property-value-disallowed-list */
+	padding: 0.5rem 1rem 0.5rem 2rem;
+}
+
+#n-book-panel-header-actions {
+	flex-flow: row wrap;
+}
+
+#n-book-panel-header-actions a,
+#n-book-panel-header-actions button {
+	background-color: var( --icon-primary-bg );
+	color: var( --icon-primary-fg );
+}
+
+#n-book-panel-header-actions a:hover,
+#n-book-panel-header-actions button:hover {
+	background-color: var( --icon-primary-bg--hover );
+	color: var( --icon-primary-fg--hover );
 }
 
 #n-book-panel .book-title {
-	font-size: 22.4px; /* stylelint-disable-line declaration-property-unit-disallowed-list */
+	font-size: 1.25rem;
 }
 
 #book-panel-tree .bs-chapter-number {

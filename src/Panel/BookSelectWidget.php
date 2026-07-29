@@ -3,7 +3,6 @@
 namespace BlueSpice\Bookshelf\Panel;
 
 use BlueSpice\Bookshelf\BookLookup;
-use BlueSpice\Bookshelf\BookMetaLookup;
 use MediaWiki\Language\RawMessage;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
@@ -14,37 +13,27 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleDropdownItem
 class BookSelectWidget extends SimpleDropdown {
 
 	/** @var Title */
-	private $activeBook = null;
-
-	/** @var Title */
 	private $title;
 
 	/** @var BookLookup */
 	private $bookLookup = null;
-
-	/** @var BookMetaLookup */
-	private $bookMetaLookup = null;
 
 	/** @var TitleFactory */
 	private $titleFactory;
 
 	/**
 	 * @param array $options
-	 * @param Title $activeBook
 	 * @param Title $title
 	 * @param BookLookup $bookLookup
-	 * @param BookMetaLookup $bookMetaLookup
 	 * @param TitleFactory $titleFactory
 	 */
-	public function __construct( $options, Title $activeBook, Title $title,
-		BookLookup $bookLookup, BookMetaLookup $bookMetaLookup, TitleFactory $titleFactory
+	public function __construct( $options, Title $title,
+		BookLookup $bookLookup, TitleFactory $titleFactory
 	) {
 		parent::__construct( $options );
 
-		$this->activeBook = $activeBook;
 		$this->title = $title;
 		$this->bookLookup = $bookLookup;
-		$this->bookMetaLookup = $bookMetaLookup;
 		$this->titleFactory = $titleFactory;
 	}
 
@@ -52,11 +41,8 @@ class BookSelectWidget extends SimpleDropdown {
 	 * @return Message
 	 */
 	public function getText(): Message {
-		$bookTitle = $this->bookMetaLookup->getMetaValueForBook( $this->activeBook, 'title' );
-		if ( $bookTitle === '' ) {
-			$bookTitle = $this->getBookTitle( $this->activeBook );
-		}
-		return new RawMessage( $bookTitle );
+		// Intentionally set to blank; Since 5.3/6.0 we don't show the booktitle here anymore
+		return new RawMessage( '' );
 	}
 
 	/**
@@ -113,18 +99,6 @@ class BookSelectWidget extends SimpleDropdown {
 	 */
 	public function getMenuClasses(): array {
 		return [ 'mws-dropdown-secondary' ];
-	}
-
-	/**
-	 * @param Title|null $activeBook
-	 * @return string
-	 */
-	private function getBookTitle( $activeBook ): string {
-		if ( $activeBook instanceof Title ) {
-			return $activeBook->getText();
-		}
-
-		return '';
 	}
 
 	private function getBooks(): array {
