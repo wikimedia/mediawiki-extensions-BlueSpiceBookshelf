@@ -6,9 +6,9 @@ use BlueSpice\Bookshelf\Hook\BSBookshelfPageAddedToBookHook;
 use BlueSpice\Bookshelf\Hook\BSBookshelfPageRemovedFromBookHook;
 use BS\ExtendedSearch\Source\Job\UpdateWikiPage;
 use JobQueueGroup;
+use JobSpecification;
 use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Title\Title;
-use SMW\MediaWiki\Jobs\UpdateJob;
 
 class QueueJobs implements BSBookshelfPageAddedToBookHook, BSBookshelfPageRemovedFromBookHook {
 
@@ -30,7 +30,7 @@ class QueueJobs implements BSBookshelfPageAddedToBookHook, BSBookshelfPageRemove
 			$this->jobQueueGroup->push( new UpdateWikiPage( $page ) );
 		}
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'BlueSpiceSMWConnector' ) ) {
-			$this->jobQueueGroup->push( new UpdateJob( $page ) );
+			$this->jobQueueGroup->push( $this->makeSMWUpdateJobSpec( $page ) );
 		}
 	}
 
@@ -42,7 +42,27 @@ class QueueJobs implements BSBookshelfPageAddedToBookHook, BSBookshelfPageRemove
 			$this->jobQueueGroup->push( new UpdateWikiPage( $page ) );
 		}
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'BlueSpiceSMWConnector' ) ) {
-			$this->jobQueueGroup->push( new UpdateJob( $page ) );
+			$this->jobQueueGroup->push( $this->makeSMWUpdateJobSpec( $page ) );
 		}
+	}
+
+	/**
+	 * `SMW\MediaWiki\Jobs\UpdateJob` requires a number of injected services and therefore must not
+	 * be instantiated directly. Pushing a specification lets the job queue build it from the
+	 * `smw.update` registration once the job is run.
+	 *
+	 * @param Title $page
+	 * @return JobSpecification
+	 */
+	private function makeSMWUpdateJobSpec( Title $page ): JobSpecification {
+		return new JobSpecification(
+			'smw.update',
+			[
+				'namespace' => $page->getNamespace(),
+				'title' => $page->getDBkey(),
+			],
+			[ 'removeDuplicates' => true ],
+			$page
+		);
 	}
 }
