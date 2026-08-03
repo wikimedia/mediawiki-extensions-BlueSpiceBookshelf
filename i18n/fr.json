@@ -15,6 +15,7 @@
 			"MacOS Weed",
 			"Mahabarata",
 			"McDutchie",
+			"NClara",
 			"SleaY",
 			"Thibaut120094",
 			"Verdy p",
@@ -201,5 +202,15 @@
 	"bs-bookshelf-search-center-context-books-label": "dans {{PLURAL:$1| livre|livres}} '''$2'''",
 	"bs-bookshelf-newbook-dlg-action-create-label": "Créer",
 	"bs-bookshelf-formelement-book-input": "Livre",
-	"bs-bookshelf-formelement-book-input-return-value-label": "Propriété de retour"
+	"bs-bookshelf-formelement-book-input-return-value-label": "Propriété de retour",
+	"bs-bookshelf-create-chapter-book-title": "Nouveau chapitre",
+	"bs-bookshelf-create-chapter-action-next-label": "Suivant",
+	"bs-bookshelf-create-chapter-action-back-label": "Retour",
+	"bs-bookshelf-create-chapter-error": "Une erreur s'est produite lors de la création du chapitre. Veuillez réessayer.",
+	"bs-bookshelf-create-chapter-invalid-page-name": "Veuillez fournir un titre valide pour la page.",
+	"bs-bookshelf-create-chapter-page-exists": "Une page portant ce nom existe déjà.",
+	"bs-bookshelf-create-chapter-page-intro-label": "Créez une page wiki pour le nouveau chapitre.",
+	"bs-bookshelf-create-chapter-page-name-input-label": "Nom de la page",
+	"bs-bookshelf-create-chapter-page-name-input-help": "Saisissez un nom de page. À l'étape suivante, le titre du chapitre pourra être vérifié et modifié.",
+	"bs-bookshelf-create-chapter-input-chapter-name": "Titre du chapitre"
 }
