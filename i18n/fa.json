@@ -8,7 +8,8 @@
 			"FarsiNevis",
 			"Jeeputer",
 			"LordProfo",
-			"Rulebased"
+			"Rulebased",
+			"Mohammad ebz"
 		]
 	},
 	"bs-bookshelf-tagerror-article-title-not-valid": "مقالهٔ مقصد ارائه‌شده (&quot;$1&quot;) وجود ندارد.",
@@ -51,7 +52,7 @@
 	"bs-bookshelf-ve-booklist-attr-filter-label": "پالایه",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "عنوان",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "زیرنویس",
-	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "زیرنویس کتاب را تنظیم می‌کند",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "زیرعنوان کتاب را تنظیم می‌کند",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "نویسنده",
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "نویسندهٔ کتاب را تنظیم می‌کند",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "نسخه",

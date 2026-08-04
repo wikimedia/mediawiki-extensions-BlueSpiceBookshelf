@@ -199,5 +199,16 @@
 	"bs-bookshelf-entrypoint-action-book-aria-title": "Crear un libro",
 	"bs-bookshelf-add-to-book-warning-new-book": "O libro seleccionado aínda non existe. Crearase cando lle engadas páxinas.",
 	"bs-bookshelf-notifyme-subscription-reason": "Esta páxina pertence a un libro que estás a vixiar",
-	"bs-bookshelf-add-to-book-error": "Produciuse un erro ao engadir a páxina ao libro. Inténtao de novo."
+	"bs-bookshelf-add-to-book-error": "Produciuse un erro ao engadir a páxina ao libro. Inténtao de novo.",
+	"bs-extendedsearch-search-center-filter-document-type-book-label": "Libro",
+	"bs-bookshelf-create-chapter-book-title": "Capítulo novo",
+	"bs-bookshelf-create-chapter-action-next-label": "Seguinte",
+	"bs-bookshelf-create-chapter-action-back-label": "Volver",
+	"bs-bookshelf-create-chapter-error": "Produciuse un erro ao crear o capítulo. Inténtao de novo.",
+	"bs-bookshelf-create-chapter-invalid-page-name": "Indica un nome de páxina válido.",
+	"bs-bookshelf-create-chapter-page-exists": "Xa existe unha páxina con este nome.",
+	"bs-bookshelf-create-chapter-page-intro-label": "Crea unha páxina wiki para o capítulo novo.",
+	"bs-bookshelf-create-chapter-page-name-input-label": "Nome da páxina",
+	"bs-bookshelf-create-chapter-page-name-input-help": "Introduce un nome de páxina. No seguinte paso, pódese revisar e editar o título do capítulo.",
+	"bs-bookshelf-create-chapter-input-chapter-name": "Título do capítulo"
 }
