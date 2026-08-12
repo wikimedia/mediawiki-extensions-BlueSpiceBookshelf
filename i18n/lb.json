@@ -85,6 +85,7 @@
 	"bs-bookshelf-newbook-dlg-input-subtitle-placeholder": "Ënnertitel uleeën",
 	"bs-bookshelf-newbook-dlg-input-subtitle-label": "Ënnertitel",
 	"bs-bookshelf-newbook-dlg-input-bookshelf-label": "Bicherregal",
+	"bs-bookshelf-newbook-dlg-input-image-label": "Titelbild",
 	"bs-bookshelf-newbook-dlg-upload-error-badfilename": "Am Numm vum Fichier $1 kommen ongülteg Zeeche vir.",
 	"bs-books-overview-page-edit-book-anchor-title": "D'Buch $1 änneren",
 	"bs-books-overview-page-edit-book-anchor-aria-label": "D'Buch $1 änneren",
