@@ -4,5 +4,11 @@
 			"AhmedG612"
 		]
 	},
-	"bs-bookshelf-toolbar-tool-metadata-label": "Wax ka beddel xogta metadata"
+	"bs-bookshelf-toolbar-tool-metadata-label": "Wax ka beddel xogta metadata",
+	"bs-bookshelf-create-chapter-btn-title": "Abuur cutub cusub",
+	"bs-bookshelf-create-chapter-btn-aria-label": "Abuur cutub cusub",
+	"bs-bookshelf-panel-book-navigation-text": "Dulmaridda buugga",
+	"bs-bookshelf-panel-book-navigation-title": "Ku noqo dulmarka buugga",
+	"bs-bookshelf-panel-book-navigation-aria-label": "Dib ugu noqo dulmaridda buugga",
+	"bs-bookshelf-panel-book-navigation-aria-desc": "Dulmarka buugga oo leh cutubyada buugga"
 }

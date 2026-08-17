@@ -7,7 +7,8 @@
 			"McDutchie",
 			"Nickthijssen1994",
 			"Romaine",
-			"Siebrand"
+			"Siebrand",
+			"Sumurai8"
 		]
 	},
 	"bs-bookshelf-extension-description": "Stelt BlueSpice in staat hiërarchische collecties artikelen te beheren en te exporteren.",
@@ -215,5 +216,11 @@
 	"bs-bookshelf-create-chapter-page-intro-label": "Maak een wikipagina aan voor het nieuwe hoofdstuk.",
 	"bs-bookshelf-create-chapter-page-name-input-label": "Paginanaam",
 	"bs-bookshelf-create-chapter-page-name-input-help": "Voer een paginanaam in. In de volgende stap kunt u de hoofdstuktitel controleren en bewerken.",
-	"bs-bookshelf-create-chapter-input-chapter-name": "Hoofdstuktitel"
+	"bs-bookshelf-create-chapter-input-chapter-name": "Hoofdstuktitel",
+	"bs-bookshelf-create-chapter-btn-title": "Nieuw hoofdstuk aanmaken",
+	"bs-bookshelf-create-chapter-btn-aria-label": "Nieuw hoofdstuk aanmaken",
+	"bs-bookshelf-panel-book-navigation-text": "Boeknavigatie",
+	"bs-bookshelf-panel-book-navigation-title": "Terug naar boeknavigatie",
+	"bs-bookshelf-panel-book-navigation-aria-label": "Terug naar boeknavigatie",
+	"bs-bookshelf-panel-book-navigation-aria-desc": "Boeknavigatie met hoofdstukken"
 }

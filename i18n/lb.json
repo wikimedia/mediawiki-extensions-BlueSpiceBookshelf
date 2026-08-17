@@ -125,6 +125,7 @@
 	"bs-bookshelf-formelement-book-input": "Buch",
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Buch uleeën",
 	"bs-bookshelf-entrypoint-action-book-aria-title": "Buch uleeën",
+	"bs-bookshelf-notifyme-subscription-reason": "Dës Säit gehéiert zu engem Buch, dat Dir iwwerwaacht",
 	"bs-extendedsearch-search-center-filter-document-type-book-label": "Buch",
 	"bs-bookshelf-create-chapter-book-title": "Neit Kapitel",
 	"bs-bookshelf-create-chapter-action-next-label": "Weider",
@@ -135,5 +136,9 @@
 	"bs-bookshelf-create-chapter-page-intro-label": "Leet eng Wikisäit fir dat neit Kapitel un.",
 	"bs-bookshelf-create-chapter-page-name-input-label": "Numm vun der Säit",
 	"bs-bookshelf-create-chapter-page-name-input-help": "Gitt den Numm vun enger Säit an. Am nächste Schrëtt kënnt Dir d'Kapiteliwwerschrëft nokucken an änneren.",
-	"bs-bookshelf-create-chapter-input-chapter-name": "Kapiteliwwerschrëft"
+	"bs-bookshelf-create-chapter-input-chapter-name": "Kapiteliwwerschrëft",
+	"bs-bookshelf-create-chapter-btn-title": "Neit Kapitel uleeën",
+	"bs-bookshelf-create-chapter-btn-aria-label": "En neit Kapitel uleeën",
+	"bs-bookshelf-panel-book-navigation-text": "Buchnavigatioun",
+	"bs-bookshelf-panel-book-navigation-title": "Zeréck op d'Buchnavigatioun"
 }
