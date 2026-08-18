@@ -6,5 +6,9 @@
 	},
 	"bs-bookshelf-newbook-dlg-action-create-label": "جوړول",
 	"bs-bookshelf-formelement-book-input": "کتاب",
-	"bs-bookshelf-formelement-book-input-return-value-label": "راگرځېدونکې ځانتيا"
+	"bs-bookshelf-formelement-book-input-return-value-label": "راگرځېدونکې ځانتيا",
+	"bs-bookshelf-create-chapter-btn-aria-label": "يو نوی څپركی جوړول",
+	"bs-bookshelf-panel-book-navigation-text": "کتاب گرځښت",
+	"bs-bookshelf-panel-book-navigation-title": "کتاب گرځښت ته ستنېدل",
+	"bs-bookshelf-panel-book-navigation-aria-label": "کتاب گرځښت ته ستنېدل"
 }

@@ -210,5 +210,11 @@
 	"bs-bookshelf-create-chapter-page-intro-label": "Crea unha páxina wiki para o capítulo novo.",
 	"bs-bookshelf-create-chapter-page-name-input-label": "Nome da páxina",
 	"bs-bookshelf-create-chapter-page-name-input-help": "Introduce un nome de páxina. No seguinte paso, pódese revisar e editar o título do capítulo.",
-	"bs-bookshelf-create-chapter-input-chapter-name": "Título do capítulo"
+	"bs-bookshelf-create-chapter-input-chapter-name": "Título do capítulo",
+	"bs-bookshelf-create-chapter-btn-title": "Crear un capítulo novo",
+	"bs-bookshelf-create-chapter-btn-aria-label": "Crear un capítulo novo",
+	"bs-bookshelf-panel-book-navigation-text": "Navegación do libro",
+	"bs-bookshelf-panel-book-navigation-title": "Volver á navegación do libro",
+	"bs-bookshelf-panel-book-navigation-aria-label": "Volver á navegación do libro",
+	"bs-bookshelf-panel-book-navigation-aria-desc": "Navegación do libro cos capítulos do libro"
 }
