@@ -20,7 +20,6 @@ ext.bookshelf.ui.data.node.WikiLinkWithAliasNode.prototype.getIcon = function ( 
 	return 'wikiText';
 };
 
-// eslint-disable-next-line no-unused-vars
 ext.bookshelf.ui.data.node.WikiLinkWithAliasNode.prototype.getFormFields = function ( dialog ) {
 	return [
 		{
@@ -28,7 +27,9 @@ ext.bookshelf.ui.data.node.WikiLinkWithAliasNode.prototype.getFormFields = funct
 			type: 'title',
 			required: true,
 			label: mw.message( 'bs-bookshelf-chapter-wikilink-with-alias-target-input-label' ).text(),
-			help: ''
+			help: '',
+			widget_$overlay: dialog.$overlay, // eslint-disable-line camelcase
+			widget_localInstanceOnly: true // eslint-disable-line camelcase
 		},
 		{
 			name: 'label',

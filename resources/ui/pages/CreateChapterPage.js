@@ -28,7 +28,6 @@ bs.bookshelf.ui.pages.CreateChapterPage.prototype.getItems = function () {
 	this.pageNameField = new OO.ui.FieldLayout( this.pageNameInput, {
 		label: mw.message( 'bs-bookshelf-create-chapter-page-name-input-label' ).text(),
 		help: mw.message( 'bs-bookshelf-create-chapter-page-name-input-help' ).text(),
-		$overlay: overlay,
 		align: 'top'
 	} );
 
