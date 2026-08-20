@@ -43,7 +43,6 @@ ext.bookshelf.ui.data.tree.AddChapterAction.prototype.onAction = function ( cont
 
 		this.windowManager.addWindows( [ dialog ] );
 		this.windowManager.openWindow( dialog ).closed.then( ( data ) => {
-			/* eslint-disable-next-line */
 			if ( data && data.action === 'create' && data.hasOwnProperty( 'page' ) ) {
 				const newChapter = mw.Title.newFromText( data.page );
 				window.location.href = newChapter.getUrl();
