@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Bookshelf\Watchlist;
 
-use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\EnhancedStandardUIs\Watchlist\GenericWatchlistItemProvider;
+use MessageLocalizer;
 
 /**
  * Watched books (pages in the Book namespace), shown as the "Books" tab on the enhanced
@@ -25,8 +25,8 @@ class BookProvider extends GenericWatchlistItemProvider {
 	/**
 	 * @inheritDoc
 	 */
-	public function getTabTitle(): string {
-		return RequestContext::getMain()->msg( 'enhanced-standard-uis-watchlist-tab-books' )->text();
+	public function getTabTitle( MessageLocalizer $localizer ): string {
+		return $localizer->msg( 'enhanced-standard-uis-watchlist-tab-books' )->text();
 	}
 
 	/**
