@@ -107,10 +107,6 @@ class AddChapterNumberToTitleAndHeadings {
 	 * @return void
 	 */
 	public function onContentAlterParserOutput( Content $content, Title $title, ParserOutput &$output ) {
-		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) === false ) {
-			return true;
-		}
-
 		if ( !$output->hasText() ) {
 			return true;
 		}
@@ -141,6 +137,16 @@ class AddChapterNumberToTitleAndHeadings {
 			return true;
 		}
 
+		if ( $this->config->get( 'BookshelfPrependPageTOCNumbers' ) === false ) {
+			// Although in ChapterLookup BookshelfTitleDisplayText has already
+			// been checked, $chapterInfo->getName() does not reflect the
+			// {{DISPLAYTITLE:some title}} of a page. Hence we check here again.
+			if ( $this->config->get( 'BookshelfTitleDisplayText' ) === true ) {
+				$output->setTitleText( $chapterInfo->getName() );
+				$output->setExtensionData( self::ALREADY_PROCESSED, true );
+			}
+			return true;
+		}
 		$this->setChapterNumberInFirstHeading( $activeBook, $chapterInfo, $output );
 		$this->setChapterNumberInContent( $activeBook, $chapterInfo, $output );
 		$output->setExtensionData( self::ALREADY_PROCESSED, true );
