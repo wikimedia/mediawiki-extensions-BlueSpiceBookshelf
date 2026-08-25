@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"باران"
+		]
+	},
+	"bs-bookshelfui-extension-description": "بلوسپايس ته د ويکي مخونو د درجه بندۍ ټولگې اداره کولو توان ورکوي.",
+	"bookshelfbookui": "کتاب سمونگر",
+	"bookshelfbookmanager": "کتاب مهاروونکی",
+	"bs-bookshelfui-editor-no-title-provided": "د کتاب هېڅ باوري سرليک نه دی ورکړل شوی",
+	"bs-bookshelfui-widget-editor-link-text": "دا کتاب سم کړئ",
+	"bs-bookshelfui-new-book-title": "يو نوی کتاب جوړ کړئ",
+	"bs-bookshelfui-new-book-text": "د کتاب سرليک",
+	"bs-bookshelfui-delete-book-title": "کتاب ړنگ کړئ",
+	"bs-bookshelfui-delete-book-text": "ايا تاسو رښتيا غواړئ چې دا کتاب ړنگ کړئ؟ د \"کتاب‌المارۍ\" نښلنونه به په خپلکاري ډول د تړوني شويو ويکي‌مخونو څخه <em>نه</em> لرې کېږي!",
+	"bs-bookshelfui-edit-source": "د سرچينې ويکي‌مخ سمول",
+	"bs-bookshelfui-open-source": "د سرچينې ويکي‌مخ ښودل",
+	"bs-bookshelfui-manager-title": "سرليک",
+	"bs-bookshelfui-manager-deletingprogress-text": "ټاکل شوی کتاب ړنگول",
+	"bs-bookshelfui-manager-deletingprogress-title": "ړنگول...",
+	"bs-bookshelfui-manager-deletionsuccess-title": "په برياليتوب سره ړنگ شو!"
+}
