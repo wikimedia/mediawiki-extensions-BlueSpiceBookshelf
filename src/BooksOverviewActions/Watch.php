@@ -59,7 +59,7 @@ class Watch implements IBooksOverviewAction {
 	 * @return array
 	 */
 	public function getIconClasses(): array {
-		return [ $this->watched ? 'bi-eye-fill' : 'bi-eye' ];
+		return [ $this->watched ? 'bi-star-fill' : 'bi-star' ];
 	}
 
 	/**
