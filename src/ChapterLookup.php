@@ -10,7 +10,6 @@ use MWStake\MediaWiki\Component\Utils\DisplayTitleHelper;
 use MWStake\MediaWiki\Component\Utils\UtilityFactory;
 use stdClass;
 use WANObjectCache;
-use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class ChapterLookup {
@@ -130,7 +129,7 @@ class ChapterLookup {
 		);
 
 		foreach ( $results as $result ) {
-			$pages[] = $this->makeChapter( $result, $db );
+			$pages[] = $this->makeChapter( $result );
 		}
 
 		return $pages;
@@ -233,7 +232,7 @@ class ChapterLookup {
 
 		$chapterInfo = null;
 		foreach ( $results as $result ) {
-			$chapterInfo = $this->makeChapterInfo( $result, $db );
+			$chapterInfo = $this->makeChapterInfo( $result );
 		}
 
 		return $chapterInfo;
@@ -259,7 +258,7 @@ class ChapterLookup {
 
 		$chapterInfo = null;
 		foreach ( $results as $result ) {
-			$chapterInfo = $this->makeChapterInfo( $result, $db );
+			$chapterInfo = $this->makeChapterInfo( $result );
 		}
 
 		return $chapterInfo;
@@ -304,7 +303,7 @@ class ChapterLookup {
 
 		$children = [];
 		foreach ( $results as $result ) {
-			$children[] = $this->makeChapter( $result, $db );
+			$children[] = $this->makeChapter( $result );
 		}
 
 		return $children;
@@ -312,10 +311,12 @@ class ChapterLookup {
 
 	/**
 	 * @param stdClass $result
-	 * @param IDatabase $db
-	 * @return ChapterInfo
+	 * @return string
 	 */
-	private function makeChapterInfo( stdClass $result, IDatabase $db ): ChapterInfo {
+	private function makeChapterName( stdClass $result ): string {
+		// This is the name stored in chapter_name column of bs_book_chapters,
+		// which can be either a user-defined chapter name, or an auto-
+		// generated name that equals to $title->getText() (can be long and untidy)
 		$name = $result->chapter_name;
 
 		if ( $result->chapter_namespace !== null && $result->chapter_title !== null ) {
@@ -325,20 +326,29 @@ class ChapterLookup {
 			);
 
 			if ( $title->canExist() ) {
-				// Check if page property displaytitle is set
-				$name = $this->makeName( $title, $title->getText() );
+				// This can also be the {{DISPLAYTITLE:some title}} of a page
+				$name = $this->makeName( $title, $title->getSubpageText() );
 
+				// If the chapter_name in db should override the h1 to display
+				// and is not an auto generated name, it should be used
 				if ( $this->config->get( 'BookshelfTitleDisplayText' )
-					&& $result->chapter_name !== $title->getSubpageText()
+					&& $result->chapter_name !== $title->getText()
 				) {
-					// reset to database value
 					$name = $result->chapter_name;
 				}
 			}
 		}
 
+		return $name;
+	}
+
+	/**
+	 * @param stdClass $result
+	 * @return ChapterInfo
+	 */
+	private function makeChapterInfo( stdClass $result ): ChapterInfo {
 		return new ChapterInfo(
-			$name,
+			$this->makeChapterName( $result ),
 			$result->chapter_number,
 			$result->chapter_type
 		);
@@ -346,39 +356,14 @@ class ChapterLookup {
 
 	/**
 	 * @param stdClass $result
-	 * @param IDatabase $db
 	 * @return ChapterDataModel
 	 */
-	private function makeChapter( stdClass $result, IDatabase $db ): ChapterDataModel {
-		$name = $result->chapter_name;
-
-		if ( $result->chapter_namespace !== null && $result->chapter_title !== null ) {
-			$title = $this->titleFactory->makeTitle(
-				$result->chapter_namespace,
-				$result->chapter_title
-			);
-
-			if ( $title->canExist() ) {
-				// Check if page property displaytitle is set
-				$name = $this->makeName( $title, $title->getText(), $db );
-
-				if ( $this->config->get( 'BookshelfTitleDisplayText' )
-					&& $result->chapter_name !== $title->getText()
-				) {
-					// reset to database value
-					$name = $result->chapter_name;
-				}
-			}
-		}
-
-		$number = (string)$result->chapter_number;
-		$normalizedNumber = trim( $number, '.' );
-
+	private function makeChapter( stdClass $result ): ChapterDataModel {
 		return new ChapterDataModel(
 			$result->chapter_namespace,
 			$result->chapter_title,
-			$name,
-			$normalizedNumber,
+			$this->makeChapterName( $result ),
+			trim( (string)$result->chapter_number, '.' ),
 			$result->chapter_type,
 		);
 	}
@@ -410,7 +395,7 @@ class ChapterLookup {
 		);
 
 		foreach ( $results as $result ) {
-			$pages[] = $this->makeChapter( $result, $db );
+			$pages[] = $this->makeChapter( $result );
 		}
 
 		return $pages;
@@ -436,7 +421,7 @@ class ChapterLookup {
 
 		$children = [];
 		foreach ( $results as $result ) {
-			$children[] = $this->makeChapter( $result, $db );
+			$children[] = $this->makeChapter( $result );
 		}
 
 		return $children;
