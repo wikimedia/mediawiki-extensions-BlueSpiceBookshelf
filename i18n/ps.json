@@ -1,9 +1,30 @@
 {
 	"@metadata": {
 		"authors": [
-			"شاه زمان پټان"
+			"شاه زمان پټان",
+			"باران"
 		]
 	},
+	"bs-bookshelf-specialpage-title": "کتابونه",
+	"bs-bookshelf-specialpage-allpages-ns-book-text": "کتابتون",
+	"bs-bookshelf-tag-next": "راتلونکی",
+	"bs-bookshelf-tag-prev": "پخوانی",
+	"bs-bookshelf-setting-path-feature": "کتاب",
+	"bs-bookshelf-empty-selection": "هېڅ نه دي ټاکل شوي",
+	"bs-bookshelf-grouping-template-type-ns_book": "ټولواله کتابونه",
+	"bs-bookshelf-action-editbook": "سرچينه سمول",
+	"bs-bookshelf-action-editbook-create": "سرچينه سمول",
+	"bs-bookshelf-action-export-book": "کتاب بهرلېږل",
+	"bs-bookshelf-edit-title": "$1 سمول",
+	"bs-bookshelf-book-grid-title": "کتابونه",
+	"bookshelf": "کتابونو المارۍ",
+	"bookshelf-summary": "ټولواله کتابونه",
+	"prefs-bookshelf": "د کتابونو المارۍ ځانگړی مخ",
+	"bs-bookshelf-mainlinks-label": "کتابونه",
+	"bs-bookshelf-ga-editing-label": "کتابونه",
+	"bs-bookshelf-booknav-book-label": "کتاب",
+	"bs-bookshelf-booknav-chapter-label": "څپرکی",
+	"bs-bookshelf-booknav-chapter-help": "يو څپرکی غوره کړئ چې وښودل شي",
 	"bs-bookshelf-newbook-dlg-action-create-label": "جوړول",
 	"bs-bookshelf-formelement-book-input": "کتاب",
 	"bs-bookshelf-formelement-book-input-return-value-label": "راگرځېدونکې ځانتيا",
