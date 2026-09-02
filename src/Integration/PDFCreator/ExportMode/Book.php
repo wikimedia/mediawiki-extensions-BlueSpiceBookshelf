@@ -9,12 +9,14 @@ use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Extension\PDFCreator\IContextSourceAware;
 use MediaWiki\Extension\PDFCreator\IExportMode;
+use MediaWiki\Extension\PDFCreator\IShowNamespaceAware;
+use MediaWiki\Extension\PDFCreator\Utility\PageLabelHelper;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 
-class Book implements IExportMode, IContextSourceAware {
+class Book implements IExportMode, IShowNamespaceAware, IContextSourceAware {
 
 	/** @var BookLookup */
 	private $bookLookup;
@@ -36,6 +38,9 @@ class Book implements IExportMode, IContextSourceAware {
 
 	/** @var IContextSource */
 	private $context;
+
+	/** @var bool */
+	private $showNamespace = false;
 
 	/**
 	 * @param BookLookup $bookLookup
@@ -65,6 +70,14 @@ class Book implements IExportMode, IContextSourceAware {
 	 */
 	public function setContext( IContextSource $context ): void {
 		$this->context = $context;
+	}
+
+	/**
+	 * @param bool $showNamespace
+	 * @return void
+	 */
+	public function setShowNamespace( bool $showNamespace ): void {
+		$this->showNamespace = $showNamespace;
 	}
 
 	/**
@@ -167,13 +180,27 @@ class Book implements IExportMode, IContextSourceAware {
 			if ( !$this->userCanReadPage( $chapterTitle ) ) {
 				continue;
 			}
+
+			// Fallback for nsPrefix, which is deprecated and replaced by show-namespace
+			if ( isset( $options['nsPrefix'] ) && !isset( $options['show-namespace'] ) ) {
+				$options['show-namespace'] = $options['nsPrefix'];
+			}
+
+			$chapterName = $chapter->getName();
+			$pageLabelHelper = new PageLabelHelper();
+			$label = $pageLabelHelper->getTitleText(
+				$chapterTitle,
+				$chapterName,
+				$this->showNamespace
+			);
+
 			$chapterPages[] = [
 				'type' => 'page',
 				'target' => $chapterTitle->getPrefixedDBkey(),
-				'label' => $chapter->getNumber() . ' ' . $chapter->getName(),
+				'label' => $chapter->getNumber() . ' ' . $label,
 				'params' => [
 					'tocnumber' => $chapter->getNumber(),
-					'toctext' => $chapter->getName()
+					'toctext' => $label
 				]
 			];
 		}
