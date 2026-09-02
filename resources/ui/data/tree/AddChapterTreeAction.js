@@ -6,7 +6,7 @@ ext.bookshelf.ui.data.tree.AddChapterAction = function ( cfg ) {
 	cfg = Object.assign( {
 		actionName: 'add-chapter',
 		icon: 'add',
-		label: 'Create subchapter',
+		label: mw.msg( 'bs-bookshelf-add-chapter-btn-label' ),
 		invisibleLabel: true,
 		classes: [ 'create-subpage-item' ]
 	}, cfg || {} );
@@ -17,7 +17,7 @@ ext.bookshelf.ui.data.tree.AddChapterAction = function ( cfg ) {
 OO.inheritClass( ext.bookshelf.ui.data.tree.AddChapterAction, OOJSPlus.ui.data.NavigationTreeItemAction );
 
 ext.bookshelf.ui.data.tree.AddChapterAction.prototype.getTitle = function () {
-	return 'Create subchapter';
+	return mw.msg( 'bs-bookshelf-add-chapter-btn-label' );
 };
 
 ext.bookshelf.ui.data.tree.AddChapterAction.prototype.onAction = function ( context ) {

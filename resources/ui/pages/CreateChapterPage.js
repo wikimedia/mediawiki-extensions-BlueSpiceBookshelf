@@ -121,9 +121,9 @@ bs.bookshelf.ui.pages.CreateChapterPage.prototype.validateTitleNotExist = functi
 				dfd.resolve( value );
 			}
 		} else {
-			this.setNextAbility( false );
+			this.setNextAbility( true );
 			this.setExistWarning();
-			dfd.reject( mw.msg( 'bs-bookshelf-create-chapter-page-exists' ) );
+			dfd.resolve( value );
 		}
 	} ).fail( () => {
 		this.clearError();
@@ -154,7 +154,7 @@ bs.bookshelf.ui.pages.CreateChapterPage.prototype.onAction = function ( action )
 			} );
 		} ).fail( ( error ) => {
 			if ( error ) {
-				if ( error === mw.msg( 'bs-bookshelf-create-chapter-page-exists' ) ) {
+				if ( error === 'page-exists' ) {
 					this.setExistWarning();
 				} else {
 					this.setError( error );
