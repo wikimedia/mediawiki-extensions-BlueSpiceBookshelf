@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\Watchlist;
 
 use MediaWiki\Extension\EnhancedStandardUIs\Watchlist\GenericWatchlistItemProvider;
+use MediaWiki\User\User;
 use MessageLocalizer;
 
 /**
@@ -41,5 +42,20 @@ class BookProvider extends GenericWatchlistItemProvider {
 	 */
 	protected function isInScope( int $namespace ): bool {
 		return defined( 'NS_BOOK' ) && $namespace === NS_BOOK;
+	}
+
+	/**
+	 * A single, un-grouped list of the watched books (no "Book" namespace heading).
+	 * Each link points at the book page, which renders the book tree.
+	 *
+	 * @inheritDoc
+	 */
+	public function getItems( User $user ): array {
+		$items = [];
+		foreach ( $this->getScopedTitles( $user ) as $title ) {
+			$items[] = $this->titleToItem( $title );
+		}
+
+		return $this->singleFlatSection( $items );
 	}
 }
