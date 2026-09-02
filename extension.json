@@ -776,7 +776,8 @@
 				"bs-bookshelf-create-chapter-page-intro-label",
 				"bs-bookshelf-create-chapter-page-name-input-label",
 				"bs-bookshelf-create-chapter-page-name-input-help",
-				"bs-bookshelf-create-chapter-input-chapter-name"
+				"bs-bookshelf-create-chapter-input-chapter-name",
+				"bs-bookshelf-add-chapter-btn-label"
 			],
 			"dependencies": [
 				"ext.oojsplus.navigation.treePanel",

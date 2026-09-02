@@ -111,7 +111,7 @@
 		} ).done( ( response ) => {
 			const page = response.query && response.query.pages ? response.query.pages[ 0 ] : null;
 			if ( page && page.missing !== true ) {
-				dfd.reject( mw.msg( 'bs-bookshelf-create-chapter-page-exists' ) );
+				dfd.reject( 'page-exists' );
 				return;
 			}
 			dfd.resolve( validatedPageName );

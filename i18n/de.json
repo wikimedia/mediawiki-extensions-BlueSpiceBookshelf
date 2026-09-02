@@ -222,5 +222,6 @@
 	"bs-bookshelf-panel-book-navigation-text": "Buchnavigation",
 	"bs-bookshelf-panel-book-navigation-title": "Zurück zur Buchnavigation",
 	"bs-bookshelf-panel-book-navigation-aria-label": "Zurück zur Buchnavigation",
-	"bs-bookshelf-panel-book-navigation-aria-desc": "Buchnavigation mit Buchkapiteln"
+	"bs-bookshelf-panel-book-navigation-aria-desc": "Buchnavigation mit Buchkapiteln",
+	"bs-bookshelf-add-chapter-btn-label": "Neues Unterkapitel erstellen"
 }

@@ -215,5 +215,6 @@
 	"bs-bookshelf-panel-book-navigation-text": "Book navigation",
 	"bs-bookshelf-panel-book-navigation-title": "Back to book navigation",
 	"bs-bookshelf-panel-book-navigation-aria-label": "Back book navigation",
-	"bs-bookshelf-panel-book-navigation-aria-desc": "Book navigation with book chapters"
+	"bs-bookshelf-panel-book-navigation-aria-desc": "Book navigation with book chapters",
+	"bs-bookshelf-add-chapter-btn-label": "Create new subchapter"
 }
