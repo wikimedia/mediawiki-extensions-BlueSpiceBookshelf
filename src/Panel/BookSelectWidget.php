@@ -54,7 +54,7 @@ class BookSelectWidget extends SimpleDropdown {
 		foreach ( $books as $book ) {
 			$bookTitle = $this->titleFactory->makeTitle( $book->getNamespace(), $book->getTitle() );
 			$text = $bookTitle->getFullText();
-			$href = $this->title->getLocalURL( "book=$text" );
+			$href = $this->title->getLocalURL( [ 'book' => $text ] );
 			$links[] = [
 				'href' => $href,
 				'text' => $book->getName(),
