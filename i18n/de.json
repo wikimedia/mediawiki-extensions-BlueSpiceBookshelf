@@ -203,6 +203,7 @@
 	"bs-bookshelf-entrypoint-action-book-aria-label": "Buch erstellen",
 	"bs-bookshelf-entrypoint-action-book-aria-title": "Buch erstellen",
 	"bs-extendedsearch-search-center-filter-document-type-book-label": "Buch",
+	"bs-bookshelf-create-chapter-book-title": "Neues Kapitel",
 	"bs-bookshelf-create-chapter-action-next-label": "Weiter",
 	"bs-bookshelf-create-chapter-action-back-label": "Zurück",
 	"bs-bookshelf-create-chapter-error": "Beim Erstellen des Kapitels ist ein Fehler aufgetreten. Bitte {{#FORMAL:versuche|versuchen Sie}} es erneut..",
