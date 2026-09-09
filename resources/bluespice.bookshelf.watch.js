@@ -12,13 +12,13 @@
 		const bookTitle = $target.data( 'prefixed_db_key' );
 		const displayTitle = $target.closest( '.bs-card' ).find( '.bs-card-title' ).text();
 		const iconClasses = $icon.attr( 'class' ) || '';
-		const watched = iconClasses.indexOf( 'bi-star-fill' ) !== -1;
+		const watched = iconClasses.indexOf( 'bi-bs-unwatch' ) !== -1;
 
 		const api = new mw.Api();
 		const apiCall = watched ? api.unwatch( bookTitle ) : api.watch( bookTitle );
 		apiCall.done( () => {
 			const nowWatched = !watched;
-			$icon.toggleClass( 'bi-star-fill', nowWatched ).toggleClass( 'bi-star', !nowWatched );
+			$icon.toggleClass( 'bi-bs-unwatch', nowWatched ).toggleClass( 'bi-bs-watch', !nowWatched );
 
 			// The following messages are used here:
 			// * bs-bookshelf-books-overview-page-book-action-watch-title
