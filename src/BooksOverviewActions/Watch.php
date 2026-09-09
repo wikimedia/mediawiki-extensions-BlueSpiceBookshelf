@@ -59,7 +59,9 @@ class Watch implements IBooksOverviewAction {
 	 * @return array
 	 */
 	public function getIconClasses(): array {
-		return [ $this->watched ? 'bi-star-fill' : 'bi-star' ];
+		// Icon classes provided by the skin, which resolves them to the glyph matching
+		// its own icon set: stars in BlueSpiceDiscovery, eyes in BlueSpiceEclipse.
+		return [ $this->watched ? 'bi-bs-unwatch' : 'bi-bs-watch' ];
 	}
 
 	/**
