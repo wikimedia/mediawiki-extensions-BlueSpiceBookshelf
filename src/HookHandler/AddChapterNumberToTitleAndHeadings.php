@@ -176,7 +176,7 @@ class AddChapterNumberToTitleAndHeadings {
 	private function setChapterNumberInContent(
 		Title $activeBook, ChapterInfo $chapterInfo, ParserOutput $output
 	) {
-		$text = $output->getText();
+		$text = $output->getContentHolderText();
 
 		$numberToc = new NumberTOC();
 		$text = $numberToc->execute(
