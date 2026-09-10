@@ -11,12 +11,12 @@ use BlueSpice\Bookshelf\NumberTOC;
 use MediaWiki\Config\Config;
 use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Content\Content;
+use MediaWiki\Content\TextContent;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Parser\Parsoid\PageBundleParserOutputConverter;
 use MediaWiki\Title\Title;
 use Skin;
-use TextContent;
 
 class AddChapterNumberToTitleAndHeadings {
 
