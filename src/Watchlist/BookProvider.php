@@ -53,9 +53,21 @@ class BookProvider extends GenericWatchlistItemProvider {
 	public function getItems( User $user ): array {
 		$items = [];
 		foreach ( $this->getScopedTitles( $user ) as $title ) {
-			$items[] = $this->titleToItem( $title );
+			$items[] = [
+				'prefixedText' => $title->getPrefixedText(),
+				'label' => $title->getText(),
+				'url' => $title->getLocalURL(),
+				'exists' => $title->isKnown()
+			];
+		}
+		if ( !$items ) {
+			return [];
 		}
 
-		return $this->singleFlatSection( $items );
+		usort( $items, static function ( $a, $b ) {
+			return strcasecmp( $a['label'], $b['label'] );
+		} );
+
+		return [ [ 'section' => '', 'items' => $items ] ];
 	}
 }
