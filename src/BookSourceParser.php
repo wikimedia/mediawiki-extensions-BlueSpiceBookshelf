@@ -53,15 +53,15 @@ class BookSourceParser extends WikitextMenuParser {
 		}
 		$nodes = $this->getChapterDataModels();
 
+		// Clear data and re-add each node, including the new one at the right place
+		$this->rawData = "";
 		foreach ( $nodes as $nodeData ) {
 			$existingNode = $nodeData[0];
 			/** @var ChapterDataModel $existingNodeModel */
 			$existingNodeModel = $nodeData[1];
+			$this->addNode( $existingNode );
 			if ( $existingNodeModel->getNumber() === $afterNode ) {
-				// Found "after node", insert after
-				// First match, in case there are multiple
-				parent::addNodeAfter( $node, $existingNode, $newline );
-				return;
+				$this->addNode( $node );
 			}
 		}
 	}
