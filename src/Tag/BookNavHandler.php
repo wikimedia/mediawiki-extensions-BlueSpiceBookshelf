@@ -40,6 +40,9 @@ class BookNavHandler extends Handler {
 	/** @var TreeDataGenerator */
 	private $treeDataGenerator = null;
 
+	/** @var int */
+	private static $searchBoxCounter = 0;
+
 	/**
 	 * @param string $processedInput
 	 * @param array $processedArgs
@@ -127,12 +130,13 @@ class BookNavHandler extends Handler {
 	 * @return string $searchBox
 	 */
 	private function buildSearchBox(): string {
+		$id = 'bs-booknav-filter-' . ++self::$searchBoxCounter;
 		$searchBox = Html::openElement( 'div', [
-			'data-selector' => '.bs-tag-booknav .mws-tree-item',
+			'data-selector' => '.mws-tree-item',
 			'style' => 'width: 20%;'
 		] );
 		$searchBox .= Html::openElement( 'div', [
-			'id' => 'ooui-php-1',
+			'id' => $id,
 			// phpcs:ignore Generic.Files.LineLength.TooLong
 			'class' => 'container-filter-search oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-iconElement oo-ui-textInputWidget oo-ui-textInputWidget-type-search oo-ui-textInputWidget-php',
 			// phpcs:ignore Generic.Files.LineLength.TooLong
