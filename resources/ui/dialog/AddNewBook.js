@@ -95,7 +95,7 @@ ext.bookshelf.ui.dialog.AddNewBookDialog.prototype.addCoverImageLayout = functio
 		padded: true,
 		classes: [ 'bs-bookshelf-new-book-image-panel' ]
 	} );
-	this.coverImageInput = new OO.ui.SelectFileWidget( {
+	this.coverImageInput = new OO.ui.SelectFileInputWidget( {
 		showDropTarget: true
 	} );
 	this.coverImageInput.connect( this, {
