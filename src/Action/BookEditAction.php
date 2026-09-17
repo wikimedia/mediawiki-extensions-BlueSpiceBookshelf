@@ -33,10 +33,9 @@ class BookEditAction extends EditAction {
 			$this->getTitle(), $this->getRequest()
 		);
 
-		$out->setPageTitle(
-			Message::newFromKey(
-				'bs-bookshelf-edit-title'
-			)->params( $bookEditData->getBookTitle() )
+		$out->setPageTitleMsg(
+			Message::newFromKey( 'bs-bookshelf-edit-title' )
+				->params( $bookEditData->getBookTitle() )
 		);
 
 		$returnTo = $this->getRequest()->getText( 'returnto', false );
