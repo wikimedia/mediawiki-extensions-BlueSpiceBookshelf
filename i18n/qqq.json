@@ -226,5 +226,7 @@
 	"bs-bookshelf-panel-book-navigation-title": "Title for navigation tab panel",
 	"bs-bookshelf-panel-book-navigation-aria-label": "Aria label for navigation tab panel",
 	"bs-bookshelf-panel-book-navigation-aria-desc": "Aria description of book navigation",
-	"bs-bookshelf-add-chapter-btn-label": "Button label to create a new subchapter for a book"
+	"bs-bookshelf-add-chapter-btn-label": "Button label to create a new subchapter for a book",
+	"bs-bookshelf-book-select-widget-btn-title": "Title for button to change books",
+	"bs-bookshelf-book-select-widget-btn-aria-label": "Aria label for button to change books"
 }

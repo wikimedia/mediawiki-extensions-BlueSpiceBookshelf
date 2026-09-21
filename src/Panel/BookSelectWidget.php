@@ -77,14 +77,14 @@ class BookSelectWidget extends SimpleDropdown {
 	 * @return Message
 	 */
 	public function getTitle(): Message {
-		return $this->getText();
+		return Message::newFromKey( 'bs-bookshelf-book-select-widget-btn-title' );
 	}
 
 	/**
 	 * @return Message
 	 */
 	public function getAriaLabel(): Message {
-		return $this->getText();
+		return Message::newFromKey( 'bs-bookshelf-book-select-widget-btn-aria-label' );
 	}
 
 	/**
