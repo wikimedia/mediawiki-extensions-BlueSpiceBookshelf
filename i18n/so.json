@@ -215,5 +215,8 @@
 	"bs-bookshelf-panel-book-navigation-text": "Dulmaridda buugga",
 	"bs-bookshelf-panel-book-navigation-title": "Ku noqo dulmarka buugga",
 	"bs-bookshelf-panel-book-navigation-aria-label": "Dib ugu noqo dulmaridda buugga",
-	"bs-bookshelf-panel-book-navigation-aria-desc": "Dulmarka buugga oo leh cutubyada buugga"
+	"bs-bookshelf-panel-book-navigation-aria-desc": "Dulmarka buugga oo leh cutubyada buugga",
+	"bs-bookshelf-add-chapter-btn-label": "Abuur qayb hoosaad cusub",
+	"bs-bookshelf-book-select-widget-btn-title": "Beddel buugga",
+	"bs-bookshelf-book-select-widget-btn-aria-label": "Beddel buugga"
 }
