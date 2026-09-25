@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\Watchlist;
 
 use MediaWiki\Extension\EnhancedStandardUIs\Watchlist\GenericWatchlistItemProvider;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\User;
 use MessageLocalizer;
 
@@ -35,6 +36,15 @@ class BookProvider extends GenericWatchlistItemProvider {
 	 */
 	public function getTabIcon(): string {
 		return 'book';
+	}
+
+	/**
+	 * Special:Books offers a watch action on every book card.
+	 *
+	 * @inheritDoc
+	 */
+	public function getAddItemsUrl(): ?string {
+		return SpecialPage::getTitleFor( 'Books' )->getLocalURL();
 	}
 
 	/**
