@@ -140,5 +140,7 @@
 	"bs-bookshelf-create-chapter-btn-title": "Neit Kapitel uleeën",
 	"bs-bookshelf-create-chapter-btn-aria-label": "En neit Kapitel uleeën",
 	"bs-bookshelf-panel-book-navigation-text": "Buchnavigatioun",
-	"bs-bookshelf-panel-book-navigation-title": "Zeréck op d'Buchnavigatioun"
+	"bs-bookshelf-panel-book-navigation-title": "Zeréck op d'Buchnavigatioun",
+	"bs-bookshelf-book-select-widget-btn-title": "Buch wiesselen",
+	"bs-bookshelf-book-select-widget-btn-aria-label": "Buch wiesselen"
 }

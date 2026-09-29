@@ -216,5 +216,8 @@
 	"bs-bookshelf-panel-book-navigation-text": "Navegación do libro",
 	"bs-bookshelf-panel-book-navigation-title": "Volver á navegación do libro",
 	"bs-bookshelf-panel-book-navigation-aria-label": "Volver á navegación do libro",
-	"bs-bookshelf-panel-book-navigation-aria-desc": "Navegación do libro cos capítulos do libro"
+	"bs-bookshelf-panel-book-navigation-aria-desc": "Navegación do libro cos capítulos do libro",
+	"bs-bookshelf-add-chapter-btn-label": "Crear un subcapítulo novo",
+	"bs-bookshelf-book-select-widget-btn-title": "Cambiar o libro",
+	"bs-bookshelf-book-select-widget-btn-aria-label": "Cambiar o libro"
 }
