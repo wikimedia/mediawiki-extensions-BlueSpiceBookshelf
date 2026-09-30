@@ -222,5 +222,8 @@
 	"bs-bookshelf-panel-book-navigation-text": "Boeknavigatie",
 	"bs-bookshelf-panel-book-navigation-title": "Terug naar boeknavigatie",
 	"bs-bookshelf-panel-book-navigation-aria-label": "Terug naar boeknavigatie",
-	"bs-bookshelf-panel-book-navigation-aria-desc": "Boeknavigatie met hoofdstukken"
+	"bs-bookshelf-panel-book-navigation-aria-desc": "Boeknavigatie met hoofdstukken",
+	"bs-bookshelf-add-chapter-btn-label": "Nieuw subhoofdstuk aanmaken",
+	"bs-bookshelf-book-select-widget-btn-title": "Boek wijzigen",
+	"bs-bookshelf-book-select-widget-btn-aria-label": "Boek wijzigen"
 }
