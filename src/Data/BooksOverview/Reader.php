@@ -14,7 +14,7 @@ use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\DataStore\ReaderParams;
 use RepoGroup;
-use WANObjectCache;
+use Wikimedia\ObjectCache\WANObjectCache;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {

@@ -9,7 +9,7 @@ use MediaWiki\Title\TitleFactory;
 use MWStake\MediaWiki\Component\Utils\DisplayTitleHelper;
 use MWStake\MediaWiki\Component\Utils\UtilityFactory;
 use stdClass;
-use WANObjectCache;
+use Wikimedia\ObjectCache\WANObjectCache;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class ChapterLookup {
