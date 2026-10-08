@@ -16,7 +16,7 @@ use MediaWiki\User\User;
 use MediaWiki\Watchlist\WatchedItemStore;
 use MWStake\MediaWiki\Component\DataStore\ReaderParams;
 use RepoGroup;
-use WANObjectCache;
+use Wikimedia\ObjectCache\WANObjectCache;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
