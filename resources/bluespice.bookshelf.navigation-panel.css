@@ -27,11 +27,12 @@ a[ data-bs-target='book-navigation-panel' ] i.bi-bs-back-arrow {
 
 #n-book-panel .card-header {
 	border-bottom: none; /* stylelint-disable-line declaration-property-value-disallowed-list */
-	padding: 0.5rem 1rem 0.5rem 2rem;
+	padding: 0.5rem 0 0.5rem 2rem;
 }
 
 #n-book-panel-header-actions {
 	flex-flow: row wrap;
+	justify-content: end;
 }
 
 #n-book-panel-header-actions a,
