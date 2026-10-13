@@ -14,7 +14,6 @@ use MediaWiki\Content\Content;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\ParserOutput;
-use MediaWiki\Parser\Parsoid\PageBundleParserOutputConverter;
 use MediaWiki\Title\Title;
 use Skin;
 
@@ -116,7 +115,7 @@ class AddChapterNumberToTitleAndHeadings {
 
 		// We skip execution of our code if content is parsoid content. This is the case in visual edit mode.
 		// See ERM45110
-		if ( $output->getExtensionData( PageBundleParserOutputConverter::PARSOID_PAGE_BUNDLE_KEY ) !== null ) {
+		if ( $output->getExtensionData( ParserOutput::PARSOID_PAGE_BUNDLE_KEY ) !== null ) {
 			return true;
 		}
 
