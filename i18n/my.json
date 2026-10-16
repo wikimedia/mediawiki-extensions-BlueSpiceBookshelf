@@ -14,5 +14,7 @@
 	"bs-bookshelf-mainlinks-label": "စာအုပ်များ",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "ဗားရှင်း",
 	"apihelp-bs-books-overview-store-summary": "စာအုပ်စင်၊ ပထမအခန်းလင့်ခ်နှင့် လုပ်ဆောင်ချက်များ အပါအဝင် စာအုပ်အားလုံးကို စာရင်းပြုစုထားသည်။",
-	"bs-books-overview-page-book-actions-dropdown-menu-title": "ဤစာအုပ်အတွက် နောက်ထပ်လုပ်ဆောင်မှုများ"
+	"bs-books-overview-page-book-actions-dropdown-menu-title": "ဤစာအုပ်အတွက် နောက်ထပ်လုပ်ဆောင်မှုများ",
+	"bs-bookshelf-create-chapter-page-exists": "ဤအမည်ဖြင့် စာမျက်နှာတစ်ခု ရှိနှင့်ပြီးဖြစ်သည်။",
+	"bs-bookshelf-create-chapter-page-name-input-label": "စာမျက်နှာ အမည်"
 }
