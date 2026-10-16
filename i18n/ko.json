@@ -204,5 +204,8 @@
 	"bs-bookshelf-books-overview-page-book-action-watch-text": "주시",
 	"bs-bookshelf-books-overview-page-book-action-unwatch-text": "주시 해제",
 	"bs-bookshelf-books-overview-page-book-watched": "\"$1\" 책을 주시문서 목록에 추가했습니다",
-	"bs-bookshelf-books-overview-page-book-unwatched": "\"$1\" 책을 주시문서 목록에서 제거했습니다"
+	"bs-bookshelf-books-overview-page-book-unwatched": "\"$1\" 책을 주시문서 목록에서 제거했습니다",
+	"bs-extendedsearch-search-center-filter-document-type-book-label": "책",
+	"bs-bookshelf-create-chapter-action-next-label": "다음",
+	"bs-bookshelf-create-chapter-action-back-label": "뒤로"
 }

@@ -7,7 +7,9 @@
 			"Ebraminio",
 			"FarsiNevis",
 			"Jeeputer",
+			"LProfo",
 			"LordProfo",
+			"Mohammad ebz",
 			"Rulebased"
 		]
 	},
@@ -51,7 +53,7 @@
 	"bs-bookshelf-ve-booklist-attr-filter-label": "پالایه",
 	"bs-bookshelf-ve-bookmeta-attr-title-label": "عنوان",
 	"bs-bookshelf-ve-bookmeta-attr-subtitle-label": "زیرنویس",
-	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "زیرنویس کتاب را تنظیم می‌کند",
+	"bs-bookshelf-ve-bookmeta-attr-subtitle-help": "زیرعنوان کتاب را تنظیم می‌کند",
 	"bs-bookshelf-ve-bookmeta-attr-author-label": "نویسنده",
 	"bs-bookshelf-ve-bookmeta-attr-author-help": "نویسندهٔ کتاب را تنظیم می‌کند",
 	"bs-bookshelf-ve-bookmeta-attr-version-label": "نسخه",
