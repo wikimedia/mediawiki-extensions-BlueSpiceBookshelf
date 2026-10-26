@@ -9,11 +9,11 @@ use DOMElement;
 use DOMXPath;
 use MediaWiki\Config\Config;
 use MediaWiki\Config\ConfigFactory;
+use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use PDFFileResolver;
-use RepoGroup;
 
 class UEModulePDF {
 

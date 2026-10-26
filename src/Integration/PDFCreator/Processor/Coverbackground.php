@@ -10,9 +10,9 @@ use MediaWiki\Extension\PDFCreator\IProcessor;
 use MediaWiki\Extension\PDFCreator\PDFCreator;
 use MediaWiki\Extension\PDFCreator\Utility\ExportContext;
 use MediaWiki\Extension\PDFCreator\Utility\UncollideFilename;
+use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\Page\PageIdentity;
 use MediaWiki\Title\TitleFactory;
-use RepoGroup;
 
 class Coverbackground implements IProcessor {
 
