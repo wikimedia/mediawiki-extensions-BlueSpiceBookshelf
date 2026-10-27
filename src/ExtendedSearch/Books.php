@@ -26,10 +26,10 @@ use MediaWiki\Language\Language;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Message\Message;
 use MediaWiki\Page\PageIdentity;
+use MediaWiki\Page\WikiPage;
 use MediaWiki\Permissions\Authority;
 use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\UserIdentity;
-use WikiPage;
 
 class Books implements
 	ISearchPlugin,
