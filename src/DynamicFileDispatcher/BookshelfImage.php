@@ -3,6 +3,7 @@
 namespace BlueSpice\Bookshelf\DynamicFileDispatcher;
 
 use BlueSpice\DynamicFileDispatcher\ArticlePreviewImage;
+use MediaWiki\FileRepo\File\File;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 
@@ -40,7 +41,7 @@ class BookshelfImage extends ArticlePreviewImage {
 		$services = MediaWikiServices::getInstance();
 
 		$file = $services->getRepoGroup()->findFile( $coverpage );
-		if ( $file instanceof \File ) {
+		if ( $file instanceof File ) {
 			// TODO: Add "transformable" RepoFile to BSF
 			return new ImageExternal(
 				$this,
