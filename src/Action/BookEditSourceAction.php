@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Bookshelf\Action;
 
-use EditAction;
+use MediaWiki\Actions\EditAction;
 
 class BookEditSourceAction extends EditAction {
 	/**
