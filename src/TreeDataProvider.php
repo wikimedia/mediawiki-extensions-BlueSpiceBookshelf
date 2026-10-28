@@ -2,9 +2,9 @@
 
 namespace BlueSpice\Bookshelf;
 
-use HtmlArmor;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
+use Wikimedia\HtmlArmor\HtmlArmor;
 
 class TreeDataProvider {
 
