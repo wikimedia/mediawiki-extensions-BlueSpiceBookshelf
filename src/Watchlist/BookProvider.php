@@ -3,9 +3,9 @@
 namespace BlueSpice\Bookshelf\Watchlist;
 
 use MediaWiki\Extension\EnhancedStandardUIs\Watchlist\GenericWatchlistItemProvider;
+use MediaWiki\Language\MessageLocalizer;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\User;
-use MessageLocalizer;
 
 /**
  * Watched books (pages in the Book namespace), shown as the "Books" tab on the enhanced
