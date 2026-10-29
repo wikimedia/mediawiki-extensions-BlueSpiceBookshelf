@@ -225,5 +225,10 @@
 	"bs-bookshelf-panel-book-navigation-aria-desc": "Buchnavigation mit Buchkapiteln",
 	"bs-bookshelf-add-chapter-btn-label": "Neues Unterkapitel erstellen",
 	"bs-bookshelf-book-select-widget-btn-title": "Buch wechseln",
-	"bs-bookshelf-book-select-widget-btn-aria-label": "Buch wechseln"
+	"bs-bookshelf-book-select-widget-btn-aria-label": "Buch wechseln",
+	"bs-bookshelf-books-overview-page-book-watched": "Das Buch \\\"$1\\\" wurde {{#FORMAL:deiner|Ihrer}} Beobachtungsliste hinzugefügt",
+	"bs-bookshelf-books-overview-page-book-unwatched": "Das Buch \"$1\" wurde aus {{#FORMAL:deiner|Ihrer}} Beobachtungsliste entfernt",
+	"bs-bookshelf-add-to-book-warning-new-book": "Das ausgewählte Buch existiert noch nicht. Es wird erstellt, sobald {{#FORMAL:du|Sie}} Seiten {{#FORMAL:hinzufügst|hinzufügen}}.",
+	"bs-bookshelf-notifyme-subscription-reason": "Diese Seite gehört zu einem Buch, das {{#FORMAL:du beobachtest|Sie beobachten}}.",
+	"bs-bookshelf-add-to-book-error": "Beim Hinzufügen der Seite zum Buch ist ein Fehler aufgetreten. Bitte {{#FORMAL:versuche|versuchen Sie}} es erneut."
 }
