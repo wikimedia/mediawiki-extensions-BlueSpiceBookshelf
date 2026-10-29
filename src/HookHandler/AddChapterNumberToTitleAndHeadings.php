@@ -14,8 +14,8 @@ use MediaWiki\Content\Content;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\ParserOutput;
+use MediaWiki\Skin\Skin;
 use MediaWiki\Title\Title;
-use Skin;
 
 class AddChapterNumberToTitleAndHeadings {
 
