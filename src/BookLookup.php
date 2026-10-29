@@ -2,9 +2,9 @@
 
 namespace BlueSpice\Bookshelf;
 
+use MediaWiki\ObjectCache\ObjectCacheFactory;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
-use ObjectCacheFactory;
 use Wikimedia\Rdbms\IConnectionProvider;
 
 class BookLookup {
