@@ -4,8 +4,8 @@ namespace BlueSpice\Bookshelf\HookHandler\SkinTemplateNavigation;
 
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Skin\SkinTemplate;
 use MediaWiki\Title\TitleFactory;
-use SkinTemplate;
 
 class AddAddToBookEntry implements SkinTemplateNavigation__UniversalHook {
 
