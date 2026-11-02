@@ -43,28 +43,24 @@ class SearchInBookHandler extends TagSearchHandler {
 	 * @throws Exception
 	 */
 	protected function modifyLookup( Lookup $lookup ) {
-		$bookPrefixed = $this->getBookFilterValue( $this->book );
-		if ( !$bookPrefixed ) {
+		if ( !$this->isValidBook( $this->book ) ) {
 			throw new Exception(
 				Message::newFromKey( 'bs-bookshelf-tag-searchinbook-error', $this->book )->text()
 			);
 		}
-		$lookup->addTermsFilter( 'books', [ $bookPrefixed ] );
+		// Filter by book name, ParseBookFilter converts it to the indexed book page key on query
+		$lookup->addTermsFilter( 'books', [ $this->book ] );
 	}
 
 	/**
 	 * @param mixed $book
-	 * @return string|null
+	 * @return bool
 	 */
-	private function getBookFilterValue( mixed $book ): ?string {
+	private function isValidBook( mixed $book ): bool {
 		if ( !$book || !is_string( $book ) ) {
-			return null;
+			return false;
 		}
 
-		$title = $this->bookLookup->getBookTitleFromName( $book );
-		if ( !$title ) {
-			return null;
-		}
-		return $title->getPrefixedDBkey();
+		return $this->bookLookup->getBookTitleFromName( $book ) !== null;
 	}
 }

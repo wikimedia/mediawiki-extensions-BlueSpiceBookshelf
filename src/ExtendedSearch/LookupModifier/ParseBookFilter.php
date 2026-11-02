@@ -3,9 +3,11 @@
 namespace BlueSpice\Bookshelf\ExtendedSearch\LookupModifier;
 
 use BlueSpice\Bookshelf\BookLookup;
+use BS\ExtendedSearch\Backend;
 use BS\ExtendedSearch\Lookup;
 use BS\ExtendedSearch\Source\LookupModifier\LookupModifier;
 use MediaWiki\Context\IContextSource;
+use MediaWiki\Title\Title;
 
 class ParseBookFilter extends LookupModifier {
 
@@ -40,12 +42,16 @@ class ParseBookFilter extends LookupModifier {
 		$books = $terms['books'];
 		// Remove the original filter
 		$this->lookup->removeTermsFilter( 'books', $books );
-		$newValues = array_map( function ( $bookName ) {
-			$title = $this->bookLookup->getBookTitleFromName( $bookName );
-			if ( !$title ) {
-				return null;
+		$newValues = array_map( function ( $book ) {
+			$title = $this->bookLookup->getBookTitleFromName( $book );
+			if ( $title ) {
+				return $title->getPrefixedDBkey();
 			}
-			return $title->getPrefixedDBkey();
+			$title = Title::newFromText( $book );
+			if ( $title && $this->bookLookup->getBookInfo( $title ) ) {
+				return $title->getPrefixedDBkey();
+			}
+			return null;
 		}, $books );
 		$newValues = array_filter( $newValues );
 		$this->parsedFilters['books'] = $newValues;
@@ -53,14 +59,21 @@ class ParseBookFilter extends LookupModifier {
 	}
 
 	/**
+	 * @return string[]
+	 */
+	public function getSearchTypes() {
+		return [ Backend::QUERY_TYPE_SEARCH, Backend::QUERY_TYPE_AUTOCOMPLETE ];
+	}
+
+	/**
 	 * @return void
 	 */
 	public function undo() {
-		if ( !empty( $this->originalFilters['books'] ) ) {
-			$this->lookup->addTermsFilter( 'books', $this->originalFilters['books'] );
-		}
 		if ( !empty( $this->parsedFilters['books'] ) ) {
 			$this->lookup->removeTermsFilter( 'books', $this->parsedFilters['books'] );
+		}
+		if ( !empty( $this->originalFilters['books'] ) ) {
+			$this->lookup->addTermsFilter( 'books', $this->originalFilters['books'] );
 		}
 	}
 }
