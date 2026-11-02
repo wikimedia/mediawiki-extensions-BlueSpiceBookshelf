@@ -18,7 +18,7 @@
 			index += 1;
 			for ( let i = index; i < this.chapters.length; i++ ) {
 				const info = this.chapters[ i ];
-				if ( info.chapter_number.includes( this.chapterNumber + '.' ) ) { // eslint-disable-line es-x/no-array-prototype-includes
+				if ( info.chapter_number.includes( this.chapterNumber + '.' ) ) {
 					this.relatedChapterNumbers.push( info.chapter_number );
 					continue;
 				}

@@ -12,7 +12,7 @@
 		const bookTitle = $target.data( 'prefixed_db_key' );
 		const displayTitle = $target.closest( '.bs-card' ).find( '.bs-card-title' ).text();
 		const iconClasses = $icon.attr( 'class' ) || '';
-		const watched = iconClasses.indexOf( 'bi-bs-unwatch' ) !== -1;
+		const watched = iconClasses.includes( 'bi-bs-unwatch' );
 
 		const api = new mw.Api();
 		const apiCall = watched ? api.unwatch( bookTitle ) : api.watch( bookTitle );
