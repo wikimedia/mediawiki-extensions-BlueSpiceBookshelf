@@ -4,7 +4,7 @@ namespace BlueSpice\Bookshelf\HookHandler\SkinTemplateNavigation;
 
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\MediaWikiServices;
-use SkinTemplate;
+use MediaWiki\Skin\SkinTemplate;
 
 class AddEditBook implements SkinTemplateNavigation__UniversalHook {
 
