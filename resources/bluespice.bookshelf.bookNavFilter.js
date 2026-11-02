@@ -66,7 +66,7 @@
 				.filter( function () {
 					return $( this ).data( 'bsFilterMatch' ) === true;
 				} ).length > 0;
-			const matches = getOwnText( $element ).indexOf( value ) !== -1 || hasMatchingChild;
+			const matches = getOwnText( $element ).includes( value ) || hasMatchingChild;
 
 			$element.data( 'bsFilterMatch', matches );
 			$element.css( 'display', matches ? '' : 'none' );
