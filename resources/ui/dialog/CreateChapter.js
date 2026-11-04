@@ -18,8 +18,10 @@
 			index += 1;
 			for ( let i = index; i < this.chapters.length; i++ ) {
 				const info = this.chapters[ i ];
-				if ( info.chapter_number.includes( this.chapterNumber + '.' ) ) {
-					this.relatedChapterNumbers.push( info.chapter_number );
+				if ( info.chapter_number.startsWith( this.chapterNumber + '.' ) ) {
+					if ( info.chapter_number.split( '.' ).length === this.chapterNumber.split( '.' ).length + 1 ) {
+						this.relatedChapterNumbers.push( info.chapter_number );
+					}
 					continue;
 				}
 				break;
@@ -136,7 +138,11 @@
 		}
 
 		parts[ lastIndex ] = previousSegment.toString();
-		return parts.join( '.' );
+		const previousNumber = parts.join( '.' );
+		const descendants = this.chapters.filter(
+			( chapter ) => chapter.chapter_number.startsWith( previousNumber + '.' )
+		);
+		return descendants.length > 0 ? descendants[ descendants.length - 1 ].chapter_number : previousNumber;
 	};
 
 	bs.bookshelf.ui.dialog.CreateChapter.prototype.createChapter = function ( pageName, chapterName ) {
