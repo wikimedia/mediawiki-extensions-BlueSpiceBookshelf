@@ -26,6 +26,7 @@ ext.bookshelf.ui.data.node.WikiLinkWithAliasNode.prototype.getFormFields = funct
 			name: 'target',
 			type: 'title',
 			required: true,
+			validateTitle: false,
 			label: mw.message( 'bs-bookshelf-chapter-wikilink-with-alias-target-input-label' ).text(),
 			help: '',
 			widget_$overlay: dialog.$overlay, // eslint-disable-line camelcase
