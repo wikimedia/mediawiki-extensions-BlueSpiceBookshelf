@@ -891,13 +891,6 @@
 			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\SkinTemplateNavigation\\AddNewBook",
 			"services": [ "PermissionManager", "TitleFactory" ]
 		},
-		"ue-module-pdf": {
-			"class": "\\BlueSpice\\Bookshelf\\HookHandler\\UEModulePDF",
-			"services": [
-				"BSBookshelfBookContextProviderFactory", "BSBookshelfBookLookup", "BSBookshelfBookChapterLookup",
-				"TitleFactory", "ConfigFactory", "MainConfig", "RepoGroup", "HookContainer"
-			]
-		},
 		"migrateBooks": {
 			"class": "\\BlueSpice\\Bookshelf\\Hook\\LoadExtensionSchemaUpdates\\MigrateBooks"
 		},
@@ -943,9 +936,6 @@
 			"migrateBooks",
 			"addPDFTemplates"
 		],
-		"BSUEModulePDFgetPage": "ue-module-pdf",
-		"BSUEModulePDFcollectMetaData": "ue-module-pdf",
-		"BSUEModulePDFAfterFindFiles": "ue-module-pdf",
 		"SkinTemplateNavigation::Universal": [
 			"addAddToBookEntry",
 			"addEditBook",
