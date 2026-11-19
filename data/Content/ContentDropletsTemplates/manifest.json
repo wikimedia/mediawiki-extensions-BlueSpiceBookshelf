@@ -3,9 +3,20 @@
 		"lang": "en",
 		"target_title": "Template:BookPDFLink",
 		"content_path": "/pages/Template/BookPDFLink.wiki",
-		"sha1": "6d3026a91d2a54c33584eb83e90554a4e68f9cb4",
+		"sha1": "822fe5a0e3638e862ea75de5639e59e89cd6dbd1",
 		"old_sha1": [
-			"422d7f0bb142b860fa124b4a0a635f12dd467974"
+			"422d7f0bb142b860fa124b4a0a635f12dd467974",
+			"6d3026a91d2a54c33584eb83e90554a4e68f9cb4"
+		]
+	},
+	"Template:BookPDFLink DE": {
+		"lang": "de",
+		"target_title": "Template:BookPDFLink",
+		"content_path": "/pages/Template/BookPDFLink.DE.wiki",
+		"sha1": "c4f3aef0a29e95d6f7096198b751cd76c8245204",
+		"old_sha1": [
+			"422d7f0bb142b860fa124b4a0a635f12dd467974",
+			"6d3026a91d2a54c33584eb83e90554a4e68f9cb4"
 		]
 	}
 }

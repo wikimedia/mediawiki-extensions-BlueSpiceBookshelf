@@ -1,0 +1,53 @@
+<includeonly>{{#tag:exportpdf||mode=book|template={{{template|}}}|page={{{book|}}}|label={{#if:{{{label|}}}|{{{label}}}|{{int:pdfcreator-export-action-text}}}}}}</includeonly><noinclude>
+Diese Vorlage wird vom Content-Droplet „Buch PDF-Link“ verwendet. Änderungen daran wirken sich auf alle Seiten aus, die das Droplet nutzen.
+
+Parameter: book = Seitenname des Buchs inklusive Namensraum (z. B. Buch:Benutzerhandbuch), template = Name der PDF-Vorlage (leer verwendet die Standardvorlage), label = Text des Exportlinks (leer zeigt „Als PDF exportieren“).
+<templatedata>
+{
+	"params": {
+		"book": {
+			"label": {
+				"en": "Book",
+				"de": "Buch"
+			},
+			"description": {
+				"en": "Full page name of the book, including the namespace",
+				"de": "Vollständiger Seitenname des Buchs inklusive Namensraum"
+			},
+			"example": {
+				"en": "Book:User manual",
+				"de": "Buch:Benutzerhandbuch"
+			},
+			"type": "wiki-page-name",
+			"required": true
+		},
+		"template": {
+			"label": {
+				"en": "Export template",
+				"de": "Exportvorlage"
+			},
+			"description": {
+				"en": "Name of a PDF template (subpage of MediaWiki:PDFCreator). Empty uses the default template.",
+				"de": "Name einer PDF-Vorlage (Unterseite von MediaWiki:PDFCreator). Leer verwendet die Standardvorlage."
+			},
+			"suggested": true
+		},
+		"label": {
+			"label": {
+				"en": "Link text",
+				"de": "Linktext"
+			},
+			"description": {
+				"en": "Text of the export link. Empty shows \"Export as PDF\".",
+				"de": "Text des Exportlinks. Leer zeigt „Als PDF exportieren“."
+			},
+			"suggested": true
+		}
+	},
+	"description": {
+		"en": "Adds a link that exports a book as a PDF. Used by the content droplet \"Book PDF link\".",
+		"de": "Fügt einen Link hinzu, der ein Buch als PDF exportiert. Wird vom Content-Droplet „Buch PDF-Link“ verwendet."
+	}
+}
+</templatedata>
+</noinclude>
