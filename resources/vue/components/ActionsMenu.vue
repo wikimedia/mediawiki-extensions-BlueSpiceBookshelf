@@ -75,6 +75,24 @@ module.exports = {
 	padding: 0 5px;
 }
 
+.bs-card-actions .dropdown .dropdown-menu a:hover {
+	background-color: var( --bs-books-overview-page-hover-background-color );
+}
+
+.bs-card-actions .dropdown .dropdown-menu li:has( > .bs-books-overview-action-delete ) {
+	margin-top: 5px;
+	padding-top: 5px;
+	border-top: 1px solid #d7d7d7;
+}
+
+.bs-card-actions .dropdown .dropdown-menu a.bs-books-overview-action-delete {
+	color: var( --bs-books-overview-page-destructive-color ) !important;
+}
+
+.bs-card-actions .dropdown .dropdown-menu a.bs-books-overview-action-delete:hover {
+	background-color: var( --bs-books-overview-page-destructive-background-color );
+}
+
 .bs-card-actions .dropdown .dropdown-menu a:focus-visible {
 	outline: var( --bs-books-overview-page-focus-visible-color ) solid 1px;
 }
@@ -82,5 +100,6 @@ module.exports = {
 .bs-card-actions .dropdown .dropdown-menu a i {
 	display: inline-block;
 	width: 32px;
+	vertical-align: -0.125em;
 }
 </style>

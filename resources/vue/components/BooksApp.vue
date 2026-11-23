@@ -225,6 +225,9 @@ function updateAriaLiveSection( count ) {
 :root {
 	--bs-books-overview-page-focus-visible-color: #3e5389;
 	--bs-books-overview-page-book-new: #bd1d1d;
+	--bs-books-overview-page-hover-background-color: #eaecf0;
+	--bs-books-overview-page-destructive-color: #bf3c2c;
+	--bs-books-overview-page-destructive-background-color: #ffe9e5;
 }
 
 .bs-books-search {
