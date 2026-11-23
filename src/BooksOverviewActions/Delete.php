@@ -38,7 +38,7 @@ class Delete implements IBooksOverviewAction {
 	 * @return int
 	 */
 	public function getPosition(): int {
-		return 40;
+		return 80;
 	}
 
 	/**

@@ -45,7 +45,7 @@ class Watch implements IBooksOverviewAction {
 	 * @return int
 	 */
 	public function getPosition(): int {
-		return 70;
+		return 50;
 	}
 
 	/**
